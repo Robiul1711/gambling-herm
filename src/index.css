@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @import "tw-animate-css";
@@ -8,11 +7,11 @@
 
 @theme {
   /* font */
-  --font-poppins: Poppins, sans-serif;
+  --font-roboto: Roboto, sans-serif;
 
   /* color */
 
-  --color-Primary: green;
+  --color-Primary: #156E94;
   --color-bg-custom: linear-gradient(red, yellow);
 
   /* breakpoint */
@@ -183,9 +182,28 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-roboto);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: none;
+    transform: translateX(0);
+  }
+}
 .section-padding-x {
   padding-left: 16px;
   padding-right: 16px;
