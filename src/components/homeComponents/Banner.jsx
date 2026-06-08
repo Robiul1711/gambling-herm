@@ -1,5 +1,6 @@
 import React from 'react';
 import homeBanner from '@/assets/images/homeBanner.png'
+import { Link } from 'react-router-dom';
 export default function Banner() {
   return (
     <section className="w-full bg-white py-12 md:py-20 lg:py-24">
@@ -40,20 +41,28 @@ export default function Banner() {
             </p>
 
             {/* Action Buttons Row */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <a 
-                href="#get-help"
-                className="bg-Primary hover:bg-[#145c7e] text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-sm text-base text-center min-w-[140px]"
-              >
-                Get Help
-              </a>
-              <a 
-                href="#worried-someone"
-                className="border-2 border-gray-400 hover:border-gray-900 text-gray-800 font-bold px-6 py-3.5 rounded-xl transition-colors text-base text-center"
-              >
-                I'm worried about someone
-              </a>
-            </div>
+      <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+  <Link
+    to="/get-help"
+    className="bg-Primary hover:bg-[#145c7e] text-white font-bold
+               px-4 sm:px-6 py-3 sm:py-3.5
+               rounded-xl transition-colors shadow-sm
+               text-sm sm:text-base text-center
+               min-w-[120px] sm:min-w-[140px]"
+  >
+    Get Help
+  </Link>
+
+  <Link
+    to="/worried-about-someone"
+    className="border-2 border-gray-400 hover:border-gray-900 text-gray-800 font-bold
+               px-4 sm:px-6 py-3 sm:py-3.5
+               rounded-xl transition-colors
+               text-sm sm:text-base text-center"
+  >
+    I'm worried about someone
+  </Link>
+</div>
           </div>
 
           {/* RIGHT COLUMN: Graphical Layout / Frame Container (Takes 5 spans on desktop) */}
