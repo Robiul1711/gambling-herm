@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Facebook } from 'lucide-react';
 import logo from '@/assets/images/logo.png'
+import { Link } from 'react-router-dom';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -29,18 +30,18 @@ export default function Footer() {
             There is also a fight to make sure fewer people have to make this journey at all.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <a 
-              href="#get-help" 
+            <Link 
+              to="/get-help" 
               className="w-full sm:w-auto text-center bg-Primary hover:bg-[#145c7e] text-white font-bold px-6 py-3 rounded-xl text-base transition-colors shadow-sm"
             >
               Get Help Now
-            </a>
-            <a 
-              href="#policy-positions" 
+            </Link>
+            <Link 
+              to="/policy-positions" 
               className="w-full sm:w-auto text-center border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-bold px-6 py-3 rounded-xl text-base transition-all bg-transparent"
             >
               Read Our Policy Positions
-            </a>
+            </Link>
           </div>
         </div>
       </div>
