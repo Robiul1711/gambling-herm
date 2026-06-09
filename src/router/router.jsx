@@ -4,6 +4,7 @@ import Layout from "@/layout/Layout";
 import AboutPage from "@/pages/sites/AboutPage";
 import Home from "@/pages/sites/Home";
 import NewsAndReserch from "@/pages/sites/NewsAndReserch";
+import NewsAndReserchDetails from "@/pages/sites/NewsAndReserchDetails";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/news-and-research",
         element: <NewsAndReserch />,
+      },
+      {
+        path: "/news-and-research/:id",
+        element: <NewsAndReserchDetails />,
       },
 
 

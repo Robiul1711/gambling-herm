@@ -1,4 +1,5 @@
 import Banner from "@/components/homeComponents/Banner";
+import HomeContact from "@/components/homeComponents/HomeContact";
 import LivedExperienceQuote from "@/components/homeComponents/LivedExperienceQuote";
 import OurPosition from "@/components/homeComponents/OurPosition";
 import ScaleOfHarm from "@/components/homeComponents/ScaleOfHarm";
@@ -16,6 +17,7 @@ const Home = () => {
     <ThreeFoundations/>
     <ThreeFramings/>
     <LivedExperienceQuote/>
+    <HomeContact/>
   </div>;
 };
 
