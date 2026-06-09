@@ -1,10 +1,10 @@
-import AboutBanner from "@/components/aboutComponents/AboutBanner";
 import FundingConflictOfInterest from "@/components/aboutComponents/FundingConflictOfInterest";
 import OurMission from "@/components/aboutComponents/OurMission";
 import TrusteesAndTeam from "@/components/aboutComponents/TrusteesAndTeam";
 import CommonBanner from "@/components/common/CommonBanner";
 import React from "react";
 import aboutBannerImg from "@/assets/images/banner.png";
+import ContactAndPress from "@/components/aboutComponents/ContactAndPress";
 const AboutPage = () => {
   return (
     <div>
@@ -18,8 +18,14 @@ const AboutPage = () => {
             takes them seriously."
       />
       <OurMission />
-      <FundingConflictOfInterest />
+      <div id="funding" className="scroll-mt-24">
+        <FundingConflictOfInterest />
+      </div>
+
       <TrusteesAndTeam />
+      <div id="contact" className="scroll-mt-24">
+        <ContactAndPress/>
+      </div>
     </div>
   );
 };

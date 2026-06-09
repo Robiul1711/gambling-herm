@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { Menu, X, ChevronDown } from "lucide-react"
 import {
   NavigationMenu,
@@ -28,6 +28,27 @@ export default function Navbar() {
 
   const toggleMobileDropdown = (menu) => {
     setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu)
+  }
+
+  const { pathname, hash } = useLocation()
+
+  const isLinkActive = (to) => {
+    if (to.includes("#")) {
+      const [path, targetHash] = to.split("#")
+      return pathname === path && hash === `#${targetHash}`
+    }
+    return pathname === to && !hash
+  }
+
+  const isAboutActive = pathname === "/about" || pathname.startsWith("/news-and-research")
+
+  const getMobileSubLinkClass = (to) => {
+    const active = isLinkActive(to)
+    return `block px-4 py-2.5 text-sm rounded-lg transition-colors ${
+      active
+        ? "font-semibold text-Primary bg-[#E0F2FE]"
+        : "font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+    }`
   }
 
   return (
@@ -60,14 +81,27 @@ export default function Navbar() {
                 <NavigationMenuList className="flex space-x-1">
                   
                   <NavigationMenuItem>
-                    <Link to="/" className={`${navigationMenuTriggerStyle()} text-Primary font-bold text-base hover:bg-gray-50`}>
+                    <Link
+                      to="/"
+                      className={`${navigationMenuTriggerStyle()} text-base hover:bg-gray-50 transition-colors ${
+                        pathname === "/" && !hash
+                          ? "text-Primary font-bold"
+                          : "text-gray-700 font-medium hover:text-Primary"
+                      }`}
+                    >
                       Home
                     </Link>
                   </NavigationMenuItem>
 
                   {/* About Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-gray-700 font-medium text-base hover:text-Primary data-[state=open]:text-Primary">
+                    <NavigationMenuTrigger
+                      className={`text-base data-[state=open]:text-Primary hover:text-Primary transition-colors ${
+                        isAboutActive
+                          ? "text-Primary font-bold"
+                          : "text-gray-700 font-medium"
+                      }`}
+                    >
                       About
                     </NavigationMenuTrigger>
                     <NavigationMenuContent >
@@ -77,8 +111,8 @@ export default function Navbar() {
                             The Charity
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/about" active>About GHUK</DropdownItem>
-                            <DropdownItem to="/funding">Funding &amp; Conflict of interest</DropdownItem>
+                            <DropdownItem to="/about" active={isLinkActive("/about")}>About GHUK</DropdownItem>
+                            <DropdownItem to="/about#funding" active={isLinkActive("/about#funding")}>Funding &amp; Conflict of interest</DropdownItem>
                           </ul>
                         </div>
                         <div>
@@ -86,8 +120,8 @@ export default function Navbar() {
                             Engage
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/news-and-research">News &amp; research</DropdownItem>
-                            <DropdownItem to="/contact">Contact us</DropdownItem>
+                            <DropdownItem to="/news-and-research" active={isLinkActive("/news-and-research")}>News &amp; research</DropdownItem>
+                            <DropdownItem to="/about#contact" active={isLinkActive("/about#contact")}>Contact us</DropdownItem>
                           </ul>
                         </div>
                       </div>
@@ -172,7 +206,11 @@ export default function Navbar() {
               <Link 
                 to="/" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-3 text-base font-bold text-Primary bg-blue-50/50 rounded-xl"
+                className={`block px-4 py-3 text-base rounded-xl transition-colors ${
+                  pathname === "/" && !hash
+                    ? "font-bold text-Primary bg-blue-50/50"
+                    : "font-medium text-gray-800 hover:bg-gray-50"
+                }`}
               >
                 Home
               </Link>
@@ -181,17 +219,21 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown('about')}
-                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl transition-colors"
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                    isAboutActive
+                      ? "font-bold text-Primary bg-blue-50/10"
+                      : "font-medium text-gray-800 hover:bg-gray-50"
+                  }`}
                 >
                   <span>About</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'about' ? 'rotate-180' : ''}`} />
                 </button>
                 {activeMobileDropdown === 'about' && (
                   <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/50 rounded-xl mt-1">
-                    <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-sm font-semibold text-Primary bg-[#E0F2FE] rounded-lg">About GHUK</Link>
-                    <Link to="/funding" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900">Funding &amp; Conflict of interest</Link>
-                    <Link to="/news" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900">News &amp; research</Link>
-                    <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900">Contact us</Link>
+                    <Link to="/about" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about")}>About GHUK</Link>
+                    <Link to="/about#funding" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about#funding")}>Funding &amp; Conflict of interest</Link>
+                    <Link to="/news-and-research" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/news-and-research")}>News &amp; research</Link>
+                    <Link to="/about#contact" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about#contact")}>Contact us</Link>
                   </div>
                 )}
               </div>

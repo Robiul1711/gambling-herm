@@ -20,31 +20,7 @@ export default function Footer() {
     <footer className="w-full bg-[#2A2828] text-white">
       
       {/* 1. UPPER FOOTER CALL-TO-ACTION PANEL */}
-      <div className="w-full border-b border-gray-700/40 py-16 md:py-20 text-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col items-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight max-w-2xl">
-            You don't have to do this alone, and we don't think you should have to.
-          </h2>
-          <p className="text-gray-400 text-sm sm:text-base max-w-xl font-medium leading-relaxed">
-            If gambling is harming you or someone you love, there is a way through. 
-            There is also a fight to make sure fewer people have to make this journey at all.
-          </p>
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <Link 
-              to="/get-help" 
-              className="w-full sm:w-auto text-center bg-Primary hover:bg-[#145c7e] text-white font-bold px-6 py-3 rounded-xl text-base transition-colors shadow-sm"
-            >
-              Get Help Now
-            </Link>
-            <Link 
-              to="/policy-positions" 
-              className="w-full sm:w-auto text-center border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-bold px-6 py-3 rounded-xl text-base transition-all bg-transparent"
-            >
-              Read Our Policy Positions
-            </Link>
-          </div>
-        </div>
-      </div>
+
 
       {/* 2. MAIN FOOTER LINKS & BRAND DIRECTORY */}
       <div className="section-padding-x py-12 md:py-16">
