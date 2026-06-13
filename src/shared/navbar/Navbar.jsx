@@ -42,6 +42,17 @@ export default function Navbar() {
 
   const isAboutActive = pathname === "/about" || pathname.startsWith("/news-and-research")
 
+  const isWorkActive = [
+    "/burden-of-harm",
+    "/gambling-explained",
+    "/gambling-tactics",
+    "/understanding-gambling-harms",
+    "/stigma-and-language",
+    "/inequality-and-gambling-harm",
+    "/policy-and-advocacy",
+    "/members-only-campaign"
+  ].includes(pathname)
+
   const getMobileSubLinkClass = (to) => {
     const active = isLinkActive(to)
     return `block px-4 py-2.5 text-sm rounded-lg transition-colors ${
@@ -77,8 +88,8 @@ export default function Navbar() {
 
             {/* DESKTOP NAVIGATION (shadcn/ui) */}
             <div className="flex items-center gap-5 ">
-              <NavigationMenu className=" hidden md:flex items-center">
-                <NavigationMenuList className="flex space-x-1">
+              <NavigationMenu className="static hidden md:flex items-center" viewport={false}>
+                <NavigationMenuList className="static flex space-x-1">
                   
                   <NavigationMenuItem>
                     <Link
@@ -104,8 +115,8 @@ export default function Navbar() {
                     >
                       About
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent >
-                      <div className="grid grid-cols-2 gap-8 p-6 w-[520px] bg-white shadow-xl ">
+                    <NavigationMenuContent>
+                      <div className="grid grid-cols-2 gap-8 p-6 w-[520px]">
                         <div>
                           <h4 className="text-base font-bold text-gray-900 pb-2 border-b border-gray-200 mb-3">
                             The Charity
@@ -128,10 +139,79 @@ export default function Navbar() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-gray-700 font-medium text-base hover:text-Primary">
-                      Our work
+                  {/* Our Work Dropdown Menu */}
+                  <NavigationMenuItem className="static">
+                    <NavigationMenuTrigger
+                      className={`text-base data-[state=open]:text-Primary hover:text-Primary transition-colors ${
+                        isWorkActive
+                          ? "text-Primary font-bold"
+                          : "text-gray-700 font-medium"
+                      }`}
+                    >
+                      Our Work
                     </NavigationMenuTrigger>
+                    <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
+                      <div className="grid grid-cols-4 gap-6 p-6 w-[840px]">
+                        <div>
+                          <h4 className="text-[14px] font-bold text-Primary pb-2 border-b border-gray-200 mb-3 uppercase tracking-wider">
+                            Evidence Base
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/burden-of-harm" active={isLinkActive("/burden-of-harm")}>
+                              Burden of harm
+                            </DropdownItem>
+                            <DropdownItem to="/gambling-explained" active={isLinkActive("/gambling-explained")}>
+                              Gambling Explained
+                            </DropdownItem>
+                            <DropdownItem to="/gambling-tactics" active={isLinkActive("/gambling-tactics")}>
+                              Gambling Tactics
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="text-[14px] font-bold text-Primary pb-2 border-b border-gray-200 mb-3 uppercase tracking-wider">
+                            Topics In Focus
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/understanding-gambling-harms" active={isLinkActive("/understanding-gambling-harms")}>
+                              Understanding gambling harms
+                            </DropdownItem>
+                            <DropdownItem to="/stigma-and-language" active={isLinkActive("/stigma-and-language")}>
+                              Stigma &amp; language
+                            </DropdownItem>
+                            <DropdownItem to="/inequality-and-gambling-harm" active={isLinkActive("/inequality-and-gambling-harm")}>
+                              Inequality &amp; gambling harm
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="text-[14px] font-bold text-Primary pb-2 border-b border-gray-200 mb-3 uppercase tracking-wider">
+                            Campaigns &amp; Policy
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/policy-and-advocacy" active={isLinkActive("/policy-and-advocacy")}>
+                              Policy &amp; advocacy
+                            </DropdownItem>
+                            <DropdownItem to="/members-only-campaign" active={isLinkActive("/members-only-campaign")}>
+                              Members Only Campaign
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="text-[14px] font-bold text-Primary pb-2 border-b border-gray-200 mb-3 uppercase tracking-wider">
+                            Updates
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/news-and-research" active={isLinkActive("/news-and-research")}>
+                              News &amp; research
+                            </DropdownItem>
+                            <DropdownItem to="/about#contact" active={isLinkActive("/about#contact")}>
+                              Contact us
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
@@ -242,15 +322,55 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown('work')}
-                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl transition-colors"
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                    isWorkActive
+                      ? "font-bold text-Primary bg-blue-50/10"
+                      : "font-medium text-gray-800 hover:bg-gray-50"
+                  }`}
                 >
                   <span>Our work</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'work' ? 'rotate-180' : ''}`} />
                 </button>
                 {activeMobileDropdown === 'work' && (
-                  <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/50 rounded-xl mt-1">
-                    <Link to="/projects" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm font-medium text-gray-600">Our Projects</Link>
-                    <Link to="/impact" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm font-medium text-gray-600">Our Impact</Link>
+                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Evidence Base
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/burden-of-harm" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/burden-of-harm")}>Burden of harm</Link>
+                        <Link to="/gambling-explained" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/gambling-explained")}>Gambling Explained</Link>
+                        <Link to="/gambling-tactics" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/gambling-tactics")}>Gambling Tactics</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Topics In Focus
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/understanding-gambling-harms" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/understanding-gambling-harms")}>Understanding gambling harms</Link>
+                        <Link to="/stigma-and-language" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/stigma-and-language")}>Stigma &amp; language</Link>
+                        <Link to="/inequality-and-gambling-harm" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/inequality-and-gambling-harm")}>Inequality &amp; gambling harm</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Campaigns &amp; Policy
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/policy-and-advocacy" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/policy-and-advocacy")}>Policy &amp; advocacy</Link>
+                        <Link to="/members-only-campaign" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/members-only-campaign")}>Members Only Campaign</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Updates
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/news-and-research" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/news-and-research")}>News &amp; research</Link>
+                        <Link to="/about#contact" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about#contact")}>Contact us</Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -296,10 +416,10 @@ function DropdownItem({ to, children, active = false }) {
       <NavigationMenuLink asChild>
         <Link
           to={to}
-          className={`block w-full text-left text-[15px] px-3 py-2.5 rounded-xl transition-colors ${
+          className={`block w-full text-left text-[15px] px-3 py-2.5 transition-all duration-200 border-l-4 ${
             active
-              ? "bg-[#E0F2FE] text-Primary font-semibold"
-              : "text-gray-700 hover:bg-gray-50 hover:text-gray-900 font-medium"
+              ? "bg-[#E0F2FE] text-Primary font-semibold border-Primary rounded-r-xl rounded-l-none pl-2.5"
+              : "text-gray-700 hover:bg-gray-50 hover:text-gray-900 font-medium border-transparent rounded-xl"
           }`}
         >
           {children}
