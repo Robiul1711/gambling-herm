@@ -1,98 +1,150 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import CommonBanner from "@/components/common/CommonBanner";
 import bannerImg from "@/assets/images/banner.png";
+import ModifiableRiskFactor from "@/components/burdenOfHarmComponents/ModifiableRiskFactor";
+import PopulationBurden from "@/components/burdenOfHarmComponents/PopulationBurden";
+import AnyoneCanBeHarmed from "@/components/burdenOfHarmComponents/AnyoneCanBeHarmed";
+import ChildrenYoungPeople from "@/components/burdenOfHarmComponents/ChildrenYoungPeople";
+import AffectedOthersDirectVictims from "@/components/burdenOfHarmComponents/AffectedOthersDirectVictims";
+import GamblingRelatedSuicide from "@/components/burdenOfHarmComponents/GamblingRelatedSuicide";
+import CostExceedsRevenue from "@/components/burdenOfHarmComponents/CostExceedsRevenue";
+import WholeSystemResponse from "@/components/burdenOfHarmComponents/WholeSystemResponse";
+import BurdenOfHermContact from "@/components/burdenOfHarmComponents/BurdenOfHermContact";
 
 const BurdenOfHarm = () => {
+  // 1. Create references for each component section
+  const sectionRefs = {
+    modifiable: useRef(null),
+    population: useRef(null),
+    anyone: useRef(null),
+    children: useRef(null),
+    affected: useRef(null),
+    suicide: useRef(null),
+    cost: useRef(null),
+    wholeSystem: useRef(null),
+  };
+
+  // 2. Navigation items definition mapping to the references
+  const navItems = [
+    { id: "modifiable", label: "1. A Modifiable Risk Factor", ref: sectionRefs.modifiable },
+    { id: "population", label: "2. The population burden", ref: sectionRefs.population },
+    { id: "anyone", label: "3. Anyone can be harmed", ref: sectionRefs.anyone },
+    { id: "children", label: "4. Children & young people", ref: sectionRefs.children },
+    { id: "affected", label: "5. Affected others as direct victims", ref: sectionRefs.affected },
+    { id: "suicide", label: "6. Gambling-related suicide", ref: sectionRefs.suicide },
+    { id: "cost", label: "7. Cost exceeds revenue", ref: sectionRefs.cost },
+    { id: "wholeSystem", label: "8. A whole-system response", ref: sectionRefs.wholeSystem },
+  ];
+
+  // State to track which section is currently active/visible
+  const [activeSection, setActiveSection] = useState("modifiable");
+
+  // 3. Smooth scrolling handler
+  const handleScroll = (ref, id) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      setActiveSection(id);
+    }
+  };
+
+  // 4. Auto-update active button based on user scroll position
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px", // Adjusts when the section triggers as active
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const matchedItem = navItems.find((item) => item.ref.current === entry.target);
+          if (matchedItem) {
+            setActiveSection(matchedItem.id);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections that exist
+    Object.values(sectionRefs).forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="bg-white">
+    <div className="bg-white w-full overflow-x-hidden">
       <CommonBanner
         image={bannerImg}
-        title="The Burden of Gambling Harm"
-        tag="Evidence Base"
-        description="Understanding the scale, depth, and wider impacts of gambling harms on individuals, families, and communities across the UK."
+        title="Gambling is a leading, modifiable risk factor for ill-health in the UK, and is treated as if it isn't."
+        tag="Evidence · Burden of harm"
+        description="This page sets out the population burden, the people who carry it, and why the UK's policy response to gambling harm is several orders of magnitude smaller than the public-health evidence justifies."
       />
-      
-      <div className="section-padding-x section-padding-y max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">A Major Public Health Issue</h2>
-              <p className="text-gray-600 leading-relaxed text-[17px] mb-4">
-                Gambling harm is not limited to financial loss. It is a complex public health challenge that affects physical health, mental well-being, relationships, and societal productivity. For every person who experiences gambling problems, several others around them are directly impacted.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-[17px]">
-                By treating gambling harm as a public health issue rather than a matter of individual failure, we can address the root systemic causes, including aggressive industry practices and insufficient regulatory protections.
-              </p>
-            </section>
 
-            <section className="bg-gray-50 border border-gray-100 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-Primary mb-4">Key Statistics &amp; Insights</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="text-Primary font-bold text-lg mt-0.5">•</span>
-                  <div>
-                    <strong className="text-gray-800">Wide Reach:</strong> Millions of people in the UK are affected by someone else's gambling, experiencing relationship breakdown, emotional distress, and financial strain.
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-Primary font-bold text-lg mt-0.5">•</span>
-                  <div>
-                    <strong className="text-gray-800">Health Impacts:</strong> Strong links exist between high-risk gambling and severe mental health difficulties, including clinical depression, anxiety, and suicide.
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-Primary font-bold text-lg mt-0.5">•</span>
-                  <div>
-                    <strong className="text-gray-800">Economic Cost:</strong> The social and economic cost of gambling-related harms to the UK public purse is estimated to be in the billions annually, spanning healthcare, housing, and justice systems.
-                  </div>
-                </li>
-              </ul>
-            </section>
+      {/* --- QUICK NAVIGATION MENU --- */}
+      <div className="section-padding-x max-w-[1500px] mx-auto pt-6 md:pt-10 pb-4 md:pb-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="w-8 h-[2px] bg-Primary" />
+          <span className="text-xs md:text-sm font-semibold text-Primary tracking-wide uppercase">On This Page</span>
+        </div>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Why We Need Action</h2>
-              <p className="text-gray-600 leading-relaxed text-[17px] mb-4">
-                The current regulatory frameworks are insufficient to protect people from modern, highly addictive digital gambling products. Continuous 24/7 access via smartphones, combined with sophisticated algorithms designed to encourage prolonged play, has accelerated the rate and severity of harm.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-[17px]">
-                We campaign for evidence-based policies that put public health first, ensuring that industry profit never takes precedence over the well-being of individuals and communities.
-              </p>
-            </section>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-8">
-            <div className="bg-[#E0F2FE] p-6 rounded-2xl border border-blue-100">
-              <h3 className="text-lg font-bold text-Primary mb-2">Our Mission</h3>
-              <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                We work to expose the systemic drivers of gambling harm and lobby for policy changes that protect children, young people, and vulnerable adults.
-              </p>
-              <a
-                href="/about"
-                className="text-sm font-semibold text-Primary hover:underline inline-flex items-center gap-1"
+        {/* Swipeable on mobile screens, wraps clean grid items on desktop viewport */}
+        <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-3 md:pb-0 scrollbar-hide snap-x">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleScroll(item.ref, item.id)}
+                className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium border transition-all duration-200 cursor-pointer whitespace-nowrap snap-center shrink-0 ${
+                  isActive
+                    ? "bg-Primary text-white border-Primary shadow-sm"
+                    : "bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50"
+                }`}
               >
-                Learn more about us <span>→</span>
-              </a>
-            </div>
-
-            <div className="border border-gray-200 p-6 rounded-2xl">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Related Topics</h3>
-              <div className="space-y-3">
-                <a href="/gambling-explained" className="block text-sm font-medium text-gray-600 hover:text-Primary transition-colors">
-                  • Gambling Explained
-                </a>
-                <a href="/gambling-tactics" className="block text-sm font-medium text-gray-600 hover:text-Primary transition-colors">
-                  • Gambling Tactics
-                </a>
-                <a href="/understanding-gambling-harms" className="block text-sm font-medium text-gray-600 hover:text-Primary transition-colors">
-                  • Understanding gambling harms
-                </a>
-              </div>
-            </div>
-          </div>
+                {item.label}
+              </button>
+            );
+          })}
         </div>
       </div>
+      {/* ----------------------------- */}
+
+      {/* Main Sections Grid/Stack */}
+      <div className="section-padding-x py-4 md:py-6 max-w-[1500px] mx-auto space-y-10 md:space-y-14 lg:space-y-16">
+        <div ref={sectionRefs.modifiable} className="scroll-mt-16 md:scroll-mt-24">
+          <ModifiableRiskFactor />
+        </div>
+        <div ref={sectionRefs.population} className="scroll-mt-16 md:scroll-mt-24">
+          <PopulationBurden />
+        </div>
+        <div ref={sectionRefs.anyone} className="scroll-mt-16 md:scroll-mt-24">
+          <AnyoneCanBeHarmed />
+        </div>
+        <div ref={sectionRefs.children} className="scroll-mt-16 md:scroll-mt-24">
+          <ChildrenYoungPeople />
+        </div>
+        <div ref={sectionRefs.affected} className="scroll-mt-16 md:scroll-mt-24">
+          <AffectedOthersDirectVictims />
+        </div>
+        <div ref={sectionRefs.suicide} className="scroll-mt-16 md:scroll-mt-24">
+          <GamblingRelatedSuicide />
+        </div>
+        <div ref={sectionRefs.cost} className="scroll-mt-16 md:scroll-mt-24">
+          <CostExceedsRevenue />
+        </div>
+        <div ref={sectionRefs.wholeSystem} className="scroll-mt-16 md:scroll-mt-24">
+          <WholeSystemResponse />
+        </div>
+      </div>
+      <BurdenOfHermContact/>
     </div>
   );
 };
