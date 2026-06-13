@@ -20,7 +20,7 @@ export default function Navbar() {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 40)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -64,25 +64,21 @@ export default function Navbar() {
 
   return (
     <>
+      {/* 1. Full-width Crisis Banner (Outside sticky wrapper to prevent scroll jitter/blinking) */}
+      <CrisisHeader />
+
       {/* WRAPPER: Handles top pinning and sticky scroll transparency states */}
       <div className={`w-full flex flex-col sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-100" 
           : "bg-white border-b border-transparent"
       }`}>
-        {/* 1. Full-width Crisis Banner */}
-        <div className={`w-full overflow-hidden transition-all duration-300 ease-in-out ${
-          isScrolled ? "max-h-0 opacity-0" : "max-h-[100px] opacity-100"
-        }`}>
-          <CrisisHeader />
-        </div>
-
         {/* 2. Main Navigation Bar */}
         <header className="w-full">
           <div className="section-padding-x pt-2 flex items-center justify-between">
             
             {/* Logo */}
-            <Link to="/" className="">
+            <Link to="/">
               <img src={Logo} alt="logo" className="md:w-25 sm:w-20 w-15" />
             </Link>
 
@@ -94,7 +90,7 @@ export default function Navbar() {
                   <NavigationMenuItem>
                     <Link
                       to="/"
-                      className={`${navigationMenuTriggerStyle()} text-base hover:bg-gray-50 transition-colors ${
+                      className={`${navigationMenuTriggerStyle()} text-base  hover:bg-gray-50 transition-colors ${
                         pathname === "/" && !hash
                           ? "text-Primary font-bold"
                           : "text-gray-700 font-medium hover:text-Primary"
@@ -227,7 +223,7 @@ export default function Navbar() {
               <div className="hidden md:flex items-center">
                 <Link
                   to="/urgent-help"
-                  className="bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold px-5 py-2.5 rounded-xl transition-colors text-base shadow-sm inline-flex items-center"
+                  className="bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold px-5 py-2 rounded-lg transition-colors text-base shadow-sm inline-flex items-center"
                 >
                   Urgent Help <span className="ml-2 font-normal">&rarr;</span>
                 </Link>

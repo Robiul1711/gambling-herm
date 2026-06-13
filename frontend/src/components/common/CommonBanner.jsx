@@ -53,7 +53,7 @@ export default function CommonBanner({
             <div>
               <Link
                 to={buttonLink}
-                className="inline-flex items-center gap-2 bg-[#C92525] hover:bg-[#B41F1F] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-Primary hover:bg-Primary/80 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 {buttonText}
                 <span>→</span>
