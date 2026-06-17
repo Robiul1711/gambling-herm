@@ -9,7 +9,7 @@ import AffectedOthersDirectVictims from "@/components/burdenOfHarmComponents/Aff
 import GamblingRelatedSuicide from "@/components/burdenOfHarmComponents/GamblingRelatedSuicide";
 import CostExceedsRevenue from "@/components/burdenOfHarmComponents/CostExceedsRevenue";
 import WholeSystemResponse from "@/components/burdenOfHarmComponents/WholeSystemResponse";
-import BurdenOfHermContact from "@/components/burdenOfHarmComponents/BurdenOfHermContact";
+import OurWorkCommonContact from "@/components/common/OurWorkCommonContact";
 
 const BurdenOfHarm = () => {
   // 1. Create references for each component section
@@ -144,7 +144,14 @@ const BurdenOfHarm = () => {
           <WholeSystemResponse />
         </div>
       </div>
-      <BurdenOfHermContact/>
+       <OurWorkCommonContact
+      title="From burden to policy."
+      description="Our policy positions follow directly from the evidence above. They are the things we believe the UK needs to do. We publish our modelling, label our own combinations as our own, and invite scrutiny of both. That is what distinguishes evidence from messaging."
+      primaryBtnText="Read our policy positions"
+      primaryBtnLink="/get-help"
+      secondaryBtnText="Latest publications"
+      secondaryBtnLink="/policy-positions"
+    />
     </div>
   );
 };
