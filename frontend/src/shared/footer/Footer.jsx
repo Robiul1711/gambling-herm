@@ -23,7 +23,7 @@ export default function Footer() {
 
 
       {/* 2. MAIN FOOTER LINKS & BRAND DIRECTORY */}
-      <div className="section-padding-x py-12 md:py-16">
+      <div className="section-padding-x py-8 md:py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           
           {/* Brand Identity Explainer (Takes up 5/12 of desktop space) */}
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* 3. LOWER BASE FOOTNOTE COMPLIANCE BAR */}
-        <div className="mt-12 pt-8 border-t border-gray-700/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-400 font-medium">
+        <div className="mt-4 md:mt-8 pt-4 border-t border-gray-700/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-400 font-medium">
           <span>&copy; {currentYear} Gambling Harm UK (GHUK).</span>
           <div className="flex items-center space-x-6">
             <a href="#privacy" className="hover:text-white transition-colors">Privacy</a>

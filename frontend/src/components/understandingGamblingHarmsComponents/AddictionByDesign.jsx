@@ -26,18 +26,17 @@ const items = [
 const AddictionByDesign = () => {
   return (
     <section id="addiction-design" className="pt-8 md:pt-16">
-      <div className="max-w-5xl mx-auto px-4">
-
+      <div className="max-w-7xl mx-auto px-4">
         {/* Top line */}
         <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 
         {/* Title */}
-        <h2 className="text-3xl md:text-5xl font-bold text-[#2B2B2B] mb-8">
+        <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-[#2B2B2B] mb-6 md:mb-8">
           3. Addiction by design
         </h2>
 
         {/* Intro */}
-        <p className="text-[#4b4b4b] leading-8 max-w-4xl mb-10">
+        <p className="text-[#4b4b4b] leading-7 md:leading-8  mb-4 text-sm md:text-base">
           Modern gambling products (particularly online slots, in-play sports
           betting, casino apps and electronic gaming machines) are not games of
           chance in any traditional sense. They are precision-engineered systems
@@ -45,32 +44,27 @@ const AddictionByDesign = () => {
         </p>
 
         {/* Subtitle */}
-        <h3 className="text-2xl font-semibold text-[#2B2B2B] mb-5">
+        <h3 className="text-xl md:text-2xl font-semibold text-[#2B2B2B] mb-5">
           The "rational choice" fiction
         </h3>
 
-        <p className="text-[#7a7a7a] leading-8 max-w-4xl mb-8">
+        <p className="text-[#7a7a7a] leading-7 md:leading-8  mb-4 text-sm md:text-base">
           A foundational assumption of permissive gambling regulation is that
           adults make rational choices about their gambling, and bear the
           consequences. This assumption is in direct tension with what the
           products themselves are designed to do.
         </p>
 
-        <p className="text-[#7a7a7a] mb-5 md:mb-10">
+        <p className="text-[#7a7a7a] mb-5 md:mb-8 text-sm md:text-base">
           High-harm gambling products are engineered to:
         </p>
 
         {/* Points */}
         <div className="border-t border-gray-200">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className="py-4 md:py-7 border-b border-gray-200"
-            >
-              <p className="text-[#5b5b5b] leading-8">
-                <span className="font-semibold text-[#333]">
-                  {item.title}
-                </span>{" "}
+            <div key={index} className="py-4 md:py-7 border-b border-gray-200">
+              <p className="text-[#5b5b5b] leading-7 md:leading-8 text-sm md:text-base">
+                <span className="font-semibold text-[#333]">{item.title}</span>{" "}
                 {item.text}
               </p>
             </div>
@@ -79,34 +73,29 @@ const AddictionByDesign = () => {
 
         {/* Paragraph */}
         <div className="mt-5 md:mt-10">
-          <p className="text-[#7a7a7a] leading-8 max-w-4xl">
-            This is not a metaphor. It is a description of what the products
-            do, documented in detail by researchers including Natasha Dow
-            Schüll (Addiction by Design), in regulatory case files at the UK
-            Gambling Commission, and in operator whistleblower disclosures over
-            the past decade.
+          <p className="text-[#7a7a7a] leading-7 md:leading-8  text-sm md:text-base">
+            This is not a metaphor. It is a description of what the products do,
+            documented in detail by researchers including Natasha Dow Schüll
+            (Addiction by Design), in regulatory case files at the UK Gambling
+            Commission, and in operator whistleblower disclosures over the past
+            decade.
           </p>
         </div>
 
         {/* Position Card */}
         <div className="mt-6 md:mt-14 bg-[#232020] rounded-xl overflow-hidden">
-          <div className="border-l-4 border-Primary2 px-4 md:px-10 py-4 md:py-10">
+          <div className="border-l-4 border-Primary2 px-5 md:px-10 py-5 md:py-10">
+            <h4 className="text-Primary2 font-medium">Our position</h4>
 
-            <h4 className="text-Primary2 font-medium">
-              Our position
-            </h4>
-
-            <p className="text-[#d4d4d4] leading-6 text-sm md:text-base">
+            <p className="text-[#d4d4d4] leading-7 md:leading-8 text-sm md:text-base">
               Talking about "rational consumer choice" in the context of modern
               engineered gambling products is a category error. The products are
               designed precisely to override the cognitive capacity a rational
               choice would require. Regulation that treats gambling as ordinary
               consumer behaviour is regulating a product that does not exist.
             </p>
-
           </div>
         </div>
-
       </div>
     </section>
   );

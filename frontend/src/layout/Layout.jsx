@@ -1,5 +1,6 @@
 import Footer from "@/shared/footer/Footer";
 import Navbar from "@/shared/navbar/Navbar";
+import ScrollToTop from "@/shared/ScrollToTop";
 import { Outlet, useLocation } from "react-router-dom";
 import { useUserProfile } from "@/hooks/fetchUserProfile";
 import { useEffect } from "react";
@@ -27,6 +28,7 @@ const Layout = () => {
       <Navbar />
       <Outlet />
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

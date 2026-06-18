@@ -3,7 +3,7 @@ import React from 'react';
 const FundingConflictOfInterest = () => {
   return (
     <section className="section-padding-x">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Top Accent Line */}
         <div className="w-12 h-1 bg-Primary mx-auto mb-6"></div>
 
@@ -23,7 +23,7 @@ const FundingConflictOfInterest = () => {
         </p>
 
         {/* Bullet Points List */}
-        <ul className="text-left space-y-4 max-w-3xl mx-auto text-[#6b7280] text-sm sm:text-base leading-relaxed">
+        <ul className="text-left space-y-4 max-w-7xl mx-auto text-[#6b7280] text-sm sm:text-base leading-relaxed">
           <li className="flex items-start">
             <span className="text-[#2d2d2d] mr-2 select-none">•</span>
             <span>

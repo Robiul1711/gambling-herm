@@ -17,12 +17,29 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const [activeMobileDropdown, setActiveMobileDropdown] = React.useState(null)
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [isNavVisible, setIsNavVisible] = React.useState(true)
+  const lastScrollY = React.useRef(0)
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40)
+      const currentScrollY = window.scrollY
+
+      // Show/hide based on scroll direction
+      if (currentScrollY < lastScrollY.current || currentScrollY < 80) {
+        // Scrolling UP or near top → show navbar
+        setIsNavVisible(true)
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        // Scrolling DOWN past threshold → hide navbar
+        setIsNavVisible(false)
+        // Also close mobile menu when hiding
+        setMobileMenuOpen(false)
+      }
+
+      setIsScrolled(currentScrollY > 40)
+      lastScrollY.current = currentScrollY
     }
-    window.addEventListener("scroll", handleScroll)
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -67,12 +84,18 @@ export default function Navbar() {
       {/* 1. Full-width Crisis Banner (Outside sticky wrapper to prevent scroll jitter/blinking) */}
       <CrisisHeader />
 
-      {/* WRAPPER: Handles top pinning and sticky scroll transparency states */}
-      <div className={`w-full flex flex-col sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-100" 
-          : "bg-white border-b border-transparent"
-      }`}>
+      {/* WRAPPER: Handles top pinning, sticky scroll transparency, and hide/show on scroll direction */}
+      <div
+        className={`w-full flex flex-col sticky top-0 z-50 transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-100"
+            : "bg-white border-b border-transparent"
+        } ${
+          isNavVisible
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
         {/* 2. Main Navigation Bar */}
         <header className="w-full">
           <div className="section-padding-x pt-2 flex items-center justify-between">
@@ -261,7 +284,7 @@ export default function Navbar() {
 
         {/* Side Panel Canvas */}
         <div 
-          className={`absolute top-0 right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
+          className={`absolute top-0 right-0 bottom-0 w-full max-w-xs bg-white shadow-2xl p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -395,7 +418,7 @@ export default function Navbar() {
             <Link
               to="/urgent-help"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold py-3.5 rounded-xl transition-colors text-center shadow-md flex items-center justify-center text-base"
+              className="w-full bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold py-2 rounded-xl transition-colors text-center shadow-md flex items-center justify-center text-base"
             >
               Urgent Help <span className="ml-2 font-normal">&rarr;</span>
             </Link>

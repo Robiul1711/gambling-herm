@@ -1,28 +1,30 @@
-import React from 'react';
+import React from "react";
 
 export default function ScaleOfHarm() {
   const stats = [
     {
       metric: "14.5%",
-      description: "of UK adults experienced harm from their own gambling in the past year (PGSI 1+ combined). The widely-quoted 0.4% headline figure is the PGSI 8+ tail, one of the narrowest harm definitions used in any addiction field.",
-      source: "GHUK modelling, GSGB 2023–24 base"
+      description:
+        "of UK adults experienced harm from their own gambling in the past year (PGSI 1+ combined). The widely-quoted 0.4% headline figure is the PGSI 8+ tail, one of the narrowest harm definitions used in any addiction field.",
+      source: "GHUK modelling, GSGB 2023–24 base",
     },
     {
       metric: "~8%",
-      description: "of UK adults report being harmed by someone else's gambling (YouGov, 2024), roughly the same scale of population harm as the people who gamble themselves. ~42% of British children are estimated to live in a household affected.",
-      source: "GambleAware / YouGov 2024 · GSGB 2023–24"
+      description:
+        "of UK adults report being harmed by someone else's gambling (YouGov, 2024), roughly the same scale of population harm as the people who gamble themselves. ~42% of British children are estimated to live in a household affected.",
+      source: "GambleAware / YouGov 2024 · GSGB 2023–24",
     },
     {
       metric: "£4.1–6.1bn",
-      description: "in annual UK health losses (QALYs monetised at NICE thresholds, conservative scenario). That is 40–60× the current £100m statutory levy. Total economic burden is likely several times higher.",
-      source: "GHUK APPG submission, 25 February 2026"
-    }
+      description:
+        "in annual UK health losses (QALYs monetised at NICE thresholds, conservative scenario). That is 40–60× the current £100m statutory levy. Total economic burden is likely several times higher.",
+      source: "GHUK APPG submission, 25 February 2026",
+    },
   ];
 
   return (
-    <section className="w-full bg-[#2A2828] text-white py-16 md:py-24">
+    <section className="w-full bg-[#2A2828] text-white py-10 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        
         {/* Top Accent Subheading */}
         <div className="flex items-center space-x-3 mb-4">
           <span className="w-6 h-[2px] bg-[#1A759F]" />
@@ -38,15 +40,16 @@ export default function ScaleOfHarm() {
 
         {/* Informative Subtext */}
         <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mb-12 font-medium">
-          The figures most often cited about gambling harm in the UK are the ones the gambling industry is most 
-          comfortable with. These are the ones the public-health evidence supports.
+          The figures most often cited about gambling harm in the UK are the
+          ones the gambling industry is most comfortable with. These are the
+          ones the public-health evidence supports.
         </p>
 
         {/* Three-Column Statistics Cards Layout Grid */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10 text-left">
           {stats.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="border border-gray-600/50 rounded-2xl p-6 sm:p-8 bg-transparent flex flex-col justify-between space-y-6 hover:border-gray-400 transition-colors duration-200"
             >
               <div className="space-y-4">
@@ -59,7 +62,7 @@ export default function ScaleOfHarm() {
                   {item.description}
                 </p>
               </div>
-              
+
               {/* Data Citation Source Attribution */}
               <span className="block text-xs sm:text-sm text-gray-400 italic font-medium pt-2 border-t border-gray-700/50">
                 {item.source}
@@ -69,16 +72,18 @@ export default function ScaleOfHarm() {
         </div>
 
         {/* Bottom Comparative Footer Link */}
-        <a 
-          href="#compare-risks" 
+        <a
+          href="#compare-risks"
           className="inline-flex items-center text-sm sm:text-base font-bold text-white underline decoration-gray-400 hover:decoration-white transition-all group"
         >
-          See How This Compares To Other Public-Health Risks 
-          <span className="ml-1.5 transform transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">
+          See How This Compares To Other Public-Health Risks
+          <span
+            className="ml-1.5 transform transition-transform duration-200 group-hover:translate-x-1"
+            aria-hidden="true"
+          >
             →
           </span>
         </a>
-
       </div>
     </section>
   );
