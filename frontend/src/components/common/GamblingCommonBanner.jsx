@@ -7,7 +7,7 @@ const GamblingCommonBanner = ({
   image,
 }) => {
   return (
-    <section className="w-full py-12 md:py-20">
+    <section className="w-full py-8 sm:py-12 md:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
         <div className="lg:col-span-6 space-y-4 md:space-y-6 order-2 lg:order-1">
@@ -18,7 +18,7 @@ const GamblingCommonBanner = ({
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 tracking-tight">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 tracking-tight">
             {title}
           </h1>
 
@@ -30,7 +30,7 @@ const GamblingCommonBanner = ({
 
         {/* Right Image */}
         <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center lg:justify-end">
-          <div className="w-full max-w-lg lg:max-w-none overflow-hidden rounded-xl shadow-sm border border-slate-100 bg-white p-1">
+          <div className="w-full h-full max-w-xl rounded-xl shadow-sm">
             <img
               src={image}
               alt={title}

@@ -14,13 +14,16 @@ import NoteOnLanguage from "@/components/understandingGamblingHarmsComponents/No
 const UnderstandingGamblingHarms = () => {
   return (
     <>
-      <div className="">
+      <div className="section-padding-x">
         <GamblingCommonBanner
           section="Information"
           title="Gambling harm isn't a personal failing. It's industrial."
           description="Understanding how and why gambling causes harm is, for many people, the first thing that makes the rest start to make sense. This page sets out what the public-health evidence says, without the industry's preferred framing."
           image={bannerImg}
         />
+      </div>
+      <div className="">
+
         <UnderstandingNav />
 
         <GamblingHarmLooksLike />

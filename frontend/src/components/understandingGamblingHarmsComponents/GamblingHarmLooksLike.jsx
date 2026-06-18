@@ -36,59 +36,59 @@ const harms = [
 
 const GamblingHarmLooksLike = () => {
   return (
-    <section id="gambling-harm" className="section-padding-x">
+    <section
+      id="gambling-harm"
+      className="pb-8 md:pb-16 max-w-7xl mx-auto px-4"
+    >
       <div className="">
-
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10 mb-16">
+        {/* Header */}{" "}
+        <div className="flex flex-col lg:flex-row justify-between gap-6 md:gap-10 mb-8 md:mb-16">
           <div className="max-w-xl">
-            <div className="w-12 h-[3px] bg-[#1898d4] mb-6"></div>
+            <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 
-            <h2 className="text-4xl font-bold text-[#1d1d1d] mb-5">
+            <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-[#1d1d1d] mb-5">
               1. What gambling harm looks like
             </h2>
 
-            <p className="text-[#727272] leading-8">
+            <p className="text-[#727272] leading-7 md:leading-8 text-sm md:text-base">
               Harm is plural. It is rarely just about money, and the money harms
               are rarely just about debt.
             </p>
           </div>
 
-          <div className="max-w-[280px]">
+          <div className="max-w-[200px] xs:max-w-[240px] md:max-w-[280px]">
             <img
               src={whatgambling}
               alt=""
-              className="rounded-xl shadow-md w-full"
+              className="rounded-xl shadow-md w-full h-auto"
             />
           </div>
         </div>
-
         {/* Table */}
         <div className="border-t border-gray-200">
           {harms.map((item, index) => (
             <div
               key={index}
-              className="grid md:grid-cols-[220px_1fr] gap-8 py-8 border-b border-gray-200"
+              className="grid md:grid-cols-[220px_1fr] gap-8 py-4 md:py-8 border-b border-gray-200"
             >
-              <h3 className="text-[#0b7cb5] text-sm font-medium">
+              <h3 className="text-Primary2 text-sm font-medium">
                 {item.title}
               </h3>
 
-              <p className="text-[#444] leading-8 text-[15px]">
+              <p className="text-[#444] leading-7 md:leading-8 text-sm md:text-[15px]">
                 {item.description}
               </p>
             </div>
           ))}
         </div>
-
         {/* Bottom Alert Box */}
         <div className="max-w-3xl mx-auto mt-10">
-          <div className="bg-[#f9e9ea] rounded-lg border-l-4 border-[#d91f26] px-8 py-8">
-            <h4 className="font-semibold text-[#222] mb-5">
+          <div className="bg-[#f9e9ea] rounded-lg border-l-4 border-[#d91f26] px-5 md:px-8 py-6 md:py-8">
+            <h4 className="font-semibold text-[#222] mb-4 md:mb-5 text-base md:text-lg">
               If reading this is upsetting
             </h4>
 
-            <p className="text-[#6b6b6b] leading-7">
+            <p className="text-[#6b6b6b] leading-7 text-sm md:text-base">
               That's normal. Recognition is hard. If you'd like to talk to
               someone right now, the{" "}
               <span className="font-semibold text-black">
