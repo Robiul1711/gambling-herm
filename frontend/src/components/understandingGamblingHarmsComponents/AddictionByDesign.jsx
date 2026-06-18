@@ -25,11 +25,11 @@ const items = [
 
 const AddictionByDesign = () => {
   return (
-    <section id="addiction-design" className="">
+    <section id="addiction-design" className="pt-8 md:pt-16">
       <div className="max-w-5xl mx-auto px-4">
 
         {/* Top line */}
-        <div className="w-12 h-[3px] bg-[#14a7df] mb-6"></div>
+        <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 
         {/* Title */}
         <h2 className="text-3xl md:text-5xl font-bold text-[#2B2B2B] mb-8">
@@ -56,7 +56,7 @@ const AddictionByDesign = () => {
           products themselves are designed to do.
         </p>
 
-        <p className="text-[#7a7a7a] mb-10">
+        <p className="text-[#7a7a7a] mb-5 md:mb-10">
           High-harm gambling products are engineered to:
         </p>
 
@@ -65,7 +65,7 @@ const AddictionByDesign = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="py-7 border-b border-gray-200"
+              className="py-4 md:py-7 border-b border-gray-200"
             >
               <p className="text-[#5b5b5b] leading-8">
                 <span className="font-semibold text-[#333]">
@@ -78,7 +78,7 @@ const AddictionByDesign = () => {
         </div>
 
         {/* Paragraph */}
-        <div className="mt-10">
+        <div className="mt-5 md:mt-10">
           <p className="text-[#7a7a7a] leading-8 max-w-4xl">
             This is not a metaphor. It is a description of what the products
             do, documented in detail by researchers including Natasha Dow
@@ -89,14 +89,14 @@ const AddictionByDesign = () => {
         </div>
 
         {/* Position Card */}
-        <div className="mt-14 bg-[#232020] rounded-xl overflow-hidden">
-          <div className="border-l-4 border-[#14a7df] px-8 md:px-10 py-8 md:py-10">
+        <div className="mt-6 md:mt-14 bg-[#232020] rounded-xl overflow-hidden">
+          <div className="border-l-4 border-Primary2 px-4 md:px-10 py-4 md:py-10">
 
-            <h4 className="text-[#14a7df] font-medium mb-6">
+            <h4 className="text-Primary2 font-medium">
               Our position
             </h4>
 
-            <p className="text-[#d4d4d4] leading-8">
+            <p className="text-[#d4d4d4] leading-6 text-sm md:text-base">
               Talking about "rational consumer choice" in the context of modern
               engineered gambling products is a category error. The products are
               designed precisely to override the cognitive capacity a rational

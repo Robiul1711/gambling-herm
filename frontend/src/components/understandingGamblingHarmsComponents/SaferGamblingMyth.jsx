@@ -24,11 +24,11 @@ const points = [
 
 const SaferGamblingMyth = () => {
   return (
-    <section id="safer-gambling" className="">
+    <section id="safer-gambling" className="py-8 md:py-16">
       <div className="max-w-5xl mx-auto px-4">
 
         {/* Top line */}
-        <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
+        <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 
         {/* Title */}
         <h2 className="text-3xl md:text-5xl font-bold text-[#2d2d2d] mb-6">
@@ -52,7 +52,7 @@ const SaferGamblingMyth = () => {
         </div>
 
         {/* Subtitle */}
-        <div className="mt-10">
+        <div className="mt-8 d:mt-10">
           <h3 className="text-2xl font-semibold text-[#2d2d2d] mb-5">
             What "safer gambling" does as a political construct
           </h3>
@@ -72,7 +72,7 @@ const SaferGamblingMyth = () => {
               key={item.number}
               className="border border-gray-300 rounded-3xl p-4 md:p-6 flex gap-5"
             >
-              <div className="w-10 h-10 rounded-full bg-[#0e7fad] text-white flex items-center justify-center font-semibold shrink-0 mt-1">
+              <div className="w-10 h-10 rounded-full bg-Primary2 text-white flex items-center justify-center font-semibold shrink-0 mt-1">
                 {item.number}
               </div>
 
@@ -116,7 +116,7 @@ const SaferGamblingMyth = () => {
 
         {/* Industry Framing Card */}
         <div className="mt-12 border border-gray-300 rounded-2xl p-6 md:p-8">
-          <h4 className="text-[#0e8dc0] font-semibold mb-6">
+          <h4 className="text-Primary2 font-semibold mb-6">
             Industry Framing
           </h4>
 
@@ -136,9 +136,9 @@ const SaferGamblingMyth = () => {
 
         {/* Our Position Card */}
         <div className="mt-10 bg-[#262222] rounded-xl overflow-hidden">
-          <div className="border-l-4 border-[#17a9df] px-8 py-8 md:px-10 md:py-10">
+          <div className="border-l-4 border-Primary2 px-8 py-8 md:px-10 md:py-10">
 
-            <h4 className="text-[#17a9df] font-medium mb-6">
+            <h4 className="text-Primary2 font-medium mb-6">
               Our position
             </h4>
 

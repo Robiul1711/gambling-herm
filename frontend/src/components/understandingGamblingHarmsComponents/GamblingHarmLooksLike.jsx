@@ -36,13 +36,13 @@ const harms = [
 
 const GamblingHarmLooksLike = () => {
   return (
-    <section id="gambling-harm" className="section-padding-x">
+    <section id="gambling-harm" className="pb-8 md:pb-16 max-w-5xl mx-auto px-4">
       <div className="">
 
         {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10 mb-16">
+        <div className="flex flex-col lg:flex-row justify-between md:gap-10 mb-8 md:mb-16">
           <div className="max-w-xl">
-            <div className="w-12 h-[3px] bg-[#1898d4] mb-6"></div>
+            <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 
             <h2 className="text-4xl font-bold text-[#1d1d1d] mb-5">
               1. What gambling harm looks like
@@ -68,9 +68,9 @@ const GamblingHarmLooksLike = () => {
           {harms.map((item, index) => (
             <div
               key={index}
-              className="grid md:grid-cols-[220px_1fr] gap-8 py-8 border-b border-gray-200"
+              className="grid md:grid-cols-[220px_1fr] gap-8 py-4 md:py-8 border-b border-gray-200"
             >
-              <h3 className="text-[#0b7cb5] text-sm font-medium">
+              <h3 className="text-Primary2 text-sm font-medium">
                 {item.title}
               </h3>
 

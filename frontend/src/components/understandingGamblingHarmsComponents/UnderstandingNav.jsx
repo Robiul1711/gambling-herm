@@ -38,12 +38,12 @@ const UnderstandingNav = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-3 mb-20">
+    <div className="flex flex-wrap gap-3 mb-10 md:mb-16 max-w-5xl mx-auto px-4">
       {sections.map((item) => (
         <button
           key={item.id}
           onClick={() => handleScroll(item.id)}
-          className="px-5 py-2 rounded-full border text-sm hover:bg-Primary hover:text-white transition"
+          className="px-4 py-2 rounded-full border text-xs md:text-sm hover:bg-Primary hover:text-white transition"
         >
           {item.title}
         </button>
