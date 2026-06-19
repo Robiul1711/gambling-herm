@@ -33,7 +33,7 @@ const ProblemCampaignIsFixing = () => {
   ];
 
   return (
-    <section className=" bg-white text-gray-800">
+    <section className=" bg-white text-gray-800 max-w-5xl mx-auto">
       <div className="">
         
         {/* Top Centered Decorative Accent Bar */}

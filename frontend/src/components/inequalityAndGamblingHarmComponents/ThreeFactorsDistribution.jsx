@@ -23,7 +23,7 @@ const factorsData = [
 
 const ThreeFactorsDistribution = () => {
   return (
-    <section id="three-factors" className=" ">
+    <section id="three-factors" className="py-10 md:py-16 ">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Top Accent Line */}

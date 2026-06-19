@@ -2,7 +2,7 @@ import React from 'react';
 
 const CampaignSupport = () => {
   return (
-    <section className="py-8 bg-white ">
+    <section className="py-8 max-w-5xl mx-auto">
       <div className="border-l-4 border-[#00B5FF] bg-[#EBF8FF] text-gray-800 p-6 md:p-8 rounded-r-2xl shadow-sm transition-all duration-300">
         
         {/* Callout Header Link / Label */}

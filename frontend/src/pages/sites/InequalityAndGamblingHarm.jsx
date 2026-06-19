@@ -23,9 +23,9 @@ const InequalityAndGamblingHarm = () => {
       <OurPositionCallout />
       <HeadlineRatio />
       <ThreeFactorsDistribution />
-      <WhereHarmConcentrates/>
-      <WhatDrivesHarmAndBlocksSupport/>
-<PolicyPositionsInequality/>
+      <WhereHarmConcentrates />
+      <WhatDrivesHarmAndBlocksSupport />
+      <PolicyPositionsInequality />
       <OurWorkCommonContact
         title="Inequality is not a side-topic."
         description="If gambling-harm policy doesn't centre the inequality picture, it underserves the people who carry most of the harm. That makes inequality central to GHUK's work, not a separate strand of it."

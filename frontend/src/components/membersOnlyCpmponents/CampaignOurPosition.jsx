@@ -3,7 +3,7 @@ import React from 'react';
 const CampaignOurPosition = () => {
   return (
 
-      <div className=" border-l-4 border-[#00B5FF] bg-[#292929] text-white p-6 md:p-8 rounded-r-2xl shadow-md transition-all duration-300">
+      <div className="max-w-5xl mx-auto border-l-4 border-[#00B5FF] bg-[#292929] text-white p-6 md:p-8 rounded-r-2xl shadow-md transition-all duration-300">
         
         {/* Dynamic Theme Heading Pin */}
         <h4 className="text-[#3FABD4] font-semibold tracking-wide text-sm md:text-base uppercase mb-3 select-none">

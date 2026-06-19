@@ -27,7 +27,7 @@ const HowThisSits = () => {
   ];
 
   return (
-    <section className=" text-gray-800 ">
+    <section className=" text-gray-800 max-w-5xl mx-auto py-12">
       <div className="">
         
         {/* Top Centered Section Header Block Decorative Anchor */}

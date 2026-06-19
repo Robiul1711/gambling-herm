@@ -37,8 +37,8 @@ const concentrationData = [
 
 const WhereHarmConcentrates = () => {
   return (
-    <section id="harm-concentration" className="py-10 md:py-16 ">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="harm-concentration" className=" ">
+      <div className="section-padding-x py-10 md:py-16">
 
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
