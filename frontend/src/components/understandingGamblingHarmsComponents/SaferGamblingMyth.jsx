@@ -25,7 +25,7 @@ const points = [
 const SaferGamblingMyth = () => {
   return (
     <section id="safer-gambling" className="py-8 md:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top line */}
         <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 

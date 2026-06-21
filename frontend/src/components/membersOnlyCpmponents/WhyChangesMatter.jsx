@@ -26,7 +26,7 @@ const WhyChangesMatter = () => {
   ];
 
   return (
-    <section className=" bg-white text-gray-800 ">
+    <section className="  text-gray-800 ">
       <div className="">
         
         {/* Top Decorative Fine Dotted Divider Rule */}

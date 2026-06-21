@@ -23,7 +23,7 @@ const oftenOverlooked = [
 const WhoIsAffected = () => {
   return (
     <section id="affected" className="bg-gray-50/50">
-      <div className="max-w-7xl mx-auto px-4 py-8 md:py-16 ">
+      <div className="max-w-5xl mx-auto px-4 py-8 md:py-16 ">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 

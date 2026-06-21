@@ -70,6 +70,21 @@ export default function Navbar() {
     "/members-only-campaign"
   ].includes(pathname)
 
+  const isProfessionalsActive = [
+    "/professionals",
+    "/professionals/healthcare",
+    "/professionals/public-health",
+    "/professionals/children-young-people"
+  ].includes(pathname)
+
+  const isHelpActive = [
+    "/get-help",
+    "/get-help/check-in",
+    "/get-help/treatment",
+    "/get-help/family-friends",
+    "/urgent-help"
+  ].includes(pathname)
+
   const getMobileSubLinkClass = (to) => {
     const active = isLinkActive(to)
     return `block px-4 py-2.5 text-sm rounded-lg transition-colors ${
@@ -122,7 +137,49 @@ export default function Navbar() {
                       Home
                     </Link>
                   </NavigationMenuItem>
-
+                  
+                  {/* Professionals Dropdown */}
+                  <NavigationMenuItem className="static">
+                    <NavigationMenuTrigger
+                      className={`text-base data-[state=open]:text-Primary hover:text-Primary transition-colors ${
+                        isProfessionalsActive
+                          ? "text-Primary font-bold"
+                          : "text-gray-700 font-medium"
+                      }`}
+                    >
+                      Professionals
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
+                      <div className="grid grid-cols-2 gap-8 p-6 w-[520px]">
+                        <div>
+                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
+                            Overview
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/professionals" active={isLinkActive("/professionals")}>
+                              Professionals hub
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
+                            By Audience
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/professionals/healthcare" active={isLinkActive("/professionals/healthcare")}>
+                              Healthcare professionals (MECC)
+                            </DropdownItem>
+                            <DropdownItem to="/professionals/public-health" active={isLinkActive("/professionals/public-health")}>
+                              Public health teams
+                            </DropdownItem>
+                            <DropdownItem to="/professionals/children-young-people" active={isLinkActive("/professionals/children-young-people")}>
+                              Children &amp; young people
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
                   {/* About Dropdown */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger
@@ -233,10 +290,49 @@ export default function Navbar() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-gray-700 font-medium text-base hover:text-Primary">
+                  <NavigationMenuItem className="static">
+                    <NavigationMenuTrigger
+                      className={`text-base data-[state=open]:text-Primary hover:text-Primary transition-colors ${
+                        isHelpActive
+                          ? "text-Primary font-bold"
+                          : "text-gray-700 font-medium"
+                      }`}
+                    >
                       Get help
                     </NavigationMenuTrigger>
+                    <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
+                      <div className="grid grid-cols-2 gap-8 p-6 w-[520px]">
+                        <div>
+                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
+                            Where to start
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/get-help" active={isLinkActive("/get-help")}>
+                              Get help (overview)
+                            </DropdownItem>
+                            <DropdownItem to="/get-help/check-in" active={isLinkActive("/get-help/check-in")}>
+                              Check-in tool
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
+                            Routes to support
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem to="/get-help/treatment" active={isLinkActive("/get-help/treatment")}>
+                              Find treatment near you
+                            </DropdownItem>
+                            <DropdownItem to="/get-help/family-friends" active={isLinkActive("/get-help/family-friends")}>
+                              For family &amp; friends
+                            </DropdownItem>
+                            <DropdownItem to="/urgent-help" active={isLinkActive("/urgent-help")}>
+                              Crisis &amp; urgent help
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
                   </NavigationMenuItem>
 
                 </NavigationMenuList>
@@ -313,6 +409,51 @@ export default function Navbar() {
               >
                 Home
               </Link>
+
+              {/* Professionals Accordion */}
+              <div>
+                <button
+                  onClick={() => toggleMobileDropdown('professionals')}
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                    isProfessionalsActive
+                      ? "font-bold text-Primary bg-blue-50/10"
+                      : "font-medium text-gray-800 hover:bg-gray-50"
+                  }`}
+                >
+                  <span>Professionals</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'professionals' ? 'rotate-180' : ''}`} />
+                </button>
+                {activeMobileDropdown === 'professionals' && (
+                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Overview
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/professionals" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals")}>
+                          Professionals hub
+                        </Link>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        By Audience
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/professionals/healthcare" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/healthcare")}>
+                          Healthcare professionals (MECC)
+                        </Link>
+                        <Link to="/professionals/public-health" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/public-health")}>
+                          Public health teams
+                        </Link>
+                        <Link to="/professionals/children-young-people" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/children-young-people")}>
+                          Children &amp; young people
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* About Accordion */}
               <div>
@@ -398,15 +539,46 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown('help')}
-                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl transition-colors"
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                    isHelpActive
+                      ? "font-bold text-Primary bg-blue-50/10"
+                      : "font-medium text-gray-800 hover:bg-gray-50"
+                  }`}
                 >
                   <span>Get help</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'help' ? 'rotate-180' : ''}`} />
                 </button>
                 {activeMobileDropdown === 'help' && (
-                  <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/50 rounded-xl mt-1">
-                    <Link to="/support" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm font-medium text-gray-600">Support Services</Link>
-                    <Link to="/helplines" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm font-medium text-gray-600">Helplines</Link>
+                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Where to start
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/get-help" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help")}>
+                          Get help (overview)
+                        </Link>
+                        <Link to="/get-help/check-in" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help/check-in")}>
+                          Check-in tool
+                        </Link>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
+                        Routes to support
+                      </div>
+                      <div className="space-y-0.5">
+                        <Link to="/get-help/treatment" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help/treatment")}>
+                          Find treatment near you
+                        </Link>
+                        <Link to="/get-help/family-friends" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help/family-friends")}>
+                          For family &amp; friends
+                        </Link>
+                        <Link to="/urgent-help" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/urgent-help")}>
+                          Crisis &amp; urgent help
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

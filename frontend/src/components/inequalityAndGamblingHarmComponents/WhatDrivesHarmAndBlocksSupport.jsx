@@ -1,52 +1,60 @@
-import React from 'react';
+import React from "react";
 
 const drivers = [
   {
     title: "Commercial determinants.",
-    description: "Gambling product design, marketing intensity, point-of-sale density, \"free bet\" inducements, normalisation in sport and broadcast."
+    description:
+      'Gambling product design, marketing intensity, point-of-sale density, "free bet" inducements, normalisation in sport and broadcast.',
   },
   {
     title: "Financial stress.",
-    description: "Job loss, debt, benefits-system pressures push people toward gambling as a perceived income solution; chasing losses compounds."
+    description:
+      "Job loss, debt, benefits-system pressures push people toward gambling as a perceived income solution; chasing losses compounds.",
   },
   {
     title: "Trauma and loss.",
-    description: "Bereavement, family breakdown, loneliness, life transitions. Gambling can act as coping for any of these."
+    description:
+      "Bereavement, family breakdown, loneliness, life transitions. Gambling can act as coping for any of these.",
   },
   {
     title: "Loneliness and social exclusion.",
-    description: "Gambling venues and online platforms can feel like social space, particularly to people excluded from other social contexts. The risk of harm rises with the duration of use."
-  }
+    description:
+      "Gambling venues and online platforms can feel like social space, particularly to people excluded from other social contexts. The risk of harm rises with the duration of use.",
+  },
 ];
 
 const barriers = [
   {
     title: "Awareness gap.",
-    description: "People most at risk of harm often know least about available support."
+    description:
+      "People most at risk of harm often know least about available support.",
   },
   {
     title: "Cultural fit.",
-    description: "Services designed without explicit cultural, gender or neurodivergence-specific tailoring may feel irrelevant or unsafe."
+    description:
+      "Services designed without explicit cultural, gender or neurodivergence-specific tailoring may feel irrelevant or unsafe.",
   },
   {
     title: "Stigma and discrimination.",
-    description: "Compounded for people facing other intersecting stigmas. See our stigma page."
+    description:
+      "Compounded for people facing other intersecting stigmas. See our stigma page.",
   },
   {
     title: "Treatment fragmentation.",
-    description: "Gambling harm is treated separately from the mental-health, debt-advice, family-support and addiction services it usually co-occurs with."
+    description:
+      "Gambling harm is treated separately from the mental-health, debt-advice, family-support and addiction services it usually co-occurs with.",
   },
   {
     title: "Geography.",
-    description: "NHS specialist provision is uneven; the regional gap is part of the inequality picture. See our find-treatment page."
-  }
+    description:
+      "NHS specialist provision is uneven; the regional gap is part of the inequality picture. See our find-treatment page.",
+  },
 ];
 
 const WhatDrivesHarmAndBlocksSupport = () => {
   return (
     <section>
-      <div className="max-w-7xl mx-auto px-4">
-
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
@@ -57,13 +65,13 @@ const WhatDrivesHarmAndBlocksSupport = () => {
 
         {/* --- Drivers Subsection --- */}
         <div className="mb-12">
-          <h3 className="text-xl font-bold text-[#2d2d2d] mb-4">
-            Drivers
-          </h3>
+          <h3 className="text-xl font-bold text-[#2d2d2d] mb-4">Drivers</h3>
           <div className="divide-y divide-dashed divide-gray-200 border-b border-dashed border-gray-200">
             {drivers.map((item, index) => (
               <div key={index} className="py-5 text-[15px] leading-7 ">
-                <strong className="text-[#2d2d2d] font-semibold">{item.title} </strong>
+                <strong className="text-[#2d2d2d] font-semibold">
+                  {item.title}{" "}
+                </strong>
                 <span className="text-[#687076]">{item.description}</span>
               </div>
             ))}
@@ -72,19 +80,18 @@ const WhatDrivesHarmAndBlocksSupport = () => {
 
         {/* --- Barriers Subsection --- */}
         <div>
-          <h3 className="text-xl font-bold text-[#2d2d2d] mb-4">
-            Barriers
-          </h3>
+          <h3 className="text-xl font-bold text-[#2d2d2d] mb-4">Barriers</h3>
           <div className="divide-y divide-dashed divide-gray-200 border-b border-dashed border-gray-200">
             {barriers.map((item, index) => (
               <div key={index} className="py-5 text-[15px] leading-7 ">
-                <strong className="text-[#2d2d2d] font-semibold">{item.title} </strong>
+                <strong className="text-[#2d2d2d] font-semibold">
+                  {item.title}{" "}
+                </strong>
                 <span className="text-[#687076]">{item.description}</span>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

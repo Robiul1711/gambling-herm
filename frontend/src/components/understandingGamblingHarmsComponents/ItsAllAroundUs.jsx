@@ -32,7 +32,7 @@ const ItsAllAroundUs = () => {
   return (
     <section
       id="all-around-us"
-      className="max-w-7xl mx-auto px-4 pb-8 md:pb-16"
+      className="max-w-5xl mx-auto px-4 pb-8 md:pb-16"
     >
       {/* Top Accent Line */}
       <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>

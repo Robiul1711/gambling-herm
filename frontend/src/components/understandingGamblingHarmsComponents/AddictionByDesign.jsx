@@ -26,7 +26,7 @@ const items = [
 const AddictionByDesign = () => {
   return (
     <section id="addiction-design" className="pt-8 md:pt-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top line */}
         <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 

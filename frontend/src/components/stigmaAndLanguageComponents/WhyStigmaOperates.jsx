@@ -26,7 +26,7 @@ const stigmaFactors = [
 const WhyStigmaOperates = () => {
   return (
     <section id="why-stigma" className="py-10 md:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="section-padding-x">
 
         {/* Top Line Accent */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>

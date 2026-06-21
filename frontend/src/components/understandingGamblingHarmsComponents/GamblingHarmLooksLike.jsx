@@ -38,11 +38,11 @@ const GamblingHarmLooksLike = () => {
   return (
     <section
       id="gambling-harm"
-      className="pb-8 md:pb-16 max-w-7xl mx-auto px-4"
+      className="pb-8 md:pb-16 section-padding-x"
     >
       <div className="">
         {/* Header */}{" "}
-        <div className="flex flex-col lg:flex-row justify-between gap-6 md:gap-10 mb-8 md:mb-16">
+        <div className="flex flex-col lg:flex-row justify-between gap-6 md:gap-10 mb-8 md:mb-16 max-w-5xl mx-auto">
           <div className="max-w-xl">
             <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 

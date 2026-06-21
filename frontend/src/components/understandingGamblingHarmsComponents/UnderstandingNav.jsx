@@ -38,7 +38,7 @@ const UnderstandingNav = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-3 mb-10 md:mb-16 max-w-7xl mx-auto px-4">
+    <div className="flex flex-wrap gap-3 mb-10 md:mb-16  section-padding-x">
       {sections.map((item) => (
         <button
           key={item.id}

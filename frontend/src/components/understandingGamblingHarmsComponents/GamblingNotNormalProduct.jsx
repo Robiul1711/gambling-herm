@@ -4,7 +4,7 @@ const GamblingNotNormalProduct = () => {
       id="normal-product"
       className="bg-[#262323] text-white py-10 md:py-20"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top Accent */}
         <div className="w-12 h-[3px] bg-Primary2 mb-8"></div>
 

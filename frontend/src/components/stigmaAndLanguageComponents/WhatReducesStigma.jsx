@@ -1,34 +1,38 @@
-import React from 'react';
+import React from "react";
 import whatstigma from "@/assets/images/whatstigma.png";
 
 const reductionPoints = [
   {
     number: 1,
-    title: "Reframe to public-health language across government, regulator and media",
-    description: "\"People affected by gambling\" rather than \"problem gamblers\". \"Harm caused by gambling products\" rather than \"gambling problems\". This isn't cosmetic, the available frames determine what action is then thinkable."
+    title:
+      "Reframe to public-health language across government, regulator and media",
+    description:
+      '"People affected by gambling" rather than "problem gamblers". "Harm caused by gambling products" rather than "gambling problems". This isn\'t cosmetic, the available frames determine what action is then thinkable.',
   },
   {
     number: 2,
     title: "Centre lived experience, not as testimony, as leadership",
-    description: "People with lived experience of gambling harm, including affected others and the bereaved, should sit at the centre of policy and service design. Not as case studies, as the people defining the response. This is one of the most reliably stigma-reducing things research finds."
+    description:
+      "People with lived experience of gambling harm, including affected others and the bereaved, should sit at the centre of policy and service design. Not as case studies, as the people defining the response. This is one of the most reliably stigma-reducing things research finds.",
   },
   {
     number: 3,
     title: "Make the structural causes visible",
-    description: "Naming the commercial determinants (product design, marketing, regulation, industry lobbying) reduces stigma at the individual level. If the harm is shown to be industrial, the shame of being harmed by it shifts."
+    description:
+      "Naming the commercial determinants (product design, marketing, regulation, industry lobbying) reduces stigma at the individual level. If the harm is shown to be industrial, the shame of being harmed by it shifts.",
   },
   {
     number: 4,
     title: "Take industry funding out of stigma-reduction work",
-    description: "The reputation dividend is incompatible with effective anti-stigma work. Stigma campaigns funded independently of the industry being studied are more credible and produce different framings."
-  }
+    description:
+      "The reputation dividend is incompatible with effective anti-stigma work. Stigma campaigns funded independently of the industry being studied are more credible and produce different framings.",
+  },
 ];
 
 const WhatReducesStigma = () => {
   return (
     <section id="reduces-stigma" className="py-10 md:py-16 ">
-      <div className="max-w-7xl mx-auto px-4">
-
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
@@ -48,9 +52,10 @@ const WhatReducesStigma = () => {
             Lived experience · PhoenixFM, May 2026
           </div>
           <h4 className="text-base md:text-lg font-bold text-[#2d2d2d] mb-4">
-            John Gilham On Shame, Stigma And The Language We Use About Gambling Harm
+            John Gilham On Shame, Stigma And The Language We Use About Gambling
+            Harm
           </h4>
-          
+
           {/* Audio Player Component */}
           <div className="mb-4 max-w-xl">
             <audio controls className="w-full h-10 accent-[#17a9df]">
@@ -60,14 +65,15 @@ const WhatReducesStigma = () => {
           </div>
 
           <p className="text-xs md:text-sm text-[#687076]">
-            Clip: John Gilham (lived experience) interviewed by Dr Kishan Patel on PhoenixFM, May 2026.
+            Clip: John Gilham (lived experience) interviewed by Dr Kishan Patel
+            on PhoenixFM, May 2026.
           </p>
         </div>
 
         {/* Point Cards Layout Grid Stack */}
         <div className="space-y-4  mb-8">
           {reductionPoints.map((item) => (
-            <div 
+            <div
               key={item.number}
               className="border border-gray-200 rounded-2xl p-5 md:p-6 flex gap-5 items-start bg-white transition-all hover:border-gray-300"
             >
@@ -96,10 +102,12 @@ const WhatReducesStigma = () => {
               A note on language
             </h4>
             <p className="text-gray-300 text-[14px] md:text-[15px] leading-7">
-              The phrase "12 ways to reduce stigma when discussing gambling harms" you may have seen is from a 
-              GambleAware-published language guide. The advice in it is largely sound. The frame around it (that stigma 
-              can be solved with better individual word choice) understates the structural piece. Use the language guide; 
-              reject the implied theory of change.
+              The phrase "12 ways to reduce stigma when discussing gambling
+              harms" you may have seen is from a GambleAware-published language
+              guide. The advice in it is largely sound. The frame around it
+              (that stigma can be solved with better individual word choice)
+              understates the structural piece. Use the language guide; reject
+              the implied theory of change.
             </p>
           </div>
         </div>
@@ -107,17 +115,17 @@ const WhatReducesStigma = () => {
         {/* Video Still Image and Caption Container */}
         <div className="max-w-xl mx-auto md:max-w-md flex flex-col items-center text-center mt-12">
           <div className="w-full aspect-[16/10] bg-gray-200 rounded-3xl overflow-hidden mb-4 shadow-sm">
-            <img 
+            <img
               src={whatstigma}
               alt="Still from GHUK's Brothers Gambling Harm safeguarding film"
               className="w-full h-full object-cover"
             />
           </div>
           <p className="text-xs md:text-sm text-[#2d2d2d] leading-relaxed max-w-sm">
-            Still from GHUK's Brothers Gambling Harm safeguarding film &mdash; the people behind the statistics are not problems to be solved.
+            Still from GHUK's Brothers Gambling Harm safeguarding film &mdash;
+            the people behind the statistics are not problems to be solved.
           </p>
         </div>
-
       </div>
     </section>
   );
