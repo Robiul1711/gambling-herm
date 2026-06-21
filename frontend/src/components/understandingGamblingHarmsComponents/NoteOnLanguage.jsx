@@ -6,7 +6,7 @@ const NoteOnLanguage = () => {
       id="language"
       className="bg-[#1a1919] text-[#e0e0e0] py-8 md:py-16"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 

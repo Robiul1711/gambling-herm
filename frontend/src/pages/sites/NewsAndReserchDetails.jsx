@@ -32,9 +32,9 @@ const RELATED_LINKS = [
 const NewsAndReserchDetails = () => {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#006699]/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         {/* Header Section */}
-        <header className="text-center max-w-7xl mx-auto mb-10 md:mb-14">
+        <header className="text-center max-w-5xl mx-auto mb-10 md:mb-14">
           <h1 className="text-2xl sm:text-4xl md:text-[44px] font-bold text-slate-800 tracking-tight leading-tight mb-4">
             The PGSI-8 threshold and why the UK's headline gambling-harm figure
             understates harm

@@ -13,6 +13,15 @@ import StigmaAndLanguage from "@/pages/sites/StigmaAndLanguage";
 import InequalityAndGamblingHarm from "@/pages/sites/InequalityAndGamblingHarm";
 import PolicyAndAdvocacy from "@/pages/sites/PolicyAndAdvocacy";
 import MembersOnlyCampaign from "@/pages/sites/MembersOnlyCampaign";
+import ProfessionalsHub from "@/pages/sites/ProfessionalsHub";
+import HealthcareProfessionals from "@/pages/sites/HealthcareProfessionals";
+import PublicHealthTeams from "@/pages/sites/PublicHealthTeams";
+import ChildrenYoungPeople from "@/pages/sites/ChildrenYoungPeople";
+import GetHelpOverview from "@/pages/sites/GetHelpOverview";
+import CheckInTool from "@/pages/sites/CheckInTool";
+import FindTreatment from "@/pages/sites/FindTreatment";
+import ForFamilyFriends from "@/pages/sites/ForFamilyFriends";
+import UrgentHelp from "@/pages/sites/UrgentHelp";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -67,6 +76,42 @@ const router = createBrowserRouter([
       {
         path: "/members-only-campaign",
         element: <MembersOnlyCampaign />,
+      },
+      {
+        path: "/professionals",
+        element: <ProfessionalsHub />,
+      },
+      {
+        path: "/professionals/healthcare",
+        element: <HealthcareProfessionals />,
+      },
+      {
+        path: "/professionals/public-health",
+        element: <PublicHealthTeams />,
+      },
+      {
+        path: "/professionals/children-young-people",
+        element: <ChildrenYoungPeople />,
+      },
+      {
+        path: "/get-help",
+        element: <GetHelpOverview />,
+      },
+      {
+        path: "/get-help/check-in",
+        element: <CheckInTool />,
+      },
+      {
+        path: "/get-help/treatment",
+        element: <FindTreatment />,
+      },
+      {
+        path: "/get-help/family-friends",
+        element: <ForFamilyFriends />,
+      },
+      {
+        path: "/urgent-help",
+        element: <UrgentHelp />,
       },
     ],
   },

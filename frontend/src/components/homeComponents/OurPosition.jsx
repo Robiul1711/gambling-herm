@@ -3,7 +3,7 @@ import React from "react";
 export default function OurPosition() {
   return (
     <section className="w-full bg-[#2A2828] text-white py-10 md:py-16 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Layout Container with Left Border Accent */}
         <div className="border-l-4 border-Primary pl-6 md:pl-10 flex flex-col space-y-4 md:space-y-6">
           {/* Section Subtitle Tag */}

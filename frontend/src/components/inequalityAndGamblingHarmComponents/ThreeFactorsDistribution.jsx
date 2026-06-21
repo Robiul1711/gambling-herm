@@ -1,31 +1,33 @@
-import React from 'react';
+import React from "react";
 
 const factorsData = [
   {
     factorNum: 1,
     title: "Social inequalities",
-    description: "The broader structural context, where you live, who you live among, how much income you have, whether you face other forms of disadvantage. These shape exposure long before any individual decision about gambling is made.",
-    highlighted: true
+    description:
+      "The broader structural context, where you live, who you live among, how much income you have, whether you face other forms of disadvantage. These shape exposure long before any individual decision about gambling is made.",
+    highlighted: true,
   },
   {
     factorNum: 2,
     title: "Drivers of harm",
-    description: "The forces that move risk into harm, gambling product design, marketing, normalisation, financial stress, mental-health comorbidity, social exclusion, life events. Concentrated by social inequality.",
-    highlighted: false
+    description:
+      "The forces that move risk into harm, gambling product design, marketing, normalisation, financial stress, mental-health comorbidity, social exclusion, life events. Concentrated by social inequality.",
+    highlighted: false,
   },
   {
     factorNum: 3,
     title: "Barriers to support",
-    description: "Once harm exists, who can access help. Awareness, geography, cultural fit, stigma, discrimination, the appropriateness of the service to the person's situation. Concentrated by social inequality too.",
-    highlighted: false
-  }
+    description:
+      "Once harm exists, who can access help. Awareness, geography, cultural fit, stigma, discrimination, the appropriateness of the service to the person's situation. Concentrated by social inequality too.",
+    highlighted: false,
+  },
 ];
 
 const ThreeFactorsDistribution = () => {
   return (
     <section id="three-factors" className="py-10 md:py-16 ">
-      <div className="max-w-7xl mx-auto px-4">
-
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
@@ -36,7 +38,8 @@ const ThreeFactorsDistribution = () => {
 
         {/* Section Subtitle */}
         <p className="text-[#2d2d2d] text-[15px] md:text-base mb-10 ">
-          Social inequalities, drivers of harm, and barriers to support. Each operates separately and they intersect.
+          Social inequalities, drivers of harm, and barriers to support. Each
+          operates separately and they intersect.
         </p>
 
         {/* Responsive 3-Column Card Grid Container */}
@@ -66,7 +69,6 @@ const ThreeFactorsDistribution = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

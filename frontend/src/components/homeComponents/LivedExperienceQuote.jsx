@@ -3,7 +3,7 @@ import React from "react";
 export default function LivedExperienceQuote() {
   return (
     <section className="w-full bg-white py-10 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Top Accent Subheading */}
         <div className="flex items-center space-x-3 mb-8 pl-4 sm:pl-8 md:pl-0">
           <span className="w-8 h-[2px] bg-Primary" />
@@ -16,7 +16,7 @@ export default function LivedExperienceQuote() {
         <div className="relative my-4 px-4 sm:px-8 md:px-12">
           {/* Left Decorative Opening Quote Mark */}
           <span
-            className="absolute -top-8 left-0 md:-left-4 text-gray-900 font-serif text-6xl leading-none select-none tracking-tighter font-black"
+            className="absolute -top-8 left-0 md:-left-4 text-gray-900  text-6xl leading-none select-none tracking-tighter font-black"
             aria-hidden="true"
           >
             “
@@ -34,7 +34,7 @@ export default function LivedExperienceQuote() {
 
           {/* Right Decorative Closing Quote Mark */}
           <span
-            className="absolute -bottom-14 right-4 md:-right-4 text-gray-900 font-serif text-6xl leading-none select-none tracking-tighter font-black"
+            className="absolute -bottom-14 right-4 md:-right-4 text-gray-900  text-6xl leading-none select-none tracking-tighter font-black"
             aria-hidden="true"
           >
             ”
