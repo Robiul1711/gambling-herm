@@ -30,9 +30,9 @@ const ScrollToTop = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-Primary2 text-white shadow-lg shadow-Primary2/30 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-Primary2 focus-visible:ring-offset-2"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-Primary2 text-white shadow-lg shadow-Primary2/30 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-Primary2 focus-visible:ring-offset-2"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
         </motion.button>
       )}
     </AnimatePresence>

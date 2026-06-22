@@ -81,9 +81,14 @@ const changesList = [
   {
     number: 11,
     title: "Full-distribution measurement of gambling harm",
-    description:
-      "Headline UK gambling-harm prevalence should be measured across the full PGSI distribution (not summarised by an 8+ cut-off) and should be supplemented by direct measurement of affected-others harm. The headline figure used in policy debate should reflect the full distribution. Alongside survey measurement: routine ICD/SNOMED coding of gambling harm across NHS contacts, and regular national burden estimation using established metrics (YLD, QALY, DALY). Gambling-related deaths and morbidity currently go systematically unrecorded, in health records and in coroners' accounts, and the UK cannot manage what it does not measure. This is where GHUK's work began.",
-  },
+description: (
+  <>
+    Headline UK gambling-harm prevalence should be measured across the full PGSI distribution (not summarised by an 8+ cut-off) and should be supplemented by direct measurement of affected-others harm. The headline figure used in policy debate should reflect the full distribution.
+    <br />
+    <br />
+    Alongside survey measurement: routine ICD/SNOMED coding of gambling harm across NHS contacts, and regular national burden estimation using established metrics (YLD, QALY, DALY). Gambling-related deaths and morbidity currently go systematically unrecorded, in health records and in coroners' accounts, and the UK cannot manage what it does not measure. This is where GHUK's work began.
+  </>
+),},
   {
     number: 12,
     title:

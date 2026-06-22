@@ -65,8 +65,7 @@ const WhatReducesStigma = () => {
           </div>
 
           <p className="text-xs md:text-sm text-[#687076]">
-            Clip: John Gilham (lived experience) interviewed by Dr Kishan Patel
-            on PhoenixFM, May 2026.
+          Clip: John Gilham (lived experience), interviewed on Phoenix FM's 123 Friday show, May 2026.
           </p>
         </div>
 

@@ -118,7 +118,7 @@ const BurdenOfHarm = () => {
       {/* ----------------------------- */}
 
       {/* Main Sections Grid/Stack */}
-      <div className="section-padding-x py-4 md:py-6 max-w-[1500px] mx-auto space-y-10 md:space-y-14 lg:space-y-16">
+      <div className=" py-4 md:py-6  space-y-10 md:space-y-14 lg:space-y-16">
         <div ref={sectionRefs.modifiable} className="scroll-mt-16 md:scroll-mt-24">
           <ModifiableRiskFactor />
         </div>

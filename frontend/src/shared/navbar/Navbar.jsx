@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X, ChevronDown } from "lucide-react"
+import * as React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,55 +9,43 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import CrisisHeader from "./CrisisHeader"
-import Logo from "@/assets/images/logo.png"
+} from "@/components/ui/navigation-menu";
+import CrisisHeader from "./CrisisHeader";
+import Logo from "@/assets/images/logo.png";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
-  const [activeMobileDropdown, setActiveMobileDropdown] = React.useState(null)
-  const [isScrolled, setIsScrolled] = React.useState(false)
-  const [isNavVisible, setIsNavVisible] = React.useState(true)
-  const lastScrollY = React.useRef(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = React.useState(null);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isNavVisible, setIsNavVisible] = React.useState(true);
+  const lastScrollY = React.useRef(0);
 
   React.useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 40);
+    };
 
-      // Show/hide based on scroll direction
-      if (currentScrollY < lastScrollY.current || currentScrollY < 80) {
-        // Scrolling UP or near top → show navbar
-        setIsNavVisible(true)
-      } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        // Scrolling DOWN past threshold → hide navbar
-        setIsNavVisible(false)
-        // Also close mobile menu when hiding
-        setMobileMenuOpen(false)
-      }
-
-      setIsScrolled(currentScrollY > 40)
-      lastScrollY.current = currentScrollY
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMobileDropdown = (menu) => {
-    setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu)
-  }
+    setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu);
+  };
 
-  const { pathname, hash } = useLocation()
+  const { pathname, hash } = useLocation();
 
   const isLinkActive = (to) => {
     if (to.includes("#")) {
-      const [path, targetHash] = to.split("#")
-      return pathname === path && hash === `#${targetHash}`
+      const [path, targetHash] = to.split("#");
+      return pathname === path && hash === `#${targetHash}`;
     }
-    return pathname === to && !hash
-  }
+    return pathname === to && !hash;
+  };
 
-  const isAboutActive = pathname === "/about" || pathname.startsWith("/news-and-research")
+  const isAboutActive =
+    pathname === "/about" || pathname.startsWith("/news-and-research");
 
   const isWorkActive = [
     "/burden-of-harm",
@@ -67,32 +55,32 @@ export default function Navbar() {
     "/stigma-and-language",
     "/inequality-and-gambling-harm",
     "/policy-and-advocacy",
-    "/members-only-campaign"
-  ].includes(pathname)
+    "/members-only-campaign",
+  ].includes(pathname);
 
   const isProfessionalsActive = [
     "/professionals",
     "/professionals/healthcare",
     "/professionals/public-health",
-    "/professionals/children-young-people"
-  ].includes(pathname)
+    "/professionals/children-young-people",
+  ].includes(pathname);
 
   const isHelpActive = [
     "/get-help",
     "/get-help/check-in",
     "/get-help/treatment",
     "/get-help/family-friends",
-    "/urgent-help"
-  ].includes(pathname)
+    "/urgent-help",
+  ].includes(pathname);
 
   const getMobileSubLinkClass = (to) => {
-    const active = isLinkActive(to)
+    const active = isLinkActive(to);
     return `block px-4 py-2.5 text-sm rounded-lg transition-colors ${
       active
         ? "font-semibold text-Primary bg-[#E0F2FE]"
         : "font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-    }`
-  }
+    }`;
+  };
 
   return (
     <>
@@ -114,7 +102,6 @@ export default function Navbar() {
         {/* 2. Main Navigation Bar */}
         <header className="w-full">
           <div className="section-padding-x pt-2 flex items-center justify-between">
-            
             {/* Logo */}
             <Link to="/">
               <img src={Logo} alt="logo" className="md:w-25 sm:w-20 w-15" />
@@ -122,9 +109,11 @@ export default function Navbar() {
 
             {/* DESKTOP NAVIGATION (shadcn/ui) */}
             <div className="flex items-center gap-5 ">
-              <NavigationMenu className="static hidden md:flex items-center" viewport={false}>
+              <NavigationMenu
+                className="static hidden md:flex items-center"
+                viewport={false}
+              >
                 <NavigationMenuList className="static flex space-x-1">
-                  
                   <NavigationMenuItem>
                     <Link
                       to="/"
@@ -137,7 +126,7 @@ export default function Navbar() {
                       Home
                     </Link>
                   </NavigationMenuItem>
-                  
+
                   {/* Professionals Dropdown */}
                   <NavigationMenuItem className="static">
                     <NavigationMenuTrigger
@@ -156,7 +145,10 @@ export default function Navbar() {
                             Overview
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/professionals" active={isLinkActive("/professionals")}>
+                            <DropdownItem
+                              to="/professionals"
+                              active={isLinkActive("/professionals")}
+                            >
                               Professionals hub
                             </DropdownItem>
                           </ul>
@@ -166,13 +158,26 @@ export default function Navbar() {
                             By Audience
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/professionals/healthcare" active={isLinkActive("/professionals/healthcare")}>
+                            <DropdownItem
+                              to="/professionals/healthcare"
+                              active={isLinkActive("/professionals/healthcare")}
+                            >
                               Healthcare professionals (MECC)
                             </DropdownItem>
-                            <DropdownItem to="/professionals/public-health" active={isLinkActive("/professionals/public-health")}>
+                            <DropdownItem
+                              to="/professionals/public-health"
+                              active={isLinkActive(
+                                "/professionals/public-health",
+                              )}
+                            >
                               Public health teams
                             </DropdownItem>
-                            <DropdownItem to="/professionals/children-young-people" active={isLinkActive("/professionals/children-young-people")}>
+                            <DropdownItem
+                              to="/professionals/children-young-people"
+                              active={isLinkActive(
+                                "/professionals/children-young-people",
+                              )}
+                            >
                               Children &amp; young people
                             </DropdownItem>
                           </ul>
@@ -198,8 +203,18 @@ export default function Navbar() {
                             The Charity
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/about" active={isLinkActive("/about")}>About GHUK</DropdownItem>
-                            <DropdownItem to="/about#funding" active={isLinkActive("/about#funding")}>Funding &amp; Conflict of interest</DropdownItem>
+                            <DropdownItem
+                              to="/about"
+                              active={isLinkActive("/about")}
+                            >
+                              About GHUK
+                            </DropdownItem>
+                            <DropdownItem
+                              to="/about#funding"
+                              active={isLinkActive("/about#funding")}
+                            >
+                              Funding &amp; Conflict of interest
+                            </DropdownItem>
                           </ul>
                         </div>
                         <div>
@@ -207,8 +222,18 @@ export default function Navbar() {
                             Engage
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/news-and-research" active={isLinkActive("/news-and-research")}>News &amp; research</DropdownItem>
-                            <DropdownItem to="/about#contact" active={isLinkActive("/about#contact")}>Contact us</DropdownItem>
+                            <DropdownItem
+                              to="/news-and-research"
+                              active={isLinkActive("/news-and-research")}
+                            >
+                              News &amp; research
+                            </DropdownItem>
+                            <DropdownItem
+                              to="/about#contact"
+                              active={isLinkActive("/about#contact")}
+                            >
+                              Contact us
+                            </DropdownItem>
                           </ul>
                         </div>
                       </div>
@@ -233,13 +258,22 @@ export default function Navbar() {
                             Evidence Base
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/burden-of-harm" active={isLinkActive("/burden-of-harm")}>
+                            <DropdownItem
+                              to="/burden-of-harm"
+                              active={isLinkActive("/burden-of-harm")}
+                            >
                               Burden of harm
                             </DropdownItem>
-                            <DropdownItem to="/gambling-explained" active={isLinkActive("/gambling-explained")}>
+                            <DropdownItem
+                              to="/gambling-explained"
+                              active={isLinkActive("/gambling-explained")}
+                            >
                               Gambling Explained
                             </DropdownItem>
-                            <DropdownItem to="/gambling-tactics" active={isLinkActive("/gambling-tactics")}>
+                            <DropdownItem
+                              to="/gambling-tactics"
+                              active={isLinkActive("/gambling-tactics")}
+                            >
                               Gambling Tactics
                             </DropdownItem>
                           </ul>
@@ -249,13 +283,26 @@ export default function Navbar() {
                             Topics In Focus
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/understanding-gambling-harms" active={isLinkActive("/understanding-gambling-harms")}>
+                            <DropdownItem
+                              to="/understanding-gambling-harms"
+                              active={isLinkActive(
+                                "/understanding-gambling-harms",
+                              )}
+                            >
                               Understanding gambling harms
                             </DropdownItem>
-                            <DropdownItem to="/stigma-and-language" active={isLinkActive("/stigma-and-language")}>
+                            <DropdownItem
+                              to="/stigma-and-language"
+                              active={isLinkActive("/stigma-and-language")}
+                            >
                               Stigma &amp; language
                             </DropdownItem>
-                            <DropdownItem to="/inequality-and-gambling-harm" active={isLinkActive("/inequality-and-gambling-harm")}>
+                            <DropdownItem
+                              to="/inequality-and-gambling-harm"
+                              active={isLinkActive(
+                                "/inequality-and-gambling-harm",
+                              )}
+                            >
                               Inequality &amp; gambling harm
                             </DropdownItem>
                           </ul>
@@ -265,10 +312,16 @@ export default function Navbar() {
                             Campaigns &amp; Policy
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/policy-and-advocacy" active={isLinkActive("/policy-and-advocacy")}>
+                            <DropdownItem
+                              to="/policy-and-advocacy"
+                              active={isLinkActive("/policy-and-advocacy")}
+                            >
                               Policy &amp; advocacy
                             </DropdownItem>
-                            <DropdownItem to="/members-only-campaign" active={isLinkActive("/members-only-campaign")}>
+                            <DropdownItem
+                              to="/members-only-campaign"
+                              active={isLinkActive("/members-only-campaign")}
+                            >
                               Members Only Campaign
                             </DropdownItem>
                           </ul>
@@ -278,10 +331,16 @@ export default function Navbar() {
                             Updates
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/news-and-research" active={isLinkActive("/news-and-research")}>
+                            <DropdownItem
+                              to="/news-and-research"
+                              active={isLinkActive("/news-and-research")}
+                            >
                               News &amp; research
                             </DropdownItem>
-                            <DropdownItem to="/about#contact" active={isLinkActive("/about#contact")}>
+                            <DropdownItem
+                              to="/about#contact"
+                              active={isLinkActive("/about#contact")}
+                            >
                               Contact us
                             </DropdownItem>
                           </ul>
@@ -307,10 +366,16 @@ export default function Navbar() {
                             Where to start
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/get-help" active={isLinkActive("/get-help")}>
+                            <DropdownItem
+                              to="/get-help"
+                              active={isLinkActive("/get-help")}
+                            >
                               Get help (overview)
                             </DropdownItem>
-                            <DropdownItem to="/get-help/check-in" active={isLinkActive("/get-help/check-in")}>
+                            <DropdownItem
+                              to="/get-help/check-in"
+                              active={isLinkActive("/get-help/check-in")}
+                            >
                               Check-in tool
                             </DropdownItem>
                           </ul>
@@ -320,13 +385,22 @@ export default function Navbar() {
                             Routes to support
                           </h4>
                           <ul className="space-y-1">
-                            <DropdownItem to="/get-help/treatment" active={isLinkActive("/get-help/treatment")}>
+                            <DropdownItem
+                              to="/get-help/treatment"
+                              active={isLinkActive("/get-help/treatment")}
+                            >
                               Find treatment near you
                             </DropdownItem>
-                            <DropdownItem to="/get-help/family-friends" active={isLinkActive("/get-help/family-friends")}>
+                            <DropdownItem
+                              to="/get-help/family-friends"
+                              active={isLinkActive("/get-help/family-friends")}
+                            >
                               For family &amp; friends
                             </DropdownItem>
-                            <DropdownItem to="/urgent-help" active={isLinkActive("/urgent-help")}>
+                            <DropdownItem
+                              to="/urgent-help"
+                              active={isLinkActive("/urgent-help")}
+                            >
                               Crisis &amp; urgent help
                             </DropdownItem>
                           </ul>
@@ -334,7 +408,6 @@ export default function Navbar() {
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-
                 </NavigationMenuList>
               </NavigationMenu>
 
@@ -359,19 +432,20 @@ export default function Navbar() {
                 <Menu className="w-7 h-7" />
               </button>
             </div>
-
           </div>
         </header>
       </div>
 
       {/* MOBILE RESPONSIVE SIDE DRAWER (Moved outside sticky header container to fix transparency) */}
-      <div 
+      <div
         className={`fixed inset-0 z-[100] md:hidden transition-all duration-300 ${
-          mobileMenuOpen ? "visible pointer-events-auto" : "invisible pointer-events-none"
+          mobileMenuOpen
+            ? "visible pointer-events-auto"
+            : "invisible pointer-events-none"
         }`}
       >
         {/* Backdrop overlay */}
-        <div 
+        <div
           className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
             mobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
@@ -379,7 +453,7 @@ export default function Navbar() {
         />
 
         {/* Side Panel Canvas */}
-        <div 
+        <div
           className={`absolute top-0 right-0 bottom-0 w-full max-w-xs bg-white shadow-2xl p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
@@ -388,7 +462,7 @@ export default function Navbar() {
             {/* Drawer Header Close Row */}
             <div className="flex items-center justify-between pb-6 border-b border-gray-100">
               <span className="font-bold  text-lg text-Primary">Gambling</span>
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="p-2 rounded-xl text-gray-500 hover:bg-gray-100 transition-colors"
               >
@@ -398,8 +472,8 @@ export default function Navbar() {
 
             {/* Menu Links List */}
             <nav className="mt-6 space-y-2">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block px-4 py-3 text-base rounded-xl transition-colors ${
                   pathname === "/" && !hash
@@ -413,7 +487,7 @@ export default function Navbar() {
               {/* Professionals Accordion */}
               <div>
                 <button
-                  onClick={() => toggleMobileDropdown('professionals')}
+                  onClick={() => toggleMobileDropdown("professionals")}
                   className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
                     isProfessionalsActive
                       ? "font-bold text-Primary bg-blue-50/10"
@@ -421,16 +495,22 @@ export default function Navbar() {
                   }`}
                 >
                   <span>Professionals</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'professionals' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === "professionals" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                {activeMobileDropdown === 'professionals' && (
+                {activeMobileDropdown === "professionals" && (
                   <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
                     <div>
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
                         Overview
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/professionals" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals")}>
+                        <Link
+                          to="/professionals"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/professionals")}
+                        >
                           Professionals hub
                         </Link>
                       </div>
@@ -440,13 +520,31 @@ export default function Navbar() {
                         By Audience
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/professionals/healthcare" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/healthcare")}>
+                        <Link
+                          to="/professionals/healthcare"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/professionals/healthcare",
+                          )}
+                        >
                           Healthcare professionals (MECC)
                         </Link>
-                        <Link to="/professionals/public-health" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/public-health")}>
+                        <Link
+                          to="/professionals/public-health"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/professionals/public-health",
+                          )}
+                        >
                           Public health teams
                         </Link>
-                        <Link to="/professionals/children-young-people" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/children-young-people")}>
+                        <Link
+                          to="/professionals/children-young-people"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/professionals/children-young-people",
+                          )}
+                        >
                           Children &amp; young people
                         </Link>
                       </div>
@@ -458,7 +556,7 @@ export default function Navbar() {
               {/* About Accordion */}
               <div>
                 <button
-                  onClick={() => toggleMobileDropdown('about')}
+                  onClick={() => toggleMobileDropdown("about")}
                   className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
                     isAboutActive
                       ? "font-bold text-Primary bg-blue-50/10"
@@ -466,14 +564,40 @@ export default function Navbar() {
                   }`}
                 >
                   <span>About</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'about' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === "about" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                {activeMobileDropdown === 'about' && (
+                {activeMobileDropdown === "about" && (
                   <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/50 rounded-xl mt-1">
-                    <Link to="/about" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about")}>About GHUK</Link>
-                    <Link to="/about#funding" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about#funding")}>Funding &amp; Conflict of interest</Link>
-                    <Link to="/news-and-research" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/news-and-research")}>News &amp; research</Link>
-                    <Link to="/about#contact" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about#contact")}>Contact us</Link>
+                    <Link
+                      to="/about"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={getMobileSubLinkClass("/about")}
+                    >
+                      About GHUK
+                    </Link>
+                    <Link
+                      to="/about#funding"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={getMobileSubLinkClass("/about#funding")}
+                    >
+                      Funding &amp; Conflict of interest
+                    </Link>
+                    <Link
+                      to="/news-and-research"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={getMobileSubLinkClass("/news-and-research")}
+                    >
+                      News &amp; research
+                    </Link>
+                    <Link
+                      to="/about#contact"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={getMobileSubLinkClass("/about#contact")}
+                    >
+                      Contact us
+                    </Link>
                   </div>
                 )}
               </div>
@@ -481,7 +605,7 @@ export default function Navbar() {
               {/* Our Work Accordion */}
               <div>
                 <button
-                  onClick={() => toggleMobileDropdown('work')}
+                  onClick={() => toggleMobileDropdown("work")}
                   className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
                     isWorkActive
                       ? "font-bold text-Primary bg-blue-50/10"
@@ -489,18 +613,40 @@ export default function Navbar() {
                   }`}
                 >
                   <span>Our work</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'work' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === "work" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                {activeMobileDropdown === 'work' && (
+                {activeMobileDropdown === "work" && (
                   <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
                     <div>
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
                         Evidence Base
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/burden-of-harm" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/burden-of-harm")}>Burden of harm</Link>
-                        <Link to="/gambling-explained" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/gambling-explained")}>Gambling Explained</Link>
-                        <Link to="/gambling-tactics" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/gambling-tactics")}>Gambling Tactics</Link>
+                        <Link
+                          to="/burden-of-harm"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/burden-of-harm")}
+                        >
+                          Burden of harm
+                        </Link>
+                        <Link
+                          to="/gambling-explained"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/gambling-explained",
+                          )}
+                        >
+                          Gambling Explained
+                        </Link>
+                        <Link
+                          to="/gambling-tactics"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/gambling-tactics")}
+                        >
+                          Gambling Tactics
+                        </Link>
                       </div>
                     </div>
                     <div>
@@ -508,9 +654,33 @@ export default function Navbar() {
                         Topics In Focus
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/understanding-gambling-harms" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/understanding-gambling-harms")}>Understanding gambling harms</Link>
-                        <Link to="/stigma-and-language" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/stigma-and-language")}>Stigma &amp; language</Link>
-                        <Link to="/inequality-and-gambling-harm" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/inequality-and-gambling-harm")}>Inequality &amp; gambling harm</Link>
+                        <Link
+                          to="/understanding-gambling-harms"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/understanding-gambling-harms",
+                          )}
+                        >
+                          Understanding gambling harms
+                        </Link>
+                        <Link
+                          to="/stigma-and-language"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/stigma-and-language",
+                          )}
+                        >
+                          Stigma &amp; language
+                        </Link>
+                        <Link
+                          to="/inequality-and-gambling-harm"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/inequality-and-gambling-harm",
+                          )}
+                        >
+                          Inequality &amp; gambling harm
+                        </Link>
                       </div>
                     </div>
                     <div>
@@ -518,8 +688,24 @@ export default function Navbar() {
                         Campaigns &amp; Policy
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/policy-and-advocacy" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/policy-and-advocacy")}>Policy &amp; advocacy</Link>
-                        <Link to="/members-only-campaign" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/members-only-campaign")}>Members Only Campaign</Link>
+                        <Link
+                          to="/policy-and-advocacy"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/policy-and-advocacy",
+                          )}
+                        >
+                          Policy &amp; advocacy
+                        </Link>
+                        <Link
+                          to="/members-only-campaign"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/members-only-campaign",
+                          )}
+                        >
+                          Members Only Campaign
+                        </Link>
                       </div>
                     </div>
                     <div>
@@ -527,8 +713,22 @@ export default function Navbar() {
                         Updates
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/news-and-research" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/news-and-research")}>News &amp; research</Link>
-                        <Link to="/about#contact" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/about#contact")}>Contact us</Link>
+                        <Link
+                          to="/news-and-research"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/news-and-research",
+                          )}
+                        >
+                          News &amp; research
+                        </Link>
+                        <Link
+                          to="/about#contact"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/about#contact")}
+                        >
+                          Contact us
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -538,7 +738,7 @@ export default function Navbar() {
               {/* Get Help Accordion */}
               <div>
                 <button
-                  onClick={() => toggleMobileDropdown('help')}
+                  onClick={() => toggleMobileDropdown("help")}
                   className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
                     isHelpActive
                       ? "font-bold text-Primary bg-blue-50/10"
@@ -546,19 +746,31 @@ export default function Navbar() {
                   }`}
                 >
                   <span>Get help</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'help' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === "help" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                {activeMobileDropdown === 'help' && (
+                {activeMobileDropdown === "help" && (
                   <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
                     <div>
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
                         Where to start
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/get-help" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help")}>
+                        <Link
+                          to="/get-help"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/get-help")}
+                        >
                           Get help (overview)
                         </Link>
-                        <Link to="/get-help/check-in" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help/check-in")}>
+                        <Link
+                          to="/get-help/check-in"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/get-help/check-in",
+                          )}
+                        >
                           Check-in tool
                         </Link>
                       </div>
@@ -568,13 +780,29 @@ export default function Navbar() {
                         Routes to support
                       </div>
                       <div className="space-y-0.5">
-                        <Link to="/get-help/treatment" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help/treatment")}>
+                        <Link
+                          to="/get-help/treatment"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/get-help/treatment",
+                          )}
+                        >
                           Find treatment near you
                         </Link>
-                        <Link to="/get-help/family-friends" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/get-help/family-friends")}>
+                        <Link
+                          to="/get-help/family-friends"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass(
+                            "/get-help/family-friends",
+                          )}
+                        >
                           For family &amp; friends
                         </Link>
-                        <Link to="/urgent-help" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/urgent-help")}>
+                        <Link
+                          to="/urgent-help"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/urgent-help")}
+                        >
                           Crisis &amp; urgent help
                         </Link>
                       </div>
@@ -598,7 +826,7 @@ export default function Navbar() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
 function DropdownItem({ to, children, active = false }) {
@@ -617,6 +845,5 @@ function DropdownItem({ to, children, active = false }) {
         </Link>
       </NavigationMenuLink>
     </li>
-
-  )
+  );
 }

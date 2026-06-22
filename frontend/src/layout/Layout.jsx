@@ -26,7 +26,9 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div className="w-full" style={{ overflowX: "clip" }}>
+        <Outlet />
+      </div>
       <Footer />
       <ScrollToTop />
     </>
