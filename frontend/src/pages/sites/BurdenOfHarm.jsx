@@ -148,9 +148,9 @@ const BurdenOfHarm = () => {
       title="From burden to policy."
       description="Our policy positions follow directly from the evidence above. They are the things we believe the UK needs to do. We publish our modelling, label our own combinations as our own, and invite scrutiny of both. That is what distinguishes evidence from messaging."
       primaryBtnText="Read our policy positions"
-      primaryBtnLink="/get-help"
+      primaryBtnLink="/policy-and-advocacy"
       secondaryBtnText="Latest publications"
-      secondaryBtnLink="/policy-positions"
+      secondaryBtnLink="/news-and-research"
     />
     </div>
   );

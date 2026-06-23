@@ -46,7 +46,7 @@ const UnderstandingGamblingHarms = () => {
         primaryBtnText="Find Help"
         primaryBtnLink="/get-help"
         secondaryBtnText="Read the burden of harms"
-        secondaryBtnLink="/burden-of-harms"
+        secondaryBtnLink="/burden-of-harm"
       />
     </>
   );

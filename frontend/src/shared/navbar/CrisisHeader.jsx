@@ -1,5 +1,6 @@
 import React from "react";
 import { AlertCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CrisisHeader() {
   return (
@@ -15,12 +16,12 @@ export default function CrisisHeader() {
           , Free, 24/7.
         </span>
 
-        <a
-          href="#urgent-help"
+        <Link
+          to="/urgent-help"
           className="md:font-bold md:ml-4 md:mr-8 font-medium underline text-sm "
         >
           Urgent Help →
-        </a>
+        </Link>
       </div>
     </div>
   );

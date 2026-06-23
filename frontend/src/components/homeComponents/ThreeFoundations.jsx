@@ -1,5 +1,6 @@
 import React from "react";
 import { Layers, Users, LineChart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ThreeFoundations() {
   const foundations = [
@@ -9,7 +10,7 @@ export default function ThreeFoundations() {
       description:
         'Not "caused by a vulnerable few", produced, at scale, by products engineered to override the very cognitive capacities a person would need in order to make a "rational" decision about them.',
       linkText: "How The Products Work",
-      href: "#products-work",
+      to: "/understanding-gambling-harms",
     },
     {
       icon: <Users className="w-5 h-5 text-Primary" />,
@@ -17,7 +18,7 @@ export default function ThreeFoundations() {
       description:
         "Partners. Parents. Children. They have no agency in the gambling that harmed them, and yet the financial, mental-health and developmental impact on them is real, large, and routinely understated.",
       linkText: "For Family & Friends",
-      href: "#family-friends",
+      to: "/get-help/family-friends",
     },
     {
       icon: <LineChart className="w-5 h-5 text-Primary" />,
@@ -25,7 +26,7 @@ export default function ThreeFoundations() {
       description:
         "Expanding treatment is necessary but nowhere near sufficient. The biggest gains come earlier, product design, marketing exposure, affordability checks, advertising restrictions, and a statutory duty of care that turns operator failure into legal consequence. Treatment is the last line, not the strategy.",
       linkText: "Our Policy Positions",
-      href: "#policy-positions",
+      to: "/policy-and-advocacy",
     },
   ];
 
@@ -78,8 +79,8 @@ export default function ThreeFoundations() {
 
               {/* Functional Dynamic Footer Context Trigger Link */}
               <div className="pt-4 border-t border-gray-100">
-                <a
-                  href={item.href}
+                <Link
+                  to={item.to}
                   className="inline-flex items-center text-sm sm:text-base font-bold text-gray-900 underline decoration-gray-300 group-hover:decoration-Primary transition-colors"
                 >
                   {item.linkText}
@@ -89,7 +90,7 @@ export default function ThreeFoundations() {
                   >
                     →
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

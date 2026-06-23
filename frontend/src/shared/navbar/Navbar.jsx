@@ -71,6 +71,7 @@ export default function Navbar() {
     "/get-help/treatment",
     "/get-help/family-friends",
     "/urgent-help",
+    "/thurrock",
   ].includes(pathname);
 
   const getMobileSubLinkClass = (to) => {
@@ -402,6 +403,12 @@ export default function Navbar() {
                               active={isLinkActive("/urgent-help")}
                             >
                               Crisis &amp; urgent help
+                            </DropdownItem>
+                            <DropdownItem
+                              to="/thurrock"
+                              active={isLinkActive("/thurrock")}
+                            >
+                              Thurrock
                             </DropdownItem>
                           </ul>
                         </div>
@@ -804,6 +811,13 @@ export default function Navbar() {
                           className={getMobileSubLinkClass("/urgent-help")}
                         >
                           Crisis &amp; urgent help
+                        </Link>
+                        <Link
+                          to="/thurrock"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={getMobileSubLinkClass("/thurrock")}
+                        >
+                          Thurrock
                         </Link>
                       </div>
                     </div>

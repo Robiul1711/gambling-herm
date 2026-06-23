@@ -28,7 +28,7 @@ const StigmaAndLanguage = () => {
         primaryBtnText="Find Help"
         primaryBtnLink="/get-help"
         secondaryBtnText="Inequality & gambling"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="/inequality-and-gambling-harm"
       />
     </>
   );

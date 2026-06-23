@@ -37,9 +37,9 @@ const ChildrenYoungPeople = () => {
         title="Want to help us put this on the policy agenda?"
         description="If you run or work in a CYP service, school, ICB safeguarding pathway, or research group on adolescent health, we want to hear from you."
         primaryBtnText="Contact us"
-        primaryBtnLink="/get-help"
+        primaryBtnLink="/about#contact"
         secondaryBtnText="For teachers →"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="#teachers"
       />
     </>
   );

@@ -32,7 +32,7 @@ const HealthcareProfessionals = () => {
         primaryBtnText="Contact us"
         primaryBtnLink="/get-help"
         secondaryBtnText="For public health teams"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="/professionals/public-health"
       />
     </>
   )

@@ -60,7 +60,7 @@ const SafeguardingLeads = () => {
         </div>
 
         {/* ================= TEACHER / PSHE BLUE BANNER ================= */}
-        <div className="border-l-4 border-[#1B80C4] bg-[#E8F5FD] rounded-r-xl p-5 sm:p-6 md:p-8">
+        <div id="teachers" className="scroll-mt-24 border-l-4 border-[#1B80C4] bg-[#E8F5FD] rounded-r-xl p-5 sm:p-6 md:p-8">
           <h3 className="text-base font-bold text-[#1E1E1E] mb-2 sm:text-lg">
             If you're a teacher or PSHE lead
           </h3>

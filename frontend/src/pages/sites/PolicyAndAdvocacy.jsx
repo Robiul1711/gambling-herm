@@ -85,7 +85,7 @@ const PolicyAndAdvocacy = () => {
         primaryBtnText="News & research index"
         primaryBtnLink="/get-help"
         secondaryBtnText="Contact & press"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="/about#contact"
       />
     </>
   );

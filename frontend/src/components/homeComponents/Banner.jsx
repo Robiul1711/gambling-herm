@@ -1,5 +1,5 @@
 import React from "react";
-import homeBanner from "@/assets/images/homeBanner.png";
+import homeBanner from "@/assets/images/home.png";
 import { Link } from "react-router-dom";
 export default function Banner() {
   return (
@@ -23,7 +23,7 @@ export default function Banner() {
             </div>
 
             {/* Main Catchy Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1]">
               Gambling is a{" "}
               <span className="text-Primary">
                 leading modifiable risk factor
@@ -33,10 +33,7 @@ export default function Banner() {
 
             {/* Descriptive Body Copy */}
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Industrial-scale harm. Millions affected. A regulatory environment
-              shaped, for decades, by the industry causing it. We're an
-              independent voice for the people being harmed, the families
-              carrying the cost, and the change that prevents it.
+             Industrial-scale harm. Millions affected. A regulatory environment shaped, for decades, by the industry causing it. We're an independent voice for the people being harmed, the families carrying the cost, and the change that prevents it.
             </p>
 
             {/* Action Buttons Row */}
@@ -53,7 +50,7 @@ export default function Banner() {
               </Link>
 
               <Link
-                to="/worried-about-someone"
+                to="/get-help/family-friends"
                 className="border-2 border-gray-400 hover:border-gray-900 text-gray-800 font-bold
                px-4 sm:px-6 py-3 sm:py-3.5
                rounded-xl transition-colors
@@ -67,9 +64,9 @@ export default function Banner() {
           {/* RIGHT COLUMN: Graphical Layout / Frame Container (Takes 5 spans on desktop) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
             {/* The Custom Rounded Main Frame */}
-            <div className="relative w-full max-w-[460px] aspect-[1.1/1] border border-gray-300 rounded-[60px] rounded-bl-none p-4 flex items-center justify-center bg-gray-50 overflow-visible">
+            <div className="relative w-full max-w-[560px] aspect-[1.1/1] rounded-3xl flex items-center justify-center bg-gray-50 ">
               {/* Main Background Imagery Placeholder */}
-              <div className="w-full h-full rounded-[48px] rounded-bl-none overflow-hidden bg-gray-200">
+              <div className="w-full h-full rounded-3xl overflow-hidden bg-gray-200">
                 <img
                   src={homeBanner}
                   alt="Presentation regarding public health risks"
@@ -78,7 +75,7 @@ export default function Banner() {
               </div>
 
               {/* OVERLAY CARD: "~1 In 5" Data Metric Badge */}
-              <div className="absolute -bottom-6 -left-4 sm:left-4 right-4 sm:right-auto sm:w-[360px] bg-[#222121] text-white p-6 rounded-3xl shadow-xl flex flex-col space-y-3 border-l-4 border-Primary">
+              <div className="absolute -bottom-16 -left-4 sm:left-4 right-4 sm:right-auto sm:w-[500px] bg-[#222121] text-white p-6 rounded-3xl shadow-xl flex flex-col space-y-3 border-l-4 border-Primary">
                 {/* Metric Header */}
                 <h3 className="text-3xl font-extrabold tracking-tight">
                   ~1 In 5
@@ -86,10 +83,7 @@ export default function Banner() {
 
                 {/* Metric Secondary Content */}
                 <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-normal">
-                  UK adults were harmed by gambling in the past year, counting
-                  both people who gamble and those around them. Harm isn't
-                  all-or-nothing. It builds up, spreads to families and friends,
-                  and can last long after the gambling ends.
+                 UK adults were harmed by gambling in the past year, counting both people who gamble and those around them. Harm isn't all-or-nothing. It builds up, spreads to families and friends, and can last long after the gambling ends.
                 </p>
 
                 {/* Internal Action Pointer */}
