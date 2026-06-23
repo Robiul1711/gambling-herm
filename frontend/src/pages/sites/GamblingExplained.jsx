@@ -21,9 +21,9 @@ const GamblingExplained = () => {
       title="Beyond individual blame. Toward systemic accountability."
       description="The line GHUK draws is the line between locating gambling harm in the person who gambled, and locating it in the products, the marketing, the regulation, the research-and-treatment funding, and the political conditions that produced the harm at scale."
       primaryBtnText="Read our policy positions"
-      primaryBtnLink="/get-help"
+      primaryBtnLink="/policy-and-advocacy"
       secondaryBtnText="Gambling tactics"
-      secondaryBtnLink="/policy-positions"
+      secondaryBtnLink="/gambling-tactics"
     />
     </>
   );

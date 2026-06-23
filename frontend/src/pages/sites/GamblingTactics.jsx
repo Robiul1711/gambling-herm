@@ -17,9 +17,9 @@ const GamblingTactics = () => {
               A first-of-its-kind repository of evidence on the gambling
               industry's strategies and tactics for undermining public health.
               Inspired by{" "}
-              <Link to="/tobacco-tactics" className="text-Primary underline">
+              <a href="https://tobaccotactics.org" target="_blank" rel="noopener noreferrer" className="text-Primary underline">
                 Tobacco Tactics
-              </Link>
+              </a>
               . Industry interference is the single greatest barrier to progress
               in reducing UK gambling harm. The tactics below are how that
               interference operates.
@@ -33,7 +33,7 @@ const GamblingTactics = () => {
       title="What needs to change"
       description="Once you can see the tactics, the policy debate becomes very different. The structural response is a whole-system one: statutory levy proportionate to harm, statutory duty of care on operators, advertising restrictions modelled on tobacco, product safety standards set by public-health regulators, NHS-led specialist treatment, and DHSC consolidation of regulatory leadership."
       primaryBtnText="Read our policy positions"
-      primaryBtnLink="/policy-positions"
+      primaryBtnLink="/policy-and-advocacy"
       secondaryBtnText="Gambling Explained"
       secondaryBtnLink="/gambling-explained"
     />

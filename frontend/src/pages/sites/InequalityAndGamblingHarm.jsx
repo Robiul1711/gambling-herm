@@ -32,7 +32,7 @@ const InequalityAndGamblingHarm = () => {
         primaryBtnText="Our policy positions"
         primaryBtnLink="/get-help"
         secondaryBtnText="Stigma & language →"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="/stigma-and-language"
       />
     </>
   );

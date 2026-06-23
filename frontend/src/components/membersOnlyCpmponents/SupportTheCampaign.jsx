@@ -21,7 +21,7 @@ const SupportTheCampaign = () => {
            Visit membersonlycampaign.org.uk
           </Link>
           <Link
-            to="/policy-positions"
+            to="/policy-and-advocacy"
             className="w-full sm:w-auto text-center border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-bold px-6 py-3 rounded-xl text-base transition-all bg-transparent"
           >
             Our policy positions

@@ -12,7 +12,7 @@ const StigmaAndLanguage = () => {
     <>
       <div className="section-padding-x">
         <GamblingCommonBanner
-          section="Our work · Stigm"
+          section="Our work · Stigma"
           title="Stigma is the rate-limiting step."
           description="Whatever else is true about UK gambling-harm policy (treatment capacity, levy design, advertising rules) the single largest reason people experiencing harm don't reach help is the social cost of saying so out loud."
           image={bannerImg}
@@ -28,7 +28,7 @@ const StigmaAndLanguage = () => {
         primaryBtnText="Find Help"
         primaryBtnLink="/get-help"
         secondaryBtnText="Inequality & gambling"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="/inequality-and-gambling-harm"
       />
     </>
   );

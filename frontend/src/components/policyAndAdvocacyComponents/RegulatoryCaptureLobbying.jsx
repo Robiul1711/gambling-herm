@@ -69,6 +69,21 @@ const RegulatoryCaptureLobbying = () => {
             </p>
           </div>
         </div>
+        <div className="bg-[#262222] rounded-2xl overflow-hidden shadow-lg border-l-[6px] border-[#17a9df] mt-10">
+          <div className="p-8 md:p-10">
+            {/* Callout Header Label */}
+            <h4 className="text-[#17a9df] text-base font-semibold tracking-normal mb-4">
+             Burden of harm → operator liability
+
+            </h4>
+
+            {/* Callout Text Copy */}
+            <p className="text-gray-300 text-[15px] md:text-base leading-relaxed md:leading-8">
+ The regulatory-capture problem is also why a statutory duty of care matters so much. Codes of practice negotiate the operator's behaviour with the operator. A statutory duty of care converts the population-level burden of harm (which GHUK's whole evidence base is concerned with) into operator-level legal exposure that the operator cannot lobby away. It is the single mechanism that closes the loop between the public-health case and enforceable consequences. Advocacy credit: Martin Jones.
+
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

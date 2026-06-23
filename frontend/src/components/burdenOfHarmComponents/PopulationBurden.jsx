@@ -2,8 +2,8 @@ import React from 'react';
 
 const PopulationBurden = () => {
   return (
-    <section className="py-12 bg-[#1A1A1A] text-gray-300 px-4 md:px-8 rounded-2xl">
-      <div className="">
+    <section className="py-12 bg-[#1A1A1A] text-gray-300 px-4 md:px-8 rounded-2xl ">
+      <div className="max-w-5xl mx-auto px-4">
         
         {/* Main Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
@@ -12,17 +12,13 @@ const PopulationBurden = () => {
 
         {/* Introduction Paragraphs */}
         <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-300 mb-10">
-          <p className="font-semibold text-white">
-            Public Health Measures Harm In Disability-Adjusted Life Years (DALYs), Years Of Healthy Life Lost To 
-            A Risk Factor Through Disability And Premature Death Combined. Almost Every Major UK Risk Factor 
-            Has Detailed DALY Estimates. Gambling, Until Recently, Did Not.
-          </p>
-          <p className="text-gray-400">
-            Emerging evidence (PHE 2021, OHID/Lancet 2023 commentary, recent national DALY syntheses) suggests the 
-            UK gambling-attributable burden is comparable in scale to several risk factors that receive an order of magnitude 
-            more research funding and policy attention. The picture below is illustrative; methodologies vary and the burden 
-            is almost certainly larger than even the central estimates capture.
-          </p>
+        <p className="font-semibold text-white">
+  Public health measures harm in disability-adjusted life years (DALYs), years of healthy life lost to a risk factor through disability and premature death combined. Almost every major UK risk factor has detailed DALY estimates. Gambling, until recently, did not.
+</p>
+
+<p className="text-gray-400">
+  Emerging evidence (PHE 2021, OHID/Lancet 2023 commentary, recent national DALY syntheses) suggests the UK gambling-attributable burden is comparable in scale to several risk factors that receive an order of magnitude more research funding and policy attention. The picture below is illustrative; methodologies vary and the burden is almost certainly larger than even the central estimates capture.
+</p>
         </div>
 
         {/* Sub-heading */}

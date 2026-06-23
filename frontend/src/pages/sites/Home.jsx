@@ -23,7 +23,7 @@ const Home = () => {
       primaryBtnText="Get Help Now"
       primaryBtnLink="/get-help"
       secondaryBtnText="Read Our Policy Positions"
-      secondaryBtnLink="/policy-positions"
+      secondaryBtnLink="/policy-and-advocacy"
     />
   </div>;
 };

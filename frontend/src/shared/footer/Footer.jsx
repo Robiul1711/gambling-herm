@@ -59,10 +59,10 @@ export default function Footer() {
                 About GHUK
               </h4>
               <ul className="space-y-2.5 text-sm text-gray-400 font-normal">
-                <li><a href="#about-us" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#funding" className="hover:text-white transition-colors">Funding & COI</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact & press</a></li>
-                <li><a href="#publications" className="hover:text-white transition-colors">Latest Publication</a></li>
+                <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link to="/about#funding" className="hover:text-white transition-colors">Funding & COI</Link></li>
+                <li><Link to="/about#contact" className="hover:text-white transition-colors">Contact & press</Link></li>
+                <li><Link to="/news-and-research" className="hover:text-white transition-colors">Latest Publication</Link></li>
               </ul>
             </div>
 
@@ -72,10 +72,11 @@ export default function Footer() {
                 Help
               </h4>
               <ul className="space-y-2.5 text-sm text-gray-400 font-normal">
-                <li><a href="#get-help" className="hover:text-white transition-colors">Get help</a></li>
-                <li><a href="#family-friends" className="hover:text-white transition-colors">Family & friends</a></li>
-                <li><a href="#find-treatment" className="hover:text-white transition-colors">Find treatment near you</a></li>
-                <li><a href="#crisis" className="hover:text-white transition-colors">Crisis & urgent</a></li>
+                <li><Link to="/get-help" className="hover:text-white transition-colors">Get help</Link></li>
+                <li><Link to="/get-help/family-friends" className="hover:text-white transition-colors">Family & friends</Link></li>
+                <li><Link to="/get-help/treatment" className="hover:text-white transition-colors">Find treatment near you</Link></li>
+                <li><Link to="/urgent-help" className="hover:text-white transition-colors">Crisis & urgent</Link></li>
+                <li><Link to="/thurrock" className="hover:text-white transition-colors">Thurrock</Link></li>
               </ul>
             </div>
 
@@ -85,10 +86,10 @@ export default function Footer() {
                 Evidence & positions
               </h4>
               <ul className="space-y-2.5 text-sm text-gray-400 font-normal">
-                <li><a href="#burden-of-harm" className="hover:text-white transition-colors">Burden of harm</a></li>
-                <li><a href="#understand-harms" className="hover:text-white transition-colors">Understand harms</a></li>
-                <li><a href="#policy-position" className="hover:text-white transition-colors">Policy position</a></li>
-                <li><a href="#news-research" className="hover:text-white transition-colors">News & research</a></li>
+                <li><Link to="/burden-of-harm" className="hover:text-white transition-colors">Burden of harm</Link></li>
+                <li><Link to="/understanding-gambling-harms" className="hover:text-white transition-colors">Understand harms</Link></li>
+                <li><Link to="/policy-and-advocacy" className="hover:text-white transition-colors">Policy position</Link></li>
+                <li><Link to="/news-and-research" className="hover:text-white transition-colors">News & research</Link></li>
               </ul>
             </div>
 

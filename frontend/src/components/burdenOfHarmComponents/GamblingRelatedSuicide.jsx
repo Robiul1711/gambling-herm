@@ -3,7 +3,7 @@ import React from "react";
 const GamblingRelatedSuicide = () => {
   return (
     <section className="py-12 bg-[#1A1A1A] text-gray-300 px-4 md:px-8 rounded-2xl">
-      <div className="">
+      <div className="max-w-5xl mx-auto">
         {/* Top Accent Blue Line */}
         <div className="w-12 h-[3px] bg-[#3FABD4] mb-4" />
 
@@ -41,7 +41,7 @@ const GamblingRelatedSuicide = () => {
         </div>
 
         {/* Light Blue Position and Help Callout Box Layout */}
-        <div className="border-l-4 border-[#00B5FF] bg-[#EBF8FF] text-gray-800 p-6 md:p-8 rounded-r-2xl max-w-7xl shadow-md">
+        <div className="border-l-4 border-[#00B5FF] bg-[#ffff] text-gray-800 p-6 md:p-8 rounded-r-2xl max-w-7xl shadow-md">
           <h4 className="text-[#0076A8] font-bold text-sm tracking-wide uppercase mb-3">
             Our position
           </h4>

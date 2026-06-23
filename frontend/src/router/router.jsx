@@ -22,6 +22,7 @@ import CheckInTool from "@/pages/sites/CheckInTool";
 import FindTreatment from "@/pages/sites/FindTreatment";
 import ForFamilyFriends from "@/pages/sites/ForFamilyFriends";
 import UrgentHelp from "@/pages/sites/UrgentHelp";
+import Thurrock from "@/pages/sites/Thurrock";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -112,6 +113,10 @@ const router = createBrowserRouter([
       {
         path: "/urgent-help",
         element: <UrgentHelp />,
+      },
+      {
+        path: "/thurrock",
+        element: <Thurrock />,
       },
     ],
   },

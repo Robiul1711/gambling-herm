@@ -79,7 +79,7 @@ const GamblingLayout = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
         {/* Sticky Sidebar */}
-        <aside className="lg:col-span-3 lg:sticky lg:top-6 order-1">
+        <aside className="lg:col-span-3 lg:sticky lg:top-28 order-1">
           <ChaptersSidebar activeSection={activeSection} onNavigate={handleScrollTo} />
         </aside>
 
@@ -88,8 +88,11 @@ const GamblingLayout = () => {
           {/* Introduction block */}
           <div id="what-it-is" className="bg-sky-50/40 border-l-4 border-Primary p-6 rounded-r-xl space-y-4">
             <h4 className="text-Primary font-semibold text-base">What it is</h4>
-            <p className="text-slate-600 text-sm md:text-base italic leading-relaxed">
-              <span className="font-semibold">Gambling Explained</span> is a high-level synthesis of the scientific evidence and the industry lobbying around it...
+            <p className="text-slate-600 text-sm md:text-base">
+           Gambling Explained is a high-level synthesis of the scientific evidence and the industry lobbying around it, across the ten topic areas that shape UK gambling-harm policy. It exists to do for gambling what Tobacco Explained did for tobacco: put the structural picture, the industry tactics and the public-health response into one accessible reference that does not rely on the framing of the industry being studied.
+<br/>
+<br/>
+It was written by people with lived experience as <span className="font-bold text-black">affected others</span>, family members and partners of people who experienced severe gambling harm. The affected-other authorship is intentional. The perspective most likely to see industry tactics clearly is the perspective that watched them play out from outside the moment of gambling.
             </p>
           </div>
 
@@ -103,13 +106,15 @@ const GamblingLayout = () => {
           <ChapterEight />
           <ChapterNine />
           <ChapterTen />
-
-          {/* New trailing sections */}
-          <WhyItExists />
-          <HowItIsUsed />
-          <ReadAndCite />
         </div>
 
+      </div>
+
+      {/* Trailing centered components */}
+      <div className="max-w-5xl mx-auto px-4 mt-16 space-y-16">
+        <WhyItExists />
+        <HowItIsUsed />
+        <ReadAndCite />
       </div>
     </section>
   );

@@ -21,7 +21,7 @@ const ProfessionalsHub = () => {
         primaryBtnText="Contact us"
         primaryBtnLink="/get-help"
         secondaryBtnText="See our policy positions"
-        secondaryBtnLink="/inequality-and-gambling"
+        secondaryBtnLink="/policy-and-advocacy"
       />
     </>
   )

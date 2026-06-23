@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import UrgentHelpContent from '@/components/urgentHelpComponents/UrgentHelpContent';
+import UrgentHelpTips from '@/components/urgentHelpComponents/UrgentHelpTips';
+import UrgentHelpBereavement from '@/components/urgentHelpComponents/UrgentHelpBereavement';
 
 const UrgentHelp = () => {
   return (
-    <div className="section-padding py-12">
-      <h1 className="text-3xl font-bold text-gray-900">Crisis &amp; Urgent Help</h1>
+    <div className="w-full">
+      <UrgentHelpContent />
+      <UrgentHelpTips />
+      <UrgentHelpBereavement />
     </div>
-  )
-}
+  );
+};
 
-export default UrgentHelp
+export default UrgentHelp;

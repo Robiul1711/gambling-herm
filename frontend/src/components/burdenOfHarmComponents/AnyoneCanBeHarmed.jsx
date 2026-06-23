@@ -3,7 +3,7 @@ import React from 'react';
 const AnyoneCanBeHarmed = () => {
   return (
     <section className=" bg-white text-gray-800">
-      <div className="">
+      <div className="max-w-5xl mx-auto px-4">
         
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#3FABD4] mb-4" />
