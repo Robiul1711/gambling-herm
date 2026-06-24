@@ -18,8 +18,8 @@ export default function SubmissionFeatured() {
 
           {/* Main Statement Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.25] max-w-4xl">
-            Gambling harm is a leading modifiable risk factor for ill-health in
-            the UK. It is treated as if it isn't.
+            Gambling harm in the United Kingdom: epidemiology, health burden,
+            and economic costs
           </h2>
 
           {/* Body Paragraph Content Block */}
@@ -34,9 +34,7 @@ export default function SubmissionFeatured() {
             </p>
 
             {/* Mission Statement Accent Text */}
-            <p className="font-semibold text-white pt-2">
-              We exist to change that.
-            </p>
+            <p className="font-semibold text-white pt-2">Publishing soon</p>
           </div>
         </div>
       </div>

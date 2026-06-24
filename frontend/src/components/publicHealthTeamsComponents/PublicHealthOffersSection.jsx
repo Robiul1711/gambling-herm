@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PublicHealthOffersSection = () => {
   const offers = [
@@ -20,9 +21,9 @@ const PublicHealthOffersSection = () => {
         <>
           Free MECC-on-gambling resources for primary care networks, community pharmacy teams, and NHS Talking 
           Therapies services. Adapted to local pathways. See{" "}
-          <a href="#" className="text-[#0082c3] underline font-medium hover:text-[#006699]">
+          <Link to="/professionals/healthcare" className="text-[#0082c3] underline font-medium hover:text-[#006699]">
             our healthcare professionals page for detail.
-          </a>
+          </Link>
         </>
       ),
     },

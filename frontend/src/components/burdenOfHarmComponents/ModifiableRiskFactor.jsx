@@ -4,7 +4,7 @@ import bannerImg from "@/assets/images/banner.png"; // Bottom group photo image
 
 const ModifiableRiskFactor = () => {
   return (
-    <section className=" bg-white">
+    <section className="section-padding-x bg-white">
       {/* Top Layout: Text Content + Infographic Card */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
         

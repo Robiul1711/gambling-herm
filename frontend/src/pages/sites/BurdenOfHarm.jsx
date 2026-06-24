@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import CommonBanner from "@/components/common/CommonBanner";
-import bannerImg from "@/assets/images/banner.png";
+import bannerImg from "@/assets/images/cy1.png";
 import ModifiableRiskFactor from "@/components/burdenOfHarmComponents/ModifiableRiskFactor";
 import PopulationBurden from "@/components/burdenOfHarmComponents/PopulationBurden";
 import AnyoneCanBeHarmed from "@/components/burdenOfHarmComponents/AnyoneCanBeHarmed";
@@ -10,6 +9,7 @@ import GamblingRelatedSuicide from "@/components/burdenOfHarmComponents/Gambling
 import CostExceedsRevenue from "@/components/burdenOfHarmComponents/CostExceedsRevenue";
 import WholeSystemResponse from "@/components/burdenOfHarmComponents/WholeSystemResponse";
 import OurWorkCommonContact from "@/components/common/OurWorkCommonContact";
+import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
 
 const BurdenOfHarm = () => {
   // 1. Create references for each component section
@@ -80,41 +80,49 @@ const BurdenOfHarm = () => {
   }, []);
 
   return (
-    <div className="bg-white w-full overflow-x-hidden">
-      <CommonBanner
-        image={bannerImg}
-        title="Gambling is a leading, modifiable risk factor for ill-health in the UK, and is treated as if it isn't."
-        tag="Evidence · Burden of harm"
-        description="This page sets out the population burden, the people who carry it, and why the UK's policy response to gambling harm is several orders of magnitude smaller than the public-health evidence justifies."
-      />
+    <div className="bg-white w-full">
+      <div className="section-padding-x">
+
+        <GamblingCommonBanner
+          section="Evidence · Burden of harm"
+          title="Gambling is a leading, modifiable risk factor for ill-health in the UK, and is treated as if it isn't."
+          description="This page sets out the population burden, the people who carry it, and why the UK's policy response to gambling harm is several orders of magnitude smaller than the public-health evidence justifies."
+          image={bannerImg}
+        />
+      </div>
 
       {/* --- QUICK NAVIGATION MENU --- */}
-      <div className="section-padding-x max-w-[1500px] mx-auto pt-6 md:pt-10 pb-4 md:pb-6">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="w-8 h-[2px] bg-Primary" />
-          <span className="text-xs md:text-sm font-semibold text-Primary tracking-wide uppercase">On This Page</span>
-        </div>
+      <div className="sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm py-3 md:py-4">
+        <div className="section-padding-x">
+          <div className=" flex items-center justify-between gap-4">
+            {/* <div className="hidden lg:flex items-center gap-3 shrink-0">
+              <span className="w-6 h-[2px] bg-Primary" />
+              <span className="text-xs font-semibold text-Primary tracking-wide uppercase">On This Page</span>
+            </div> */}
 
-        {/* Swipeable on mobile screens, wraps clean grid items on desktop viewport */}
-        <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-3 md:pb-0 scrollbar-hide snap-x">
-          {navItems.map((item) => {
-            const isActive = activeSection === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => handleScroll(item.ref, item.id)}
-                className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium border transition-all duration-200 cursor-pointer whitespace-nowrap snap-center shrink-0 ${
-                  isActive
-                    ? "bg-Primary text-white border-Primary shadow-sm"
-                    : "bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50"
-                }`}
-              >
-                {item.label}
-              </button>
-            );
-          })}
+            {/* Swipeable on mobile screens, wraps clean grid items on desktop viewport */}
+            <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-1 scrollbar-hide snap-x w-full">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleScroll(item.ref, item.id)}
+                    className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium border transition-all duration-200 cursor-pointer whitespace-nowrap snap-center shrink-0 ${
+                      isActive
+                        ? "bg-[#1f2937] text-white border-[#1f2937] shadow-sm"
+                        : "bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
+
       {/* ----------------------------- */}
 
       {/* Main Sections Grid/Stack */}

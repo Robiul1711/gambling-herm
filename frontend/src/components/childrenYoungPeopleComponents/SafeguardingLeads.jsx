@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import audioFile from "@/assets/audio/young-people-children.mp3"
 const SafeguardingLeads = () => {
   return (
 
@@ -26,8 +27,7 @@ const SafeguardingLeads = () => {
           
           {/* Audio Player Element */}
           <div className="w-full max-w-[500px] mb-4">
-            <audio controls className="w-full h-10 accent-[#1B80C4]">
-              <source src="your-audio-file-path.mp3" type="audio/mpeg" />
+            <audio src={audioFile} controls className="w-full h-10 accent-[#1B80C4]">
               Your browser does not support the audio element.
             </audio>
           </div>
@@ -66,9 +66,9 @@ const SafeguardingLeads = () => {
           </h3>
           <p className="text-[14px] sm:text-[15px] text-[#5E6573] leading-relaxed">
             See our dedicated{" "}
-            <a href="#" className="underline text-[#1B80C4] hover:text-[#135E92] transition-colors font-medium">
+            <Link to="/professionals" className="underline text-[#1B80C4] hover:text-[#135E92] transition-colors font-medium">
               teachers & educators page
-            </a>{" "}
+            </Link>{" "}
             for curriculum links, classroom resources, and how to spot and respond to gambling-related harm in 11–17-year-olds.
           </p>
         </div>

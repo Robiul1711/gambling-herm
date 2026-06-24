@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ReferralServicesSection = () => {
   return (
@@ -30,9 +31,9 @@ const ReferralServicesSection = () => {
             {/* Item 1 */}
             <p className="text-[14px] md:text-[15px] text-gray-500 leading-relaxed pb-6 border-b border-dashed border-gray-200">
               <span className="font-bold text-gray-800">NHS specialist gambling clinics,</span> the network has expanded to cover most English regions, plus services in Scotland and Wales. Self-referral or via primary care.{" "}
-              <a href="#" className="text-[#0082c3] underline font-medium hover:text-[#006699]">
+              <Link to="/get-help/treatment" className="text-[#0082c3] underline font-medium hover:text-[#006699]">
                 Find your nearest.
-              </a>
+              </Link>
             </p>
 
             {/* Item 2 */}
@@ -88,9 +89,9 @@ const ReferralServicesSection = () => {
             {/* Item 5 / Footer Link */}
             <p className="text-[14px] md:text-[15px] text-gray-500 leading-relaxed">
               See{" "}
-              <a href="#" className="text-[#0082c3] underline font-medium hover:text-[#006699]">
+              <Link to="/get-help/family-friends" className="text-[#0082c3] underline font-medium hover:text-[#006699]">
                 our family-and-friends page
-              </a>{" "}
+              </Link>{" "}
               for the full pathway.
             </p>
           </div>

@@ -24,6 +24,19 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > 40);
+
+      if (currentScrollY <= 80) {
+        // Always show near the top of the page
+        setIsNavVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down - hide navbar smoothly
+        setIsNavVisible(false);
+      } else {
+        // Scrolling up - show navbar
+        setIsNavVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });

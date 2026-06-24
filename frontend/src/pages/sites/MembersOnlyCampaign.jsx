@@ -1,6 +1,6 @@
 import React from "react";
 import CommonBanner from "@/components/common/CommonBanner";
-import bannerImg from "@/assets/images/banner.png";
+import bannerImg from "@/assets/images/scale.png";
 import SupportTheCampaign from "@/components/membersOnlyCpmponents/SupportTheCampaign";
 import CampaignSupport from "@/components/membersOnlyCpmponents/CampaignSupport";
 import ProblemCampaignIsFixing from "@/components/membersOnlyCpmponents/ProblemCampaignIsFixing";
@@ -9,19 +9,23 @@ import WhyChangesMatter from "@/components/membersOnlyCpmponents/WhyChangesMatte
 import CampaignOurPosition from "@/components/membersOnlyCpmponents/CampaignOurPosition";
 import PublicRecordEvidence from "@/components/membersOnlyCpmponents/PublicRecordEvidence";
 import HowThisSits from "@/components/membersOnlyCpmponents/HowThisSits";
+import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
 
 const MembersOnlyCampaign = () => {
   return (
     <div className="">
-      <CommonBanner
-        image={bannerImg}
-        buttonText="membersonlycampaign.org.uk"
-        buttonLink="https://www.membersonlycampaign.org.uk/"
-        title="Members Only."
-        tag="Our work · Partner campaign we support"
-        description="A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."
-      />
+<div className="section-padding-x">
 
+        <GamblingCommonBanner
+          section="Our work · Partner campaign we support"
+          title="Members Only."
+          description="A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."
+          image={bannerImg}
+          buttonText="membersonlycampaign.org.uk →"
+          to="membersonlycampaign.org.uk"
+        />
+
+</div>
       <div className="section-padding-x  space-y-10 md:space-y-14 lg:space-y-16">
         <CampaignSupport />
         <ProblemCampaignIsFixing />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SupportOptions() {
   return (
@@ -32,15 +33,14 @@ export default function SupportOptions() {
 
             {/* Call to Action Link */}
             <div className="pt-8">
-              <a
-                href="#find-help"
+              <Link to={"/get-help"}
                 className="inline-flex items-center font-bold text-Primary hover:text-[#145c7e] text-base transition-colors"
               >
                 Find Help
                 <span className="ml-2 transform transition-transform duration-200 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -71,15 +71,14 @@ export default function SupportOptions() {
 
             {/* Call to Action Link */}
             <div className="pt-8">
-              <a
-                href="#support-for-you"
+              <Link to={"/get-help/family-friends"}
                 className="inline-flex items-center font-bold text-Primary hover:text-[#145c7e] text-base transition-colors"
               >
                 Support For You
                 <span className="ml-2 transform transition-transform duration-200 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

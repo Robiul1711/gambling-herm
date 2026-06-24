@@ -28,9 +28,9 @@ export default function Footer() {
           
           {/* Brand Identity Explainer (Takes up 5/12 of desktop space) */}
           <div className="flex flex-col space-y-5 lg:col-span-5 text-left">
-            <a href="#" className="inline-block self-start group">
+            <Link to="/" className="inline-block self-start group">
               <img src={logo} alt="logo" className="md:w-25 sm:w-20 w-15" />
-            </a>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm font-normal">
               An independent UK organisation working to reduce the harm caused by gambling, 
               through support, advocacy and research. We do not accept gambling-industry funding.
@@ -38,7 +38,7 @@ export default function Footer() {
             
             {/* Social Links Matrix Layout */}
             <div className="flex items-center space-x-3 pt-2">
-              <a href="#instagram" className="w-8 h-8 rounded-lg bg-Primary flex items-center justify-center text-white hover:bg-[#145c7e] transition-colors" aria-label="Instagram">
+              <a href="#instagram" className="w-8 h-8 rounded-lg border border-gray-600 flex items-center justify-center text-gray-300 hover:text-white hover:border-gray-400 transition-colors" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
               <a href="#facebook" className="w-8 h-8 rounded-lg border border-gray-600 flex items-center justify-center text-gray-300 hover:text-white hover:border-gray-400 transition-colors" aria-label="Facebook">
@@ -100,11 +100,11 @@ export default function Footer() {
         <div className="mt-4 md:mt-8 pt-4 border-t border-gray-700/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-400 font-medium">
           <span>&copy; {currentYear} Gambling Harm UK (GHUK).</span>
           <div className="flex items-center space-x-6">
-            <a href="#privacy" className="hover:text-white transition-colors">Privacy</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <span>&middot;</span>
-            <a href="#cookies" className="hover:text-white transition-colors">Cookies</a>
+            <Link to="/cookies" className="hover:text-white transition-colors">Cookies</Link>
             <span>&middot;</span>
-            <a href="#accessibility" className="hover:text-white transition-colors">Accessibility</a>
+            <Link to="/accessibility" className="hover:text-white transition-colors">Accessibility</Link>
           </div>
         </div>
 

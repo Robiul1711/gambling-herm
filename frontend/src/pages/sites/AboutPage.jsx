@@ -1,22 +1,28 @@
 import FundingConflictOfInterest from "@/components/aboutComponents/FundingConflictOfInterest";
 import OurMission from "@/components/aboutComponents/OurMission";
 import TrusteesAndTeam from "@/components/aboutComponents/TrusteesAndTeam";
-import CommonBanner from "@/components/common/CommonBanner";
 import React from "react";
-import aboutBannerImg from "@/assets/images/banner.png";
+import aboutBannerImg from "@/assets/images/about1.png";
 import ContactAndPress from "@/components/aboutComponents/ContactAndPress";
+import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
 const AboutPage = () => {
   return (
     <div>
+      <div className="section-padding-x">
+
       {/* <AboutBanner /> */}
-      <CommonBanner
-        image={aboutBannerImg}
-        title="An independent voice on gambling harm."
-        tag="Who We Are"
-        description="  We exist because gambling causes preventable, industrial-scale harm in the UK, and the 
-            people affected deserve accurate information, real support, and a regulatory response that 
-            takes them seriously."
-      />
+    <GamblingCommonBanner
+          section="Who we are"
+          title="An independent voice
+on gambling harm."
+          description="We exist because gambling causes preventable, industrial-scale
+harm in the UK, and the people most affected deserve accurate
+information, real support, and a regulatory response that takes them
+seriously."
+          image={aboutBannerImg}
+  
+        />
+      </div>
       <OurMission />
       <div id="funding" className="scroll-mt-24">
         <FundingConflictOfInterest />

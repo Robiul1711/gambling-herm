@@ -9,6 +9,7 @@ import HarmfulGamblingSection from "@/components/getHelpComponents/HarmfulGambli
 import ReachOutSection from "@/components/getHelpComponents/ReachOutSection";
 import ProtectingYourMoney from "@/components/getHelpComponents/ProtectingYourMoney";
 import RecoverySection from "@/components/getHelpComponents/RecoverySection";
+import { Link } from "react-router-dom";
 const GetHelpOverview = () => {
   return (
     <>
@@ -18,7 +19,7 @@ const GetHelpOverview = () => {
     {/* Top Label */}
     <div className="flex items-center gap-3 mb-4 md:mb-5">
       <div className="w-6 h-[1px] bg-black shrink-0"></div>
-      <span className="text-xs sm:text-sm text-gray-800">
+      <span className="text-xs sm:text-sm text-Primary">
         A Starting Point
       </span>
     </div>
@@ -29,16 +30,16 @@ const GetHelpOverview = () => {
     </h2>
 
     {/* Description */}
-    <p className="max-w-2xl mt-5 md:mt-8 text-sm sm:text-base leading-7 text-[#4b4b4b]">
+    <p className="max-w-3xl mt-5 md:mt-8 text-sm sm:text-base leading-7 text-[#4b4b4b]">
       A welcoming entry-point that helps you find the right door whether
       you're checking in for yourself, for someone else, or you're not yet
       sure. Three minutes, fully private, nothing stored or sent.
     </p>
 
     {/* Button */}
-    <button className="mt-8 md:mt-10 bg-[#0D6E9F] hover:bg-[#095b82] text-white text-sm sm:text-base font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300">
+    <Link to="/get-help/check-in" className="inline-block mt-8 md:mt-10 bg-[#0D6E9F] hover:bg-[#095b82] text-white text-sm sm:text-base font-medium px-4 sm:px-8 py-3 rounded-lg transition-all duration-300">
       Open The Check-In
-    </button>
+    </Link>
   </div>
 </section>
         <GamblingCommonBanner
@@ -61,7 +62,7 @@ const GetHelpOverview = () => {
         title="If you take one thing from this page, take this."
         description="Whatever you're doing right now, first time looking, first conversation, first call, fifth relapse, fifth year of recovery, you deserve support. It exists, it works, and the next step does not have to be big to count."
         primaryBtnText="Find services in your region →"
-        primaryBtnLink="/get-help"
+        primaryBtnLink="/get-help/treatment"
       />
     </>
   );

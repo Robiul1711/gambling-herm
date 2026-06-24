@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ScaleOfHarm() {
   const stats = [
@@ -72,8 +73,7 @@ export default function ScaleOfHarm() {
         </div>
 
         {/* Bottom Comparative Footer Link */}
-        <a
-          href="#compare-risks"
+        <Link to="/professionals/healthcare"
           className="inline-flex items-center text-sm sm:text-base font-bold text-white underline decoration-gray-400 hover:decoration-white transition-all group"
         >
           See How This Compares To Other Public-Health Risks
@@ -83,7 +83,7 @@ export default function ScaleOfHarm() {
           >
             →
           </span>
-        </a>
+        </Link>
       </div>
     </section>
   );

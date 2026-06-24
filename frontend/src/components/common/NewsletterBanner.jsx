@@ -1,13 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const NewsletterBanner = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle subscription logic here
-    console.log("Subscribed with:", email);
-  };
 
   return (
     <div className="w-full max-w-5xl mx-auto p-4 sm:p-6">
@@ -23,29 +16,15 @@ const NewsletterBanner = () => {
           </p>
         </div>
 
-        {/* Right Side: Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="w-full md:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0"
-        >
-          <div className="relative min-w-[240px] sm:w-[280px] lg:w-[320px]">
-            <input
-              type="email"
-              required
-              placeholder="example@gmail.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-[#cbd5e1] bg-[#f0f9ff]/50 text-[#1a1a1a] placeholder-[#94a3b8] text-[15px] outline-none focus:border-[#146b93] focus:ring-1 focus:ring-[#146b93] transition-all"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="bg-[#146b93] hover:bg-[#0f5271] text-white font-medium text-[15px] px-6 py-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 tracking-wide shrink-0 whitespace-nowrap"
+        {/* Right Side: Mailto Link Button */}
+        <div className="shrink-0 flex items-center">
+          <a
+            href="mailto:hello@gamblingharm.com?subject=Newsletter%20signup&amp;body=Please%20add%20me%20to%20the%20Gambling%20Harm%20UK%20mailing%20list."
+            className="bg-[#146b93] hover:bg-[#0f5271] text-white font-medium text-[15px] px-[22px] py-[11px] rounded-lg transition-colors duration-200 inline-flex items-center justify-center tracking-wide shrink-0 whitespace-nowrap"
           >
-            Subscribe <span>&rarr;</span>
-          </button>
-        </form>
+            Email us to join the list
+          </a>
+        </div>
       </div>
     </div>
   );
