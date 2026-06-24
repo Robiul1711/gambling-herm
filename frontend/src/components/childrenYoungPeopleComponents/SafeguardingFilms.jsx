@@ -3,6 +3,7 @@ import React from "react";
 import fatherDaughterImg from "@/assets/images/cy2.png";
 import motherDaughterImg from "@/assets/images/cy3.png";
 import brothersImg from "@/assets/images/cy4.png";
+import { Link } from "react-router-dom";
 
 const SafeguardingFilms = () => {
   const films = [
@@ -32,12 +33,11 @@ const SafeguardingFilms = () => {
         </h2>
         <p className="text-sm leading-relaxed text-gray-600 xs:text-base">
           Three short films, each made with affected others, illustrate what gambling harm looks like for the children in a household. Watch them all on the{" "}
-          <a
-            href="#"
+          <Link to="/get-help/family-friends"
             className="text-gray-800 underline hover:text-[#3A86B9] transition-colors duration-200 decoration-1 underline-offset-4 font-medium"
           >
-            Affected others page.
-          </a>
+            Affected others.
+          </Link>
         </p>
       </div>
 

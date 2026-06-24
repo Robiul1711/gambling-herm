@@ -2,7 +2,7 @@ import React from 'react';
 
 const AffectedOthersDirectVictims = () => {
   return (
-    <section className=" bg-white text-gray-800">
+    <section className="section-padding-x text-gray-800">
       <div className="">
         
         {/* Top Light Blue Accent Line */}

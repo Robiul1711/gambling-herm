@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const usageItems = [
   {
@@ -46,13 +47,25 @@ const HowItIsUsed = () => {
       {/* Footer note */}
       <p className="mt-6 text-slate-600 text-sm md:text-base leading-relaxed">
         The structural backbone of this website. The pages on{" "}
-        <a href="#" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
-          burden, tactics, understand harms, affected others, inequality
-        </a>{" "}
+        <Link to="/burden-of-harm" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+          burden
+        </Link>,{" "}
+        <Link to="/gambling-tactics" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+          tactics
+        </Link>,{" "}
+        <Link to="/understanding-gambling-harms" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+          understand harms
+        </Link>,{" "}
+        <Link to="/get-help/family-friends" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+          affected others
+        </Link>,{" "}
+        <Link to="/inequality-and-gambling-harm" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+          inequality
+        </Link>{" "}
         and{" "}
-        <a href="#" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+        <Link to="/policy-and-advocacy" className="text-Primary underline underline-offset-2 hover:opacity-80 transition-opacity">
           policy
-        </a>{" "}
+        </Link>{" "}
         all sit on top of the framework in Gambling Explained.
       </p>
     </section>

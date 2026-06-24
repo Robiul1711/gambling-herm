@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AudienceCards = () => {
   const cardsData = [
@@ -19,6 +20,7 @@ const AudienceCards = () => {
         </>
       ),
       btnText: "For CYP",
+      to:"/professionals/children-young-people"
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ const AudienceCards = () => {
         </>
       ),
       btnText: "For HCPS & MECC",
+      to:"/professionals/healthcare"
     },
     {
       id: 3,
@@ -48,6 +51,7 @@ const AudienceCards = () => {
         </>
       ),
       btnText: "For Public Health",
+      to:"/professionals/public-health"
     },
   ];
 
@@ -83,12 +87,12 @@ const AudienceCards = () => {
 
             {/* Bottom Button */}
             <div>
-              <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0a6b94] hover:bg-[#085575] text-white font-medium text-sm rounded-lg transition-colors duration-200 group">
+              <Link to={card.to} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0a6b94] hover:bg-[#085575] text-white font-medium text-sm rounded-lg transition-colors duration-200 group">
                 {card.btnText}
                 <span className="transform group-hover:translate-x-1 transition-transform duration-200">
                   &rarr;
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         ))}

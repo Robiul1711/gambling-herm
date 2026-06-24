@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GamblingCommonBanner = ({
   section = "",
   title = "",
   description = "",
   image,
+  to,
+  buttonText,
+  imageClassName = "",
 }) => {
   return (
     <section className="w-full py-8 sm:py-12 md:py-20">
@@ -26,6 +30,13 @@ const GamblingCommonBanner = ({
           <p className="text-sm md:text-base text-slate-500 leading-relaxed max-w-2xl">
             {description}
           </p>
+          {
+            to && (
+          <Link to={to} className="text-sm md:text-base text-Primary font-semibold px-4 py-2 border border-Primary rounded-lg hover:bg-Primary hover:text-white transition-colors">
+            {buttonText}
+          </Link>
+            )
+          }
         </div>
 
         {/* Right Image */}
@@ -34,7 +45,7 @@ const GamblingCommonBanner = ({
             <img
               src={image}
               alt={title}
-              className="w-full h-auto object-cover rounded-lg"
+              className={`w-full h-auto object-cover rounded-lg ${imageClassName}`}
             />
           </div>
         </div>

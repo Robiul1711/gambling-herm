@@ -23,6 +23,9 @@ import FindTreatment from "@/pages/sites/FindTreatment";
 import ForFamilyFriends from "@/pages/sites/ForFamilyFriends";
 import UrgentHelp from "@/pages/sites/UrgentHelp";
 import Thurrock from "@/pages/sites/Thurrock";
+import Privacy from "@/pages/sites/Privacy";
+import Cookies from "@/pages/sites/Cookies";
+import Accessibility from "@/pages/sites/Accessibility";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -117,6 +120,18 @@ const router = createBrowserRouter([
       {
         path: "/thurrock",
         element: <Thurrock />,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy />,
+      },
+      {
+        path: "/cookies",
+        element: <Cookies />,
+      },
+      {
+        path: "/accessibility",
+        element: <Accessibility />,
       },
     ],
   },

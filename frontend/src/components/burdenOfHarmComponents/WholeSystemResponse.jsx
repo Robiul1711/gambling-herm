@@ -34,7 +34,7 @@ const WholeSystemResponse = () => {
   ];
 
   return (
-    <section className=" bg-white text-gray-800">
+    <section className="max-w-5xl mx-auto bg-white text-gray-800">
       <div className="">
         
         {/* Top Decorative Blue Accent Line */}

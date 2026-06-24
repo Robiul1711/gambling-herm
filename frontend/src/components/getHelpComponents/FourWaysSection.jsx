@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FourWaysSection = () => {
   return (
@@ -19,9 +20,9 @@ const FourWaysSection = () => {
         <p className="mt-5 max-w-3xl text-base sm:text-lg leading-relaxed sm:leading-9 text-[#73768B]">
           You don't have to pick one. Most people use a combination, blocking
           access and talking to someone, for example, in the same week.
-          <span className="ml-1 font-medium text-[#222] underline cursor-pointer block sm:inline mt-2 sm:mt-0">
+          <Link to='/get-help/treatment' className="ml-1 font-medium text-[#222] underline cursor-pointer block sm:inline mt-2 sm:mt-0">
             Find services in your region →
-          </span>
+          </Link>
         </p>
 
         {/* Audio Card */}
