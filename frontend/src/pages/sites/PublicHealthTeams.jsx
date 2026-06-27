@@ -8,20 +8,29 @@ import ThreeStrandsSection from '@/components/publicHealthTeamsComponents/ThreeS
 import PublicHealthOffersSection from '@/components/publicHealthTeamsComponents/PublicHealthOffersSection';
 import PublicHealthRequestsSection from '@/components/publicHealthTeamsComponents/PublicHealthRequestsSection';
 import AudienceNavigationSection from '@/components/publicHealthTeamsComponents/AudienceNavigationSection';
+import useClient from "@/hooks/useClient";
+
 const PublicHealthTeams = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "public-health-banner"],
+    url: "/about/public-health-banner",
+  });
+
+  const bannerData = responseData?.data;
+
   return (
     <>
     <div className="section-padding-x">
-          <GamblingCommonBanner
-          section="For stakeholders · Public health organisations"
-          title="A modifiable risk factor that hasn't been treated like one."
-          description="For OHID, ICBs, local authority public health teams, and the equivalent bodies across Scotland, Wales and Northern Ireland. The evidence on burden, the population-level pattern of harm, and the cross-sector action GHUK believes the UK response now needs."
-          image={bannerImg}
-        />
-        <HealthPositionSection/>
-        <PreventionParadoxSection/>
-        <ThreeStrandsSection/>
-        <PublicHealthOffersSection/>
+      <GamblingCommonBanner
+        section={bannerData?.subtitle || "For stakeholders · Public health organisations"}
+        title={bannerData?.title || "A modifiable risk factor that hasn't been treated like one."}
+        description={bannerData?.description || "For OHID, ICBs, local authority public health teams, and the equivalent bodies across Scotland, Wales and Northern Ireland. The evidence on burden, the population-level pattern of harm, and the cross-sector action GHUK believes the UK response now needs."}
+        image={bannerData?.image || bannerImg}
+      />
+      <HealthPositionSection/>
+      <PreventionParadoxSection/>
+      <ThreeStrandsSection/>
+      <PublicHealthOffersSection/>
     </div>
         <PublicHealthRequestsSection/>
         <div className="section-padding-x">
