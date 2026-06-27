@@ -2,8 +2,17 @@ import React from "react";
 import { MessageSquare, Headphones, LineChart } from "lucide-react";
 import aboutBannerImg from "@/assets/images/ourmission.png";
 import charityOrigins from "@/assets/audio/charity-origins.mp3";
+import useClient from "@/hooks/useClient";
 
 export default function OurMission() {
+  const { data: responseData } = useClient({
+    queryKey: ["aboutOurMission"],
+    url: "/about/our-mission",
+  });
+
+  const missionData = responseData?.data;
+  
+
   return (
     <section className="w-full py-16 bg-white text-[#1f2937] border-b border-gray-100">
       <div className="section-padding-x">
@@ -16,24 +25,24 @@ export default function OurMission() {
               <div className="w-12 h-[3px] bg-[#1B80C4]" />
 
               <h2 className="text-3xl md:text-[40px] font-bold text-slate-800 tracking-tight leading-none mb-4">
-                Our mission
+                {missionData?.title || "Our mission"}
               </h2>
 
               <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed max-w-2xl mb-8">
-                Our mission rests on three commitments, each grounded in the public-health evidence on
-                gambling harm: research, then knowledge, then action.
+                {missionData?.description ||
+                  "Our mission rests on three commitments, each grounded in the public-health evidence on gambling harm: research, then knowledge, then action."}
               </p>
 
               {/* Audio Card */}
               <div className="bg-[#f7f9fa] border-l-4 border-[#1B80C4] rounded-r-xl p-5 max-w-[500px]">
                 <span className="text-[10px] font-bold text-[#1B80C4] tracking-widest uppercase block mb-1">
-                  PhoenixFM, May 2026
+                  {missionData?.audioSource || "PhoenixFM, May 2026"}
                 </span>
                 <h4 className="text-sm font-bold text-slate-800 mb-4 leading-snug">
-                  How GHUK started, and why: charity origins and Covid
+                  {missionData?.audioTitle || "How GHUK started, and why: charity origins and Covid"}
                 </h4>
                 <audio
-                  src={charityOrigins}
+                  src={missionData?.audioUrl || charityOrigins}
                   controls
                   className="w-full h-8 accent-[#1B80C4]"
                 >
@@ -45,7 +54,7 @@ export default function OurMission() {
             {/* Right Illustration Column */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <img
-                src={aboutBannerImg}
+                src={missionData?.image || aboutBannerImg}
                 alt="Systems Produce Action Illustration"
                 className="w-full max-w-[340px] h-auto object-contain rounded-lg"
               />

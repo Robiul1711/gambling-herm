@@ -1,81 +1,76 @@
 import React, { useState } from "react";
-import anjanetteImg from "@/assets/team/anjanette-stokes.jpg";
-import ailbheImg from "@/assets/team/ailbhe-kazounis.jpg";
-import lucyImg from "@/assets/team/lucy-hays.jpg";
-import fayImg from "@/assets/team/fay-laidler.jpg";
 import { X } from "lucide-react";
-
-const teamMembers = [
-  {
-    id: "kishan-patel",
-    name: "Dr Kishan Patel",
-    role: "CEO & FOUNDER",
-    initials: "KP",
-    bio: [
-      "Medical doctor trained at Imperial College London (MBBS BSc). MSc in Global Health Science and Epidemiology from Oxford. Diploma of the Faculty of Public Health. UK Public Health Specialty Registrar.",
-      "Kishan founded GHUK in 2020 following lived experience as an affected other: his father had an undiagnosed gambling disorder and died prematurely, with gambling unrecorded in the coroner's account. That experience informs GHUK's emphasis on routine NHS coding, affected-others recognition, and the visibility of legacy harms.",
-      "Lead author of GHUK's APPG submission (February 2026) and Gambling Explained (2021). Has provided written and oral evidence to UK parliament on gambling harm, public-health framing and lived experience."
-    ],
-    declaredInterests: "No financial conflicts of interest with the gambling industry. Has never accepted funding, remuneration or gifts from the gambling industry.",
-    email: "kishan@gamblingharm.com"
-  },
-  {
-    id: "ben",
-    name: "Ben",
-    role: "TEAM MEMBER",
-    initials: "B",
-    bio: [
-      "Full bio in preparation. Please email hello@gamblingharm.com in the meantime."
-    ],
-    declaredInterests: "",
-    email: "hello@gamblingharm.com"
-  },
-  {
-    id: "anjanette-stokes",
-    name: "Anjanette Stokes",
-    role: "SYSTEMS LEAD",
-    image: anjanetteImg,
-    bio: [
-      "Anji has over 22 years' experience across the health sector, with expertise spanning community development, young people's sexual health services, commissioning, population health management, and the delivery of integrated models of care. She is deeply committed to reducing health inequalities, advancing health equity, and promoting social justice.",
-      "Throughout her career, Anji has worked collaboratively with clinical colleagues, statutory services, and community partners to design and deliver innovative projects that address health inequalities in areas of high deprivation. She also serves as a trustee for an arts and culture charity in Morecambe.",
-      "\"I am honoured to be part of Gambling Harm UK and to work alongside such motivated and exceptional people. I look forward to helping drive meaningful system change that makes a real difference to people harmed by their own gambling, and for the partners, children, and families who are often among those most severely harmed.\""
-    ]
-  },
-  {
-    id: "ailbhe-kazounis",
-    name: "Ailbhe Kazounis",
-    role: "SYSTEMS LEAD",
-    image: ailbheImg,
-    bio: [
-      "Ailbhe is a UKPHR-registered Public Health Practitioner with over 15 years of experience delivering evidence-based health-improvement programmes across the NHS and local government. She specialises in applying Health in All Policies and whole-systems approaches to address the wider determinants of health, advance healthy placemaking, and reduce health inequalities.",
-      "\"I'm excited to be working with Gambling Harm UK and exploring how whole-systems approaches can be applied to preventing and reducing gambling harms. This is a vital opportunity to address gambling harm as a public health issue through partnership working, prevention, and action on its social, commercial, and structural determinants.\""
-    ]
-  },
-  {
-    id: "lucy-hays",
-    name: "Lucy Hays",
-    role: "SYSTEMS LEAD",
-    image: lucyImg,
-    bio: [
-      "Lucy has spent her career working at the intersection of people and systems, understanding what gets in the way of people living well and focusing on how to change it.",
-      "She began in social housing, spending over a decade working with individuals, families and communities to improve housing, opportunity and aspiration. Her work during this period centred on domestic abuse, community investment and community development, rooting her practice in deep relationship-building and a grounded understanding of complex lives.",
-      "Moving into the charitable sector, Lucy shifted her focus to health inequalities and systems change. She combines a data-driven approach (using evidence and insight to identify barriers and structural issues) with hands-on service design, translating analysis into practical, meaningful change. At the heart of Lucy's work is a belief in a kinder, gentler way of doing things."
-    ]
-  },
-  {
-    id: "fay-laidler",
-    name: "Fay Laidler",
-    role: "LIVED EXPERIENCE & QUALITY LEAD",
-    image: fayImg,
-    bio: [
-      "Fay is the Lived Experience and Quality Lead at GHUK, joining the organisation in May 2026. She completed her PhD at the University of Glasgow in 2025, focusing on the role of women experiencing harm in gambling policy, and brings a background in education and coaching.",
-      "Fay combines professional expertise with lived experience, having been affected by gambling harm both as an impacted other and through her own experiences. She has contributed to national research and policy work, including the Gambling Commission's Lived Experience Advisory Panel and an NIHR-funded project at the University of Lincoln. Fay is passionate about embedding lived experience in policy and practice."
-    ]
-  }
-];
+import useClient from "@/hooks/useClient";
 
 export default function TrusteesAndTeam() {
   const [selectedMember, setSelectedMember] = useState(null);
+
+  // Fetch team members dynamically from CMS
+  const { data: responseData, isLoading } = useClient({
+    queryKey: ["teamMembers"],
+    url: "/team",
+  });
+
+  const teamMembers = responseData?.data || [];
+
+  const getBioParagraphs = (bio) => {
+    if (typeof bio === "string") {
+      return bio.split("\n").filter(Boolean);
+    }
+    if (Array.isArray(bio)) {
+      return bio;
+    }
+    return [];
+  };
+
+  const getInitials = (member) => {
+    if (member.initials) return member.initials;
+    if (!member.name) return "TM";
+    const parts = member.name.split(" ").filter(Boolean);
+    if (parts.length > 1) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return member.name.substring(0, 2).toUpperCase();
+  };
+
+  // Render Loader / Skeleton
+  if (isLoading) {
+    return (
+      <section className="bg-white py-16 md:py-24 border-b border-gray-100">
+        <div className="section-padding-x">
+          <div className="max-w-5xl mx-auto">
+            {/* Header Skeleton */}
+            <div className="text-left mb-12 animate-pulse">
+              <div className="w-12 h-[3px] bg-[#1B80C4]/40 mb-5" />
+              <div className="h-10 bg-slate-100 rounded-lg w-48 mb-4" />
+              <div className="h-4 bg-slate-100 rounded w-96 max-w-full" />
+            </div>
+
+            {/* Grid Skeleton */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3].map((n) => (
+                <div key={n} className="border border-gray-200 rounded-2xl p-5 flex flex-col justify-between bg-white animate-pulse">
+                  <div>
+                    <div className="w-full aspect-[4/3] rounded-xl bg-slate-100 mb-4" />
+                    <div className="h-5 bg-slate-100 rounded w-2/3 mb-2" />
+                    <div className="h-3 bg-slate-100 rounded w-1/3 mb-4" />
+                    <div className="space-y-2">
+                      <div className="h-3 bg-slate-100 rounded w-full" />
+                      <div className="h-3 bg-slate-100 rounded w-full" />
+                      <div className="h-3 bg-slate-100 rounded w-4/5" />
+                    </div>
+                  </div>
+                  <div className="pt-4 mt-6 border-t border-gray-100 flex justify-between items-center">
+                    <div className="h-3 bg-slate-100 rounded w-1/4" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="bg-white py-16 md:py-24 border-b border-gray-100">
@@ -94,54 +89,60 @@ export default function TrusteesAndTeam() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="border border-gray-200 rounded-2xl p-5 flex flex-col justify-between bg-white hover:shadow-md transition-shadow duration-300"
-              >
-                <div>
-                  {/* Photo or Initials Avatar */}
-                  <div className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-sky-50 flex items-center justify-center">
-                    {member.image ? (
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="text-[#1B80C4] text-5xl font-bold tracking-tight">
-                        {member.initials}
-                      </div>
-                    )}
+          {teamMembers.length === 0 ? (
+            <div className="text-center py-12 text-slate-500 border border-dashed border-gray-200 rounded-2xl">
+              <p>No team members added yet.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member) => (
+                <div
+                  key={member._id || member.id}
+                  className="border border-gray-200 rounded-2xl p-5 flex flex-col justify-between bg-white hover:shadow-md transition-shadow duration-300"
+                >
+                  <div>
+                    {/* Photo or Initials Avatar */}
+                    <div className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-sky-50 flex items-center justify-center border border-slate-100">
+                      {member.image ? (
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="text-[#1B80C4] text-5xl font-bold tracking-tight">
+                          {getInitials(member)}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Name & Role */}
+                    <h3 className="text-lg font-bold text-slate-800">{member.name}</h3>
+                    <span className="text-[11px] font-bold text-[#1B80C4] tracking-wider uppercase block mb-3">
+                      {member.role}
+                    </span>
+
+                    {/* Biography Preview (Truncated) */}
+                    <div className="text-slate-600 text-sm leading-relaxed space-y-3">
+                      <p className="line-clamp-6">
+                        {getBioParagraphs(member.bio)[0]}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Name & Role */}
-                  <h3 className="text-lg font-bold text-slate-800">{member.name}</h3>
-                  <span className="text-[11px] font-bold text-[#1B80C4] tracking-wider uppercase block mb-3">
-                    {member.role}
-                  </span>
-
-                  {/* Biography Preview (Truncated) */}
-                  <div className="text-slate-600 text-sm leading-relaxed space-y-3">
-                    <p className="line-clamp-6">
-                      {member.bio[0]}
-                    </p>
+                  {/* See More Link */}
+                  <div className="pt-4 mt-4 border-t border-gray-100 flex justify-between items-center">
+                    <button
+                      onClick={() => setSelectedMember(member)}
+                      className="text-xs font-bold text-[#1B80C4] hover:underline"
+                    >
+                      Read full bio &rarr;
+                    </button>
                   </div>
                 </div>
-
-                {/* See More Link */}
-                <div className="pt-4 mt-4 border-t border-gray-100 flex justify-between items-center">
-                  <button
-                    onClick={() => setSelectedMember(member)}
-                    className="text-xs font-bold text-[#1B80C4] hover:underline"
-                  >
-                    Read full bio &rarr;
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -174,7 +175,7 @@ export default function TrusteesAndTeam() {
                   />
                 ) : (
                   <div className="text-[#1B80C4] text-3xl font-bold">
-                    {selectedMember.initials}
+                    {getInitials(selectedMember)}
                   </div>
                 )}
               </div>
@@ -188,7 +189,7 @@ export default function TrusteesAndTeam() {
 
             {/* Bio Body */}
             <div className="text-slate-600 text-sm md:text-base space-y-4 leading-relaxed border-t border-gray-100 pt-6">
-              {selectedMember.bio.map((paragraph, index) => (
+              {getBioParagraphs(selectedMember.bio).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>

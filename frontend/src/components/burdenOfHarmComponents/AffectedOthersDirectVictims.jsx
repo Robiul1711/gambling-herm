@@ -34,13 +34,12 @@ const AffectedOthersDirectVictims = () => {
         <div className="border-t border-gray-100 divide-y divide-gray-100 mb-12">
           
           {/* Row 1: Scale */}
-          <div className="grid grid-cols-1 py-5 gap-2 md:gap-6 items-start">
+           <div className="grid grid-cols-1 md:grid-cols-12 py-5 gap-2 md:gap-6 items-start">
             <div className="md:col-span-3 text-sm font-bold text-[#166B94] tracking-wide">
               Scale
             </div>
             <div className="md:col-span-9 text-xs md:text-sm text-gray-600 leading-relaxed">
-              Approximately 2.4 million people in the UK at any given time are affected by someone else's gambling at a level 
-              meeting "harmful affected other" criteria. Conservatively.
+            Around 9% of UK adults, more than four million people, were affected by someone else's gambling in the past year on the official Gambling Survey for Great Britain (2024), including 2.5% reporting at least one severe consequence; GambleAware's annual survey finds 8.1% (YouGov, 2024). These figures are self-reported, and likely conservative: stigma and hidden gambling mean many affected others never name the harm. Even the most conservative international prevalence estimates put the figure above 2.4 million (Dowling et al., 2025 systematic review).
             </div>
           </div>
 

@@ -21,8 +21,9 @@ const SafeguardingLeads = () => {
 
         {/* ================= AUDIO CALLOUT CARD ================= */}
         <div className="border-l-4 border-[#1B80C4] bg-[#F7F9FA] rounded-r-xl p-5 mb-10 sm:p-6 md:p-8">
-          <h4 className="text-[14px] font-bold text-[#1E1E1E] uppercase tracking-wider mb-4 leading-snug xs:text-xs sm:text-sm md:text-base">
-            Young People And The 900,000 Children Experiencing Measurable Gambling Harm In The UK, Within A Far Larger Group Touched By Someone Else's Gambling
+          <p className="font-bold text-Primary mb-2">PhooenixFM, May 2026</p>
+          <h4 className="text-[14px] font-bold text-[#1E1E1E]  tracking-wider mb-4 leading-snug xs:text-xs sm:text-sm md:text-base">
+            Young people and the 900,000 children experiencing measurable gambling harm in the UK, within a far larger group touched by someone else's gambling
           </h4>
           
           {/* Audio Player Element */}

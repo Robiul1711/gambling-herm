@@ -113,7 +113,7 @@ const regions = [
 ];
 
 const fallbackText =
-  "The information on this page is updated quarterly and reflects publicly-available information about NHS and major third-sector provision. Service availability changes; verify with the service or with the National Gambling Helpline before travelling.";
+  "The National Gambling Helpline (0808 8020 133) and the online services listed below are available everywhere in the UK. Many people in lower-coverage regions use a combination of online treatment, NHS Talking Therapies self-referral, and peer support. The helpline can also triage you to the nearest in-person service.";
 
 export default function ByUKRegion() {
   return (
@@ -181,17 +181,17 @@ export default function ByUKRegion() {
         {/* Callout box */}
         <div className="border-l-4 border-[#156E94] bg-white rounded-r-xl px-4 py-5 mb-8 max-w-4xl">
           <p className="text-[14px] sm:text-[15px] font-semibold text-gray-800 mb-2">
-            If Your Region Isn't Well-Covered, You Are Not Without Options
+           If your region isn't well-covered, you are not without options
           </p>
           <p className="text-[13px] sm:text-[14px] text-gray-500 leading-relaxed">
             {fallbackText}
           </p>
         </div>
-
         {/* Bottom footnote */}
-        <p className="text-[12px] sm:text-[13px] text-gray-400 leading-relaxed">
-          {fallbackText}
+        <p className="text-[12px] sm:text-sm text-gray-400 leading-relaxed max-w-4xl">
+          The information on this page is updated quarterly and reflects publicly-available information about NHS and major third-sector provision. Service availability changes; verify with the service or with the National Gambling Helpline before travelling.
         </p>
+
       </div>
     </section>
   );

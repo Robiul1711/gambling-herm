@@ -25,7 +25,7 @@ export default function WhoGamblingHarms() {
 
   return (
     <section className="w-full bg-white text-[#1f2937] py-12 md:py-20">
-      <div className="max-w-6xl mx-auto ">
+      <div className="max-w-6xl mx-auto px-4">
         
         {/* Top Tagline with Horizontal Blue Bar */}
         <div className="flex items-center gap-3 mb-4">

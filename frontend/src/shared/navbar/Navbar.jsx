@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import CrisisHeader from "./CrisisHeader";
 import Logo from "@/assets/images/logo.png";
+import useClient from "@/hooks/useClient";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -19,6 +20,14 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isNavVisible, setIsNavVisible] = React.useState(true);
   const lastScrollY = React.useRef(0);
+
+  // Fetch brand logo dynamically from footer settings
+  const { data: responseData } = useClient({
+    queryKey: ["footerSettings"],
+    url: "/footer",
+  });
+
+  const footerData = responseData?.data;
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +93,7 @@ export default function Navbar() {
     "/get-help/treatment",
     "/get-help/family-friends",
     "/urgent-help",
-    "/thurrock",
+    // "/thurrock",
   ].includes(pathname);
 
   const getMobileSubLinkClass = (to) => {
@@ -118,7 +127,7 @@ export default function Navbar() {
           <div className="section-padding-x pt-2 flex items-center justify-between">
             {/* Logo */}
             <Link to="/">
-              <img src={Logo} alt="logo" className="md:w-25 sm:w-20 w-15" />
+              <img src={footerData?.logo || Logo} alt="logo" className="md:w-25 sm:w-20 w-15 object-contain" />
             </Link>
 
             {/* DESKTOP NAVIGATION (shadcn/ui) */}
@@ -222,6 +231,12 @@ export default function Navbar() {
                               active={isLinkActive("/about")}
                             >
                               About GHUK
+                            </DropdownItem>
+                            <DropdownItem
+                              to="/about#vision"
+                              active={isLinkActive("/about#vision")}
+                            >
+                              Vision, values & aims
                             </DropdownItem>
                             <DropdownItem
                               to="/about#funding"
@@ -417,12 +432,12 @@ export default function Navbar() {
                             >
                               Crisis &amp; urgent help
                             </DropdownItem>
-                            <DropdownItem
+                            {/* <DropdownItem
                               to="/thurrock"
                               active={isLinkActive("/thurrock")}
                             >
                               Thurrock
-                            </DropdownItem>
+                            </DropdownItem> */}
                           </ul>
                         </div>
                       </div>
