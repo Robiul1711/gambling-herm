@@ -1,7 +1,30 @@
 import React from "react";
 import homeBanner from "@/assets/images/home.png";
 import { Link } from "react-router-dom";
+import useClient from "@/hooks/useClient";
+
 export default function Banner() {
+  const { data, isLoading } = useClient({
+    queryKey: ["banner"],
+    url: "/banner",
+  });
+
+  const bannerData = data?.data;
+
+  // Format tags: uppercase and dot-separated
+  const tagsText =
+    bannerData?.tags && bannerData.tags.length > 0
+      ? bannerData.tags.map((tag) => tag.toUpperCase()).join(" · ")
+      : "INDEPENDENT · NO INDUSTRY FUNDING · LIVED EXPERIENCE INFORMED";
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px] text-slate-600 bg-white">
+        <div className="w-8 h-8 border-4 border-[#156E94] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
   return (
     <section className="w-full bg-white py-12 md:py-20 lg:py-24">
       <div className="section-padding-x">
@@ -9,95 +32,63 @@ export default function Banner() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* LEFT COLUMN: Text Content & Actions (Takes 7 spans on desktop) */}
           <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
-            {/* Pill Tags */}
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-[#E0F2FE] text-Primary text-xs font-semibold px-3 py-1.5 rounded-md tracking-wide">
-                Independent
-              </span>
-              <span className="bg-[#E0F2FE] text-Primary text-xs font-semibold px-3 py-1.5 rounded-md tracking-wide">
-                Public-health-led
-              </span>
-              <span className="bg-[#E0F2FE] text-Primary text-xs font-semibold px-3 py-1.5 rounded-md tracking-wide">
-                Lived-experience-informed
-              </span>
+            {/* Tagline starting with horizontal line */}
+            <div className="flex items-center space-x-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#156E94]">
+              <span className="w-6 h-[2px] bg-[#156E94]" />
+              <span>{tagsText}</span>
             </div>
 
             {/* Main Catchy Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1]">
-              Gambling is a{" "}
-              <span className="text-Primary">
-                leading modifiable risk factor
-              </span>{" "}
-              for ill-health
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-gray-900 tracking-tight leading-[1.12]">
+              {bannerData?.title || "Gambling harm in the UK is bigger than the headlines say."}
             </h1>
 
-            {/* Descriptive Body Copy */}
+            {/* Description */}
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-             Industrial-scale harm. Millions affected. A regulatory environment shaped, for decades, by the industry causing it. We're an independent voice for the people being harmed, the families carrying the cost, and the change that prevents it.
+              {bannerData?.description ||
+                "On our burden-of-disease modelling, gambling ranks among the top five modifiable risks to the UK's health. Unlike tobacco or alcohol, around half of the harm is expected to fall on people who never placed a bet. We're an independent UK charity. We support the people gambling has harmed and the families around them, and we push for the policy change that prevents it."}
             </p>
 
             {/* Action Buttons Row */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
               <Link
-                to="/get-help"
-                className="bg-Primary hover:bg-[#145c7e] text-white font-bold
-               px-4 sm:px-6 py-3 sm:py-3.5
-               rounded-xl transition-colors shadow-sm
-               text-sm sm:text-base text-center
-               min-w-[120px] sm:min-w-[140px]"
+                to={bannerData?.primaryBtnLink || "/get-help"}
+                className="bg-[#156e94] hover:bg-[#0d4a63] text-white font-bold
+               px-5 sm:px-6 py-3 sm:py-3.5
+               rounded-xl transition-all duration-200 shadow-sm
+               text-sm sm:text-base text-center"
               >
-                Get Help
+                {bannerData?.primaryBtnText || "Gambling is harming me"}
               </Link>
 
               <Link
-                to="/get-help/family-friends"
-                className="border-2 border-gray-400 hover:border-gray-900 text-gray-800 font-bold
-               px-4 sm:px-6 py-3 sm:py-3.5
-               rounded-xl transition-colors
-               text-sm sm:text-base text-center"
+                to={bannerData?.secondaryBtnLink || "/get-help/family-friends"}
+                className="bg-white border border-gray-300 hover:border-gray-900 text-gray-800 font-bold
+               px-5 sm:px-6 py-3 sm:py-3.5
+               rounded-xl transition-all duration-200
+               text-sm sm:text-base text-center shadow-sm"
               >
-                I'm worried about someone
+                {bannerData?.secondaryBtnText || "I'm worried about someone"}
               </Link>
             </div>
           </div>
 
           {/* RIGHT COLUMN: Graphical Layout / Frame Container (Takes 5 spans on desktop) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center w-full">
             {/* The Custom Rounded Main Frame */}
-            <div className="relative w-full max-w-[560px] aspect-[1.1/1] rounded-3xl flex items-center justify-center bg-gray-50 ">
-              {/* Main Background Imagery Placeholder */}
-              <div className="w-full h-full rounded-3xl overflow-hidden bg-gray-200">
-                <img
-                  src={homeBanner}
-                  alt="Presentation regarding public health risks"
-                  className="w-full h-full object-cover grayscale-[20%]"
-                />
-              </div>
-
-              {/* OVERLAY CARD: "~1 In 5" Data Metric Badge */}
-              <div className="absolute -bottom-16 -left-4 sm:left-4 right-4 sm:right-auto sm:w-[500px] bg-[#222121] text-white p-6 rounded-3xl shadow-xl flex flex-col space-y-3 border-l-4 border-Primary">
-                {/* Metric Header */}
-                <h3 className="text-3xl font-extrabold tracking-tight">
-                  ~1 In 5
-                </h3>
-
-                {/* Metric Secondary Content */}
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-normal">
-                 UK adults were harmed by gambling in the past year, counting both people who gamble and those around them. Harm isn't all-or-nothing. It builds up, spreads to families and friends, and can last long after the gambling ends.
-                </p>
-
-                {/* Internal Action Pointer */}
-                <a
-                  href="#burden-of-harm"
-                  className="inline-flex items-center text-sm font-bold text-white hover:text-gray-200 transition-colors pt-1 group"
-                >
-                  Read the burden of harm
-                  <span className="ml-1 transform transition-transform duration-200 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
+            <div className="w-full max-w-[500px] aspect-[4/5] rounded-3xl overflow-hidden border border-slate-100 shadow-sm bg-gray-50">
+              <img
+                src={bannerData?.image || homeBanner}
+                alt="Presentation regarding public health risks"
+                className="w-full h-full object-cover"
+              />
             </div>
+
+            {/* Image Caption */}
+            <p className="mt-3 text-xs sm:text-[13px] text-gray-500 italic max-w-[500px] text-left w-full leading-relaxed">
+              {bannerData?.statDescription ||
+                "Dr Kishan Patel, GHUK CEO, lecturing on gambling harm in primary-care consultations. Anglia Ruskin University, January 2026."}
+            </p>
           </div>
         </div>
       </div>

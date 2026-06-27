@@ -26,7 +26,7 @@ const ChapterThree = () => {
             The Gambling Commission's Young People & Gambling 2025 survey found 3.4% of 11–17 year-olds in Great Britain (around 189,000 children) scored 2 or more on the DSM-IV-MR-J screen, indicating gambling-related harm or behavioural difficulty in the past year; 1.5% (around 85,000) at the highest-severity threshold.
           </li>
           <li className="leading-relaxed">
-            Around <span className="font-bold text-slate-800">27% of 11–17 year-olds</span> spend money on a gambling activity in any given 4-week period, with private bets, scratchcards, fruit machines and online formats most common.
+            Around <span className="font-bold text-slate-800">29% of 11–17 year-olds</span>  have seen a family member they live with gamble; among them, 12% report losing sleep due to worry and 7% report increased arguments or tension at home (Gambling Commission, 2025).
           </li>
           <li className="leading-relaxed">
             Exposure to gambling advertising during family-viewing sport is essentially universal. CAP Code Rule 16.3.12 prohibits "strong appeal to children" in gambling ads, including child-themed slot games like <span className="italic">Jack and the Beanstalk and Cinderella Ball</span>. Enforcement has been weak.
