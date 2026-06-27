@@ -33,7 +33,8 @@ export default function SupportOptions() {
 
             {/* Call to Action Link */}
             <div className="pt-8">
-              <Link to={"/get-help"}
+              <Link
+                to={"/get-help"}
                 className="inline-flex items-center font-bold text-Primary hover:text-[#145c7e] text-base transition-colors"
               >
                 Find Help
@@ -71,7 +72,8 @@ export default function SupportOptions() {
 
             {/* Call to Action Link */}
             <div className="pt-8">
-              <Link to={"/get-help/family-friends"}
+              <Link
+                to={"/get-help/family-friends"}
                 className="inline-flex items-center font-bold text-Primary hover:text-[#145c7e] text-base transition-colors"
               >
                 Support For You

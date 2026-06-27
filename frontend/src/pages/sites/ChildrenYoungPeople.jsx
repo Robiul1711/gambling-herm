@@ -11,15 +11,24 @@ import YoungPersonSupport from "@/components/childrenYoungPeopleComponents/Young
 import SafeguardingLeads from "@/components/childrenYoungPeopleComponents/SafeguardingLeads";
 import CYPPolicy from "@/components/childrenYoungPeopleComponents/CYPPolicy";
 import CYResources from "@/components/childrenYoungPeopleComponents/CYResources";
+import useClient from "@/hooks/useClient";
+
 const ChildrenYoungPeople = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "cyp-banner"],
+    url: "/about/cyp-banner",
+  });
+
+  const bannerData = responseData?.data;
+
   return (
     <>
       <div className="section-padding-x">
         <GamblingCommonBanner
-          section="For stakeholders · Children & young people"
-          title="Gambling harm reaches further into childhood than the public conversation acknowledges."
-          description="Two distinct populations sit inside the CYP picture: children who gamble themselves, and children of someone with gambling harm. Both are underserved, both are well-evidenced, and both are missing from most current policy thinking."
-          image={bannerImg}
+          section={bannerData?.subtitle || "For stakeholders · Children & young people"}
+          title={bannerData?.title || "Gambling harm reaches further into childhood than the public conversation acknowledges."}
+          description={bannerData?.description || "Two distinct populations sit inside the CYP picture: children who gamble themselves, and children of someone with gambling harm. Both are underserved, both are well-evidenced, and both are missing from most current policy thinking."}
+          image={bannerData?.image || bannerImg}
         />
         <CYBanner />
         <GamblingStatsGrid />

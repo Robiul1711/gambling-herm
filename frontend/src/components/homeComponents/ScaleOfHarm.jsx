@@ -73,7 +73,8 @@ export default function ScaleOfHarm() {
         </div>
 
         {/* Bottom Comparative Footer Link */}
-        <Link to="/professionals/healthcare"
+        <Link
+          to="/professionals/healthcare"
           className="inline-flex items-center text-sm sm:text-base font-bold text-white underline decoration-gray-400 hover:decoration-white transition-all group"
         >
           See How This Compares To Other Public-Health Risks

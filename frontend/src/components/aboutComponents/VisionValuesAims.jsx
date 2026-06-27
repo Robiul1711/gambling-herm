@@ -17,11 +17,12 @@ export default function VisionValuesAims() {
           {/* Description */}
           <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed mb-10">
             Gambling Harm UK exists to address a gap in how gambling harm is
-            understood and responded to in the UK, and to ensure public systems can
-            prevent harm, identify risk earlier, and respond safely. Our vision is a country
-            where gambling harm is treated as the preventable public-health issue it is:
-            recognised earlier, responded to safely, and falling year on year, together
-            with the inequality it drives.
+            understood and responded to in the UK, and to ensure public systems
+            can prevent harm, identify risk earlier, and respond safely. Our
+            vision is a country where gambling harm is treated as the
+            preventable public-health issue it is: recognised earlier, responded
+            to safely, and falling year on year, together with the inequality it
+            drives.
           </p>
 
           {/* Subheading: Our values */}
@@ -38,8 +39,8 @@ export default function VisionValuesAims() {
               </h4>
               <p className="text-slate-600 text-[14px] leading-relaxed">
                 We focus on prevention, early identification and safeguarding,
-                strengthening systems so harm is addressed upstream rather than after
-                the damage is done.
+                strengthening systems so harm is addressed upstream rather than
+                after the damage is done.
               </p>
             </div>
 
@@ -49,9 +50,10 @@ export default function VisionValuesAims() {
                 Grounded in lived experience
               </h4>
               <p className="text-slate-600 text-[14px] leading-relaxed">
-                Our work is informed and led by people directly affected by gambling
-                harm, including affected others and bereaved families. Lived
-                experience sits at the centre of what we do, not at its edges.
+                Our work is informed and led by people directly affected by
+                gambling harm, including affected others and bereaved families.
+                Lived experience sits at the centre of what we do, not at its
+                edges.
               </p>
             </div>
 
@@ -62,8 +64,8 @@ export default function VisionValuesAims() {
               </h4>
               <p className="text-slate-600 text-[14px] leading-relaxed">
                 We draw on research, evaluation and guidance, publish our own
-                modelling, and invite scrutiny of it. Where the evidence is uncertain,
-                we say so.
+                modelling, and invite scrutiny of it. Where the evidence is
+                uncertain, we say so.
               </p>
             </div>
 
@@ -73,10 +75,11 @@ export default function VisionValuesAims() {
                 Independent
               </h4>
               <p className="text-slate-600 text-[14px] leading-relaxed">
-                We are independent of the gambling industry and accept no funding
-                from it. Independence protects our credibility and allows us to
-                challenge harmful narratives.{" "}
-                <Link to="#funding" 
+                We are independent of the gambling industry and accept no
+                funding from it. Independence protects our credibility and
+                allows us to challenge harmful narratives.{" "}
+                <Link
+                  to="#funding"
                   className="inline-flex items-center text-[#1B80C4] hover:underline font-semibold mt-1"
                 >
                   Our funding statement &rarr;
@@ -93,32 +96,55 @@ export default function VisionValuesAims() {
           {/* List of Aims */}
           <div className="border-t border-gray-200/60 divide-y divide-gray-200/60 mb-10">
             <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
-              <span className="font-bold text-slate-800">Earlier recognition of harm</span> across health, education and safeguarding systems.
+              <span className="font-bold text-slate-800">
+                Earlier recognition of harm
+              </span>{" "}
+              across health, education and safeguarding systems.
             </div>
             <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
-              <span className="font-bold text-slate-800">A confident, equipped workforce</span> able to ask about gambling, recognise risk, respond appropriately and signpost safely.
+              <span className="font-bold text-slate-800">
+                A confident, equipped workforce
+              </span>{" "}
+              able to ask about gambling, recognise risk, respond appropriately
+              and signpost safely.
             </div>
             <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
-              <span className="font-bold text-slate-800">Sustainable prevention infrastructure</span> embedded in routine policy, training and professional practice, not dependent on one-off projects.
+              <span className="font-bold text-slate-800">
+                Sustainable prevention infrastructure
+              </span>{" "}
+              embedded in routine policy, training and professional practice,
+              not dependent on one-off projects.
             </div>
             <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
-              <span className="font-bold text-slate-800">Long-term reductions in gambling harm</span> and in the inequality it drives.
+              <span className="font-bold text-slate-800">
+                Long-term reductions in gambling harm
+              </span>{" "}
+              and in the inequality it drives.
             </div>
           </div>
 
           {/* Bottom Paragraph with Principles */}
           <p className="text-slate-600 text-[14px] sm:text-[15px] leading-relaxed bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
             Three working principles guide how we deliver this:{" "}
-            <span className="font-bold text-slate-800">creating connectivity</span> (bringing health,
-            education, safeguarding and community partners together so gambling harm
-            becomes core business, not a niche issue),{" "}
-            <span className="font-bold text-slate-800">developing capability</span> (training and
-            evidence translation for every professional group whose practice should include
-            gambling), and{" "}
-            <span className="font-bold text-slate-800">maximising capacity</span> (building tools and
-            infrastructure that systems can sustain and scale themselves). The three
-            strands are set out in detail on our{" "}
-            <Link to="/professionals/public-health" className="text-[#1B80C4] hover:underline font-semibold">
+            <span className="font-bold text-slate-800">
+              creating connectivity
+            </span>{" "}
+            (bringing health, education, safeguarding and community partners
+            together so gambling harm becomes core business, not a niche issue),{" "}
+            <span className="font-bold text-slate-800">
+              developing capability
+            </span>{" "}
+            (training and evidence translation for every professional group
+            whose practice should include gambling), and{" "}
+            <span className="font-bold text-slate-800">
+              maximising capacity
+            </span>{" "}
+            (building tools and infrastructure that systems can sustain and
+            scale themselves). The three strands are set out in detail on our{" "}
+            <Link
+              to="/professionals/public-health"
+              className="text-[#1B80C4] hover:underline font-semibold"
+            >
               public health page
             </Link>
             .
