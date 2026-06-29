@@ -11,7 +11,17 @@ import WholeSystemResponse from "@/components/burdenOfHarmComponents/WholeSystem
 import OurWorkCommonContact from "@/components/common/OurWorkCommonContact";
 import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
 
+import useClient from "@/hooks/useClient";
+
 const BurdenOfHarm = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-burden-banner"],
+    url: "/about/work-burden-banner",
+  });
+
+  const bannerData = responseData?.data;
+
+  // 1. Create references for each component section
   // 1. Create references for each component section
   const sectionRefs = {
     modifiable: useRef(null),
@@ -84,10 +94,10 @@ const BurdenOfHarm = () => {
       <div className="section-padding-x">
 
         <GamblingCommonBanner
-          section="Evidence · Burden of harm"
-          title="Gambling is a leading, modifiable risk factor for ill-health in the UK, and is treated as if it isn't."
-          description="This page sets out the population burden, the people who carry it, and why the UK's policy response to gambling harm is several orders of magnitude smaller than the public-health evidence justifies."
-          image={bannerImg}
+          section={bannerData?.subtitle || "Evidence · Burden of harm"}
+          title={bannerData?.title || "Gambling is a leading, modifiable risk factor for ill-health in the UK, and is treated as if it isn't."}
+          description={bannerData?.description || "This page sets out the population burden, the people who carry it, and why the UK's policy response to gambling harm is several orders of magnitude smaller than the public-health evidence justifies."}
+          image={bannerData?.image || bannerImg}
         />
       </div>
 

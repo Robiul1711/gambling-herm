@@ -12,16 +12,25 @@ import {
   FinancialSupport,
 } from '@/components/findTreatmentComponents/TreatmentSections';
 
+import useClient from '@/hooks/useClient';
+
 const FindTreatment = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "get-help-treatment"],
+    url: "/about/get-help-treatment",
+  });
+
+  const bannerData = responseData?.data;
+
   return (
     <>
       {/* Banner */}
       <div className="section-padding-x">
         <GamblingCommonBanner
-          section="Find treatment"
-          title="Treatment near you, and online."
-          description="UK gambling-harm services have expanded substantially in recent years. They are still unevenly distributed by region. This page sets out what is available where, with national fallbacks for anywhere services are not yet local."
-          image={bannerImg}
+          section={bannerData?.subtitle || "Find treatment"}
+          title={bannerData?.title || "Treatment near you, and online."}
+          description={bannerData?.description || "UK gambling-harm services have expanded substantially in recent years. They are still unevenly distributed by region. This page sets out what is available where, with national fallbacks for anywhere services are not yet local."}
+          image={bannerData?.image || bannerImg}
         />
       </div>
 

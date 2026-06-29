@@ -12,15 +12,24 @@ import GetSupport from "@/components/forFamilyFriendscomponents/GetSupport";
 import ChildrenInHouse from "@/components/forFamilyFriendscomponents/ChildrenInHouse";
 import GamblingBereavementSection from "@/components/forFamilyFriendscomponents/GamblingBereavementSection";
 
+import useClient from "@/hooks/useClient";
+
 const ForFamilyFriends = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "get-help-family-friends"],
+    url: "/about/get-help-family-friends",
+  });
+
+  const bannerData = responseData?.data;
+
   return (
     <>
       <div className="section-padding-x">
         <GamblingCommonBanner
-          section="For family & friends"
-          title="The harm reaching you is real. You didn't choose it, and you don't have to carry it alone."
-          description="If someone you love is being harmed by gambling, you are being harmed too. Partners, parents, children, siblings, close friends. The impact is real, large, and almost certainly worse than you've been told. There is support that belongs to you, by right."
-          image={bannerImg}
+          section={bannerData?.subtitle || "For family & friends"}
+          title={bannerData?.title || "The harm reaching you is real. You didn't choose it, and you don't have to carry it alone."}
+          description={bannerData?.description || "If someone you love is being harmed by gambling, you are being harmed too. Partners, parents, children, siblings, close friends. The impact is real, large, and almost certainly worse than you've been told. There is support that belongs to you, by right."}
+          image={bannerData?.image || bannerImg}
         />
       </div>
       <WhatHarmLooksLike />

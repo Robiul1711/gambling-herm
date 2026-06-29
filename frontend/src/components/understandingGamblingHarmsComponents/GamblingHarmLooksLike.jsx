@@ -1,5 +1,6 @@
 import React from "react";
-import whatgambling from "@/assets/images/whatgambling.png";
+import useClient from "@/hooks/useClient";
+import meccVideo from "@/assets/videos/mecc.mp4";
 
 const harms = [
   {
@@ -35,35 +36,66 @@ const harms = [
 ];
 
 const GamblingHarmLooksLike = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-looks-like"],
+    url: "/about/work-looks-like",
+  });
+
+  const data = responseData?.data;
+
+  const sectionTitle = data?.title || "1. What gambling harm looks like";
+  const sectionDesc = data?.description || "Harm is plural. It is rarely just about money, and the money harms are rarely just about debt.";
+  const videoUrl = data?.videoUrl || meccVideo;
+
+  const captionText = data?.subtitle || "GHUK's MECC training film — a lived-experience interview on how gambling exposure often starts in childhood.";
+  
+  // Parse caption split by em-dash or hyphen
+  const parts = captionText.split("—");
+  const captionBold = parts[0]?.trim() || "GHUK's MECC training film";
+  const captionItalic = parts[1]?.trim() || "a lived-experience interview on how gambling exposure often starts in childhood.";
+
   return (
     <section
       id="gambling-harm"
       className="pb-8 md:pb-16 section-padding-x"
     >
       <div className="">
-        {/* Header */}{" "}
-        <div className="flex flex-col lg:flex-row justify-between gap-6 md:gap-10 mb-8 md:mb-16 max-w-5xl mx-auto">
-          <div className="max-w-xl">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-8 md:mb-16 max-w-5xl mx-auto">
+          <div className="flex-1 max-w-xl text-left">
             <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
 
             <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-[#1d1d1d] mb-5">
-              1. What gambling harm looks like
+              {sectionTitle}
             </h2>
 
             <p className="text-[#727272] leading-7 md:leading-8 text-sm md:text-base">
-              Harm is plural. It is rarely just about money, and the money harms
-              are rarely just about debt.
+              {sectionDesc}
             </p>
           </div>
 
-          <div className="max-w-[200px] xs:max-w-[240px] md:max-w-[280px]">
-            <img
-              src={whatgambling}
-              alt=""
-              className="rounded-xl shadow-md w-full h-auto"
-            />
+          {/* Right Video Player Column */}
+          <div className="w-full lg:w-96 shrink-0 flex items-center justify-center">
+            <div className="w-full bg-black rounded-2xl overflow-hidden shadow-md flex flex-col">
+              {/* Video */}
+              <video
+                key={videoUrl}
+                src={videoUrl}
+                controls
+                className="w-full h-auto object-cover max-h-[220px]"
+              />
+
+              {/* Video Meta Title Banner */}
+              <div className="bg-[#141414] p-3 text-[11px] md:text-xs text-gray-300 border-t border-gray-800 text-left">
+                <p className="leading-relaxed">
+                  <span className="font-bold text-white">{captionBold}</span> —{" "}
+                  <span className="italic text-gray-400">{captionItalic}</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
         {/* Table */}
         <div className="border-t border-gray-200">
           {harms.map((item, index) => (

@@ -9,6 +9,7 @@ import TobaccoControlParallel from "@/components/policyAndAdvocacyComponents/Tob
 import RegulatoryCaptureLobbying from "@/components/policyAndAdvocacyComponents/RegulatoryCaptureLobbying";
 import OurFundingCOI from "@/components/policyAndAdvocacyComponents/OurFundingCOI";
 import CurrentAsksGovernment from "@/components/policyAndAdvocacyComponents/CurrentAsksGovernment";
+import useClient from "@/hooks/useClient";
 
 const SECTION_IDS = [
   "what-we-want-changed",
@@ -20,6 +21,13 @@ const SECTION_IDS = [
 ];
 
 const PolicyAndAdvocacy = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-policy-banner"],
+    url: "/about/work-policy-banner",
+  });
+
+  const bannerData = responseData?.data;
+
   const [activeSection, setActiveSection] = useState(SECTION_IDS[0]);
 
   // Scroll to section on tab click
@@ -57,10 +65,10 @@ const PolicyAndAdvocacy = () => {
     <>
       <div className="section-padding-x">
         <GamblingCommonBanner
-          section="Policy & Advocacy"
-          title="What we want changed, and what we don't."
-          description="Our positions follow directly from the burden of harm. They are the things we believe the UK needs to do, and the framings we believe should be retired from public conversation. We say them plainly."
-          image={bannerImg}
+          section={bannerData?.subtitle || "Policy & Advocacy"}
+          title={bannerData?.title || "What we want changed, and what we don't."}
+          description={bannerData?.description || "Our positions follow directly from the burden of harm. They are the things we believe the UK needs to do, and the framings we believe should be retired from public conversation. We say them plainly."}
+          image={bannerData?.image || bannerImg}
         />
       </div>
 
