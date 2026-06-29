@@ -1,5 +1,6 @@
 import React from "react";
 import whatstigma from "@/assets/images/whatstigma.png";
+import useClient from "@/hooks/useClient";
 
 const reductionPoints = [
   {
@@ -30,6 +31,16 @@ const reductionPoints = [
 ];
 
 const WhatReducesStigma = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-stigma"],
+    url: "/about/work-stigma",
+  });
+
+  const data = responseData?.data;
+
+  const bottomStillImage = data?.audioUrl || whatstigma;
+  const bottomStillCaption = data?.audioTitle || "Still from GHUK's Brothers Gambling Harm safeguarding film — the people behind the statistics are not problems to be solved.";
+
   return (
     <section id="reduces-stigma" className="py-10 md:py-16 ">
       <div className="max-w-5xl mx-auto px-4">
@@ -115,14 +126,13 @@ const WhatReducesStigma = () => {
         <div className="max-w-xl mx-auto md:max-w-md flex flex-col items-center text-center mt-12">
           <div className="w-full aspect-[16/10] bg-gray-200 rounded-3xl overflow-hidden mb-4 shadow-sm">
             <img
-              src={whatstigma}
+              src={bottomStillImage}
               alt="Still from GHUK's Brothers Gambling Harm safeguarding film"
               className="w-full h-full object-cover"
             />
           </div>
           <p className="text-xs md:text-sm text-[#2d2d2d] leading-relaxed max-w-sm">
-            Still from GHUK's Brothers Gambling Harm safeguarding film &mdash;
-            the people behind the statistics are not problems to be solved.
+            {bottomStillCaption}
           </p>
         </div>
       </div>

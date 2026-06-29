@@ -150,64 +150,7 @@ export default function Navbar() {
                     </Link>
                   </NavigationMenuItem>
 
-                  {/* Professionals Dropdown */}
-                  <NavigationMenuItem className="static">
-                    <NavigationMenuTrigger
-                      className={`text-base data-[state=open]:text-Primary hover:text-Primary transition-colors ${
-                        isProfessionalsActive
-                          ? "text-Primary font-bold"
-                          : "text-gray-700 font-medium"
-                      }`}
-                    >
-                      Professionals
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
-                      <div className="grid grid-cols-2 gap-8 p-6 w-[520px]">
-                        <div>
-                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
-                            Overview
-                          </h4>
-                          <ul className="space-y-1">
-                            <DropdownItem
-                              to="/professionals"
-                              active={isLinkActive("/professionals")}
-                            >
-                              Professionals hub
-                            </DropdownItem>
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
-                            By Audience
-                          </h4>
-                          <ul className="space-y-1">
-                            <DropdownItem
-                              to="/professionals/healthcare"
-                              active={isLinkActive("/professionals/healthcare")}
-                            >
-                              Healthcare professionals (MECC)
-                            </DropdownItem>
-                            <DropdownItem
-                              to="/professionals/public-health"
-                              active={isLinkActive(
-                                "/professionals/public-health",
-                              )}
-                            >
-                              Public health teams
-                            </DropdownItem>
-                            <DropdownItem
-                              to="/professionals/children-young-people"
-                              active={isLinkActive(
-                                "/professionals/children-young-people",
-                              )}
-                            >
-                              Children &amp; young people
-                            </DropdownItem>
-                          </ul>
-                        </div>
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
+       
                   {/* About Dropdown */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger
@@ -438,6 +381,60 @@ export default function Navbar() {
                             >
                               Thurrock
                             </DropdownItem> */}
+                          </ul>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                             {/* Professionals Dropdown */}
+                  <NavigationMenuItem className="static">
+                    <NavigationMenuTrigger
+                      className="bg-Primary! hover:bg-[#105572]! text-white! hover:text-white! font-bold! px-5! py-2! h-auto! rounded-lg! shadow-sm! transition-colors! text-base! data-[state=open]:bg-Primary! data-[state=open]:text-white!"
+                    >
+                      Professionals
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
+                      <div className="grid grid-cols-2 gap-8 p-6 w-[520px]">
+                        <div>
+                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
+                            Overview
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem
+                              to="/professionals"
+                              active={isLinkActive("/professionals")}
+                            >
+                              Professionals hub
+                            </DropdownItem>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-gray-500 pb-2 border-b border-gray-200 mb-3 tracking-wide uppercase">
+                            By Audience
+                          </h4>
+                          <ul className="space-y-1">
+                            <DropdownItem
+                              to="/professionals/healthcare"
+                              active={isLinkActive("/professionals/healthcare")}
+                            >
+                              Healthcare professionals (MECC)
+                            </DropdownItem>
+                            <DropdownItem
+                              to="/professionals/public-health"
+                              active={isLinkActive(
+                                "/professionals/public-health",
+                              )}
+                            >
+                              Public health teams
+                            </DropdownItem>
+                            <DropdownItem
+                              to="/professionals/children-young-people"
+                              active={isLinkActive(
+                                "/professionals/children-young-people",
+                              )}
+                            >
+                              Children &amp; young people
+                            </DropdownItem>
                           </ul>
                         </div>
                       </div>

@@ -19,9 +19,52 @@ export default function Banner() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-[400px] text-slate-600 bg-white">
-        <div className="w-8 h-8 border-4 border-[#156E94] border-t-transparent rounded-full animate-spin" />
-      </div>
+      <section className="w-full bg-white py-12 md:py-20 lg:py-24 animate-pulse">
+        <div className="section-padding-x">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* LEFT COLUMN: Text Content Skeleton */}
+            <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
+              {/* Tagline starting with horizontal line */}
+              <div className="flex items-center space-x-2">
+                <div className="w-6 h-[2px] bg-slate-200" />
+                <div className="h-3 w-64 bg-slate-200 rounded-md" />
+              </div>
+
+              {/* Main Headline Skeleton */}
+              <div className="space-y-3">
+                <div className="h-9 sm:h-12 w-[90%] bg-slate-200 rounded-2xl" />
+                <div className="h-9 sm:h-12 w-[95%] bg-slate-200 rounded-2xl" />
+                <div className="h-9 sm:h-12 w-[60%] bg-slate-200 rounded-2xl" />
+              </div>
+
+              {/* Description Skeleton */}
+              <div className="space-y-2 pt-2">
+                <div className="h-4 w-[100%] bg-slate-200 rounded-lg" />
+                <div className="h-4 w-[98%] bg-slate-200 rounded-lg" />
+                <div className="h-4 w-[85%] bg-slate-200 rounded-lg" />
+              </div>
+
+              {/* Action Buttons Skeleton */}
+              <div className="flex flex-wrap items-center gap-4 pt-4">
+                <div className="h-12 w-48 bg-slate-200 rounded-xl" />
+                <div className="h-12 w-52 bg-slate-200 rounded-xl" />
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: Graphical Layout Skeleton */}
+            <div className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center w-full">
+              {/* Image Frame Placeholder */}
+              <div className="w-full max-w-[500px] aspect-[4/5] bg-slate-200 rounded-3xl" />
+              
+              {/* Image Caption Placeholder */}
+              <div className="w-full max-w-[500px] space-y-2 mt-4">
+                <div className="h-3.5 w-[100%] bg-slate-200 rounded-md" />
+                <div className="h-3.5 w-[65%] bg-slate-200 rounded-md" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 
@@ -76,7 +119,7 @@ export default function Banner() {
           {/* RIGHT COLUMN: Graphical Layout / Frame Container (Takes 5 spans on desktop) */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center w-full">
             {/* The Custom Rounded Main Frame */}
-            <div className="w-full max-w-[500px] aspect-[4/5] rounded-3xl overflow-hidden border border-slate-100 shadow-sm bg-gray-50">
+            <div className="w-full max-w-[500px] aspect-[4/5] overflow-hidden border border-slate-100 shadow-sm bg-gray-50">
               <img
                 src={bannerData?.image || homeBanner}
                 alt="Presentation regarding public health risks"

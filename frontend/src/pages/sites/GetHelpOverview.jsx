@@ -10,7 +10,16 @@ import ReachOutSection from "@/components/getHelpComponents/ReachOutSection";
 import ProtectingYourMoney from "@/components/getHelpComponents/ProtectingYourMoney";
 import RecoverySection from "@/components/getHelpComponents/RecoverySection";
 import { Link } from "react-router-dom";
+import useClient from "@/hooks/useClient";
+
 const GetHelpOverview = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "get-help-overview"],
+    url: "/about/get-help-overview",
+  });
+
+  const bannerData = responseData?.data;
+
   return (
     <>
       <div className="section-padding-x">
@@ -43,10 +52,10 @@ const GetHelpOverview = () => {
   </div>
 </section>
         <GamblingCommonBanner
-          section="Support that works"
-          title="There's a way through this. Here's where to start."
-          description="Whatever stage you're at (confused, scared, ready to change, recovering, or relapsing) there is a route to support that fits. You don't have to have hit 'rock bottom' to deserve it. And you don't have to do this on willpower alone."
-          image={bannerImg}
+          section={bannerData?.subtitle || "Support that works"}
+          title={bannerData?.title || "There's a way through this. Here's where to start."}
+          description={bannerData?.description || "Whatever stage you're at (confused, scared, ready to change, recovering, or relapsing) there is a route to support that fits. You don't have to have hit 'rock bottom' to deserve it. And you don't have to do this on willpower alone."}
+          image={bannerData?.image || bannerImg}
         />
         <TalkToSomeone/>
         <FourWaysSection/>

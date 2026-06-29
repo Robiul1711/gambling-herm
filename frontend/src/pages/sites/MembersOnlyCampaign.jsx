@@ -10,22 +10,28 @@ import CampaignOurPosition from "@/components/membersOnlyCpmponents/CampaignOurP
 import PublicRecordEvidence from "@/components/membersOnlyCpmponents/PublicRecordEvidence";
 import HowThisSits from "@/components/membersOnlyCpmponents/HowThisSits";
 import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
+import useClient from "@/hooks/useClient";
 
 const MembersOnlyCampaign = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-members-only-banner"],
+    url: "/about/work-members-only-banner",
+  });
+
+  const data = responseData?.data;
+
   return (
     <div className="">
-<div className="section-padding-x">
-
+      <div className="section-padding-x">
         <GamblingCommonBanner
-          section="Our work · Partner campaign we support"
-          title="Members Only."
-          description="A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."
-          image={bannerImg}
-          buttonText="membersonlycampaign.org.uk →"
-          to="membersonlycampaign.org.uk"
+          section={data?.subtitle || "Our work · Partner campaign we support"}
+          title={data?.title || "Members Only."}
+          description={data?.description || "A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."}
+          image={data?.image || bannerImg}
+          buttonText={data?.audioTitle || "membersonlycampaign.org.uk →"}
+          to={data?.audioSource || "membersonlycampaign.org.uk"}
         />
-
-</div>
+      </div>
       <div className="section-padding-x  space-y-10 md:space-y-14 lg:space-y-16">
         <CampaignSupport />
         <ProblemCampaignIsFixing />

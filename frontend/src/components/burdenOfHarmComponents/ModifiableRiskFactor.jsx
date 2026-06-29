@@ -1,8 +1,24 @@
 import React from 'react';
 import imgOne from "@/assets/images/img1.png"; // Top-right infographic image
 import bannerImg from "@/assets/images/banner.png"; // Bottom group photo image
+import useClient from "@/hooks/useClient";
 
 const ModifiableRiskFactor = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-modifiable-risk"],
+    url: "/about/work-modifiable-risk",
+  });
+
+  const data = responseData?.data;
+
+  const sectionTitle = data?.title || "1. A modifiable risk factor, and we're not treating it like one";
+  const paragraph1 = data?.description || '"Modifiable risk factors" is the language public-health systems use for the things that drive disease and death and that can be changed by policy. Smoking. Alcohol. Air quality. Obesity. Gambling belongs on that list. It is largely missing from it.';
+  const paragraph2 = data?.audioTitle || "This is not an academic distinction. It determines how much research funding a harm attracts, how seriously it is taken by health systems, and how willing politicians are to act. Until gambling is treated as a modifiable risk factor for ill-health, rather than as discretionary leisure consumption with the occasional unfortunate edge case, the response will continue to be smaller than the harm warrants.";
+  const positionTagline = data?.audioSource || "Our position";
+  const positionText = data?.audioUrl || "Gambling harm should be classified, measured, funded and regulated as the modifiable public-health risk factor it is. The current regulatory framing (gambling as a leisure activity with industry-led safeguards) is not consistent with the evidence on harm.";
+  const rightInfographic = data?.image || imgOne;
+  const bottomTeamPhoto = data?.videoUrl || bannerImg;
+
   return (
     <section className="section-padding-x bg-white">
       {/* Top Layout: Text Content + Infographic Card */}
@@ -12,20 +28,15 @@ const ModifiableRiskFactor = () => {
         <div className="lg:col-span-7 flex flex-col justify-between h-full">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight text-center lg:text-left leading-tight mb-6">
-              1. A modifiable risk factor, and we're not treating it like one
+              {sectionTitle}
             </h2>
             
             <div className="space-y-5 text-gray-600 text-sm md:text-base leading-relaxed">
               <p>
-                "Modifiable risk factors" is the language public-health systems use for the things that drive disease and 
-                death and that can be changed by policy. Smoking. Alcohol. Air quality. Obesity. Gambling belongs on that 
-                list. It is largely missing from it.
+                {paragraph1}
               </p>
               <p>
-                This is not an academic distinction. It determines how much research funding a harm attracts, how 
-                seriously it is taken by health systems, and how willing politicians are to act. Until gambling is treated as a 
-                modifiable risk factor for ill-health, rather than as discretionary leisure consumption with the occasional 
-                unfortunate edge case, the response will continue to be smaller than the harm warrants.
+                {paragraph2}
               </p>
             </div>
           </div>
@@ -33,12 +44,10 @@ const ModifiableRiskFactor = () => {
           {/* Our Position Statement Card */}
           <div className="mt-8 border-l-4 border-[#166B94] bg-[#292929] text-white p-6 md:p-8 rounded-r-lg shadow-sm">
             <h4 className="text-[#3FABD4] font-semibold tracking-wide text-sm md:text-base uppercase mb-3">
-              Our position
+              {positionTagline}
             </h4>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light">
-              Gambling harm should be classified, measured, funded and regulated as the modifiable public-health risk 
-              factor it is. The current regulatory framing (gambling as a leisure activity with industry-led safeguards) is 
-              not consistent with the evidence on harm.
+              {positionText}
             </p>
           </div>
         </div>
@@ -47,7 +56,7 @@ const ModifiableRiskFactor = () => {
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <div className="max-w-md w-full p-2 bg-transparent rounded-2xl overflow-hidden">
             <img 
-              src={imgOne} 
+              src={rightInfographic} 
               alt="Gambling harm is a top five modifiable health risk infographic" 
               className="w-full h-auto object-contain rounded-xl"
             />
@@ -58,7 +67,7 @@ const ModifiableRiskFactor = () => {
       {/* Bottom Layout: Full-Width Styled Team Image */}
       <div className="w-full overflow-hidden rounded-2xl md:rounded-[2rem] shadow-md border border-gray-100">
         <img 
-          src={bannerImg} 
+          src={bottomTeamPhoto} 
           alt="Public health representatives framework assembly team" 
           className="w-full h-auto object-cover max-h-[550px]"
         />

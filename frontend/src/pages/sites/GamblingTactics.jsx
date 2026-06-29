@@ -4,28 +4,52 @@ import React from "react";
 import bannerImg from "@/assets/images/ourworkbanner.png";
 import { Link } from "react-router-dom";
 import OurWorkCommonContact from "@/components/common/OurWorkCommonContact";
+import useClient from "@/hooks/useClient";
 
 const GamblingTactics = () => {
+  const { data: responseData } = useClient({
+    queryKey: ["about", "work-tactics-banner"],
+    url: "/about/work-tactics-banner",
+  });
+
+  const bannerData = responseData?.data;
+
+  const renderDescription = () => {
+    const defaultText =
+      "A first-of-its-kind repository of evidence on the gambling industry's strategies and tactics for undermining public health. Inspired by Tobacco Tactics. Industry interference is the single greatest barrier to progress in reducing UK gambling harm. The tactics below are how that interference operates.";
+    const text = bannerData?.description || defaultText;
+    const targetPhrase = "Tobacco Tactics";
+
+    if (text.includes(targetPhrase)) {
+      const index = text.indexOf(targetPhrase);
+      const before = text.substring(0, index);
+      const after = text.substring(index + targetPhrase.length);
+      return (
+        <>
+          {before}
+          <a
+            href="https://tobaccotactics.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-Primary underline"
+          >
+            {targetPhrase}
+          </a>
+          {after}
+        </>
+      );
+    }
+    return text;
+  };
+
   return (
     <>
       <div className="section-padding-x">
         <GamblingCommonBanner
-          section="Our work · Gambling Tactics"
-          title="Gambling Tactics."
-          description={
-            <>
-              A first-of-its-kind repository of evidence on the gambling
-              industry's strategies and tactics for undermining public health.
-              Inspired by{" "}
-              <a href="https://tobaccotactics.org" target="_blank" rel="noopener noreferrer" className="text-Primary underline">
-                Tobacco Tactics
-              </a>
-              . Industry interference is the single greatest barrier to progress
-              in reducing UK gambling harm. The tactics below are how that
-              interference operates.
-            </>
-          }
-          image={bannerImg}
+          section={bannerData?.subtitle || "Our work · Gambling Tactics"}
+          title={bannerData?.title || "Gambling Tactics."}
+          description={renderDescription()}
+          image={bannerData?.image || bannerImg}
         />
         <GamblingTacticsLayout />
       </div>

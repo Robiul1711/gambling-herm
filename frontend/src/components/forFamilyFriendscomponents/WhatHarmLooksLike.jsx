@@ -3,32 +3,64 @@ import { Link } from "react-router-dom";
 import brothersVid from "@/assets/videos/safeguarding-brothers.mp4";
 import fatherDaughterVid from "@/assets/videos/safeguarding-father-daughter.mp4";
 import motherDaughterVid from "@/assets/videos/safeguarding-mother-daughter.mp4";
-
-const films = [
-  {
-    category: "Brothers",
-    title: "Brothers Gambling Harm",
-    video: brothersVid,
-    description:
-      "An older brother's gambling lands on a younger sibling who didn't choose it. A film about how harm travels sideways inside a family.",
-  },
-  {
-    category: "Father & Daughter",
-    title: "Father and Daughter Gambling Harm",
-    video: fatherDaughterVid,
-    description:
-      "A daughter carries the weight of a father's gambling at home. The harm a parent rarely sees themselves.",
-  },
-  {
-    category: "Mother & Daughter",
-    title: "Mother and Daughter Gambling Harm",
-    video: motherDaughterVid,
-    description:
-      "A mother gambling on her phone, a daughter watching, a household quietly changing shape.",
-  },
-];
+import useClient from "@/hooks/useClient";
 
 export default function WhatHarmLooksLike() {
+  const { data: headerResponse } = useClient({
+    queryKey: ["about", "get-help-harm-header"],
+    url: "/about/get-help-harm-header",
+  });
+
+  const { data: video1Response } = useClient({
+    queryKey: ["about", "get-help-harm-video-1"],
+    url: "/about/get-help-harm-video-1",
+  });
+
+  const { data: video2Response } = useClient({
+    queryKey: ["about", "get-help-harm-video-2"],
+    url: "/about/get-help-harm-video-2",
+  });
+
+  const { data: video3Response } = useClient({
+    queryKey: ["about", "get-help-harm-video-3"],
+    url: "/about/get-help-harm-video-3",
+  });
+
+  const headerData = headerResponse?.data;
+  const video1Data = video1Response?.data;
+  const video2Data = video2Response?.data;
+  const video3Data = video3Response?.data;
+
+  const sectionTitle = headerData?.title || "What gambling harm looks like inside a home.";
+  const sectionDescription = headerData?.description || "Three short films, each made with affected others. Used in our medical-school teaching, safeguarding training and public-health work. Watch them in any order.";
+
+  const films = [
+    {
+      category: video1Data?.subtitle || "Brothers",
+      title: video1Data?.title || "Brothers Gambling Harm",
+      video: video1Data?.videoUrl || brothersVid,
+      description:
+        video1Data?.description ||
+        "An older brother's gambling lands on a younger sibling who didn't choose it. A film about how harm travels sideways inside a family.",
+    },
+    {
+      category: video2Data?.subtitle || "Father & Daughter",
+      title: video2Data?.title || "Father and Daughter Gambling Harm",
+      video: video2Data?.videoUrl || fatherDaughterVid,
+      description:
+        video2Data?.description ||
+        "A daughter carries the weight of a father's gambling at home. The harm a parent rarely sees themselves.",
+    },
+    {
+      category: video3Data?.subtitle || "Mother & Daughter",
+      title: video3Data?.title || "Mother and Daughter Gambling Harm",
+      video: video3Data?.videoUrl || motherDaughterVid,
+      description:
+        video3Data?.description ||
+        "A mother gambling on her phone, a daughter watching, a household quietly changing shape.",
+    },
+  ];
+
   return (
     <section className="w-full py-16 md:py-24 bg-[#222120] text-white">
       <div className="section-padding-x">
@@ -44,12 +76,10 @@ export default function WhatHarmLooksLike() {
           {/* Heading */}
           <div className="text-center mb-12">
             <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold text-white leading-tight">
-              What gambling harm looks like inside a home.
+              {sectionTitle}
             </h2>
             <p className="mt-4 text-[14px] sm:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Three short films, each made with affected others. Used in our
-              medical-school teaching, safeguarding training and public-health
-              work. Watch them in any order.
+              {sectionDescription}
             </p>
           </div>
 
