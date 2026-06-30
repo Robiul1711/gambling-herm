@@ -51,7 +51,7 @@ export default function ScaleOfHarm() {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-600/50 rounded-2xl p-6 sm:p-8 bg-transparent flex flex-col justify-between space-y-6 hover:border-gray-400 transition-colors duration-200"
+              className="border border-gray-600/50  p-6 sm:p-8 bg-transparent flex flex-col justify-between space-y-6 hover:border-gray-400 transition-colors duration-200"
             >
               <div className="space-y-4">
                 {/* Metric Display */}
