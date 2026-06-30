@@ -8,7 +8,7 @@ export default function SupportOptions() {
         {/* Two-Column Responsive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {/* CARD 1: For Me */}
-          <div className="border border-Primary/30 hover:border-Primary rounded-3xl p-8 sm:p-10 bg-white flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md group">
+          <div className="border border-Primary/30 hover:border-Primary  p-8 sm:p-10 bg-white flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md group">
             <div className="flex flex-col space-y-4">
               {/* Top Accent Category Bar */}
               <div className="flex items-center space-x-3">
@@ -46,7 +46,7 @@ export default function SupportOptions() {
           </div>
 
           {/* CARD 2: For Someone Else */}
-          <div className="border border-gray-200 hover:border-Primary/50 rounded-3xl p-8 sm:p-10 bg-white flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md group">
+          <div className="border border-gray-200 hover:border-Primary/50  p-8 sm:p-10 bg-white flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md group">
             <div className="flex flex-col space-y-4">
               {/* Top Accent Category Bar */}
               <div className="flex items-center space-x-3">

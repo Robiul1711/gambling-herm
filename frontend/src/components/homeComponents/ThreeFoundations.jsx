@@ -58,7 +58,7 @@ export default function ThreeFoundations() {
           {foundations.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-[24px] p-8 bg-white flex flex-col justify-between space-y-8 shadow-sm hover:border-Primary/60 hover:shadow-md transition-all duration-300 group"
+              className="border border-gray-300  p-8 bg-white flex flex-col justify-between space-y-8 shadow-sm hover:border-Primary/60 hover:shadow-md transition-all duration-300 group"
             >
               <div className="flex flex-col space-y-5">
                 {/* Visual Icon Container Badge */}

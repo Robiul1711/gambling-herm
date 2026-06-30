@@ -1,8 +1,8 @@
 import { IoIosNotifications } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import React, { use } from "react";
+import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const CommonNavbar = ({ open, setOpen }) => {
   const { pathname } = useLocation();

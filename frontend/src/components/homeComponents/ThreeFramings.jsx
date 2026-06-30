@@ -55,7 +55,7 @@ export default function ThreeFramings() {
           {framings.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-white flex flex-col space-y-4 shadow-sm hover:border-gray-300 transition-all duration-200"
+              className="border border-gray-200  p-6 sm:p-8 bg-white flex flex-col space-y-4 shadow-sm hover:border-gray-300 transition-all duration-200"
             >
               {/* Category Subtitle Row */}
               <span className="text-[#1A759F] text-xs sm:text-sm font-bold tracking-wide">
