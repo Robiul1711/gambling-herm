@@ -93,12 +93,12 @@ export default function Navbar() {
     "/get-help/treatment",
     "/get-help/family-friends",
     "/urgent-help",
-    // "/thurrock",
+    //"/thurrock",
   ].includes(pathname);
 
   const getMobileSubLinkClass = (to) => {
     const active = isLinkActive(to);
-    return `block px-4 py-2.5 text-sm rounded-lg transition-colors ${
+    return `block px-4 py-2.5 text-sm transition-colors ${
       active
         ? "font-semibold text-Primary bg-[#E0F2FE]"
         : "font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -127,11 +127,15 @@ export default function Navbar() {
           <div className="section-padding-x pt-2 flex items-center justify-between">
             {/* Logo */}
             <Link to="/">
-              <img src={footerData?.logo || Logo} alt="logo" className="md:w-25 sm:w-20 w-15 object-contain" />
+              <img
+                src={footerData?.logo || Logo}
+                alt="logo"
+                className="md:w-25 sm:w-20 w-15 object-contain"
+              />
             </Link>
 
             {/* DESKTOP NAVIGATION (shadcn/ui) */}
-            <div className="flex items-center gap-5 ">
+            <div className="flex items-center gap-5">
               <NavigationMenu
                 className="static hidden md:flex items-center"
                 viewport={false}
@@ -140,7 +144,7 @@ export default function Navbar() {
                   <NavigationMenuItem>
                     <Link
                       to="/"
-                      className={`${navigationMenuTriggerStyle()} text-base  hover:bg-gray-50 transition-colors ${
+                      className={`${navigationMenuTriggerStyle()} text-base hover:bg-gray-50 transition-colors ${
                         pathname === "/" && !hash
                           ? "text-Primary font-bold"
                           : "text-gray-700 font-medium hover:text-Primary"
@@ -150,7 +154,6 @@ export default function Navbar() {
                     </Link>
                   </NavigationMenuItem>
 
-       
                   {/* About Dropdown */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger
@@ -376,21 +379,19 @@ export default function Navbar() {
                               Crisis &amp; urgent help
                             </DropdownItem>
                             {/* <DropdownItem
-                              to="/thurrock"
-                              active={isLinkActive("/thurrock")}
-                            >
-                              Thurrock
-                            </DropdownItem> */}
+ to="/thurrock"
+ active={isLinkActive("/thurrock")}
+ >
+ Thurrock
+ </DropdownItem> */}
                           </ul>
                         </div>
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-                             {/* Professionals Dropdown */}
+                  {/* Professionals Dropdown */}
                   <NavigationMenuItem className="static">
-                    <NavigationMenuTrigger
-                      className="bg-Primary! hover:bg-[#105572]! text-white! hover:text-white! font-bold! px-5! py-2! h-auto! rounded-lg! shadow-sm! transition-colors! text-base! data-[state=open]:bg-Primary! data-[state=open]:text-white!"
-                    >
+                    <NavigationMenuTrigger className="bg-Primary! hover:bg-[#105572]! text-white! hover:text-white! font-bold! px-5! py-2! h-auto! ! shadow-sm! transition-colors! text-base! data-[state=open]:bg-Primary! data-[state=open]:text-white!">
                       Professionals
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
@@ -447,7 +448,7 @@ export default function Navbar() {
               <div className="hidden md:flex items-center">
                 <Link
                   to="/urgent-help"
-                  className="bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold px-5 py-2 rounded-lg transition-colors text-base shadow-sm inline-flex items-center"
+                  className="bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold px-5 py-2 transition-colors text-base shadow-sm inline-flex items-center"
                 >
                   Urgent Help <span className="ml-2 font-normal">&rarr;</span>
                 </Link>
@@ -458,7 +459,7 @@ export default function Navbar() {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none"
+                className="p-2 text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none"
                 aria-label="Open Navigation Menu"
               >
                 <Menu className="w-7 h-7" />
@@ -493,10 +494,10 @@ export default function Navbar() {
           <div>
             {/* Drawer Header Close Row */}
             <div className="flex items-center justify-between pb-6 border-b border-gray-100">
-              <span className="font-bold  text-lg text-Primary">Gambling</span>
+              <span className="font-bold text-lg text-Primary">Gambling</span>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="p-2 rounded-xl text-gray-500 hover:bg-gray-100 transition-colors"
+                className="p-2 text-gray-500 hover:bg-gray-100 transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -507,7 +508,7 @@ export default function Navbar() {
               <Link
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-3 text-base rounded-xl transition-colors ${
+                className={`block px-4 py-3 text-base transition-colors ${
                   pathname === "/" && !hash
                     ? "font-bold text-Primary bg-blue-50/50"
                     : "font-medium text-gray-800 hover:bg-gray-50"
@@ -520,7 +521,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown("professionals")}
-                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base transition-colors ${
                     isProfessionalsActive
                       ? "font-bold text-Primary bg-blue-50/10"
                       : "font-medium text-gray-800 hover:bg-gray-50"
@@ -532,7 +533,7 @@ export default function Navbar() {
                   />
                 </button>
                 {activeMobileDropdown === "professionals" && (
-                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
+                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 mt-1">
                     <div>
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
                         Overview
@@ -589,7 +590,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown("about")}
-                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base transition-colors ${
                     isAboutActive
                       ? "font-bold text-Primary bg-blue-50/10"
                       : "font-medium text-gray-800 hover:bg-gray-50"
@@ -601,7 +602,7 @@ export default function Navbar() {
                   />
                 </button>
                 {activeMobileDropdown === "about" && (
-                  <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/50 rounded-xl mt-1">
+                  <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/50 mt-1">
                     <Link
                       to="/about"
                       onClick={() => setMobileMenuOpen(false)}
@@ -638,7 +639,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown("work")}
-                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base transition-colors ${
                     isWorkActive
                       ? "font-bold text-Primary bg-blue-50/10"
                       : "font-medium text-gray-800 hover:bg-gray-50"
@@ -650,7 +651,7 @@ export default function Navbar() {
                   />
                 </button>
                 {activeMobileDropdown === "work" && (
-                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
+                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 mt-1">
                     <div>
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
                         Evidence Base
@@ -771,7 +772,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown("help")}
-                  className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-colors ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-base transition-colors ${
                     isHelpActive
                       ? "font-bold text-Primary bg-blue-50/10"
                       : "font-medium text-gray-800 hover:bg-gray-50"
@@ -783,7 +784,7 @@ export default function Navbar() {
                   />
                 </button>
                 {activeMobileDropdown === "help" && (
-                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 rounded-xl mt-1">
+                  <div className="pl-4 pr-2 py-2 space-y-4 bg-gray-50/50 mt-1">
                     <div>
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">
                         Where to start
@@ -857,7 +858,7 @@ export default function Navbar() {
             <Link
               to="/urgent-help"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold py-2 rounded-xl transition-colors text-center shadow-md flex items-center justify-center text-base"
+              className="w-full bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold py-2 transition-colors text-center shadow-md flex items-center justify-center text-base"
             >
               Urgent Help <span className="ml-2 font-normal">&rarr;</span>
             </Link>
@@ -876,8 +877,8 @@ function DropdownItem({ to, children, active = false }) {
           to={to}
           className={`block w-full text-left text-[15px] px-3 py-2.5 transition-all duration-200 border-l-4 ${
             active
-              ? "bg-[#E0F2FE] text-Primary font-semibold border-Primary rounded-r-xl rounded-l-none pl-2.5"
-              : "text-gray-700 hover:bg-gray-50 hover:text-gray-900 font-medium border-transparent rounded-xl"
+              ? "bg-[#E0F2FE] text-Primary font-semibold border-Primary pl-2.5"
+              : "text-gray-700 hover:bg-gray-50 hover:text-gray-900 font-medium border-transparent"
           }`}
         >
           {children}

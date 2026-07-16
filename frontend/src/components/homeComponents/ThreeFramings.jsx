@@ -40,13 +40,11 @@ export default function ThreeFramings() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
-            Three Framings We Don't Use.
+           Three framings we challenge.
           </h2>
 
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-            Some language sounds neutral and isn't. The terms below are core to
-            how the gambling industry has shaped public conversation in the UK
-            for thirty years. We don't use any of them.
+           Some language sounds neutral and isn't. The terms below are core to how the gambling industry has shaped public conversation in the UK for thirty years. We oppose them, and we challenge them wherever they appear.
           </p>
         </div>
 
@@ -63,7 +61,7 @@ export default function ThreeFramings() {
               </span>
 
               {/* Crossed-out Rejected Title Typography */}
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-800 tracking-tight line-through decoration-gray-400 decoration-2">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-800 tracking-tight line-through decoration-gray-400 decoration-2 italic">
                 {item.title}
               </h3>
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function VisionValuesAims() {
   return (
-    <section id="vision" className="w-full py-16 text-[#1f2937] ">
+    <section id="vision" className="w-full py-16 text-[#1f2937]">
       <div className="section-padding-x">
         <div className="max-w-5xl mx-auto">
           {/* Top Accent Line */}
@@ -33,7 +33,7 @@ export default function VisionValuesAims() {
           {/* Values Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {/* Card 1 */}
-            <div className="border border-gray-200/80 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
+            <div className="border border-gray-200/80 p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
               <h4 className="text-lg font-bold text-slate-800 mb-3">
                 Public-health led
               </h4>
@@ -45,7 +45,7 @@ export default function VisionValuesAims() {
             </div>
 
             {/* Card 2 */}
-            <div className="border border-gray-200/80 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
+            <div className="border border-gray-200/80 p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
               <h4 className="text-lg font-bold text-slate-800 mb-3">
                 Grounded in lived experience
               </h4>
@@ -58,7 +58,7 @@ export default function VisionValuesAims() {
             </div>
 
             {/* Card 3 */}
-            <div className="border border-gray-200/80 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
+            <div className="border border-gray-200/80 p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
               <h4 className="text-lg font-bold text-slate-800 mb-3">
                 Evidence informed
               </h4>
@@ -70,7 +70,7 @@ export default function VisionValuesAims() {
             </div>
 
             {/* Card 4 */}
-            <div className="border border-gray-200/80 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
+            <div className="border border-gray-200/80 p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
               <h4 className="text-lg font-bold text-slate-800 mb-3">
                 Independent
               </h4>
@@ -95,52 +95,61 @@ export default function VisionValuesAims() {
 
           {/* List of Aims */}
           <div className="border-t border-gray-200/60 divide-y divide-gray-200/60 mb-10">
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
+            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
               <span className="font-bold text-slate-800">
-                Earlier recognition of harm
-              </span>{" "}
+                Earlier recognition of harm 
+              </span>
+            
               across health, education and safeguarding systems.
             </div>
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
+            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
               <span className="font-bold text-slate-800">
                 A confident, equipped workforce
-              </span>{" "}
+              </span>
+              {" "}
               able to ask about gambling, recognise risk, respond appropriately
               and signpost safely.
             </div>
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
+            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
               <span className="font-bold text-slate-800">
                 Sustainable prevention infrastructure
-              </span>{" "}
+              </span>
+              {" "}
               embedded in routine policy, training and professional practice,
               not dependent on one-off projects.
             </div>
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed">
+            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
               <span className="font-bold text-slate-800">
                 Long-term reductions in gambling harm
-              </span>{" "}
+              </span>
+               {" "}
               and in the inequality it drives.
             </div>
           </div>
 
           {/* Bottom Paragraph with Principles */}
-          <p className="text-slate-600 text-[14px] sm:text-[15px] leading-relaxed bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
-            Three working principles guide how we deliver this:{" "}
+          <p className="text-slate-600 text-[14px] sm:text-[15px]  leading-relaxed bg-white border border-gray-100 p-5 shadow-sm">
+            Three working principles guide how we deliver this: {" "}  
             <span className="font-bold text-slate-800">
               creating connectivity
-            </span>{" "}
-            (bringing health, education, safeguarding and community partners
-            together so gambling harm becomes core business, not a niche issue),{" "}
+            </span>
+               {" "} 
+             (bringing health, education, safeguarding and community partners
+            together so gambling harm becomes core business, not a niche issue),
+            {" "}
             <span className="font-bold text-slate-800">
               developing capability
-            </span>{" "}
+            </span>
+            {" "}
             (training and evidence translation for every professional group
             whose practice should include gambling), and{" "}
             <span className="font-bold text-slate-800">
               maximising capacity
-            </span>{" "}
+            </span>
+            {" "}
             (building tools and infrastructure that systems can sustain and
-            scale themselves). The three strands are set out in detail on our{" "}
+            scale themselves). The three strands are set out in detail on our
+            {" "}
             <Link
               to="/professionals/public-health"
               className="text-[#1B80C4] hover:underline font-semibold"

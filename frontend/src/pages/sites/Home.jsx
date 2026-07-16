@@ -13,13 +13,15 @@ const Home = () => {
     <Banner/>
     <OurPosition/>
     <SupportOptions/>
-    <ScaleOfHarm/>
+    {/* <ScaleOfHarm/> */}
     <ThreeFoundations/>
     <ThreeFramings/>
     <LivedExperienceQuote/>
     <OurWorkCommonContact
-      title="You don't have to do this alone, and we don't think you should have to."
-      description="If gambling is harming you or someone you love, there is a way through. There is also a fight to make sure fewer people have to make this journey at all."
+      title="You don't have to do this alone."
+      description="If gambling is harming you or someone you love, there is a way through.
+
+We don't provide treatment ourselves, but we can connect you with trusted specialist services, free and confidential. There is also a fight to make sure fewer people have to make this journey at all."
       primaryBtnText="Get Help Now"
       primaryBtnLink="/get-help"
       secondaryBtnText="Read Our Policy Positions"

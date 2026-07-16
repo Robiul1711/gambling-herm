@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GamblingRelatedSuicide = () => {
   return (
-    <section className="py-12 bg-[#1A1A1A] text-gray-300 px-4 md:px-8 rounded-2xl">
+    <section className="py-12 bg-[#1A1A1A] text-gray-300 px-4 md:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Top Accent Blue Line */}
         <div className="w-12 h-[3px] bg-[#3FABD4] mb-4" />
@@ -24,6 +25,10 @@ const GamblingRelatedSuicide = () => {
             gambling is almost never recorded as a contributing factor in
             coroners' reports.
           </p>
+
+          <p className="text-gray-300 font-normal">
+            <strong className="font-semibold text-white">If reading this is bringing things up for you:</strong> Samaritans are free on <strong className="font-semibold text-white">116 123</strong>, 24/7, and our <Link to="/urgent-help" className="text-[#3FABD4] underline hover:text-[#00B5FF] transition-colors">urgent help page</Link> sets out what to do right now.
+          </p>
           <p className="text-gray-400">
             The risk does not peak at the height of someone's gambling. It peaks
             in the days and weeks after a heavy loss, when shame, hopelessness,
@@ -41,7 +46,7 @@ const GamblingRelatedSuicide = () => {
         </div>
 
         {/* Light Blue Position and Help Callout Box Layout */}
-        <div className="border-l-4 border-[#00B5FF] bg-[#ffff] text-gray-800 p-6 md:p-8 rounded-r-2xl max-w-7xl shadow-md">
+        <div className="border-l-4 border-[#00B5FF] bg-[#ffff] text-gray-800 p-6 md:p-8 max-w-7xl shadow-md">
           <h4 className="text-[#0076A8] font-bold text-sm tracking-wide uppercase mb-3">
             Our position
           </h4>

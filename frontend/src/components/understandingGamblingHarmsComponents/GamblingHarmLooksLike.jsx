@@ -44,21 +44,24 @@ const GamblingHarmLooksLike = () => {
   const data = responseData?.data;
 
   const sectionTitle = data?.title || "1. What gambling harm looks like";
-  const sectionDesc = data?.description || "Harm is plural. It is rarely just about money, and the money harms are rarely just about debt.";
+  const sectionDesc =
+    data?.description ||
+    "Harm is plural. It is rarely just about money, and the money harms are rarely just about debt.";
   const videoUrl = data?.videoUrl || meccVideo;
 
-  const captionText = data?.subtitle || "GHUK's MECC training film — a lived-experience interview on how gambling exposure often starts in childhood.";
-  
+  const captionText =
+    data?.subtitle ||
+    "GHUK's MECC training film — a lived-experience interview on how gambling exposure often starts in childhood.";
+
   // Parse caption split by em-dash or hyphen
   const parts = captionText.split("—");
   const captionBold = parts[0]?.trim() || "GHUK's MECC training film";
-  const captionItalic = parts[1]?.trim() || "a lived-experience interview on how gambling exposure often starts in childhood.";
+  const captionItalic =
+    parts[1]?.trim() ||
+    "a lived-experience interview on how gambling exposure often starts in childhood.";
 
   return (
-    <section
-      id="gambling-harm"
-      className="pb-8 md:pb-16 section-padding-x"
-    >
+    <section id="gambling-harm" className="pb-8 md:pb-16 section-padding-x">
       <div className="">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-8 md:mb-16 max-w-5xl mx-auto">
@@ -76,7 +79,7 @@ const GamblingHarmLooksLike = () => {
 
           {/* Right Video Player Column */}
           <div className="w-full lg:w-96 shrink-0 flex items-center justify-center">
-            <div className="w-full bg-black rounded-2xl overflow-hidden shadow-md flex flex-col">
+            <div className="w-full bg-black overflow-hidden shadow-md flex flex-col">
               {/* Video */}
               <video
                 key={videoUrl}
@@ -88,7 +91,8 @@ const GamblingHarmLooksLike = () => {
               {/* Video Meta Title Banner */}
               <div className="bg-[#141414] p-3 text-[11px] md:text-xs text-gray-300 border-t border-gray-800 text-left">
                 <p className="leading-relaxed">
-                  <span className="font-bold text-white">{captionBold}</span> —{" "}
+                  <span className="font-bold text-white">{captionBold}</span> —
+                  {" "}
                   <span className="italic text-gray-400">{captionItalic}</span>
                 </p>
               </div>
@@ -114,8 +118,8 @@ const GamblingHarmLooksLike = () => {
           ))}
         </div>
         {/* Bottom Alert Box */}
-        <div className="max-w-3xl mx-auto mt-10">
-          <div className="bg-[#f9e9ea] rounded-lg border-l-4 border-[#d91f26] px-5 md:px-8 py-6 md:py-8">
+        <div className="max-w-7xl mx-auto mt-10">
+          <div className="bg-[#f9e9ea] border-l-4 border-[#d91f26] px-5 md:px-8 py-6 md:py-8">
             <h4 className="font-semibold text-[#222] mb-4 md:mb-5 text-base md:text-lg">
               If reading this is upsetting
             </h4>
@@ -125,7 +129,8 @@ const GamblingHarmLooksLike = () => {
               someone right now, the{" "}
               <span className="font-semibold text-black">
                 National Gambling Helpline (0808 8020 133)
-              </span>{" "}
+              </span>
+              {" "}
               is free, confidential and open 24/7.
             </p>
           </div>

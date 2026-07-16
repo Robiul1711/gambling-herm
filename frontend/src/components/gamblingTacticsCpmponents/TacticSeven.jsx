@@ -24,7 +24,7 @@ const TacticSeven = () => {
 
       {/* Metric Cards Grid Layout */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl">
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             £15bn
           </span>
@@ -33,7 +33,7 @@ const TacticSeven = () => {
           </p>
         </div>
 
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             £4bn
           </span>
@@ -42,7 +42,7 @@ const TacticSeven = () => {
           </p>
         </div>
 
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             £100m
           </span>
@@ -51,7 +51,7 @@ const TacticSeven = () => {
           </p>
         </div>
 
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             40–60×
           </span>
@@ -91,7 +91,8 @@ const TacticSeven = () => {
             social cost approximately 4.4× tax revenue (Browne et al., 2016).
           </li>
           <li className="leading-relaxed">
-            <span className="font-semibold text-slate-800">England 2013:</span>{" "}
+            <span className="font-semibold text-slate-800">England 2013:</span>
+            {" "}
             modelled population burden 1.62 million YLD, larger than the burdens
             from dietary risks (1.47m) or tobacco smoke (1.46m) (Browne et al.,
             2017, extrapolated).
@@ -123,10 +124,10 @@ const TacticSeven = () => {
         </p>
       </div>
 
-      {/* Sub-block: The "voluntary contribution to good causes" framing */}
-      <div className="bg-slate-50 rounded-2xl p-6 md:p-8 space-y-3 border border-slate-100 max-w-4xl">
+      {/* Sub-block: The"voluntary contribution to good causes" framing */}
+      <div className="bg-slate-50 p-6 md:p-8 space-y-3 border border-slate-100 max-w-4xl">
         <h3 className="text-lg font-bold text-slate-800">
-          The "voluntary contribution to good causes" framing
+          The"voluntary contribution to good causes" framing
         </h3>
         <p className="text-slate-600 text-sm md:text-base leading-relaxed">
           The industry's contribution to research, education and treatment via
