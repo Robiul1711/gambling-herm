@@ -1,5 +1,5 @@
 import React from "react";
-
+import phone from "@/assets/images/phone.png";
 const changesList = [
   {
     number: 1,
@@ -11,7 +11,7 @@ const changesList = [
     number: 2,
     title: "A Statutory Duty Of Care On Gambling Operators",
     description:
-      'Translate operator obligations from "comply with the social-responsibility code", a self-policed compliance regime that the last fifteen years of UK regulation have shown to be largely ineffective, into a legal duty owed to customers, breach of which creates civil liability. The current Licence Conditions and Codes of Practice (LCCP) framework gives the Gambling Commission an enforcement role, but does not create a private right of action for customers harmed by operator failures. A statutory duty of care closes that gap: it makes the population-level burden of harm into operator-level legal exposure, aligns incentives with prevention, and gives affected customers and their families a route to redress through the civil courts.',
+      'Translate operator obligations from"comply with the social-responsibility code", a self-policed compliance regime that the last fifteen years of UK regulation have shown to be largely ineffective, into a legal duty owed to customers, breach of which creates civil liability. The current Licence Conditions and Codes of Practice (LCCP) framework gives the Gambling Commission an enforcement role, but does not create a private right of action for customers harmed by operator failures. A statutory duty of care closes that gap: it makes the population-level burden of harm into operator-level legal exposure, aligns incentives with prevention, and gives affected customers and their families a route to redress through the civil courts.',
   },
   {
     number: 3,
@@ -35,8 +35,8 @@ const changesList = [
         </strong>
         , which prohibits non-broadcast gambling advertising with strong appeal
         to children, including by prohibiting child-themed slot games such as
-        "Jack and the Beanstalk" and "Cinderella Ball". Personalised marketing
-        to customers showing distress signals should be classified as a serious
+        "Jack and the Beanstalk" and"Cinderella Ball". Personalised marketing to
+        customers showing distress signals should be classified as a serious
         regulatory breach.
       </>
     ),
@@ -81,20 +81,29 @@ const changesList = [
   {
     number: 11,
     title: "Full-distribution measurement of gambling harm",
-description: (
-  <>
-    Headline UK gambling-harm prevalence should be measured across the full PGSI distribution (not summarised by an 8+ cut-off) and should be supplemented by direct measurement of affected-others harm. The headline figure used in policy debate should reflect the full distribution.
-    <br />
-    <br />
-    Alongside survey measurement: routine ICD/SNOMED coding of gambling harm across NHS contacts, and regular national burden estimation using established metrics (YLD, QALY, DALY). Gambling-related deaths and morbidity currently go systematically unrecorded, in health records and in coroners' accounts, and the UK cannot manage what it does not measure. This is where GHUK's work began.
-  </>
-),},
+    description: (
+      <>
+        Headline UK gambling-harm prevalence should be measured across the full
+        PGSI distribution (not summarised by an 8+ cut-off) and should be
+        supplemented by direct measurement of affected-others harm. The headline
+        figure used in policy debate should reflect the full distribution.
+        <br />
+        <br />
+        Alongside survey measurement: routine ICD/SNOMED coding of gambling harm
+        across NHS contacts, and regular national burden estimation using
+        established metrics (YLD, QALY, DALY). Gambling-related deaths and
+        morbidity currently go systematically unrecorded, in health records and
+        in coroners' accounts, and the UK cannot manage what it does not
+        measure. This is where GHUK's work began.
+      </>
+    ),
+  },
   {
     number: 12,
     title:
       "Regulatory consolidation under the Department of Health and Social Care",
     description:
-      'Gambling regulation currently sits within DCMS, structurally disconnected from health. We support the consolidation of regulatory leadership under DHSC, with population-health primacy, proper public-health analytical capacity, and policy alignment with tobacco, alcohol and other commercial determinants of health. A public-health framing across government communication follows from this; "responsible gambling" language should be retired from regulator, government and industry communications.',
+      'Gambling regulation currently sits within DCMS, structurally disconnected from health. We support the consolidation of regulatory leadership under DHSC, with population-health primacy, proper public-health analytical capacity, and policy alignment with tobacco, alcohol and other commercial determinants of health. A public-health framing across government communication follows from this;"responsible gambling" language should be retired from regulator, government and industry communications.',
   },
   {
     number: 13,
@@ -117,7 +126,7 @@ const WhatWeWantChanged = () => {
         </h2>
 
         {/* Section Context Intro Paragraph */}
-        <p className="text-[15px] md:text-base leading-7 md:leading-8 text-[#2d2d2d]  mb-12">
+        <p className="text-[15px] md:text-base leading-7 md:leading-8 text-[#2d2d2d] mb-12">
           The positive regulatory positions GHUK supports. These are coherent
           (they describe a single, whole-system response to gambling harm) and
           they are anchored in the public-health evidence, not in any particular
@@ -128,11 +137,11 @@ const WhatWeWantChanged = () => {
         </p>
 
         {/* Interactive Ordered List Blocks */}
-        <div className="space-y-10  mb-12">
+        <div className="space-y-10 ">
           {changesList.map((item) => (
             <div key={item.number} className="flex gap-5 items-start">
               {/* Number Badge Counter */}
-              <div className="w-9 h-9 rounded-full bg-[#0e7fad] text-white flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm">
+              <div className="w-9 h-9 bg-[#0e7fad] text-white flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm">
                 {item.number}
               </div>
 
@@ -147,7 +156,7 @@ const WhatWeWantChanged = () => {
 
                 {/* Light Blue Callout Nesting Specific to Item 2 */}
                 {item.number === 2 && (
-                  <div className="bg-[#edf7fd] rounded-r-2xl border-l-[4px] border-[#17a9df] p-6 md:p-8 !mt-6">
+                  <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 !mt-6">
                     <h5 className="text-[#17a9df] text-sm font-semibold tracking-normal mb-3">
                       Why this position is foundational
                     </h5>
@@ -170,10 +179,12 @@ const WhatWeWantChanged = () => {
                     </p>
                   </div>
                 )}
+      
               </div>
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );

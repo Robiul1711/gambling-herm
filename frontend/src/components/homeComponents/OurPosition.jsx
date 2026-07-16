@@ -7,20 +7,18 @@ export default function WhoGamblingHarms() {
       number: "~1 in 5",
       text: (
         <>
-          UK adults experienced gambling-related harm in the past year, counting
-          those who gambled themselves <span className="italic">and</span> the
-          affected others around them.
+         Gambling harm isn't confined to a small group of “addicts”; it runs across the population. Count harm at every level, to the people who gamble and the families around them, and it reaches at least 1 in 5 UK adults. Because official surveys record only those who recognise and report it within a single year, the true figure sits above this, not below. Financial, relationship, mental-health and wider harms.
         </>
       ),
     },
     {
       number: "~9%",
-      text: "of UK adults were affected by someone else's gambling in the past year, including 2.5% experiencing severe consequences (GSGB official statistics, 2024). Partners, parents, children, siblings, close friends.",
+      text: "of UK adults self-reported being affected by someone else's gambling in the past year (a single-year, self-identified snapshot), including 2.5% reporting severe consequences (GSGB official statistics, 2024). Partners, parents, children, siblings, close friends.",
     },
-    {
-      number: "~42%",
-      text: "of children in Great Britain may be affected by someone else's gambling, on modelling for GambleAware (YouGov, 2024): parents, siblings, and others close to them.",
-    },
+    // {
+    //   number: "~42%",
+    //   text: "of children in Great Britain may be affected by someone else's gambling, on modelling for GambleAware (YouGov, 2024): parents, siblings, and others close to them.",
+    // },
   ];
 
   return (
@@ -40,7 +38,7 @@ export default function WhoGamblingHarms() {
         </h2>
 
         {/* 3-Column Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {stats.map((stat, index) => (
             <div
               key={index}

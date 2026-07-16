@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const drivers = [
   {
@@ -26,8 +27,7 @@ const drivers = [
 const barriers = [
   {
     title: "Awareness gap.",
-    description:
-      "People most at risk of harm often know least about available support.",
+    description: "People most at risk of harm often know least about available support.",
   },
   {
     title: "Cultural fit.",
@@ -36,8 +36,18 @@ const barriers = [
   },
   {
     title: "Stigma and discrimination.",
-    description:
-      "Compounded for people facing other intersecting stigmas. See our stigma page.",
+    description: (
+      <>
+        Compounded for people facing other intersecting stigmas. See our{" "}
+        <Link
+          to="/stigma-and-language"
+          className="text-Primary underline hover:text-opacity-80 transition-all"
+        >
+          stigma page
+        </Link>
+        .
+      </>
+    ),
   },
   {
     title: "Treatment fragmentation.",
@@ -46,8 +56,19 @@ const barriers = [
   },
   {
     title: "Geography.",
-    description:
-      "NHS specialist provision is uneven; the regional gap is part of the inequality picture. See our find-treatment page.",
+    description: (
+      <>
+        NHS specialist provision is uneven; the regional gap is part of the inequality picture. See
+        our{" "}
+        <Link
+          to="/get-help/treatment"
+          className="text-Primary underline hover:text-opacity-80 transition-all"
+        >
+          find-treatment page
+        </Link>
+        .
+      </>
+    ),
   },
 ];
 

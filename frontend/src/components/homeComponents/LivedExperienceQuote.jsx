@@ -8,7 +8,7 @@ export default function LivedExperienceQuote() {
         <div className="flex items-center space-x-3 mb-8 pl-4 sm:pl-8 md:pl-0">
           <span className="w-8 h-[2px] bg-Primary" />
           <span className="text-Primary text-sm md:text-base font-bold tracking-wide">
-            Lived Experience
+           Experts by Experience
           </span>
         </div>
 
@@ -44,7 +44,7 @@ export default function LivedExperienceQuote() {
         {/* Quote Attribution Author Bio */}
         <div className="mt-6 pl-10 sm:pl-14 md:pl-12">
           <cite className="not-italic text-gray-400 text-xs sm:text-sm font-medium tracking-wide">
-            , Sam, in recovery for four years
+             Sam, in recovery for four years
           </cite>
         </div>
       </div>

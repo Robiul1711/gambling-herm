@@ -31,21 +31,24 @@ const TacticFive = () => {
           <li className="leading-relaxed">
             <span className="font-bold text-slate-800">
               Variable-ratio reinforcement.
-            </span>{" "}
+            </span>
+            {" "}
             Wins arrive on an unpredictable schedule. The most behaviourally
             sticky reinforcement schedule known. The engine of slot-machine
             addiction.
           </li>
           <li className="leading-relaxed">
-            <span className="font-bold text-slate-800">Near-misses.</span>{" "}
+            <span className="font-bold text-slate-800">Near-misses.</span>
+            {" "}
             Outcomes engineered to look close to a win. Activate reward
-            neurochemistry similar to actual wins. Player feels they "almost got
+            neurochemistry similar to actual wins. Player feels they"almost got
             it" and keeps playing.
           </li>
           <li className="leading-relaxed">
             <span className="font-bold text-slate-800">
               Losses disguised as wins (LDWs).
-            </span>{" "}
+            </span>
+            {" "}
             Multi-line slot outcomes that return less than the stake but trigger
             win audio and animation. The brain logs a win event when financially
             the player lost.
@@ -53,18 +56,21 @@ const TacticFive = () => {
           <li className="leading-relaxed">
             <span className="font-bold text-slate-800">
               Speed of online cycles.
-            </span>{" "}
+            </span>
+            {" "}
             Online slot spins resolve in 2–3 seconds. A player can stake
             thousands of pounds within an hour without leaving the sofa.
           </li>
           <li className="leading-relaxed">
-            <span className="font-bold text-slate-800">VIP schemes.</span>{" "}
+            <span className="font-bold text-slate-800">VIP schemes.</span>
+            {" "}
             Discretionary loyalty programmes that lavish high-value losing
             customers with cashback, hospitality and personal account managers.
             Concentrates operator revenue on the most-harmed customers.
           </li>
           <li className="leading-relaxed">
-            <span className="font-bold text-slate-800">In-play markets.</span>{" "}
+            <span className="font-bold text-slate-800">In-play markets.</span>
+            {" "}
             Bets resolve in seconds and recur thousands of times per match.
             Decision windows are too short for affordability calculation.
           </li>
@@ -73,7 +79,7 @@ const TacticFive = () => {
 
       {/* Metric Cards Grid Layout */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl">
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             2–3 sec
           </span>
@@ -82,7 +88,7 @@ const TacticFive = () => {
           </p>
         </div>
 
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             ~10%
           </span>
@@ -92,7 +98,7 @@ const TacticFive = () => {
           </p>
         </div>
 
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             £1.5bn+
           </span>
@@ -101,7 +107,7 @@ const TacticFive = () => {
           </p>
         </div>
 
-        <div className="border border-slate-200 bg-white rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="border border-slate-200 bg-white p-5 space-y-2 shadow-sm">
           <span className="text-2xl md:text-3xl font-bold text-slate-800 block">
             ~£15bn
           </span>

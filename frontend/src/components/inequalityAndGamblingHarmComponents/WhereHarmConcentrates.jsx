@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const concentrationData = [
   {
@@ -31,8 +32,21 @@ const concentrationData = [
   },
   {
     label: "Affected others",
-    description: "Children of someone with gambling harm; partners; siblings; bereaved families. Inequality also shapes who carries affected-other harm and who gets recognised for it. See our family & friends page."
-  }
+    description: (
+      <>
+        Children of someone with gambling harm; partners; siblings; bereaved families.
+        Inequality also shapes who carries affected-other harm and who gets recognised for it. See
+        our{" "}
+        <Link
+          to="/get-help/family-friends"
+          className="text-Primary underline hover:text-opacity-80 transition-all"
+        >
+          family & friends page
+        </Link>
+        .
+      </>
+    ),
+  },
 ];
 
 const WhereHarmConcentrates = () => {

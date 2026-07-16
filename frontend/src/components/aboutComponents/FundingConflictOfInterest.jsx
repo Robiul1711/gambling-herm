@@ -58,13 +58,23 @@ const FundingConflictOfInterest = () => {
               <strong className="text-[#2d2d2d] font-semibold">
                 Open financials.
               </strong>{" "}
-              Our annual report and accounts are published in full each year.{" "}
+              Our annual report and accounts are published in full each year on the Charity Commission register (charity no. 1196538).{" "}
               <a
-                href="#"
-                className="text-[#6b7280] underline hover:text-Primary transition-colors"
+                href="https://register-of-charities.charitycommission.gov.uk/charity-details/?regid=1196538&subid=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-Primary underline hover:text-Primary2 transition-colors"
               >
-                [Annual report and accounts]
+                View on the Charity Commission register
               </a>
+              , or email{" "}
+              <a
+                href="mailto:hello@gamblingharm.com"
+                className="text-Primary underline hover:text-Primary2 transition-colors"
+              >
+                hello@gamblingharm.com
+              </a>{" "}
+              for a copy.
             </span>
           </li>
 
