@@ -42,6 +42,11 @@ const ForFamilyFriends = () => {
       <ChildrenInHouse />
       <GamblingBereavementSection/>
       <OurWorkCommonContact
+       className={"bg-white"}
+      titleClass={"!text-black"}
+      textClass={'!text-black'}
+      primaryClass={"bg-Primary"}
+         secondaryClass={"!text-black"}
         title="You're allowed to need help, too."
         primaryBtnText="Find direct routes to support"
         primaryBtnLink="/get-help"

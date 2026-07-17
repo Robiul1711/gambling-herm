@@ -1,5 +1,6 @@
 import React from "react";
 import phone from "@/assets/images/phone.png";
+import brothersImg from "@/assets/images/policy.png";
 const changesList = [
   {
     number: 1,
@@ -156,28 +157,44 @@ const WhatWeWantChanged = () => {
 
                 {/* Light Blue Callout Nesting Specific to Item 2 */}
                 {item.number === 2 && (
-                  <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 !mt-6">
-                    <h5 className="text-[#17a9df] text-sm font-semibold tracking-normal mb-3">
-                      Why this position is foundational
-                    </h5>
-                    <p className="text-[#687076] text-sm leading-relaxed md:leading-7">
-                      Every other ask on this page (advertising restrictions,
-                      product-safety standards, affordability checks,
-                      algorithmic risk-flagging) depends on a mechanism that
-                      turns operator failure into legal consequence. Without a
-                      statutory duty of care, regulatory rules are merely codes
-                      the operator can negotiate compliance with. With one, they
-                      become standards an operator can be sued for failing. This
-                      is the change that makes the rest of the public-health
-                      response enforceable. Advocacy credit:{" "}
-                      <span className="italic">
-                        Martin Jones has been one of the most consistent UK
-                        voices arguing for statutory duty of care as the
-                        load-bearing regulatory reform;
-                      </span>{" "}
-                      GHUK supports this framing.
-                    </p>
-                  </div>
+                  <>
+                    <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 !mt-6">
+                      <h5 className="text-[#17a9df] text-sm font-semibold tracking-normal mb-3">
+                        Why this position is foundational
+                      </h5>
+                      <p className="text-[#687076] text-sm leading-relaxed md:leading-7">
+                        Every other ask on this page (advertising restrictions,
+                        product-safety standards, affordability checks,
+                        algorithmic risk-flagging) depends on a mechanism that
+                        turns operator failure into legal consequence. Without a
+                        statutory duty of care, regulatory rules are merely codes
+                        the operator can negotiate compliance with. With one, they
+                        become standards an operator can be sued for failing. This
+                        is the change that makes the rest of the public-health
+                        response enforceable. Advocacy credit:{" "}
+                        <span className="italic">
+                          Martin Jones has been one of the most consistent UK
+                          voices arguing for statutory duty of care as the
+                          load-bearing regulatory reform;
+                        </span>{" "}
+                        GHUK supports this framing.
+                      </p>
+                    </div>
+
+                    <div className="mt-8 flex flex-col items-center">
+                      <img
+                        src={brothersImg}
+                        alt="Still from GHUK's Brothers safeguarding film"
+                        className="w-full max-w-[650px]  object-cover shadow-sm h-[300px] sm:h-[400px]"
+                      />
+                      <p className="mt-3 text-xs md:text-sm text-center text-[#687076] italic max-w-[650px] leading-relaxed">
+                        Still from GHUK's Brothers Gambling Harm safeguarding
+                        film. An older brother carries what the product
+                        produced. A statutory duty of care is what turns that into
+                        legal consequence for the operator.
+                      </p>
+                    </div>
+                  </>
                 )}
       
               </div>

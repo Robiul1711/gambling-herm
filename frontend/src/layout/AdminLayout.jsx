@@ -43,6 +43,19 @@ const AdminLayout = () => {
     },
   ];
   const location = useLocation();
+
+  useEffect(() => {
+    const adminTitleMap = {
+      "/dashboard": "Admin Dashboard | Gambling Harm UK",
+      "/dashboard/settings": "Settings | Admin | Gambling Harm UK",
+      "/dashboard/analytics": "Analytics | Admin | Gambling Harm UK",
+      "/dashboard/admin-list": "Admin List | Admin | Gambling Harm UK",
+    };
+    const pathname = location.pathname;
+    let pageTitle = adminTitleMap[pathname] || "Admin | Gambling Harm UK";
+    document.title = pageTitle;
+  }, [location.pathname]);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,

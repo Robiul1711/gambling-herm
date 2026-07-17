@@ -49,7 +49,7 @@ const MedicalTraineesSection = () => {
             key={track.id}
             className="py-5 border-b border-dashed border-gray-200/80 last:border-none"
           >
-            <p className="text-[14px] md:text-[15px] text-gray-400 leading-relaxed font-normal">
+            <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed font-normal">
               <span className="font-bold text-gray-800">{track.role}:</span> {track.text}
             </p>
           </div>

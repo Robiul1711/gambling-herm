@@ -26,12 +26,12 @@ const YoungPersonSupport = () => {
           <div className="space-y-5 divide-y divide-gray-200/70">
             <div className="pt-0 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
               <strong className="text-[#1E1E1E] font-semibold">Childline, 0800 1111.</strong>{" "}
-              <span className="text-[#8E94A0]">Free, anonymous, any time of day or night.</span>
+              <span className="text-[#474c55]">Free, anonymous, any time of day or night.</span>
             </div>
 
             <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
               <strong className="text-[#1E1E1E] font-semibold">Big Deal (run by GamCare),</strong>{" "}
-              <span className="text-[#8E94A0]">specifically for young people affected by gambling.</span>{" "}
+              <span className="text-[#2a2e36]">specifically for young people affected by gambling.</span>{" "}
               <a href="https://bigdeal.org.uk" target="_blank" rel="noopener noreferrer" className="underline text-gray-800 hover:text-[#3A86B9] transition-colors underline-offset-2">
                 bigdeal.org.uk.
               </a>
@@ -39,10 +39,10 @@ const YoungPersonSupport = () => {
 
             <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
               <strong className="text-[#1E1E1E] font-semibold">YoungMinds,</strong>{" "}
-              <span className="text-[#8E94A0]">text YM to 85258 for free, 24/7 text-based support.</span>
+              <span className="text-[#35393f]">text YM to 85258 for free, 24/7 text-based support.</span>
             </div>
 
-            <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
+            <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#202225] leading-relaxed">
               If you're under 18 and finding it hard to stop spending in games (loot boxes, FIFA packs, in-game purchases), this counts. Tell an adult you trust.
             </div>
           </div>
@@ -55,16 +55,16 @@ const YoungPersonSupport = () => {
           </h3>
           
           <div className="space-y-5 divide-y divide-gray-200/70">
-            <div className="pt-0 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
+            <div className="pt-0 text-[14px] sm:text-[15px] md:text-base text-[#383c44] leading-relaxed">
               <strong className="text-[#1E1E1E] font-semibold">Childline, 0800 1111.</strong> They support children whose families are affected by gambling. You can stay anonymous.
             </div>
 
             <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
               <strong className="text-[#1E1E1E] font-semibold">NSPCC, 0808 800 5000.</strong>{" "}
-              <span className="text-[#8E94A0]">If you're worried about your safety or someone else's.</span>
+              <span className="text-[#202225]">If you're worried about your safety or someone else's.</span>
             </div>
 
-            <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#5E6573] leading-relaxed">
+            <div className="pt-5 text-[14px] sm:text-[15px] md:text-base text-[#202225] leading-relaxed">
               You don't have to fix it. None of this is your fault. Telling a trusted adult (a teacher, a school counsellor, a friend's parent) is the right next step.
             </div>
             
