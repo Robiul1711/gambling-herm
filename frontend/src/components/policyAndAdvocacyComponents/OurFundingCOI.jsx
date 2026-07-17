@@ -82,13 +82,18 @@ const OurFundingCOI = () => {
           {/* Footer Link */}
           <div className="pt-8">
             <p className="text-sm md:text-base text-gray-300">
-              Open financials. Our annual report and accounts are published in
-              full each year.{" "}
+              <strong className="text-white font-semibold">
+                Open financials.
+              </strong>{" "}
+              Our annual report and accounts are published in full each year on the Charity
+              Commission register (charity no. 1196538).{" "}
               <a
-                href="#annual-report"
+                href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5155823"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sky-400 hover:text-sky-300 underline underline-offset-4 transition-colors duration-200"
               >
-                [Annual report and accounts]
+                View on the Charity Commission register
               </a>
             </p>
           </div>

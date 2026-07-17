@@ -85,7 +85,7 @@ const GHSIFrameworkSection = () => {
 
         {/* Source */}
         <div className="mt-10">
-          <p className="text-xs md:text-sm italic text-[#7D8092] leading-relaxed">
+          <p className="text-xs md:text-sm italic text-[#0e0e0f] leading-relaxed">
             Source: The Gambling Harms Severity Index (GHSI): Development of a
             Holistic Framework and Measurement Instruments for Gambling Related
             Harms and Their Impact. National Centre for Social Research, 2025.

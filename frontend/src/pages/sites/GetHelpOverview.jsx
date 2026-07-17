@@ -77,6 +77,9 @@ const GetHelpOverview = () => {
         <RecoverySection />
       </div>
       <OurWorkCommonContact
+        className={"bg-[#4A6A6E]"}
+        textClass={"text-white"}
+        primaryClass={"!bg-white !text-[#4A6A6E] hover:bg-[#4A6A6E] hover:text-white"}
         title="If you take one thing from this page, take this."
         description="Whatever you're doing right now, first time looking, first conversation, first call, fifth relapse, fifth year of recovery, you deserve support. It exists, it works, and the next step does not have to be big to count."
         primaryBtnText="Find services in your region →"

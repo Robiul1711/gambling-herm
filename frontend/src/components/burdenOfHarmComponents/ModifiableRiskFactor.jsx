@@ -53,7 +53,7 @@ const ModifiableRiskFactor = () => {
             <h4 className="text-[#3FABD4] font-semibold tracking-wide text-sm md:text-base uppercase mb-3">
               {positionTagline}
             </h4>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light">
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed ">
               {positionText}
             </p>
           </div>

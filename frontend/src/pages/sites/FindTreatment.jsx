@@ -47,6 +47,11 @@ const FindTreatment = () => {
 
       {/* Footer CTA */}
       <OurWorkCommonContact
+      className={"bg-white"}
+      titleClass={"!text-black"}
+      textClass={'!text-black'}
+      primaryClass={"bg-Primary"}
+      secondaryClass={"!text-black"}
         title="Not sure where to start?"
         description="Call the National Gambling Helpline. They will help you find the right route for your situation, today."
         primaryBtnText="Get help overview"

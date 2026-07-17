@@ -332,7 +332,7 @@ export default function Navbar() {
                           : "text-gray-700 font-medium"
                       }`}
                     >
-                      Get help
+                      Get help now
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="md:right-0 md:left-auto md:w-auto">
                       <div className="grid grid-cols-2 gap-8 p-6 w-[520px]">
@@ -345,7 +345,7 @@ export default function Navbar() {
                               to="/get-help"
                               active={isLinkActive("/get-help")}
                             >
-                              Get help (overview)
+                             Gambling is harming me
                             </DropdownItem>
                             <DropdownItem
                               to="/get-help/check-in"

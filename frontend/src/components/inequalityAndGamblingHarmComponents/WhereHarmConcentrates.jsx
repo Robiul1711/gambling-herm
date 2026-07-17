@@ -28,7 +28,7 @@ const concentrationData = [
   },
   {
     label: "Veterans & criminal-justice",
-    description: "UK veterans and people in contact with the criminal-justice system carry markedly elevated rates. Specialist provision exists in pockets and is实现 unevenly distributed."
+    description: "UK veterans and people in contact with the criminal-justice system carry markedly elevated rates. Specialist provision exists in pockets and is unevenly distributed."
   },
   {
     label: "Affected others",
