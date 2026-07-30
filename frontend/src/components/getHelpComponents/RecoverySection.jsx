@@ -7,11 +7,13 @@ const legacyHarms = [
   },
   {
     boldText: "Mental health",
-    normalText: ", anxiety, depression, sleep disturbance and, often, PTSD-pattern symptoms after acute periods of harm.",
+    normalText:
+      ", anxiety, depression, sleep disturbance and, often, PTSD-pattern symptoms after acute periods of harm.",
   },
   {
     boldText: "Relationship damage",
-    normalText: ", the work of rebuilding trust with partners, children, parents and friends takes years and is rarely linear.",
+    normalText:
+      ", the work of rebuilding trust with partners, children, parents and friends takes years and is rarely linear.",
   },
   {
     boldText: "Loss of identity, purpose and time",
@@ -19,11 +21,13 @@ const legacyHarms = [
   },
   {
     boldText: "Vulnerability to relapse",
-    normalText: ", particularly around financial stress, bereavement, or significant life change.",
+    normalText:
+      ", particularly around financial stress, bereavement, or significant life change.",
   },
   {
     boldText: "Bereavement",
-    normalText: ", for the partners and children of those who did not survive their gambling.",
+    normalText:
+      ", for the partners and children of those who did not survive their gambling.",
   },
 ];
 
@@ -35,7 +39,7 @@ const RecoverySection = () => {
 
       {/* Heading */}
       <h2 className="text-[26px] xs:text-[30px] md:text-[48px] font-bold text-[#292929] leading-tight">
-        Recovery is real, and it usually doesn't end at"stopping"
+        Recovery is real, and it usually doesn't end at "stopping"
       </h2>
 
       {/* Intro */}
@@ -66,7 +70,9 @@ const RecoverySection = () => {
               className="py-5 border-b border-dashed border-[#D2D5DC]"
             >
               <p className="text-[#72768B] text-base md:text-lg leading-relaxed md:leading-8">
-                <strong className="font-bold text-[#292929]">{item.boldText}</strong>
+                <strong className="font-bold text-[#292929]">
+                  {item.boldText}
+                </strong>
                 {item.normalText}
               </p>
             </div>

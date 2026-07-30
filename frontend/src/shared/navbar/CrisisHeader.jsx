@@ -10,8 +10,19 @@ export default function CrisisHeader() {
   });
   const footerData = responseData?.data;
 
-  // Don't show anything during loading or if not set to show
-  if (isLoading || !footerData) return null;
+  // Show skeleton while loading
+  if (isLoading) {
+    return (
+      <div className="w-full py-2 bg-slate-200 animate-pulse">
+        <div className="flex items-center justify-center gap-3">
+          <div className="w-4 h-4 rounded-full bg-slate-300 shrink-0" />
+          <div className="h-3 w-64 bg-slate-300 rounded" />
+          <div className="h-3 w-24 bg-slate-300 rounded" />
+        </div>
+      </div>
+    );
+  }
+  if (!footerData) return null;
   if (footerData.crisisHeaderShow === false || footerData.crisisHeaderShow === "false") return null;
 
   const bgColor = footerData.crisisHeaderBgColor || "#C92525";
@@ -36,7 +47,7 @@ export default function CrisisHeader() {
               {footerData.crisisHeaderPhone}
             </a>
           )}
-          , Free, 24/7.
+         Free, 24/7.
         </span>
 
         {footerData.crisisHeaderBtnText && (

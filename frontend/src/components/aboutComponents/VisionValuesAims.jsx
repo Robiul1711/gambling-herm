@@ -89,70 +89,75 @@ export default function VisionValuesAims() {
           </div>
 
           {/* Subheading: What we work towards */}
-          <h3 className="text-xl md:text-2xl font-bold text-slate-800 tracking-tight mb-6">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight mb-6">
             What we work towards
           </h3>
 
           {/* List of Aims */}
-          <div className="border-t border-gray-200/60 divide-y divide-gray-200/60 mb-10">
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
-              <span className="font-bold text-slate-800">
-                Earlier recognition of harm 
-              </span>
-            
+          <div className="border-t border-b border-gray-200/60 divide-y divide-gray-200/60 mb-8 sm:mb-10">
+            <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">
+                People affected by gambling harm at the centre of change,
+              </span>{" "}
+              with lived experience shaping research, services, policy and
+              public understanding.
+            </div>
+            <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">
+                Affected others, including children, recognised and supported
+              </span>{" "}
+              as harmed in their own right.
+            </div>
+            <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">
+                Earlier recognition of harm
+              </span>{" "}
               across health, education and safeguarding systems.
             </div>
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
-              <span className="font-bold text-slate-800">
+            <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">
                 A confident, equipped workforce
-              </span>
-              {" "}
+              </span>{" "}
               able to ask about gambling, recognise risk, respond appropriately
               and signpost safely.
             </div>
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
-              <span className="font-bold text-slate-800">
+            <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">
                 Sustainable prevention infrastructure
-              </span>
-              {" "}
+              </span>{" "}
               embedded in routine policy, training and professional practice,
               not dependent on one-off projects.
             </div>
-            <div className="py-4 text-[14px] sm:text-base text-slate-700 leading-relaxed flex items-center gap-1">
-              <span className="font-bold text-slate-800">
+            <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">
                 Long-term reductions in gambling harm
-              </span>
-               {" "}
+              </span>{" "}
               and in the inequality it drives.
             </div>
           </div>
 
           {/* Bottom Paragraph with Principles */}
-          <p className="text-slate-600 text-[14px] sm:text-[15px]  leading-relaxed bg-white border border-gray-100 p-5 shadow-sm">
-            Three working principles guide how we deliver this: {" "}  
-            <span className="font-bold text-slate-800">
+          <p className="text-[15px] sm:text-base text-gray-700 leading-relaxed mt-6 sm:mt-8">
+            Three working principles guide how we deliver this:{" "}
+            <span className="font-bold text-gray-900">
               creating connectivity
-            </span>
-               {" "} 
-             (bringing health, education, safeguarding and community partners
-            together so gambling harm becomes core business, not a niche issue),
-            {" "}
-            <span className="font-bold text-slate-800">
+            </span>{" "}
+            (bringing health, education, safeguarding and community partners
+            together so gambling harm becomes core business, not a niche
+            issue),{" "}
+            <span className="font-bold text-gray-900">
               developing capability
-            </span>
-            {" "}
+            </span>{" "}
             (training and evidence translation for every professional group
             whose practice should include gambling), and{" "}
-            <span className="font-bold text-slate-800">
+            <span className="font-bold text-gray-900">
               maximising capacity
-            </span>
-            {" "}
-            (building tools and infrastructure that systems can sustain and
-            scale themselves). The three strands are set out in detail on our
-            {" "}
+            </span>{" "}
+            (building tools and infrastructure that systems can sustain and scale
+            themselves). The three strands are set out in detail on our{" "}
             <Link
               to="/professionals/public-health"
-              className="text-[#1B80C4] hover:underline font-semibold"
+              className="text-gray-900 underline hover:text-Primary font-medium"
             >
               public health page
             </Link>

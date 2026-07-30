@@ -13,7 +13,7 @@ import NoteOnLanguage from "@/components/understandingGamblingHarmsComponents/No
 import useClient from "@/hooks/useClient";
 
 const UnderstandingGamblingHarms = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "work-understanding-banner"],
     url: "/about/work-understanding-banner",
   });
@@ -22,13 +22,13 @@ const UnderstandingGamblingHarms = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Information"}
           title={bannerData?.title || "Gambling harm isn't a personal failing. It's industrial."}
           description={bannerData?.description || "Understanding how and why gambling causes harm is, for many people, the first thing that makes the rest start to make sense. This page sets out what the public-health evidence says, without the industry's preferred framing."}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
       </div>
       <div className="">
 

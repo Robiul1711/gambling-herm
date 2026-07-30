@@ -13,7 +13,7 @@ import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
 import useClient from "@/hooks/useClient";
 
 const MembersOnlyCampaign = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "work-members-only-banner"],
     url: "/about/work-members-only-banner",
   });
@@ -22,7 +22,7 @@ const MembersOnlyCampaign = () => {
 
   return (
     <div className="">
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={data?.subtitle || "Our work · Partner campaign we support"}
           title={data?.title || "Members Only."}
@@ -30,7 +30,7 @@ const MembersOnlyCampaign = () => {
           image={data?.image || bannerImg}
           buttonText={data?.audioTitle || "membersonlycampaign.org.uk →"}
           to={data?.audioSource || "membersonlycampaign.org.uk"}
-        />
+          isLoading={isLoading}/>
       </div>
       <div className="section-padding-x  space-y-10 md:space-y-14 lg:space-y-16">
         <CampaignSupport />

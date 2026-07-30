@@ -18,16 +18,17 @@ const AboutPage = () => {
 
   return (
     <div>
-      <div className="section-padding-x">
+      <div className="">
         {/* <AboutBanner /> */}
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Who we are"}
-          title={bannerData?.title || "An independent voice\non gambling harm."}
+          title={bannerData?.title || "An independent voice on gambling harm."}
           description={
             bannerData?.description ||
-            "We exist because gambling causes preventable, industrial-scale\nharm in the UK, and the people most affected deserve accurate\ninformation, real support, and a regulatory response that takes them\nseriously."
+            "We exist because gambling causes preventable, industrial-scale harm in the UK, and the people most affected deserve accurate information, real support, population-level action and a regulatory response that takes them seriously."
           }
           image={bannerData?.image || aboutBannerImg}
+          isLoading={isLoading}
         />
       </div>
       <OurMission />
@@ -36,7 +37,9 @@ const AboutPage = () => {
         <FundingConflictOfInterest />
       </div>
 
-      <TrusteesAndTeam />
+      <div id="team" className="scroll-mt-24">
+        <TrusteesAndTeam />
+      </div>
       <div id="contact" className="scroll-mt-24">
         <ContactAndPress />
       </div>

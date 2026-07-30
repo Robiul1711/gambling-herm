@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   Accessibility, 
@@ -13,11 +13,35 @@ import {
   Link2,
   Sparkles,
   ChevronRight,
-  Focus
+  Focus,
+  MousePointer
 } from "lucide-react";
 
 const AccessibilityWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const panelRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Close panel on click outside
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleClickOutside = (event) => {
+      if (
+        panelRef.current && 
+        !panelRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   // Accessibility settings state
   const [fontSize, setFontSize] = useState("normal"); // 'normal' | 'large' | 'xl'
@@ -28,6 +52,11 @@ const AccessibilityWidget = () => {
   const [readingRuler, setReadingRuler] = useState(false);
   const [readingMask, setReadingMask] = useState(false);
   const [textToSpeech, setTextToSpeech] = useState(false);
+  const [voiceType, setVoiceType] = useState("default"); // 'default' | 'female'
+  const [pauseAnimations, setPauseAnimations] = useState(false);
+  const [bigCursor, setBigCursor] = useState(false);
+  const [textSpacing, setTextSpacing] = useState(false);
+  const [muteAllSounds, setMuteAllSounds] = useState(false);
 
   // Cursor height tracking for ruler/mask
   const [mouseY, setMouseY] = useState(0);
@@ -46,6 +75,11 @@ const AccessibilityWidget = () => {
         if (parsed.readingRuler !== undefined) setReadingRuler(parsed.readingRuler);
         if (parsed.readingMask !== undefined) setReadingMask(parsed.readingMask);
         if (parsed.textToSpeech !== undefined) setTextToSpeech(parsed.textToSpeech);
+        if (parsed.voiceType) setVoiceType(parsed.voiceType);
+        if (parsed.pauseAnimations !== undefined) setPauseAnimations(parsed.pauseAnimations);
+        if (parsed.bigCursor !== undefined) setBigCursor(parsed.bigCursor);
+        if (parsed.textSpacing !== undefined) setTextSpacing(parsed.textSpacing);
+        if (parsed.muteAllSounds !== undefined) setMuteAllSounds(parsed.muteAllSounds);
       }
     } catch (e) {
       console.error("Error loading accessibility settings", e);
@@ -65,6 +99,11 @@ const AccessibilityWidget = () => {
         readingRuler,
         readingMask,
         textToSpeech,
+        voiceType,
+        pauseAnimations,
+        bigCursor,
+        textSpacing,
+        muteAllSounds,
         ...updated
       })
     );
@@ -76,15 +115,15 @@ const AccessibilityWidget = () => {
     const body = document.body;
 
     // 1. Color Themes
-    root.classList.remove("dark");
+    root.classList.remove("dark", "accessibility-grayscale", "accessibility-invert");
     body.classList.remove("accessibility-grayscale", "accessibility-invert", "accessibility-yellow-black");
 
     if (theme === "dark") {
       root.classList.add("dark");
     } else if (theme === "monochrome") {
-      body.classList.add("accessibility-grayscale");
+      root.classList.add("accessibility-grayscale");
     } else if (theme === "invert") {
-      body.classList.add("accessibility-invert");
+      root.classList.add("accessibility-invert");
     } else if (theme === "yellow-black") {
       body.classList.add("accessibility-yellow-black");
     }
@@ -117,7 +156,26 @@ const AccessibilityWidget = () => {
     } else {
       body.classList.remove("accessibility-highlight-focus");
     }
-  }, [theme, fontSize, fontFamily, highlightLinks, highlightFocus]);
+
+    // 5. Additional Visual Settings
+    if (pauseAnimations) {
+      body.classList.add("accessibility-reduced-motion");
+    } else {
+      body.classList.remove("accessibility-reduced-motion");
+    }
+
+    if (bigCursor) {
+      body.classList.add("accessibility-big-cursor");
+    } else {
+      body.classList.remove("accessibility-big-cursor");
+    }
+
+    if (textSpacing) {
+      body.classList.add("accessibility-text-spacing");
+    } else {
+      body.classList.remove("accessibility-text-spacing");
+    }
+  }, [theme, fontSize, fontFamily, highlightLinks, highlightFocus, pauseAnimations, bigCursor, textSpacing]);
 
   // Track cursor position for reading ruler and screen mask
   useEffect(() => {
@@ -132,6 +190,61 @@ const AccessibilityWidget = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [readingRuler, readingMask]);
+
+  // Mute All Sounds logic
+  useEffect(() => {
+    if (!muteAllSounds) {
+      // Unmute all media elements if they were muted by accessibility widget
+      document.querySelectorAll("video, audio").forEach((el) => {
+        if (el.dataset.accessibilityMutedByWidget) {
+          el.muted = false;
+          delete el.dataset.accessibilityMutedByWidget;
+        }
+      });
+      return;
+    }
+
+    const muteMedia = () => {
+      document.querySelectorAll("video, audio").forEach((el) => {
+        if (!el.muted) {
+          el.muted = true;
+          el.dataset.accessibilityMutedByWidget = "true";
+        }
+      });
+    };
+
+    // Run immediately
+    muteMedia();
+
+    // Set up observer to mute elements rendered dynamically
+    const observer = new MutationObserver(muteMedia);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      document.querySelectorAll("video, audio").forEach((el) => {
+        if (el.dataset.accessibilityMutedByWidget) {
+          el.muted = false;
+          delete el.dataset.accessibilityMutedByWidget;
+        }
+      });
+    };
+  }, [muteAllSounds]);
+
+  // Helper to find a female voice
+  const getSelectedVoice = () => {
+    if (!window.speechSynthesis) return null;
+    const voices = window.speechSynthesis.getVoices();
+    if (voiceType === "female") {
+      const femaleKeywords = ["female", "zira", "samantha", "hazel", "susan", "karen", "moira", "tessa", "veena", "heera", "google us english", "microsoft zira"];
+      const femaleVoice = voices.find((v) => {
+        const nameLower = v.name.toLowerCase();
+        return femaleKeywords.some((keyword) => nameLower.includes(keyword));
+      });
+      if (femaleVoice) return femaleVoice;
+    }
+    return null;
+  };
 
   // Text to Speech click-to-speak logic
   useEffect(() => {
@@ -153,6 +266,12 @@ const AccessibilityWidget = () => {
         window.speechSynthesis?.cancel();
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.rate = 1.0;
+
+        const selectedVoice = getSelectedVoice();
+        if (selectedVoice) {
+          utterance.voice = selectedVoice;
+        }
+
         window.speechSynthesis?.speak(utterance);
       }
     };
@@ -162,7 +281,7 @@ const AccessibilityWidget = () => {
       document.removeEventListener("click", handleTextClick, { capture: true });
       window.speechSynthesis?.cancel();
     };
-  }, [textToSpeech]);
+  }, [textToSpeech, voiceType]);
 
   // Reset all settings
   const handleReset = () => {
@@ -174,12 +293,17 @@ const AccessibilityWidget = () => {
     setReadingRuler(false);
     setReadingMask(false);
     setTextToSpeech(false);
+    setVoiceType("default");
+    setPauseAnimations(false);
+    setBigCursor(false);
+    setTextSpacing(false);
+    setMuteAllSounds(false);
 
     localStorage.removeItem("ghuk_accessibility_settings");
 
     const root = document.documentElement;
     const body = document.body;
-    root.classList.remove("dark", "accessibility-text-lg", "accessibility-text-xl");
+    root.classList.remove("dark", "accessibility-text-lg", "accessibility-text-xl", "accessibility-grayscale", "accessibility-invert");
     body.classList.remove(
       "accessibility-grayscale", 
       "accessibility-invert", 
@@ -187,7 +311,10 @@ const AccessibilityWidget = () => {
       "accessibility-font-readable",
       "accessibility-font-dyslexic",
       "accessibility-highlight-links",
-      "accessibility-highlight-focus"
+      "accessibility-highlight-focus",
+      "accessibility-reduced-motion",
+      "accessibility-big-cursor",
+      "accessibility-text-spacing"
     );
     window.speechSynthesis?.cancel();
   };
@@ -196,6 +323,7 @@ const AccessibilityWidget = () => {
     <>
       {/* Floating Action Button */}
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Open accessibility settings panel"
         aria-expanded={isOpen}
@@ -208,11 +336,12 @@ const AccessibilityWidget = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            ref={panelRef}
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed bottom-16 sm:bottom-20 left-4 sm:left-6 z-[999] w-[calc(100vw-32px)] sm:w-96 max-h-[80vh] overflow-y-auto accessibility-no-tts rounded-2xl border border-white/20 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-2xl p-6 text-slate-800 dark:text-slate-200"
+            className="fixed bottom-16 sm:bottom-20 left-4 sm:left-6 z-[999] w-[calc(100vw-32px)] sm:w-96 max-h-[80vh] overflow-y-auto accessibility-sidebar accessibility-no-tts rounded-2xl border border-white/20 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-2xl p-6 text-slate-800 dark:text-slate-200"
           >
             {/* Header */}
             <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
@@ -263,9 +392,35 @@ const AccessibilityWidget = () => {
                   <ChevronRight className="w-4 h-4 opacity-55" />
                 </button>
                 {textToSpeech && (
-                  <p className="text-[10px] text-emerald-600 dark:text-emerald-400 italic">
-                    ℹ️ Click on any text, heading, or link on the page to hear it read.
-                  </p>
+                  <>
+                    <div className="pt-2 space-y-1.5">
+                      <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Voice Type</span>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { id: "default", label: "Default Voice" },
+                          { id: "female", label: "Female Voice" }
+                        ].map((item) => (
+                          <button
+                            key={item.id}
+                            onClick={() => {
+                              setVoiceType(item.id);
+                              saveSettings({ voiceType: item.id });
+                            }}
+                            className={`py-1.5 px-3 rounded-lg border text-xs font-semibold transition-all ${
+                              voiceType === item.id
+                                ? "border-[#156E94] bg-[#156E94]/10 text-[#156E94] dark:text-[#0092D0]"
+                                : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-850"
+                            }`}
+                          >
+                            {item.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-emerald-600 dark:text-emerald-400 italic">
+                      ℹ️ Click on any text, heading, or link on the page to hear it read.
+                    </p>
+                  </>
                 )}
               </div>
 
@@ -424,6 +579,76 @@ const AccessibilityWidget = () => {
                     }`}
                   >
                     <Focus className="w-3 h-3" /> Focus Borders
+                  </button>
+                </div>
+              </div>
+
+              {/* Cursor & Spacing Adjusters */}
+              <div className="space-y-2">
+                <span className="text-sm font-semibold flex items-center gap-1.5">
+                  <MousePointer className="w-4 h-4 text-[#156E94] dark:text-[#0092D0]" /> Cursor & Spacing
+                </span>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => {
+                      setBigCursor(!bigCursor);
+                      saveSettings({ bigCursor: !bigCursor });
+                    }}
+                    className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1 transition-all ${
+                      bigCursor
+                        ? "border-[#156E94] bg-[#156E94]/10 text-[#156E94] dark:text-[#0092D0]"
+                        : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-850"
+                    }`}
+                  >
+                    Large Cursor
+                  </button>
+                  <button
+                    onClick={() => {
+                      setTextSpacing(!textSpacing);
+                      saveSettings({ textSpacing: !textSpacing });
+                    }}
+                    className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1 transition-all ${
+                      textSpacing
+                        ? "border-[#156E94] bg-[#156E94]/10 text-[#156E94] dark:text-[#0092D0]"
+                        : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-850"
+                    }`}
+                  >
+                    Text Spacing
+                  </button>
+                </div>
+              </div>
+
+              {/* Motion & Audio Adjusters */}
+              <div className="space-y-2">
+                <span className="text-sm font-semibold flex items-center gap-1.5">
+                  <VolumeX className="w-4 h-4 text-[#156E94] dark:text-[#0092D0]" /> Motion & Sound
+                </span>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => {
+                      setPauseAnimations(!pauseAnimations);
+                      saveSettings({ pauseAnimations: !pauseAnimations });
+                    }}
+                    className={`py-2 px-3 rounded-xl border text-xs font-semibold transition-all ${
+                      pauseAnimations
+                        ? "border-[#156E94] bg-[#156E94]/10 text-[#156E94] dark:text-[#0092D0]"
+                        : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-850"
+                    }`}
+                  >
+                    Pause Animations
+                  </button>
+                  <button
+                    onClick={() => {
+                      setMuteAllSounds(!muteAllSounds);
+                      saveSettings({ muteAllSounds: !muteAllSounds });
+                    }}
+                    className={`py-2 px-3 rounded-xl border text-xs font-semibold transition-all ${
+                      muteAllSounds
+                        ? "border-[#156E94] bg-[#156E94]/10 text-[#156E94] dark:text-[#0092D0]"
+                        : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-850"
+                    }`}
+                  >
+                    Mute All Sounds
                   </button>
                 </div>
               </div>

@@ -15,7 +15,7 @@ import {
 import useClient from '@/hooks/useClient';
 
 const FindTreatment = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "get-help-treatment"],
     url: "/about/get-help-treatment",
   });
@@ -25,13 +25,13 @@ const FindTreatment = () => {
   return (
     <>
       {/* Banner */}
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Find treatment"}
           title={bannerData?.title || "Treatment near you, and online."}
           description={bannerData?.description || "UK gambling-harm services have expanded substantially in recent years. They are still unevenly distributed by region. This page sets out what is available where, with national fallbacks for anywhere services are not yet local."}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
       </div>
 
       {/* Sticky tab navigation */}

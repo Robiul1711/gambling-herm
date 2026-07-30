@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import useClient from "@/hooks/useClient";
 
 const GetHelpOverview = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "get-help-overview"],
     url: "/about/get-help-overview",
   });
@@ -22,8 +22,8 @@ const GetHelpOverview = () => {
 
   return (
     <>
-      <div className="section-padding-x">
-        <section className="py-10 md:py-16 lg:py-20">
+      <div className="">
+        <section className="section-padding-x py-10 md:py-16 lg:py-20">
           <div className="max-w-5xl">
             {/* Top Label */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
@@ -50,7 +50,7 @@ const GetHelpOverview = () => {
               to="/get-help/check-in"
               className="inline-block mt-8 md:mt-10 bg-[#0D6E9F] hover:bg-[#095b82] text-white text-sm sm:text-base font-medium px-4 sm:px-8 py-3 transition-all duration-300"
             >
-              Open The Check-In
+              The Check-In
             </Link>
           </div>
         </section>
@@ -65,11 +65,15 @@ const GetHelpOverview = () => {
             "Whatever stage you're at (confused, scared, ready to change, recovering, or relapsing) there is a route to support that fits. You don't have to have hit'rock bottom' to deserve it. And you don't have to do this on willpower alone."
           }
           image={bannerData?.image || bannerImg}
+          isLoading={isLoading}
         />
+        <div className="section-padding-x">
+
         <TalkToSomeone />
         <FourWaysSection />
         <FourWaysGrid />
         <HarmfulGamblingSection />
+        </div>
       </div>
       <div>
         <ReachOutSection />
@@ -79,7 +83,9 @@ const GetHelpOverview = () => {
       <OurWorkCommonContact
         className={"bg-[#4A6A6E]"}
         textClass={"text-white"}
-        primaryClass={"!bg-white !text-[#4A6A6E] hover:bg-[#4A6A6E] hover:text-white"}
+        primaryClass={
+          "!bg-white !text-[#4A6A6E] hover:bg-[#4A6A6E] hover:text-white"
+        }
         title="If you take one thing from this page, take this."
         description="Whatever you're doing right now, first time looking, first conversation, first call, fifth relapse, fifth year of recovery, you deserve support. It exists, it works, and the next step does not have to be big to count."
         primaryBtnText="Find services in your region →"

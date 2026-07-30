@@ -9,7 +9,7 @@ export default function ThreeFoundations() {
       icon: <Layers className="w-5 h-5 text-Primary" />,
       title: "Harm is industrially produced.",
       description:
-        'Not"caused by a vulnerable few", produced, at scale, by products engineered to override the very cognitive capacities a person would need in order to make a"rational" decision about them.',
+        'Not "caused by a vulnerable few", produced, at scale, by products engineered to override the very cognitive capacities a person would need in order to make a "rational" decision about them.',
       linkText: "How The Products Work",
       to: "/understanding-gambling-harms",
     },
@@ -59,7 +59,7 @@ export default function ThreeFoundations() {
               HEAR IT IN PLAIN TERMS · PHOENIXFM, MAY 2026
             </span>
             <h4 className="text-[14px] sm:text-base font-bold text-gray-900 leading-snug mb-4">
-              John Gilham on the scale of UK gambling harm: 1.6 million adults in the more severe bands, within a far wider population in harm
+              John Gilham on the scale of UK gambling harm: 1.6 million adults in England who may benefit from treatment or support.
             </h4>
             <audio
               src={scaleOfHarm}

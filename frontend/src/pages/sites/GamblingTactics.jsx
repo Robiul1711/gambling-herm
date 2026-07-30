@@ -7,7 +7,7 @@ import OurWorkCommonContact from "@/components/common/OurWorkCommonContact";
 import useClient from "@/hooks/useClient";
 
 const GamblingTactics = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "work-tactics-banner"],
     url: "/about/work-tactics-banner",
   });
@@ -44,13 +44,13 @@ const GamblingTactics = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Our work · Gambling Tactics"}
           title={bannerData?.title || "Gambling Tactics."}
           description={renderDescription()}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
         <GamblingTacticsLayout />
       </div>
      <OurWorkCommonContact

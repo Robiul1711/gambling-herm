@@ -11,7 +11,7 @@ import PolicyPositionsInequality from "@/components/inequalityAndGamblingHarmCom
 import useClient from "@/hooks/useClient";
 
 const InequalityAndGamblingHarm = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "work-inequality-banner"],
     url: "/about/work-inequality-banner",
   });
@@ -20,13 +20,13 @@ const InequalityAndGamblingHarm = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Our work · Inequality"}
           title={bannerData?.title || "Gambling harm is not evenly distributed."}
           description={bannerData?.description || "Anyone can be harmed by gambling. But the harm tracks the same gradients that every other commercial-determinant harm does, deprivation, ethnicity, gender, neurodivergence, age, intersecting marginalisation. This page sets out how, and why."}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
       </div>
       <OurPositionCallout />
       <HeadlineRatio />

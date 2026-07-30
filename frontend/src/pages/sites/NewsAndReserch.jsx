@@ -8,7 +8,7 @@ import PhoenixFMAudio from "@/components/aboutComponents/PhoenixFMAudio";
 import useClient from "@/hooks/useClient";
 
 const NewsAndReserch = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["newsResearchSettings"],
     url: "/news-research/settings",
   });
@@ -17,7 +17,7 @@ const NewsAndReserch = () => {
 
   return (
     <div>
-      <div className="section-padding-x">
+      <div className="">
         {/* <AboutBanner /> */}
         <GamblingCommonBanner
           section="News, research & commentary"
@@ -28,7 +28,7 @@ const NewsAndReserch = () => {
           }
           image={settings?.image || aboutBannerImg}
           imageClassName="max-h-[320px] md:max-h-[380px] !object-fill"
-        />
+          isLoading={isLoading}/>
       </div>
       <SubmissionFeatured />
       <PhoenixFMAudio />
