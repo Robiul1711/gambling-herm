@@ -153,7 +153,7 @@ const BurdenOfHarm = () => {
                   <button
                     key={item.id}
                     onClick={() => handleScroll(item.ref, item.id)}
-                    className={`px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-medium border transition-all duration-200 cursor-pointer whitespace-nowrap snap-center shrink-0 ${
+                    className={`px-3 py-2 text-xs md:text-sm font-medium border transition-all duration-200 cursor-pointer whitespace-nowrap snap-center shrink-0 ${
                       isActive
                         ? "bg-[#1f2937] text-white border-[#1f2937] shadow-sm"
                         : "bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50"
@@ -213,6 +213,8 @@ const BurdenOfHarm = () => {
         </div>
       </div>
       <OurWorkCommonContact
+        primaryClass="bg-Primary"
+        secondaryClass="bg-white !text-black border border-Primary"
         title="From burden to policy."
         description="Our policy positions follow directly from the evidence above. They are the things we believe the UK needs to do. We publish our modelling, label our own combinations as our own, and invite scrutiny of both. That is what distinguishes evidence from messaging."
         primaryBtnText="Read our policy positions"

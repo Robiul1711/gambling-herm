@@ -31,7 +31,7 @@ const ModifiableRiskFactor = () => {
     "On GHUK's burden-of-disease modelling (APPG submission, February 2026), gambling ranks among the top five modifiable risks to UK population health, comparable in magnitude to alcohol misuse and major depressive disorder. No UK policy framework currently treats it that way.";
 
   return (
-    <section className="section-padding-x bg-white">
+    <section className="max-w-4xl mx-auto px-4 lg:px-0 bg-white">
       {/* Top Layout: Text Content + Infographic Card */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
         {/* Left Side: Copy and Position Card (Take up 7 cols on large screens) */}
@@ -72,13 +72,15 @@ const ModifiableRiskFactor = () => {
       </div>
 
       {/* Bottom Layout: Full-Width Styled Team Image */}
-      <div className="w-full overflow-hidden ] shadow-md border border-gray-100">
-        <img
-          src={bottomTeamPhoto}
-          alt="Public health representatives framework assembly team"
-          className="w-full h-auto object-cover max-h-[550px]"
-        />
-      </div>
+      {bottomTeamPhoto && (
+        <div className="w-full overflow-hidden shadow-md border border-gray-100">
+          <img
+            src={bottomTeamPhoto}
+            alt="Public health representatives framework assembly team"
+            className="w-full h-auto object-cover max-h-[550px]"
+          />
+        </div>
+      )}
     </section>
   );
 };
