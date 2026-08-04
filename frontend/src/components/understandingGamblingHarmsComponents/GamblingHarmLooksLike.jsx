@@ -1,37 +1,66 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useClient from "@/hooks/useClient";
 import meccVideo from "@/assets/videos/mecc.mp4";
 
 const harms = [
   {
-    title: "Financial",
+    title: "FINANCIAL",
     description:
       "Debt, used savings, lost homes, borrowing from family, payday loans, hidden credit, and (sometimes) crime committed in desperation. Financial harm typically arrives first and last longest.",
   },
   {
-    title: "Relational",
+    title: "RELATIONAL",
     description:
       "Lost trust, secrecy, family breakdown, separation, custody complications, isolation from friends. The damage to relationships is often what people grieve most in recovery.",
   },
   {
-    title: "Mental health",
+    title: "MENTAL HEALTH",
     description:
       "Anxiety, depression, sleeplessness, shame, loss of identity, loss of pleasure in other things. Gambling harm and mental-health conditions almost always sit alongside each other.",
   },
   {
-    title: "Physical",
+    title: "PHYSICAL",
     description:
       "Stress-related symptoms, weight change, sleep collapse, alcohol use, neglected basic care, exhaustion.",
   },
   {
-    title: "Work / study",
+    title: "WORK / STUDY",
     description:
       "Concentration loss, absenteeism, lost jobs, lost qualifications, lost professional reputation.",
   },
   {
-    title: "Suicide risk",
-    description:
-      "Gambling carries one of the highest suicide rates of any addiction. The risk peaks not at the height of gambling but in the days and weeks after a heavy loss, when shame and hopelessness compound.",
+    title: "SUICIDE RISK",
+    description: (
+      <>
+        Gambling disorder carries a severe, independent suicide risk; in the
+        best-powered registry cohort, suicide was the leading cause of death. Risk
+        appears to peak not at the height of gambling but in the days and weeks
+        after a heavy loss, when shame and hopelessness compound. If this is
+        you, please call{" "}
+        <Link
+          to="/urgent-help"
+          className="underline text-[#2d2d2d] hover:text-[#1d7092] transition-colors font-medium"
+        >
+          Samaritans 116 123
+        </Link>{" "}
+        now. See{" "}
+        <a
+          href="#affected"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("affected")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }}
+          className="underline text-[#2d2d2d] hover:text-[#1d7092] transition-colors font-medium"
+        >
+          our burden page
+        </a>{" "}
+        for the quantified picture.
+      </>
+    ),
   },
 ];
 
@@ -61,18 +90,18 @@ const GamblingHarmLooksLike = () => {
     "a lived-experience interview on how gambling exposure often starts in childhood.";
 
   return (
-    <section id="gambling-harm" className="pb-8 md:pb-16 section-padding-x">
-      <div className="">
+    <section id="gambling-harm" className="pb-8 md:pb-16 max-w-5xl mx-auto px-4">
+      <div>
         {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-8 md:mb-16 max-w-5xl mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-8 md:mb-16">
           <div className="flex-1 max-w-xl text-left">
-            <div className="w-12 h-[3px] bg-Primary2 mb-6"></div>
+            <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
-            <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-[#1d1d1d] mb-5">
+            <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-[#1d1d1d] mb-5 tracking-tight">
               {sectionTitle}
             </h2>
 
-            <p className="text-[#727272] leading-7 md:leading-8 text-sm md:text-base">
+            <p className="text-[#4b5563] leading-relaxed text-sm md:text-base">
               {sectionDesc}
             </p>
           </div>
@@ -91,8 +120,7 @@ const GamblingHarmLooksLike = () => {
               {/* Video Meta Title Banner */}
               <div className="bg-[#141414] p-3 text-[11px] md:text-xs text-gray-300 border-t border-gray-800 text-left">
                 <p className="leading-relaxed">
-                  <span className="font-bold text-white">{captionBold}</span> —
-                  {" "}
+                  <span className="font-bold text-white">{captionBold}</span> —{" "}
                   <span className="italic text-gray-400">{captionItalic}</span>
                 </p>
               </div>
@@ -100,37 +128,37 @@ const GamblingHarmLooksLike = () => {
           </div>
         </div>
 
-        {/* Table */}
-        <div className="border-t border-gray-200">
+        {/* Table Rows */}
+        <div className="border-t border-gray-200/80 divide-y divide-gray-200/80">
           {harms.map((item, index) => (
             <div
               key={index}
-              className="grid md:grid-cols-[220px_1fr] gap-8 py-4 md:py-8 border-b border-gray-200"
+              className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-5 md:py-6 items-start text-[15px] leading-relaxed"
             >
-              <h3 className="text-Primary2 text-sm font-medium">
+              <div className="md:col-span-3 text-[#1d7092] font-bold text-xs md:text-[13px] tracking-wider uppercase pt-0.5">
                 {item.title}
-              </h3>
+              </div>
 
-              <p className="text-[#444] leading-7 md:leading-8 text-sm md:text-[15px]">
+              <div className="md:col-span-9 text-[#374151] leading-relaxed">
                 {item.description}
-              </p>
+              </div>
             </div>
           ))}
         </div>
+
         {/* Bottom Alert Box */}
-        <div className="max-w-7xl mx-auto mt-10">
-          <div className="bg-[#f9e9ea] border-l-4 border-[#d91f26] px-5 md:px-8 py-6 md:py-8">
-            <h4 className="font-semibold text-[#222] mb-4 md:mb-5 text-base md:text-lg">
+        <div className="mt-10">
+          <div className="bg-[#edf7fd] border-l-[4px] border-[#1d7092] p-6 md:p-8 rounded-r-xl shadow-xs">
+            <h4 className="font-bold text-[#111827] mb-2 text-base md:text-[17px]">
               If reading this is upsetting
             </h4>
 
-            <p className="text-[#6b6b6b] leading-7 text-sm md:text-base">
+            <p className="text-[#374151] leading-relaxed text-sm md:text-[15px]">
               That's normal. Recognition is hard. If you'd like to talk to
               someone right now, the{" "}
-              <span className="font-semibold text-black">
+              <strong className="font-bold text-[#111827]">
                 National Gambling Helpline (0808 8020 133)
-              </span>
-              {" "}
+              </strong>{" "}
               is free, confidential and open 24/7.
             </p>
           </div>
