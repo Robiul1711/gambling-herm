@@ -77,6 +77,7 @@ export default function Navbar() {
     "/stigma-and-language",
     "/neurodivergence",
     "/inequality-and-gambling-harm",
+    "/children-and-safeguarding",
     "/road-safety-and-gambling",
     "/policy-and-advocacy",
     "/members-only-campaign",
@@ -88,7 +89,6 @@ export default function Navbar() {
     "/professionals",
     "/professionals/healthcare",
     "/professionals/public-health",
-    "/professionals/children-young-people",
     "/professionals/teachers-cyp",
     "/professionals/researchers",
     "/sign-in",
@@ -283,7 +283,7 @@ export default function Navbar() {
                             <DropdownItem to="/inequality-and-gambling-harm" active={isLinkActive("/inequality-and-gambling-harm")}>
                               Inequality &amp; gambling harm
                             </DropdownItem>
-                            <DropdownItem to="/professionals/children-young-people" active={isLinkActive("/professionals/children-young-people")}>
+                            <DropdownItem to="/children-and-safeguarding" active={isLinkActive("/children-and-safeguarding")}>
                               Children &amp; safeguarding
                             </DropdownItem>
                             <DropdownItem to="/road-safety-and-gambling" active={isLinkActive("/road-safety-and-gambling")}>
@@ -599,7 +599,7 @@ export default function Navbar() {
                       <div className="text-[11px] font-bold text-Primary tracking-wider uppercase px-4 mb-1">Groups &amp; Settings</div>
                       <div className="space-y-0.5">
                         <Link to="/inequality-and-gambling-harm" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/inequality-and-gambling-harm")}>Inequality &amp; gambling harm</Link>
-                        <Link to="/professionals/children-young-people" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/professionals/children-young-people")}>Children &amp; safeguarding</Link>
+                        <Link to="/children-and-safeguarding" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/children-and-safeguarding")}>Children &amp; safeguarding</Link>
                         <Link to="/road-safety-and-gambling" onClick={() => setMobileMenuOpen(false)} className={getMobileSubLinkClass("/road-safety-and-gambling")}>Road safety &amp; gambling</Link>
                       </div>
                     </div>

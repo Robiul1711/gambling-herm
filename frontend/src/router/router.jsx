@@ -66,6 +66,7 @@ const router = createBrowserRouter([
       { path: "/neurodivergence", element: <NeurodivergencePage /> },
       // Our Work — Groups & Settings
       { path: "/inequality-and-gambling-harm", element: <InequalityAndGamblingHarm /> },
+      { path: "/children-and-safeguarding", element: <ChildrenYoungPeople /> },
       { path: "/road-safety-and-gambling", element: <RoadSafetyGambling /> },
       // Our Work — Campaigns, Policy & News
       { path: "/policy-and-advocacy", element: <PolicyAndAdvocacy /> },
@@ -75,7 +76,6 @@ const router = createBrowserRouter([
       { path: "/professionals", element: <ProfessionalsHub /> },
       { path: "/professionals/healthcare", element: <HealthcareProfessionals /> },
       { path: "/professionals/public-health", element: <PublicHealthTeams /> },
-      { path: "/professionals/children-young-people", element: <ChildrenYoungPeople /> },
       { path: "/professionals/teachers-cyp", element: <TeachersCYPPage /> },
       { path: "/professionals/researchers", element: <ResearchersPage /> },
       // Get Help

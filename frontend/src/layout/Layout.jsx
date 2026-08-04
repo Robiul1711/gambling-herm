@@ -27,7 +27,7 @@ const Layout = () => {
       "/professionals": "Professionals Hub | Gambling Harm UK",
       "/professionals/healthcare": "Healthcare Professionals | Gambling Harm UK",
       "/professionals/public-health": "Public Health Teams | Gambling Harm UK",
-      "/professionals/children-young-people": "Children & Young People | Gambling Harm UK",
+      "/children-and-safeguarding": "Children & Safeguarding | Gambling Harm UK",
       "/get-help": "Get Help | Gambling Harm UK",
       "/get-help/check-in": "Check-In Tool | Gambling Harm UK",
       "/get-help/treatment": "Find Treatment | Gambling Harm UK",
