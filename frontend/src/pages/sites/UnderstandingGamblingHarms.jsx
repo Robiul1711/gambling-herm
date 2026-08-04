@@ -51,6 +51,7 @@ const UnderstandingGamblingHarms = () => {
 
       <OurWorkCommonContact
       secondaryClass={"!text-black"}
+        primaryClass={"bg-Primary"}
       className={"bg-white !text-black"}
         title="Information is a start. Support is the next step."
         primaryBtnText="Find Help"

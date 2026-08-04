@@ -32,7 +32,7 @@ const MembersOnlyCampaign = () => {
           to={data?.audioSource || "membersonlycampaign.org.uk"}
           isLoading={isLoading}/>
       </div>
-      <div className="section-padding-x  space-y-10 md:space-y-14 lg:space-y-16">
+      <div className="px-4 max-w-5xl mx-auto  space-y-10 md:space-y-14 lg:space-y-16">
         <CampaignSupport />
         <ProblemCampaignIsFixing />
         <CampaignProposals />

@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ChapterOne = () => {
   return (
     <div id="chapter-1" className="space-y-8 scroll-mt-28">
-      {/* Chapter Title & Main Summary */}
+      {/* Chapter Label & Main Heading */}
       <div className="space-y-2">
-        <span className="text-Primary font-medium text-sm md:text-base">
-          Chapter 1
+        <span className="text-xs font-bold text-[#0093D0] uppercase tracking-widest block">
+          CHAPTER 1
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">
           Gambling and health
         </h2>
-        <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-4xl">
+        <p className="text-gray-700 text-base md:text-lg leading-relaxed pt-2">
           The industry continues to deny the population-level significance of
           gambling harm. The independent evidence, where it exists, places
           gambling-related harm at a scale comparable to alcohol misuse and
@@ -20,263 +21,230 @@ const ChapterOne = () => {
         </p>
       </div>
 
-      {/* Sub-block: What Is Known */}
+      {/* Sub-block: What is known */}
       <div className="space-y-3">
-        <h3 className="text-lg font-bold text-slate-800">What Is Known</h3>
-        <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-          Australian and New Zealand research has established a taxonomy of harm
-          across eight domains: financial; relationship disruption, conflict or
-          breakdown; emotional or psychological distress; decrements to health;
-          cultural harm; reduced performance at work or study; criminal
-          activity; and life-course and intergenerational harm (Langham et al.,
-          2016). The same domains underpin GHSI 2025 (NatCen).
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+          What is known
+        </h3>
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+          Australian and New Zealand research has established a{" "}
+          <strong className="font-bold text-gray-900">
+            taxonomy of harm across seven domains, with legacy and intergenerational harm as a temporal dimension
+          </strong>
+          : financial; relationship disruption, conflict or breakdown; emotional or
+          psychological distress; decrements to health; cultural harm; reduced performance
+          at work or study; and criminal activity (Langham et al., 2016). The same domains
+          underpin GHSI 2025 (NatCen).
         </p>
       </div>
 
-      {/* Sub-block: Burden On Affected Others Grid cards */}
+      {/* Sub-block: Burden on affected others */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold text-slate-800">
-          Burden On Affected Others
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+          Burden on affected others
         </h3>
-        <p className="text-slate-500 text-sm">
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           Among family members of people with disordered gambling, the impact
           patterns are consistent across studies:
         </p>
 
-        {/* Responsive Stat Cards */}
+        {/* Responsive Stat Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-          <div className="border border-slate-200 bg-white p-5 shadow-sm space-y-2">
-            <span className="text-3xl font-bold text-slate-800 block">99%</span>
-            <p className="text-xs md:text-sm text-slate-500 leading-normal">
+          <div className="border border-gray-200 bg-white p-5 rounded-md space-y-2">
+            <span className="text-3xl font-bold text-gray-900 block">99%</span>
+            <p className="text-xs md:text-sm text-gray-600 leading-snug">
               report harm to their health from a loved one's gambling
             </p>
           </div>
-          <div className="border border-slate-200 bg-white p-5 shadow-sm space-y-2">
-            <span className="text-3xl font-bold text-slate-800 block">93%</span>
-            <p className="text-xs md:text-sm text-slate-500 leading-normal">
+          <div className="border border-gray-200 bg-white p-5 rounded-md space-y-2">
+            <span className="text-3xl font-bold text-gray-900 block">93%</span>
+            <p className="text-xs md:text-sm text-gray-600 leading-snug">
               report financial-security impact (64% significant)
             </p>
           </div>
-          <div className="border border-slate-200 bg-white p-5 shadow-sm space-y-2">
-            <span className="text-3xl font-bold text-slate-800 block">96%</span>
-            <p className="text-xs md:text-sm text-slate-500 leading-normal">
+          <div className="border border-gray-200 bg-white p-5 rounded-md space-y-2">
+            <span className="text-3xl font-bold text-gray-900 block">96%</span>
+            <p className="text-xs md:text-sm text-gray-600 leading-snug">
               report relationship harm
             </p>
           </div>
-          <div className="border border-slate-200 bg-white p-5 shadow-sm space-y-2">
-            <span className="text-3xl font-bold text-slate-800 block">8%</span>
-            <p className="text-xs md:text-sm text-slate-500 leading-normal">
+          <div className="border border-gray-200 bg-white p-5 rounded-md space-y-2">
+            <span className="text-3xl font-bold text-gray-900 block">8%</span>
+            <p className="text-xs md:text-sm text-gray-600 leading-snug">
               have attempted suicide as a consequence
             </p>
           </div>
         </div>
-        <p className="text-xs italic text-slate-400 mt-2">
-          Banks et al., 2018, Families Living with Problem Gambling.
+        <p className="text-xs italic text-gray-500 mt-2">
+          Banks et al., 2018, <em className="italic">Families Living with Problem Gambling</em>.
         </p>
       </div>
 
       {/* Sub-block: Disability weights */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold text-slate-800">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
           Disability weights (quality-of-life decrement)
         </h3>
-        <p className="text-slate-500 text-sm md:text-base leading-relaxed">
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           Where 0 = perfect health and 1 = death. Gambling disorder harm sits
           between heroin dependence and bipolar mania:
         </p>
-        <ul className="space-y-2 text-sm text-slate-600 pl-4 list-disc marker:text-slate-400">
+        <ul className="space-y-2 text-sm md:text-base text-gray-700 pl-5 list-disc marker:text-gray-400">
           <li>
             Schizophrenia, acute state:{" "}
-            <span className="font-semibold text-slate-800">0.76</span>
+            <strong className="font-bold text-gray-900">0.76</strong>
           </li>
           <li>
             Heroin and other opioid dependence:{" "}
-            <span className="font-semibold text-slate-800">0.64</span>
+            <strong className="font-bold text-gray-900">0.64</strong>
           </li>
           <li>
             Gambling disorder harm (PGSI 8+):{" "}
-            <span className="font-semibold text-slate-800">0.44 to 0.54</span>
-            {" "}
-            (AUS/NZ)
+            <strong className="font-bold text-gray-900">0.44 to 0.54</strong> (AUS/NZ)
           </li>
           <li>
             Manic episode of bipolar disorder:{" "}
-            <span className="font-semibold text-slate-800">0.48</span>
+            <strong className="font-bold text-gray-900">0.48</strong>
           </li>
           <li>
-            Moderate alcohol use disorder:{" "}
-            <span className="font-semibold text-slate-800">0.39</span>
+            Moderate alcohol dependence:{" "}
+            <strong className="font-bold text-gray-900">0.37</strong>
           </li>
           <li>
-            Moderate-risk gambling harm (PGSI 2–7):{" "}
-            <span className="font-semibold text-slate-800">0.29 to 0.37</span>
+            Moderate-risk gambling harm (PGSI 3-7):{" "}
+            <strong className="font-bold text-gray-900">0.29 to 0.37</strong>
           </li>
           <li>
             Affected others at gambling-disorder harms:{" "}
-            <span className="font-semibold text-slate-800">0.36</span>
+            <strong className="font-bold text-gray-900">0.36</strong>
           </li>
           <li>
             Affected others at moderate-risk harms:{" "}
-            <span className="font-semibold text-slate-800">0.33</span>
+            <strong className="font-bold text-gray-900">0.33</strong>
           </li>
           <li>
             Low-risk gambling harm:{" "}
-            <span className="font-semibold text-slate-800">0.13 to 0.18</span>
+            <strong className="font-bold text-gray-900">0.13 to 0.18</strong>
           </li>
         </ul>
-        <p className="text-xs text-slate-400 leading-relaxed mt-1">
-          Browne et al., 2016; Rawat et al., 2017, 2018.
+        <p className="text-xs text-gray-500 leading-relaxed mt-2">
+          Browne et al., 2016; Rawat et al., 2017, 2018. Individual-level severity comparison; not the basis of the QALY figure below.
         </p>
       </div>
 
       {/* Sub-block: Population burden */}
       <div className="space-y-3">
-        <h3 className="text-lg font-bold text-slate-800">
-          Population burden: years of life lost to disability (YLD)
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+          Population burden: quality-adjusted life years (QALYs)
         </h3>
-        <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-          In England 2013, the modelled combined burden (own gambling plus
-          affected-others) was 1.62 million YLD, larger than the burden from
-          dietary risks (1.47m) or tobacco smoke (1.46m), and several times
-          larger than the alcohol-use or drug-use burdens estimated in the same
-          period. This is a modelled extrapolation applying Australian
-          disability weights to English prevalence; the methodology is set out
-          in Browne et al. (2017) and in our research library.
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+          Applying the more conservative population-survey utility decrements (Moayeri, 2020) to GSGB 2024 prevalence, GHUK's current modelling puts the UK's annual non-fatal health loss from gambling at <strong className="font-bold text-gray-900">approximately 625,000 QALYs including affected others</strong>, valuing affected others at parity with the person gambling, the basis the direct measurements support (Browne et al., 2017). People who gamble account for about 297,000 QALYs alone, which by itself exceeds the years-lived-with-disability burdens from unhealthy diet and alcohol in the GBD 2023 UK data. Full method on{" "}
+          <Link
+            to="/burden-of-harm"
+            className="text-gray-900 font-medium underline hover:text-[#0093D0] transition-colors"
+          >
+            the burden of harm
+          </Link>
+          .
         </p>
       </div>
 
       {/* Sub-block: Mortality */}
       <div className="space-y-3">
-        <h3 className="text-lg font-bold text-slate-800">Mortality</h3>
-        <ul className="space-y-4 text-sm md:text-base text-slate-600 pl-4 list-disc marker:text-slate-300">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+          Mortality
+        </h3>
+        <ul className="space-y-3 text-sm md:text-base text-gray-700 pl-5 list-disc marker:text-gray-400">
           <li className="leading-relaxed">
             UK bank-data research linked high gambling levels to a{" "}
-            <span className="font-bold text-slate-800">
+            <strong className="font-bold text-gray-900">
               37% increase in all-cause mortality
-            </span>
-            {" "}
-            <span className="text-slate-400 text-xs md:text-sm">
-              (Muggleton et al., 2021, Nature Human Behaviour)
-            </span>
-            .
+            </strong>{" "}
+            (Muggleton et al., 2021, <em className="italic">Nature Human Behaviour</em>).
           </li>
           <li className="leading-relaxed">
-            People diagnosed with gambling disorder in Sweden aged 20–49 were
-            {" "}
-            <span className="font-bold text-slate-800">
-              19.3 times more likely to die by suicide
-            </span>
-            {" "}
-            <span className="text-slate-400">
-              than the general population of the same age
-            </span>
-            {" "}
-            <span className="text-slate-400 text-xs md:text-sm">
-              (Karlsson & Håkansson, 2018)
-            </span>
-            .
+            Registry studies put suicide mortality among people with gambling disorder at{" "}
+            <strong className="font-bold text-gray-900">
+              roughly 5 to 15 times the general population
+            </strong>
+            , led by the Norwegian cohort (SMR 5.12; Kristensen et al., 2025) and reaching{" "}
+            <strong className="font-bold text-gray-900">19.3 times</strong> among Swedish 20–49-year-olds (Karlsson &amp; Håkansson, 2018).
           </li>
           <li className="leading-relaxed">
-            In a UK study of 16–24 year-olds, men and women indicating
-            gambling-disorder harms were{" "}
-            <span className="font-bold text-slate-800">
+            In a UK study of 16-24 year-olds, men and women indicating gambling-disorder harms were{" "}
+            <strong className="font-bold text-gray-900">
               9.0 and 4.9 times more likely
-            </span>
-            {" "}
-            to attempt suicide after controlling for anxiety, impulsivity and
-            life satisfaction{" "}
-            <span className="text-slate-400 text-xs md:text-sm">
-              (Wardle & McManus, 2021, Lancet Public Health)
-            </span>
-            .
+            </strong>{" "}
+            to attempt suicide after controlling for sociodemographics, alcohol use, video gaming, anxiety, loneliness and impulsivity (Wardle &amp; McManus, 2021, <em className="italic">Lancet Public Health</em>).
           </li>
         </ul>
       </div>
 
-      {/* Quote Box 1: What the industry said */}
-      <div className="bg-[#2d3134] text-slate-300 border-l-4 border-Primary p-6 md:p-8 space-y-2 shadow-sm">
-        <h4 className="text-Primary font-semibold text-sm md:text-base tracking-wide uppercase">
-          What the industry said
+      {/* Dark Box 1: WHAT THE INDUSTRY SAID */}
+      <div className="bg-[#1c1d1f] text-white border-l-4 border-[#0093D0] p-6 md:p-8 rounded-r-sm space-y-3">
+        <h4 className="text-[#0093D0] font-bold text-xs tracking-wider uppercase">
+          WHAT THE INDUSTRY SAID
         </h4>
-        <blockquote className="text-base md:text-lg italic font-medium text-white leading-relaxed">
-          "The UK's addiction rate stands at 0.5% of the adult population, which
-          is low compared to the international standard."
+        <blockquote className="text-base md:text-lg italic font-medium text-gray-100 leading-relaxed">
+          "The UK's addiction rate stands at 0.5% of the adult population, which is low compared to the international standard."
         </blockquote>
-        <p className="text-xs md:text-sm text-slate-400 italic border-b border-slate-700 pb-4">
+        <p className="text-xs text-gray-400 italic border-b border-gray-700 pb-3 mb-3">
           Source: Michael Dugher, Betting and Gaming Council
         </p>
-        <p className="text-sm text-slate-300 leading-relaxed pt-2">
-          Dugher frames gambling harm by the most severe band (PGSI 8+) in a
-          single 12-month window. The framing omits affected others, people who
-          previously gambled, and people experiencing sub-clinical harm. The
-          0.5% figure is also a known under-estimate against the same period's
-          GSGB data.
+        <p className="text-sm md:text-base text-gray-200 leading-relaxed">
+          Dugher frames gambling harm by the most severe band (PGSI 8+) in a single 12-month window. The framing omits affected others, people who previously gambled, and people experiencing sub-clinical harm. The 0.5% figure is also a known under-estimate against the same period's GSGB data.
         </p>
       </div>
 
-      {/* Quote Box 2: What the Gambling Commission said */}
-      <div className="bg-[#2d3134] text-slate-300 border-l-4 border-Primary p-6 md:p-8 space-y-2 shadow-sm">
-        <h4 className="text-Primary font-semibold text-sm md:text-base tracking-wide uppercase">
-          What the Gambling Commission said
+      {/* Dark Box 2: WHAT THE GAMBLING COMMISSION SAID */}
+      <div className="bg-[#1c1d1f] text-white border-l-4 border-[#0093D0] p-6 md:p-8 rounded-r-sm space-y-3">
+        <h4 className="text-[#0093D0] font-bold text-xs tracking-wider uppercase">
+          WHAT THE GAMBLING COMMISSION SAID
         </h4>
-        <blockquote className="text-base md:text-lg italic font-medium text-white leading-relaxed">
-          "The numbers of those who experience harm as a result of gambling by
-          others will be considerably greater than the number of people who harm
-          themselves. These are not small numbers. They suggest a significant
-          public health issue which has received remarkably little attention
-          relative to other population-level concerns."
+        <blockquote className="text-base md:text-lg italic font-medium text-gray-100 leading-relaxed">
+          "The numbers of those who experience harm as a result of gambling by others will be considerably greater than the number of people who harm themselves. These are not small numbers. They suggest a significant public health issue which has received remarkably little attention relative to other population-level concerns."
         </blockquote>
-        <p className="text-xs md:text-sm text-slate-400 italic border-b border-slate-700 pb-4">
-          Source: Gambling Commission briefing for Local Authorities and local
-          Public Health providers, Feb 2018
+        <p className="text-xs text-gray-400 italic border-b border-gray-700 pb-3 mb-3">
+          Source: Gambling Commission briefing for Local Authorities and local Public Health providers, Feb 2018
         </p>
-        <p className="text-sm text-slate-300 leading-relaxed pt-2">
-          The Gambling Commission's own framing identifies gambling as a
-          significant public-health issue. This sits in direct contrast to its
-          placement under DCMS rather than DHSC. We support consolidation under
-          DHSC{" "}
-          <a
-            href="#"
-            className="text-Primary underline hover:text-white transition-colors"
+        <p className="text-sm md:text-base text-gray-200 leading-relaxed">
+          The Gambling Commission's own framing identifies gambling as a significant public-health issue. This sits in direct contrast to its placement under DCMS rather than DHSC. We support consolidation under DHSC (see our{" "}
+          <Link
+            to="/policy-and-advocacy"
+            className="text-[#0093D0] underline hover:text-white transition-colors"
           >
-            (see our policy positions).
-          </a>
+            policy positions
+          </Link>
+          ).
         </p>
       </div>
 
-      {/* Key References Component Card */}
-      <div className="border border-slate-200 bg-slate-50/50 p-6 md:p-8 space-y-2">
-        <h4 className="text-sm font-bold uppercase tracking-wider text-slate-700">
-          Key references
+      {/* Key References Card Box */}
+      <div className="border border-gray-200 bg-white rounded-md p-6 md:p-8 space-y-4">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700">
+          KEY REFERENCES
         </h4>
-        <ol className="list-decimal pl-4 space-y-3 text-xs md:text-sm text-slate-500 marker:text-slate-400 leading-relaxed">
+        <ol className="list-decimal pl-5 space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
           <li>
-            Abbott M. The epidemiology and impact of gambling disorder and other
-            gambling-related harm. WHO, 2017.
+            Abbott M. <em className="italic">The epidemiology and impact of gambling disorder and other gambling-related harm</em>. WHO, 2017.
           </li>
           <li>
-            Langham E et al. Understanding gambling related harm: a proposed
-            definition, conceptual framework, and taxonomy of harms. BMC Public
-            Health. 2016;16:80.
-          </li>
-          <li>Banks J et al. Families Living with Problem Gambling. 2018.</li>
-          <li>
-            Browne M et al. Assessing gambling-related harm in Victoria.
-            Victorian Responsible Gambling Foundation, 2016.
+            Langham E et al. Understanding gambling related harm: a proposed definition, conceptual framework, and taxonomy of harms. <em className="italic">BMC Public Health</em>. 2016;16:80.
           </li>
           <li>
-            Muggleton N et al. The association between gambling and financial,
-            social and health outcomes in big financial data. Nature Human
-            Behaviour. 2021;5:319–326.
+            Banks J et al. <em className="italic">Families Living with Problem Gambling</em>. 2018.
           </li>
           <li>
-            Wardle H & McManus S. Suicidality and gambling among young adults in
-            Great Britain. Lancet Public Health. 2021;6:e39–e49.
+            Browne M et al. <em className="italic">Assessing gambling-related harm in Victoria</em>. Victorian Responsible Gambling Foundation, 2016.
           </li>
           <li>
-            Karlsson A, Håkansson A. Gambling disorder, increased mortality,
-            suicidality, and associated comorbidity. Journal of Behavioral
-            Addictions. 2018;7(4):1091–1099.
+            Muggleton N et al. The association between gambling and financial, social and health outcomes in big financial data. <em className="italic">Nature Human Behaviour</em>. 2021;5:319–326.
+          </li>
+          <li>
+            Wardle H &amp; McManus S. Suicidality and gambling among young adults in Great Britain. <em className="italic">Lancet Public Health</em>. 2021;6:e39–e49.
+          </li>
+          <li>
+            Karlsson A, Håkansson A. Gambling disorder, increased mortality, suicidality, and associated comorbidity. <em className="italic">Journal of Behavioral Addictions</em>. 2018;7(4):1091–1099.
           </li>
         </ol>
       </div>

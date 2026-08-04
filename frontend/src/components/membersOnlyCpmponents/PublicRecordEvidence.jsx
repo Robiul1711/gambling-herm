@@ -29,7 +29,7 @@ const PublicRecordEvidence = () => {
       date: "2025",
       title: '"I Lost £100k Gambling"',
       description:
-        "A first-person account of how gambling addiction led to severe financial loss, the harm pattern the Members Only proposals would interrupt.",
+        "A first-person account of how gambling harm led to severe financial loss, the harm pattern the Members Only proposals would interrupt.",
     },
     {
       source: "Essay · Sam Badcock on Medium",

@@ -44,16 +44,17 @@ const GamblingTactics = () => {
 
   return (
     <>
-      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Our work · Gambling Tactics"}
           title={bannerData?.title || "Gambling Tactics."}
           description={renderDescription()}
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}/>
+      <div className="mx-auto max-w-6xl px-4">
         <GamblingTacticsLayout />
       </div>
      <OurWorkCommonContact
+     primaryClass={"bg-Primary"}
       title="What needs to change"
       description="Once you can see the tactics, the policy debate becomes very different. The structural response is a whole-system one: statutory levy proportionate to harm, statutory duty of care on operators, advertising restrictions modelled on tobacco, product safety standards set by public-health regulators, NHS-led specialist treatment, and DHSC consolidation of regulatory leadership."
       primaryBtnText="Read our policy positions"

@@ -65,7 +65,7 @@ const ModifiableRiskFactor = () => {
             <img
               src={rightInfographic}
               alt="Gambling harm is a top five modifiable health risk infographic"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain "
             />
           </div>
         </div>
@@ -77,7 +77,7 @@ const ModifiableRiskFactor = () => {
           <img
             src={bottomTeamPhoto}
             alt="Public health representatives framework assembly team"
-            className="w-full h-auto object-cover max-h-[550px]"
+            className="w-full h-auto object-cover max-h-[400px]"
           />
         </div>
       )}

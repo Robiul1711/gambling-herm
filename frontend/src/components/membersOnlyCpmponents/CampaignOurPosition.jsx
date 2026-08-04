@@ -2,23 +2,24 @@ import React from "react";
 
 const CampaignOurPosition = () => {
   return (
-    <div className="max-w-5xl mx-auto border-l-4 border-[#00B5FF] bg-[#292929] text-white p-6 md:p-8 shadow-md transition-all duration-300">
-      {/* Dynamic Theme Heading Pin */}
-      <h4 className="text-[#3FABD4] font-semibold tracking-wide text-sm md:text-base uppercase mb-3 select-none">
-        Our position
+    <div className="max-w-5xl mx-auto border-l-4 border-[#0092D0] bg-[#18181b] rounded-xl text-white p-6 sm:p-8 md:p-10 shadow-xl">
+      {/* Subtitle Tag */}
+      <h4 className="text-[#38bdf8] font-bold tracking-wider text-xs md:text-sm uppercase mb-4">
+        OUR POSITION
       </h4>
 
-      {/* Paragraph Core Context */}
-      <p className="text-gray-300 text-xs md:text-sm lg:text-base leading-relaxed ">
-        Members Only is the right campaign for the structural problem it is
-        targeting. Fixing land-based gambling self-exclusion is overdue. The"PIN
-        at the slot, national app, real enforcement" stack is technically
-        feasible and proportionate to the harm Adult Gaming Centres and
-        high-street slots are causing. GHUK supports the campaign and its
-        proposals.
+      {/* Main Statement Paragraph */}
+      <p className="text-white text-base md:text-lg">
+        Members Only targets exactly the structural failure that most needs
+        fixing: land-based self-exclusion enforcement, which has been broken
+        for years. The "PIN at the slot, national app, real enforcement" stack
+        is technically feasible and proportionate to the harm Adult Gaming
+        Centres and high-street slots are causing. GHUK supports the campaign
+        and its proposals.
       </p>
     </div>
   );
 };
 
 export default CampaignOurPosition;
+
