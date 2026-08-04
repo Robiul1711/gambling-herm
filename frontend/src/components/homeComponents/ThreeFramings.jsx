@@ -20,7 +20,7 @@ export default function ThreeFramings() {
       label: "Industry Framing",
       title: '"Regulation Will Just Push People To The Black Market."',
       description:
-        "The most heavily-deployed industry argument against every meaningful regulatory proposal in the last decade. Empirically, jurisdictions with stricter gambling rules see only marginal black-market substitution, and the comparison is between regulated harm and unregulated harm — not between regulation and no harm.",
+        "The most heavily-deployed industry argument against every meaningful regulatory proposal in the last decade. Empirically, jurisdictions with stricter gambling rules see only marginal black-market substitution, and the comparison is between regulated harm and unregulated harm not between regulation and no harm.",
       linkText: "See Our Full Response",
       href: "#full-response",
       hasLink: true,

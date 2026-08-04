@@ -1,80 +1,76 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HowThisSits = () => {
-  // Navigation matrix items to make future path updating modular and effortless
   const workLinks = [
     {
       category: "Gambling Tactics",
-      label:
-        "the industry-tactics analysis (product design, availability, clustering, narrative control) that explains why land-based self-exclusion has been allowed to fail.",
-      href: "#gambling-tactics-2",
+      label: (
+        <>
+          the industry-tactics analysis (product design, availability,
+          clustering, narrative control) that explains{" "}
+          <em className="italic">why</em> land-based self-exclusion has been
+          allowed to fail.
+        </>
+      ),
+      href: "/gambling-tactics",
     },
     {
       category: "Burden of harm",
       label:
-        "the population-level case for treating gambling harm as a top-five modifiable risk factor.",
-      href: "#burden-of-harm",
+        "the population-level case for treating gambling harm as a leading modifiable risk factor.",
+      href: "/burden-of-harm",
     },
     {
       category: "Policy positions",
       label:
         "our wider regulatory programme, statutory levy, DHSC consolidation, advertising restrictions, NHS-led treatment.",
-      href: "#policy-positions",
+      href: "/policy-and-advocacy",
     },
     {
       category: "Blocking & self-exclusion guide",
       label:
-        'the practical "what you can do today" routes including GAMSTOP, GamBan, bank blocks and the multi-operator land-based schemes.',
-      href: "#guide",
+        'the practical "what you can do today" routes including GAMSTOP, Gamban, bank blocks and the multi-operator land-based schemes.',
+      href: "/get-help/blocking-tools",
     },
   ];
 
   return (
-    <section className=" text-gray-800 max-w-5xl mx-auto py-12">
-      <div className="">
-        {/* Top Centered Section Header Block Decorative Anchor */}
-        <div className="flex flex-col items-center justify-center text-center mb-10">
-          <div className="w-12 h-[3px] bg-[#3FABD4] mb-4" />
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
-            How this sits with our other work
-          </h2>
-          <p className="text-gray-500 text-sm md:text-base mt-4 max-w-3xl  leading-relaxed">
-            Members Only is a focused, technically-specific campaign targeting
-            one particular structural failure. GHUK's wider work places it
-            within the broader picture.
-          </p>
-        </div>
+    <section className="bg-white text-gray-800 max-w-5xl mx-auto py-12">
+      {/* Header Block */}
+      <div className="flex flex-col items-start text-left mb-10">
+        <div className="w-12 h-[3px] bg-[#166B94] mb-4" />
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
+          How this sits with our other work
+        </h2>
+        <p className="text-gray-600 text-base md:text-lg mt-3 max-w-3xl leading-relaxed">
+          Members Only goes deep on one specific, fixable failure in land-based
+          gambling. The rest of our work connects to it at every level.
+        </p>
+      </div>
 
-        {/* Directory Row Stack Container */}
-        <div className="  divide-y divide-dashed divide-gray-200">
-          {workLinks.map((item, index) => (
-            <div key={index} className="py-6 flex flex-col space-y-2">
-              {/* Informational Text Description block */}
-              <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#707A8A] ">
-                <span className="font-semibold text-gray-900">
-                  {item.category}
-                </span>{" "}
-                &rarr; <span>{item.label}</span>
-              </p>
-
-              {/* Action Trigger Link Text */}
-              <div className="pt-1">
-                <a
-                  href={item.href}
-                  className="inline-flex items-center text-[#0076A8] hover:text-[#166B94] text-sm md:text-base font-medium transition-colors duration-150 group"
-                >
-                  Read
-                  <span className="ml-1 transform group-hover:translate-x-1 transition-transform duration-150">
-                    &rarr;
-                  </span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Directory List Container */}
+      <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
+        {workLinks.map((item, index) => (
+          <div
+            key={index}
+            className="py-6 text-base md:text-lg leading-relaxed text-gray-800"
+          >
+            <span className="font-bold text-gray-900">{item.category}</span>{" "}
+            <span className="text-gray-500 font-normal">&rarr;</span>{" "}
+            <span className="text-gray-700">{item.label}</span>{" "}
+            <Link
+              to={item.href}
+              className="text-[#166B94] hover:text-[#005580] font-medium underline inline-flex items-center gap-0.5 ml-1 transition-colors whitespace-nowrap"
+            >
+              Read &rarr;
+            </Link>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
 export default HowThisSits;
+

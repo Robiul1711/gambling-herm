@@ -7,14 +7,10 @@ const ContactAndPress = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         {/* Header Section */}
-        <div className="space-y-4 mb-16 max-w-2xl">
+        <div className="mb-16 max-w-2xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Contact & Press
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base font-normal leading-relaxed">
-            Three things, in this order. Each shaped by the public-health evidence on 
-            gambling harm, not by industry framings of it.
-          </p>
         </div>
 
         {/* 3-Column Info Grid */}

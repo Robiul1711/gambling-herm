@@ -11,7 +11,7 @@ import MedicalTraineesSection from '@/components/healthcareProfessionalsComponen
 import useClient from "@/hooks/useClient";
 
 const HealthcareProfessionals = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "healthcare-banner"],
     url: "/about/healthcare-banner",
   });
@@ -20,13 +20,13 @@ const HealthcareProfessionals = () => {
 
   return (
     <>
-    <div className="section-padding-x">
+    <div className="">
       <GamblingCommonBanner
         section={bannerData?.subtitle || "For stakeholders · Healthcare professionals & medical students"}
         title={bannerData?.title || "Gambling belongs in every clinical contact."}
         description={bannerData?.description || "Gambling is one of the largest modifiable risk factors for ill-health in the UK, ranked among the top five alongside alcohol misuse and major depressive disorder. Yet most NHS clinicians have never been trained to ask about it, and most NHS encounters do not. This page makes the case for Making Every Contact Count on gambling, and tells you what to do tomorrow morning."}
         image={bannerData?.image || bannerImg}
-      />
+        isLoading={isLoading}/>
       <PositionAndVideoSection/>
         <GamblingMeccSection/>
         <ScreeningGuideSection/>

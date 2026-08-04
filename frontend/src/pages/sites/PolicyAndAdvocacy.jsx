@@ -21,7 +21,7 @@ const SECTION_IDS = [
 ];
 
 const PolicyAndAdvocacy = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "work-policy-banner"],
     url: "/about/work-policy-banner",
   });
@@ -63,13 +63,13 @@ const PolicyAndAdvocacy = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Policy & Advocacy"}
           title={bannerData?.title || "What we want changed, and what we don't."}
           description={bannerData?.description || "Our positions follow directly from the burden of harm. They are the things we believe the UK needs to do, and the framings we believe should be retired from public conversation. We say them plainly."}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
       </div>
 
       {/* Tab scroll navigation */}

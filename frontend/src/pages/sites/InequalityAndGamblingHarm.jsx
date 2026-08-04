@@ -11,7 +11,7 @@ import PolicyPositionsInequality from "@/components/inequalityAndGamblingHarmCom
 import useClient from "@/hooks/useClient";
 
 const InequalityAndGamblingHarm = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "work-inequality-banner"],
     url: "/about/work-inequality-banner",
   });
@@ -20,13 +20,13 @@ const InequalityAndGamblingHarm = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Our work · Inequality"}
           title={bannerData?.title || "Gambling harm is not evenly distributed."}
           description={bannerData?.description || "Anyone can be harmed by gambling. But the harm tracks the same gradients that every other commercial-determinant harm does, deprivation, ethnicity, gender, neurodivergence, age, intersecting marginalisation. This page sets out how, and why."}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
       </div>
       <OurPositionCallout />
       <HeadlineRatio />
@@ -35,10 +35,11 @@ const InequalityAndGamblingHarm = () => {
       <WhatDrivesHarmAndBlocksSupport />
       <PolicyPositionsInequality />
       <OurWorkCommonContact
+        primaryClass={"bg-Primary"}
         title="Inequality is not a side-topic."
         description="If gambling-harm policy doesn't centre the inequality picture, it underserves the people who carry most of the harm. That makes inequality central to GHUK's work, not a separate strand of it."
         primaryBtnText="Our policy positions"
-        primaryBtnLink="/get-help"
+        primaryBtnLink="/policy-and-advocacy"
         secondaryBtnText="Stigma & language →"
         secondaryBtnLink="/stigma-and-language"
       />

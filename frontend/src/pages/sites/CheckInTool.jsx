@@ -9,7 +9,7 @@ import GHSIFrameworkSection from "@/components/checkInToolComponents/GHSIFramewo
 import useClient from "@/hooks/useClient";
 
 const CheckInTool = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "get-help-check-in"],
     url: "/about/get-help-check-in",
   });
@@ -18,12 +18,13 @@ const CheckInTool = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Check in"}
           title={bannerData?.title || "Welcome. Whichever door you came through."}
           description={bannerData?.description || "Most gambling-harm self-assessments online assume you've come to ask for help with your own gambling. We don't make that assumption. You might be checking in for yourself. You might be checking in because of someone else. You might not know yet. All three are valid, and all three start the same way: with a few private questions, in your browser only, and a result that fits whoever you actually are."}
           image={bannerData?.image || bannerImg}
+          isLoading={isLoading}
         />
         <CheckInInfoCard />
         <CheckInDoors />

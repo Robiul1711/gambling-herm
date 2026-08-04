@@ -15,7 +15,7 @@ import GamblingBereavementSection from "@/components/forFamilyFriendscomponents/
 import useClient from "@/hooks/useClient";
 
 const ForFamilyFriends = () => {
-  const { data: responseData } = useClient({
+  const { data: responseData, isLoading } = useClient({
     queryKey: ["about", "get-help-family-friends"],
     url: "/about/get-help-family-friends",
   });
@@ -24,13 +24,13 @@ const ForFamilyFriends = () => {
 
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section={bannerData?.subtitle || "For family & friends"}
           title={bannerData?.title || "The harm reaching you is real. You didn't choose it, and you don't have to carry it alone."}
           description={bannerData?.description || "If someone you love is being harmed by gambling, you are being harmed too. Partners, parents, children, siblings, close friends. The impact is real, large, and almost certainly worse than you've been told. There is support that belongs to you, by right."}
           image={bannerData?.image || bannerImg}
-        />
+          isLoading={isLoading}/>
       </div>
       <WhatHarmLooksLike />
       <VictimsNotBystanders />

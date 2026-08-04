@@ -41,7 +41,7 @@ const barriers = [
         Compounded for people facing other intersecting stigmas. See our{" "}
         <Link
           to="/stigma-and-language"
-          className="text-Primary underline hover:text-opacity-80 transition-all"
+          className="underline font-medium text-[#2d2d2d] hover:text-[#17a9df] transition-all"
         >
           stigma page
         </Link>
@@ -62,7 +62,7 @@ const barriers = [
         our{" "}
         <Link
           to="/get-help/treatment"
-          className="text-Primary underline hover:text-opacity-80 transition-all"
+          className="underline font-medium text-[#2d2d2d] hover:text-[#17a9df] transition-all"
         >
           find-treatment page
         </Link>
@@ -86,14 +86,14 @@ const WhatDrivesHarmAndBlocksSupport = () => {
 
         {/* --- Drivers Subsection --- */}
         <div className="mb-12">
-          <h3 className="text-xl font-bold text-[#2d2d2d] mb-4">Drivers</h3>
-          <div className="divide-y divide-dashed divide-gray-200 border-b border-dashed border-gray-200">
+          <h3 className="text-2xl font-bold text-[#2d2d2d] mb-4">Drivers</h3>
+          <div className="divide-y divide-dashed divide-gray-200/90 border-b border-dashed border-gray-200/90">
             {drivers.map((item, index) => (
-              <div key={index} className="py-5 text-[15px] leading-7 ">
-                <strong className="text-[#2d2d2d] font-semibold">
+              <div key={index} className="py-4 text-[15px] leading-relaxed">
+                <strong className="text-[#2d2d2d] font-bold">
                   {item.title}{" "}
                 </strong>
-                <span className="text-[#687076]">{item.description}</span>
+                <span className="text-[#4b5563]">{item.description}</span>
               </div>
             ))}
           </div>
@@ -101,14 +101,14 @@ const WhatDrivesHarmAndBlocksSupport = () => {
 
         {/* --- Barriers Subsection --- */}
         <div>
-          <h3 className="text-xl font-bold text-[#2d2d2d] mb-4">Barriers</h3>
-          <div className="divide-y divide-dashed divide-gray-200 border-b border-dashed border-gray-200">
+          <h3 className="text-2xl font-bold text-[#2d2d2d] mb-4">Barriers</h3>
+          <div className="divide-y divide-dashed divide-gray-200/90 border-b border-dashed border-gray-200/90">
             {barriers.map((item, index) => (
-              <div key={index} className="py-5 text-[15px] leading-7 ">
-                <strong className="text-[#2d2d2d] font-semibold">
+              <div key={index} className="py-4 text-[15px] leading-relaxed">
+                <strong className="text-[#2d2d2d] font-bold">
                   {item.title}{" "}
                 </strong>
-                <span className="text-[#687076]">{item.description}</span>
+                <span className="text-[#4b5563]">{item.description}</span>
               </div>
             ))}
           </div>

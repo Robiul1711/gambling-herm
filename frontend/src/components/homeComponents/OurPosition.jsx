@@ -7,7 +7,7 @@ export default function WhoGamblingHarms() {
       number: "~1 in 5",
       text: (
         <>
-         Gambling harm isn't confined to a small group of “addicts”; it runs across the population. Count harm at every level, to the people who gamble and the families around them, and it reaches at least 1 in 5 UK adults. Because official surveys record only those who recognise and report it within a single year, the true figure sits above this, not below. Financial, relationship, mental-health and wider harms.
+      Gambling harm isn't confined to a small group of “addicts”; it runs across the population. When harm at every level is counted, to the people who gamble and the families around them, at least 1 in 5 UK adults have experienced gambling harm. Official surveys count only those who recognise and report it, so the true figure sits above this, not below. The impacts include financial hardship, relationship breakdown, mental ill health, and wider social harms.
         </>
       ),
     },

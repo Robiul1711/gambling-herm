@@ -1,8 +1,8 @@
 import Footer from "@/shared/footer/Footer";
 import Navbar from "@/shared/navbar/Navbar";
 import ScrollToTop from "@/shared/ScrollToTop";
-// import SkipToContent from "@/components/common/SkipToContent";
-// import AccessibilityWidget from "@/components/common/AccessibilityWidget";
+import SkipToContent from "@/components/common/SkipToContent";
+import AccessibilityWidget from "@/components/common/AccessibilityWidget";
 import { Outlet, useLocation } from "react-router-dom";
 import { useUserProfile } from "@/hooks/fetchUserProfile";
 import { useEffect } from "react";
@@ -27,7 +27,7 @@ const Layout = () => {
       "/professionals": "Professionals Hub | Gambling Harm UK",
       "/professionals/healthcare": "Healthcare Professionals | Gambling Harm UK",
       "/professionals/public-health": "Public Health Teams | Gambling Harm UK",
-      "/professionals/children-young-people": "Children & Young People | Gambling Harm UK",
+      "/children-and-safeguarding": "Children & Safeguarding | Gambling Harm UK",
       "/get-help": "Get Help | Gambling Harm UK",
       "/get-help/check-in": "Check-In Tool | Gambling Harm UK",
       "/get-help/treatment": "Find Treatment | Gambling Harm UK",
@@ -67,20 +67,15 @@ const Layout = () => {
 
   return (
     <>
-      {/* <SkipToContent /> */}
+      <SkipToContent />
       <Navbar />
-      {/* Accessibility main landmark - uncomment to use:
+      {/* Accessibility main landmark - uncomment to use: */}
       <main id="main-content" className="w-full" style={{ overflowX: "clip" }} tabIndex="-1">
         <Outlet />
       </main>
-      */}
-      {/* Original layout wrapper: */}
-      <div className="w-full" style={{ overflowX: "clip" }}>
-        <Outlet />
-      </div>
       <Footer />
       <ScrollToTop />
-      {/* <AccessibilityWidget /> */}
+      <AccessibilityWidget />
     </>
   );
 };

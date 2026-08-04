@@ -75,6 +75,13 @@ export default function TrusteesAndTeam() {
     );
   }
 
+  const operationalMembers = teamMembers.filter(
+    (member) => member.type === "operational" || member.type === "team" || !member.type
+  );
+  const trusteeMembers = teamMembers.filter(
+    (member) => member.type === "trustee"
+  );
+
   return (
     <section className="bg-white py-16 md:py-24 border-b border-gray-100">
       <div className="section-padding-x">
@@ -86,19 +93,19 @@ export default function TrusteesAndTeam() {
               Our operational team
             </h2>
             <p className="text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed">
-              GHUK was founded in November 2020 by individuals with lived
+              GHUK was founded in 2020 by individuals with lived
               experience of gambling harm. The current team is below.
             </p>
           </div>
 
           {/* Team Grid */}
-          {teamMembers.length === 0 ? (
+          {operationalMembers.length === 0 ? (
             <div className="text-center py-12 text-slate-500 border border-dashed border-gray-200">
-              <p>No team members added yet.</p>
+              <p>No operational team members added yet.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member) => (
+              {operationalMembers.map((member) => (
                 <div
                   key={member._id || member.id}
                   className="border border-gray-200 p-5 flex flex-col justify-between bg-white hover:shadow-md transition-shadow duration-300"
@@ -150,7 +157,7 @@ export default function TrusteesAndTeam() {
           )}
         </div>
       </div>
-      <div className="pt-16 md:pt-24">
+      <div className="pt-16 md:pt-24 section-padding-x">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-left mb-12">
@@ -159,19 +166,18 @@ export default function TrusteesAndTeam() {
               Our trustees
             </h2>
             <p className="text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed">
-              GHUK was founded in November 2020 by individuals with lived
-              experience of gambling harm. The current team is below.
+              GHUK is governed by a board of dedicated trustees. The current trustees are below.
             </p>
           </div>
 
           {/* Team Grid */}
-          {teamMembers.length === 0 ? (
+          {trusteeMembers.length === 0 ? (
             <div className="text-center py-12 text-slate-500 border border-dashed border-gray-200">
-              <p>No team members added yet.</p>
+              <p>No trustees added yet.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member) => (
+              {trusteeMembers.map((member) => (
                 <div
                   key={member._id || member.id}
                   className="border border-gray-200 p-5 flex flex-col justify-between bg-white hover:shadow-md transition-shadow duration-300"

@@ -30,9 +30,7 @@ const ReachOutSection = () => {
         {/* Label */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-[2px] bg-[#00AEEF]" />
-          <span className="text-[#00AEEF] text-sm font-medium">
-            Routes
-          </span>
+          <span className="text-[#00AEEF] text-sm font-medium">Routes</span>
         </div>
 
         {/* Heading */}

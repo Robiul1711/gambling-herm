@@ -12,7 +12,7 @@ import LearnListenSupport from "@/components/thurrockcomponents/LearnListenSuppo
 const Thurrock = () => {
   return (
     <>
-      <div className="section-padding-x">
+      <div className="">
         <GamblingCommonBanner
           section="Local support · Thurrock"
           title="Get support for gambling harms in Thurrock."
