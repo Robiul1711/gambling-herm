@@ -1,13 +1,23 @@
 import React from "react";
+import MembersLibraryHero from "../../components/membersLibraryComponents/MembersLibraryHero";
+import MembersLibraryNotSignedIn from "../../components/membersLibraryComponents/MembersLibraryNotSignedIn";
+import MembersLibraryWhatItHolds from "../../components/membersLibraryComponents/MembersLibraryWhatItHolds";
+import MembersLibraryExampleCards from "../../components/membersLibraryComponents/MembersLibraryExampleCards";
 
 export default function MembersLibraryPage() {
   return (
-    <div className="section-padding-x py-20 min-h-[60vh]">
-      <div className="max-w-2xl">
-        <p className="text-xs font-bold text-Primary uppercase tracking-widest mb-4">Coming soon</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800">Members library</h1>
-        <p className="mt-6 text-base text-slate-500">This page is under construction.</p>
-      </div>
-    </div>
+    <main className="min-h-screen ">
+      {/* 1. Hero Section */}
+      <MembersLibraryHero />
+
+      {/* 2. You're not signed in Callout Card */}
+      <MembersLibraryNotSignedIn />
+
+      {/* 3. What the library holds List */}
+      <MembersLibraryWhatItHolds />
+
+      {/* 4. Example: what a signed-in member will see (Placeholder Cards) */}
+      <MembersLibraryExampleCards />
+    </main>
   );
 }

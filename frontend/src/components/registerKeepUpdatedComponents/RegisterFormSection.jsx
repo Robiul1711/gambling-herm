@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const RegisterFormSection = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const axiosPublic = useAxiosPublic();
+  const [serverSuccess, setServerSuccess] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm({
     defaultValues: {
@@ -21,18 +24,52 @@ const RegisterFormSection = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    console.log("Registration submitted:", data);
-    setSubmitted(true);
-    reset();
+  const onSubmit = async (data) => {
+    setServerError("");
+    setServerSuccess(false);
+    try {
+      const res = await axiosPublic.post("/registrations", data);
+      if (res.data?.success) {
+        setServerSuccess(true);
+        reset();
+      }
+    } catch (err) {
+      console.error("Registration submission error:", err);
+      setServerError(
+        err?.response?.data?.message ||
+          "Failed to submit your registration. Please try again."
+      );
+    }
   };
 
   return (
     <section className="py-12 md:py-20 bg-white px-4 md:px-8 text-gray-800">
       <div className="max-w-4xl mx-auto">
-        {submitted && (
-          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md text-sm">
-            Thank you for registering! We've saved your preferences and will keep you updated.
+        {/* Success Alert */}
+        {serverSuccess && (
+          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md text-sm flex items-center justify-between">
+            <span>
+              Thank you for registering! We've saved your preferences and will keep you updated.
+            </span>
+            <button
+              onClick={() => setServerSuccess(false)}
+              className="text-emerald-700 hover:text-emerald-900 font-bold ml-2 text-xs"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
+        {/* Error Alert */}
+        {serverError && (
+          <div className="mb-6 p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-md text-sm flex items-center justify-between">
+            <span>{serverError}</span>
+            <button
+              onClick={() => setServerError("")}
+              className="text-rose-700 hover:text-rose-900 font-bold ml-2 text-xs"
+            >
+              ✕
+            </button>
           </div>
         )}
 
@@ -103,19 +140,23 @@ const RegisterFormSection = () => {
               className="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-md bg-white text-gray-800 outline-none focus:border-[#0093D0] cursor-pointer"
             >
               <option value="Prefer not to say">Prefer not to say</option>
-              <option value="Person with lived experience">
-                Person with lived experience
+              <option value="I have been harmed by my own gambling">
+                I have been harmed by my own gambling
               </option>
-              <option value="Affected other / family member">
-                Affected other / family member
+              <option value="I have been harmed by someone else's gambling">
+                I have been harmed by someone else's gambling
               </option>
-              <option value="Healthcare professional / Clinician">
-                Healthcare professional / Clinician
+              <option value="Family member or friend">
+                Family member or friend
               </option>
-              <option value="Researcher / Academic">Researcher / Academic</option>
-              <option value="Policy maker / MP">Policy maker / MP</option>
-              <option value="Campaigner / Advocate">Campaigner / Advocate</option>
-              <option value="Other">Other</option>
+              <option value="Healthcare or public-health professional">
+                Healthcare or public-health professional
+              </option>
+              <option value="Researcher or academic">
+                Researcher or academic
+              </option>
+              <option value="Educator or teacher">Educator or teacher</option>
+              <option value="Supporter">Supporter</option>
             </select>
           </div>
 
@@ -161,7 +202,7 @@ const RegisterFormSection = () => {
                 I agree to GHUK contacting me by email. You can unsubscribe at any
                 time. See our{" "}
                 <Link
-                  to="/privacy-notice"
+                  to="/privacy"
                   className="text-[#0093D0] underline hover:text-[#0076A8] font-medium"
                 >
                   privacy notice
@@ -180,9 +221,36 @@ const RegisterFormSection = () => {
           <div>
             <button
               type="submit"
-              className="bg-[#0076A8] hover:bg-[#005f88] text-white px-6 py-2.5 rounded-md font-semibold text-sm transition-colors duration-150 cursor-pointer shadow-sm"
+              disabled={isSubmitting}
+              className="bg-[#0076A8] hover:bg-[#005f88] disabled:opacity-60 text-white px-6 py-2.5 rounded-md font-semibold text-sm transition-colors duration-150 cursor-pointer shadow-sm flex items-center gap-2"
             >
-              Register
+              {isSubmitting ? (
+                <>
+                  <svg
+                    className="animate-spin h-4 w-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v8H4z"
+                    ></path>
+                  </svg>
+                  <span>Registering...</span>
+                </>
+              ) : (
+                "Register"
+              )}
             </button>
           </div>
 

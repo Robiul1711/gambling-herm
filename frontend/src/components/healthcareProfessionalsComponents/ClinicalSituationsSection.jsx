@@ -43,7 +43,7 @@ const ClinicalSituationsSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto section-padding-y bg-white text-gray-800">
+    <div className="w-full max-w-6xl px-4 mx-auto section-padding-y bg-white text-gray-800">
       {/* Top Accent Blue Ribbon */}
       <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 

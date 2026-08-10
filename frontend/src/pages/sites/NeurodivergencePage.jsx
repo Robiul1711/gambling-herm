@@ -1,13 +1,35 @@
 import React from "react";
+import NeurodivergenceHero from "../../components/neurodivergenceComponents/NeurodivergenceHero";
+import NeurodivergenceFraming from "../../components/neurodivergenceComponents/NeurodivergenceFraming";
+import NeurodivergenceEvidence from "../../components/neurodivergenceComponents/NeurodivergenceEvidence";
+import NeurodivergenceHazardous from "../../components/neurodivergenceComponents/NeurodivergenceHazardous";
+import NeurodivergenceTreatmentService from "../../components/neurodivergenceComponents/NeurodivergenceTreatmentService";
+import NeurodivergencePosition from "../../components/neurodivergenceComponents/NeurodivergencePosition";
+import NeurodivergenceCta from "../../components/neurodivergenceComponents/NeurodivergenceCta";
 
 export default function NeurodivergencePage() {
   return (
-    <div className="section-padding-x py-20 min-h-[60vh]">
-      <div className="max-w-2xl">
-        <p className="text-xs font-bold text-Primary uppercase tracking-widest mb-4">Coming soon</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800">Neurodivergence</h1>
-        <p className="mt-6 text-base text-slate-500">This page is under construction.</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-white">
+      {/* 1. Hero Section */}
+      <NeurodivergenceHero />
+
+      {/* 2. Framing Callout Section */}
+      <NeurodivergenceFraming />
+
+      {/* 3. What the evidence supports */}
+      <NeurodivergenceEvidence />
+
+      {/* 4. Why gambling products are particularly hazardous here */}
+      <NeurodivergenceHazardous />
+
+      {/* 5. Recognition and treatment & What a well-adapted service would look like */}
+      <NeurodivergenceTreatmentService />
+
+      {/* 6. Our Position (Three asks) */}
+      <NeurodivergencePosition />
+
+      {/* 7. Bottom CTA Banner */}
+      <NeurodivergenceCta />
+    </main>
   );
 }

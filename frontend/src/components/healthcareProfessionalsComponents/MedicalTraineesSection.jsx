@@ -25,7 +25,7 @@ const MedicalTraineesSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto pb-4 md:pb-16 bg-white text-gray-800">
+    <div className="w-full max-w-6xl px-4 mx-auto pb-4 md:pb-16 bg-white text-gray-800">
       
       {/* Centered Accent Line */}
       <div className="flex justify-center mb-4">

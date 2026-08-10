@@ -21,7 +21,9 @@ const ChildrenYoungPeople = () => {
       <div>
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Our work · Children & safeguarding"}
-          title={bannerData?.title || "Children's safeguarding and gambling harm."}
+          title={
+            bannerData?.title || "Children's safeguarding and gambling harm."
+          }
           description={
             bannerData?.description ||
             "Children are often affected by other people's gambling. These harms are frequently hidden and are not limited to extreme or crisis situations. Gambling-related harm can build cumulatively over time, creating a lasting footprint that can affect children's emotional wellbeing, relationships, and life chances."
