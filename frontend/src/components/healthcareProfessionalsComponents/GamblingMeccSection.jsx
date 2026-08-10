@@ -41,7 +41,7 @@ const GamblingMeccSection = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-6xl px-4 mx-auto">
       {/* Top Heading Section */}
       <div className="mb-12">
         <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">

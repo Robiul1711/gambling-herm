@@ -3,7 +3,7 @@ import { Link } from'react-router-dom';
 
 const ReferralServicesSection = () => {
  return (
- <div className="w-full max-w-4xl mx-auto bg-white text-gray-800">
+ <div className="w-full max-w-6xl px-4 mx-auto bg-white text-gray-800">
  
  {/* Top Accent Line */}
  <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>

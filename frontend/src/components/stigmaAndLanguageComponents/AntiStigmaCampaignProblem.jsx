@@ -1,96 +1,96 @@
-import React from"react";
+import React from "react";
 
 const AntiStigmaCampaignProblem = () => {
- return (
- <section id="anti-stigma-problem" className="">
- <div className="max-w-5xl mx-auto px-4">
- {/* Top Accent Line */}
- <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
+  return (
+    <section id="anti-stigma-problem" className="py-10 md:py-16">
+      <div className="max-w-5xl mx-auto px-4">
+        {/* Top Accent Line */}
+        <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
- {/* Title */}
- <h2 className="text-3xl md:text-[40px] font-bold text-[#2d2d2d] leading-tight mb-6 tracking-tight">
- The"anti-stigma campaign" problem
- </h2>
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2d2d2d] leading-tight mb-4 tracking-tight">
+          The "anti-stigma campaign" problem
+        </h2>
 
- {/* Intro Text */}
- <p className="text-[#2d2d2d] text-[15px] md:text-base leading-7 md:leading-8 mb-10">
- Over the last decade, the largest UK-funded anti-stigma campaigns have
- been industry-aligned. The most recent example, GambleAware's Let's
- Open Up About Gambling, was a sophisticated, well-produced campaign
- whose framing was nevertheless built on assumptions we think are
- wrong.
- </p>
+        {/* Intro Text */}
+        <p className="text-[#4b5563] text-[15px] md:text-base leading-relaxed mb-8 max-w-4xl">
+          Over the last decade, the largest UK-funded anti-stigma campaigns have
+          been industry-aligned. The most recent major example was a
+          sophisticated, well-produced national campaign whose framing was
+          nevertheless built on assumptions we think are wrong.
+        </p>
 
- {/* Industry-Aligned Framing White Card */}
- <div className="border border-gray-200 p-6 md:p-8 bg-white mb-10 shadow-sm">
- <h4 className="text-[#17a9df] text-[13px] font-semibold tracking-wider mb-5">
- Industry-Aligned Anti-Stigma Framing
- </h4>
+        {/* Industry-Aligned Framing White Card */}
+        <div className="border border-gray-200/90  p-6 md:p-8 bg-white mb-8 shadow-xs">
+          <h4 className="text-[#1d7092] text-xs font-bold uppercase tracking-wider mb-4">
+            INDUSTRY-ALIGNED ANTI-STIGMA FRAMING
+          </h4>
 
- <p className="italic line-through text-xl text-gray-700 font-medium mb-6">
-"Talk about it. Open up. Seeking help is normal. Take action."
- </p>
+          <p className="italic line-through text-lg md:text-xl text-[#1d7092] font-semibold mb-6">
+            "Talk about it. Open up. Seeking help is normal. Take action."
+          </p>
 
- <div className="space-y-6 text-[#687076] text-[14px] md:text-[15px] leading-7">
- <p>
- None of those messages are wrong on their face. The problem is
- what they leave out.{" "}
- <strong className="text-[#2d2d2d] font-semibold">
-"Anti-Stigma" Framed Only As Encouragement To Talk Locates The
- Change At The Individual Level, The Harmed Person Should Feel
- Less Shame And Speak Up.
- </strong>{" "}
- It is silent on the system that produces the shame, sells the
- product, designs the marketing, and operates the regulatory
- environment that allows all three. The implicit message is:{" "}
- <span className="italic">
- stigma is in you; talking is the fix.
- </span>
- </p>
+          <div className="space-y-4 text-[#4b5563] text-[14.5px] md:text-base leading-relaxed">
+            <p>
+              None of those messages are wrong on their face. The problem is
+              what they leave out.{" "}
+              <strong className="text-[#111827] font-bold">
+                "Anti-stigma" framed only as encouragement to talk locates the
+                change at the individual level, the harmed person should feel
+                less shame and speak up.
+              </strong>{" "}
+              It is silent on the system that produces the shame, sells the
+              product, designs the marketing, and operates the regulatory
+              environment that allows all three. The implicit message is:{" "}
+              <span className="italic">
+                stigma is in you; talking is the fix.
+              </span>
+            </p>
 
- <p>
- Industry funding for anti-stigma campaigns is also strategically
- convenient. It locates harm-reduction effort downstream (at the
- help-seeking moment), keeps the spotlight off the product, and
- gives the industry a reputational dividend.
- </p>
- </div>
- </div>
+            <p>
+              Industry funding for anti-stigma campaigns is also strategically
+              convenient. It locates harm-reduction effort downstream (at the
+              help-seeking moment), keeps the spotlight off the product, and
+              gives the industry a reputational dividend.
+            </p>
+          </div>
+        </div>
 
- {/* Dark Position Callout Card */}
- <div className="bg-[#262222] overflow-hidden shadow-xl border-l-[6px] border-[#17a9df]">
- <div className="p-8 md:p-10">
- <h4 className="text-[#17a9df] text-xs font-semibold uppercase tracking-wider mb-5">
- OUR POSITION
- </h4>
+        {/* Dark Position Callout Card */}
+        <div className="bg-[#181818] border-l-[4px] border-[#17a9df]  p-6 md:p-8 text-white shadow-md">
+          <h4 className="text-[#17a9df] text-xs font-bold uppercase tracking-wider mb-4">
+            OUR POSITION
+          </h4>
 
- <div className="space-y-6 text-gray-300 text-[14px] md:text-[15px] leading-7">
- <p>
- GHUK supports stigma reduction, we believe the social cost of
- disclosure is the most under-addressed problem in UK
- gambling-harm policy. But we are explicit that"anti-stigma"
- cannot be the only or the primary intervention. Stigma reduction
- without product safety, marketing restriction and treatment
- provision is a half-measure that lets the industry off the hook
- for the conditions that produce the stigma in the first place.
- </p>
+          <div className="space-y-4 text-gray-200 text-[14.5px] md:text-base leading-relaxed">
+            <p>
+              GHUK supports stigma reduction, we believe the social cost of
+              disclosure is the most under-addressed problem in UK
+              gambling-harm policy.{" "}
+              <strong className="text-white font-bold">
+                But we are explicit that "anti-stigma" cannot be the only or the
+                primary intervention.
+              </strong>{" "}
+              Stigma reduction without product safety, marketing restriction and
+              treatment provision is a half-measure that lets the industry off
+              the hook for the conditions that produce the stigma in the first
+              place.
+            </p>
 
- <p>
- We also use language deliberately:{" "}
- <span className="italic">"people affected by gambling"</span>{" "}
- not <span className="italic">"problem gamblers"</span>. We say{" "}
- <span className="italic">"harm caused by gambling"</span>, not{" "}
- <span className="italic font-sans">"a gambling problem"</span>.
- We don't use{" "}
- <span className="italic">"responsible gambling"</span>. The
- framing change is part of the stigma work, not separate from it.
- </p>
- </div>
- </div>
- </div>
- </div>
- </section>
- );
+            <p>
+              We also use language deliberately:{" "}
+              <span className="italic">"people harmed by gambling"</span> not{" "}
+              <span className="italic">"problem gamblers"</span>. We say{" "}
+              <span className="italic">"harm caused by gambling"</span>, not{" "}
+              <span className="italic">"a gambling problem"</span>. We don't
+              use <span className="italic">"responsible gambling"</span>. The
+              framing change is part of the stigma work, not separate from it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AntiStigmaCampaignProblem;

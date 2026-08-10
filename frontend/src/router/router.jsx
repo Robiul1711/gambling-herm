@@ -95,6 +95,7 @@ const router = createBrowserRouter([
       { path: "/register-keep-updated", element: <RegisterKeepUpdated /> },
       // Members portal
       { path: "/sign-in", element: <SignInPage /> },
+      { path: "/login", element: <SignInPage /> },
       { path: "/register", element: <RegisterMembersPage /> },
       { path: "/members-library", element: <MembersLibraryPage /> },
       // Legal

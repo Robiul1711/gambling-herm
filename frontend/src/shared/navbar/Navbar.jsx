@@ -17,8 +17,6 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = React.useState(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
-  const [isNavVisible, setIsNavVisible] = React.useState(true);
-  const lastScrollY = React.useRef(0);
 
   // Fetch brand logo dynamically from footer settings
   const { data: responseData } = useClient({
@@ -31,20 +29,7 @@ export default function Navbar() {
   React.useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 40);
-
-      if (currentScrollY <= 80) {
-        // Always show near the top of the page
-        setIsNavVisible(true);
-      } else if (currentScrollY > lastScrollY.current) {
-        // Scrolling down - hide navbar smoothly
-        setIsNavVisible(false);
-      } else {
-        // Scrolling up - show navbar
-        setIsNavVisible(true);
-      }
-
-      lastScrollY.current = currentScrollY;
+      setIsScrolled(currentScrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -138,21 +123,17 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 1. Full-width Crisis Banner (Outside sticky wrapper to prevent scroll jitter/blinking) */}
-      <CrisisHeader />
-
-      {/* WRAPPER: Handles top pinning, sticky scroll transparency, and hide/show on scroll direction */}
+      {/* STICKY HEADER WRAPPER: Always pinned to top of screen on scroll */}
       <div
-        className={`w-full flex flex-col sticky top-0 z-50 transition-all duration-300 ease-in-out ${
+        className={`w-full flex flex-col sticky top-0 z-50 transition-all duration-200 ease-in-out ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-100"
+            ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100"
             : "bg-white border-b border-transparent"
-        } ${
-          isNavVisible
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
+        {/* 1. Full-width Crisis Banner */}
+        <CrisisHeader />
+
         {/* 2. Main Navigation Bar */}
         <header className="w-full">
           <div className="section-padding-x pt-2 flex items-center justify-between">

@@ -15,16 +15,18 @@ const ProfessionalsHub = () => {
 
   return (
     <>
-    <div className="">
       <GamblingCommonBanner
         section={sectionData?.subtitle || "For stakeholder"}
         title={sectionData?.title || "We work with everyone the public-health response touches."}
         description={sectionData?.description || "On our burden-of-disease modelling, gambling ranks among the top five modifiable risks to UK population health, and around half of the harm is expected to fall on people who never placed a bet. Gambling harm is structural. So is the response we believe it needs. These pages set out what we offer (and what we ask for) from each of the professional audiences who shape the next decade of UK gambling-harm policy and practice. What we bring is the same in every room: independent evidence, published modelling, lived-experience leadership, and no gambling-industry money."}
         image={sectionData?.image || bannerImg}
         isLoading={isLoading}/>
+    <div className="">
       <AudienceCards/>
     </div>
            <OurWorkCommonContact
+           primaryClass="bg-Primary text-white"
+           secondaryClass="border border-white text-white"
         title="Don't see your role here?"
         description="If you work in a sector touched by gambling harm and we haven't built a dedicated page yet, please get in touch, this list grows."
         primaryBtnText="Contact us"
