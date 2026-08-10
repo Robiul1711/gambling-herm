@@ -1,13 +1,23 @@
 import React from "react";
+import ResearchersHero from "@/components/researchersComponents/ResearchersHero";
+import WhatWeBringSection from "@/components/researchersComponents/WhatWeBringSection";
+import QuestionsWantedSection from "@/components/researchersComponents/QuestionsWantedSection";
+import JoinResearchNetworkSection from "@/components/researchersComponents/JoinResearchNetworkSection";
 
 export default function ResearchersPage() {
   return (
-    <div className="section-padding-x py-20 min-h-[60vh]">
-      <div className="max-w-2xl">
-        <p className="text-xs font-bold text-Primary uppercase tracking-widest mb-4">Coming soon</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800">Researchers</h1>
-        <p className="mt-6 text-base text-slate-500">This page is under construction.</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-white">
+      {/* 1. Hero Section */}
+      <ResearchersHero />
+
+      {/* 2. What we bring to a collaboration */}
+      <WhatWeBringSection />
+
+      {/* 3. The questions we most want answered */}
+      <QuestionsWantedSection />
+
+      {/* 4. Join the research network */}
+      <JoinResearchNetworkSection />
+    </main>
   );
 }
