@@ -30,7 +30,7 @@ const QuestionsWantedSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white section-padding-x">
+    <section className="section-padding-x">
       <div className="max-w-4xl mx-auto">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
