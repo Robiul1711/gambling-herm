@@ -21,7 +21,7 @@ const UNCAPTURED_FACTORS = [
 const SpendUncapturedFactors = () => {
   return (
     <section className="w-full py-8 md:py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Bar */}
         <div className="w-10 h-[3px] bg-[#0092D0] mb-4" />
 

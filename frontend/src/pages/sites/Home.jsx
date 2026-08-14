@@ -6,12 +6,9 @@ import ScaleOfHarm from "@/components/homeComponents/ScaleOfHarm";
 import SupportOptions from "@/components/homeComponents/SupportOptions";
 import ThreeFoundations from "@/components/homeComponents/ThreeFoundations";
 import ThreeFramings from "@/components/homeComponents/ThreeFramings";
-import GhukBurdenCalculator from "../burdebMappingSItes/GhukBurdenCalculator";
-
 const Home = () => {
   return (
     <div>
-      {/* <GhukBurdenCalculator/> */}
       <Banner />
       <OurPosition />
       <SupportOptions />

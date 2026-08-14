@@ -103,7 +103,7 @@ const PopulationBurden = () => {
           </div>
 
           {/* Footnote 1 */}
-          <p className="text-[11px] md:text-xs text-gray-400 leading-relaxed mt-6 mb-10">
+          <p className="text-[11px] md:text-xs text-gray-300 leading-relaxed mt-6 mb-10">
             Annual non-fatal health loss, UK. Gambling figure is GHUK modelling (Moayeri 2020 utilities applied to GSGB 2024 prevalence, de-duplicated), expressed in QALYs, valuing the burden on affected others at parity with the person gambling: the direct disability-weight measurements put per-person affected-other burden at or above parity at moderate levels of harm (Browne et al., 2017). Comparators are Years Lived with Disability from the Global Burden of Disease 2023 (IHME, GBD Compare, United Kingdom, all ages, both sexes, accessed 15 July 2026). Two caveats. First, counting affected others is consistent with the tobacco comparator, whose burden already includes harm to non-smokers through second-hand smoke; the alcohol and diet estimates do not capture harm to others, so the strict like-for-like comparator against those two is the people-who-gamble component alone (about 297,000 QALYs), which still exceeds both. Second, no comparable estimate of gambling's fatal burden exists, because gambling-attributable deaths are not yet routinely coded in the UK. Where gambling would sit on a total-burden ranking including mortality is unknown, rather than low.
           </p>
         </div>
@@ -174,7 +174,7 @@ const PopulationBurden = () => {
           </div>
 
           {/* Footnote 2 */}
-          <p className="text-[11px] md:text-xs text-gray-400 leading-relaxed mt-6 mb-10">
+          <p className="text-[11px] md:text-xs text-gray-300 leading-relaxed mt-6 mb-10">
             Bars are drawn to scale against the upper sensitivity. At this scale the levy is 0.1% of the largest bar and is too small to render as a visible block, which is itself the point. Central estimate: approximately 625,000 QALYs lost annually, valuing affected others at parity with the person gambling, which is what the direct disability-weight measurements support (Browne et al., 2017). People who gamble account for about 297,000 QALYs of that total (£7.4–10.4bn). Conservative floor applies the most recent health-survey prevalence (Adult Psychiatric Morbidity Survey 2023/4: PGSI 1-2 2.8%, 3-7 1.2%, 8+ 0.4%, England), which the survey itself describes as conservative. Upper sensitivity applies the Tulloch et al. (2026) hybrid disability weights, roughly 2.81 million QALYs. Valuing the central estimate at the £70,000 societal willingness-to-pay threshold instead gives about £44 billion. Sources: Moayeri (2020); GSGB 2024; Browne et al. (2017); Tulloch et al. (2026); NICE thresholds from April 2026. Full method in the GHUK Health Needs Assessment (2026), Appendix D.
           </p>
         </div>

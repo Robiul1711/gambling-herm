@@ -33,7 +33,7 @@ const legacyHarms = [
 
 const RecoverySection = () => {
   return (
-    <div className="max-w-6xl mx-auto section-padding-y px-4">
+    <div className="max-w-5xl mx-auto px-4 section-padding-y ">
       {/* Top line */}
       <div className="w-8 h-[2px] bg-[#0196D6] mb-4" />
 

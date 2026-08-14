@@ -42,7 +42,7 @@ const SpendCalculatorMain = ({
 
   return (
     <section className="w-full py-8 md:py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111827] mb-3 tracking-tight">
           Work out your figure

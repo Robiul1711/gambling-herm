@@ -10,7 +10,7 @@ const questions = [
 
 const HarmfulGamblingSection = () => {
   return (
-    <div className="max-w-4xl mx-auto section-padding-y">
+    <div className="max-w-5xl mx-auto px-4 section-padding-y">
       {/* Heading */}
       <h2 className="text-[28px] xs:text-[34px] sm:text-[44px] md:text-[48px] font-bold text-[#252525] leading-tight">
         Not sure if your gambling is harmful?

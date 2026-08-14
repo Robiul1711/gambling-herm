@@ -26,7 +26,7 @@ const hazardousItems = [
 
 const NeurodivergenceHazardous = () => {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+    <section className=" px-4 md:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>

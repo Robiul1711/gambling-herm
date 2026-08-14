@@ -67,7 +67,7 @@ const PublicHealthOffersSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto section-padding-y bg-white text-gray-800">
+    <div className="w-full max-w-5xl  mx-auto pb-8 md:pb-16 bg-white text-gray-800">
       {/* Top Accent Blue Ribbon */}
       <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 

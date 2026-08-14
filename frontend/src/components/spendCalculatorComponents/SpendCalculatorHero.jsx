@@ -3,7 +3,7 @@ import React from "react";
 const SpendCalculatorHero = () => {
   return (
     <section className="w-full bg-gradient-to-b from-[#eaf6fb] via-[#f3f9fb] to-white py-12 sm:py-16 md:py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Tag */}
         <div className="flex items-center gap-2 mb-4">
           <span className="w-5 h-[2px] bg-[#0092D0] block"></span>

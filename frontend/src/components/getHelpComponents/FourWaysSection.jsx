@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FourWaysSection = () => {
   return (
-    <div className="section-padding-y">
+    <div className="section-padding-y max-w-5xl mx-auto px-4">
       {/* Top Label */}
       <div className="flex items-center gap-3 mb-4">
         <div className="w-6 h-[2px] bg-[#0B89C8]"></div>

@@ -26,7 +26,7 @@ const items = [
 const ReachOutSection = () => {
   return (
     <section className="bg-[#262323] py-10 md:py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Label */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-[2px] bg-[#00AEEF]" />

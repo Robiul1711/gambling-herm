@@ -125,7 +125,7 @@ export default function Navbar() {
     <>
       {/* STICKY HEADER WRAPPER: Always pinned to top of screen on scroll */}
       <div
-        className={`w-full flex flex-col sticky top-0 z-50 transition-all duration-200 ease-in-out ${
+        className={`w-full flex flex-col sticky top-0 z-[1000] transition-all duration-200 ease-in-out ${
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100"
             : "bg-white border-b border-transparent"

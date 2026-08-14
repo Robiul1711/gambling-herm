@@ -41,8 +41,8 @@ const items = [
 
 const ProtectingYourMoney = () => {
   return (
-    <section className="py-10 md:py-16">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="pt-10 md:pt-16">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Top Line */}
         <div className="w-8 h-[2px] bg-[#0a9edb] mb-4"></div>
 

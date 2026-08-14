@@ -38,7 +38,7 @@ const CheckInDoors = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 max-w-5xl mx-auto px-5">
+    <section className=" max-w-5xl mx-auto px-5">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-[32px] md:text-[48px] font-bold text-[#292929] leading-tight">

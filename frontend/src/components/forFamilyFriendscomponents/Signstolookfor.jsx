@@ -35,7 +35,7 @@ const signs = [
 
 export default function Signstolookfor() {
   return (
-    <section className="w-full py-16 md:py-24 bg-white text-[#1f2937]">
+    <section className="w-full bg-white text-[#1f2937]">
       <div className="section-padding-x">
         <div className="max-w-5xl mx-auto">
           {/* Top Blue Accent Line */}

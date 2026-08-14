@@ -67,7 +67,7 @@ const GetHelpOverview = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}
         />
-        <div className="section-padding-x">
+        <div className="">
 
         <TalkToSomeone />
         <FourWaysSection />

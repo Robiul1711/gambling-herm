@@ -3,7 +3,7 @@ import React from "react";
 const SpendWorthChecking = () => {
   return (
     <section className="w-full py-6 md:py-8">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="bg-[#EAF6FB] border-l-4 border-[#0092D0] p-6 sm:p-8 rounded-r-md">
           {/* Tag */}
           <h4 className="text-[#008BC8] font-bold text-xs tracking-widest uppercase mb-3">

@@ -99,7 +99,7 @@ const routes = [
 
 const FourWaysGrid = () => {
   return (
-    <div className="">
+    <div className="max-w-5xl mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {routes.map((route) => (
           <div
