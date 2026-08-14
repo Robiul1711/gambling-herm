@@ -2,7 +2,7 @@ import React from 'react';
 
 const PreventionParadoxSection = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white text-gray-800">
+    <div className="w-full max-w-5xl mx-auto bg-white text-gray-800">
       
       {/* Top Accent Blue Line */}
       <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
@@ -13,7 +13,7 @@ const PreventionParadoxSection = () => {
       </h2>
       
       {/* Core Paragraph Content */}
-      <div className="space-y-6 text-[15px] md:text-16 leading-relaxed text-gray-500 font-normal">
+      <div className="space-y-6 text-[15px] md:text-16 leading-relaxed text-gray-700 font-normal">
         
         {/* Paragraph 1 */}
         <p>
@@ -29,7 +29,7 @@ const PreventionParadoxSection = () => {
             as "low-risk" (PGSI 1–2) or "moderate-risk" (PGSI 3–7),
           </span>{" "}
           not from the severe-end group on which most clinical treatment investment has focused. The implication 
-          is consistent with the prevention paradox: <span className="italic text-gray-400">population-level reductions in harm 
+          is consistent with the prevention paradox: <span className="italic text-gray-700">population-level reductions in harm 
           require interventions that move the whole distribution, not just the tail.</span>
         </p>
         
@@ -43,8 +43,8 @@ const PreventionParadoxSection = () => {
       </div>
 
       {/* Footer / Citation Source */}
-      <div className="mt-12 pt-4 border-t border-gray-100">
-        <p className="text-xs text-gray-400 tracking-wide">
+      <div className="mt-6">
+        <p className="text-xs md:text-sm text-gray-600 ">
           Source: international YLD syntheses cited in GHUK's APPG submission, 25 February 2026.
         </p>
       </div>

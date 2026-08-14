@@ -31,7 +31,7 @@ const exposureItems = [
 
 const ItsAllAroundUs = () => {
   return (
-    <section id="all-around-us" className="py-10 md:py-16">
+    <section id="all-around-us" className="">
       <div className="max-w-5xl mx-auto px-4">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>

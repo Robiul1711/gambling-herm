@@ -91,7 +91,7 @@ const CostExceedsRevenue = () => {
           </div>
 
           {/* Footnote */}
-          <p className="text-[11px] md:text-xs text-gray-500 leading-relaxed mt-4 mb-8">
+          <p className="text-xs sm:text-sm text-gray-600 mt-4 mb-8">
             Victorian cost items, 2022–23, from Browne et al. (2023), Social cost of gambling to Victoria. The two largest categories overall, relationship and family harm and emotional and psychological harm, are absent from every UK estimate. Australian dollar totals are not population-comparable to a UK authority; the value here is methodological, showing what gets counted and what does not.
           </p>
         </div>

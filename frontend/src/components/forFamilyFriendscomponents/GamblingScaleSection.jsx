@@ -55,9 +55,9 @@ export default function GamblingScaleSection() {
     data?.audioSource;
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white text-[#1f2937] border-b border-gray-100">
+    <section className="w-full pb-16 md:pb-24 bg-white text-[#1f2937]">
       <div className="section-padding-x">
-        <div className="max-w-5xl mx-auto font-sans">
+        <div className="max-w-5xl mx-auto ">
           {/* Top Split Layout: Text Content & Illustration */}
           <div className="grid md:grid-cols-3 gap-8 items-start mb-8">
             {/* Left Column: Text Content (Spans 2 columns on medium+ screens) */}

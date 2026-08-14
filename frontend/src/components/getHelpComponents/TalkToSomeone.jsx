@@ -17,7 +17,7 @@ const TalkToSomeone = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto px-4">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-[28px] xs:text-[34px] md:text-[48px] font-bold text-[#222]">

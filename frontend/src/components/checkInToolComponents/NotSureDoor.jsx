@@ -28,7 +28,7 @@ const prompts = [
 
 const NotSureDoor = () => {
   return (
-    <section id="not-sure" className="py-16 lg:py-24 border-t border-gray-100">
+    <section id="not-sure" className="py-16 lg:py-24 ">
       <div className="max-w-5xl mx-auto px-5">
         {/* Top line */}
         <div className="w-8 h-[2px] bg-[#0099D8] mx-auto mb-6"></div>

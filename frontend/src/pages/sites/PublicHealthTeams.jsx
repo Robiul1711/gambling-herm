@@ -20,25 +20,25 @@ const PublicHealthTeams = () => {
 
   return (
     <>
-    <div className="">
       <GamblingCommonBanner
         section={bannerData?.subtitle || "For stakeholders · Public health organisations"}
         title={bannerData?.title || "A modifiable risk factor that hasn't been treated like one."}
         description={bannerData?.description || "For OHID, ICBs, local authority public health teams, and the equivalent bodies across Scotland, Wales and Northern Ireland. The evidence on burden, the population-level pattern of harm, and the cross-sector action GHUK believes the UK response now needs."}
         image={bannerData?.image || bannerImg}
         isLoading={isLoading}/>
+    <div className="px-4 md:px-0">
       <HealthPositionSection/>
       <PreventionParadoxSection/>
       <ThreeStrandsSection/>
       <PublicHealthOffersSection/>
-    </div>
         <PublicHealthRequestsSection/>
-        <div className="section-padding-x">
+  
         <AudienceNavigationSection/>
 
         </div>
         
            <OurWorkCommonContact
+           primaryClass="bg-[#0A6E9C]"
         title="Want to partner on a local action plan?"
         description="If you're commissioning, planning or running a local public-health response to gambling harm, we'd like to hear from you, not as consultants for hire, but as collaborators in the work."
         primaryBtnText="Contact us"
