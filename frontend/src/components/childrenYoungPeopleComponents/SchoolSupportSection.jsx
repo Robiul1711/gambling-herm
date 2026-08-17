@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SchoolSupportSection = () => {
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 py-10 md:py-16">
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-16">
       {/* Top Accent Line */}
       <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
@@ -13,7 +13,7 @@ const SchoolSupportSection = () => {
       </h2>
 
       {/* Narrative Paragraphs */}
-      <div className="space-y-5 text-[#4b5563] text-[15px] md:text-base leading-relaxed max-w-3xl mb-8">
+      <div className="space-y-5 text-[#4b5563] text-[15px] md:text-base leading-relaxed mb-8">
         <p>
           We deliver gambling harm awareness sessions directly to children and
           young people in school settings, reaching over{" "}

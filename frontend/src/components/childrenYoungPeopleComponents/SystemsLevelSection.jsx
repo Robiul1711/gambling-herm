@@ -11,7 +11,7 @@ const SystemsLevelSection = () => {
   ];
 
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 py-10 md:py-16">
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-16">
       {/* Top Accent Line */}
       <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
@@ -21,14 +21,14 @@ const SystemsLevelSection = () => {
       </h2>
 
       {/* Narrative Intro */}
-      <p className="text-[#4b5563] text-[15px] md:text-base leading-relaxed max-w-3xl mb-8">
+      <p className="text-[#4b5563] text-[15px] md:text-base leading-relaxed mb-8">
         Alongside direct work with children and young people, we support local
         authorities and partners to address gambling-related harm through a
         whole-system, public health approach.
       </p>
 
       {/* Light Cyan Container */}
-      <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 mb-8 shadow-xs max-w-4xl">
+      <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 mb-8 shadow-xs">
         <h3 className="text-base font-bold text-[#2d2d2d] mb-4">This includes</h3>
         <div className="divide-y divide-dashed divide-gray-300/80">
           {includesList.map((item, index) => (
@@ -43,13 +43,13 @@ const SystemsLevelSection = () => {
       </div>
 
       {/* Paragraph below card */}
-      <p className="text-[#4b5563] text-[15px] md:text-base leading-relaxed max-w-3xl mb-8">
+      <p className="text-[#4b5563] text-[15px] md:text-base leading-relaxed mb-8">
         Our aim is to support coordinated, preventative safeguarding approaches
         that better protect children and families.
       </p>
 
       {/* Dark Contact Card Container */}
-      <div className="bg-[#181818] border-l-[4px] border-[#17a9df] p-6 md:p-8 text-white shadow-md max-w-3xl">
+      <div className="bg-[#181818] border-l-[4px] border-[#17a9df] p-6 md:p-8 text-white shadow-md">
         <h4 className="text-[#17a9df] text-xs font-bold uppercase tracking-wider mb-3">
           GET IN TOUCH
         </h4>

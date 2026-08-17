@@ -21,8 +21,8 @@ const filmsData = [
 
 const TeachersCypFilmStills = () => {
   return (
-    <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-t border-slate-100">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 md:py-16 bg-white border-t border-slate-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Tag */}
         <div className="flex items-center gap-2.5 mb-3">
           <span className="w-5 h-[2px] bg-[#0093D0]"></span>

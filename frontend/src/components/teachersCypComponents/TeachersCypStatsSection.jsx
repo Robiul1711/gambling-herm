@@ -28,12 +28,12 @@ const statsData = [
 
 const TeachersCypStatsSection = () => {
   return (
-    <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-16 md:py-20 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Header Row with Narrative and Illustration Box */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
           {/* Left Text */}
-          <p className="text-slate-700 text-base sm:text-lg leading-relaxed md:leading-[1.8] max-w-xl font-normal">
+          <p className="text-slate-700 text-base sm:text-lg leading-relaxed md:leading-[1.8] font-normal">
             Across two populations (children who gamble, and children of people
             who gamble excessively), the UK headline numbers point in the same
             direction.

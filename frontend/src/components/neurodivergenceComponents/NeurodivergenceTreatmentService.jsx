@@ -29,8 +29,8 @@ const wellAdaptedPoints = [
 
 const NeurodivergenceTreatmentService = () => {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 bg-white pb-24">
-      <div className="max-w-4xl mx-auto space-y-20">
+    <section className="py-12 md:py-20 bg-white pb-24">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-20">
         {/* Part 1: Recognition and treatment */}
         <div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-extrabold text-[#1e293b] mb-7 tracking-tight">

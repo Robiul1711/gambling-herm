@@ -2,8 +2,8 @@ import React from "react";
 
 const FundingConflictOfInterest = () => {
   return (
-    <section className="section-padding-x">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="w-full">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
         {/* Top Accent Line */}
         <div className="w-12 h-1 bg-Primary mx-auto mb-6"></div>
 
@@ -13,7 +13,7 @@ const FundingConflictOfInterest = () => {
         </h2>
 
         {/* Intro Paragraph */}
-        <p className="text-[#4a4a4a] text-base sm:text-lg leading-relaxed mb-10 max-w-4xl mx-auto">
+        <p className="text-[#4a4a4a] text-base sm:text-lg leading-relaxed mb-10 mx-auto">
           Independence on gambling harm requires independence from
           gambling-industry funding. We take this seriously and are explicit
           about it. The full statement is on our{" "}

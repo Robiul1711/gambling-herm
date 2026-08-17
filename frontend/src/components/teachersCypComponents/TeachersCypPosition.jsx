@@ -2,8 +2,8 @@ import React from "react";
 
 const TeachersCypPosition = () => {
   return (
-    <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-8 md:py-12 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0] rounded-r-xl p-8 sm:p-10 md:p-12 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
           {/* Subtitle / Category */}
           <h2 className="text-[#0093D0] text-xs md:text-sm font-bold tracking-widest uppercase mb-4">

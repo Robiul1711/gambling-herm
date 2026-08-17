@@ -105,7 +105,7 @@ const SafeguardingFilms = () => {
   ];
 
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 py-10 md:py-16">
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-16">
       {/* Top Accent Line */}
       <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
@@ -115,7 +115,7 @@ const SafeguardingFilms = () => {
       </h2>
 
       {/* Section Subtitle */}
-      <p className="text-[#555555] text-[15px] md:text-base mb-10 max-w-3xl leading-relaxed">
+      <p className="text-[#555555] text-[15px] md:text-base mb-10 leading-relaxed">
         {sectionDescription}
       </p>
 

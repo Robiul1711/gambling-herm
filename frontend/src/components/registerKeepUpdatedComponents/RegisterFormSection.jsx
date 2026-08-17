@@ -43,8 +43,8 @@ const RegisterFormSection = () => {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-white px-4 md:px-8 text-gray-800">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 md:py-20 bg-white text-gray-800">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Success Alert */}
         {serverSuccess && (
           <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md text-sm flex items-center justify-between">

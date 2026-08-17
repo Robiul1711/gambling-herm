@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const RoadSafetyAboutGhuk = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-white border-t border-slate-100">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-16 md:py-24 bg-white border-t border-slate-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
 
@@ -14,7 +14,7 @@ const RoadSafetyAboutGhuk = () => {
         </h2>
 
         {/* Narrative Paragraph */}
-        <p className="text-slate-700 text-base sm:text-lg leading-relaxed md:leading-[1.8] max-w-3xl mb-8 font-normal">
+        <p className="text-slate-700 text-base sm:text-lg leading-relaxed md:leading-[1.8] mb-8 font-normal">
           Gambling Harm UK is a national charity working to prevent avoidable
           gambling harm through creating connectivity, developing capability and
           maximising capacity across communities, organisations, and public

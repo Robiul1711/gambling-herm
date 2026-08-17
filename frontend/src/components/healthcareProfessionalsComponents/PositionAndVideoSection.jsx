@@ -36,7 +36,7 @@ const PositionAndVideoSection = () => {
     "GHUK's clinical training film. A 30–60-second opportunistic conversation, modelled in primary care.";
 
   return (
-    <div className="w-full section-padding-y mx-auto max-w-6xl px-4">
+    <div className="w-full section-padding-y mx-auto max-w-5xl px-4 sm:px-6">
       {/* Responsive layout container */}
       <div className="flex flex-col lg:flex-row items-stretch gap-8 md:gap-12">
         {/* Left Column: Callout Box */}

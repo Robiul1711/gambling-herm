@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const TeachersCypSupportNow = () => {
   return (
-    <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-t border-slate-100">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 md:py-16 bg-white border-t border-slate-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
 
@@ -14,7 +14,7 @@ const TeachersCypSupportNow = () => {
         </h2>
 
         {/* Paragraph with Link */}
-        <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] max-w-3xl font-normal">
+        <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] font-normal">
           Send them to{" "}
           <Link
             to="/get-help/young-people"

@@ -39,13 +39,13 @@ export default function SpecialistServices() {
  id="specialist-services"
  className="scroll-mt-24 w-full py-16 md:py-24 border-b border-gray-100 bg-white"
  >
- <div className="section-padding-x">
+ <div className="max-w-5xl mx-auto px-4 sm:px-6">
  {/* Header */}
  <div className="text-center mb-12">
  <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight">
  Specialist services
  </h2>
- <p className="mt-4 text-[15px] sm:text-base text-[#5f6472] max-w-4xl mx-auto leading-relaxed">
+ <p className="mt-4 text-[15px] sm:text-base text-[#5f6472] leading-relaxed">
  Several populations are still significantly underserved by the
  mainstream offer. The services below have an explicit specialism, not
  because everyone in these groups needs different treatment, but
@@ -55,7 +55,7 @@ export default function SpecialistServices() {
  </div>
 
  {/* Services Grid */}
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
  {services.map((item, index) => (
  <div
  key={index}

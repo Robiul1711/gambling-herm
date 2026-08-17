@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const RoadSafetyCta = () => {
   return (
-    <section className="bg-[#121417] py-20 md:py-28 px-4 md:px-8 text-white text-center">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#121417] py-20 md:py-28 text-white text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Centered Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mx-auto mb-8"></div>
 
@@ -14,7 +14,7 @@ const RoadSafetyCta = () => {
         </h2>
 
         {/* Subtitle / Paragraph */}
-        <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed md:leading-[1.8] mb-10 font-normal">
+        <p className="text-gray-300 mx-auto text-sm sm:text-base md:text-lg leading-relaxed md:leading-[1.8] mb-10 font-normal">
           Recognising gambling harm as an emerging workplace risk can support
           safer employees, safer organisations and safer roads.
         </p>

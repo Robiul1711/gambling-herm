@@ -2,8 +2,8 @@ import React from "react";
 
 const RoadSafetyWhyThisMatters = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
 
