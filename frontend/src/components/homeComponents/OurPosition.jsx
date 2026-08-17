@@ -4,45 +4,69 @@ import { Link } from "react-router-dom";
 export default function WhoGamblingHarms() {
   const stats = [
     {
-      number: "~1 in 5",
+      number: "£37bn",
       text: (
         <>
-      Gambling harm isn't confined to a small group of “addicts”; it runs across the population. When harm at every level is counted, to the people who gamble and the families around them, at least 1 in 5 UK adults have experienced gambling harm. Official surveys count only those who recognise and report it, so the true figure sits above this, not below. The impacts include financial hardship, relationship breakdown, mental ill health, and wider social harms.
+          a year: the health loss from gambling in the UK, valued at the £70,000
+          Green Book societal value of a QALY. That is roughly 370 times the
+          statutory levy on gambling operators. Around 530,000 quality-adjusted
+          life years, of which roughly two-fifths fall on people harmed by
+          someone else's gambling or on children, close to half before the
+          household-overlap adjustment.
+        </>
+      ),
+    },
+    {
+      number: "912,805",
+      text: (
+        <>
+          children in England live in a household where an adult may benefit
+          from gambling treatment or support (Office for Health Improvement and
+          Disparities, 2023; roughly 7 to 8% of the child population). Gambling
+          harm isn't confined to a small, clinically distinct group
         </>
       ),
     },
     {
       number: "~9%",
-      text: "of UK adults self-reported being affected by someone else's gambling in the past year (a single-year, self-identified snapshot), including 2.5% reporting severe consequences (GSGB official statistics, 2024). Partners, parents, children, siblings, close friends.",
+      text: (
+        <>
+          of adults in Great Britain, about 4.9 million people, reported
+          experiencing harm from someone else's gambling in the past year:
+          partners, parents, children, siblings, close friends. That is
+          comparable in scale to the number harmed by their own gambling
+          (Gambling Commission,{" "}
+          <em className="italic">
+            Insights into affected others from the GSGB
+          </em>
+          , 2026, n=19,714).
+        </>
+      ),
     },
-    // {
-    //   number: "~42%",
-    //   text: "of children in Great Britain may be affected by someone else's gambling, on modelling for GambleAware (YouGov, 2024): parents, siblings, and others close to them.",
-    // },
   ];
 
   return (
-    <section className="w-full bg-white text-[#1f2937] py-12 md:py-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="w-full bg-white text-[#1f2937] py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Tagline with Horizontal Blue Bar */}
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-6 h-[2px] bg-Primary"></div>
+        <div className="flex items-center gap-2.5 mb-4">
+          <div className="w-6 h-[2.5px] bg-Primary"></div>
           <span className="text-Primary text-xs font-bold tracking-widest uppercase">
-            In the UK, last year
+            The scale of harm
           </span>
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-3xl font-bold tracking-tight text-gray-950 mb-10 md:mb-12">
-          Who gambling actually harms.
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-10 md:mb-12">
+          Who gambling harms.
         </h2>
 
-        {/* 3-Column Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        {/* 2-Column Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 mb-10">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="border-l-[3px] border-Primary pl-5 flex flex-col space-y-3"
+              className="border-l-[3.5px] border-Primary pl-5 flex flex-col space-y-3"
             >
               {/* Stat Highlight Number */}
               <div className="text-4xl md:text-5xl font-semibold tracking-tight text-gray-950">
@@ -56,18 +80,15 @@ export default function WhoGamblingHarms() {
           ))}
         </div>
 
-        {/* Source Footer Links */}
-        <footer className="text-xs md:text-sm text-gray-500 leading-relaxed max-w-3xl border-t border-transparent pt-4">
-          <span className="font-semibold text-gray-700">Source:</span> GHUK
-          submission to the All-Party Parliamentary Group for Gambling Reform,
-          February 2026.{" "}
+        {/* Bottom Link */}
+        <div className="pt-2">
           <Link
             to="/burden-of-harm"
-            className="text-Primary hover:text-[#0369a1] underline underline-offset-4 font-medium inline-flex items-center gap-1 transition-colors"
+            className="text-Primary hover:text-[#0369a1] underline underline-offset-4 font-medium text-sm sm:text-base inline-flex items-center gap-1 transition-colors"
           >
-            See the full picture &rarr;
+            See the full picture →
           </Link>
-        </footer>
+        </div>
       </div>
     </section>
   );

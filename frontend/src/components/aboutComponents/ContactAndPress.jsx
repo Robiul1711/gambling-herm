@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ContactAndPress = () => {
   return (
     <div className="w-full border-b border-gray-700/40 py-16 md:py-20 text-center px-4 sm:px-6 lg:px-8 bg-[#2A2828] text-white">
-      <div className="max-w-6xl mx-auto flex flex-col items-center">
+      <div className="max-w-5xl mx-auto flex flex-col items-center">
         
         {/* Header Section */}
         <div className="mb-16 max-w-2xl">

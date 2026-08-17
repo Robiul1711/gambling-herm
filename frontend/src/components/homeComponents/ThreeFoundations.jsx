@@ -33,7 +33,7 @@ export default function ThreeFoundations() {
 
   return (
     <section className="w-full bg-white py-10 md:py-16">
-      <div className="section-padding-x">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Section Header Information */}
         <div className="flex flex-col space-y-4 mb-12 md:mb-16 text-left max-w-4xl">
           <div className="flex items-center space-x-3">

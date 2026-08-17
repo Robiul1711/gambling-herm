@@ -25,7 +25,7 @@ export default function ScaleOfHarm() {
 
   return (
     <section className="w-full bg-[#2A2828] text-white py-10 md:py-16">
-      <div className="section-padding-x flex flex-col items-center text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
         {/* Top Accent Subheading */}
         <div className="flex items-center space-x-3 mb-4">
           <span className="w-6 h-[2px] bg-[#1A759F]" />
