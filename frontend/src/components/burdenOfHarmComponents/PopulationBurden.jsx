@@ -15,7 +15,9 @@ const PopulationBurden = () => {
 
         {/* Intro Paragraph */}
         <p className="text-base md:text-lg text-gray-200 leading-relaxed font-semibold mb-8">
-          Public health measures harm in years of healthy life lost. Almost every major UK risk factor has detailed burden estimates. Gambling, until recently, did not.
+          Public health measures harm in years of healthy life lost. Almost
+          every major UK risk factor has detailed burden estimates. Gambling,
+          until recently, did not.
         </p>
 
         {/* Sub-heading: How many people */}
@@ -25,15 +27,46 @@ const PopulationBurden = () => {
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-300">
-            On the Gambling Survey for Great Britain 2024, <strong className="text-white font-bold">8.8% of UK adults are at a low level of gambling harm (about 4.7 million)</strong>, <strong className="text-white font-bold">3.1% at a moderate level (about 1.7 million)</strong>, and <strong className="text-white font-bold">2.7% at a severe level (about 1.5 million)</strong>. A further <strong className="text-white font-bold">9.0%, about 4.9 million adults, are harmed by someone else's gambling</strong>.
+            On the Gambling Survey for Great Britain 2024,{" "}
+            <strong className="text-white font-bold">
+              8.8% of UK adults are at a low level of gambling harm (about 4.7
+              million)
+            </strong>
+            ,{" "}
+            <strong className="text-white font-bold">
+              3.1% at a moderate level (about 1.7 million)
+            </strong>
+            , and{" "}
+            <strong className="text-white font-bold">
+              2.7% at a severe level (about 1.5 million)
+            </strong>
+            . A further{" "}
+            <strong className="text-white font-bold">
+              9.0%, about 4.9 million adults, are harmed by someone else's
+              gambling
+            </strong>
+            .
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-300">
-            Those figures cannot simply be added together, because some adults both gamble at a harmful level and are harmed by someone else's gambling. Once that household overlap is removed and children are included, <strong className="text-white font-bold">roughly 1 in 5 of the UK population, about 18.6% or 12.7 million people, experience gambling-related harm in a single year</strong>. Before de-duplication the same calculation gives 20.6%, about 14.0 million.
+            Those figures cannot simply be added together, because some adults
+            both gamble at a harmful level and are harmed by someone else's
+            gambling. Once that household overlap is removed and children are
+            included,{" "}
+            <strong className="text-white font-bold">
+              roughly 1 in 5 of the UK population, about 18.6% or 12.7 million
+              people, experience gambling-related harm in a single year
+            </strong>
+            . Before de-duplication the same calculation gives 20.6%, about 14.0
+            million.
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-300">
-            Survey mode matters at this scale. The push-to-web survey may run high and the older interviewer-administered surveys probably under-counted, so no single survey is a clean floor. We therefore anchor both ways, showing the conservative floor alongside the central estimate throughout.
+            Survey mode matters at this scale. The push-to-web survey may run
+            high and the older interviewer-administered surveys probably
+            under-counted, so no single survey is a clean floor. We therefore
+            anchor both ways, showing the conservative floor alongside the
+            central estimate throughout.
           </p>
         </div>
 
@@ -44,7 +77,9 @@ const PopulationBurden = () => {
           </h3>
 
           <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
-            On the non-fatal measure, the health loss from gambling including affected others and children exceeds tobacco, unhealthy diet and alcohol:
+            On the non-fatal measure, the health loss from gambling including
+            affected others and children exceeds tobacco, unhealthy diet and
+            alcohol:
           </p>
 
           {/* Bar Chart 1 */}
@@ -104,7 +139,25 @@ const PopulationBurden = () => {
 
           {/* Footnote 1 */}
           <p className="text-[11px] md:text-xs text-gray-300 leading-relaxed mt-6 mb-10">
-            Annual non-fatal health loss, UK. Gambling figure is GHUK modelling (Moayeri 2020 utilities applied to GSGB 2024 prevalence, de-duplicated), expressed in QALYs, valuing the burden on affected others at parity with the person gambling: the direct disability-weight measurements put per-person affected-other burden at or above parity at moderate levels of harm (Browne et al., 2017). Comparators are Years Lived with Disability from the Global Burden of Disease 2023 (IHME, GBD Compare, United Kingdom, all ages, both sexes, accessed 15 July 2026). Two caveats. First, counting affected others is consistent with the tobacco comparator, whose burden already includes harm to non-smokers through second-hand smoke; the alcohol and diet estimates do not capture harm to others, so the strict like-for-like comparator against those two is the people-who-gamble component alone (about 297,000 QALYs), which still exceeds both. Second, no comparable estimate of gambling's fatal burden exists, because gambling-attributable deaths are not yet routinely coded in the UK. Where gambling would sit on a total-burden ranking including mortality is unknown, rather than low.
+            Annual non-fatal health loss, UK. Gambling figure is GHUK modelling
+            (Moayeri 2020 utilities applied to GSGB 2024 prevalence,
+            de-duplicated), expressed in QALYs, valuing the burden on affected
+            others at parity with the person gambling: the direct
+            disability-weight measurements put per-person affected-other burden
+            at or above parity at moderate levels of harm (Browne et al., 2017).
+            Comparators are Years Lived with Disability from the Global Burden
+            of Disease 2023 (IHME, GBD Compare, United Kingdom, all ages, both
+            sexes, accessed 15 July 2026). Two caveats. First, counting affected
+            others is consistent with the tobacco comparator, whose burden
+            already includes harm to non-smokers through second-hand smoke; the
+            alcohol and diet estimates do not capture harm to others, so the
+            strict like-for-like comparator against those two is the
+            people-who-gamble component alone (about 297,000 QALYs), which still
+            exceeds both. Second, no comparable estimate of gambling's fatal
+            burden exists, because gambling-attributable deaths are not yet
+            routinely coded in the UK. Where gambling would sit on a
+            total-burden ranking including mortality is unknown, rather than
+            low.
           </p>
         </div>
 
@@ -115,7 +168,13 @@ const PopulationBurden = () => {
           </h3>
 
           <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
-            Valued at the NICE cost-effectiveness range of £25,000 to £35,000 per QALY, the annual UK health loss from gambling comes to <strong className="text-white font-bold">£15.6–21.9 billion</strong>. This values the burden carried by affected others at parity with the person who gambles, which is what the direct measurements support (Browne et al., 2017). The statutory levy on gambling operators is projected to raise about £100 million a year.
+            Valued at the NICE cost-effectiveness range of £25,000 to £35,000
+            per QALY, the annual UK health loss from gambling comes to{" "}
+            <strong className="text-white font-bold">£15.6–21.9 billion</strong>
+            . This values the burden carried by affected others at parity with
+            the person who gambles, which is what the direct measurements
+            support (Browne et al., 2017). The statutory levy on gambling
+            operators is projected to raise about £100 million a year.
           </p>
 
           {/* Bar Chart 2 */}
@@ -175,7 +234,23 @@ const PopulationBurden = () => {
 
           {/* Footnote 2 */}
           <p className="text-[11px] md:text-xs text-gray-300 leading-relaxed mt-6 mb-10">
-            Bars are drawn to scale against the upper sensitivity. At this scale the levy is 0.1% of the largest bar and is too small to render as a visible block, which is itself the point. Central estimate: approximately 625,000 QALYs lost annually, valuing affected others at parity with the person gambling, which is what the direct disability-weight measurements support (Browne et al., 2017). People who gamble account for about 297,000 QALYs of that total (£7.4–10.4bn). Conservative floor applies the most recent health-survey prevalence (Adult Psychiatric Morbidity Survey 2023/4: PGSI 1-2 2.8%, 3-7 1.2%, 8+ 0.4%, England), which the survey itself describes as conservative. Upper sensitivity applies the Tulloch et al. (2026) hybrid disability weights, roughly 2.81 million QALYs. Valuing the central estimate at the £70,000 societal willingness-to-pay threshold instead gives about £44 billion. Sources: Moayeri (2020); GSGB 2024; Browne et al. (2017); Tulloch et al. (2026); NICE thresholds from April 2026. Full method in the GHUK Health Needs Assessment (2026), Appendix D.
+            Bars are drawn to scale against the upper sensitivity. At this scale
+            the levy is 0.1% of the largest bar and is too small to render as a
+            visible block, which is itself the point. Central estimate:
+            approximately 625,000 QALYs lost annually, valuing affected others
+            at parity with the person gambling, which is what the direct
+            disability-weight measurements support (Browne et al., 2017). People
+            who gamble account for about 297,000 QALYs of that total
+            (£7.4–10.4bn). Conservative floor applies the most recent
+            health-survey prevalence (Adult Psychiatric Morbidity Survey 2023/4:
+            PGSI 1-2 2.8%, 3-7 1.2%, 8+ 0.4%, England), which the survey itself
+            describes as conservative. Upper sensitivity applies the Tulloch et
+            al. (2026) hybrid disability weights, roughly 2.81 million QALYs.
+            Valuing the central estimate at the £70,000 societal
+            willingness-to-pay threshold instead gives about £44 billion.
+            Sources: Moayeri (2020); GSGB 2024; Browne et al. (2017); Tulloch et
+            al. (2026); NICE thresholds from April 2026. Full method in the GHUK
+            Health Needs Assessment (2026), Appendix D.
           </p>
         </div>
 
@@ -185,22 +260,36 @@ const PopulationBurden = () => {
             OUR POSITION
           </h4>
           <p className="text-sm md:text-base leading-relaxed text-gray-800">
-            The central health-loss estimate is <strong className="font-bold text-gray-900">roughly 150 to 220 times the statutory levy</strong>. Even on the government's own deliberately narrow social-cost estimate for England (£1.05–1.77 billion a year), the levy is an order of magnitude too small. The conclusion survives every published assumption. It is also a conservative floor: health-utility measures do not capture financial or material wellbeing, so the large quality-of-life loss gambling inflicts through debt, lost housing and food insecurity sits largely outside what the metric can see.
+            The central health-loss estimate is{" "}
+            <strong className="font-bold text-gray-900">
+              roughly 150 to 220 times the statutory levy
+            </strong>
+            . Even on the government's own deliberately narrow social-cost
+            estimate for England (£1.05–1.77 billion a year), the levy is an
+            order of magnitude too small. The conclusion survives every
+            published assumption. It is also a conservative floor:
+            health-utility measures do not capture financial or material
+            wellbeing, so the large quality-of-life loss gambling inflicts
+            through debt, lost housing and food insecurity sits largely outside
+            what the metric can see.
           </p>
         </div>
 
         {/* Dark Box: Two numbers that must not be added together */}
-        <div className="border border-[#333333] bg-[#222222] p-6 md:p-8 my-8 rounded-sm">
+        <div className="border border-[#333333] bg-[#222222] p-6 md:p-8 my-8 ">
           <h4 className="text-white font-bold text-base md:text-lg mb-3">
             Two numbers that must not be added together
           </h4>
           <p className="text-sm text-gray-300 leading-relaxed">
-            The partial social-cost estimate (£1.05–1.77bn) and the QALY-loss valuation (£15.6–21.9bn) are different constructs measuring different things. They are not additive, and we do not present them as a combined total.
+            The partial social-cost estimate (£1.05–1.77bn) and the QALY-loss
+            valuation (£15.6–21.9bn) are different constructs measuring
+            different things. They are not additive, and we do not present them
+            as a combined total.
           </p>
         </div>
 
         {/* Interactive Tool Card */}
-        <div className="border border-gray-800 bg-[#212121] p-6 md:p-8 rounded-sm my-8">
+        <div className="border border-gray-800 bg-[#212121] p-6 md:p-8  my-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-6 h-[2px] bg-[#0093D0]" />
             <span className="text-[#0093D0] text-xs font-bold tracking-widest uppercase">
@@ -213,7 +302,11 @@ const PopulationBurden = () => {
           </h3>
 
           <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
-            An interactive calculator covering every local authority in Great Britain: adults and affected others in harm, years of health and wellbeing lost, and cost estimates for your area, with every assumption adjustable, conservative and legacy-survey scenarios built in, and a fully published methodology.
+            An interactive calculator covering every local authority in Great
+            Britain: adults and affected others in harm, years of health and
+            wellbeing lost, and cost estimates for your area, with every
+            assumption adjustable, conservative and legacy-survey scenarios
+            built in, and a fully published methodology.
           </p>
 
           <Link

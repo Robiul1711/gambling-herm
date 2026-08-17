@@ -29,23 +29,24 @@ const HealthPositionSection = () => {
   const image = sectionData?.image || bannerImg;
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-5xl mx-auto">
-        <div className="relative bg-[#eaf5fb] overflow-hidden">
-          {/* Left Blue Border */}
-          <div className="absolute left-0 top-0 h-full w-[4px] bg-[#0093d0]" />
-
-          <div className="flex flex-col md:flex-row items-center justify-between px-8 py-10 gap-8">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="relative bg-[#eaf5fb] overflow-hidden  border-l-[4px] border-[#0093d0] shadow-xs">
+          <div className="flex flex-col md:flex-row items-center justify-between p-6 sm:p-8 md:p-10 gap-8">
             {/* Content */}
             <div className="flex-1">
-              <p className="text-[#0082c3] text-sm mb-5">{tagline}</p>
+              <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0082c3] mb-4">
+                {tagline}
+              </p>
 
-              <p className="text-[15px] leading-8 text-[#4b4e52] mb-8">
-                <span className="font-bold text-[#2b2f33]">{boldText}</span>{" "}
+              <p className="text-sm sm:text-base leading-relaxed text-gray-700 font-normal mb-6">
+                <span className="font-bold text-gray-900">{boldText}</span>{" "}
                 {desc1}
               </p>
 
-              <p className="text-[15px] leading-8 text-[#4b4e52]">{desc2}</p>
+              <p className="text-sm sm:text-base leading-relaxed text-gray-700 font-normal">
+                {desc2}
+              </p>
             </div>
 
             {/* Right Image */}
@@ -53,7 +54,7 @@ const HealthPositionSection = () => {
               <img
                 src={image}
                 alt="Public Health Diagram"
-                className="w-full max-w-[320px] object-contain"
+                className="w-full max-w-[320px] object-contain "
               />
             </div>
           </div>

@@ -2,21 +2,24 @@ import React from "react";
 
 const CheckInInfoCard = () => {
   return (
-    <section className="py-12 md:py-20">
-      <div className="max-w-5xl mx-auto">
-        <div className="bg-[#eaf6fb] border-l-4 border-[#0097d7] px-6 py-8 md:px-10 md:py-10">
+    <section className="py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="bg-[#edf7fd] border-l-4 border-[#0093D0] rounded-r-xl p-7 sm:p-9 md:p-10 shadow-xs">
           {/* Heading */}
-          <h3 className="text-[#008bc8] text-lg font-medium">
-            About this check-in
-          </h3>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-5 h-[2px] bg-[#0093D0]"></span>
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0093D0]">
+              About this check-in
+            </h3>
+          </div>
 
           {/* Content */}
-          <div className="mt-6 space-y-8 text-[#6c7184] text-base md:text-[18px] leading-9">
+          <div className="space-y-5 text-gray-700 text-base sm:text-lg leading-relaxed font-normal">
             <p>
               Our short check-ins draw on the{" "}
-              <span className="font-semibold text-[#333]">
+              <strong className="font-semibold text-gray-900">
                 GHSI Holistic Framework Of Harm
-              </span>{" "}
+              </strong>{" "}
               (NatCen, 2025), the newer UK measurement framework that captures
               gambling-related harm across multiple domains (financial,
               relationships, mental health, physical health, work/study,
@@ -32,11 +35,12 @@ const CheckInInfoCard = () => {
               (PGSI 8+) that the public-health evidence does not support as the
               right line to draw. See{" "}
               <a
-                href="#"
-                className="text-[#333] underline hover:text-[#008bc8] transition-colors"
+                href="/understanding-gambling-harms#note-on-language"
+                className="text-gray-900 underline hover:text-[#0093D0] font-medium transition-colors"
               >
-                our note on language and measurement.
+                our note on language and measurement
               </a>
+              .
             </p>
           </div>
         </div>

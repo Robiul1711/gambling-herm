@@ -40,25 +40,25 @@ const TeachersCypPolicyAsks = () => {
     <section className="py-12 md:py-16 bg-white border-t border-slate-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
-        <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
+        <div className="w-12 h-[3px] bg-[#0092D0] mb-6"></div>
 
         {/* Section Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-[#1e293b] mb-6 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
           What we ask for in CYP policy
         </h2>
 
         {/* Intro */}
-        <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-10 font-normal">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 font-normal">
           Four specific changes that would reshape the UK CYP gambling-harm
           response.
         </p>
 
         {/* 4 Numbered Cards Stack */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           {policyCards.map((card) => (
             <div
               key={card.num}
-              className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 flex items-start gap-4 sm:gap-6 shadow-xs hover:shadow-md transition-shadow"
+              className="bg-white border border-gray-200/90  p-6 sm:p-8 flex items-start gap-4 sm:gap-6 shadow-xs hover:shadow-md transition-shadow"
             >
               {/* Number Badge */}
               <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#156E94] text-white font-bold flex items-center justify-center text-sm shrink-0 mt-0.5 shadow-xs">
@@ -67,10 +67,10 @@ const TeachersCypPolicyAsks = () => {
 
               {/* Card Content */}
               <div>
-                <h3 className="font-bold text-slate-900 text-base sm:text-lg mb-2 leading-snug">
+                <h3 className="font-bold text-gray-900 text-lg sm:text-xl mb-2 leading-snug tracking-tight">
                   {card.title}
                 </h3>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
                   {card.desc}
                 </p>
               </div>

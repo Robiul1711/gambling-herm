@@ -38,59 +38,59 @@ const CheckInDoors = () => {
   };
 
   return (
-    <section className=" max-w-5xl mx-auto px-5">
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-[32px] md:text-[48px] font-bold text-[#292929] leading-tight">
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight leading-tight">
           Who are you here for?
         </h2>
 
-        <p className="mt-4 text-[#6E7388] text-base md:text-lg leading-relaxed">
+        <p className="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed font-normal">
           Pick the door that fits. You can always come back and try a different
           one.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="border border-[#8C909E]/60 bg-white p-6 md:p-8 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+            className="border border-gray-200/90  bg-white p-7 sm:p-8 flex flex-col justify-between hover:shadow-md transition-all duration-300"
           >
             <div>
               {/* Door label */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-8 h-[2px] bg-[#0096D6]" />
-                <span className="text-[#0096D6] text-xs md:text-sm font-semibold uppercase tracking-wider">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-6 h-[2.5px] bg-[#0096D6]" />
+                <span className="text-[#0096D6] text-xs sm:text-sm font-bold uppercase tracking-wider">
                   {card.id}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-[24px] md:text-[28px] font-bold text-[#292929] leading-snug">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug tracking-tight mb-4">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-4 text-[#72768B] text-base md:text-[17px] leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
                 {card.description}
               </p>
             </div>
 
             {/* Button */}
-            <div className="mt-8">
+            <div className="mt-8 pt-4">
               {card.to ? (
                 <Link
                   to={card.to}
-                  className="inline-block bg-[#0D6F9D] px-6 py-3.5 text-white font-semibold text-center transition hover:bg-[#095d84]"
+                  className="inline-block bg-[#0D6F9D] px-6 py-3.5 text-white font-semibold text-sm sm:text-base text-center transition hover:bg-[#095d84]  shadow-xs"
                 >
                   {card.button}
                 </Link>
               ) : (
                 <button
                   onClick={handleScrollToNotSure}
-                  className="bg-[#0D6F9D] px-6 py-3.5 text-white font-semibold transition hover:bg-[#095d84]"
+                  className="bg-[#0D6F9D] px-6 py-3.5 text-white font-semibold text-sm sm:text-base transition hover:bg-[#095d84]  shadow-xs cursor-pointer"
                 >
                   {card.button}
                 </button>
@@ -101,12 +101,12 @@ const CheckInDoors = () => {
       </div>
 
       {/* Footer text */}
-      <p className="mt-10 text-center text-[#6E7388] text-sm md:text-base leading-relaxed">
+      <p className="mt-12 text-center text-gray-500 text-xs sm:text-sm leading-relaxed">
         All answers stay in your browser. Nothing is stored, sent, or shared.
         Not suitable for under-18s, please see our{" "}
         <Link
           to="/children-and-safeguarding"
-          className="underline text-[#0096D6] hover:text-[#095d84] font-medium transition-colors"
+          className="underline text-Primary hover:text-Primary/80 font-semibold transition-colors"
         >
           page for children and young people
         </Link>{" "}

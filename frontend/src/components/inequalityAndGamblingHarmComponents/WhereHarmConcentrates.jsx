@@ -58,13 +58,13 @@ const concentrationData = [
 
 const WhereHarmConcentrates = () => {
   return (
-    <section id="harm-concentration" className=" ">
-      <div className="max-w-5xl mx-auto px-4 py-10 md:py-16">
+    <section id="harm-concentration" className="bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Main Section Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2d2d2d] leading-tight mb-12 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight mb-10 tracking-tight">
           Where harm concentrates
         </h2>
 
@@ -73,15 +73,15 @@ const WhereHarmConcentrates = () => {
           {concentrationData.map((item, index) => (
             <div
               key={index}
-              className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-6 border-t border-gray-200/60 items-start text-[15px] leading-relaxed"
+              className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 py-5 border-t border-gray-200/60 items-start text-sm sm:text-base leading-relaxed"
             >
               {/* Category Parameter Side Label */}
-              <div className="md:col-span-3 text-[#17a9df] font-bold text-xs md:text-sm tracking-wider uppercase pt-0.5 pr-2">
+              <div className="md:col-span-3 text-[#0092D0] font-bold text-xs sm:text-sm tracking-wider uppercase pt-0.5 pr-2">
                 {item.label}
               </div>
 
               {/* Explicit Description Breakdown */}
-              <div className="md:col-span-9 text-[#2d2d2d]">
+              <div className="md:col-span-9 text-gray-700 font-normal leading-relaxed">
                 {item.description}
               </div>
             </div>

@@ -15,13 +15,13 @@ const ratioData = [
 
 const HeadlineRatio = () => {
   return (
-    <div className="py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <div className="py-12 md:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2d2d2d] mb-8 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">
           The headline ratio
         </h2>
 
@@ -30,15 +30,15 @@ const HeadlineRatio = () => {
           {ratioData.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 md:p-8 border border-gray-200/90  min-h-[160px] flex flex-col justify-start bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
+              className="p-6 md:p-8 border border-gray-200/90  min-h-[160px] flex flex-col justify-start bg-white shadow-xs"
             >
               {/* Ratio Percentage */}
-              <div className="text-2xl md:text-3xl font-bold text-[#2d2d2d] mb-4">
+              <div className="text-3xl sm:text-4xl font-extrabold text-[#0092D0] mb-3">
                 {item.percentage}
               </div>
 
               {/* Card Body Text Description */}
-              <p className="text-[#687076] text-sm md:text-[15px] leading-relaxed">
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
                 {item.description}
               </p>
             </div>
@@ -46,13 +46,13 @@ const HeadlineRatio = () => {
         </div>
 
         {/* Source Citation & Explanation Narrative */}
-        <p className="text-[#687076] text-xs md:text-sm leading-relaxed max-w-4xl">
+        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
           Source: Annual Treatment and Support Survey 2024 (GambleAware-funded).
-          Both groups have lower overall gambling participation than UK
-          average; the conditional harm rate among those who do gamble is
-          roughly <strong className="font-bold text-[#2d2d2d]">2x</strong> higher
-          in ethnic minority communities. This is a marker of exposure pattern
-          and access to support, not of individual difference.
+          Both groups have lower overall gambling participation than UK average;
+          the conditional harm rate among those who do gamble is roughly{" "}
+          <strong className="font-bold text-gray-900">2x</strong> higher in
+          ethnic minority communities. This is a marker of exposure pattern and
+          access to support, not of individual difference.
         </p>
       </div>
     </div>

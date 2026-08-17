@@ -21,17 +21,17 @@ const LimitAdsNav = () => {
 
   return (
     <nav className="w-full bg-[#fbfdfd] border-b border-gray-200/60 py-8 md:py-10">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Label */}
         <div className="flex items-center gap-2 mb-4">
           <span className="w-5 h-[2px] bg-[#0082c3]"></span>
-          <span className="text-[11px] font-bold uppercase tracking-widest text-[#0082c3]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0082c3]">
             On this page
           </span>
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-3 gap-x-6 text-[14px] sm:text-[15px]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-3 gap-x-6 text-sm sm:text-base">
           {navItems.map((item) => (
             <a
               key={item.id}

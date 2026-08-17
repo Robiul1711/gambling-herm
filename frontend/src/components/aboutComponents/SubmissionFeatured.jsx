@@ -5,7 +5,7 @@ export default function SubmissionFeatured() {
     <section className="w-full bg-[#18181b] text-white py-10 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Layout Container with Left Border Accent */}
-        <div className=" rounded-lg p-6 sm:p-8 md:p-10 border-l-[4px] border-[#0092D0] shadow-xl flex flex-col justify-between space-y-6">
+        <div className="  p-6 sm:p-8 md:p-10 border-l-[4px] border-[#0092D0] shadow-xl flex flex-col justify-between space-y-6">
           <div>
             {/* Section Subtitle Tag & Meta */}
             <div className="flex flex-wrap items-center gap-x-3 mb-4 text-xs sm:text-sm font-medium">
@@ -48,4 +48,3 @@ export default function SubmissionFeatured() {
     </section>
   );
 }
-

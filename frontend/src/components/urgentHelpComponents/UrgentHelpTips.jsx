@@ -5,10 +5,10 @@ const UrgentHelpTips = () => {
   return (
     <div className="w-full">
       {/* 1. Next Hour Tips Section (Light Blue Background) */}
-      <div className="bg-[#EBF5FA] py-12 md:py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white border-2 border-[#82A3A1] p-5 sm:p-8 md:p-10 shadow-sm">
-            <span className="text-xs font-bold text-[#4F7774] uppercase tracking-widest block mb-6">
+      <div className="bg-[#EBF5FA] py-12 md:py-16 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white border-2 border-[#82A3A1]  p-6 sm:p-8 md:p-10 shadow-xs">
+            <span className="text-xs font-bold text-[#355d5a] uppercase tracking-widest block mb-6">
               A few things that often help in the next hour
             </span>
 
@@ -41,11 +41,13 @@ const UrgentHelpTips = () => {
               ].map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex items-start gap-4 text-sm md:text-base text-gray-700 leading-relaxed"
+                  className="flex items-start gap-4 text-sm sm:text-base text-gray-700 leading-relaxed font-normal"
                 >
                   <span className="mt-1.5 w-4 h-4 border-2 border-Primary/60 shrink-0" />
                   <span>
-                    <strong>{item.bold}</strong>
+                    <strong className="text-gray-900 font-bold">
+                      {item.bold}
+                    </strong>
                     {item.text}
                   </span>
                 </li>
@@ -56,48 +58,54 @@ const UrgentHelpTips = () => {
       </div>
 
       {/* 2. Worried About Someone Else Section (White/Light Gray Background) */}
-      <div className="bg-gray-50/50 py-12 md:py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white border border-gray-200 p-5 sm:p-8 md:p-10 shadow-sm">
+      <div className="bg-gray-50/50 py-12 md:py-16 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white border border-gray-200/90  p-6 sm:p-8 md:p-10 shadow-xs">
             <span className="text-xs font-bold text-gray-600 uppercase tracking-widest block mb-6">
               If you're worried about someone else right now
             </span>
 
             <ul className="space-y-5">
-              <li className="flex items-start gap-4 text-sm md:text-base text-gray-700 leading-relaxed">
+              <li className="flex items-start gap-4 text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                 <span className="mt-1.5 w-4 h-4 border-2 border-Primary/60 shrink-0" />
                 <span>
-                  <strong>
+                  <strong className="text-gray-900 font-bold">
                     If you believe their life is in immediate danger
                   </strong>
                   , call 999.
                 </span>
               </li>
-              <li className="flex items-start gap-4 text-sm md:text-base text-gray-700 leading-relaxed">
+              <li className="flex items-start gap-4 text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                 <span className="mt-1.5 w-4 h-4 border-2 border-Primary/60 shrink-0" />
                 <span>
-                  <strong>If they will speak to you</strong>, stay with them.
-                  Don't leave them alone. Ask them to call Samaritans (116 123).
-                  If they want, call together.
+                  <strong className="text-gray-900 font-bold">
+                    If they will speak to you
+                  </strong>
+                  , stay with them. Don't leave them alone. Ask them to call
+                  Samaritans (116 123). If they want, call together.
                 </span>
               </li>
-              <li className="flex items-start gap-4 text-sm md:text-base text-gray-700 leading-relaxed">
+              <li className="flex items-start gap-4 text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                 <span className="mt-1.5 w-4 h-4 border-2 border-Primary/60 shrink-0" />
                 <span>
-                  <strong>If they won't speak to you</strong>, call Samaritans
-                  on 116 123 yourself, and tell them what's happening. They will
-                  support <em>you</em>, and help you think about what to do
-                  next.
+                  <strong className="text-gray-900 font-bold">
+                    If they won't speak to you
+                  </strong>
+                  , call Samaritans on 116 123 yourself, and tell them what's
+                  happening. They will support <em>you</em>, and help you think
+                  about what to do next.
                 </span>
               </li>
-              <li className="flex items-start gap-4 text-sm md:text-base text-gray-700 leading-relaxed">
+              <li className="flex items-start gap-4 text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                 <span className="mt-1.5 w-4 h-4 border-2 border-Primary/60 shrink-0" />
                 <span>
-                  <strong>You don't have to fix it.</strong> You just have to
-                  stay. Being there is not a small thing.
+                  <strong className="text-gray-900 font-bold">
+                    You don't have to fix it.
+                  </strong>{" "}
+                  You just have to stay. Being there is not a small thing.
                 </span>
               </li>
-              <li className="flex items-start gap-4 text-sm md:text-base text-gray-700 leading-relaxed">
+              <li className="flex items-start gap-4 text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                 <span className="mt-1.5 w-4 h-4 border-2 border-Primary/60 shrink-0" />
                 <span>
                   After tonight, our{" "}

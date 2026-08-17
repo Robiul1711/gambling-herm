@@ -31,18 +31,18 @@ const exposureItems = [
 
 const ItsAllAroundUs = () => {
   return (
-    <section id="all-around-us" className="">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="all-around-us" className="py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Main Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
           5. It's all around us
         </h2>
 
         {/* Intro Paragraph */}
-        <p className="text-[#4b5563] text-[15px] md:text-base leading-relaxed mb-8 max-w-4xl">
+        <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 font-normal">
           If you watch a Premier League match, listen to a sports radio show,
           scroll TikTok, or take public transport, you are being marketed to by
           the gambling industry. The volume and creativity of this marketing is
@@ -51,7 +51,7 @@ const ItsAllAroundUs = () => {
         </p>
 
         {/* Sub Heading */}
-        <h3 className="text-2xl md:text-3xl font-bold text-[#111827] mb-6 tracking-tight">
+        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 tracking-tight">
           What the exposure looks like
         </h3>
 
@@ -60,16 +60,16 @@ const ItsAllAroundUs = () => {
           {exposureItems.map((item, index) => (
             <div
               key={index}
-              className="py-4 md:py-5 text-[14.5px] md:text-base leading-relaxed text-[#4b5563]"
+              className="py-4 md:py-5 text-sm sm:text-base leading-relaxed text-gray-600"
             >
-              <strong className="font-bold text-[#111827]">{item.title}</strong>{" "}
+              <strong className="font-bold text-gray-900">{item.title}</strong>{" "}
               {item.description}
             </div>
           ))}
         </div>
 
         {/* Summary Narrative */}
-        <p className="text-[#4b5563] text-[14.5px] md:text-base leading-relaxed max-w-4xl mb-10">
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-10">
           This matters not because any single advert causes harm, but because the
           population-level effect of constant exposure is to normalise gambling,
           particularly in sport, and to recruit new users, disproportionately from
@@ -77,12 +77,12 @@ const ItsAllAroundUs = () => {
         </p>
 
         {/* Our Position Callout Card */}
-        <div className="bg-[#181818] border-l-[4px] border-[#17a9df] p-6 md:p-8 text-white shadow-md max-w-4xl">
+        <div className="bg-[#181818] border-l-[4px] border-[#17a9df] p-6 md:p-8 text-white shadow-md">
           <h4 className="text-[#17a9df] font-bold text-xs uppercase tracking-wider mb-4">
             OUR POSITION
           </h4>
 
-          <p className="text-white font-bold text-sm md:text-[15px] leading-relaxed">
+          <p className="text-white font-bold text-sm sm:text-base leading-relaxed">
             A statutory ban on gambling sponsorship in sport and broadcast
             (comparable in scope to the tobacco-advertising restrictions phased in
             after 2002) should be the central plank of the next UK gambling

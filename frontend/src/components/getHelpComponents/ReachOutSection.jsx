@@ -25,21 +25,21 @@ const items = [
 
 const ReachOutSection = () => {
   return (
-    <section className="bg-[#262323] py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <section className="bg-[#262323] py-12 md:py-20 text-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Label */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-8 h-[2px] bg-[#00AEEF]" />
-          <span className="text-[#00AEEF] text-sm font-medium">Routes</span>
+          <div className="w-12 h-[3px] bg-[#00AEEF]" />
+          <span className="text-[#00AEEF] text-xs sm:text-sm font-bold uppercase tracking-wider">Routes</span>
         </div>
 
         {/* Heading */}
-        <h2 className="text-white text-2xl  sm:text-[30px] md:text-[48px] font-bold leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-white leading-tight tracking-tight mb-4">
           When you reach out, here's what won't happen.
         </h2>
 
         {/* Description */}
-        <p className="mt-8 text-[#D3D3D3] text-lg leading-9 max-w-5xl">
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-normal mb-10">
           Lots of people aren't. Harm exists on a spectrum, and many people
           who'd benefit from support don't think of themselves as having a
           "problem". A short, private set of questions can help you reflect on
@@ -47,14 +47,14 @@ const ReachOutSection = () => {
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-14 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {items.map((item, index) => (
-            <div key={index}>
-              <h3 className="text-white text-[28px] font-bold leading-tight mb-5">
+            <div key={index} className="flex flex-col">
+              <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight mb-3 tracking-tight">
                 {item.title}
               </h3>
 
-              <p className="text-[#D0D0D0] text-lg leading-9">
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
                 {item.description}
               </p>
             </div>

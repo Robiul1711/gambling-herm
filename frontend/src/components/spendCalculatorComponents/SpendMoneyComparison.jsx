@@ -61,8 +61,8 @@ const SpendMoneyComparison = ({
         <p>
           An illustrative UK average for a year of food shopping for a family of
           four is around {fmt(foodAnnual)}. Your yearly figure of{" "}
-          {fmt(yearlyTotal)} is close to <strong>{ratio.toFixed(1)}&times;</strong>{" "}
-          that.
+          {fmt(yearlyTotal)} is close to{" "}
+          <strong>{ratio.toFixed(1)}&times;</strong> that.
         </p>
       );
     }
@@ -72,8 +72,8 @@ const SpendMoneyComparison = ({
       const count = yearlyTotal / holidayCost;
       return (
         <p>
-          An illustrative UK family holiday costs around {fmt(holidayCost)}. Your
-          yearly figure of {fmt(yearlyTotal)} could cover roughly{" "}
+          An illustrative UK family holiday costs around {fmt(holidayCost)}.
+          Your yearly figure of {fmt(yearlyTotal)} could cover roughly{" "}
           <strong>{count.toFixed(1)}</strong> holidays like that.
         </p>
       );
@@ -125,12 +125,12 @@ const SpendMoneyComparison = ({
         <div className="w-10 h-[3px] bg-[#0092D0] mb-4" />
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111827] mb-3 tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
           What else that money could be
         </h2>
 
         {/* Description */}
-        <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-6 max-w-3xl">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 font-normal">
           Pick a comparison to see how your yearly figure lines up against
           everyday costs. These are illustrative UK averages, not a judgement on
           how you spend your own money, and your own costs may be higher or
@@ -149,7 +149,7 @@ const SpendMoneyComparison = ({
             id="comparisonSelect"
             value={choice}
             onChange={(e) => setChoice(e.target.value)}
-            className="w-full sm:max-w-lg px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-800 text-sm font-medium focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all shadow-xs cursor-pointer"
+            className="w-full sm:max-w-lg px-3.5 py-2.5 bg-white border border-gray-300  text-gray-800 text-sm font-medium focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all shadow-xs cursor-pointer"
           >
             {COMPARISON_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value}>

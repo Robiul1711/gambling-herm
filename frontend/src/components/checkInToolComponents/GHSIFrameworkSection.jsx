@@ -25,42 +25,42 @@ const frameworkPoints = [
 
 const GHSIFrameworkSection = () => {
   return (
-    <section className="py-16 lg:py-24 border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-5">
+    <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top line */}
-        <div className="w-8 h-[2px] bg-[#0098D8] mb-6" />
+        <div className="w-12 h-[3px] bg-[#0093D0] mb-6" />
 
         {/* Heading */}
-        <h2 className="text-[32px] md:text-[48px] font-bold text-[#2A2A2A] leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight">
           About the GHSI Holistic Framework of Harm
         </h2>
 
         {/* Intro */}
-        <div className="mt-8 space-y-6">
-          <p className="text-[#73768B] text-base md:text-lg leading-relaxed">
+        <div className="mt-8 space-y-5">
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-normal">
             The Gambling Harms Severity Index (GHSI) was developed by the
             National Centre for Social Research (NatCen) and published in 2025.
             It is the newer, broader UK measurement framework for gambling-related
             harm.
           </p>
 
-          <p className="text-[#2A2A2A] text-lg md:text-xl font-semibold leading-relaxed">
+          <p className="text-gray-900 text-lg sm:text-xl font-bold leading-relaxed">
             What makes the GHSI different from the older PGSI:
           </p>
         </div>
 
         {/* Points */}
-        <div className="mt-8 border-t border-dashed border-[#D4D8E0]">
+        <div className="mt-8 border-t border-dashed border-gray-200">
           {frameworkPoints.map((point, index) => (
             <div
               key={index}
-              className="py-6 border-b border-dashed border-[#D4D8E0]"
+              className="py-5 border-b border-dashed border-gray-200"
             >
-              <p className="text-base md:text-lg leading-relaxed">
-                <span className="font-semibold text-[#2A2A2A]">
+              <p className="text-base sm:text-lg leading-relaxed">
+                <span className="font-bold text-gray-900 mr-2">
                   {point.title}
-                </span>{" "}
-                <span className="text-[#73768B]">
+                </span>
+                <span className="text-gray-600">
                   {point.description}
                 </span>
               </p>
@@ -69,23 +69,23 @@ const GHSIFrameworkSection = () => {
         </div>
 
         {/* Bottom paragraph */}
-        <div className="mt-8">
-          <p className="text-[#2A2A2A] text-base md:text-lg leading-relaxed">
+        <div className="mt-10">
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
             Our check-in tools draw on the GHSI's domain structure and its
             inclusive-of-affected-others stance, while keeping the question count
             low enough to be usable in three minutes. They are reflection prompts
             (not clinical diagnostics) and don't replace a conversation with the
             National Gambling Helpline{" "}
-            <span className="font-semibold">(0808 8020 133)</span> or a{" "}
-            <span className="font-semibold">
+            <a href="tel:08088020133" className="font-bold text-gray-900 hover:text-Primary underline">0808 8020 133</a> or a{" "}
+            <span className="font-bold text-gray-900">
               Specialist NHS Gambling Service.
             </span>
           </p>
         </div>
 
         {/* Source */}
-        <div className="mt-10">
-          <p className="text-xs md:text-sm italic text-[#0e0e0f] leading-relaxed">
+        <div className="mt-8 pt-6 border-t border-gray-100">
+          <p className="text-xs sm:text-sm text-gray-500 leading-relaxed italic">
             Source: The Gambling Harms Severity Index (GHSI): Development of a
             Holistic Framework and Measurement Instruments for Gambling Related
             Harms and Their Impact. National Centre for Social Research, 2025.

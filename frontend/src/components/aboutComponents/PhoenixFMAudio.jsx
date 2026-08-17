@@ -92,7 +92,7 @@ export default function PhoenixFMAudio() {
             {clipsToShow.map((clip, index) => (
               <div
                 key={index}
-                className="bg-[#f4f6f8] border-l-[4px] border-[#156E94] rounded-lg p-5 md:p-6 flex flex-col justify-between hover:shadow-sm transition-shadow duration-300"
+                className="bg-[#f4f6f8] border-l-[4px] border-[#156E94]  p-5 md:p-6 flex flex-col justify-between hover:shadow-sm transition-shadow duration-300"
               >
                 <div>
                   {/* Tag */}
@@ -123,4 +123,3 @@ export default function PhoenixFMAudio() {
     </section>
   );
 }
-

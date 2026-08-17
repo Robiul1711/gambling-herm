@@ -50,7 +50,7 @@ const GamblingTactics = () => {
           description={renderDescription()}
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}/>
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <GamblingTacticsLayout />
       </div>
      <OurWorkCommonContact

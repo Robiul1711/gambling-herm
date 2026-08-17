@@ -116,18 +116,18 @@ const changesList = [
 
 const WhatWeWantChanged = () => {
   return (
-    <section id="what-we-want-changed" className="py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="what-we-want-changed" className="py-12 md:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Header Title */}
-        <h2 className="text-3xl md:text-[40px] font-bold leading-tight mb-6 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
           What we want changed
         </h2>
 
         {/* Section Context Intro Paragraph */}
-        <p className="text-[15px] md:text-base leading-7 md:leading-8 text-[#2d2d2d] mb-12">
+        <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-12">
           The positive regulatory positions GHUK supports. These are coherent
           (they describe a single, whole-system response to gambling harm) and
           they are anchored in the public-health evidence, not in any particular
@@ -138,40 +138,40 @@ const WhatWeWantChanged = () => {
         </p>
 
         {/* Interactive Ordered List Blocks */}
-        <div className="space-y-10 ">
+        <div className="space-y-8">
           {changesList.map((item) => (
-            <div key={item.number} className="flex gap-5 items-start">
+            <div key={item.number} className="flex gap-4 sm:gap-5 items-start">
               {/* Number Badge Counter */}
-              <div className="w-9 h-9 bg-[#0e7fad] text-white flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm">
+              <div className="w-9 h-9 bg-[#0e7fad] text-white flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm rounded-full shadow-xs">
                 {item.number}
               </div>
 
               {/* Text Description Segment Container */}
-              <div className="space-y-3">
-                <h4 className="text-base md:text-[17px] font-bold text-[#2d2d2d] leading-snug">
+              <div className="space-y-2 flex-1">
+                <h4 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug tracking-tight">
                   {item.title}
                 </h4>
-                <p className="text-[#687076] text-sm md:text-[15px] leading-relaxed md:leading-7">
+                <div className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
                   {item.description}
-                </p>
+                </div>
 
                 {/* Light Blue Callout Nesting Specific to Item 2 */}
                 {item.number === 2 && (
                   <>
-                    <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 !mt-6">
-                      <h5 className="text-[#17a9df] text-sm font-semibold tracking-normal mb-3">
+                    <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] rounded-r-xl p-6 md:p-8 !mt-6 shadow-xs">
+                      <h5 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
                         Why this position is foundational
                       </h5>
-                      <p className="text-[#687076] text-sm leading-relaxed md:leading-7">
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
                         Every other ask on this page (advertising restrictions,
                         product-safety standards, affordability checks,
                         algorithmic risk-flagging) depends on a mechanism that
                         turns operator failure into legal consequence. Without a
-                        statutory duty of care, regulatory rules are merely codes
-                        the operator can negotiate compliance with. With one, they
-                        become standards an operator can be sued for failing. This
-                        is the change that makes the rest of the public-health
-                        response enforceable. Advocacy credit:{" "}
+                        statutory duty of care, regulatory rules are merely
+                        codes the operator can negotiate compliance with. With
+                        one, they become standards an operator can be sued for
+                        failing. This is the change that makes the rest of the
+                        public-health response enforceable. Advocacy credit:{" "}
                         <span className="italic">
                           Martin Jones has been one of the most consistent UK
                           voices arguing for statutory duty of care as the
@@ -185,23 +185,21 @@ const WhatWeWantChanged = () => {
                       <img
                         src={brothersImg}
                         alt="Still from GHUK's Brothers safeguarding film"
-                        className="w-full max-w-[650px]  object-cover shadow-sm h-[300px] sm:h-[400px]"
+                        className="w-full max-w-[650px] object-cover  shadow-xs h-[300px] sm:h-[400px]"
                       />
-                      <p className="mt-3 text-xs md:text-sm text-center text-[#687076] italic max-w-[650px] leading-relaxed">
+                      <p className="mt-3 text-xs sm:text-sm text-center text-gray-500 italic max-w-[650px] leading-relaxed">
                         Still from GHUK's Brothers Gambling Harm safeguarding
                         film. An older brother carries what the product
-                        produced. A statutory duty of care is what turns that into
-                        legal consequence for the operator.
+                        produced. A statutory duty of care is what turns that
+                        into legal consequence for the operator.
                       </p>
                     </div>
                   </>
                 )}
-      
               </div>
             </div>
           ))}
         </div>
-        
       </div>
     </section>
   );

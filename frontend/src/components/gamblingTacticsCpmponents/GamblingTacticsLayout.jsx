@@ -73,12 +73,12 @@ const GamblingTacticsLayout = () => {
           {/* Why this exists — intro block */}
           <div
             id="why-this-exists"
-            className="border-l-4 border-[#0093D0] bg-[#eef7fc] p-6 md:p-8 space-y-4 rounded-r-sm scroll-mt-28"
+            className="border-l-4 border-[#0093D0] bg-[#eef7fc] p-6 sm:p-8 md:p-10 space-y-4 rounded-r-xl shadow-xs scroll-mt-28"
           >
-            <h4 className="text-[#0093D0] font-bold text-xs tracking-wider uppercase">
+            <h4 className="text-[#0093D0] font-bold text-xs sm:text-sm tracking-wider uppercase">
               WHY THIS EXISTS
             </h4>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
               We, the research team at Gambling Harm UK, built{" "}
               <em className="italic">Gambling Tactics</em> following a review of the
               vitally important <em className="italic">Tobacco Tactics</em> repository.
@@ -92,7 +92,7 @@ const GamblingTacticsLayout = () => {
               or consider the years of healthy life lost due to gambling harm. Gambling
               harm continues to be a neglected public-health issue.
             </p>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
               The repository is published to make those tactics visible. Once you can see the
               playbook, the policy debate becomes very different.
             </p>

@@ -21,8 +21,11 @@ const OperatorMarketingSection = () => {
   ];
 
   return (
-    <section id="operator-marketing" className="scroll-mt-24 w-full py-12 md:py-16 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
+    <section
+      id="operator-marketing"
+      className="scroll-mt-24 w-full py-12 md:py-16 bg-white"
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
@@ -32,8 +35,10 @@ const OperatorMarketingSection = () => {
         </h2>
 
         {/* Intro */}
-        <p className="text-[15px] sm:text-base text-gray-700 leading-relaxed  mb-8">
-          Gambling operators hold your contact details, and under UK direct-marketing rules they must stop contacting you once you tell them to.
+        <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-8">
+          Gambling operators hold your contact details, and under UK
+          direct-marketing rules they must stop contacting you once you tell
+          them to.
         </p>
 
         {/* Steps List */}
@@ -41,16 +46,16 @@ const OperatorMarketingSection = () => {
           {steps.map((step) => (
             <div
               key={step.num}
-              className="bg-white border border-gray-200/90 rounded-md p-5 sm:p-6 flex items-start gap-4 shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
+              className="bg-white border border-gray-200/90  p-5 sm:p-6 flex items-start gap-4 shadow-xs"
             >
-              <span className="w-7 h-7 rounded-full bg-[#156E94] text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+              <span className="w-8 h-8 rounded-full bg-[#156E94] text-white flex items-center justify-center font-bold text-sm shrink-0 mt-0.5 shadow-xs">
                 {step.num}
               </span>
               <div>
-                <h3 className="font-bold  text-gray-900 mb-1">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 leading-snug">
                   {step.title}
                 </h3>
-                <p className="text-[14px] text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                   {step.desc}
                 </p>
               </div>
@@ -64,19 +69,24 @@ const OperatorMarketingSection = () => {
             href="https://ico.org.uk/make-a-complaint/nuisance-calls-and-messages/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-medium text-[13.5px] sm:text-sm py-2.5 px-5 transition-colors"
+            className="inline-flex items-center gap-2 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold text-sm py-2.5 px-5  transition-colors"
           >
             Report unwanted marketing to the ICO →
           </a>
         </div>
 
         {/* Note */}
-        <p className="text-[13.5px] sm:text-[14px] text-gray-600 leading-relaxed max-w-3xl">
+        <p className="text-sm text-gray-600 leading-relaxed">
           Putting a{" "}
-          <Link to="/get-help/blocking-tools" className="underline hover:text-[#0082c3] text-gray-900 font-medium">
+          <Link
+            to="/get-help/blocking-tools"
+            className="underline hover:text-[#0082c3] text-gray-900 font-semibold"
+          >
             block in place
           </Link>
-          , such as registering with GAMSTOP, also stops marketing from participating operators, since they're required to suppress it once you've self-excluded.
+          , such as registering with GAMSTOP, also stops marketing from
+          participating operators, since they're required to suppress it once
+          you've self-excluded.
         </p>
       </div>
     </section>

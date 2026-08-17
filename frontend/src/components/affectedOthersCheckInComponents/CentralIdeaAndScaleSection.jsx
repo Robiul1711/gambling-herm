@@ -2,11 +2,11 @@ import React from "react";
 
 const CentralIdeaAndScaleSection = () => {
   return (
-    <section className="w-full bg-white py-14 sm:py-18 md:py-20 border-b border-gray-100">
+    <section className="w-full bg-white py-12 md:py-16 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* The Central Idea Callout Box */}
-        <div className="border-l-[3.5px] border-[#0082c3] bg-[#edf7fc] rounded-r-xl p-6 sm:p-8 md:p-10">
-          <span className="text-[#0082c3] font-bold text-xs uppercase tracking-widest block mb-4">
+        <div className="border-l-[4px] border-[#0082c3] bg-[#edf7fc] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-xs">
+          <span className="text-[#0082c3] font-bold text-xs sm:text-sm uppercase tracking-wider block mb-3">
             The Central Idea
           </span>
 
@@ -33,12 +33,12 @@ const CentralIdeaAndScaleSection = () => {
         </div>
 
         {/* The Scale Section */}
-        <div className="mt-14 sm:mt-18 md:mt-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+        <div className="mt-12 sm:mt-16 md:mt-20">
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
             The scale
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
             Around{" "}
             <strong className="font-bold text-gray-900">
               9.0% of UK adults, about 4.9 million people

@@ -36,28 +36,25 @@ const PositionAndVideoSection = () => {
     "GHUK's clinical training film. A 30–60-second opportunistic conversation, modelled in primary care.";
 
   return (
-    <div className="w-full section-padding-y mx-auto max-w-5xl px-4 sm:px-6">
+    <div className="w-full py-12 md:py-16 mx-auto max-w-5xl px-4 sm:px-6">
       {/* Responsive layout container */}
       <div className="flex flex-col lg:flex-row items-stretch gap-8 md:gap-12">
         {/* Left Column: Callout Box */}
         <div className="flex-1 flex">
-          <div className="relative w-full bg-[#f0f9ff] p-8 md:p-10 flex flex-col justify-center">
-            {/* Solid Left Border Element */}
-            <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#0082c3]"></div>
-
+          <div className="relative w-full bg-[#f0f9ff]  border-l-[4px] border-[#0082c3] p-6 sm:p-8 md:p-10 flex flex-col justify-center shadow-xs">
             {/* Tagline */}
-            <span className="text-[#0082c3] text-sm font-semibold tracking-wide mb-4 inline-block">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0082c3] mb-3 inline-block">
               {tagline}
             </span>
 
             {/* Paragraph 1 */}
-            <p className="text-[15px] md:text-16 text-gray-500 leading-relaxed mb-6">
-              <span className="font-bold text-gray-800">{boldText}</span>{" "}
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal mb-4">
+              <span className="font-bold text-gray-900">{boldText}</span>{" "}
               {desc1}
             </p>
 
             {/* Paragraph 2 */}
-            <p className="text-[15px] md:text-16 text-gray-500 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
               {desc2}
             </p>
           </div>
@@ -65,7 +62,7 @@ const PositionAndVideoSection = () => {
 
         {/* Right Column: Custom Video Player Mock */}
         <div className="flex-1 flex items-center justify-center">
-          <div className="w-full bg-black overflow-hidden shadow-xl flex flex-col">
+          <div className="w-full bg-black  overflow-hidden shadow-md flex flex-col">
             {/* Video */}
             <video
               key={videoUrl}
@@ -78,7 +75,7 @@ const PositionAndVideoSection = () => {
             />
 
             {/* Video Meta Title Banner */}
-            <div className="bg-[#141414] p-4 text-xs md:text-sm text-gray-300 border-t border-gray-800">
+            <div className="bg-[#141414] p-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800">
               <p className="leading-relaxed">
                 <span className="font-bold text-white">{captionBold}</span> —{" "}
                 <span className="italic text-gray-400">{captionItalic}</span>

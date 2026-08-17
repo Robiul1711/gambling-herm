@@ -56,13 +56,13 @@ const AudienceCards = () => {
   ];
 
   return (
-    <div className="w-full section-padding-y max-w-5xl mx-auto px-4 sm:px-6">
+    <div className="w-full py-12 md:py-16 max-w-5xl mx-auto px-4 sm:px-6">
       {/* Responsive Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cardsData.map((card) => (
           <div
             key={card.id}
-            className="flex flex-col justify-between border border-gray-300 p-6 md:p-8 hover:shadow-md transition-shadow duration-300 bg-white"
+            className="flex flex-col justify-between  border border-gray-200/90 p-6 md:p-8 hover:shadow-md transition-shadow duration-300 bg-white shadow-xs"
           >
             {/* Top Content */}
             <div>
@@ -75,21 +75,21 @@ const AudienceCards = () => {
               </div>
 
               {/* Heading */}
-              <h3 className="text-[26px] font-bold text-gray-800 leading-tight mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug mb-4 tracking-tight">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm md:text-[15px] text-gray-500 leading-relaxed mb-8">
+              <div className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal mb-8">
                 {card.description}
-              </p>
+              </div>
             </div>
 
             {/* Bottom Button */}
             <div>
               <Link
                 to={card.to}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0a6b94] hover:bg-[#085575] text-white font-medium text-sm transition-colors duration-200 group"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0a6b94] hover:bg-[#085575] text-white font-semibold text-sm  transition-colors duration-200 group"
               >
                 {card.btnText}
                 <span className="transform group-hover:translate-x-1 transition-transform duration-200">

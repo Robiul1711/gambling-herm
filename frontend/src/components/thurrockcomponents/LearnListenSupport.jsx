@@ -45,15 +45,14 @@ export default function LearnListenSupport() {
 
   return (
     <section className="w-full py-12 md:py-16 bg-white border-t border-gray-200/40">
-      <div className="max-w-5xl mx-auto px-4  text-[#1f2937]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-[#1f2937]">
         {/* Header */}
         <header className="mb-10">
-          <div className="w-12 h-1 bg-[#156E94] mb-4"></div>{" "}
-          {/* Teal accent bar */}
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+          <div className="w-12 h-[3px] bg-[#156E94] mb-4"></div>
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight text-gray-900 mb-4 leading-tight">
             Learn, listen and stay supported
           </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
             Explore resources to help you understand gambling harms and hear
             from others with lived experience.
           </p>
@@ -64,13 +63,13 @@ export default function LearnListenSupport() {
           {podcasts.map((podcast, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-150/80 p-5 lg:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow duration-300 min-h-[300px]"
+              className="bg-white border border-gray-200/90  p-6 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow duration-300 min-h-[260px]"
             >
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 leading-tight tracking-tight">
                   {podcast.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-[15px] mb-6">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-6 font-normal">
                   {podcast.description}
                 </p>
               </div>
@@ -79,7 +78,7 @@ export default function LearnListenSupport() {
                   href={podcast.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm py-3 px-5 transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs"
                 >
                   {podcast.buttonText}
                   <span>&rarr;</span>
@@ -94,20 +93,20 @@ export default function LearnListenSupport() {
           {resources.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-150/80 p-5 lg:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow duration-300 min-h-[220px]"
+              className="bg-white border border-gray-200/90  p-6 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow duration-300 min-h-[200px]"
             >
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-[15px] mb-6">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-6 font-normal">
                   {item.description}
                 </p>
               </div>
               <div className="mt-auto">
                 <Link
                   to={item.to}
-                  className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm py-3 px-5 transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs"
                 >
                   {item.buttonText}
                   <span>&rarr;</span>

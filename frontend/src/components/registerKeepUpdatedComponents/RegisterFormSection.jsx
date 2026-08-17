@@ -37,7 +37,7 @@ const RegisterFormSection = () => {
       console.error("Registration submission error:", err);
       setServerError(
         err?.response?.data?.message ||
-          "Failed to submit your registration. Please try again."
+          "Failed to submit your registration. Please try again.",
       );
     }
   };
@@ -47,9 +47,10 @@ const RegisterFormSection = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Success Alert */}
         {serverSuccess && (
-          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md text-sm flex items-center justify-between">
+          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800  text-sm flex items-center justify-between">
             <span>
-              Thank you for registering! We've saved your preferences and will keep you updated.
+              Thank you for registering! We've saved your preferences and will
+              keep you updated.
             </span>
             <button
               onClick={() => setServerSuccess(false)}
@@ -62,7 +63,7 @@ const RegisterFormSection = () => {
 
         {/* Error Alert */}
         {serverError && (
-          <div className="mb-6 p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-md text-sm flex items-center justify-between">
+          <div className="mb-6 p-4 bg-rose-50 border border-rose-200 text-rose-800  text-sm flex items-center justify-between">
             <span>{serverError}</span>
             <button
               onClick={() => setServerError("")}
@@ -86,7 +87,7 @@ const RegisterFormSection = () => {
               id="name"
               type="text"
               {...register("name", { required: "Please enter your name" })}
-              className={`w-full px-3.5 py-2.5 text-sm border rounded-md outline-none transition-colors ${
+              className={`w-full px-3.5 py-2.5 text-sm border  outline-none transition-colors ${
                 errors.name
                   ? "border-red-500 focus:border-red-500"
                   : "border-gray-300 focus:border-[#0093D0]"
@@ -115,14 +116,16 @@ const RegisterFormSection = () => {
                   message: "Please enter a valid email address",
                 },
               })}
-              className={`w-full px-3.5 py-2.5 text-sm border rounded-md outline-none transition-colors ${
+              className={`w-full px-3.5 py-2.5 text-sm border  outline-none transition-colors ${
                 errors.email
                   ? "border-red-500 focus:border-red-500"
                   : "border-gray-300 focus:border-[#0093D0]"
               }`}
             />
             {errors.email && (
-              <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>
+              <p className="text-xs text-red-500 mt-1">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
@@ -137,7 +140,7 @@ const RegisterFormSection = () => {
             <select
               id="tailorCategory"
               {...register("tailorCategory")}
-              className="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-md bg-white text-gray-800 outline-none focus:border-[#0093D0] cursor-pointer"
+              className="w-full px-3.5 py-2.5 text-sm border border-gray-300  bg-white text-gray-800 outline-none focus:border-[#0093D0] cursor-pointer"
             >
               <option value="Prefer not to say">Prefer not to say</option>
               <option value="I have been harmed by my own gambling">
@@ -165,7 +168,7 @@ const RegisterFormSection = () => {
             <label className="block text-xs md:text-sm font-semibold text-gray-800 mb-1.5">
               What would you like?
             </label>
-            <div className="border border-gray-200 rounded-md p-4 space-y-3 bg-white">
+            <div className="border border-gray-200  p-4 space-y-3 bg-white">
               <label className="flex items-start gap-3 cursor-pointer text-xs md:text-sm text-gray-800 leading-snug">
                 <input
                   type="checkbox"
@@ -182,7 +185,8 @@ const RegisterFormSection = () => {
                   className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer accent-[#0093D0]"
                 />
                 <span>
-                  Register my interest in GHUK membership (launching later this year)
+                  Register my interest in GHUK membership (launching later this
+                  year)
                 </span>
               </label>
             </div>
@@ -199,8 +203,8 @@ const RegisterFormSection = () => {
                 className="mt-1 h-4 w-4 rounded border-gray-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer accent-[#0093D0]"
               />
               <span>
-                I agree to GHUK contacting me by email. You can unsubscribe at any
-                time. See our{" "}
+                I agree to GHUK contacting me by email. You can unsubscribe at
+                any time. See our{" "}
                 <Link
                   to="/privacy"
                   className="text-[#0093D0] underline hover:text-[#0076A8] font-medium"
@@ -222,7 +226,7 @@ const RegisterFormSection = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#0076A8] hover:bg-[#005f88] disabled:opacity-60 text-white px-6 py-2.5 rounded-md font-semibold text-sm transition-colors duration-150 cursor-pointer shadow-sm flex items-center gap-2"
+              className="bg-[#0076A8] hover:bg-[#005f88] disabled:opacity-60 text-white px-6 py-2.5  font-semibold text-sm transition-colors duration-150 cursor-pointer shadow-sm flex items-center gap-2"
             >
               {isSubmitting ? (
                 <>

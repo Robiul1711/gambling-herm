@@ -100,17 +100,17 @@ const TacticOne = () => {
   return (
     <section
       id="tactic-1"
-      className="scroll-mt-28 space-y-8 border-t border-gray-100 pt-8"
+      className="scroll-mt-28 space-y-6 border-t border-gray-100 pt-8"
     >
       {/* Chapter Tag & Main Heading */}
       <div className="space-y-2">
-        <span className="text-xs font-bold text-[#0093D0] uppercase tracking-widest block">
+        <span className="text-xs sm:text-sm font-bold text-[#0093D0] uppercase tracking-wider block">
           TACTIC 1
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight leading-tight">
           Arguments and language
         </h2>
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed pt-2">
+        <p className="text-gray-600 text-base sm:text-lg leading-relaxed pt-2 font-normal">
           The most reliable industry tactic is linguistic. Specific framings, repeated for
           decades, have shifted what the UK public conversation treats as the default position. We
           name the framings below and the public-health alternative for each.
@@ -118,19 +118,19 @@ const TacticOne = () => {
       </div>
 
       {/* Dark Quote Cards */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         {tacticCards.map((card, idx) => (
           <div
             key={idx}
-            className="bg-[#1c1d1f] text-white border-l-4 border-[#0093D0] p-6 md:p-8 rounded-r-sm space-y-3"
+            className="bg-[#181818] text-white border-l-4 border-[#0093D0] p-6 sm:p-8 rounded-r-xl shadow-md space-y-3"
           >
-            <h4 className="text-[#0093D0] font-bold text-xs tracking-wider uppercase">
+            <h4 className="text-[#0093D0] font-bold text-xs sm:text-sm tracking-wider uppercase">
               {card.quote}
             </h4>
-            <p className="text-xs text-gray-300 italic border-b border-gray-700 pb-3 mb-3">
+            <p className="text-xs sm:text-sm text-gray-400 italic border-b border-gray-800 pb-3 mb-3 font-normal">
               {card.subQuote}
             </p>
-            <div className="text-sm md:text-base text-gray-200 leading-relaxed">
+            <div className="text-sm sm:text-base text-gray-300 leading-relaxed font-normal">
               {card.body}
             </div>
           </div>

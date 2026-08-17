@@ -61,8 +61,8 @@ const JoinResearchNetworkSection = () => {
               href={getMailtoUrl(item.subject, item.label)}
               className={
                 item.isOutline
-                  ? "inline-block px-6 py-2.5 rounded border border-gray-800 text-gray-900 text-sm md:text-[15px] font-medium hover:bg-gray-50 transition-colors"
-                  : "inline-block px-6 py-2.5 rounded bg-[#156E94] text-white text-sm md:text-[15px] font-medium hover:bg-[#115877] transition-colors"
+                  ? "inline-block px-6 py-2.5  border border-gray-800 text-gray-900 text-sm md:text-[15px] font-medium hover:bg-gray-50 transition-colors"
+                  : "inline-block px-6 py-2.5  bg-[#156E94] text-white text-sm md:text-[15px] font-medium hover:bg-[#115877] transition-colors"
               }
             >
               {item.label}

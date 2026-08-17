@@ -66,7 +66,7 @@ const CampaignProposals = () => {
           {proposals.map((proposal) => (
             <div
               key={proposal.id}
-              className="border border-gray-200 rounded-xl p-6 md:p-8 bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              className="border border-gray-200  p-6 md:p-8 bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               {/* Card Body Details */}
               <div>
@@ -109,4 +109,3 @@ const CampaignProposals = () => {
 };
 
 export default CampaignProposals;
-

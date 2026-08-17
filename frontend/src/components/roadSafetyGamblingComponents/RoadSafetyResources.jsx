@@ -5,7 +5,8 @@ const resourcesList = [
   {
     number: 1,
     title: "Road Safety Research Report",
-    description: "The full findings from the study of UK driving licence holders.",
+    description:
+      "The full findings from the study of UK driving licence holders.",
   },
   {
     number: 2,
@@ -63,7 +64,7 @@ const RoadSafetyResources = () => {
           {resourcesList.map((item) => (
             <div
               key={item.number}
-              className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 flex items-start gap-4 sm:gap-5 shadow-xs hover:shadow-md transition-shadow"
+              className="bg-white border border-slate-200/90  p-5 sm:p-6 flex items-start gap-4 sm:gap-5 shadow-xs hover:shadow-md transition-shadow"
             >
               {/* Number Circle Badge */}
               <div className="w-8 h-8 rounded-full bg-[#156E94] text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
@@ -87,14 +88,14 @@ const RoadSafetyResources = () => {
         <div className="flex flex-wrap items-center gap-4 pt-2">
           <Link
             to="/register-keep-updated"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-md transition-colors shadow-sm inline-block"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm inline-block"
           >
             Register &amp; access the resources
           </Link>
 
           <Link
             to="/about#contact"
-            className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-md transition-colors shadow-sm inline-block"
+            className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm inline-block"
           >
             Request training &rarr;
           </Link>

@@ -41,18 +41,18 @@ const AffectedOthersNoticingSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-14 sm:py-18 md:py-20 border-b border-gray-100">
+    <section className="w-full bg-white py-12 md:py-16 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
-        <div className="w-12 h-[3.5px] bg-[#0082c3] mb-6"></div>
+        <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
           Things worth noticing
         </h2>
 
         {/* Subtitle */}
-        <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal mb-10 ">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-8">
           These are observations, not a quiz, and there's no threshold to cross
           before they count. If any of this feels familiar, that familiarity is
           the signal.
@@ -63,18 +63,18 @@ const AffectedOthersNoticingSection = () => {
           {observations.map((item, index) => (
             <div
               key={index}
-              className="py-4 sm:py-5 border-b border-gray-200/80 flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-8"
+              className="py-4 sm:py-4.5 border-b border-gray-200/80 flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-8"
             >
               {/* Category Label */}
               <div className="w-full sm:w-36 flex-shrink-0">
-                <span className="text-[#0082c3] font-bold text-xs tracking-wider uppercase">
+                <span className="text-[#0082c3] font-bold text-xs sm:text-sm tracking-wider uppercase">
                   {item.category}
                 </span>
               </div>
 
               {/* Description */}
               <div className="flex-1">
-                <p className="text-[15px] sm:text-base text-gray-800 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                   {item.text}
                 </p>
               </div>

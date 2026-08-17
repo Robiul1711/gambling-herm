@@ -26,12 +26,12 @@ const SpendUncapturedFactors = () => {
         <div className="w-10 h-[3px] bg-[#0092D0] mb-4" />
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111827] mb-3 tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
           What this number doesn't capture
         </h2>
 
         {/* Intro */}
-        <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-6">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 font-normal">
           Money is one part of the picture. This calculator can't show you:
         </p>
 

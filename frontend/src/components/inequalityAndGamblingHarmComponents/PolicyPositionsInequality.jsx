@@ -2,26 +2,26 @@ import React from "react";
 
 const PolicyPositionsInequality = () => {
   return (
-    <div className="py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <div className="py-12 md:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Dark Policy Background Card */}
-        <div className="bg-[#181818] rounded-r-xl overflow-hidden shadow-xl border-l-[4px] border-[#17a9df]">
-          <div className="p-8 md:p-10">
+        <div className="bg-[#181818] rounded-r-xl overflow-hidden shadow-md border-l-[4px] border-[#17a9df]">
+          <div className="p-6 sm:p-8 md:p-10">
             {/* Callout Header */}
-            <h4 className="text-[#17a9df] text-xs md:text-sm font-bold tracking-wider uppercase mb-6">
+            <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold tracking-wider uppercase mb-5">
               OUR POLICY POSITIONS ON INEQUALITY
             </h4>
 
             {/* Intro text */}
-            <p className="text-gray-200 font-medium text-[15px] leading-relaxed mb-6">
+            <p className="text-white font-bold text-base sm:text-lg leading-relaxed mb-6">
               Three asks of the UK gambling-harm response:
             </p>
 
             {/* List of Ordered Asks */}
-            <div className="space-y-6 text-[15px] leading-relaxed text-gray-300">
+            <div className="space-y-5 text-sm sm:text-base leading-relaxed text-gray-300 font-normal">
               {/* Ask 1 */}
               <p>
                 <strong className="text-white font-bold">

@@ -17,7 +17,7 @@ const SignInFormSection = () => {
       <div className="max-w-2xl mx-auto">
         {/* Success / Info Alert if simulated submit */}
         {isSubmitted && (
-          <div className="mb-8 p-4 bg-sky-50 border border-sky-200 text-sky-800 rounded-md text-sm flex items-center justify-between max-w-lg shadow-xs">
+          <div className="mb-8 p-4 bg-sky-50 border border-sky-200 text-sky-800  text-sm flex items-center justify-between max-w-lg shadow-xs">
             <span>
               Sign in is currently in staged rollout. A colleague will verify
               your access soon.
@@ -44,7 +44,7 @@ const SignInFormSection = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder=""
               required
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
+              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
             />
             <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
               Use the email address you registered with.
@@ -62,7 +62,7 @@ const SignInFormSection = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder=""
               required
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
+              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
             />
           </div>
 
@@ -93,7 +93,7 @@ const SignInFormSection = () => {
           <div className="pt-2">
             <button
               type="submit"
-              className="bg-Primary hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3 rounded-md transition-colors shadow-sm cursor-pointer inline-block"
+              className="bg-Primary hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3  transition-colors shadow-sm cursor-pointer inline-block"
             >
               Sign in
             </button>
@@ -140,8 +140,8 @@ const SignInFormSection = () => {
             Membership is being rolled out
           </h3>
           <p className="text-slate-700 text-sm leading-relaxed font-normal">
-            We are rolling membership and the members' area out in stages. If you
-            need something from us before your access is set up, email{" "}
+            We are rolling membership and the members' area out in stages. If
+            you need something from us before your access is set up, email{" "}
             <a
               href="mailto:hello@gamblingharm.com"
               className="underline font-semibold text-slate-900 hover:text-Primary transition-colors"

@@ -10,22 +10,22 @@ const questions = [
 
 const HarmfulGamblingSection = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 section-padding-y">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
       {/* Heading */}
-      <h2 className="text-[28px] xs:text-[34px] sm:text-[44px] md:text-[48px] font-bold text-[#252525] leading-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
         Not sure if your gambling is harmful?
       </h2>
 
       {/* Description */}
-      <p className="mt-8 text-base sm:text-lg leading-relaxed sm:leading-9 text-[#72768b] max-w-3xl">
+      <p className="text-base sm:text-lg leading-relaxed text-gray-600 font-normal mb-8">
         Lots of people aren't. Harm exists on a spectrum, and many people who'd
         benefit from support don't think of themselves as having a "problem". A
         short, private set of questions can help you reflect on where you are.
       </p>
 
       {/* Questions Card */}
-      <div className="mt-12 bg-[#e7f2f8] border-l-4 border-[#0093d0] p-5 sm:p-8 md:p-10">
-        <h3 className="text-xl sm:text-2xl font-semibold text-[#2b2b2b] mb-8">
+      <div className="bg-[#edf7fd] border-l-4 border-[#0093d0] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-xs mb-8">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 tracking-tight">
           A few questions worth asking yourself
         </h3>
 
@@ -33,24 +33,24 @@ const HarmfulGamblingSection = () => {
           {questions.map((question, index) => (
             <div
               key={index}
-              className="py-5 border-b border-dashed border-[#c7d7df]"
+              className="py-4 border-b border-dashed border-gray-300/80"
             >
-              <p className="text-sm sm:text-base md:text-[17px] text-[#333] leading-relaxed md:leading-8">
+              <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-normal">
                 {question}
               </p>
             </div>
           ))}
 
-          <div className="py-5 border-b border-dashed border-[#c7d7df]">
-            <p className="text-sm sm:text-base md:text-[17px] text-[#333] leading-relaxed md:leading-8">
+          <div className="py-4 border-b border-dashed border-gray-300/80">
+            <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-normal">
               If you answered yes to two or more, your gambling may well be
               causing you harm and it is worth talking to someone, without
               waiting for the situation to get worse.
             </p>
           </div>
 
-          <div className="pt-5">
-            <p className="text-xs sm:text-sm text-[#7a8591] leading-7">
+          <div className="pt-4">
+            <p className="text-xs sm:text-sm text-gray-500 italic">
               Adapted from the PGSI, a short clinical screening tool. We use it
               as a reflective prompt, not a diagnostic threshold.
             </p>
@@ -59,13 +59,13 @@ const HarmfulGamblingSection = () => {
       </div>
 
       {/* Bottom Card */}
-      <div className="mt-8 bg-[#252223] border-l-4 border-[#0093d0] p-5 sm:p-8 md:p-10">
-        <h4 className="text-[#00a2e8] text-base sm:text-lg font-medium mb-8">
+      <div className="bg-[#181818] border-l-4 border-[#0093d0] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-md">
+        <h4 className="text-[#00a2e8] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
           A note on the PGSI threshold
         </h4>
 
-        <div className="space-y-8">
-          <p className="text-[#d6d6d6] text-sm sm:text-base md:text-[17px] leading-relaxed md:leading-9">
+        <div className="space-y-4">
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
             UK gambling-prevalence figures have for decades used a PGSI score of
             8 or above as the cut-off for the most severe band. This produces a
             binary (you either meet that threshold or you don't) that the actual
@@ -73,7 +73,7 @@ const HarmfulGamblingSection = () => {
             PGSI 8.
           </p>
 
-          <p className="text-[#d6d6d6] text-sm sm:text-base md:text-[17px] leading-relaxed md:leading-9">
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
             If your score is lower than 8 but you're worried, your worry is the
             relevant signal, not the score. Please consider talking to someone.
           </p>

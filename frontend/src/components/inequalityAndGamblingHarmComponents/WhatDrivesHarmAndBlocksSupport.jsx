@@ -74,26 +74,26 @@ const barriers = [
 
 const WhatDrivesHarmAndBlocksSupport = () => {
   return (
-    <section>
-      <div className="max-w-5xl mx-auto px-4">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Main Section Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2d2d2d] mb-10 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-10 tracking-tight leading-tight">
           What drives harm, and what blocks support
         </h2>
 
         {/* --- Drivers Subsection --- */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-[#2d2d2d] mb-4">Drivers</h3>
+        <div className="mb-10">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight">Drivers</h3>
           <div className="divide-y divide-dashed divide-gray-200/90 border-b border-dashed border-gray-200/90">
             {drivers.map((item, index) => (
-              <div key={index} className="py-4 text-[15px] leading-relaxed">
-                <strong className="text-[#2d2d2d] font-bold">
-                  {item.title}{" "}
+              <div key={index} className="py-3.5 text-sm sm:text-base leading-relaxed">
+                <strong className="text-gray-900 font-bold mr-1.5">
+                  {item.title}
                 </strong>
-                <span className="text-[#4b5563]">{item.description}</span>
+                <span className="text-gray-600 font-normal">{item.description}</span>
               </div>
             ))}
           </div>
@@ -101,14 +101,14 @@ const WhatDrivesHarmAndBlocksSupport = () => {
 
         {/* --- Barriers Subsection --- */}
         <div>
-          <h3 className="text-2xl font-bold text-[#2d2d2d] mb-4">Barriers</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight">Barriers</h3>
           <div className="divide-y divide-dashed divide-gray-200/90 border-b border-dashed border-gray-200/90">
             {barriers.map((item, index) => (
-              <div key={index} className="py-4 text-[15px] leading-relaxed">
-                <strong className="text-[#2d2d2d] font-bold">
-                  {item.title}{" "}
+              <div key={index} className="py-3.5 text-sm sm:text-base leading-relaxed">
+                <strong className="text-gray-900 font-bold mr-1.5">
+                  {item.title}
                 </strong>
-                <span className="text-[#4b5563]">{item.description}</span>
+                <span className="text-gray-600 font-normal">{item.description}</span>
               </div>
             ))}
           </div>

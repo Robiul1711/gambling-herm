@@ -35,42 +35,40 @@ const signs = [
 
 export default function Signstolookfor() {
   return (
-    <section className="w-full bg-white text-[#1f2937]">
-      <div className="section-padding-x">
-        <div className="max-w-5xl mx-auto">
-          {/* Top Blue Accent Line */}
-          <div className="w-12 h-[3px] bg-[#67b1cb] mb-5"></div>
+    <section className="w-full bg-white text-gray-900 py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        {/* Top Blue Accent Line */}
+        <div className="w-12 h-[3px] bg-[#0092D0] mb-5"></div>
 
-          {/* Heading Section */}
-          <div className="mb-10">
-            <h2 className="text-3xl md:text-[34px] font-bold text-[#111827] leading-tight tracking-tight mb-4">
-              Signs to look for
-            </h2>
-            <p className="text-[#6b7280] text-[20px] sm:text-base leading-relaxed max-w-3xl">
-              No single sign is conclusive, and you'll know your person better
-              than any list can. But if you're noticing a cluster of these, your
-              instincts are worth listening to.
-            </p>
-          </div>
+        {/* Heading Section */}
+        <div className="mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
+            Signs to look for
+          </h2>
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-normal">
+            No single sign is conclusive, and you'll know your person better
+            than any list can. But if you're noticing a cluster of these, your
+            instincts are worth listening to.
+          </p>
+        </div>
 
-          {/* Signs Table/List */}
-          <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
-            {signs.map((item, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-3 md:gap-8 py-6 items-start"
-              >
-                {/* Category column */}
-                <h3 className="text-[#0092D0] font-semibold text-sm sm:text-[15px] tracking-wide">
-                  {item.category}
-                </h3>
-                {/* Signs description column */}
-                <p className="text-gray-600 text-sm sm:text-[18px] leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* Signs Table/List */}
+        <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
+          {signs.map((item, index) => (
+            <div
+              key={index}
+              className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-3 md:gap-8 py-5 md:py-6 items-start"
+            >
+              {/* Category column */}
+              <h3 className="text-[#0092D0] font-bold text-xs sm:text-sm tracking-wider uppercase pt-0.5">
+                {item.category}
+              </h3>
+              {/* Signs description column */}
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

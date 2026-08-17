@@ -16,11 +16,16 @@ const AnyoneCanBeHarmed = () => {
         {/* Introduction Copy */}
         <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-700 mb-10">
           <p className="font-semibold text-gray-900 text-base md:text-lg">
-            The framing that gambling harm is "a problem for a small, vulnerable group" is one of the most-repeated and most-misleading claims in UK public conversation.
+            The framing that gambling harm is "a problem for a small, vulnerable
+            group" is one of the most-repeated and most-misleading claims in UK
+            public conversation.
           </p>
 
           <p>
-            It is correct that some groups face higher risk: men, young adults, people with co-occurring mental-health conditions, people in financial stress, people exposed to heavy marketing, people with family histories of addiction. (See{" "}
+            It is correct that some groups face higher risk: men, young adults,
+            people with co-occurring mental-health conditions, people in
+            financial stress, people exposed to heavy marketing, people with
+            family histories of addiction. (See{" "}
             <Link
               to="/understanding-gambling-harms"
               className="font-medium text-black underline hover:text-[#0093D0] transition-colors"
@@ -31,7 +36,13 @@ const AnyoneCanBeHarmed = () => {
           </p>
 
           <p>
-            What the framing gets wrong is the implication that the rest of the population is safe. The harm follows the product, the marketing environment and the regulatory permissiveness, and modern UK gambling products are deliberately engineered to capture the broadest possible customer base. Anyone exposed to a relentlessly-marketed, fast-cycle gambling product can be harmed by it.
+            What the framing gets wrong is the implication that the rest of the
+            population is safe. The harm follows the product, the marketing
+            environment and the regulatory permissiveness, and modern UK
+            gambling products are deliberately engineered to capture the
+            broadest possible customer base. Anyone exposed to a
+            relentlessly-marketed, fast-cycle gambling product can be harmed by
+            it.
           </p>
         </div>
 
@@ -42,11 +53,30 @@ const AnyoneCanBeHarmed = () => {
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            UK debate treats the most severe screening band as though it were the harmed population. It is not. <strong className="text-gray-900 font-bold">Only 42.1% of people who report severe consequences from gambling score in that top band</strong>, which means <strong className="text-gray-900 font-bold">57.9% of the people experiencing severe consequences are invisible to the headline figure</strong> (Gambling Commission, Understanding the adverse consequences of gambling, 2025).
+            UK debate treats the most severe screening band as though it were
+            the harmed population. It is not.{" "}
+            <strong className="text-gray-900 font-bold">
+              Only 42.1% of people who report severe consequences from gambling
+              score in that top band
+            </strong>
+            , which means{" "}
+            <strong className="text-gray-900 font-bold">
+              57.9% of the people experiencing severe consequences are invisible
+              to the headline figure
+            </strong>{" "}
+            (Gambling Commission, Understanding the adverse consequences of
+            gambling, 2025).
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            The burden-of-disease evidence points the same way. <strong className="text-gray-900 font-bold">Up to 85% of gambling-related years lived with disability arise from people at low and moderate levels of harm, not the most severe band</strong> (Browne et al., 2017). Commissioning aimed only at the severe end reaches about 15% of the total health loss.
+            The burden-of-disease evidence points the same way.{" "}
+            <strong className="text-gray-900 font-bold">
+              Up to 85% of gambling-related years lived with disability arise
+              from people at low and moderate levels of harm, not the most
+              severe band
+            </strong>{" "}
+            (Browne et al., 2017). Commissioning aimed only at the severe end
+            reaches about 15% of the total health loss.
           </p>
         </div>
 
@@ -57,7 +87,11 @@ const AnyoneCanBeHarmed = () => {
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            Disability weights place conditions on a common 0 to 1 scale. On the most recent synthesis, the band conventionally labelled "low risk" already carries a measurable loss of health-related quality of life, above mild anxiety disorder and comparable to mild cannabis dependence:
+            Disability weights place conditions on a common 0 to 1 scale. On the
+            most recent synthesis, the band conventionally labelled "low risk"
+            already carries a measurable loss of health-related quality of life,
+            above mild anxiety disorder and comparable to mild cannabis
+            dependence:
           </p>
 
           {/* Severity Comparison Chart */}
@@ -143,7 +177,18 @@ const AnyoneCanBeHarmed = () => {
 
           {/* Footnote */}
           <p className="text-[11px] md:text-xs text-gray-600 leading-relaxed mt-4 mb-8">
-            Individual-level severity, not the basis of the QALY figures above. These are directly elicited health-state utility decrements by screening band, from the 2026 hybrid synthesis (Tulloch et al., Addictive Behaviors 175:108612), shown against recognised comparator conditions to give a sense of what living at each band is like for one person. Our national QALY figures are built on the more conservative population-survey decrements (Moayeri, 2020), which run several times lower; the elicited values above sit in our published upper-bound sensitivity. Utility decrements and Global Burden of Disease disability weights are related but distinct scales. An independent harm screen places the severe band at the same 0.45 value, corroborating the range.
+            Individual-level severity, not the basis of the QALY figures above.
+            These are directly elicited health-state utility decrements by
+            screening band, from the 2026 hybrid synthesis (Tulloch et al.,
+            Addictive Behaviors 175:108612), shown against recognised comparator
+            conditions to give a sense of what living at each band is like for
+            one person. Our national QALY figures are built on the more
+            conservative population-survey decrements (Moayeri, 2020), which run
+            several times lower; the elicited values above sit in our published
+            upper-bound sensitivity. Utility decrements and Global Burden of
+            Disease disability weights are related but distinct scales. An
+            independent harm screen places the severe band at the same 0.45
+            value, corroborating the range.
           </p>
         </div>
 
@@ -154,12 +199,18 @@ const AnyoneCanBeHarmed = () => {
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            Losses, spend and frequency follow a highly skewed distribution, and when average consumption in a population rises, heavy consumption rises with it. The top 4% of people who gamble account for around half of all losses; for online gambling the top 5% account for around 80%. That is an argument for monitoring total population consumption as the primary indicator of whether harm is rising, not only the diagnosed minority.
+            Losses, spend and frequency follow a highly skewed distribution, and
+            when average consumption in a population rises, heavy consumption
+            rises with it. The top 4% of people who gamble account for around
+            half of all losses; for online gambling the top 5% account for
+            around 80%. That is an argument for monitoring total population
+            consumption as the primary indicator of whether harm is rising, not
+            only the diagnosed minority.
           </p>
         </div>
 
         {/* Industry Framing Callout Box */}
-        <div className="border border-gray-200 p-6 md:p-8 rounded-sm bg-white shadow-sm my-8">
+        <div className="border border-gray-200 p-6 md:p-8  bg-white shadow-sm my-8">
           <h4 className="text-[#0093D0] font-bold text-xs tracking-wider uppercase mb-3">
             INDUSTRY FRAMING
           </h4>
@@ -170,7 +221,11 @@ const AnyoneCanBeHarmed = () => {
           </h3>
 
           <p className="text-sm text-gray-600 leading-relaxed">
-            This narrative serves a clear function: it lets the industry preserve broad customer access while disclaiming responsibility for harm caused at the margins. The public-health evidence does not support it. Harm is broadly distributed, although the severity is concentrated. Both can be true at once.
+            This narrative serves a clear function: it lets the industry
+            preserve broad customer access while disclaiming responsibility for
+            harm caused at the margins. The public-health evidence does not
+            support it. Harm is broadly distributed, although the severity is
+            concentrated. Both can be true at once.
           </p>
         </div>
       </div>

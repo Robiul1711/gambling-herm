@@ -9,13 +9,13 @@ const WorkWithUsSafeguarding = () => {
         <div className="w-12 h-[3px] bg-white/60 mb-8"></div>
 
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-6 text-white">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6 text-white">
           Work with us on children's <br className="hidden sm:inline" />
           safeguarding.
         </h2>
 
         {/* Description */}
-        <p className="text-gray-100 text-base sm:text-lg leading-relaxed font-normal mb-8">
+        <p className="text-gray-100 text-base sm:text-lg leading-relaxed font-normal mb-8 max-w-2xl">
           Whether you're a school, a local authority, or a safeguarding
           professional, we can help you respond to gambling-related harm in
           children and families.
@@ -27,13 +27,13 @@ const WorkWithUsSafeguarding = () => {
             href="https://gamblingharm.com/book-a-workshop/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto text-center bg-white hover:bg-gray-100 text-[#385c66] font-semibold px-6 py-3 text-base transition-colors shadow-sm"
+            className="w-full sm:w-auto text-center bg-white hover:bg-gray-100 text-[#385c66] font-semibold px-6 py-3 text-sm sm:text-base  transition-colors shadow-xs"
           >
             Book a session &rarr;
           </a>
           <Link
             to="/professionals"
-            className="w-full sm:w-auto text-center bg-white hover:bg-gray-100 text-[#385c66] font-semibold px-6 py-3 text-base transition-colors shadow-sm"
+            className="w-full sm:w-auto text-center bg-white hover:bg-gray-100 text-[#385c66] font-semibold px-6 py-3 text-sm sm:text-base  transition-colors shadow-xs"
           >
             Resources for professionals &rarr;
           </Link>

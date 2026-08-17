@@ -36,12 +36,12 @@ export default function SupportOptions() {
           </h2>
 
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-4xl font-normal">
-            Gambling harm is not inevitable. It can be prevented. We work across the
-            whole prevention spectrum: stopping harm before it starts, catching it
-            early, and reducing its damage for those already affected. GHUK exists
-            because gambling harm is industrially produced and publicly neglected,
-            and because the people who understand it best, Experts by Experience,
-            have been missing from the response.
+            Gambling harm is not inevitable. It can be prevented. We work across
+            the whole prevention spectrum: stopping harm before it starts,
+            catching it early, and reducing its damage for those already
+            affected. GHUK exists because gambling harm is industrially produced
+            and publicly neglected, and because the people who understand it
+            best, Experts by Experience, have been missing from the response.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function SupportOptions() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="border border-gray-200/80 rounded-xl p-8 sm:p-10 bg-white flex flex-col justify-start transition-all duration-300 shadow-xs hover:border-Primary/30 hover:shadow-sm"
+              className="border border-gray-200/80  p-8 sm:p-10 bg-white flex flex-col justify-start transition-all duration-300 shadow-xs hover:border-Primary/30 hover:shadow-sm"
             >
               {/* Tagline */}
               <div className="flex items-start gap-3 mb-6">

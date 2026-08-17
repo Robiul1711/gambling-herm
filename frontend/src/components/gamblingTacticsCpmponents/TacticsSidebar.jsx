@@ -16,8 +16,8 @@ const TacticsSidebar = ({ activeSection, onNavigate }) => {
     "The first four tactics map directly to the original four Gambling Tactics sections published in 2021. Three more have been added in this 2026 edition.";
 
   return (
-    <div className="bg-white border border-slate-200 p-4 shadow-sm max-h-[85vh] overflow-y-auto">
-      <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 px-2 border-l-2 border-slate-300">
+    <div className="bg-white border border-gray-200/90  p-5 shadow-xs max-h-[85vh] overflow-y-auto">
+      <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-500 mb-4 px-2 border-l-2 border-[#0092D0]">
         Chapters
       </h2>
       <nav className="space-y-1">
@@ -25,18 +25,17 @@ const TacticsSidebar = ({ activeSection, onNavigate }) => {
           <button
             key={item.id}
             onClick={() => onNavigate(item.id)}
-            className={`w-full text-left px-3 py-1.5 text-sm transition-all duration-150 block
- ${
-   activeSection === item.id
-     ? "text-Primary bg-slate-50 font-semibold border-l-2 border-Primary pl-2.5"
-     : "text-slate-700 hover:text-slate-800 hover:bg-slate-50/50"
- } ${item.isHeader ? "pl-4" : ""}`}
+            className={`w-full text-left px-3 py-2 text-sm  transition-all duration-150 block ${
+              activeSection === item.id
+                ? "text-Primary bg-sky-50 font-bold border-l-2 border-Primary pl-2.5"
+                : "text-gray-700 hover:text-gray-900 hover:bg-gray-50 font-normal"
+            } ${item.isHeader ? "pl-4" : ""}`}
           >
             {item.label}
           </button>
         ))}
       </nav>
-      <p className="mt-5 px-2 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+      <p className="mt-5 px-2 text-xs sm:text-sm text-gray-500 italic leading-relaxed border-t border-gray-100 pt-4 font-normal">
         {noteText}
       </p>
     </div>

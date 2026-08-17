@@ -35,9 +35,9 @@ const MembersLibraryExampleCards = () => {
 
         {/* Intro */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-10 font-normal">
-          The layout below is a placeholder, to show how resource cards will look
-          once the library is built and you're signed in. None of these cards
-          link to a real resource.
+          The layout below is a placeholder, to show how resource cards will
+          look once the library is built and you're signed in. None of these
+          cards link to a real resource.
         </p>
 
         {/* 3 Placeholder Cards Grid */}
@@ -45,7 +45,7 @@ const MembersLibraryExampleCards = () => {
           {placeholderCards.map((card, idx) => (
             <div
               key={idx}
-              className="border border-dashed border-slate-300 rounded-xl p-7 sm:p-8 bg-white flex flex-col justify-start"
+              className="border border-dashed border-slate-300  p-7 sm:p-8 bg-white flex flex-col justify-start"
             >
               {/* Card Tag */}
               <div className="flex items-center gap-2 mb-4">

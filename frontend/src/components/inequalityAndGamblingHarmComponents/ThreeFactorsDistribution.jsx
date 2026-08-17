@@ -23,18 +23,18 @@ const factorsData = [
 
 const ThreeFactorsDistribution = () => {
   return (
-    <section id="three-factors" className="py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="three-factors" className="py-12 md:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Main Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2d2d2d] mb-4 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
           Three factors shape the distribution
         </h2>
 
         {/* Section Subtitle */}
-        <p className="text-[#555555] text-[15px] md:text-base mb-10 max-w-3xl leading-relaxed">
+        <p className="text-base sm:text-lg text-gray-600 mb-10 font-normal leading-relaxed">
           Social inequalities, drivers of harm, and barriers to support. Each
           operates separately and they intersect.
         </p>
@@ -44,10 +44,10 @@ const ThreeFactorsDistribution = () => {
           {factorsData.map((factor, idx) => (
             <div
               key={idx}
-              className="p-6 md:p-8 border border-gray-200/90  min-h-[300px] flex flex-col justify-start bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
+              className="p-6 md:p-8 border border-gray-200/90  flex flex-col justify-start bg-white shadow-xs"
             >
               {/* Factor Header Label with Left Accent Line */}
-              <div className="flex items-center gap-2.5 mb-5">
+              <div className="flex items-center gap-2.5 mb-4">
                 <div className="w-5 h-[2px] bg-[#17a9df]"></div>
                 <span className="text-[#17a9df] text-xs font-bold uppercase tracking-wider">
                   FACTOR {factor.factorNum}
@@ -55,12 +55,12 @@ const ThreeFactorsDistribution = () => {
               </div>
 
               {/* Card Main Title */}
-              <h3 className="text-xl font-bold text-[#2d2d2d] mb-4 leading-snug">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 leading-snug tracking-tight">
                 {factor.title}
               </h3>
 
               {/* Card Body Text Description */}
-              <p className="text-[#687076] text-sm md:text-[14.5px] leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
                 {factor.description}
               </p>
             </div>

@@ -65,7 +65,7 @@ const RoadSafetyPracticalSteps = () => {
           {steps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white border border-slate-200/90 rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
+              className="bg-white border border-slate-200/90  p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
             >
               <div>
                 {/* Step Tag */}
@@ -92,7 +92,7 @@ const RoadSafetyPracticalSteps = () => {
                 <div className="pt-6">
                   <a
                     href={item.buttonLink}
-                    className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-lg transition-colors inline-block"
+                    className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-5 py-2.5  transition-colors inline-block"
                   >
                     {item.buttonText}
                   </a>
