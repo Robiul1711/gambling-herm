@@ -99,29 +99,29 @@ const routes = [
 
 const FourWaysGrid = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {routes.map((route) => (
           <div
             key={route.id}
-            className="border border-gray-400 p-5 sm:p-8 bg-white"
+            className="border border-gray-200/90  p-6 sm:p-8 bg-white shadow-xs hover:shadow-md transition-shadow"
           >
-            <h2 className="text-[22px] sm:text-[26px] md:text-[28px] font-bold text-[#2a2a2a] mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 tracking-tight">
               {route.id}. {route.title}
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {route.items.map((item, index) => (
-                <div key={index}>
+                <div
+                  key={index}
+                  className="text-sm sm:text-base leading-relaxed text-gray-600 font-normal"
+                >
                   {item.heading && (
-                    <span className="font-semibold text-[#2f2f2f]">
-                      {item.heading}
-                    </span>
+                    <strong className="font-bold text-gray-900 mr-1.5">
+                      {item.heading}:
+                    </strong>
                   )}
-                  <span className="text-[#70798c] leading-relaxed md:leading-8">
-                    {item.heading && ","}
-                    {item.text}
-                  </span>
+                  <span>{item.text}</span>
                 </div>
               ))}
             </div>

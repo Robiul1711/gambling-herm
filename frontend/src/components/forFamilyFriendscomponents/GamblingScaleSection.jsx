@@ -49,60 +49,56 @@ export default function GamblingScaleSection() {
     return text;
   };
 
-  const paragraph2 =
-    data?.audioTitl;
-  const paragraph3 =
-    data?.audioSource;
+  const paragraph2 = data?.audioTitl;
+  const paragraph3 = data?.audioSource;
 
   return (
-    <section className="w-full pb-16 md:pb-24 bg-white text-[#1f2937]">
-      <div className="section-padding-x">
-        <div className="max-w-5xl mx-auto ">
-          {/* Top Split Layout: Text Content & Illustration */}
-          <div className="grid md:grid-cols-3 gap-8 items-start mb-8">
-            {/* Left Column: Text Content (Spans 2 columns on medium+ screens) */}
-            <div className="md:col-span-2 space-y-5">
-              {/* Top light blue accent line */}
-              <div className="w-12 h-[3px] bg-[#67b1cb]"></div>
+    <section className="w-full pb-12 md:pb-16 bg-white text-gray-900">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        {/* Top Split Layout: Text Content & Illustration */}
+        <div className="grid md:grid-cols-3 gap-8 items-start mb-8">
+          {/* Left Column: Text Content (Spans 2 columns on medium+ screens) */}
+          <div className="md:col-span-2 space-y-5">
+            {/* Top light blue accent line */}
+            <div className="w-12 h-[3px] bg-[#0092D0]"></div>
 
-              <h2 className="text-3xl md:text-[34px] font-bold text-[#111827] leading-tight tracking-tight">
-                {sectionTitle}
-              </h2>
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight">
+              {sectionTitle}
+            </h2>
 
-              <div className="text-[#6b7280] text-[15px] leading-relaxed space-y-4">
-                <p>{renderParagraph1()}</p>
+            <div className="text-gray-600 text-sm sm:text-base leading-relaxed space-y-4 font-normal">
+              <p>{renderParagraph1()}</p>
 
-                <p>{paragraph2}</p>
+              <p>{paragraph2}</p>
 
-                <p className="pt-2">{paragraph3}</p>
-              </div>
-            </div>
-
-            {/* Right Column: Illustration Graphic */}
-            <div className="flex justify-center md:justify-end">
-              <img
-                src={rightGraphic}
-                alt="Realities of gambling harm illustration - Honest Truth"
-                className="w-full max-w-[280px] h-auto object-contain"
-              />
+              <p className="pt-2">{paragraph3}</p>
             </div>
           </div>
 
-          {/* Bottom Section: Feature Video Still / Photograph */}
-          <div className="space-y-3">
-            <div className="overflow-hidden ]">
-              <img
-                src={bottomPhoto}
-                alt="Still from GHUK's Brothers Gambling Harm safeguarding film"
-                className="w-full h-auto object-cover max-h-[500px]"
-              />
-            </div>
-
-            {/* Caption text matching the styling in image_6cd649.jpg */}
-            <p className="text-xs md:text-sm text-gray-500 italic pl-1">
-              {bottomCaption}
-            </p>
+          {/* Right Column: Illustration Graphic */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={rightGraphic}
+              alt="Realities of gambling harm illustration - Honest Truth"
+              className="w-full max-w-[280px] h-auto object-contain"
+            />
           </div>
+        </div>
+
+        {/* Bottom Section: Feature Video Still / Photograph */}
+        <div className="space-y-3">
+          <div className="overflow-hidden  shadow-xs">
+            <img
+              src={bottomPhoto}
+              alt="Still from GHUK's Brothers Gambling Harm safeguarding film"
+              className="w-full h-auto object-cover max-h-[500px]"
+            />
+          </div>
+
+          {/* Caption text */}
+          <p className="text-xs sm:text-sm text-gray-500 italic pl-1">
+            {bottomCaption}
+          </p>
         </div>
       </div>
     </section>

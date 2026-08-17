@@ -26,24 +26,24 @@ const hazardousItems = [
 
 const NeurodivergenceHazardous = () => {
   return (
-    <section className="bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
-        <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
+        <div className="w-12 h-[3px] bg-[#0093D0] mb-6"></div>
 
         {/* Section Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-extrabold text-[#1e293b] mb-7 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
           Why gambling products are particularly hazardous here
         </h2>
 
         {/* Intro */}
-        <p className="text-slate-700 text-base sm:text-lg  leading-relaxed md:leading-[1.8] mb-12">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-8">
           The mechanisms that plausibly elevate risk for people with ADHD map
           closely onto specific, deliberate features of gambling product design.
           See our full{" "}
           <Link
             to="/gambling-tactics"
-            className="text-slate-900 underline hover:text-[#0093D0] font-semibold"
+            className="text-gray-900 underline hover:text-[#0093D0] font-semibold"
           >
             Gambling Tactics
           </Link>{" "}
@@ -51,22 +51,22 @@ const NeurodivergenceHazardous = () => {
         </p>
 
         {/* Hazard List Rows */}
-        <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
+        <div className="divide-y divide-dashed divide-gray-200 border-t border-b border-dashed border-gray-200">
           {hazardousItems.map((item, idx) => (
             <div
               key={idx}
-              className="py-7 sm:py-9 flex flex-col md:flex-row md:items-start gap-4 md:gap-10"
+              className="py-5 sm:py-6 flex flex-col md:flex-row md:items-start gap-2 md:gap-8"
             >
               {/* Tag / Left Column */}
-              <div className="w-full md:w-64 shrink-0">
-                <span className="text-xs sm:text-sm md:text-[13px] lg:text-[14px] font-bold text-[#0093D0] tracking-wider uppercase block">
+              <div className="w-full md:w-56 shrink-0">
+                <span className="text-xs sm:text-sm font-bold text-[#0093D0] tracking-wider uppercase block">
                   {item.tag}
                 </span>
               </div>
 
               {/* Description / Right Column */}
               <div className="flex-1">
-                <p className="text-base sm:text-lg  text-slate-700  font-normal">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
                   {item.description}
                 </p>
               </div>

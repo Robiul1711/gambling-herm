@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const IfYouFeelUnsafeSection = () => {
   return (
-    <section className="w-full bg-white py-14 sm:py-18 md:py-20 border-b border-gray-100">
+    <section className="w-full bg-white py-12 md:py-16 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
-        <div className="w-12 h-[3.5px] bg-[#0082c3] mb-6"></div>
+        <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
           If you feel unsafe
         </h2>
 
         {/* Intro Paragraph */}
-        <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal mb-8">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-8">
           Gambling-related financial harm can sit alongside domestic abuse and
           coercive control. If that's part of what you're describing to yourself,
           it deserves to be named and taken seriously on its own terms,
@@ -22,12 +22,12 @@ const IfYouFeelUnsafeSection = () => {
         </p>
 
         {/* Emergency / Safety Callout Box */}
-        <div className="border-l-[4px] border-gray-400 bg-gray-50/90 rounded-r-lg p-6 sm:p-8 space-y-4">
+        <div className="border-l-[4px] border-red-500 bg-[#fff8f8] rounded-r-xl p-6 sm:p-8 space-y-4 shadow-xs">
           <p className="font-bold text-gray-900 text-sm sm:text-base">
             If anyone is in immediate danger, call 999.
           </p>
 
-          <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
             The National Domestic Abuse Helpline is{" "}
             <a
               href="tel:08082000247"
@@ -38,7 +38,7 @@ const IfYouFeelUnsafeSection = () => {
             , free and available 24/7.
           </p>
 
-          <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
             If you need to talk to someone about what's happening to you right
             now, <strong className="font-bold text-gray-900">Samaritans</strong>{" "}
             are free on{" "}
@@ -52,11 +52,11 @@ const IfYouFeelUnsafeSection = () => {
             and you don't need to have the words ready.
           </p>
 
-          <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
             Our{" "}
             <Link
               to="/urgent-help"
-              className="text-[#0082c3] underline font-medium hover:text-[#006090] transition-colors"
+              className="text-[#0082c3] underline font-semibold hover:text-[#006090] transition-colors"
             >
               urgent help page
             </Link>{" "}

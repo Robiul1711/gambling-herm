@@ -12,7 +12,8 @@ const stats = [
   },
   {
     value: "Younger",
-    description: "drivers showed greater vulnerability to gambling-related harm.",
+    description:
+      "drivers showed greater vulnerability to gambling-related harm.",
   },
   {
     value: "Distraction",
@@ -78,7 +79,7 @@ const RoadSafetyResearchStats = () => {
         <div>
           <a
             href="#research-report"
-            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-sm md:text-base px-7 py-3.5 rounded-md transition-colors inline-block shadow-sm"
+            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-sm md:text-base px-7 py-3.5  transition-colors inline-block shadow-sm"
           >
             Read the Research Report
           </a>

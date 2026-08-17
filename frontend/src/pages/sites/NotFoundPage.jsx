@@ -23,23 +23,23 @@ export default function NotFoundPage() {
           The page you are looking for doesn't exist or has been moved.
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-          The link you followed may be broken, or the page may have been removed. 
-          Here are some helpful links to get you back on track:
+          The link you followed may be broken, or the page may have been
+          removed. Here are some helpful links to get you back on track:
         </p>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-slate-700 bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors shadow-xs"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-slate-700 bg-white border border-slate-300  hover:bg-slate-50 transition-colors shadow-xs"
           >
             <ArrowLeft className="w-4 h-4" />
             Go Back
           </button>
-          
+
           <Link
             to="/"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-Primary rounded-md hover:bg-[#0f5370] transition-colors shadow-sm"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-Primary  hover:bg-[#0f5370] transition-colors shadow-sm"
           >
             <Home className="w-4 h-4" />
             Back to Home
@@ -54,9 +54,9 @@ export default function NotFoundPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
             <Link
               to="/get-help"
-              className="p-4 rounded-xl border border-slate-200/60 bg-white hover:border-Primary/40 hover:shadow-md transition-all text-left group"
+              className="p-4  border border-slate-200/60 bg-white hover:border-Primary/40 hover:shadow-md transition-all text-left group"
             >
-              <div className="w-9 h-9 rounded-lg bg-blue-50 text-Primary flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+              <div className="w-9 h-9  bg-blue-50 text-Primary flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
                 <HelpCircle className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-800 group-hover:text-Primary transition-colors text-sm">
@@ -69,9 +69,9 @@ export default function NotFoundPage() {
 
             <Link
               to="/burden-of-harm"
-              className="p-4 rounded-xl border border-slate-200/60 bg-white hover:border-Primary/40 hover:shadow-md transition-all text-left group"
+              className="p-4  border border-slate-200/60 bg-white hover:border-Primary/40 hover:shadow-md transition-all text-left group"
             >
-              <div className="w-9 h-9 rounded-lg bg-blue-50 text-Primary flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+              <div className="w-9 h-9  bg-blue-50 text-Primary flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
                 <BookOpen className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-800 group-hover:text-Primary transition-colors text-sm">
@@ -84,9 +84,9 @@ export default function NotFoundPage() {
 
             <Link
               to="/about"
-              className="p-4 rounded-xl border border-slate-200/60 bg-white hover:border-Primary/40 hover:shadow-md transition-all text-left group"
+              className="p-4  border border-slate-200/60 bg-white hover:border-Primary/40 hover:shadow-md transition-all text-left group"
             >
-              <div className="w-9 h-9 rounded-lg bg-blue-50 text-Primary flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+              <div className="w-9 h-9  bg-blue-50 text-Primary flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
                 <Compass className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-800 group-hover:text-Primary transition-colors text-sm">

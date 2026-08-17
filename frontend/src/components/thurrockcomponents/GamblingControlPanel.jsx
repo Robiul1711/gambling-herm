@@ -46,15 +46,14 @@ export default function GamblingControlPanel() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4  text-[#1f2937]">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16 text-[#1f2937]">
       {/* Top Header */}
       <header className="mb-10">
-        <div className="w-12 h-1 bg-[#0284c7] mb-4"></div>{" "}
-        {/* Blue top accent bar */}
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+        <div className="w-12 h-[3px] bg-[#0092D0] mb-4"></div>
+        <h1 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight text-gray-900 mb-4 leading-tight">
           Take control of your gambling
         </h1>
-        <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
           Blocking tools and self-exclusion give you a practical layer of
           protection. Most take only a few minutes to set up, and many people
           use more than one at the same time.
@@ -63,26 +62,26 @@ export default function GamblingControlPanel() {
 
       {/* Section 1: Blocking Software */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 tracking-tight">
           Blocking software
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {blockingSoftware.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 p-8 shadow-sm flex flex-col justify-between min-h-[320px]"
+              className="bg-white border border-gray-200/90  p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between min-h-[280px]"
             >
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-[15px]">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base font-normal">
                   {item.description}
                 </p>
               </div>
               <div className="mt-6">
                 <button
-                  className={`inline-flex items-center gap-2 text-white font-medium text-sm py-3 px-5 transition-colors ${item.buttonColor}`}
+                  className={`inline-flex items-center gap-2 text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs ${item.buttonColor}`}
                 >
                   {item.buttonText}
                   <span>&rarr;</span>
@@ -95,10 +94,10 @@ export default function GamblingControlPanel() {
 
       {/* Section 2: Self-Exclusion */}
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 tracking-tight">
           Self-exclusion
         </h2>
-        <p className="text-gray-600 mb-6 text-[15px]">
+        <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed font-normal">
           These national schemes let you exclude yourself from gambling
           operators. One registration covers all participating sites or venues
           in that category.
@@ -108,18 +107,18 @@ export default function GamblingControlPanel() {
           {selfExclusion.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 p-8 shadow-sm flex flex-col justify-between min-h-[280px]"
+              className="bg-white border border-gray-200/90  p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between min-h-[260px]"
             >
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-[15px]">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base font-normal">
                   {item.description}
                 </p>
               </div>
               <div className="mt-6">
-                <button className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-medium text-sm py-3 px-5 transition-colors">
+                <button className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs">
                   {item.buttonText}
                   <span>&rarr;</span>
                 </button>

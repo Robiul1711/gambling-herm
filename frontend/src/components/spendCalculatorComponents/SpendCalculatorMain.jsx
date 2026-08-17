@@ -50,16 +50,16 @@ const SpendCalculatorMain = ({
 
         {/* Description */}
         <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
-          Enter a typical staking pattern below. If it varies week to week, use a
-          figure that feels like a fair average. This tool only does arithmetic:
-          it doesn't score, categorise or label your gambling, and there's no
-          verdict at the end.
+          Enter a typical staking pattern below. If it varies week to week, use
+          a figure that feels like a fair average. This tool only does
+          arithmetic: it doesn't score, categorise or label your gambling, and
+          there's no verdict at the end.
         </p>
 
         {/* 2-Column Calculator Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           {/* Left Form Card */}
-          <div className="md:col-span-6 bg-white border border-gray-200 rounded-xl p-5 sm:p-7 shadow-xs flex flex-col justify-between space-y-5">
+          <div className="md:col-span-6 bg-white border border-gray-200  p-5 sm:p-7 shadow-xs flex flex-col justify-between space-y-5">
             {/* Input 1: Typical amount staked per session */}
             <div>
               <label
@@ -76,7 +76,7 @@ const SpendCalculatorMain = ({
                 value={amountPerSession}
                 onChange={(e) => setAmountPerSession(e.target.value)}
                 placeholder="e.g. 20"
-                className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-900 font-medium placeholder:text-gray-400 focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all"
+                className="w-full px-3.5 py-2.5 bg-white border border-gray-300  text-gray-900 font-medium placeholder:text-gray-400 focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all"
               />
             </div>
 
@@ -97,7 +97,7 @@ const SpendCalculatorMain = ({
                 value={sessionsPerWeek}
                 onChange={(e) => setSessionsPerWeek(e.target.value)}
                 placeholder="e.g. 4"
-                className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-900 font-medium placeholder:text-gray-400 focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all"
+                className="w-full px-3.5 py-2.5 bg-white border border-gray-300  text-gray-900 font-medium placeholder:text-gray-400 focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all"
               />
             </div>
 
@@ -135,7 +135,7 @@ const SpendCalculatorMain = ({
           </div>
 
           {/* Right Dark Card (Results) */}
-          <div className="md:col-span-6 bg-[#181C1E] text-white rounded-xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+          <div className="md:col-span-6 bg-[#181C1E] text-white  p-6 sm:p-8 shadow-md flex flex-col justify-between">
             <div>
               {/* Header */}
               <p className="text-xs font-bold uppercase tracking-widest text-gray-300">

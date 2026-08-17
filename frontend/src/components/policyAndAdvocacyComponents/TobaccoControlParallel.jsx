@@ -4,19 +4,19 @@ const TobaccoControlParallel = () => {
   return (
     <section
       id="tobacco-control-parallel"
-      className="py-10 md:py-16 bg-white text-[#2d2d2d]"
+      className="py-12 md:py-16 bg-white text-gray-900"
     >
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Section Header */}
-        <h2 className="text-3xl md:text-[40px] font-bold leading-tight mb-8 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight mb-8 tracking-tight">
           The tobacco-control parallel
         </h2>
 
         {/* Narrative Content Blocks */}
-        <div className="space-y-6 text-[15px] md:text-base leading-7 md:leading-8 text-[#2d2d2d] mb-12">
+        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-gray-700 font-normal mb-10">
           <p>
             The single most successful UK public-health intervention of the last
             fifty years is tobacco control. It worked because it acted at every
@@ -45,15 +45,15 @@ const TobaccoControlParallel = () => {
         </div>
 
         {/* Dark Callout Section Box */}
-        <div className="bg-[#262222] overflow-hidden shadow-lg border-l-[6px] border-[#17a9df]">
-          <div className="p-8 md:p-10">
+        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df] rounded-r-xl">
+          <div className="p-6 md:p-8">
             {/* Callout Header Label */}
-            <h4 className="text-[#17a9df] text-base font-semibold tracking-normal mb-4">
-              Our position
+            <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
+              OUR POSITION
             </h4>
 
             {/* Callout Text Copy */}
-            <p className="text-gray-300 text-[15px] md:text-base leading-relaxed md:leading-8">
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
               Gambling-harm policy should be designed and evaluated as a
               coordinated, whole-system response, not as a portfolio of
               disconnected interventions. The current UK approach is dominated

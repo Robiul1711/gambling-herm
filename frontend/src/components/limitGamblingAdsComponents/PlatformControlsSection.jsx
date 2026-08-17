@@ -18,7 +18,7 @@ const PlatformControlsSection = () => {
 
   return (
     <section id="platform-level-controls" className="scroll-mt-24 w-full py-12 md:py-16 bg-white border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
@@ -28,16 +28,16 @@ const PlatformControlsSection = () => {
         </h2>
 
         {/* Intro */}
-        <p className="text-[15px] sm:text-base text-gray-700 leading-relaxed  mb-8">
+        <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-8">
           Most major social and search platforms give you some control over the ads and content you see, even if the settings are worded differently from one to the next.
         </p>
 
         {/* Structured Items */}
-        <div className=" divide-y divide-dashed divide-gray-200">
+        <div className="divide-y divide-dashed divide-gray-200">
           {items.map((item, idx) => (
             <div key={idx} className="py-4 first:pt-0 last:pb-0">
-              <p className="text-[14px] sm:text-[15px] text-gray-700 leading-relaxed">
-                <strong className="font-bold text-gray-900">{item.title}</strong>{" "}
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
+                <strong className="font-bold text-gray-900 mr-1.5">{item.title}</strong>
                 {item.text}
               </p>
             </div>

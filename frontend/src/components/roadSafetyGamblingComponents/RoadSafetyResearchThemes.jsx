@@ -51,7 +51,7 @@ const RoadSafetyResearchThemes = () => {
           {themes.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white border border-slate-200/90 rounded-2xl p-7 sm:p-9 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
+              className="bg-white border border-slate-200/90  p-7 sm:p-9 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
             >
               {/* Card Tag */}
               <div className="flex items-center gap-2 mb-3">
@@ -78,7 +78,7 @@ const RoadSafetyResearchThemes = () => {
         <div>
           <a
             href="#full-report"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-7 py-3.5 rounded-md transition-colors shadow-sm inline-block"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-7 py-3.5  transition-colors shadow-sm inline-block"
           >
             Download the Full Research Report
           </a>

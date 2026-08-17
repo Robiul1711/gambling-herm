@@ -5,7 +5,7 @@ const getYouTubeEmbedUrl = (url) => {
   if (!url) return null;
   if (url.includes("youtube.com/embed/")) return url;
   const match = url.match(
-    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/
+    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
   );
   return match ? `https://www.youtube.com/embed/${match[1]}` : url;
 };
@@ -77,9 +77,9 @@ const SafeguardingFilms = () => {
         "Repeated patterns of harm",
         "Shame, guilt, and loss of trust",
       ],
-      videoUrls: [
-        film2Data?.videoUrl1 || film2Data?.videoUrl || "",
-      ].filter(Boolean),
+      videoUrls: [film2Data?.videoUrl1 || film2Data?.videoUrl || ""].filter(
+        Boolean,
+      ),
       defaultEmbeds: [],
     },
     {
@@ -95,27 +95,25 @@ const SafeguardingFilms = () => {
         "Gambling pulling caregivers away",
         "Gateway behaviours",
       ],
-      videoUrls: [
-        film3Data?.videoUrl1 || film3Data?.videoUrl || "",
-      ].filter(Boolean),
-      defaultEmbeds: [
-        "https://www.youtube.com/embed/g31dWx0J5y8",
-      ],
+      videoUrls: [film3Data?.videoUrl1 || film3Data?.videoUrl || ""].filter(
+        Boolean,
+      ),
+      defaultEmbeds: ["https://www.youtube.com/embed/g31dWx0J5y8"],
     },
   ];
 
   return (
-    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16 bg-white">
       {/* Top Accent Line */}
       <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
       {/* Main Section Header */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#2d2d2d] mb-4 tracking-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
         {sectionTitle}
       </h2>
 
       {/* Section Subtitle */}
-      <p className="text-[#555555] text-[15px] md:text-base mb-10 leading-relaxed">
+      <p className="text-base sm:text-lg text-gray-600 mb-10 leading-relaxed font-normal">
         {sectionDescription}
       </p>
 
@@ -130,26 +128,26 @@ const SafeguardingFilms = () => {
           return (
             <div
               key={film.id}
-              className="bg-white border border-gray-200/90 p-6 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
+              className="bg-white border border-gray-200/90  p-6 md:p-8 shadow-xs"
             >
               {/* Card Header & Description */}
-              <h3 className="text-xl md:text-2xl font-bold text-[#2d2d2d] mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
                 {film.title}
               </h3>
-              <p className="text-[#4b5563] text-sm md:text-[15px] leading-relaxed mb-6">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal mb-6">
                 {film.description}
               </p>
 
               {/* Safeguarding Themes List */}
               <div className="mb-8">
-                <h4 className="text-sm font-bold text-[#2d2d2d] mb-3">
+                <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#17a9df] mb-3">
                   Safeguarding themes
                 </h4>
                 <div className="divide-y divide-dashed divide-gray-200 border-b border-dashed border-gray-200">
                   {film.themes.map((theme, index) => (
                     <div
                       key={index}
-                      className="py-3 text-[14.5px] text-[#4b5563] first:pt-0"
+                      className="py-3 text-sm sm:text-base text-gray-700 first:pt-0 font-normal"
                     >
                       {theme}
                     </div>
@@ -167,7 +165,7 @@ const SafeguardingFilms = () => {
                   {videoList.map((embedUrl, idx) => (
                     <div
                       key={idx}
-                      className="relative w-full aspect-video overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs"
+                      className="relative w-full aspect-video  overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs"
                     >
                       {embedUrl && (
                         <iframe

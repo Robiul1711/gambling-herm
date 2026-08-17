@@ -23,21 +23,21 @@ const RoadSafetyCta = () => {
         <div className="flex flex-wrap justify-center items-center gap-4">
           <a
             href="#research-report"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-md transition-colors shadow-sm"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm"
           >
             Download Research Report
           </a>
 
           <a
             href="#ceo-pledge"
-            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-md transition-colors shadow-sm"
+            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm"
           >
             Sign CEO Pledge
           </a>
 
           <Link
             to="/about#contact"
-            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-md transition-colors shadow-sm"
+            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm"
           >
             Contact us
           </Link>

@@ -2,19 +2,18 @@ import React from "react";
 
 const WhyMissesPoint = () => {
   return (
-    <section className="w-full max-w-5xl mx-auto section-padding-y">
-      <div className="">
-        
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16 bg-white">
+      <div>
         {/* Top Accent Line */}
-        <div className="w-[45px] h-[3px] bg-[#3A86B9] mb-6 md:w-[55px]" />
+        <div className="w-12 h-[3px] bg-[#0092D0] mb-4" />
 
         {/* Heading */}
-        <h2 className="text-[26px] font-bold tracking-tight text-[#1E1E1E] leading-[1.2] mb-6  sm:text-[38px] md:text-[44px] xmd:text-[48px]">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
           Why "they're nearly adults" misses the point
         </h2>
 
         {/* Content Paragraphs */}
-        <div className="space-y-6 text-[#5E6573] text-[15px] leading-[1.6] xs:text-base sm:text-[17px] md:text-[18px]">
+        <div className="space-y-6 text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
           <p>
             Brain imaging studies show that the brain's decision-making and
             addictive-behaviour areas continue to develop until around the age
@@ -33,10 +32,9 @@ const WhyMissesPoint = () => {
         </div>
 
         {/* Citation Footer */}
-        <footer className="mt-8 text-[11px] text-[#8E94A0] tracking-wide xs:text-xs">
+        <footer className="mt-8 text-xs sm:text-sm text-gray-500 italic">
           Citation: Gambling Explained 2021, P.18.
         </footer>
-        
       </div>
     </section>
   );

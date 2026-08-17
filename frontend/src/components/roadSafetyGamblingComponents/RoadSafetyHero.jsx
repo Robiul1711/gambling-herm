@@ -28,22 +28,23 @@ const RoadSafetyHero = () => {
 
         {/* Paragraph 2 */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-10 font-normal">
-          Understanding these risks can help transport organisations create safer
-          workplaces and protect employees, passengers, and other road users.
+          Understanding these risks can help transport organisations create
+          safer workplaces and protect employees, passengers, and other road
+          users.
         </p>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-4">
           <a
             href="#research-report"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-6 py-3.5 rounded-md transition-colors shadow-sm inline-block"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-6 py-3.5  transition-colors shadow-sm inline-block"
           >
             Download the Road Safety Research Report
           </a>
 
           <a
             href="#ceo-pledge"
-            className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-800 font-semibold text-sm md:text-base px-6 py-3.5 rounded-md transition-colors shadow-sm inline-block"
+            className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-800 font-semibold text-sm md:text-base px-6 py-3.5  transition-colors shadow-sm inline-block"
           >
             Sign the Transport CEO Pledge &rarr;
           </a>

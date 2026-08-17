@@ -16,18 +16,18 @@ const WhatWeBringSection = () => {
         {/* 2x2 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
-          <div className="border border-gray-200/90 rounded-lg p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
+          <div className="border border-gray-200/90  p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                 A reproducible national burden model
               </h3>
               <p className="text-[14.5px] leading-relaxed text-gray-600">
-                Our estimate of the UK's annual health loss from gambling (around
-                530,000 QALYs, roughly £37 billion at the Green Book value) is
-                fully specified: every input, assumption and sensitivity is
-                published in our Health Needs Assessment, and the national
-                derivation reproduces in an accompanying calculator. It is built
-                to be criticised, replicated and improved.
+                Our estimate of the UK's annual health loss from gambling
+                (around 530,000 QALYs, roughly £37 billion at the Green Book
+                value) is fully specified: every input, assumption and
+                sensitivity is published in our Health Needs Assessment, and the
+                national derivation reproduces in an accompanying calculator. It
+                is built to be criticised, replicated and improved.
               </p>
             </div>
             <div className="mt-5">
@@ -41,7 +41,7 @@ const WhatWeBringSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="border border-gray-200/90 rounded-lg p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
+          <div className="border border-gray-200/90  p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                 A local-authority evidence infrastructure
@@ -68,7 +68,7 @@ const WhatWeBringSection = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="border border-gray-200/90 rounded-lg p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
+          <div className="border border-gray-200/90  p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                 Language and framing standards
@@ -76,15 +76,15 @@ const WhatWeBringSection = () => {
               <p className="text-[14.5px] leading-relaxed text-gray-600">
                 Our Communications & Voice Framework sets out stigma-safe,
                 evidence-based language for gambling-harm research outputs: why
-                we do not use "problem gambler", how we describe people harmed by
-                someone else's gambling, and how to handle PGSI category labels.
-                Available on request for research teams.
+                we do not use "problem gambler", how we describe people harmed
+                by someone else's gambling, and how to handle PGSI category
+                labels. Available on request for research teams.
               </p>
             </div>
           </div>
 
           {/* Card 4 */}
-          <div className="border border-gray-200/90 rounded-lg p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
+          <div className="border border-gray-200/90  p-6 sm:p-7 bg-white hover:border-gray-300 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                 Lived-experience involvement done properly

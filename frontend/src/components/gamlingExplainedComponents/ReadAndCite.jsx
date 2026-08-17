@@ -14,18 +14,18 @@ const ReadAndCite = () => {
       {/* 2 Equal Edition Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Card 1: The 2021 edition */}
-        <div className="border border-gray-200 rounded-md p-6 md:p-8 bg-white flex flex-col justify-between">
+        <div className="border border-gray-200  p-6 md:p-8 bg-white flex flex-col justify-between">
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
               The 2021 edition
             </h3>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              The original <em className="italic">Gambling Explained</em> PDF, written
-              for the 2021 Gambling Act Review. Citation:{" "}
+              The original <em className="italic">Gambling Explained</em> PDF,
+              written for the 2021 Gambling Act Review. Citation:{" "}
               <em className="italic">
-                Gambling Explained 2021. Gambling Harm UK (then Gambling Education
-                Network). Independently written and funded by 'Affected Other'
-                researchers.
+                Gambling Explained 2021. Gambling Harm UK (then Gambling
+                Education Network). Independently written and funded by
+                'Affected Other' researchers.
               </em>
             </p>
           </div>
@@ -40,16 +40,17 @@ const ReadAndCite = () => {
         </div>
 
         {/* Card 2: The 2025/26 edition */}
-        <div className="border border-gray-200 rounded-md p-6 md:p-8 bg-white flex flex-col justify-between">
+        <div className="border border-gray-200  p-6 md:p-8 bg-white flex flex-col justify-between">
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
               The 2025/26 edition (in preparation)
             </h3>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              The revised edition incorporates the NatCen Holistic Framework (2025),
-              the GambleAware archive, the bank-transaction mortality work, and the
-              past five years of affected-others research. Expected publication late
-              2026 with associated parliamentary submission.
+              The revised edition incorporates the NatCen Holistic Framework
+              (2025), the GambleAware archive, the bank-transaction mortality
+              work, and the past five years of affected-others research.
+              Expected publication late 2026 with associated parliamentary
+              submission.
             </p>
           </div>
           <div className="mt-8">

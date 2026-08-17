@@ -41,7 +41,7 @@ const PublicHealthRequestsSection = () => {
   ];
 
   return (
-    <div className="w-full bg-[#222120] text-white py-16 px-4">
+    <div className="w-full bg-[#222120] text-white py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         {/* Top Accent Blue Ribbon */}
         <div className="flex justify-center mb-4">
@@ -50,35 +50,35 @@ const PublicHealthRequestsSection = () => {
 
         {/* Component Title & Subtitle */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-[38px] font-bold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-white tracking-tight mb-4 leading-tight">
             What we ask of UK public-health bodies
           </h2>
-          <p className="text-sm md:text-[15px] text-gray-300 font-normal max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-300 font-normal max-w-2xl mx-auto leading-relaxed">
             Six requests of OHID, ICBs, public health Scotland/Wales/NI, and
             local-authority public-health teams.
           </p>
         </div>
 
         {/* Row Items Stack Container */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4">
           {requests.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col sm:flex-row items-start bg-white p-6 md:p-8 gap-4 md:gap-6 shadow-md transition-transform duration-200 hover:-translate-y-[1px]"
+              className="flex flex-col sm:flex-row items-start bg-white  p-6 md:p-8 gap-4 md:gap-6 shadow-xs transition-transform duration-200 hover:-translate-y-[1px]"
             >
               {/* Left Side: Circular Blue Number Badge */}
               <div className="flex-shrink-0">
-                <div className="w-9 h-9 md:w-10 md:h-10 bg-[#0a6b94] flex items-center justify-center text-white font-bold text-sm md:text-base">
+                <div className="w-9 h-9 md:w-10 md:h-10 bg-[#0a6b94] rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base shadow-xs">
                   {item.id}
                 </div>
               </div>
 
               {/* Right Side: Title and Dark Fluid Prose Text */}
               <div className="flex-1">
-                <h3 className="text-base md:text-[17px] font-bold text-gray-900 mb-2.5 leading-snug">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-snug tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-[13.5px] md:text-[14.5px] text-gray-700 leading-relaxed font-normal">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                   {item.content}
                 </p>
               </div>

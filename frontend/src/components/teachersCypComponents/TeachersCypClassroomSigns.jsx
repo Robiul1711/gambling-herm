@@ -25,30 +25,30 @@ const TeachersCypClassroomSigns = () => {
     <section className="py-12 md:py-16 bg-white border-t border-slate-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
-        <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
+        <div className="w-12 h-[3px] bg-[#0092D0] mb-6"></div>
 
         {/* Section Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-[#1e293b] mb-6 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
           In the classroom: spotting it and responding
         </h2>
 
         {/* Intro */}
-        <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-10 font-normal">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-10 font-normal">
           Gambling harm in 11-17-year-olds rarely announces itself. It looks like
           tiredness, slipping grades, borrowed money and betting talk treated as
           banter.
         </p>
 
         {/* Subtitle 1: Signs worth noticing */}
-        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight">
           Signs worth noticing
         </h3>
 
-        <div className="divide-y divide-dotted divide-gray-300 space-y-6 mb-12">
+        <div className="divide-y divide-dashed divide-gray-200 space-y-4 mb-10">
           {signsList.map((item, idx) => (
-            <div key={idx} className="pt-6 first:pt-0">
-              <p className="text-slate-700 text-base sm:text-lg leading-relaxed md:leading-[1.8] font-normal">
-                <strong className="font-bold text-[#1e293b]">{item.bold}</strong>
+            <div key={idx} className="pt-4 first:pt-0">
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
+                <strong className="font-bold text-gray-900 mr-1.5">{item.bold}</strong>
                 {item.desc}
               </p>
             </div>
@@ -56,11 +56,11 @@ const TeachersCypClassroomSigns = () => {
         </div>
 
         {/* Subtitle 2: Responding to a disclosure */}
-        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-5">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
           Responding to a disclosure
         </h3>
 
-        <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-12 font-normal">
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-10 font-normal">
           The same principles apply as to any safeguarding disclosure (above):
           treat it seriously whether the gambling is the child's own or a
           parent's, don't promise secrecy you can't keep, and follow your
@@ -68,7 +68,7 @@ const TeachersCypClassroomSigns = () => {
           child themselves,{" "}
           <Link
             to="/get-help/young-people"
-            className="underline font-semibold text-slate-900 hover:text-[#0093D0] transition-colors"
+            className="underline font-semibold text-gray-900 hover:text-[#0092D0] transition-colors"
           >
             our young people page
           </Link>{" "}
@@ -76,28 +76,28 @@ const TeachersCypClassroomSigns = () => {
         </p>
 
         {/* Subtitle 3: Teaching it */}
-        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-5">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
           Teaching it
         </h3>
 
-        <div className="space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] font-normal">
+        <div className="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
           <p>
             The statutory RSHE curriculum for secondary pupils includes the
             risks of gambling, including online gambling and its link to debt.
           </p>
 
-          <div className="pt-6 border-t border-dotted border-gray-300">
+          <div className="pt-4 border-t border-dashed border-gray-200">
             <p>
-              <strong className="font-bold text-[#1e293b]">
+              <strong className="font-bold text-gray-900 mr-1.5">
                 GHUK provides independent, evidence-based training on gambling
                 harm
-              </strong>{" "}
+              </strong>
               for teachers, safeguarding leads and the wider CYP workforce, built
               on our safeguarding films and lived-experience testimony, and
               free of gambling-industry funding. Book via{" "}
               <a
                 href="mailto:hello@gamblingharm.com"
-                className="underline font-semibold text-slate-900 hover:text-[#0093D0] transition-colors"
+                className="underline font-semibold text-gray-900 hover:text-[#0092D0] transition-colors"
               >
                 hello@gamblingharm.com
               </a>
@@ -106,7 +106,7 @@ const TeachersCypClassroomSigns = () => {
           </div>
 
           <p>
-            Our <strong className="font-bold text-[#1e293b]">safeguarding films</strong>{" "}
+            Our <strong className="font-bold text-gray-900">safeguarding films</strong>{" "}
             are used in school sessions, medical education and safeguarding
             training, and come with the training above.
           </p>

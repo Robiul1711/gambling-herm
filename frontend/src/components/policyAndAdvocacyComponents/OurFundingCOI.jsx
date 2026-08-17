@@ -4,19 +4,19 @@ const OurFundingCOI = () => {
   return (
     <section
       id="our-funding-and-coi"
-      className="py-10 md:py-16 bg-[#1e1c1a] text-gray-200 antialiased"
+      className="py-12 md:py-16 bg-[#1e1c1a] text-gray-200 antialiased"
     >
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Header Section */}
-        <div className="mb-12">
+        <div className="mb-10">
           {/* Subtle Accent Line */}
-          <div className="w-10 h-[3px] bg-sky-500 mb-6"></div>
+          <div className="w-12 h-[3px] bg-sky-500 mb-6"></div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-white tracking-tight leading-tight mb-6">
             Our funding & conflict-of-interest reflection
           </h2>
 
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-normal">
             Independence on gambling harm requires independence from
             gambling-industry funding. We take this seriously and are explicit
             about it. Reflection on our own potential COIs is a permanent
@@ -25,11 +25,11 @@ const OurFundingCOI = () => {
         </div>
 
         {/* Content Breakdown */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {/* Item 1 */}
-          <div className="pt-8 border-t border-dashed border-gray-700">
-            <p className="text-sm md:text-base leading-relaxed text-gray-300">
-              <strong className="text-white font-semibold">
+          <div className="pt-6 border-t border-dashed border-gray-700">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-300 font-normal">
+              <strong className="text-white font-bold">
                 No Industry Funding.
               </strong>{" "}
               We do not accept funding from gambling operators, their trade
@@ -40,9 +40,9 @@ const OurFundingCOI = () => {
           </div>
 
           {/* Item 2 */}
-          <div className="pt-8 border-t border-dashed border-gray-700">
-            <p className="text-sm md:text-base leading-relaxed text-gray-300">
-              <strong className="text-white font-semibold">
+          <div className="pt-6 border-t border-dashed border-gray-700">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-300 font-normal">
+              <strong className="text-white font-bold">
                 Staff And Trustee Declarations.
               </strong>{" "}
               All staff and trustees declare any prior or current interests
@@ -54,9 +54,9 @@ const OurFundingCOI = () => {
           </div>
 
           {/* Item 3 */}
-          <div className="pt-8 border-t border-dashed border-gray-700">
-            <p className="text-sm md:text-base leading-relaxed text-gray-300">
-              <strong className="text-white font-semibold">
+          <div className="pt-6 border-t border-dashed border-gray-700">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-300 font-normal">
+              <strong className="text-white font-bold">
                 Research Independence.
               </strong>{" "}
               Where we commission or fund research, we do so with editorial
@@ -66,9 +66,9 @@ const OurFundingCOI = () => {
           </div>
 
           {/* Item 4 */}
-          <div className="pt-8 border-t border-dashed border-gray-700">
-            <p className="text-sm md:text-base leading-relaxed text-gray-300">
-              <strong className="text-white font-semibold">
+          <div className="pt-6 border-t border-dashed border-gray-700">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-300 font-normal">
+              <strong className="text-white font-bold">
                 Reflective COI Practice.
               </strong>{" "}
               Avoiding industry funding does not, on its own, deliver
@@ -80,9 +80,9 @@ const OurFundingCOI = () => {
           </div>
 
           {/* Footer Link */}
-          <div className="pt-8">
-            <p className="text-sm md:text-base text-gray-300">
-              <strong className="text-white font-semibold">
+          <div className="pt-6 border-t border-dashed border-gray-700">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-300 font-normal">
+              <strong className="text-white font-bold">
                 Open financials.
               </strong>{" "}
               Our annual report and accounts are published in full each year on the Charity
@@ -91,7 +91,7 @@ const OurFundingCOI = () => {
                 href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5155823"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-400 hover:text-sky-300 underline underline-offset-4 transition-colors duration-200"
+                className="text-sky-400 hover:text-sky-300 underline underline-offset-4 transition-colors duration-200 font-semibold"
               >
                 View on the Charity Commission register
               </a>

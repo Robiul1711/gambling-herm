@@ -48,18 +48,18 @@ const ScreenExplanationSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-14 sm:py-18 md:py-20 border-b border-gray-100">
+    <section className="w-full bg-white py-12 md:py-16 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
-        <div className="w-12 h-[3.5px] bg-[#0082c3] mb-6"></div>
+        <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
         {/* Section 1: What a screen is, and what it isn't */}
         <div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
             What a screen is, and what it isn't
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal mb-8">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-8">
             A screening tool is a short set of standard questions that puts a rough
             shape on a pattern of gambling. It's a starting point for reflection,
             not a medical test and not a verdict.
@@ -75,9 +75,9 @@ const ScreenExplanationSection = () => {
                     : "pb-1"
                 }`}
               >
-                <p className="text-[15px] sm:text-base text-gray-800 leading-relaxed">
-                  <strong className="font-bold text-gray-900">
-                    {item.title}{" "}
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
+                  <strong className="font-bold text-gray-900 mr-1.5">
+                    {item.title}
                   </strong>
                   <span>{item.text}</span>
                 </p>
@@ -87,12 +87,12 @@ const ScreenExplanationSection = () => {
         </div>
 
         {/* Section 2: Things worth noticing */}
-        <div className="mt-16 sm:mt-20 md:mt-24">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+        <div className="mt-14 sm:mt-16 md:mt-20">
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
             Things worth noticing
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal mb-8">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-8">
             These aren't a quiz with a pass mark. They're the areas the validated
             tools ask about, put into plain language, as prompts to notice rather
             than tick.
@@ -108,9 +108,9 @@ const ScreenExplanationSection = () => {
                     : "pb-1"
                 }`}
               >
-                <p className="text-[15px] sm:text-base text-gray-800 leading-relaxed">
-                  <strong className="font-bold text-gray-900">
-                    {item.title}{" "}
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
+                  <strong className="font-bold text-gray-900 mr-1.5">
+                    {item.title}
                   </strong>
                   <span>{item.text}</span>
                 </p>
@@ -118,7 +118,7 @@ const ScreenExplanationSection = () => {
             ))}
           </div>
 
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal mt-8">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mt-8">
             If any of these feel familiar, that's worth paying attention to,
             whatever a score would say.
           </p>

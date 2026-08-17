@@ -4,15 +4,14 @@ const NeurodivergenceFraming = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0] rounded-r-xl p-8 sm:p-10 md:p-12 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
+        <div className="bg-[#edf7fd] border-l-[4px] border-[#0093D0] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-xs">
           {/* Subtitle / Category */}
-          <h2 className="text-[#0093D0] text-xs md:text-sm font-bold tracking-widest uppercase mb-5">
+          <h2 className="text-[#0093D0] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3">
             OUR FRAMING
           </h2>
 
           {/* Core Statement */}
-          <p className="text-slate-800 text-base sm:text-lg 
-           leading-relaxed md:leading-[1.85] font-normal">
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-normal">
             Where gambling harm concentrates in neurodivergent people, the cause
             is a product designed to exploit certain response patterns, speed,
             reward unpredictability, difficulty disengaging, not a deficit or a

@@ -41,13 +41,13 @@ const GamblingMeccSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto">
+    <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto py-12 md:py-16 bg-white text-gray-900">
       {/* Top Heading Section */}
-      <div className="mb-12">
-        <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
+      <div className="mb-10">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
           Why gambling fits MECC
         </h2>
-        <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
           Three features of gambling harm make it especially well-suited to opportunistic, contact-based intervention:
         </p>
       </div>
@@ -57,18 +57,18 @@ const GamblingMeccSection = () => {
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="flex flex-col md:flex-row pt-6 pb-8 border-b border-gray-200/80 gap-2 md:gap-12"
+            className="flex flex-col md:flex-row pt-6 pb-6 border-b border-dashed border-gray-200 gap-2 md:gap-8 items-start"
           >
             {/* Left Column: Label */}
             <div className="w-full md:w-1/4 lg:w-1/5 shrink-0">
-              <span className="text-[#0082c3] font-medium text-[15px] md:text-16 hover:underline cursor-pointer block md:inline">
+              <span className="text-[#0082c3] font-bold text-xs sm:text-sm uppercase tracking-wider block md:inline">
                 {feature.label}
               </span>
             </div>
 
             {/* Right Column: Description Text */}
             <div className="w-full md:w-3/4 lg:w-4/5">
-              <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                 {feature.content}
               </p>
             </div>

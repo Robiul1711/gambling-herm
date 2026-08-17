@@ -17,33 +17,35 @@ const TalkToSomeone = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
       {/* Heading */}
       <div className="text-center">
-        <h2 className="text-[28px] xs:text-[34px] md:text-[48px] font-bold text-[#222]">
-          Free, confidential, available 24 hours. 
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight">
+          Free, confidential, available 24 hours.
         </h2>
 
-        <p className="mt-3 text-sm md:text-base text-[#5f6472]">
+        <p className="mt-4 text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
           Three numbers. All free, all confidential. None of them require you to
           be in crisis.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="border border-[#7f7f7f] bg-white p-5 sm:p-8"
+            className="border border-gray-200/90  bg-white p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
           >
-            <h3 className="text-[15px] text-[#222]">{card.title}</h3>
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0092D0]">
+              {card.title}
+            </h3>
 
-            <div className="mt-4 text-[24px] xs:text-[28px] sm:text-[32px] font-bold text-[#222] leading-none">
+            <div className="mt-3 text-3xl sm:text-4xl font-extrabold text-gray-900 leading-none tracking-tight">
               {card.number}
             </div>
 
-            <p className="mt-6 text-[15px] leading-8 text-[#70798c]">
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-gray-600 font-normal">
               {card.description}
             </p>
           </div>
@@ -51,8 +53,9 @@ const TalkToSomeone = () => {
       </div>
 
       {/* Bottom text */}
-      <p className="mt-8 text-sm text-[#222]">
-        If you or someone you love is in immediate danger, call 999.
+      <p className="mt-8 text-center text-sm sm:text-base text-gray-700 font-medium">
+        If you or someone you love is in immediate danger, call{" "}
+        <strong className="text-gray-900 font-bold">999</strong>.
       </p>
     </div>
   );

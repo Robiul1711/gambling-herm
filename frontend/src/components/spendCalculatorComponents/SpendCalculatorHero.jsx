@@ -13,12 +13,12 @@ const SpendCalculatorHero = () => {
         </div>
 
         {/* Main Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#111827] tracking-tight leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
           What gambling is actually costing you.
         </h1>
 
         {/* Subtitle / Description */}
-        <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
           A short calculator that turns what you stake into a weekly, monthly and
           yearly figure, and shows what that money could otherwise have covered.
           Nothing you enter leaves your browser: there's no data collection, no

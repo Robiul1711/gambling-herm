@@ -95,56 +95,56 @@ const CYResources = () => {
  },
  ];
 
- return (
- <section className="w-full max-w-5xl mx-auto py-12 bg-white text-gray-800">
- {/* Blue Accent */}
- <div className="w-8 h-[3px] bg-[#0082c3] mb-4"></div>
+  return (
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16 bg-white text-gray-900">
+      {/* Blue Accent */}
+      <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
- {/* Title */}
- <h2 className="text-[36px] font-bold text-[#222] mb-10">
- Resources
- </h2>
+      {/* Title */}
+      <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+        Resources
+      </h2>
 
- {/* Cards */}
- <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
- {/* Left Card */}
- <div className="border border-[#d9d9d9] p-6 md:p-8 bg-white">
- <h3 className="text-[22px] font-bold text-[#222] mb-4">
- For children themselves
- </h3>
+      {/* Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Left Card */}
+        <div className="border border-gray-200/90  p-6 md:p-8 bg-white shadow-xs">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight">
+            For children themselves
+          </h3>
 
- <div className="border-t border-dashed border-[#cfcfcf]">
- {childrenResources.map((item) => (
- <div
- key={item.id}
- className="py-8 text-[15px] text-[#333] border-b border-dashed border-[#cfcfcf] leading-7"
- >
- {item.text}
- </div>
- ))}
- </div>
- </div>
+          <div className="border-t border-dashed border-gray-200">
+            {childrenResources.map((item) => (
+              <div
+                key={item.id}
+                className="py-3.5 text-sm sm:text-base text-gray-700 border-b border-dashed border-gray-200 leading-relaxed font-normal last:border-none"
+              >
+                {item.text}
+              </div>
+            ))}
+          </div>
+        </div>
 
- {/* Right Card */}
- <div className="border border-[#d9d9d9] p-6 md:p-8 bg-white">
- <h3 className="text-[22px] font-bold text-[#222] mb-4">
- For adults around them
- </h3>
+        {/* Right Card */}
+        <div className="border border-gray-200/90  p-6 md:p-8 bg-white shadow-xs">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight">
+            For adults around them
+          </h3>
 
- <div className="border-t border-dashed border-[#cfcfcf]">
- {adultResources.map((item) => (
- <div
- key={item.id}
- className="py-8 text-[15px] text-[#333] border-b border-dashed border-[#cfcfcf] leading-7"
- >
- {item.text}
- </div>
- ))}
- </div>
- </div>
- </div>
- </section>
- );
+          <div className="border-t border-dashed border-gray-200">
+            {adultResources.map((item) => (
+              <div
+                key={item.id}
+                className="py-3.5 text-sm sm:text-base text-gray-700 border-b border-dashed border-gray-200 leading-relaxed font-normal last:border-none"
+              >
+                {item.text}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default CYResources;

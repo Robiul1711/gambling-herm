@@ -22,14 +22,14 @@ const MembersLibraryNotSignedIn = () => {
           <div className="flex flex-wrap items-center gap-4 mt-6">
             <Link
               to="/login"
-              className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-md transition-colors shadow-sm inline-block"
+              className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-2.5  transition-colors shadow-sm inline-block"
             >
               Sign in
             </Link>
 
             <Link
               to="/register-keep-updated"
-              className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-md transition-colors shadow-sm inline-block bg-transparent"
+              className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-2.5  transition-colors shadow-sm inline-block bg-transparent"
             >
               Register
             </Link>

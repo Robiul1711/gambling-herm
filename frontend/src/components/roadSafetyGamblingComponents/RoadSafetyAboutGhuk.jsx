@@ -25,7 +25,7 @@ const RoadSafetyAboutGhuk = () => {
         <div>
           <Link
             to="/about"
-            className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-md transition-colors shadow-sm inline-block"
+            className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm inline-block"
           >
             Learn more about Gambling Harm UK &rarr;
           </Link>

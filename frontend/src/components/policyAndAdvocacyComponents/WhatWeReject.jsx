@@ -106,56 +106,56 @@ const rejectionsData = [
 ];
 
 const WhatWeReject = () => {
- return (
- <section
- id="what-we-reject"
- className="py-10 md:py-16 bg-[#1a1818] text-white"
- >
- <div className="max-w-5xl mx-auto px-4">
- {/* Top Accent Line */}
- <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
+  return (
+    <section
+      id="what-we-reject"
+      className="py-12 md:py-16 bg-[#1a1818] text-white"
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        {/* Top Accent Line */}
+        <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
- {/* Main Title */}
- <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
- What we reject
- </h2>
+        {/* Main Title */}
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-white mb-6 tracking-tight leading-tight">
+          What we reject
+        </h2>
 
- {/* Section Context Intro Paragraph */}
- <p className="text-gray-300 text-[15px] md:text-base leading-relaxed mb-12">
- Some framings sound neutral and aren't. The arguments below are core
- to how the gambling industry has shaped UK public conversation for
- thirty years. We do not use them, and we believe their continued
- circulation in regulator, government and press language is one of the
- chief obstacles to meaningful reform.
- </p>
+        {/* Section Context Intro Paragraph */}
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-normal mb-10">
+          Some framings sound neutral and aren't. The arguments below are core
+          to how the gambling industry has shaped UK public conversation for
+          thirty years. We do not use them, and we believe their continued
+          circulation in regulator, government and press language is one of the
+          chief obstacles to meaningful reform.
+        </p>
 
- {/* Industry Framing Stack */}
- <div className="space-y-6">
- {rejectionsData.map((item, index) => (
- <div
- key={index}
- className="bg-[#262222] border-l-[4px] border-[#17a9df] p-6 md:p-8 shadow-md"
- >
- {/* Header Label */}
- <span className="text-[#17a9df] text-xs font-semibold uppercase tracking-wider block mb-3">
- Industry framing
- </span>
+        {/* Industry Framing Stack */}
+        <div className="space-y-6">
+          {rejectionsData.map((item, index) => (
+            <div
+              key={index}
+              className="bg-[#262222] border-l-[4px] border-[#17a9df] p-6 md:p-8 rounded-r-xl shadow-md"
+            >
+              {/* Header Label */}
+              <span className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider block mb-3">
+                INDUSTRY FRAMING
+              </span>
 
- {/* Strikethrough Industry Slogan */}
- <blockquote className="text-gray-400 italic text-[15px] md:text-base line-through decoration-gray-500 decoration-1 mb-5 block leading-relaxed">
-"{item.slogan}"
- </blockquote>
+              {/* Strikethrough Industry Slogan */}
+              <blockquote className="text-gray-400 italic text-base sm:text-lg line-through decoration-gray-500 decoration-1 mb-4 block leading-relaxed">
+                "{item.slogan}"
+              </blockquote>
 
- {/* Public Health Analytical Response */}
- <div className="text-gray-300 text-sm md:text-[15px] leading-relaxed md:leading-7">
- {item.analysis}
- </div>
- </div>
- ))}
- </div>
- </div>
- </section>
- );
+              {/* Public Health Analytical Response */}
+              <div className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
+                {item.analysis}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default WhatWeReject;

@@ -25,8 +25,7 @@ const MedicalTraineesSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto pb-4 md:pb-16 bg-white text-gray-800">
-      
+    <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto py-12 md:py-16 bg-white text-gray-900">
       {/* Centered Accent Line */}
       <div className="flex justify-center mb-4">
         <div className="w-12 h-[3px] bg-[#0082c3]"></div>
@@ -34,10 +33,10 @@ const MedicalTraineesSection = () => {
       
       {/* Centered Main Headers */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-[36px] font-bold text-gray-950 tracking-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
           For medical students & specialty trainees
         </h2>
-        <p className="text-[15px] md:text-16 text-gray-600 mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg text-gray-600 mx-auto leading-relaxed font-normal">
           Gambling is largely absent from UK undergraduate medical curricula. We work with medical schools, foundation programmes and specialty curricula to change this.
         </p>
       </div>
@@ -47,10 +46,11 @@ const MedicalTraineesSection = () => {
         {traineeTracks.map((track) => (
           <div
             key={track.id}
-            className="py-5 border-b border-dashed border-gray-200/80 last:border-none"
+            className="py-4 border-b border-dashed border-gray-200 last:border-none"
           >
-            <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed font-normal">
-              <span className="font-bold text-gray-800">{track.role}:</span> {track.text}
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+              <strong className="font-bold text-gray-900 mr-1.5">{track.role}:</strong>
+              {track.text}
             </p>
           </div>
         ))}
@@ -58,18 +58,17 @@ const MedicalTraineesSection = () => {
 
       {/* Footer Contact Callout */}
       <div className="pt-4 border-t border-gray-100">
-        <p className="text-[14px] md:text-[15px] text-gray-700 leading-relaxed">
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
           Contact{" "}
           <a 
             href="mailto:hello@gamblingharm.com" 
-            className="text-gray-900 font-medium underline decoration-gray-400 hover:text-[#0082c3] hover:decoration-[#0082c3] transition-colors"
+            className="text-gray-900 font-semibold underline decoration-gray-400 hover:text-[#0082c3] hover:decoration-[#0082c3] transition-colors"
           >
             hello@gamblingharm.com
           </a>{" "}
           for teaching slides, OSCE stations, screening checklists, and referral-pathway diagrams.
         </p>
       </div>
-
     </div>
   );
 };

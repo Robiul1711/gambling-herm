@@ -41,44 +41,44 @@ const items = [
 
 const ProtectingYourMoney = () => {
   return (
-    <section className="pt-10 md:pt-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <section className="py-12 md:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Line */}
-        <div className="w-8 h-[2px] bg-[#0a9edb] mb-4"></div>
+        <div className="w-12 h-[3px] bg-[#0092D0] mb-5"></div>
 
         {/* Heading */}
-        <h2 className="text-[28px] xs:text-[34px] md:text-[48px] font-bold text-[#252223] leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
           Protecting your money
         </h2>
 
         {/* Description */}
-        <p className="mt-5 text-[#73768B] text-base sm:text-lg leading-relaxed sm:leading-9 max-w-4xl">
+        <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-8">
           Debt and financial harm sit at the centre of most gambling harm. The
           earlier you get advice, the more options you have.
         </p>
 
         {/* Cards */}
-        <div className="mt-8 md:mt-10 space-y-4 md:space-y-5">
+        <div className="space-y-4">
           {items.map((item) => (
             <div
               key={item.id}
-              className="border border-[#B6B8C5] bg-white p-5 sm:p-6 md:p-8"
+              className="border border-gray-200/90  bg-white p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow"
             >
-              <div className="flex gap-4 md:gap-5">
+              <div className="flex gap-4 md:gap-5 items-start">
                 {/* Number */}
-                <div className="w-9 h-9 md:w-10 md:h-10 bg-[#0896D7] text-white flex items-center justify-center font-semibold text-sm shrink-0">
+                <div className="w-9 h-9 bg-[#0092D0] text-white flex items-center justify-center font-bold text-sm rounded-full shrink-0 mt-0.5 shadow-xs">
                   {item.id}
                 </div>
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#252223] leading-tight">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug mb-2">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 md:mt-5 text-[#73768B] text-[15px] sm:text-base md:text-[17px] leading-7 md:leading-9">
+                  <div className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                     {item.description}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

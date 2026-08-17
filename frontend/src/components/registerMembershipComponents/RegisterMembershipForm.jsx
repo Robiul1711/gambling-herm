@@ -44,7 +44,7 @@ const RegisterMembershipForm = () => {
       <div className="max-w-2xl mx-auto">
         {/* Success Alert */}
         {serverSuccess && (
-          <div className="mb-8 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md text-sm flex items-center justify-between shadow-xs">
+          <div className="mb-8 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800  text-sm flex items-center justify-between shadow-xs">
             <span>
               Thank you for registering! A colleague will be in touch about your
               membership registration as soon as possible.
@@ -69,7 +69,7 @@ const RegisterMembershipForm = () => {
               type="text"
               placeholder=""
               {...register("name", { required: "Name is required." })}
-              className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+              className={`w-full px-3.5 py-2.5 sm:py-3 border  text-slate-900 focus:outline-none transition-colors ${
                 errors.name
                   ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
                   : "border-slate-300 focus:border-Primary focus:ring-1 focus:ring-Primary"
@@ -97,7 +97,7 @@ const RegisterMembershipForm = () => {
                   message: "Please enter a valid email address.",
                 },
               })}
-              className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+              className={`w-full px-3.5 py-2.5 sm:py-3 border  text-slate-900 focus:outline-none transition-colors ${
                 errors.email
                   ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
                   : "border-slate-300 focus:border-Primary focus:ring-1 focus:ring-Primary"
@@ -119,7 +119,7 @@ const RegisterMembershipForm = () => {
               type="text"
               placeholder=""
               {...register("organisation")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
+              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
             />
           </div>
 
@@ -132,7 +132,7 @@ const RegisterMembershipForm = () => {
               type="text"
               placeholder=""
               {...register("role")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
+              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
             />
           </div>
 
@@ -144,7 +144,7 @@ const RegisterMembershipForm = () => {
             <div className="relative">
               <select
                 {...register("sector")}
-                className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300 rounded-md text-slate-800 bg-white focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors appearance-none cursor-pointer"
+                className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-800 bg-white focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors appearance-none cursor-pointer"
               >
                 {sectorOptions.map((opt, i) => (
                   <option key={i} value={opt}>
@@ -153,8 +153,18 @@ const RegisterMembershipForm = () => {
                 ))}
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-slate-500">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </div>
             </div>
@@ -169,10 +179,11 @@ const RegisterMembershipForm = () => {
               rows={4}
               placeholder=""
               {...register("membershipNeeds")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors resize-y"
+              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors resize-y"
             ></textarea>
             <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-              Optional, but it helps us understand what to prioritise, for example training, briefings, or the evidence library.
+              Optional, but it helps us understand what to prioritise, for
+              example training, briefings, or the evidence library.
             </p>
           </div>
 
@@ -187,7 +198,10 @@ const RegisterMembershipForm = () => {
                 })}
                 className="w-4 h-4 mt-1 rounded border-slate-300 text-Primary focus:ring-Primary cursor-pointer"
               />
-              <label htmlFor="agreeTerms" className="text-xs sm:text-sm text-slate-700 leading-relaxed cursor-pointer select-none">
+              <label
+                htmlFor="agreeTerms"
+                className="text-xs sm:text-sm text-slate-700 leading-relaxed cursor-pointer select-none"
+              >
                 I have read and agree to GHUK's{" "}
                 <Link
                   to="/privacy"
@@ -195,9 +209,10 @@ const RegisterMembershipForm = () => {
                 >
                   privacy notice
                 </Link>
-                , including that my details will be held by GHUK and by the small
-                number of service providers we use to run our systems, and that
-                I can ask GHUK to access, correct or delete them at any time.
+                , including that my details will be held by GHUK and by the
+                small number of service providers we use to run our systems, and
+                that I can ask GHUK to access, correct or delete them at any
+                time.
               </label>
             </div>
             {errors.agreeTerms && (
@@ -216,7 +231,10 @@ const RegisterMembershipForm = () => {
                 {...register("newsletterUpdates")}
                 className="w-4 h-4 mt-1 rounded border-slate-300 text-Primary focus:ring-Primary cursor-pointer"
               />
-              <label htmlFor="newsletterUpdates" className="text-xs sm:text-sm text-slate-700 leading-relaxed cursor-pointer select-none">
+              <label
+                htmlFor="newsletterUpdates"
+                className="text-xs sm:text-sm text-slate-700 leading-relaxed cursor-pointer select-none"
+              >
                 I would also like to receive GHUK's newsletter and campaign
                 updates by email. I can unsubscribe at any time.
               </label>
@@ -228,7 +246,7 @@ const RegisterMembershipForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-Primary hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3.5 rounded-md transition-all shadow-sm flex items-center justify-center min-w-[140px] disabled:opacity-60 cursor-pointer"
+              className="bg-Primary hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3.5  transition-all shadow-sm flex items-center justify-center min-w-[140px] disabled:opacity-60 cursor-pointer"
             >
               {isSubmitting ? (
                 <div className="flex items-center gap-2">
@@ -245,9 +263,9 @@ const RegisterMembershipForm = () => {
           <div className="pt-6 space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
             <p>
               After you submit this, a colleague will be in touch about your
-              registration. We don't have a fixed response time to promise
-              while membership is being rolled out, but we aim to reply as soon
-              as we can.
+              registration. We don't have a fixed response time to promise while
+              membership is being rolled out, but we aim to reply as soon as we
+              can.
             </p>
             <p>
               We never sell your details, and we never accept gambling-industry

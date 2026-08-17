@@ -28,15 +28,14 @@ export default function CheckYourGambling() {
 
   return (
     <section className="w-full py-12 md:py-16 bg-[#fafafa]">
-      <div className="max-w-5xl mx-auto px-4 text-[#1f2937]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-[#1f2937]">
         {/* Header */}
         <header className="mb-10">
-          <div className="w-12 h-1 bg-[#156E94] mb-4"></div>{" "}
-          {/* Teal accent bar */}
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+          <div className="w-12 h-[3px] bg-[#156E94] mb-4"></div>
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight text-gray-900 mb-4 leading-tight">
             Check your gambling
           </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
             Take a short, confidential screening tool to see if gambling may be
             causing harm. You'll get instant feedback and guidance on next
             steps.
@@ -48,20 +47,20 @@ export default function CheckYourGambling() {
           {tools.map((tool, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-150/80 p-5 lg:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow duration-300"
+              className="bg-white border border-gray-200/90  p-6 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow duration-300"
             >
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
                   {tool.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-[15px] mb-6">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-6 font-normal">
                   {tool.description}
                 </p>
               </div>
               <div>
                 <Link
                   to={tool.to}
-                  className="inline-flex items-center gap-2 bg-[#0B678F] hover:bg-[#095272] text-white font-semibold text-sm py-3 px-5 transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#0B678F] hover:bg-[#095272] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs"
                 >
                   {tool.buttonText}
                   <span>&rarr;</span>

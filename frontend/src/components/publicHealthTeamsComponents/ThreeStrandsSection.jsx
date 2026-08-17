@@ -29,16 +29,16 @@ const ThreeStrandsSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto section-padding-y bg-white text-gray-800">
+    <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16 bg-white text-gray-900">
       {/* Header Accent Line */}
       <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
       {/* Top Heading Group */}
       <div className="mb-10">
-        <h2 className="text-3xl md:text-[38px] font-bold text-gray-950 tracking-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
           How we work: three strands
         </h2>
-        <p className="text-[15px] md:text-16 text-gray-600 max-w-3xl leading-relaxed">
+        <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
           Our operational model, set out in the GHUK Levy Audit 2024, is built
           around three interconnected strands. These are the routes through
           which we work with public-health organisations.
@@ -50,27 +50,27 @@ const ThreeStrandsSection = () => {
         {strandsData.map((strand) => (
           <div
             key={strand.id}
-            className={`flex flex-col border p-6 md:p-8 bg-white transition-shadow duration-300 hover:shadow-sm ${
+            className={`flex flex-col border  p-6 md:p-8 bg-white transition-all duration-300 hover:shadow-md ${
               strand.isHighlighted
-                ? "border-[#0082c3]/60 shadow-[0_2px_8px_rgba(0,130,195,0.05)]"
-                : "border-gray-200"
+                ? "border-[#0082c3]/60 shadow-xs"
+                : "border-gray-200/90 shadow-xs"
             }`}
           >
             {/* Top Ribbon Indicator */}
             <div className="flex items-center gap-2 mb-4">
               <span className="w-6 h-[2px] bg-[#0082c3]"></span>
-              <span className="text-xs font-bold text-[#0082c3] tracking-wide">
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0082c3]">
                 {strand.strandNumber}
               </span>
             </div>
 
             {/* Section Title */}
-            <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
               {strand.title}
             </h3>
 
             {/* Description Narrative */}
-            <p className="text-[14px] md:text-[15px] text-gray-500 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
               {strand.description}
             </p>
           </div>

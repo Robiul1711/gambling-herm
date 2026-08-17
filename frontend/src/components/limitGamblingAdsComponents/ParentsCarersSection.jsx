@@ -19,7 +19,7 @@ const ParentsCarersSection = () => {
 
   return (
     <section id="for-parents-carers" className="scroll-mt-24 w-full py-12 md:py-16 bg-white border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 
@@ -29,7 +29,7 @@ const ParentsCarersSection = () => {
         </h2>
 
         {/* Intro */}
-        <p className="text-[15px] sm:text-base text-gray-700 leading-relaxed mb-8">
+        <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-8">
           Children's exposure to gambling advertising and gamblified content is wider than most parents expect, and some of it sits outside the rules that govern gambling itself.
         </p>
 
@@ -37,8 +37,8 @@ const ParentsCarersSection = () => {
         <div className="divide-y divide-dashed divide-gray-200 mb-8">
           {points.map((p, idx) => (
             <div key={idx} className="py-4 first:pt-0 last:pb-0">
-              <p className="text-[14px] sm:text-[15px] text-gray-700 leading-relaxed">
-                <strong className="font-bold text-gray-900">{p.title}</strong>{" "}
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
+                <strong className="font-bold text-gray-900 mr-1.5">{p.title}</strong>
                 {p.text}
               </p>
             </div>
@@ -46,13 +46,13 @@ const ParentsCarersSection = () => {
         </div>
 
         {/* Footer Link Notes */}
-        <p className="text-[13.5px] sm:text-[14px] text-gray-600 leading-relaxed max-w-3xl">
+        <p className="text-sm text-gray-600 leading-relaxed">
           More on this in our guides for{" "}
-          <Link to="/children-and-safeguarding" className="underline hover:text-[#0082c3] text-gray-900 font-medium">
+          <Link to="/children-and-safeguarding" className="underline hover:text-[#0082c3] text-gray-900 font-semibold">
             children and safeguarding
           </Link>{" "}
           and for{" "}
-          <Link to="/professionals/teachers-cyp" className="underline hover:text-[#0082c3] text-gray-900 font-medium">
+          <Link to="/professionals/teachers-cyp" className="underline hover:text-[#0082c3] text-gray-900 font-semibold">
             teachers and CYP professionals
           </Link>
           .
