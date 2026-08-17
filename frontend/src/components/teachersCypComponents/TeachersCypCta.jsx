@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const TeachersCypCta = () => {
   return (
-    <section className="bg-[#191919] py-20 md:py-28 px-4 md:px-8 text-center">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#191919] py-20 md:py-28 text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Centered Accent Bar */}
         <div className="w-12 h-[3.5px] bg-[#0093D0] mb-8 mx-auto"></div>
 
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white mb-6 tracking-tight leading-tight max-w-2xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-white mb-6 tracking-tight leading-tight mx-auto">
           Want to help us put this on the policy agenda?
         </h2>
 
         {/* Narrative */}
-        <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-normal">
+        <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mx-auto mb-10 font-normal">
           If you run or work in a CYP service, school, ICB safeguarding pathway,
           or research group on adolescent health, we want to hear from you.
         </p>

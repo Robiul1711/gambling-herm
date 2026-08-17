@@ -128,7 +128,7 @@ const GamblingLayout = () => {
       </div>
 
       {/* Trailing centered components */}
-      <div className="max-w-4xl mx-auto px-4 mt-16 space-y-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-16 space-y-16">
         <WhyItExists />
         <HowItIsUsed />
         <ReadAndCite />

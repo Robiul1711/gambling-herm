@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const RoadSafetyHero = () => {
   return (
-    <section className="bg-[#f2f9fd] py-16 md:py-24 px-4 md:px-8 border-b border-sky-100/60">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#f2f9fd] py-16 md:py-24 border-b border-sky-100/60">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb Tagline */}
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-5 h-[2.5px] bg-[#0093D0]"></span>

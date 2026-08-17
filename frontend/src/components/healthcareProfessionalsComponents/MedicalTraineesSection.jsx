@@ -25,7 +25,7 @@ const MedicalTraineesSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-6xl px-4 mx-auto pb-4 md:pb-16 bg-white text-gray-800">
+    <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto pb-4 md:pb-16 bg-white text-gray-800">
       
       {/* Centered Accent Line */}
       <div className="flex justify-center mb-4">
@@ -37,7 +37,7 @@ const MedicalTraineesSection = () => {
         <h2 className="text-3xl md:text-[36px] font-bold text-gray-950 tracking-tight mb-4">
           For medical students & specialty trainees
         </h2>
-        <p className="text-[15px] md:text-16 text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-[15px] md:text-16 text-gray-600 mx-auto leading-relaxed">
           Gambling is largely absent from UK undergraduate medical curricula. We work with medical schools, foundation programmes and specialty curricula to change this.
         </p>
       </div>

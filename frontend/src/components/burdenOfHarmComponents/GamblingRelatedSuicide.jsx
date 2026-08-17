@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const GamblingRelatedSuicide = () => {
   return (
-    <section className="py-12 bg-[#1A1A1A] text-gray-300 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 bg-[#1A1A1A] text-gray-300">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-10 h-[3px] bg-[#0093D0] mb-4" />
 

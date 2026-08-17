@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const NeurodivergenceCta = () => {
   return (
-    <section className="bg-[#121417] py-20 md:py-28 px-4 md:px-8 text-white text-center">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#121417] py-20 md:py-28 text-white text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Centered Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mx-auto mb-8"></div>
 
@@ -14,7 +14,7 @@ const NeurodivergenceCta = () => {
         </h2>
 
         {/* Subtitle / Paragraph */}
-        <p className="text-gray-300 max-w-3xl mx-auto text-sm sm:text-base md:text-lg lg:text-[19px] leading-relaxed md:leading-[1.8] mb-10 font-normal">
+        <p className="text-gray-300 mx-auto text-sm sm:text-base md:text-lg lg:text-[19px] leading-relaxed md:leading-[1.8] mb-10 font-normal">
           If you're worried about your own gambling, or someone else's, and any
           of this reflects your experience, that's a reason to reach out, not a
           reason to expect a harder conversation.

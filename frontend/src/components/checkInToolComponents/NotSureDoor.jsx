@@ -29,7 +29,7 @@ const prompts = [
 const NotSureDoor = () => {
   return (
     <section id="not-sure" className="py-16 lg:py-24 ">
-      <div className="max-w-5xl mx-auto px-5">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top line */}
         <div className="w-8 h-[2px] bg-[#0099D8] mx-auto mb-6"></div>
 
@@ -39,7 +39,7 @@ const NotSureDoor = () => {
         </h2>
 
         {/* Intro */}
-        <p className="max-w-4xl mx-auto mt-6 text-center text-[#6E7388] text-base md:text-lg leading-relaxed">
+        <p className="mx-auto mt-6 text-center text-[#6E7388] text-base md:text-lg leading-relaxed">
           This is the position most people who reach a gambling-harm support
           site are actually in. There's not always a clean line between"I'm
           worried about myself" and"I'm worried about someone else", and the

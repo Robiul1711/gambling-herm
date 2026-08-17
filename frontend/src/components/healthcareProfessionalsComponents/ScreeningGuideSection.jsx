@@ -2,7 +2,7 @@ import React from "react";
 
 const ScreeningGuideSection = () => {
   return (
-    <div className="w-full max-w-6xl px-4 mx-auto section-padding-y bg-white text-gray-800">
+    <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto section-padding-y bg-white text-gray-800">
       {/* Header Accent Line */}
       <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 

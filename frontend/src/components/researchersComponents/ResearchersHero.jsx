@@ -2,8 +2,8 @@ import React from "react";
 
 const ResearchersHero = () => {
   return (
-    <section className="bg-[#f0f8fd] border-b border-sky-100/60 py-16 md:py-24 section-padding-x">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#f0f8fd] border-b border-sky-100/60 py-16 md:py-24">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb / Tagline */}
         <div className="flex items-center gap-2.5 mb-6">
           <span className="w-5 h-[2px] bg-[#0082c3]"></span>

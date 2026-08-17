@@ -21,7 +21,7 @@ export default function SupportOptions() {
 
   return (
     <section className="w-full bg-white py-12 md:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Header Block */}
         <div className="flex flex-col space-y-4 mb-12 md:mb-16 text-left">
           <div className="flex items-center space-x-3">

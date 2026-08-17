@@ -3,7 +3,7 @@ import { Link } from'react-router-dom';
 
 const ReferralServicesSection = () => {
  return (
- <div className="w-full max-w-6xl px-4 mx-auto bg-white text-gray-800">
+ <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto bg-white text-gray-800">
  
  {/* Top Accent Line */}
  <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
@@ -13,7 +13,7 @@ const ReferralServicesSection = () => {
  <h2 className="text-3xl md:text-[36px] font-bold text-gray-900 tracking-tight mb-4">
  Where to refer
  </h2>
- <p className="text-[15px] md:text-16 text-gray-600 max-w-4xl leading-relaxed">
+ <p className="text-[15px] md:text-16 text-gray-600 leading-relaxed">
  UK gambling-harm services have expanded substantially since 2019. The pathways below are free at the point of use and accept self-referral.
  </p>
  </div>

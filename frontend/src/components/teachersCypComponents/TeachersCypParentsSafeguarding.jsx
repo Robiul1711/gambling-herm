@@ -25,8 +25,8 @@ const points = [
 
 const TeachersCypParentsSafeguarding = () => {
   return (
-    <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-t border-slate-100">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 md:py-16 bg-white border-t border-slate-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
 
@@ -43,7 +43,7 @@ const TeachersCypParentsSafeguarding = () => {
         </p>
 
         {/* PhoenixFM Audio Callout Card */}
-        <div className="bg-[#f0f9ff] border-l-[4px] border-[#0093D0] rounded-r-xl p-6 sm:p-7 mb-10 shadow-xs max-w-xl">
+        <div className="bg-[#f0f9ff] border-l-[4px] border-[#0093D0] rounded-r-xl p-6 sm:p-7 mb-10 shadow-xs">
           <span className="text-[11px] font-bold text-[#0093D0] uppercase tracking-wider mb-2 block">
             PHOENIXFM, MAY 2026
           </span>

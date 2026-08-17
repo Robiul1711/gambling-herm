@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const NeurodivergenceEvidence = () => {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
 
@@ -57,7 +57,7 @@ const NeurodivergenceEvidence = () => {
         </div>
 
         {/* Bottom Note with Link */}
-        <p className="mt-12 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-4xl pt-4">
+        <p className="mt-12 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed pt-4">
           We would rather state the claim at the level the evidence supports
           than round it up. If you are aware of robust, citable research that
           sharpens or corrects this section, our{" "}

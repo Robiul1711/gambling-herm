@@ -33,8 +33,8 @@ const stats = [
 
 const RoadSafetyResearchStats = () => {
   return (
-    <section className="bg-[#121417] text-white py-16 md:py-24 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#121417] text-white py-16 md:py-24">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Tagline */}
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-5 h-[2.5px] bg-[#0093D0]"></span>
@@ -49,7 +49,7 @@ const RoadSafetyResearchStats = () => {
         </h2>
 
         {/* Subtitle */}
-        <p className="text-gray-300 text-base sm:text-lg leading-relaxed md:leading-[1.8] max-w-3xl mb-12 font-normal">
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed md:leading-[1.8] mb-12 font-normal">
           Findings are early and indicative. They point to gambling harm as a
           factor worth considering alongside established road-safety risks, not
           a settled conclusion.

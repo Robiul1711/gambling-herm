@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const MembersLibraryWhatItHolds = () => {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 bg-white border-t border-slate-100">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 md:py-20 bg-white border-t border-slate-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-14 h-[3.5px] bg-[#0093D0] mb-7"></div>
 
@@ -85,13 +85,13 @@ const MembersLibraryWhatItHolds = () => {
               className="text-[#1e293b] underline hover:text-[#0093D0] font-medium transition-colors"
             >
               policy & advocacy
-            </Link>{" "}
+            </Link>
             pages.
           </div>
         </div>
 
         {/* Postscript note */}
-        <p className="mt-10 text-xs sm:text-sm md:text-[15px] text-slate-600 leading-relaxed max-w-4xl pt-4">
+        <p className="mt-10 text-xs sm:text-sm md:text-[15px] text-slate-600 leading-relaxed pt-4">
           This list reflects what's already published elsewhere on the site. As
           the library is built, it may end up holding more, or less, than this;
           we won't promise specific items until they're in it.

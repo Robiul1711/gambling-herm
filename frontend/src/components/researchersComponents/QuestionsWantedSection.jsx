@@ -30,8 +30,8 @@ const QuestionsWantedSection = () => {
   ];
 
   return (
-    <section className="section-padding-x">
-      <div className="max-w-4xl mx-auto">
+    <section className="w-full">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 

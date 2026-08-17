@@ -32,6 +32,7 @@ const StigmaAndLanguage = () => {
       <AntiStigmaCampaignProblem />
       <WhatReducesStigma />
       <OurWorkCommonContact
+      primaryClass={'bg-Primary'}
         title="If shame is what's keeping you from talking to someone ,"
         description="it is the most well-evidenced reason for not seeking gambling-harm help, and it is also the most well-evidenced thing that lifts when you do. The first call is the hard one. Everyone on the helpline knows this."
         primaryBtnText="Find Help"

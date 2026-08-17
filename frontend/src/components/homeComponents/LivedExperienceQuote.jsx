@@ -3,7 +3,7 @@ import React from "react";
 export default function LivedExperienceQuote() {
   return (
     <section className="w-full bg-white py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         {/* Top Accent Subheading */}
         <div className="flex items-center space-x-3 mb-8 pl-4 sm:pl-8 md:pl-0">
           <span className="w-8 h-[2px] bg-Primary" />

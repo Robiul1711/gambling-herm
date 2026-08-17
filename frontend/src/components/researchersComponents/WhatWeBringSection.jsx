@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const WhatWeBringSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-white section-padding-x">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-16 md:py-20 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
         <div className="w-12 h-[3px] bg-[#0082c3] mb-4"></div>
 

@@ -29,7 +29,7 @@ export default function ThreeFramings() {
 
   return (
     <section className="w-full bg-[#FBFBFB] py-10 md:py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Header Row Block */}
         <div className="flex flex-col space-y-4 mb-8 md:mb-12 text-left">
           <div className="flex items-center space-x-3">

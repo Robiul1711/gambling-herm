@@ -2,8 +2,8 @@ import React from "react";
 
 const AffectedOthersDirectVictims = () => {
   return (
-    <section className=" text-gray-800 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section className="text-gray-800">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Accent Bar */}
         <div className="w-10 h-[3px] bg-[#0093D0] mb-4" />
 

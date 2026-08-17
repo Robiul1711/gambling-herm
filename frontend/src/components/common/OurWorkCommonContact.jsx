@@ -16,9 +16,9 @@ const OurWorkCommonContact = ({
 }) => {
   return (
     <div
-      className={`w-full border-b border-gray-700/40 py-10 md:py-16 px-4 sm:px-6 lg:px-8 bg-[#2A2828] text-white ${className}`}
+      className={`w-full border-b border-gray-700/40 py-10 md:py-16 px-4 sm:px-6 bg-[#2A2828] text-white ${className}`}
     >
-      <div className="max-w-3xl mx-auto flex flex-col items-center text-center space-y-6">
+      <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-6">
         <h2
           className={`text-2xl sm:text-3xl md:text-4xl ${textClass} font-extrabold tracking-tight leading-tight`}
         >
