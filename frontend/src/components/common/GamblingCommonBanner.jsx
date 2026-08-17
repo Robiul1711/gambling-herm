@@ -17,7 +17,10 @@ const GamblingCommonBanner = ({
 }) => {
   const isBgActive = showBg && bg;
   const bgStyle = isBgActive
-    ? { background: "linear-gradient(180deg, var(--teal-10) 0%, var(--paper) 100%)" }
+    ? {
+        background:
+          "linear-gradient(180deg, var(--teal-10) 0%, var(--paper) 100%)",
+      }
     : {};
 
   if (isLoading) {
@@ -26,7 +29,7 @@ const GamblingCommonBanner = ({
         className={`w-full py-8 sm:py-12 md:py-20 animate-pulse section-padding-x ${className} `}
         style={bgStyle}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-center ">
           {/* Left skeleton */}
           <div className="lg:col-span-6 space-y-5 order-2 lg:order-1">
             {/* Breadcrumb */}
@@ -63,7 +66,7 @@ const GamblingCommonBanner = ({
       className={`w-full py-8 sm:py-12 md:py-20 section-padding-x ${className}`}
       style={bgStyle}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-center">
         {/* Left Content */}
         <div className="lg:col-span-6 space-y-4 md:space-y-6 order-2 lg:order-1">
           {/* Breadcrumb */}
@@ -73,7 +76,9 @@ const GamblingCommonBanner = ({
           </div>
 
           {/* Title */}
-          <h1 className={`${titleClassName} text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 tracking-tight`}>
+          <h1
+            className={`${titleClassName} text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 tracking-tight`}
+          >
             {title}
           </h1>
 
@@ -82,7 +87,10 @@ const GamblingCommonBanner = ({
             {description}
           </p>
           {to && (
-            <Link to={to} className="text-sm md:text-base text-Primary font-semibold px-4 py-2 border border-Primary hover:bg-Primary hover:text-white transition-colors">
+            <Link
+              to={to}
+              className="text-sm md:text-base text-Primary font-semibold px-4 py-2 border border-Primary hover:bg-Primary hover:text-white transition-colors"
+            >
               {buttonText}
             </Link>
           )}
@@ -104,4 +112,3 @@ const GamblingCommonBanner = ({
 };
 
 export default GamblingCommonBanner;
-

@@ -59,7 +59,7 @@ const GamblingTacticsLayout = () => {
 
   return (
     <section className="w-full py-8 md:py-12">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-start">
         {/* Sticky Sidebar */}
         <aside className="lg:col-span-3 lg:sticky lg:top-6 order-1">
           <TacticsSidebar

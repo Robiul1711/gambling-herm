@@ -357,7 +357,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/urgent-help"
-                    className="text-red-400 hover:text-red-300 font-semibold transition-colors"
+                    className="hover:text-white font-semibold transition-colors"
                   >
                     Crisis &amp; urgent help
                   </Link>

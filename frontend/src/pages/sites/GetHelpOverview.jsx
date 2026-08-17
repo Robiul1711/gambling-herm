@@ -55,6 +55,7 @@ const GetHelpOverview = () => {
           </div>
         </section>
         <GamblingCommonBanner
+        titleClassName="text-[32px] sm:text-[40px] md:text-[52px] !lg:text-[64px]"
           section={bannerData?.subtitle || "Support that works"}
           title={
             bannerData?.title ||

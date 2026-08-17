@@ -17,6 +17,10 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = React.useState(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(true);
+  const lastScrollY = React.useRef(0);
+
+  const { pathname, hash } = useLocation();
 
   // Fetch brand logo dynamically from footer settings
   const { data: responseData } = useClient({
@@ -26,10 +30,41 @@ export default function Navbar() {
 
   const footerData = responseData?.data;
 
+  // Reset visibility when route changes
+  React.useEffect(() => {
+    setIsVisible(true);
+    lastScrollY.current = typeof window !== "undefined" ? window.scrollY : 0;
+  }, [pathname, hash]);
+
   React.useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
+      // Add background & shadow styling when page is scrolled
       setIsScrolled(currentScrollY > 20);
+
+      // Keep navbar visible at the very top of the page
+      if (currentScrollY <= 20) {
+        setIsVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Small threshold to prevent jitter on micro-scrolls
+      const scrollDiff = currentScrollY - lastScrollY.current;
+      if (Math.abs(scrollDiff) < 10) {
+        return;
+      }
+
+      if (scrollDiff > 0 && currentScrollY > 80) {
+        // Scrolling down -> hide navbar
+        setIsVisible(false);
+      } else if (scrollDiff < 0) {
+        // Scrolling up -> show navbar
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -39,8 +74,6 @@ export default function Navbar() {
   const toggleMobileDropdown = (menu) => {
     setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu);
   };
-
-  const { pathname, hash } = useLocation();
 
   const isLinkActive = (to) => {
     if (to.includes("#")) {
@@ -124,9 +157,11 @@ export default function Navbar() {
 
   return (
     <>
-      {/* STICKY HEADER WRAPPER: Always pinned to top of screen on scroll */}
+      {/* STICKY HEADER WRAPPER: Auto-hides on scroll down, shows on scroll up */}
       <div
-        className={`w-full flex flex-col sticky top-0 z-[1000] transition-all duration-200 ease-in-out ${
+        className={`w-full flex flex-col sticky top-0 z-[1000] transition-all duration-300 ease-in-out ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        } ${
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100"
             : "bg-white border-b border-transparent"
