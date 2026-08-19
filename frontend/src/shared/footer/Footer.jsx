@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook, Linkedin } from "lucide-react";
 import logo from "@/assets/images/logo.png";
 import { Link } from "react-router-dom";
 import useClient from "@/hooks/useClient";
@@ -79,6 +79,17 @@ export default function Footer() {
                   aria-label="X (formerly Twitter)"
                 >
                   <XIcon />
+                </a>
+              )}
+              {footerData?.linkedinUrl && (
+                <a
+                  href={footerData.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 border border-gray-700  flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-500 hover:bg-gray-800 transition-all"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
                 </a>
               )}
             </div>
