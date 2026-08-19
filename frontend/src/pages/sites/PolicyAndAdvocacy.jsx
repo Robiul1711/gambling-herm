@@ -88,6 +88,7 @@ const PolicyAndAdvocacy = () => {
       </div>
 
       <OurWorkCommonContact
+      primaryClass={'bg-Primary'}
         title="Want to follow what we're saying?"
         description="Our consultation responses, briefings, working papers and press statements are indexed on the news page."
         primaryBtnText="News & research index"

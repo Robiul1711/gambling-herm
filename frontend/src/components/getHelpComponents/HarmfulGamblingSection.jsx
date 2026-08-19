@@ -24,7 +24,7 @@ const HarmfulGamblingSection = () => {
       </p>
 
       {/* Questions Card */}
-      <div className="bg-[#edf7fd] border-l-4 border-[#0093d0] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-xs mb-8">
+      <div className="bg-[#edf7fd] border-l-4 border-[#0093d0]  p-6 sm:p-8 md:p-10 shadow-xs mb-8">
         <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 tracking-tight">
           A few questions worth asking yourself
         </h3>
@@ -59,7 +59,7 @@ const HarmfulGamblingSection = () => {
       </div>
 
       {/* Bottom Card */}
-      <div className="bg-[#181818] border-l-4 border-[#0093d0] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-md">
+      <div className="bg-[#181818] border-l-4 border-[#0093d0]  p-6 sm:p-8 md:p-10 shadow-md">
         <h4 className="text-[#00a2e8] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
           A note on the PGSI threshold
         </h4>

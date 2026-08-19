@@ -44,7 +44,7 @@ export default function VictimsNotBystanders() {
     <section className="w-full py-12 md:py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Card Wrapper */}
-        <div className="bg-[#edf7fd] border-l-4 border-[#0092D0] rounded-r-xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 hover:shadow-md transition-shadow duration-300">
+        <div className="bg-[#edf7fd] border-l-4 border-[#0092D0]  p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 hover:shadow-md transition-shadow duration-300">
           {/* Left Content */}
           <div className="flex-1 text-left">
             {/* Category Label */}
@@ -54,9 +54,7 @@ export default function VictimsNotBystanders() {
 
             {/* First Paragraph */}
             <p className="text-sm sm:text-base leading-relaxed text-gray-700 mb-6">
-              <strong className="text-gray-900 font-bold">
-                {boldPrefix}
-              </strong>{" "}
+              <strong className="text-gray-900 font-bold">{boldPrefix}</strong>{" "}
               {mainDesc}
             </p>
 

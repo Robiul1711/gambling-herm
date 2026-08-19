@@ -68,7 +68,7 @@ export default function PeerSupportMeetings() {
             commitment to stop is required to attend, only a desire to.
           </p>
 
-          <div className="bg-[#EEF7FC] border-l-4 border-[#156E94] rounded-r-xl p-6 md:p-8 shadow-xs">
+          <div className="bg-[#EEF7FC] border-l-4 border-[#156E94]  p-6 md:p-8 shadow-xs">
             <h4 className="font-bold text-gray-900 text-lg sm:text-xl mb-4 tracking-tight">
               Local meetings near Thurrock
             </h4>
@@ -84,7 +84,9 @@ export default function PeerSupportMeetings() {
                     </strong>
                     {meeting.address}
                   </p>
-                  <p className="text-gray-500 text-xs sm:text-sm mt-1 font-normal">{meeting.time}</p>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 font-normal">
+                    {meeting.time}
+                  </p>
                 </div>
               ))}
             </div>
@@ -113,7 +115,7 @@ export default function PeerSupportMeetings() {
             Meetings are led by people who've been where you are.
           </p>
 
-          <div className="bg-[#EEF7FC] border-l-4 border-[#156E94] rounded-r-xl p-6 md:p-8 shadow-xs">
+          <div className="bg-[#EEF7FC] border-l-4 border-[#156E94]  p-6 md:p-8 shadow-xs">
             <h4 className="font-bold text-gray-900 text-lg sm:text-xl mb-4 tracking-tight">
               Local Gam-Anon meetings
             </h4>

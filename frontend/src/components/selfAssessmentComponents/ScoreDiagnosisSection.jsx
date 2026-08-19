@@ -24,13 +24,14 @@ const ScoreDiagnosisSection = () => {
           </p>
 
           <p>
-            Newer measurement work using the Gambling Harms Screening Index (GHSI)
-            points the same way: up to 85% of the health loss among people who
-            gamble sits below that most severe band. Most of the harm being
-            measured happens to people who would never score in the top category.
-            A low score, or a score that falls under a published threshold,
-            doesn't mean nothing is happening. It means that if there is harm, it
-            sits somewhere other than the most visible end of the scale.
+            Newer measurement work using the Gambling Harms Screening Index
+            (GHSI) points the same way: up to 85% of the health loss among
+            people who gamble sits below that most severe band. Most of the harm
+            being measured happens to people who would never score in the top
+            category. A low score, or a score that falls under a published
+            threshold, doesn't mean nothing is happening. It means that if there
+            is harm, it sits somewhere other than the most visible end of the
+            scale.
           </p>
 
           <p>
@@ -46,23 +47,23 @@ const ScoreDiagnosisSection = () => {
         </div>
 
         {/* Dark Callout Box */}
-        <div className="mt-10 mb-4 bg-[#181818] border-l-[4px] border-[#0096D6] text-white rounded-r-xl p-6 sm:p-8 md:p-10 shadow-md">
+        <div className="mt-10 mb-4 bg-[#181818] border-l-[4px] border-[#0096D6] text-white  p-6 sm:p-8 md:p-10 shadow-md">
           <span className="text-[#0096D6] font-bold text-xs sm:text-sm uppercase tracking-wider block mb-3">
             The point of this page
           </span>
           <p className="text-base sm:text-lg text-gray-100 font-medium leading-relaxed">
             Your own worry is the relevant signal, not the score. If a screening
             tool comes back low but something still doesn't sit right with you,
-            that feeling is worth acting on. You don't need a qualifying score to
-            talk to someone.
+            that feeling is worth acting on. You don't need a qualifying score
+            to talk to someone.
           </p>
         </div>
 
         {/* Clinical View Subnote */}
         <p className="text-xs sm:text-sm text-gray-500 italic leading-relaxed mt-4 font-normal">
           None of this replaces an assessment by a clinician. If you want a
-          clinical view, the National Gambling Helpline and NHS gambling
-          clinics can help you get one.
+          clinical view, the National Gambling Helpline and NHS gambling clinics
+          can help you get one.
         </p>
       </div>
     </section>

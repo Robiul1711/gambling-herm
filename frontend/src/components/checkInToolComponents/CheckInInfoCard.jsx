@@ -4,7 +4,7 @@ const CheckInInfoCard = () => {
   return (
     <section className="py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#edf7fd] border-l-4 border-[#0093D0] rounded-r-xl p-7 sm:p-9 md:p-10 shadow-xs">
+        <div className="bg-[#edf7fd] border-l-4 border-[#0093D0]  p-7 sm:p-9 md:p-10 shadow-xs">
           {/* Heading */}
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-[2px] bg-[#0093D0]"></span>

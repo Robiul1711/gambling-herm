@@ -158,7 +158,7 @@ const WhatWeWantChanged = () => {
                 {/* Light Blue Callout Nesting Specific to Item 2 */}
                 {item.number === 2 && (
                   <>
-                    <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] rounded-r-xl p-6 md:p-8 !mt-6 shadow-xs">
+                    <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df]  p-6 md:p-8 !mt-6 shadow-xs">
                       <h5 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
                         Why this position is foundational
                       </h5>

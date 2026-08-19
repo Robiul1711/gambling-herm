@@ -8,7 +8,7 @@ const NeurodivergencePosition = () => {
         <div className="w-12 h-[3px] bg-[#0093D0] mb-6"></div>
 
         {/* Dark Position Card Container */}
-        <div className="bg-[#181818] rounded-r-xl overflow-hidden shadow-md border-l-[4px] border-[#0093D0]">
+        <div className="bg-[#181818]  overflow-hidden shadow-md border-l-[4px] border-[#0093D0]">
           <div className="p-6 sm:p-8 md:p-10">
             {/* Header Title */}
             <h3 className="text-[#0093D0] text-xs sm:text-sm font-bold tracking-wider uppercase mb-4">
@@ -39,10 +39,9 @@ const NeurodivergencePosition = () => {
                   susceptibility.
                 </strong>
                 If specific design features (speed, variable-ratio
-                reinforcement, near-miss design, continuous play) plausibly
-                land harder on people with ADHD, regulation of those features
-                is a neurodivergence issue as well as a general product-safety
-                one.
+                reinforcement, near-miss design, continuous play) plausibly land
+                harder on people with ADHD, regulation of those features is a
+                neurodivergence issue as well as a general product-safety one.
               </p>
 
               {/* Ask 3 */}

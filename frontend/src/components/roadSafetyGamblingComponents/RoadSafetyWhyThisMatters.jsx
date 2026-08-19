@@ -15,8 +15,9 @@ const RoadSafetyWhyThisMatters = () => {
         {/* Paragraph 1 */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-6 font-normal">
           With around 2 million adults in the UK estimated to need support for
-          their gambling (OHID 2023 England estimate, scaled to the UK), gambling
-          harm should be viewed alongside other recognised workplace risks.
+          their gambling (OHID 2023 England estimate, scaled to the UK),
+          gambling harm should be viewed alongside other recognised workplace
+          risks.
         </p>
 
         {/* Paragraph 2 */}
@@ -28,7 +29,7 @@ const RoadSafetyWhyThisMatters = () => {
         </p>
 
         {/* Light Blue Callout Card */}
-        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0] rounded-r-xl p-7 sm:p-9 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
+        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0]  p-7 sm:p-9 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
           <p className="text-slate-800 text-base sm:text-lg md:text-[18px] leading-relaxed md:leading-[1.8] font-medium">
             Creating a workplace where employees feel able to seek support early
             helps protect individuals, colleagues, passengers and the wider

@@ -172,7 +172,7 @@ export default function BlockingToolsPage() {
             ))}
           </div>
 
-          <div className="bg-[#edf7fc] border-l-[4px] border-[#166B94] rounded-r-xl p-6 md:p-8">
+          <div className="bg-[#edf7fc] border-l-[4px] border-[#166B94]  p-6 md:p-8">
             <h4 className="text-base md:text-lg font-bold text-gray-900 mb-2">
               What these schemes don't cover
             </h4>

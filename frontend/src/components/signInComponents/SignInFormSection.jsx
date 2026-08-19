@@ -135,7 +135,7 @@ const SignInFormSection = () => {
         </div>
 
         {/* Callout Card: Membership is being rolled out */}
-        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0] rounded-r-xl p-6 sm:p-8 mt-12  shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
+        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0]  p-6 sm:p-8 mt-12  shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
           <h3 className="font-bold text-[#1e293b] text-base mb-2">
             Membership is being rolled out
           </h3>

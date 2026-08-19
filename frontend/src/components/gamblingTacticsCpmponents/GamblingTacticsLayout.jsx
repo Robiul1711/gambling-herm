@@ -73,28 +73,31 @@ const GamblingTacticsLayout = () => {
           {/* Why this exists — intro block */}
           <div
             id="why-this-exists"
-            className="border-l-4 border-[#0093D0] bg-[#eef7fc] p-6 sm:p-8 md:p-10 space-y-4 rounded-r-xl shadow-xs scroll-mt-28"
+            className="border-l-4 border-[#0093D0] bg-[#eef7fc] p-6 sm:p-8 md:p-10 space-y-4  shadow-xs scroll-mt-28"
           >
             <h4 className="text-[#0093D0] font-bold text-xs sm:text-sm tracking-wider uppercase">
               WHY THIS EXISTS
             </h4>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
               We, the research team at Gambling Harm UK, built{" "}
-              <em className="italic">Gambling Tactics</em> following a review of the
-              vitally important <em className="italic">Tobacco Tactics</em> repository.
-              As with tobacco, there are well-grounded concerns that{" "}
+              <em className="italic">Gambling Tactics</em> following a review of
+              the vitally important <em className="italic">Tobacco Tactics</em>{" "}
+              repository. As with tobacco, there are well-grounded concerns that{" "}
               <strong className="font-bold text-gray-900">
-                gambling industry interference is the greatest barrier to progress
+                gambling industry interference is the greatest barrier to
+                progress
               </strong>{" "}
-              in reducing gambling harm. Industry funding has dominated research,
-              education and treatment. Efforts to implement a public-health approach are
-              prevented in the first place by the lack of effort to identify, estimate
-              or consider the years of healthy life lost due to gambling harm. Gambling
-              harm continues to be a neglected public-health issue.
+              in reducing gambling harm. Industry funding has dominated
+              research, education and treatment. Efforts to implement a
+              public-health approach are prevented in the first place by the
+              lack of effort to identify, estimate or consider the years of
+              healthy life lost due to gambling harm. Gambling harm continues to
+              be a neglected public-health issue.
             </p>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
-              The repository is published to make those tactics visible. Once you can see the
-              playbook, the policy debate becomes very different.
+              The repository is published to make those tactics visible. Once
+              you can see the playbook, the policy debate becomes very
+              different.
             </p>
           </div>
 

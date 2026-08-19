@@ -124,7 +124,7 @@ const SpendCalculatorMain = ({
                   aria-label="Duration time unit"
                   value={durationUnit}
                   onChange={(e) => setDurationUnit(e.target.value)}
-                  className="w-1/2 px-3.5 py-2.5 bg-white border-y border-r border-gray-300 rounded-r-lg text-gray-700 font-medium focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all cursor-pointer"
+                  className="w-1/2 px-3.5 py-2.5 bg-white border-y border-r border-gray-300  text-gray-700 font-medium focus:ring-2 focus:ring-[#0092D0]/20 focus:border-[#0092D0] outline-none transition-all cursor-pointer"
                 >
                   <option value="months">months</option>
                   <option value="years">years</option>

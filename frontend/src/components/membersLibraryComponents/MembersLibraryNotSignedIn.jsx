@@ -5,7 +5,7 @@ const MembersLibraryNotSignedIn = () => {
   return (
     <section className="py-10 md:py-14 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0] rounded-r-xl p-7 sm:p-9 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
+        <div className="bg-[#edf7fd] border-l-[5px] border-[#0093D0]  p-7 sm:p-9 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
           {/* Card Title */}
           <h2 className="text-[#1e293b] text-base sm:text-lg font-bold mb-2.5">
             You're not signed in

@@ -28,8 +28,10 @@ const SystemsLevelSection = () => {
       </p>
 
       {/* Light Cyan Container */}
-      <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] rounded-r-xl p-6 md:p-8 mb-8 shadow-xs">
-        <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#17a9df] mb-4">THIS INCLUDES</h3>
+      <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df]  p-6 md:p-8 mb-8 shadow-xs">
+        <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#17a9df] mb-4">
+          THIS INCLUDES
+        </h3>
         <div className="divide-y divide-dashed divide-gray-300/80">
           {includesList.map((item, index) => (
             <p
@@ -49,7 +51,7 @@ const SystemsLevelSection = () => {
       </p>
 
       {/* Dark Contact Card Container */}
-      <div className="bg-[#181818] border-l-[4px] border-[#17a9df] rounded-r-xl p-6 md:p-8 text-white shadow-md">
+      <div className="bg-[#181818] border-l-[4px] border-[#17a9df]  p-6 md:p-8 text-white shadow-md">
         <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
           GET IN TOUCH
         </h4>
