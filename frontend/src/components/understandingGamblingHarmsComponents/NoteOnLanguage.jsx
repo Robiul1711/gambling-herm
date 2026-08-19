@@ -26,18 +26,18 @@ const NoteOnLanguage = () => {
             <span className="italic font-bold text-white">
               "problem gamblers"
             </span>
-            . The shift is small, but it matters. We also try to be explicit about
-            how the headline 0.4% figure that has dominated UK debate for more than
-            two decades has come about, because the measurement question is, in
-            this field, also a political one.
+            . The shift is small, but it matters. We also try to be explicit
+            about how the headline 0.4% figure that has dominated UK debate for
+            more than two decades has come about, because the measurement
+            question is, in this field, also a political one.
           </p>
 
           <p>
             <strong className="font-bold text-white">"Problem gambler"</strong>{" "}
-            puts the problem inside the person. It implies a defective individual
-            interacting with a fine product. It is the framing the gambling
-            industry has paid for in research, charity branding and political
-            language for decades.
+            puts the problem inside the person. It implies a defective
+            individual interacting with a fine product. It is the framing the
+            gambling industry has paid for in research, charity branding and
+            political language for decades.
           </p>
 
           <p>
@@ -68,7 +68,9 @@ const NoteOnLanguage = () => {
               government alike.
             </p>
 
-            <p className="font-semibold text-white">There are two problems with this:</p>
+            <p className="font-semibold text-white">
+              There are two problems with this:
+            </p>
 
             <p>
               It produces a number that radically understates the share of the
@@ -86,13 +88,13 @@ const NoteOnLanguage = () => {
 
         {/* Post-separator Paragraph */}
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-10">
-          It produces a binary framing (you are either a "problem gambler" or you
-          are fine) that the actual evidence does not support. Harm is a
+          It produces a binary framing (you are either a "problem gambler" or
+          you are fine) that the actual evidence does not support. Harm is a
           spectrum, and meaningful harm exists well below PGSI 8.
         </p>
 
         {/* White Position Card */}
-        <div className="bg-white border-l-[4px] border-[#1d7092] p-6 md:p-8 rounded-r-xl shadow-md">
+        <div className="bg-white border-l-[4px] border-[#1d7092] p-6 md:p-8  shadow-md">
           <h4 className="text-[#1d7092] font-bold text-xs uppercase tracking-wider mb-4">
             OUR POSITION
           </h4>
@@ -102,8 +104,7 @@ const NoteOnLanguage = () => {
             the full PGSI distribution (not summarised by an 8+ cut-off) and
             should be supplemented by direct measurement of affected-others
             harm, which the PGSI does not capture at all. The headline number
-            used in policy debate should reflect the full distribution of
-            harm.
+            used in policy debate should reflect the full distribution of harm.
           </p>
         </div>
       </div>

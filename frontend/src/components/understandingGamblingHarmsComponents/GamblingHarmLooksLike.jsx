@@ -151,7 +151,7 @@ const GamblingHarmLooksLike = () => {
 
         {/* Bottom Alert Box */}
         <div className="mt-12">
-          <div className="bg-[#edf7fd] border-l-[4px] border-[#1d7092] p-6 md:p-8 rounded-r-xl shadow-xs">
+          <div className="bg-[#edf7fd] border-l-[4px] border-[#1d7092] p-6 md:p-8  shadow-xs">
             <h4 className="font-bold text-gray-900 mb-2 text-base sm:text-lg">
               If reading this is upsetting
             </h4>

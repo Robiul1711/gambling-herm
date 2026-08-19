@@ -8,7 +8,7 @@ const PolicyPositionsInequality = () => {
         <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
         {/* Dark Policy Background Card */}
-        <div className="bg-[#181818] rounded-r-xl overflow-hidden shadow-md border-l-[4px] border-[#17a9df]">
+        <div className="bg-[#181818]  overflow-hidden shadow-md border-l-[4px] border-[#17a9df]">
           <div className="p-6 sm:p-8 md:p-10">
             {/* Callout Header */}
             <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold tracking-wider uppercase mb-5">
@@ -45,7 +45,8 @@ const PolicyPositionsInequality = () => {
               {/* Ask 3 */}
               <p>
                 <strong className="text-white font-bold">
-                  (3) Marketing restrictions should weight the inequality picture,
+                  (3) Marketing restrictions should weight the inequality
+                  picture,
                 </strong>{" "}
                 point-of-sale density, sponsorship in deprived-area sport, and
                 ad targeting that lands harder on already-marginalised

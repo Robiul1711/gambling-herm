@@ -1,13 +1,31 @@
 import React from "react";
+import YoungPeopleHero from "@/components/youngPeopleComponents/YoungPeopleHero";
+import SomeoneAtHomeSection from "@/components/youngPeopleComponents/SomeoneAtHomeSection";
+import OwnGamblingSection from "@/components/youngPeopleComponents/OwnGamblingSection";
+import TellingAdultAtSchool from "@/components/youngPeopleComponents/TellingAdultAtSchool";
+import YoungPeopleCrisisSection from "@/components/youngPeopleComponents/YoungPeopleCrisisSection";
+import ThreeThingsToRemember from "@/components/youngPeopleComponents/ThreeThingsToRemember";
 
 export default function YoungPeoplePage() {
   return (
-    <div className="section-padding-x py-20 min-h-[60vh]">
-      <div className="max-w-2xl">
-        <p className="text-xs font-bold text-Primary uppercase tracking-widest mb-4">Coming soon</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800">Young people</h1>
-        <p className="mt-6 text-base text-slate-500">This page is under construction.</p>
-      </div>
+    <div className="w-full bg-white">
+      {/* 1. Hero & Quick 24/7 Helplines */}
+      <YoungPeopleHero />
+
+      {/* 2. When Someone at Home Gambles */}
+      <SomeoneAtHomeSection />
+
+      {/* 3. When It's About Your Own Gambling */}
+      <OwnGamblingSection />
+
+      {/* 4. Telling an Adult at School */}
+      <TellingAdultAtSchool />
+
+      {/* 5. Immediate / Crisis Help */}
+      <YoungPeopleCrisisSection />
+
+      {/* 6. Three Things to Remember & Navigation */}
+      <ThreeThingsToRemember />
     </div>
   );
 }

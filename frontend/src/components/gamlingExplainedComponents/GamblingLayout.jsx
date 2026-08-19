@@ -76,7 +76,7 @@ const GamblingLayout = () => {
 
   return (
     <section className="w-full py-8 md:py-12">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-start">
         {/* Sticky Sidebar */}
         <aside className="lg:col-span-3 lg:sticky lg:top-28 order-1">
           <ChaptersSidebar
@@ -96,21 +96,25 @@ const GamblingLayout = () => {
               WHAT IT IS
             </h4>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              <em className="italic">Gambling Explained</em> is a high-level synthesis
-              of the scientific evidence and the industry lobbying around it, across
-              the ten topic areas that shape UK gambling-harm policy. It exists to
-              do for gambling what <em className="italic">Tobacco Explained</em> did for
-              tobacco: put the structural picture, the industry tactics and the
-              public-health response into one accessible reference that does not
-              rely on the framing of the industry being studied.
+              <em className="italic">Gambling Explained</em> is a high-level
+              synthesis of the scientific evidence and the industry lobbying
+              around it, across the ten topic areas that shape UK gambling-harm
+              policy. It exists to do for gambling what{" "}
+              <em className="italic">Tobacco Explained</em> did for tobacco: put
+              the structural picture, the industry tactics and the public-health
+              response into one accessible reference that does not rely on the
+              framing of the industry being studied.
             </p>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
               It was written by people with lived experience as{" "}
-              <strong className="font-bold text-gray-900">affected others</strong>,
-              family members and partners of people who experienced severe gambling
-              harm. The affected-other authorship is intentional. The perspective
-              most likely to see industry tactics clearly is the perspective that
-              watched them play out from outside the moment of gambling.
+              <strong className="font-bold text-gray-900">
+                affected others
+              </strong>
+              , family members and partners of people who experienced severe
+              gambling harm. The affected-other authorship is intentional. The
+              perspective most likely to see industry tactics clearly is the
+              perspective that watched them play out from outside the moment of
+              gambling.
             </p>
           </div>
 

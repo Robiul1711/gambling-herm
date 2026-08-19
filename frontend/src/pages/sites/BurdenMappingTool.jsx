@@ -2012,7 +2012,7 @@ Deprivation is modelled for English authorities (GSGB table D.8 × IMD 2019 quin
                 </div>
               </div>
 
-              <div className="border-l-3 border-[#4A6A6E] bg-[#FBF4E7] p-3 rounded-r-lg text-xs text-[#5C4210] mt-2">
+              <div className="border-l-3 border-[#4A6A6E] bg-[#FBF4E7] p-3  text-xs text-[#5C4210] mt-2">
                 <strong>Use OHID's own figure for your area if you can.</strong>{" "}
                 OHID publishes a per-authority figure in the 2023 workbook.
                 Where the two differ, cite OHID's.
@@ -2606,7 +2606,7 @@ Deprivation is modelled for English authorities (GSGB table D.8 × IMD 2019 quin
             </div>
 
             {/* Caution language note */}
-            <div className="border-l-4 border-[#0A4561] bg-[#FBF4E7] p-4 rounded-r-lg text-xs text-[#1A1A1A] leading-relaxed shadow-xs">
+            <div className="border-l-4 border-[#0A4561] bg-[#FBF4E7] p-4  text-xs text-[#1A1A1A] leading-relaxed shadow-xs">
               <b className="font-bold text-[#1A1A1A]">Language note.</b> This
               tool describes people experiencing gambling harm and populations
               placed at risk, it does not use "problem gambler" framing. Harm is

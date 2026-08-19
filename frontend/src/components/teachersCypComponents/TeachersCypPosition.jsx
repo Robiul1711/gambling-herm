@@ -4,7 +4,7 @@ const TeachersCypPosition = () => {
   return (
     <section className="py-8 md:py-12 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#edf7fd] border-l-[4px] border-[#0093D0] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-xs">
+        <div className="bg-[#edf7fd] border-l-[4px] border-[#0093D0]  p-6 sm:p-8 md:p-10 shadow-xs">
           {/* Subtitle / Category */}
           <h2 className="text-[#0093D0] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3">
             OUR POSITION

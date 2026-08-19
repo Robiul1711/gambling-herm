@@ -42,7 +42,7 @@ export default function CYBanner() {
       {/* Key Points Card & Illustration Section */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-6">
         {/* Left Column: Key Points Container */}
-        <div className="md:col-span-7 bg-[#edf7fd] border-l-[4px] border-[#17a9df] rounded-r-xl p-6 md:p-8 shadow-xs">
+        <div className="md:col-span-7 bg-[#edf7fd] border-l-[4px] border-[#17a9df]  p-6 md:p-8 shadow-xs">
           <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#17a9df] mb-4">
             KEY POINTS
           </h3>

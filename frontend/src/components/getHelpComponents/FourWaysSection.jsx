@@ -7,7 +7,9 @@ const FourWaysSection = () => {
       {/* Top Label */}
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-[3px] bg-[#0092D0]"></div>
-        <span className="text-xs sm:text-sm text-[#0092D0] font-bold uppercase tracking-wider">Routes</span>
+        <span className="text-xs sm:text-sm text-[#0092D0] font-bold uppercase tracking-wider">
+          Routes
+        </span>
       </div>
 
       {/* Heading */}
@@ -28,7 +30,7 @@ const FourWaysSection = () => {
       </p>
 
       {/* Audio Card */}
-      <div className="bg-[#f8fafc] border-l-4 border-[#0092D0] p-6 sm:p-8 rounded-r-xl shadow-xs">
+      <div className="bg-[#f8fafc] border-l-4 border-[#0092D0] p-6 sm:p-8  shadow-xs">
         <p className="text-xs font-bold uppercase tracking-wider text-[#0092D0] mb-2">
           LIVED EXPERIENCE • PHOENIXFM, MAY 2026
         </p>

@@ -16,13 +16,13 @@ const IfYouFeelUnsafeSection = () => {
         {/* Intro Paragraph */}
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-8">
           Gambling-related financial harm can sit alongside domestic abuse and
-          coercive control. If that's part of what you're describing to yourself,
-          it deserves to be named and taken seriously on its own terms,
-          separately from the gambling.
+          coercive control. If that's part of what you're describing to
+          yourself, it deserves to be named and taken seriously on its own
+          terms, separately from the gambling.
         </p>
 
         {/* Emergency / Safety Callout Box */}
-        <div className="border-l-[4px] border-red-500 bg-[#fff8f8] rounded-r-xl p-6 sm:p-8 space-y-4 shadow-xs">
+        <div className="border-l-[4px] border-red-500 bg-[#fff8f8]  p-6 sm:p-8 space-y-4 shadow-xs">
           <p className="font-bold text-gray-900 text-sm sm:text-base">
             If anyone is in immediate danger, call 999.
           </p>

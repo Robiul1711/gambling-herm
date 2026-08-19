@@ -78,7 +78,7 @@ const ScreeningGuideSection = () => {
       </div>
 
       {/* Box 3: Dark Callout Note Panel */}
-      <div className="relative bg-[#181818] rounded-r-xl border-l-[4px] border-[#0082c3] p-6 md:p-8 overflow-hidden shadow-xs">
+      <div className="relative bg-[#181818]  border-l-[4px] border-[#0082c3] p-6 md:p-8 overflow-hidden shadow-xs">
         <h4 className="text-[#0082c3] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
           A note on the PGSI threshold
         </h4>

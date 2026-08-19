@@ -41,7 +41,7 @@ const RegulatoryCaptureLobbying = () => {
         </div>
 
         {/* Dark Callout Section Card */}
-        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df] rounded-r-xl">
+        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df] ">
           <div className="p-6 md:p-8">
             {/* Callout Header Label */}
             <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
@@ -63,7 +63,7 @@ const RegulatoryCaptureLobbying = () => {
           </div>
         </div>
 
-        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df] rounded-r-xl mt-8">
+        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df]  mt-8">
           <div className="p-6 md:p-8">
             {/* Callout Header Label */}
             <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">

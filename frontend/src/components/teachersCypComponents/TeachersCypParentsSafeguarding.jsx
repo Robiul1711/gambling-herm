@@ -43,7 +43,7 @@ const TeachersCypParentsSafeguarding = () => {
         </p>
 
         {/* PhoenixFM Audio Callout Card */}
-        <div className="bg-[#f0f9ff] border-l-[4px] border-[#0093D0] rounded-r-xl p-6 sm:p-8 mb-10 shadow-xs">
+        <div className="bg-[#f0f9ff] border-l-[4px] border-[#0093D0]  p-6 sm:p-8 mb-10 shadow-xs">
           <span className="text-xs sm:text-sm font-bold text-[#0093D0] uppercase tracking-wider mb-2 block">
             PHOENIXFM, MAY 2026
           </span>

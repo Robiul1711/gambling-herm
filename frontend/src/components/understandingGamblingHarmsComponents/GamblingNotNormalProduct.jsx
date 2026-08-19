@@ -31,8 +31,8 @@ const GamblingNotNormalProduct = () => {
 
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             <strong className="text-white font-bold">
-              Tobacco, alcohol, ultra-processed food and modern gambling share
-              a structural feature: the product's commercial viability depends on
+              Tobacco, alcohol, ultra-processed food and modern gambling share a
+              structural feature: the product's commercial viability depends on
               a customer base whose use, in aggregate, causes substantial harm.
             </strong>{" "}
             The harm is not an unfortunate side-effect of an otherwise neutral
@@ -47,14 +47,15 @@ const GamblingNotNormalProduct = () => {
               share of operator revenue. In Great Britain, the top 10% of online
               customers generate around 79% of operators' net revenue, and the
               top 1% alone roughly 37% (NatCen,{" "}
-              <span className="italic">Patterns of Play</span>, 2023). This is not
-              a marginal phenomenon. It is the central economics of the sector.
+              <span className="italic">Patterns of Play</span>, 2023). This is
+              not a marginal phenomenon. It is the central economics of the
+              sector.
             </strong>
           </p>
         </div>
 
         {/* Position Card */}
-        <div className="bg-white border-l-[4px] border-[#1d7092] p-6 md:p-8 rounded-r-xl shadow-md">
+        <div className="bg-white border-l-[4px] border-[#1d7092] p-6 md:p-8  shadow-md">
           <h4 className="text-[#1d7092] font-bold text-xs uppercase tracking-wider mb-4">
             OUR POSITION
           </h4>

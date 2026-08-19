@@ -57,7 +57,7 @@ const WhatReducesStigma = () => {
         </p>
 
         {/* Lived Experience Media Player Box */}
-        <div className="bg-[#f8fafc] border-l-[4px] border-[#1d7092] p-6 md:p-8 rounded-r-xl mb-8 shadow-xs">
+        <div className="bg-[#f8fafc] border-l-[4px] border-[#1d7092] p-6 md:p-8  mb-8 shadow-xs">
           <div className="text-xs font-bold uppercase tracking-wider text-[#1d7092] mb-2">
             EXPERTS BY EXPERIENCE · PHOENIXFM, MAY 2026
           </div>

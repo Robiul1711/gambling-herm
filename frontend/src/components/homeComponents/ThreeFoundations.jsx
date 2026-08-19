@@ -54,12 +54,13 @@ export default function ThreeFoundations() {
           </p>
 
           {/* Voice Player Callout Card */}
-          <div className="mt-6 border-l-4 border-Primary bg-[#F7F9FA] p-5 sm:p-6 rounded-r-xl rounded-l-xs max-w-2xl">
+          <div className="mt-6 border-l-4 border-Primary bg-[#F7F9FA] p-5 sm:p-6  rounded-l-xs max-w-2xl">
             <span className="text-[11px] font-bold text-Primary uppercase tracking-wider block mb-2">
               HEAR IT IN PLAIN TERMS · PHOENIXFM, MAY 2026
             </span>
             <h4 className="text-[14px] sm:text-base font-bold text-gray-900 leading-snug mb-4">
-              John Gilham on the scale of UK gambling harm: 1.6 million adults in England who may benefit from treatment or support.
+              John Gilham on the scale of UK gambling harm: 1.6 million adults
+              in England who may benefit from treatment or support.
             </h4>
             <audio
               src={scaleOfHarm}

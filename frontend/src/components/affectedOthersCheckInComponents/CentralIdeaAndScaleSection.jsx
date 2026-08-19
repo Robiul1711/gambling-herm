@@ -5,7 +5,7 @@ const CentralIdeaAndScaleSection = () => {
     <section className="w-full bg-white py-12 md:py-16 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* The Central Idea Callout Box */}
-        <div className="border-l-[4px] border-[#0082c3] bg-[#edf7fc] rounded-r-xl p-6 sm:p-8 md:p-10 shadow-xs">
+        <div className="border-l-[4px] border-[#0082c3] bg-[#edf7fc]  p-6 sm:p-8 md:p-10 shadow-xs">
           <span className="text-[#0082c3] font-bold text-xs sm:text-sm uppercase tracking-wider block mb-3">
             The Central Idea
           </span>
@@ -18,8 +18,8 @@ const CentralIdeaAndScaleSection = () => {
                 Your own worry is the relevant signal, not a score against their
                 behaviour.
               </strong>{" "}
-              You don't need to know what's "really" happening in their gambling to
-              know something in your own life has changed, and that's enough
+              You don't need to know what's "really" happening in their gambling
+              to know something in your own life has changed, and that's enough
               reason to keep reading.
             </p>
 
