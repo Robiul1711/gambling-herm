@@ -29,6 +29,7 @@ const Thurrock = () => {
       <FinancialAdvice />
       <LearnListenSupport />
       <OurWorkCommonContact
+        primaryClass={"bg-Primary"}
         title="Support is available right now."
         description="Whether you're here for the first time, returning after a setback, or somewhere in between, support is here. It works, and the next step does not have to be big to count."
         primaryBtnText="0808 8020 133, National Gambling Helpline"

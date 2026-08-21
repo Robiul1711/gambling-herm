@@ -7,14 +7,16 @@ export default function GamblingControlPanel() {
       description:
         "Block gambling apps and websites across all your devices. Free, and set up with a special Thurrock link that helps us track reach locally.",
       buttonText: "Set up Betblocker",
-      buttonColor: "bg-Primary hover:bg-Primary/80", // Emerald/Green tone based on your brand or a default deep teal/blue
+      buttonColor: "bg-Primary hover:bg-Primary/80",
+      to: "https://betblocker.org/promo/ghuk-thurrock/", // Emerald/Green tone based on your brand or a default deep teal/blue
     },
     {
       title: "Bank gambling blocks",
       description:
         "Most major UK banks (Monzo, Starling, Barclays, Lloyds, HSBC, NatWest) now offer a one-tap gambling block on your debit card. It's free, takes a minute, and usually includes a 48-hour cooling-off period if you try to remove it.",
       buttonText: "How to set up a bank block",
-      buttonColor: "bg-[#111827] hover:bg-[#1f2937]", // Dark slate/black
+      buttonColor: "bg-[#111827] hover:bg-[#1f2937]",
+      to: "https://www.gamblingcommission.gov.uk/public-and-players/page/i-want-to-know-how-to-block-gambling-transactions", // Dark slate/black
     },
   ];
 
@@ -24,24 +26,28 @@ export default function GamblingControlPanel() {
       description:
         "Excludes you from all UK-licensed online gambling sites and apps. Choose 6 months, 1 year, or 5 years. About five minutes to register.",
       buttonText: "Register with GAMSTOP",
+      to: "https://www.gamstop.co.uk/",
     },
     {
       title: "GAMSTOP betting shops",
       description:
         "The Multi Operator Self Exclusion Scheme (formerly MOSES). Helps you commit to staying away from betting shops across participating operators.",
       buttonText: "Exclude from betting shops",
+      to: "https://self-exclusion.co.uk/",
     },
     {
       title: "SENSE (casinos)",
       description:
         "The national self-exclusion scheme for casinos in Great Britain. One registration covers participating casino venues.",
       buttonText: "Register with SENSE",
+      to: "https://www.senseselfexclusion.com/",
     },
     {
       title: "BACTA (adult gaming centres)",
       description:
         "Bacta's Self-Exclusion Scheme lets you exclude yourself from Adult Gaming Centres for an agreed period.",
       buttonText: "Exclude via BACTA",
+      to: "https://bacta.org.uk/safer-gambling/",
     },
   ];
 
@@ -80,12 +86,15 @@ export default function GamblingControlPanel() {
                 </p>
               </div>
               <div className="mt-6">
-                <button
+                <a
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs ${item.buttonColor}`}
                 >
                   {item.buttonText}
                   <span>&rarr;</span>
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -118,10 +127,15 @@ export default function GamblingControlPanel() {
                 </p>
               </div>
               <div className="mt-6">
-                <button className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs">
+                <a
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#111827] hover:bg-[#1f2937] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs"
+                >
                   {item.buttonText}
                   <span>&rarr;</span>
-                </button>
+                </a>
               </div>
             </div>
           ))}

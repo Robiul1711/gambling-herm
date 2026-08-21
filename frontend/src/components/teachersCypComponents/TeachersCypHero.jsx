@@ -5,7 +5,7 @@ import cyHeroImg from "@/assets/images/cy.png";
 const TeachersCypHero = () => {
   return (
     <section className="bg-[#f2f9fd] py-12 md:py-20 border-b border-sky-100/60">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="section-padding-x">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Text & Breadcrumb */}
           <div className="lg:col-span-7">

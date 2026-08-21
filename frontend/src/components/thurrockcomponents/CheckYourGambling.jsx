@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function CheckYourGambling() {
   const tools = [
@@ -8,21 +7,21 @@ export default function CheckYourGambling() {
       description:
         "Check your gambling habits quickly and confidentially, and see if they may be putting you at risk.",
       buttonText: "Take the PGSI",
-      to: "/get-help/check-in",
+      to: "https://gamblingharm.com/problem-gambling-severity-index/",
     },
     {
       title: "GHSI screening tool",
       description:
         "Find out if gambling could be affecting your health and wellbeing, and get clear next steps.",
       buttonText: "Take the GHSI",
-      to: "/get-help/check-in",
+      to: "https://gamblingharm.com/ghsi-10-person-who-gambles/",
     },
     {
       title: "GHSI for affected others",
       description:
         "See how someone else's gambling might be impacting you, with support and guidance available right away.",
       buttonText: "Take the GHSI-AO",
-      to: "/get-help/check-in",
+      to: "https://gamblingharm.com/ghsi-ao-10-affected-others/",
     },
   ];
 
@@ -58,13 +57,15 @@ export default function CheckYourGambling() {
                 </p>
               </div>
               <div>
-                <Link
-                  to={tool.to}
+                <a
+                  href={tool.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#0B678F] hover:bg-[#095272] text-white font-semibold text-sm sm:text-base py-3 px-5  transition-colors shadow-xs"
                 >
                   {tool.buttonText}
                   <span>&rarr;</span>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
