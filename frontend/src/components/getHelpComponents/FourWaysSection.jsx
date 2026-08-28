@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import whatHelpIsAvailable from "@/assets/audio/what-help-is-available.mp3";
 
 const FourWaysSection = () => {
   return (
@@ -32,17 +33,17 @@ const FourWaysSection = () => {
       {/* Audio Card */}
       <div className="bg-[#f8fafc] border-l-4 border-[#0092D0] p-6 sm:p-8  shadow-xs">
         <p className="text-xs font-bold uppercase tracking-wider text-[#0092D0] mb-2">
-          LIVED EXPERIENCE • PHOENIXFM, MAY 2026
+          EXPERTS BY EXPERIENCE · PHOENIXFM, MAY 2026
         </p>
 
         <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug mb-4">
-          What help is available for people affected by gambling harm
+          What help is available for people harmed by gambling
         </h3>
 
         {/* Audio */}
         <div className="mb-4">
           <audio controls className="w-full max-w-[340px] accent-[#0092D0]">
-            <source src="/audio/sample.mp3" type="audio/mpeg" />
+            <source src={whatHelpIsAvailable} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>

@@ -14,6 +14,9 @@ const GamblingCommonBanner = ({
   showBg = true,
   bg = true,
   className = "",
+  containerClassName = "",
+  target,
+  rel,
 }) => {
   const isBgActive = showBg && bg;
   const bgStyle = isBgActive
@@ -29,7 +32,7 @@ const GamblingCommonBanner = ({
         className={`w-full py-8 sm:py-12 md:py-20 animate-pulse section-padding-x ${className} `}
         style={bgStyle}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-center ">
+        <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${containerClassName}`}>
           {/* Left skeleton */}
           <div className="lg:col-span-6 space-y-5 order-2 lg:order-1">
             {/* Breadcrumb */}
@@ -66,7 +69,7 @@ const GamblingCommonBanner = ({
       className={`w-full py-8 sm:py-12 md:py-20 section-padding-x ${className}`}
       style={bgStyle}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-center">
+      <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${containerClassName}`}>
         {/* Left Content */}
         <div className="lg:col-span-6 space-y-4 md:space-y-6 order-2 lg:order-1">
           {/* Breadcrumb */}
@@ -89,6 +92,8 @@ const GamblingCommonBanner = ({
           {to && (
             <Link
               to={to}
+              target={target}
+              rel={rel}
               className="text-sm md:text-base text-Primary font-semibold px-4 py-2 border border-Primary hover:bg-Primary hover:text-white transition-colors"
             >
               {buttonText}

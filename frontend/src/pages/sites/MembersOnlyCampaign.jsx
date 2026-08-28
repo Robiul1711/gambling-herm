@@ -29,7 +29,9 @@ const MembersOnlyCampaign = () => {
           description={data?.description || "A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."}
           image={data?.image || bannerImg}
           buttonText={data?.audioTitle || "membersonlycampaign.org.uk →"}
-          to={data?.audioSource || "membersonlycampaign.org.uk"}
+          to={"https://membersonlycampaign.org.uk/"}
+          target="_blank"
+          rel="noopener noreferrer"
           isLoading={isLoading}/>
       </div>
       <div className="px-4 max-w-5xl mx-auto  space-y-10 md:space-y-14 lg:space-y-16">

@@ -28,7 +28,9 @@ const ProblemCampaignIsFixing = () => {
           (introduced by the "big four" bookmakers) has been documented as
           falling well short of what was promised.{" "}
           <a
-            href="#public-record"
+            href="https://medium.com/@samuelbadcock15/the-big-four-bookmakers-and-the-senet-group-2014-665550405184"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#166B94] underline hover:text-[#005580] transition-colors"
           >
             Sam's history of land-based self-exclusion

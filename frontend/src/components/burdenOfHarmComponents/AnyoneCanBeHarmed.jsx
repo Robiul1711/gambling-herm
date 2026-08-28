@@ -71,12 +71,12 @@ const AnyoneCanBeHarmed = () => {
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
             The burden-of-disease evidence points the same way.{" "}
             <strong className="text-gray-900 font-bold">
-              Up to 85% of gambling-related years lived with disability arise
-              from people at low and moderate levels of harm, not the most
-              severe band
+              Up to 85% of gambling-related years lived with disability among
+              people who gamble arise at low and moderate levels of harm, not in
+              the most severe band
             </strong>{" "}
             (Browne et al., 2017). Commissioning aimed only at the severe end
-            reaches about 15% of the total health loss.
+            reaches about 15% of that health loss.
           </p>
         </div>
 

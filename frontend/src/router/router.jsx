@@ -44,6 +44,7 @@ import LimitGamblingAdsPage from "@/pages/sites/LimitGamblingAdsPage";
 import SignInPage from "@/pages/sites/SignInPage";
 import MembersLibraryPage from "@/pages/sites/MembersLibraryPage";
 import RegisterMembersPage from "@/pages/sites/RegisterMembersPage";
+import ForgotPasswordPage from "@/pages/sites/ForgotPasswordPage";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -97,6 +98,7 @@ const router = createBrowserRouter([
       { path: "/sign-in", element: <SignInPage /> },
       { path: "/login", element: <SignInPage /> },
       { path: "/register", element: <RegisterMembersPage /> },
+      { path: "/forgot-password", element: <ForgotPasswordPage /> },
       { path: "/members-library", element: <MembersLibraryPage /> },
       // Legal
       { path: "/privacy", element: <Privacy /> },

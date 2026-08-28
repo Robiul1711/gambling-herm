@@ -6,13 +6,13 @@ const TalkToSomeone = () => {
       title: "National Gambling Helpline",
       number: "0808 8020 133",
       description:
-        "Free. Confidential. 24 hours a day, every day. Run by GamCare. Web chat also available. Supports affected others as well as people who gamble.",
+        "Supports family and friends as well as people who gamble. Web chat also available. Run by GamCare.",
     },
     {
       title: "Samaritans",
       number: "116 123",
       description:
-        "For emotional crisis of any kind. Free, 24/7. You don't have to be suicidal to call.",
+        "For emotional crisis of any kind. You don't have to be suicidal to call.",
     },
   ];
 
@@ -21,12 +21,12 @@ const TalkToSomeone = () => {
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight">
-          Free, confidential, available 24 hours.
+          Talk to someone today
         </h2>
 
         <p className="mt-4 text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-          Three numbers. All free, all confidential. None of them require you to
-          be in crisis.
+          Free, confidential, available 24 hours a day, every day. You don't need to
+          be in crisis to call.
         </p>
       </div>
 

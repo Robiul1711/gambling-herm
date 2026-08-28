@@ -32,6 +32,7 @@ const CheckInTool = () => {
         <GHSIFrameworkSection />
       </div>
       <OurWorkCommonContact
+        primaryClass={'bg-Primary'}
         title="Or just call."
         description="The check-in is helpful for some people. For others, the right step is to skip the reflection prompt and talk to someone trained to help, they will help you find your own door."
         primaryBtnText="0808 8020 133. National Gambling Helpline"
