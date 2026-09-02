@@ -6,8 +6,16 @@ import WhyStigmaOperates from "@/components/stigmaAndLanguageComponents/WhyStigm
 import AntiStigmaCampaignProblem from "@/components/stigmaAndLanguageComponents/AntiStigmaCampaignProblem";
 import WhatReducesStigma from "@/components/stigmaAndLanguageComponents/WhatReducesStigma";
 import OurWorkCommonContact from "@/components/common/OurWorkCommonContact";
+import PageSectionNav from "@/components/common/PageSectionNav";
 
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "data-shows", title: "1. What the data shows" },
+  { id: "why-stigma", title: "2. Why stigma operates" },
+  { id: "anti-stigma-problem", title: '3. The "anti-stigma campaign" problem' },
+  { id: "reduces-stigma", title: "4. What actually reduces stigma" },
+];
 
 const StigmaAndLanguage = () => {
   const { data: responseData, isLoading } = useClient({
@@ -27,6 +35,7 @@ const StigmaAndLanguage = () => {
           image={data?.image || bannerImg}
           isLoading={isLoading}/>
       </div>
+      <PageSectionNav sections={sections} />
       <WhatTheDataShows />
       <WhyStigmaOperates />
       <AntiStigmaCampaignProblem />

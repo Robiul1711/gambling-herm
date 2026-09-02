@@ -138,7 +138,7 @@ const BurdenOfHarm = () => {
 
       {/* --- QUICK NAVIGATION MENU --- */}
       <div className="sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm py-3 md:py-4">
-        <div className="section-padding-x">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between gap-4">
             {/* <div className="hidden lg:flex items-center gap-3 shrink-0">
  <span className="w-6 h-[2px] bg-Primary" />

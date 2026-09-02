@@ -32,7 +32,7 @@ const GamblingCommonBanner = ({
         className={`w-full py-8 sm:py-12 md:py-20 animate-pulse section-padding-x ${className} `}
         style={bgStyle}
       >
-        <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${containerClassName}`}>
+        <div className={`max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${containerClassName}`}>
           {/* Left skeleton */}
           <div className="lg:col-span-6 space-y-5 order-2 lg:order-1">
             {/* Breadcrumb */}
@@ -69,7 +69,7 @@ const GamblingCommonBanner = ({
       className={`w-full py-8 sm:py-12 md:py-20 section-padding-x ${className}`}
       style={bgStyle}
     >
-      <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${containerClassName}`}>
+      <div className={`max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${containerClassName}`}>
         {/* Left Content */}
         <div className="lg:col-span-6 space-y-4 md:space-y-6 order-2 lg:order-1">
           {/* Breadcrumb */}
@@ -80,7 +80,7 @@ const GamblingCommonBanner = ({
 
           {/* Title */}
           <h1
-            className={`${titleClassName} text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 tracking-tight`}
+            className={`${titleClassName} text-2xl sm:text-4xl md:text-5xl  font-bold text-slate-800 tracking-tight`}
           >
             {title}
           </h1>

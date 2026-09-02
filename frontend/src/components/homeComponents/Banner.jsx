@@ -21,7 +21,7 @@ export default function Banner() {
     return (
       <section className="w-full bg-white py-12 md:py-20 lg:py-24 animate-pulse">
         <div className="section-padding-x">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* LEFT COLUMN: Text Content Skeleton */}
             <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
               {/* Tagline starting with horizontal line */}
@@ -72,7 +72,7 @@ export default function Banner() {
     <section className="w-full bg-white py-12 md:py-20 lg:py-24">
       <div className="section-padding-x">
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* LEFT COLUMN: Text Content & Actions (Takes 7 spans on desktop) */}
           <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
             {/* Tagline starting with horizontal line */}

@@ -9,8 +9,19 @@ import HarmfulGamblingSection from "@/components/getHelpComponents/HarmfulGambli
 import ReachOutSection from "@/components/getHelpComponents/ReachOutSection";
 import ProtectingYourMoney from "@/components/getHelpComponents/ProtectingYourMoney";
 import RecoverySection from "@/components/getHelpComponents/RecoverySection";
+import PageSectionNav from "@/components/common/PageSectionNav";
 import { Link } from "react-router-dom";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "starting-point", title: "1. A Starting Point" },
+  { id: "talk-to-someone", title: "2. Talk to Someone" },
+  { id: "four-ways", title: "3. Four Ways Through" },
+  { id: "harmful-gambling", title: "4. What Harmful Gambling Looks Like" },
+  { id: "reach-out", title: "5. Reach Out" },
+  { id: "protecting-money", title: "6. Protecting Your Money" },
+  { id: "recovery", title: "7. Recovery & What Works" },
+];
 
 const GetHelpOverview = () => {
   const { data: responseData, isLoading } = useClient({
@@ -23,40 +34,43 @@ const GetHelpOverview = () => {
   return (
     <>
       <div className="">
-        <section className="py-10 md:py-16 lg:py-20 px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto">
-            {/* Top Label */}
-            <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <div className="w-6 h-[1px] bg-black shrink-0"></div>
-              <span className="text-xs sm:text-sm text-Primary">
-                A Starting Point
-              </span>
+        <div id="starting-point" className="scroll-mt-24">
+          <section className="py-10 md:py-16 lg:py-20 px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto">
+              {/* Top Label */}
+              <div className="flex items-center gap-3 mb-4 md:mb-5">
+                <div className="w-6 h-[1px] bg-black shrink-0"></div>
+                <span className="text-xs sm:text-sm text-Primary">
+                  A Starting Point
+                </span>
+              </div>
+
+              {/* Heading */}
+              <h2 className=" text-[32px] sm:text-[40px] md:text-[52px]  leading-[1.1] font-bold text-[#222]">
+                Not sure where to begin? Try the check-in.
+              </h2>
+
+              {/* Description */}
+              <p className="mt-5 md:mt-8 text-sm sm:text-base leading-7 text-[#4b4b4b]">
+                A welcoming entry-point that helps you find the right door whether
+                you're checking in for yourself, for someone else, or you're not
+                yet sure. A short, private read: nothing to enter, nothing stored or
+                sent.
+              </p>
+
+              {/* Button */}
+              <Link
+                to="/get-help/check-in"
+                className="inline-block mt-8 md:mt-10 bg-[#0D6E9F] hover:bg-[#095b82] text-white text-sm sm:text-base font-medium px-4 sm:px-8 py-3 transition-all duration-300"
+              >
+                Open the check-in
+              </Link>
             </div>
+          </section>
+        </div>
 
-            {/* Heading */}
-            <h2 className=" text-[32px] sm:text-[40px] md:text-[52px]  leading-[1.1] font-bold text-[#222]">
-              Not sure where to begin? Try the check-in.
-            </h2>
-
-            {/* Description */}
-            <p className="mt-5 md:mt-8 text-sm sm:text-base leading-7 text-[#4b4b4b]">
-              A welcoming entry-point that helps you find the right door whether
-              you're checking in for yourself, for someone else, or you're not
-              yet sure. A short, private read: nothing to enter, nothing stored or
-              sent.
-            </p>
-
-            {/* Button */}
-            <Link
-              to="/get-help/check-in"
-              className="inline-block mt-8 md:mt-10 bg-[#0D6E9F] hover:bg-[#095b82] text-white text-sm sm:text-base font-medium px-4 sm:px-8 py-3 transition-all duration-300"
-            >
-              Open the check-in
-            </Link>
-          </div>
-        </section>
         <GamblingCommonBanner
-        titleClassName="md:text-[32px] sm:text-[40px] lg:text-[52px]"
+          titleClassName="md:text-[32px] sm:text-[40px] lg:text-[52px]"
           containerClassName="max-w-5xl mx-auto"
           section={bannerData?.subtitle || "SUPPORT THAT WORKS"}
           title={
@@ -70,18 +84,32 @@ const GetHelpOverview = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}
         />
-        <div className="">
 
-        <TalkToSomeone />
-        <FourWaysSection />
-        <FourWaysGrid />
-        <HarmfulGamblingSection />
+        <PageSectionNav sections={sections} />
+
+        <div className="">
+          <div id="talk-to-someone" className="scroll-mt-24">
+            <TalkToSomeone />
+          </div>
+          <div id="four-ways" className="scroll-mt-24">
+            <FourWaysSection />
+            <FourWaysGrid />
+          </div>
+          <div id="harmful-gambling" className="scroll-mt-24">
+            <HarmfulGamblingSection />
+          </div>
         </div>
       </div>
       <div>
-        <ReachOutSection />
-        <ProtectingYourMoney />
-        <RecoverySection />
+        <div id="reach-out" className="scroll-mt-24">
+          <ReachOutSection />
+        </div>
+        <div id="protecting-money" className="scroll-mt-24">
+          <ProtectingYourMoney />
+        </div>
+        <div id="recovery" className="scroll-mt-24">
+          <RecoverySection />
+        </div>
       </div>
       <OurWorkCommonContact
         className={"bg-[#4A6A6E]"}

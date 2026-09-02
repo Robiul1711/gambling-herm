@@ -1,5 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const navSections = [
+  { id: "self-exclusion", title: "1. Self-exclusion Schemes" },
+  { id: "bank-blocks", title: "2. Bank Blocks" },
+  { id: "blocking-software", title: "3. Blocking Software" },
+  { id: "betblocker", title: "4. BetBlocker" },
+  { id: "beyond-software", title: "5. Beyond Software" },
+  { id: "what-blocks-dont-do", title: "6. What Blocks Don't Do" },
+  { id: "more-ways", title: "7. More Ways to Get Help" },
+];
 
 export default function BlockingToolsPage() {
   const selfExclusionSchemes = [
@@ -67,60 +78,8 @@ export default function BlockingToolsPage() {
         </div>
       </section>
 
-      {/* On This Page Navigation Bar */}
-      <section className="bg-[#f8fafc] py-8 border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-4 md:px-0">
-          <div className="flex items-center space-x-2 text-xs md:text-sm font-bold uppercase tracking-wider text-[#166B94] mb-4">
-            <span className="text-[#166B94] font-bold text-sm">—</span>
-            <span>ON THIS PAGE</span>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-3 gap-x-6 text-sm font-medium">
-            <a
-              href="#self-exclusion"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              Self-exclusion schemes
-            </a>
-            <a
-              href="#bank-blocks"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              Bank blocks
-            </a>
-            <a
-              href="#blocking-software"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              Blocking software
-            </a>
-            <a
-              href="#betblocker"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              BetBlocker
-            </a>
-            <a
-              href="#beyond-software"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              Beyond software
-            </a>
-            <a
-              href="#what-blocks-dont-do"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              What blocks don't do
-            </a>
-            <a
-              href="#more-ways"
-              className="text-[#166B94] hover:text-[#005580] underline transition-colors"
-            >
-              More ways to get help
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* On This Page Pill Navigation Bar */}
+      <PageSectionNav sections={navSections} />
 
       {/* Main Content Container */}
       <div className="max-w-5xl mx-auto px-4 md:px-0 py-12 md:py-16 space-y-20">

@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from"react";
 
 const tabs = [
- { id:"available-everywhere", label:"Available everywhere" },
- { id:"by-uk-region", label:"By UK region" },
- { id:"online-options", label:"Online options" },
- { id:"residential-intensive", label:"Residential & intensive" },
- { id:"specialist-services", label:"Specialist services" },
- { id:"financial-support", label:"Financial support" },
+  { id: "available-everywhere", label: "1. Available everywhere" },
+  { id: "by-uk-region", label: "2. By UK region" },
+  { id: "online-options", label: "3. Online options" },
+  { id: "residential-intensive", label: "4. Residential & intensive" },
+  { id: "specialist-services", label: "5. Specialist services" },
+  { id: "financial-support", label: "6. Financial support" },
 ];
+
 
 export default function FindTreatmentNav() {
  const [activeTab, setActiveTab] = useState("available-everywhere");

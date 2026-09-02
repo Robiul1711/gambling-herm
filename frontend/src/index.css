@@ -404,3 +404,12 @@ html.accessibility-text-xl {
   word-spacing: 0.16em !important;
   line-height: 1.8 !important;
 }
+
+/* Hide scrollbar utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

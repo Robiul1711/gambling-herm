@@ -8,7 +8,17 @@ import ScreeningGuideSection from '@/components/healthcareProfessionalsComponent
 import ReferralServicesSection from '@/components/healthcareProfessionalsComponents/ReferralServicesSection';
 import ClinicalSituationsSection from '@/components/healthcareProfessionalsComponents/ClinicalSituationsSection';
 import MedicalTraineesSection from '@/components/healthcareProfessionalsComponents/MedicalTraineesSection';
+import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "position-video", title: "1. Lived Experience & MECC" },
+  { id: "gambling-mecc", title: "2. MECC on Gambling" },
+  { id: "screening-guide", title: "3. Screening Guide" },
+  { id: "referral-services", title: "4. Referral Services" },
+  { id: "clinical-situations", title: "5. Clinical Situations" },
+  { id: "medical-trainees", title: "6. Medical Trainees" },
+];
 
 const HealthcareProfessionals = () => {
   const { data: responseData, isLoading } = useClient({
@@ -27,13 +37,27 @@ const HealthcareProfessionals = () => {
         description={bannerData?.description || "Gambling is one of the largest modifiable risk factors for ill-health in the UK, ranked among the top five alongside alcohol misuse and major depressive disorder. Yet most NHS clinicians have never been trained to ask about it, and most NHS encounters do not. This page makes the case for Making Every Contact Count on gambling, and tells you what to do tomorrow morning."}
         image={bannerData?.image || bannerImg}
         isLoading={isLoading}/>
-      <PositionAndVideoSection/>
-        <GamblingMeccSection/>
-        <ScreeningGuideSection/>
-        <ReferralServicesSection/>
-        <ClinicalSituationsSection/>
-        <MedicalTraineesSection/>
 
+      <PageSectionNav sections={sections} />
+
+      <div id="position-video" className="scroll-mt-24">
+        <PositionAndVideoSection/>
+      </div>
+      <div id="gambling-mecc" className="scroll-mt-24">
+        <GamblingMeccSection/>
+      </div>
+      <div id="screening-guide" className="scroll-mt-24">
+        <ScreeningGuideSection/>
+      </div>
+      <div id="referral-services" className="scroll-mt-24">
+        <ReferralServicesSection/>
+      </div>
+      <div id="clinical-situations" className="scroll-mt-24">
+        <ClinicalSituationsSection/>
+      </div>
+      <div id="medical-trainees" className="scroll-mt-24">
+        <MedicalTraineesSection/>
+      </div>
     </div>
            <OurWorkCommonContact
            primaryClass={'bg-Primary'}
