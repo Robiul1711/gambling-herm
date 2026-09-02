@@ -1,5 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "our-commitment", title: "1. Our Commitment" },
+  { id: "what-we-do", title: "2. What We Do" },
+  { id: "where-we-fall-short", title: "3. Where We Fall Short" },
+  { id: "report-problem", title: "4. Report a Problem" },
+];
 
 export default function Accessibility() {
   return (
@@ -30,10 +38,13 @@ export default function Accessibility() {
             </span>
           </div>
 
+          {/* Sticky In-page Navigation */}
+          <PageSectionNav sections={sections} />
+
           {/* Content sections */}
           <div className="space-y-12">
             {/* Section 1 */}
-            <div>
+            <div id="our-commitment" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Our commitment
               </h2>
@@ -45,7 +56,7 @@ export default function Accessibility() {
             </div>
 
             {/* Section 2 */}
-            <div>
+            <div id="what-we-do" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 What we do
               </h2>
@@ -72,7 +83,7 @@ export default function Accessibility() {
             </div>
 
             {/* Section 3 */}
-            <div>
+            <div id="where-we-fall-short" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Where we know we fall short
               </h2>
@@ -85,7 +96,7 @@ export default function Accessibility() {
             </div>
 
             {/* Section 4 */}
-            <div>
+            <div id="report-problem" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Tell us about a problem
               </h2>

@@ -4,6 +4,14 @@ import ScreenExplanationSection from "@/components/selfAssessmentComponents/Scre
 import ScoreDiagnosisSection from "@/components/selfAssessmentComponents/ScoreDiagnosisSection";
 import ValidatedToolsSection from "@/components/selfAssessmentComponents/ValidatedToolsSection";
 import SelfAssessmentSupportSection from "@/components/selfAssessmentComponents/SelfAssessmentSupportSection";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "screen-explanation", title: "1. What a Screen Is" },
+  { id: "score-diagnosis", title: "2. Score vs Diagnosis" },
+  { id: "validated-tools", title: "3. Validated Tools" },
+  { id: "support-routes", title: "4. Where to Take a Score" },
+];
 
 export default function SelfAssessmentPage() {
   return (
@@ -11,17 +19,29 @@ export default function SelfAssessmentPage() {
       {/* 1. Hero Section */}
       <SelfAssessmentHero />
 
+      {/* In-page Sticky Pill Navigation */}
+      <PageSectionNav sections={sections} />
+
       {/* 2. What a screen is & Things worth noticing */}
-      <ScreenExplanationSection />
+      <div id="screen-explanation" className="scroll-mt-24">
+        <ScreenExplanationSection />
+      </div>
 
       {/* 3. Why a score isn't a diagnosis & Callout box */}
-      <ScoreDiagnosisSection />
+      <div id="score-diagnosis" className="scroll-mt-24">
+        <ScoreDiagnosisSection />
+      </div>
 
       {/* 4. Take the validated tools */}
-      <ValidatedToolsSection />
+      <div id="validated-tools" className="scroll-mt-24">
+        <ValidatedToolsSection />
+      </div>
 
       {/* 5. Support CTA Section */}
-      <SelfAssessmentSupportSection />
+      <div id="support-routes" className="scroll-mt-24">
+        <SelfAssessmentSupportSection />
+      </div>
     </div>
   );
 }
+

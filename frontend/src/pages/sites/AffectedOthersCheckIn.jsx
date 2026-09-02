@@ -7,6 +7,17 @@ import MoneyAndLegalSection from "@/components/affectedOthersCheckInComponents/M
 import ChildrenHouseholdSection from "@/components/affectedOthersCheckInComponents/ChildrenHouseholdSection";
 import IfYouFeelUnsafeSection from "@/components/affectedOthersCheckInComponents/IfYouFeelUnsafeSection";
 import AffectedOthersSupportSection from "@/components/affectedOthersCheckInComponents/AffectedOthersSupportSection";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "central-idea", title: "1. Central Idea & Scale" },
+  { id: "noticing", title: "2. Things Worth Noticing" },
+  { id: "no-need-to-change", title: "3. You Don't Need Them to Change First" },
+  { id: "money-legal", title: "4. Money & Legal Exposure" },
+  { id: "children-household", title: "5. Children in the Household" },
+  { id: "unsafe", title: "6. If You Feel Unsafe" },
+  { id: "support", title: "7. Support for Affected Others" },
+];
 
 export default function AffectedOthersCheckIn() {
   return (
@@ -14,26 +25,44 @@ export default function AffectedOthersCheckIn() {
       {/* 1. Hero Section */}
       <AffectedOthersHero />
 
+      {/* In-page Sticky Pill Navigation */}
+      <PageSectionNav sections={sections} />
+
       {/* 2. The Central Idea & The Scale */}
-      <CentralIdeaAndScaleSection />
+      <div id="central-idea" className="scroll-mt-24">
+        <CentralIdeaAndScaleSection />
+      </div>
 
       {/* 3. Things worth noticing */}
-      <AffectedOthersNoticingSection />
+      <div id="noticing" className="scroll-mt-24">
+        <AffectedOthersNoticingSection />
+      </div>
 
       {/* 4. You do not need them to change first */}
-      <NoNeedToChangeSection />
+      <div id="no-need-to-change" className="scroll-mt-24">
+        <NoNeedToChangeSection />
+      </div>
 
       {/* 5. Money and legal exposure */}
-      <MoneyAndLegalSection />
+      <div id="money-legal" className="scroll-mt-24">
+        <MoneyAndLegalSection />
+      </div>
 
       {/* 6. If there are children in the household */}
-      <ChildrenHouseholdSection />
+      <div id="children-household" className="scroll-mt-24">
+        <ChildrenHouseholdSection />
+      </div>
 
       {/* 7. If you feel unsafe */}
-      <IfYouFeelUnsafeSection />
+      <div id="unsafe" className="scroll-mt-24">
+        <IfYouFeelUnsafeSection />
+      </div>
 
       {/* 8. Bottom Support Section */}
-      <AffectedOthersSupportSection />
+      <div id="support" className="scroll-mt-24">
+        <AffectedOthersSupportSection />
+      </div>
     </div>
   );
 }
+

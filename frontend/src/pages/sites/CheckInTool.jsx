@@ -6,7 +6,15 @@ import CheckInInfoCard from "@/components/checkInToolComponents/CheckInInfoCard"
 import CheckInDoors from "@/components/checkInToolComponents/CheckInDoors";
 import NotSureDoor from "@/components/checkInToolComponents/NotSureDoor";
 import GHSIFrameworkSection from "@/components/checkInToolComponents/GHSIFrameworkSection";
+import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "before-you-start", title: "1. Before You Start" },
+  { id: "three-doors", title: "2. Three Doors" },
+  { id: "not-sure", title: "3. If You're Not Sure" },
+  { id: "framework", title: "4. The GHSI Framework" },
+];
 
 const CheckInTool = () => {
   const { data: responseData, isLoading } = useClient({
@@ -26,10 +34,21 @@ const CheckInTool = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}
         />
-        <CheckInInfoCard />
-        <CheckInDoors />
-        <NotSureDoor />
-        <GHSIFrameworkSection />
+
+        <PageSectionNav sections={sections} />
+
+        <div id="before-you-start" className="scroll-mt-24">
+          <CheckInInfoCard />
+        </div>
+        <div id="three-doors" className="scroll-mt-24">
+          <CheckInDoors />
+        </div>
+        <div id="not-sure" className="scroll-mt-24">
+          <NotSureDoor />
+        </div>
+        <div id="framework" className="scroll-mt-24">
+          <GHSIFrameworkSection />
+        </div>
       </div>
       <OurWorkCommonContact
         primaryClass={'bg-Primary'}

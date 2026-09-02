@@ -1,5 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "our-approach", title: "1. Our Approach" },
+  { id: "strictly-necessary", title: "2. Strictly Necessary" },
+  { id: "analytics", title: "3. Analytics" },
+  { id: "embedded-content", title: "4. Embedded Content" },
+  { id: "managing-cookies", title: "5. Managing Cookies" },
+];
 
 export default function Cookies() {
   return (
@@ -29,10 +38,13 @@ export default function Cookies() {
             </span>
           </div>
 
+          {/* Sticky In-page Navigation */}
+          <PageSectionNav sections={sections} />
+
           {/* Content sections */}
           <div className="space-y-12">
             {/* Section 1 */}
-            <div>
+            <div id="our-approach" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Our approach
               </h2>
@@ -46,7 +58,7 @@ export default function Cookies() {
             </div>
 
             {/* Section 2 */}
-            <div>
+            <div id="strictly-necessary" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Strictly necessary
               </h2>
@@ -59,7 +71,7 @@ export default function Cookies() {
             </div>
 
             {/* Section 3 */}
-            <div>
+            <div id="analytics" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Analytics
               </h2>
@@ -74,7 +86,7 @@ export default function Cookies() {
             </div>
 
             {/* Section 4 */}
-            <div>
+            <div id="embedded-content" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Embedded content from other sites
               </h2>
@@ -100,7 +112,7 @@ export default function Cookies() {
             </div>
 
             {/* Section 5 */}
-            <div>
+            <div id="managing-cookies" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Managing cookies
               </h2>

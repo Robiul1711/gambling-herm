@@ -1,5 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "who-we-are", title: "1. Who We Are" },
+  { id: "information-we-collect", title: "2. The Information We Collect" },
+  { id: "why-and-lawful-basis", title: "3. Why We Use Your Data" },
+  { id: "who-we-share-with", title: "4. Who We Share It With" },
+  { id: "how-long-we-keep", title: "5. How Long We Keep It" },
+  { id: "your-rights", title: "6. Your Rights" },
+  { id: "complaints", title: "7. Complaints" },
+  { id: "changes-to-notice", title: "8. Changes to This Notice" },
+];
 
 export default function Privacy() {
   return (
@@ -16,12 +28,12 @@ export default function Privacy() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-slate-900 tracking-tight leading-tight mb-5">
-              Privacy notice
+              Privacy Notice
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-4 max-w-4xl font-normal">
-              How Gambling Harm UK collects, uses and protects your personal data, and the rights you have
-              over it. We keep this short and plain.
+              How Gambling Harm UK handles personal data, who we share it with, and your rights under UK
+              data protection law.
             </p>
 
             <span className="text-xs sm:text-sm text-slate-400 block italic">
@@ -29,10 +41,13 @@ export default function Privacy() {
             </span>
           </div>
 
+          {/* Sticky In-page Navigation */}
+          <PageSectionNav sections={sections} />
+
           {/* Content sections */}
           <div className="space-y-12">
             {/* Section 1 */}
-            <div>
+            <div id="who-we-are" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Who we are
               </h2>
@@ -48,7 +63,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 2 */}
-            <div>
+            <div id="information-we-collect" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 The information we collect
               </h2>
@@ -85,7 +100,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 3 */}
-            <div>
+            <div id="why-and-lawful-basis" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Why we use your data, and our lawful basis
               </h2>
@@ -107,7 +122,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 4 */}
-            <div>
+            <div id="who-we-share-with" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Who we share it with
               </h2>
@@ -121,7 +136,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 5 */}
-            <div>
+            <div id="how-long-we-keep" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 How long we keep it
               </h2>
@@ -133,7 +148,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 6 */}
-            <div>
+            <div id="your-rights" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Your rights
               </h2>
@@ -148,7 +163,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 7 */}
-            <div>
+            <div id="complaints" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Complaints
               </h2>
@@ -167,7 +182,7 @@ export default function Privacy() {
             </div>
 
             {/* Section 8 */}
-            <div>
+            <div id="changes-to-notice" className="scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Changes to this notice
               </h2>

@@ -5,6 +5,15 @@ import SpendMoneyComparison from "@/components/spendCalculatorComponents/SpendMo
 import SpendWorthChecking from "@/components/spendCalculatorComponents/SpendWorthChecking";
 import SpendUncapturedFactors from "@/components/spendCalculatorComponents/SpendUncapturedFactors";
 import SpendSupportRoutes from "@/components/spendCalculatorComponents/SpendSupportRoutes";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "calculator", title: "1. Calculator" },
+  { id: "comparison", title: "2. What Else It Could Be" },
+  { id: "worth-checking", title: "3. Worth Checking" },
+  { id: "uncaptured-factors", title: "4. What Isn't Captured" },
+  { id: "support-routes", title: "5. Routes to Support" },
+];
 
 export default function SpendCalculatorPage() {
   // Calculator state (initialized empty so placeholders show by default)
@@ -33,37 +42,50 @@ export default function SpendCalculatorPage() {
       {/* 1. Hero / Header section */}
       <SpendCalculatorHero />
 
+      {/* In-page Sticky Pill Navigation */}
+      <PageSectionNav sections={sections} />
+
       {/* 2. Main Interactive Calculator section */}
-      <SpendCalculatorMain
-        amountPerSession={amountPerSession}
-        setAmountPerSession={setAmountPerSession}
-        sessionsPerWeek={sessionsPerWeek}
-        setSessionsPerWeek={setSessionsPerWeek}
-        durationValue={durationValue}
-        setDurationValue={setDurationValue}
-        durationUnit={durationUnit}
-        setDurationUnit={setDurationUnit}
-        weeklyTotal={weeklyTotal}
-        monthlyTotal={monthlyTotal}
-        yearlyTotal={yearlyTotal}
-        durationTotal={durationTotal}
-      />
+      <div id="calculator" className="scroll-mt-24">
+        <SpendCalculatorMain
+          amountPerSession={amountPerSession}
+          setAmountPerSession={setAmountPerSession}
+          sessionsPerWeek={sessionsPerWeek}
+          setSessionsPerWeek={setSessionsPerWeek}
+          durationValue={durationValue}
+          setDurationValue={setDurationValue}
+          durationUnit={durationUnit}
+          setDurationUnit={setDurationUnit}
+          weeklyTotal={weeklyTotal}
+          monthlyTotal={monthlyTotal}
+          yearlyTotal={yearlyTotal}
+          durationTotal={durationTotal}
+        />
+      </div>
 
       {/* 3. "What else that money could be" comparison section */}
-      <SpendMoneyComparison
-        yearlyTotal={yearlyTotal}
-        durationValue={durationValue}
-        durationUnit={durationUnit}
-      />
+      <div id="comparison" className="scroll-mt-24">
+        <SpendMoneyComparison
+          yearlyTotal={yearlyTotal}
+          durationValue={durationValue}
+          durationUnit={durationUnit}
+        />
+      </div>
 
       {/* 4. "WORTH CHECKING" callout section */}
-      <SpendWorthChecking />
+      <div id="worth-checking" className="scroll-mt-24">
+        <SpendWorthChecking />
+      </div>
 
       {/* 5. "What this number doesn't capture" section */}
-      <SpendUncapturedFactors />
+      <div id="uncaptured-factors" className="scroll-mt-24">
+        <SpendUncapturedFactors />
+      </div>
 
       {/* 6. "If this figure has landed hard, there's somewhere to take it." support routes section */}
-      <SpendSupportRoutes />
+      <div id="support-routes" className="scroll-mt-24">
+        <SpendSupportRoutes />
+      </div>
     </div>
   );
 }
