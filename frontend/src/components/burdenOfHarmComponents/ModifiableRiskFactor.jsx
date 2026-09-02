@@ -16,26 +16,26 @@ const ModifiableRiskFactor = () => {
     "1. A modifiable risk factor, and we're not treating it like one";
   const paragraph1 =
     data?.description ||
-    '"Modifiable risk factors" is the language public-health systems use for the things that drive disease and death and that can be changed by policy. Smoking. Alcohol. Air quality. Obesity. Gambling belongs on that list. It is largely missing from it.';
+    '"Modifiable risk factors" is the language public-health systems use for the things that drive disease and death and that can be changed by policy. Smoking. Alcohol. Air quality. Diet. Gambling belongs on that list. It is largely missing from it.';
   const paragraph2 =
     data?.audioTitle ||
     "This is not an academic distinction. It determines how much research funding a harm attracts, how seriously it is taken by health systems, and how willing politicians are to act. Until gambling is treated as a modifiable risk factor for ill-health, rather than as discretionary leisure consumption with the occasional unfortunate edge case, the response will continue to be smaller than the harm warrants.";
   const positionTagline = data?.audioSource || "Our position";
   const positionText =
     data?.audioUrl ||
-    "Gambling harm should be classified, measured, funded and regulated as the modifiable public-health risk factor it is. The current regulatory framing (gambling as a leisure activity with industry-led safeguards) is not consistent with the evidence on harm.";
+    "Gambling harm should be classified, measured, funded and regulated as the modifiable public-health risk factor it is. The current regulatory framing, gambling as a leisure activity with industry-led safeguards, is not consistent with the evidence on harm.";
   const rightInfographic = data?.image || imgOne;
   const bottomTeamPhoto = data?.videoUrl || bannerImg;
   const paragraph3 =
     data?.paragraph3 ||
-    "On GHUK's burden-of-disease modelling (APPG submission, February 2026), gambling ranks among the top five modifiable risks to UK population health, comparable in magnitude to alcohol misuse and major depressive disorder. No UK policy framework currently treats it that way.";
+    "Applying published health-state utilities (Moayeri, 2020) to the latest national prevalence data places gambling harm among the leading modifiable behavioural risks to population health in the UK. The World Health Organization reached a comparable conclusion in 2017, judging the gambling-related burden to be of similar magnitude to major depressive disorder and to alcohol misuse and dependence, and substantially higher than drug use disorder. The Lancet Public Health Commission on Gambling (Wardle, Degenhardt et al., 2024) provides the definitive international framing: commercial determinants, the prevention paradox, and the externalisation of harm onto people who never placed a bet.";
 
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 bg-white">
       {/* Top Layout: Text Content + Infographic Card */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16"> */}
         {/* Left Side: Copy and Position Card (Take up 7 cols on large screens) */}
-        <div className="lg:col-span-7 flex flex-col justify-between h-full">
+        {/* <div className="lg:col-span-7 flex flex-col justify-between h-full"> */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight text-center lg:text-left leading-tight mb-6">
               {sectionTitle}
@@ -57,10 +57,10 @@ const ModifiableRiskFactor = () => {
               {positionText}
             </p>
           </div>
-        </div>
+        {/* </div> */}
 
         {/* Right Side: Infographic (Take up 5 cols on large screens) */}
-        <div className="lg:col-span-5 flex justify-center lg:justify-end">
+        {/* <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <div className="max-w-md w-full p-2 bg-transparent overflow-hidden">
             <img
               src={rightInfographic}
@@ -68,11 +68,11 @@ const ModifiableRiskFactor = () => {
               className="w-full h-auto object-contain "
             />
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       {/* Bottom Layout: Full-Width Styled Team Image */}
-      {bottomTeamPhoto && (
+      {/* {bottomTeamPhoto && (
         <div className="w-full overflow-hidden shadow-md border border-gray-100">
           <img
             src={bottomTeamPhoto}
@@ -80,7 +80,7 @@ const ModifiableRiskFactor = () => {
             className="w-full h-auto object-cover max-h-[400px]"
           />
         </div>
-      )}
+      )} */}
     </section>
   );
 };

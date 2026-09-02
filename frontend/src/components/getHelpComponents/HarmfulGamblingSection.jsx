@@ -43,9 +43,9 @@ const HarmfulGamblingSection = () => {
 
           <div className="py-4 border-b border-dashed border-gray-300/80">
             <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-normal">
-              If you answered yes to two or more, your gambling may well be
-              causing you harm and it is worth talking to someone, without
-              waiting for the situation to get worse.
+              If any of these feel familiar, gambling may already be causing you
+              harm and it is worth talking to someone, without waiting for the
+              situation to get worse.
             </p>
           </div>
 
@@ -64,18 +64,13 @@ const HarmfulGamblingSection = () => {
           A note on the PGSI threshold
         </h4>
 
-        <div className="space-y-4">
+        <div>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
             UK gambling-prevalence figures have for decades used a PGSI score of
-            8 or above as the cut-off for the most severe band. This produces a
-            binary (you either meet that threshold or you don't) that the actual
-            evidence on harm does not support. Meaningful harm exists well below
-            PGSI 8.
-          </p>
-
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
-            If your score is lower than 8 but you're worried, your worry is the
-            relevant signal, not the score. Please consider talking to someone.
+            8 or above as the cut-off for the most severe band. Meaningful harm
+            exists well below PGSI 8. If your score is lower but you're worried,
+            your worry is the relevant signal, not the score. Please consider
+            talking to someone.
           </p>
         </div>
       </div>

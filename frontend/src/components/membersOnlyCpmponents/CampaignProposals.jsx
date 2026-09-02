@@ -29,7 +29,7 @@ const CampaignProposals = () => {
           verification at the point of play.
         </>
       ),
-      link: "https://membersonlycampaign.org.uk/national-app-v1%262",
+      link: "https://membersonlycampaign.org.uk/national-gambling-app",
     },
     {
       id: 3,

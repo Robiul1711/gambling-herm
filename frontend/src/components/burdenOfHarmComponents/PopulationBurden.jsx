@@ -138,7 +138,7 @@ const PopulationBurden = () => {
           </div>
 
           {/* Footnote 1 */}
-          <p className="text-[11px] md:text-xs text-gray-300 leading-relaxed mt-6 mb-10">
+          <p className="text-xs md:text-base text-gray-300 leading-relaxed mt-6 mb-10">
             Annual non-fatal health loss, UK. Gambling figure is GHUK modelling
             (Moayeri 2020 utilities applied to GSGB 2024 prevalence,
             de-duplicated), expressed in QALYs, valuing the burden on affected
@@ -168,89 +168,110 @@ const PopulationBurden = () => {
           </h3>
 
           <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
-            Valued at the NICE cost-effectiveness range of £25,000 to £35,000
-            per QALY, the annual UK health loss from gambling comes to{" "}
-            <strong className="text-white font-bold">£15.6–21.9 billion</strong>
-            . This values the burden carried by affected others at parity with
-            the person who gambles, which is what the direct measurements
-            support (Browne et al., 2017). The statutory levy on gambling
-            operators is projected to raise about £100 million a year.
+            Valued at the{" "}
+            <strong className="text-white font-bold">
+              £70,000 Green Book societal value of a QALY
+            </strong>{" "}
+            (2024 prices), the cross-government standard for valuing health
+            loss and the same valuation instrument the Office for Health
+            Improvement and Disparities applied to gambling-related deaths (in an
+            earlier price base, and adjusted there by England's mean EQ-5D
+            score), the annual UK health loss from gambling comes to{" "}
+            <strong className="text-white font-bold">
+              approximately £37 billion
+            </strong>
+            . On the more conservative NICE technology-appraisal range of
+            £25,000 to £35,000 per QALY, the same loss is £13.2 to 18.5
+            billion. The statutory levy on gambling operators is projected to
+            raise about £100 million a year.
           </p>
 
           {/* Bar Chart 2 */}
           <div className="space-y-4 my-6">
             {/* Statutory levy */}
             <div className="flex items-center gap-4">
-              <div className="w-36 text-sm font-semibold text-white shrink-0">
+              <div className="w-48 text-sm font-semibold text-white shrink-0">
                 Statutory levy
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#73768B] h-full w-[1%] min-w-[3px]" />
+                <div className="bg-[#73768B] h-full w-[0.27%]" />
               </div>
               <div className="w-28 text-right text-sm font-bold text-white">
                 £100m
               </div>
             </div>
 
-            {/* Conservative floor */}
+            {/* NICE comparator */}
             <div className="flex items-center gap-4">
-              <div className="w-36 text-sm font-semibold text-[#00B5FF] shrink-0">
-                Conservative floor
+              <div className="w-48 text-sm font-semibold text-white shrink-0">
+                NICE comparator
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#0093D0] h-full w-[6%]" />
+                <div className="bg-[#0093D0] h-full w-[43%]" />
               </div>
               <div className="w-28 text-right text-sm font-bold text-[#00B5FF]">
-                £4.1–5.8bn
+                £13.2–18.5bn
               </div>
             </div>
 
-            {/* Central estimate */}
+            {/* Conservative sensitivity */}
             <div className="flex items-center gap-4">
-              <div className="w-36 text-sm font-semibold text-[#00B5FF] shrink-0">
-                Central estimate
+              <div className="w-48 text-sm font-semibold text-white shrink-0">
+                Conservative sensitivity
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#0093D0] h-full w-[22%]" />
+                <div className="bg-[#0093D0] h-full w-[76%]" />
               </div>
               <div className="w-28 text-right text-sm font-bold text-[#00B5FF]">
-                £15.6–21.9bn
+                £28bn
               </div>
             </div>
 
-            {/* Upper sensitivity */}
+            {/* Headline estimate */}
             <div className="flex items-center gap-4">
-              <div className="w-36 text-sm font-semibold text-[#00B5FF] shrink-0">
-                Upper sensitivity
+              <div className="w-48 text-sm font-semibold text-[#00B5FF] shrink-0">
+                Headline estimate
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#0093D0] h-full w-[80%]" />
+                <div className="bg-[#0093D0] h-full w-[100%]" />
               </div>
               <div className="w-28 text-right text-sm font-bold text-[#00B5FF]">
-                £70–98bn
+                £37bn
               </div>
             </div>
           </div>
 
           {/* Footnote 2 */}
-          <p className="text-[11px] md:text-xs text-gray-300 leading-relaxed mt-6 mb-10">
-            Bars are drawn to scale against the upper sensitivity. At this scale
-            the levy is 0.1% of the largest bar and is too small to render as a
-            visible block, which is itself the point. Central estimate:
-            approximately 625,000 QALYs lost annually, valuing affected others
-            at parity with the person gambling, which is what the direct
-            disability-weight measurements support (Browne et al., 2017). People
-            who gamble account for about 297,000 QALYs of that total
-            (£7.4–10.4bn). Conservative floor applies the most recent
-            health-survey prevalence (Adult Psychiatric Morbidity Survey 2023/4:
-            PGSI 1-2 2.8%, 3-7 1.2%, 8+ 0.4%, England), which the survey itself
-            describes as conservative. Upper sensitivity applies the Tulloch et
-            al. (2026) hybrid disability weights, roughly 2.81 million QALYs.
-            Valuing the central estimate at the £70,000 societal
-            willingness-to-pay threshold instead gives about £44 billion.
-            Sources: Moayeri (2020); GSGB 2024; Browne et al. (2017); Tulloch et
-            al. (2026); NICE thresholds from April 2026. Full method in the GHUK
-            Health Needs Assessment (2026), Appendix D.
+          <p className="text-xs md:text-base text-gray-300 leading-relaxed mt-6 mb-10">
+            Bars are drawn to scale against the headline. At this scale the levy
+            is 0.27% of the largest bar and is too small to render as a visible
+            block; that invisibility is the finding.{" "}
+            <strong className="text-white font-bold">Headline:</strong>{" "}
+            approximately 530,000 QALYs lost annually (about 597,000 before the
+            household-overlap adjustment), valued at the £70,000 Green Book
+            figure. Composition: about 297,000 QALYs among people who gamble,
+            252,000 among adults harmed by someone else's gambling, 48,000 among
+            children exposed to adult gambling, less about 68,000 for household
+            overlap. People who gamble alone account for £20.8bn of the total.{" "}
+            <strong className="text-white font-bold">NICE comparator:</strong>{" "}
+            the same health loss at the £25,000 to £35,000 technology-appraisal
+            range, shown because it is the threshold health-system readers
+            recognise; bar drawn at the midpoint.{" "}
+            <strong className="text-white font-bold">
+              Conservative sensitivity:
+            </strong>{" "}
+            applies a 30% transfer to people harmed by someone else's gambling
+            instead of full attribution, giving about 400,000 QALYs. An upper
+            sensitivity using the Tulloch et al. (2026) hybrid disability
+            weights gives roughly 2.81 million QALYs, over five times the
+            headline; we do not put a money value on it, because those weights
+            index the severity of a harm state without isolating the
+            gambling-attributable difference and are not comorbidity-adjusted.
+            Sources: Moayeri (2020); GSGB 2024; Wilson et al. (2024); Tulloch et
+            al. (2026); HM Treasury Green Book / DHSC; NICE thresholds from
+            April 2026. Full method in the GHUK Health Needs Assessment (v9.9,
+            August 2026), Appendix D, which is reproducible in the accompanying
+            calculator.
           </p>
         </div>
 
@@ -276,15 +297,15 @@ const PopulationBurden = () => {
         </div>
 
         {/* Dark Box: Two numbers that must not be added together */}
-        <div className="border border-[#333333] bg-[#222222] p-6 md:p-8 my-8 ">
+        <div className="border-l-4 border-gray-400 bg-[#222222] p-6 md:p-8 my-8">
           <h4 className="text-white font-bold text-base md:text-lg mb-3">
             Two numbers that must not be added together
           </h4>
           <p className="text-sm text-gray-300 leading-relaxed">
             The partial social-cost estimate (£1.05–1.77bn) and the QALY-loss
-            valuation (£15.6–21.9bn) are different constructs measuring
-            different things. They are not additive, and we do not present them
-            as a combined total.
+            valuation (£37bn) are different constructs measuring different
+            things. They are not additive, and we do not present them as a
+            combined total.
           </p>
         </div>
 

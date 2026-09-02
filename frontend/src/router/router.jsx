@@ -44,6 +44,9 @@ import LimitGamblingAdsPage from "@/pages/sites/LimitGamblingAdsPage";
 import SignInPage from "@/pages/sites/SignInPage";
 import MembersLibraryPage from "@/pages/sites/MembersLibraryPage";
 import RegisterMembersPage from "@/pages/sites/RegisterMembersPage";
+import ForgotPasswordPage from "@/pages/sites/ForgotPasswordPage";
+import ResetPasswordPage from "@/pages/sites/ResetPasswordPage";
+import ProtectedRoute from "@/components/common/ProtectedRoute";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -70,7 +73,14 @@ const router = createBrowserRouter([
       { path: "/road-safety-and-gambling", element: <RoadSafetyGambling /> },
       // Our Work — Campaigns, Policy & News
       { path: "/policy-and-advocacy", element: <PolicyAndAdvocacy /> },
-      { path: "/members-only-campaign", element: <MembersOnlyCampaign /> },
+      {
+        path: "/members-only-campaign",
+        element: (
+          <ProtectedRoute>
+            <MembersOnlyCampaign />
+          </ProtectedRoute>
+        ),
+      },
       { path: "/events", element: <EventsPage /> },
       // For Professionals
       { path: "/professionals", element: <ProfessionalsHub /> },
@@ -97,7 +107,16 @@ const router = createBrowserRouter([
       { path: "/sign-in", element: <SignInPage /> },
       { path: "/login", element: <SignInPage /> },
       { path: "/register", element: <RegisterMembersPage /> },
-      { path: "/members-library", element: <MembersLibraryPage /> },
+      { path: "/forgot-password", element: <ForgotPasswordPage /> },
+      { path: "/reset-password", element: <ResetPasswordPage /> },
+      {
+        path: "/members-library",
+        element: (
+          <ProtectedRoute>
+            <MembersLibraryPage />
+          </ProtectedRoute>
+        ),
+      },
       // Legal
       { path: "/privacy", element: <Privacy /> },
       { path: "/cookies", element: <Cookies /> },

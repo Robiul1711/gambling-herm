@@ -5,35 +5,46 @@ const items = [
   {
     id: 1,
     title: "Speak to your bank",
-    description:
-      "All major UK banks offer a gambling block on debit cards. It's free, takes a minute, and most banks add a 48-hour cooling-off period if you try to remove it. Useful even if you don't think you'll relapse.",
+    description: (
+      <>
+        All major UK banks offer a gambling block on debit cards. It's free,
+        takes a minute, and most banks add a 48-hour cooling-off period if you
+        try to remove it. Useful even if you don't think you'll relapse.
+      </>
+    ),
   },
   {
     id: 2,
     title: "Get free debt advice",
-    description:
-      "StepChange (0800 138 1111), National Debtline (0808 808 4000) and Citizens Advice all provide free, confidential, regulated debt advice. They will not lecture you. They will help you negotiate with creditors, set up affordable repayment plans, and explain options like Debt Relief Orders or Breathing Space.",
+    description: (
+      <>
+        <strong>StepChange</strong> (0800 138 1111),{" "}
+        <strong>National Debtline</strong> (0808 808 4000) and{" "}
+        <strong>Citizens Advice</strong> all provide free, confidential,
+        regulated debt advice. They will not lecture you. They will help you
+        negotiate with creditors, set up affordable repayment plans, and explain
+        options like Debt Relief Orders or Breathing Space.
+      </>
+    ),
   },
   {
     id: 3,
-    title: "Stop using credit to gamble",
-    description:
-      "It has been illegal for UK gambling operators to accept credit cards since 2020. If a site is accepting your credit card, it is not legally licensed in the UK, and you should not be using it.",
-  },
-  {
-    id: 4,
-    title: "If joint money or trust has been lost",
+    title: "Know your protections",
     description: (
       <>
-        A partner who has been harmed by another person's gambling has legal
-        options. Free advice is available from Citizens Advice, Rights of Women
-        (for women specifically), and family-law solicitors.{" "}
+        It has been illegal for UK gambling operators to accept credit cards
+        since 2020: a site taking your credit card is not operating legally in
+        the UK. And if joint money or trust has been lost, free advice is
+        available from <strong>Citizens Advice</strong>,{" "}
+        <strong>Rights of Women</strong> (for women specifically) and family-law
+        solicitors. See{" "}
         <Link
           to="/get-help/family-friends"
-          className="underline text-[#0896D7] hover:text-[#0672a3] transition-colors duration-200"
+          className="underline text-gray-900 hover:text-[#0896D7] transition-colors duration-200"
         >
-          See our page for family and friends.
+          our page for family and friends
         </Link>
+        .
       </>
     ),
   },
@@ -48,13 +59,14 @@ const ProtectingYourMoney = () => {
 
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
-          Protecting your money
+          Get financial help
         </h2>
 
         {/* Description */}
         <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-8">
-          Debt and financial harm sit at the centre of most gambling harm. The
-          earlier you get advice, the more options you have.
+          Gambling harm often becomes a money problem long before people seek
+          help. Free debt advice, bank blocks and legal protections are
+          available, and the earlier you use them, the more options you have.
         </p>
 
         {/* Cards */}

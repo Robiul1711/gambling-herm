@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useMemberAuth } from "@/context/MemberAuthContext";
+import { CheckCircle2, AlertCircle, Lock, Eye, EyeOff } from "lucide-react";
 
 const sectorOptions = [
   "Please choose one",
@@ -14,17 +16,23 @@ const sectorOptions = [
 ];
 
 const RegisterMembershipForm = () => {
+  const { registerMember } = useMemberAuth();
   const [serverSuccess, setServerSuccess] = useState(false);
+  const [serverError, setServerError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    watch,
   } = useForm({
     defaultValues: {
       name: "",
       email: "",
+      password: "",
+      confirmPassword: "",
       organisation: "",
       role: "",
       sector: "Please choose one",
@@ -34,9 +42,32 @@ const RegisterMembershipForm = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    setServerSuccess(true);
-    reset();
+  const passwordValue = watch("password");
+
+  const onSubmit = async (data) => {
+    setServerError("");
+    try {
+      await registerMember({
+        name: data.name,
+        email: data.email,
+        password: data.password,
+        organisation: data.organisation,
+        role: data.role,
+        sector: data.sector === "Please choose one" ? "Other" : data.sector,
+        membershipNeeds: data.membershipNeeds,
+        agreeTerms: data.agreeTerms,
+        newsletterUpdates: data.newsletterUpdates,
+      });
+
+      setServerSuccess(true);
+      reset();
+      window.scrollTo({ top: 100, behavior: "smooth" });
+    } catch (err) {
+      console.error("Registration submit error:", err);
+      setServerError(
+        err?.response?.data?.message || err?.message || "Failed to submit registration. Please try again."
+      );
+    }
   };
 
   return (
@@ -44,14 +75,49 @@ const RegisterMembershipForm = () => {
       <div className="max-w-2xl mx-auto">
         {/* Success Alert */}
         {serverSuccess && (
-          <div className="mb-8 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800  text-sm flex items-center justify-between shadow-xs">
-            <span>
-              Thank you for registering! A colleague will be in touch about your
-              membership registration as soon as possible.
-            </span>
+          <div className="mb-8 p-6 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl shadow-xs space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-emerald-100 rounded-full text-emerald-700">
+                <CheckCircle2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-emerald-900">
+                Registration Application Received!
+              </h3>
+            </div>
+            <p className="text-sm leading-relaxed text-emerald-800">
+              Thank you for applying for GHUK membership. Your application has been recorded and is currently <strong>pending review and approval</strong> by our admin team.
+            </p>
+            <p className="text-xs text-emerald-700 leading-relaxed">
+              Once a colleague verifies your professional details, you will receive an activation email and will be able to sign in to access the Members Library.
+            </p>
+            <div className="pt-2 flex items-center gap-3">
+              <Link
+                to="/sign-in"
+                className="inline-block bg-[#0093D0] hover:bg-[#0e5472] text-white font-semibold text-xs px-5 py-2.5 rounded-lg transition-colors"
+              >
+                Go to Sign In page
+              </Link>
+              <button
+                type="button"
+                onClick={() => setServerSuccess(false)}
+                className="text-xs font-semibold text-emerald-800 hover:underline px-2 py-1"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Error Alert */}
+        {serverError && (
+          <div className="mb-8 p-4 bg-rose-50 border border-rose-200 text-rose-800 text-sm rounded-lg flex items-center justify-between shadow-xs">
+            <div className="flex items-center gap-2">
+              <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+              <span>{serverError}</span>
+            </div>
             <button
-              onClick={() => setServerSuccess(false)}
-              className="text-emerald-700 hover:text-emerald-900 font-bold ml-3 text-xs"
+              onClick={() => setServerError("")}
+              className="text-rose-700 hover:text-rose-900 font-bold ml-3 text-xs"
             >
               ✕
             </button>
@@ -63,16 +129,16 @@ const RegisterMembershipForm = () => {
           {/* Field 1: Your name */}
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Your name
+              Your full name *
             </label>
             <input
               type="text"
-              placeholder=""
+              placeholder="e.g. Dr. Jane Smith"
               {...register("name", { required: "Name is required." })}
-              className={`w-full px-3.5 py-2.5 sm:py-3 border  text-slate-900 focus:outline-none transition-colors ${
+              className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
                 errors.name
                   ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
-                  : "border-slate-300 focus:border-Primary focus:ring-1 focus:ring-Primary"
+                  : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
               }`}
             />
             {errors.name && (
@@ -85,11 +151,11 @@ const RegisterMembershipForm = () => {
           {/* Field 2: Email address */}
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Email address
+              Work / Professional email address *
             </label>
             <input
               type="email"
-              placeholder=""
+              placeholder="e.g. name@organisation.nhs.uk"
               {...register("email", {
                 required: "Email address is required.",
                 pattern: {
@@ -97,12 +163,15 @@ const RegisterMembershipForm = () => {
                   message: "Please enter a valid email address.",
                 },
               })}
-              className={`w-full px-3.5 py-2.5 sm:py-3 border  text-slate-900 focus:outline-none transition-colors ${
+              className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
                 errors.email
                   ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
-                  : "border-slate-300 focus:border-Primary focus:ring-1 focus:ring-Primary"
+                  : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
               }`}
             />
+            <p className="text-xs text-slate-500 mt-1.5">
+              Please use your institutional or organisational email if applicable.
+            </p>
             {errors.email && (
               <p className="mt-1.5 text-xs text-rose-600 font-medium">
                 {errors.email.message}
@@ -110,33 +179,97 @@ const RegisterMembershipForm = () => {
             )}
           </div>
 
-          {/* Field 3: Organisation */}
+          {/* Field 3: Password */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-2">
+                Create password *
+              </label>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Minimum 6 characters"
+                  {...register("password", {
+                    required: "Password is required.",
+                    minLength: {
+                      value: 6,
+                      message: "Password must be at least 6 characters.",
+                    },
+                  })}
+                  className={`w-full pl-3.5 pr-10 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+                    errors.password
+                      ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
+                      : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
+                  }`}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 cursor-pointer"
+                >
+                  {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                </button>
+              </div>
+              {errors.password && (
+                <p className="mt-1.5 text-xs text-rose-600 font-medium">
+                  {errors.password.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-2">
+                Confirm password *
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Re-enter password"
+                {...register("confirmPassword", {
+                  required: "Please confirm your password.",
+                  validate: (val) =>
+                    val === passwordValue || "Passwords do not match.",
+                })}
+                className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+                  errors.confirmPassword
+                    ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
+                    : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
+                }`}
+              />
+              {errors.confirmPassword && (
+                <p className="mt-1.5 text-xs text-rose-600 font-medium">
+                  {errors.confirmPassword.message}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Field 4: Organisation */}
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Organisation
+              Organisation or Trust
             </label>
             <input
               type="text"
-              placeholder=""
+              placeholder="e.g. NHS Foundation Trust, University, Local Council"
               {...register("organisation")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
+              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
             />
           </div>
 
-          {/* Field 4: Role or job title */}
+          {/* Field 5: Role or job title */}
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
               Role or job title
             </label>
             <input
               type="text"
-              placeholder=""
+              placeholder="e.g. Consultant Clinical Psychologist, Safeguarding Lead"
               {...register("role")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors"
+              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
             />
           </div>
 
-          {/* Field 5: Sector */}
+          {/* Field 6: Sector */}
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
               Sector
@@ -144,7 +277,7 @@ const RegisterMembershipForm = () => {
             <div className="relative">
               <select
                 {...register("sector")}
-                className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-800 bg-white focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors appearance-none cursor-pointer"
+                className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-800 bg-white focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors appearance-none cursor-pointer"
               >
                 {sectorOptions.map((opt, i) => (
                   <option key={i} value={opt}>
@@ -170,20 +303,19 @@ const RegisterMembershipForm = () => {
             </div>
           </div>
 
-          {/* Field 6: What would you like from membership? */}
+          {/* Field 7: What would you like from membership? */}
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
               What would you like from membership?
             </label>
             <textarea
-              rows={4}
-              placeholder=""
+              rows={3}
+              placeholder="Optional: e.g. MECC training, burden-of-harm evidence tools, safeguarding films"
               {...register("membershipNeeds")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border border-slate-300  text-slate-900 focus:outline-none focus:border-Primary focus:ring-1 focus:ring-Primary transition-colors resize-y"
+              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors resize-y"
             ></textarea>
             <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-              Optional, but it helps us understand what to prioritise, for
-              example training, briefings, or the evidence library.
+              Optional, but it helps our team understand what materials to prioritise for your sector.
             </p>
           </div>
 
@@ -194,9 +326,9 @@ const RegisterMembershipForm = () => {
                 type="checkbox"
                 id="agreeTerms"
                 {...register("agreeTerms", {
-                  required: "You must agree to the privacy notice to submit.",
+                  required: "You must agree to the privacy notice to register.",
                 })}
-                className="w-4 h-4 mt-1 rounded border-slate-300 text-Primary focus:ring-Primary cursor-pointer"
+                className="w-4 h-4 mt-1 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
               />
               <label
                 htmlFor="agreeTerms"
@@ -205,14 +337,11 @@ const RegisterMembershipForm = () => {
                 I have read and agree to GHUK's{" "}
                 <Link
                   to="/privacy"
-                  className="underline font-semibold text-slate-900 hover:text-Primary"
+                  className="underline font-semibold text-slate-900 hover:text-[#0093D0]"
                 >
                   privacy notice
                 </Link>
-                , including that my details will be held by GHUK and by the
-                small number of service providers we use to run our systems, and
-                that I can ask GHUK to access, correct or delete them at any
-                time.
+                , including that my details will be verified by the GHUK team for professional access.
               </label>
             </div>
             {errors.agreeTerms && (
@@ -229,14 +358,13 @@ const RegisterMembershipForm = () => {
                 type="checkbox"
                 id="newsletterUpdates"
                 {...register("newsletterUpdates")}
-                className="w-4 h-4 mt-1 rounded border-slate-300 text-Primary focus:ring-Primary cursor-pointer"
+                className="w-4 h-4 mt-1 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
               />
               <label
                 htmlFor="newsletterUpdates"
                 className="text-xs sm:text-sm text-slate-700 leading-relaxed cursor-pointer select-none"
               >
-                I would also like to receive GHUK's newsletter and campaign
-                updates by email. I can unsubscribe at any time.
+                I would also like to receive GHUK's professional briefings and campaign updates by email.
               </label>
             </div>
           </div>
@@ -246,37 +374,33 @@ const RegisterMembershipForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-Primary hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3.5  transition-all shadow-sm flex items-center justify-center min-w-[140px] disabled:opacity-60 cursor-pointer"
+              className="bg-[#0093D0] hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3.5 rounded-md transition-all shadow-sm flex items-center justify-center min-w-[170px] disabled:opacity-60 cursor-pointer"
             >
               {isSubmitting ? (
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                  <span>Submitting...</span>
+                  <span>Submitting application...</span>
                 </div>
               ) : (
-                "Register"
+                "Submit Registration"
               )}
             </button>
           </div>
 
-          {/* Postscript Notes from Screenshot 3 */}
-          <div className="pt-6 space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+          {/* Postscript Notes */}
+          <div className="pt-6 space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
             <p>
-              After you submit this, a colleague will be in touch about your
-              registration. We don't have a fixed response time to promise while
-              membership is being rolled out, but we aim to reply as soon as we
-              can.
+              <strong>What happens next?</strong> After you submit this, our admin team will review your application. Once approved, you will receive an email confirmation and can sign in immediately.
             </p>
             <p>
-              We never sell your details, and we never accept gambling-industry
-              funding. See our{" "}
+              Already registered and approved?{" "}
               <Link
-                to="/privacy"
-                className="underline font-semibold text-slate-900 hover:text-Primary"
+                to="/sign-in"
+                className="underline font-semibold text-slate-900 hover:text-[#0093D0]"
               >
-                privacy notice
-              </Link>{" "}
-              for who we share data with and why.
+                Sign in here
+              </Link>
+              .
             </p>
           </div>
         </form>

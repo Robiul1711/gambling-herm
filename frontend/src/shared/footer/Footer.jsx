@@ -95,7 +95,7 @@ export default function Footer() {
             </div>
 
             {/* Urgent Help Highlight Badge */}
-            <div className="pt-3">
+            {/* <div className="pt-3">
               <Link
                 to="/urgent-help"
                 className="inline-flex items-center gap-2 bg-[#d91f26] hover:bg-[#b8181e] text-white text-xs font-bold px-4 py-2.5  transition-colors shadow-xs"
@@ -103,7 +103,7 @@ export default function Footer() {
                 <span>Need Urgent Help?</span>
                 <span>&rarr;</span>
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* NAV DIRECTORY GRID (9/12 space, 4 Columns) */}
@@ -132,14 +132,6 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/about#funding"
-                    className="hover:text-white transition-colors"
-                  >
-                    Funding &amp; COI
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/about#team"
                     className="hover:text-white transition-colors"
                   >
@@ -148,10 +140,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/register-keep-updated"
+                    to="/about#funding"
                     className="hover:text-white transition-colors"
                   >
-                    Register &amp; keep updated
+                    Funding &amp; COI
                   </Link>
                 </li>
                 <li>
@@ -181,14 +173,6 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/burden-mapping-tool"
-                    className="hover:text-white transition-colors"
-                  >
-                    Burden mapping tool
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/gambling-explained"
                     className="hover:text-white transition-colors"
                   >
@@ -205,54 +189,6 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/understanding-gambling-harms"
-                    className="hover:text-white transition-colors"
-                  >
-                    Understanding harms
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/stigma-and-language"
-                    className="hover:text-white transition-colors"
-                  >
-                    Stigma &amp; language
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/neurodivergence"
-                    className="hover:text-white transition-colors"
-                  >
-                    Neurodivergence
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/inequality-and-gambling-harm"
-                    className="hover:text-white transition-colors"
-                  >
-                    Inequality &amp; harm
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/children-and-safeguarding"
-                    className="hover:text-white transition-colors"
-                  >
-                    Children &amp; safeguarding
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/road-safety-and-gambling"
-                    className="hover:text-white transition-colors"
-                  >
-                    Road safety &amp; gambling
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/policy-and-advocacy"
                     className="hover:text-white transition-colors"
                   >
@@ -261,26 +197,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/members-only-campaign"
-                    className="hover:text-white transition-colors"
-                  >
-                    Members Only Campaign
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/news-and-research"
                     className="hover:text-white transition-colors"
                   >
                     News &amp; research
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/events"
-                    className="hover:text-white transition-colors"
-                  >
-                    Events
                   </Link>
                 </li>
               </ul>
@@ -332,30 +252,6 @@ export default function Footer() {
                     Researchers
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/sign-in"
-                    className="hover:text-white transition-colors"
-                  >
-                    Sign in
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/register"
-                    className="hover:text-white transition-colors"
-                  >
-                    Register
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/members-library"
-                    className="hover:text-white transition-colors"
-                  >
-                    Members library
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -391,14 +287,6 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/get-help/young-people"
-                    className="hover:text-white transition-colors"
-                  >
-                    Young people
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/get-help/treatment"
                     className="hover:text-white transition-colors"
                   >
@@ -407,58 +295,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/thurrock"
-                    className="hover:text-white transition-colors"
-                  >
-                    Support in Thurrock
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/get-help/check-in"
-                    className="hover:text-white transition-colors"
-                  >
-                    Check-in
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/get-help/self-assessment"
                     className="hover:text-white transition-colors"
                   >
-                    Self-assessment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/get-help/affected-others-check-in"
-                    className="hover:text-white transition-colors"
-                  >
-                    Affected-others check-in
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/get-help/spend-calculator"
-                    className="hover:text-white transition-colors"
-                  >
-                    Spend calculator
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/get-help/blocking-tools"
-                    className="hover:text-white transition-colors"
-                  >
-                    Blocking tools
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/get-help/limit-gambling-ads"
-                    className="hover:text-white transition-colors"
-                  >
-                    Limit gambling ads
+                    Self-assessment &amp; tools
                   </Link>
                 </li>
               </ul>
