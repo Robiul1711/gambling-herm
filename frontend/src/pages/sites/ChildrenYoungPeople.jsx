@@ -6,7 +6,16 @@ import SafeguardingFilms from "@/components/childrenYoungPeopleComponents/Safegu
 import SchoolSupportSection from "@/components/childrenYoungPeopleComponents/SchoolSupportSection";
 import SystemsLevelSection from "@/components/childrenYoungPeopleComponents/SystemsLevelSection";
 import WorkWithUsSafeguarding from "@/components/childrenYoungPeopleComponents/WorkWithUsSafeguarding";
+import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "cyp-evidence", title: "1. Context & Evidence" },
+  { id: "cyp-films", title: "2. Safeguarding Films" },
+  { id: "cyp-school", title: "3. School Support" },
+  { id: "cyp-systems", title: "4. Systems-Level Response" },
+  { id: "cyp-work-with-us", title: "5. Work With Us" },
+];
 
 const ChildrenYoungPeople = () => {
   const { data: responseData, isLoading } = useClient({
@@ -31,12 +40,25 @@ const ChildrenYoungPeople = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}
         />
-        <CYBanner />
-        <SafeguardingFilms />
-        <SchoolSupportSection />
-        <SystemsLevelSection />
+
+        <PageSectionNav sections={sections} />
+
+        <div id="cyp-evidence" className="scroll-mt-24">
+          <CYBanner />
+        </div>
+        <div id="cyp-films" className="scroll-mt-24">
+          <SafeguardingFilms />
+        </div>
+        <div id="cyp-school" className="scroll-mt-24">
+          <SchoolSupportSection />
+        </div>
+        <div id="cyp-systems" className="scroll-mt-24">
+          <SystemsLevelSection />
+        </div>
       </div>
-      <WorkWithUsSafeguarding />
+      <div id="cyp-work-with-us" className="scroll-mt-24">
+        <WorkWithUsSafeguarding />
+      </div>
     </>
   );
 };

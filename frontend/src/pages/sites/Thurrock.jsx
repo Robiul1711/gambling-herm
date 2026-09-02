@@ -8,6 +8,16 @@ import TreatmentAndSupport from "@/components/thurrockcomponents/TreatmentAndSup
 import PeerSupportMeetings from "@/components/thurrockcomponents/PeerSupportMeetings";
 import FinancialAdvice from "@/components/thurrockcomponents/FinancialAdvice";
 import LearnListenSupport from "@/components/thurrockcomponents/LearnListenSupport";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "check-gambling", title: "1. Check Your Gambling" },
+  { id: "treatment-support", title: "2. Treatment & Support" },
+  { id: "control-panel", title: "3. Tools & Controls" },
+  { id: "peer-support", title: "4. Peer Support" },
+  { id: "financial-advice", title: "5. Financial Advice" },
+  { id: "learn-listen", title: "6. Learn & Listen" },
+];
 
 const Thurrock = () => {
   return (
@@ -20,14 +30,27 @@ const Thurrock = () => {
           image={bannerImg}
         />
       </div>
-      <CheckYourGambling />
-      <TreatmentAndSupport />
-      <div className="bg-[#fafafa] py-12 md:py-16 border-t border-gray-200/40">
+
+      <PageSectionNav sections={sections} />
+
+      <div id="check-gambling" className="scroll-mt-24">
+        <CheckYourGambling />
+      </div>
+      <div id="treatment-support" className="scroll-mt-24">
+        <TreatmentAndSupport />
+      </div>
+      <div id="control-panel" className="scroll-mt-24 bg-[#fafafa] py-12 md:py-16 border-t border-gray-200/40">
         <GamblingControlPanel />
       </div>
-      <PeerSupportMeetings />
-      <FinancialAdvice />
-      <LearnListenSupport />
+      <div id="peer-support" className="scroll-mt-24">
+        <PeerSupportMeetings />
+      </div>
+      <div id="financial-advice" className="scroll-mt-24">
+        <FinancialAdvice />
+      </div>
+      <div id="learn-listen" className="scroll-mt-24">
+        <LearnListenSupport />
+      </div>
       <OurWorkCommonContact
         primaryClass={"bg-Primary"}
         title="Support is available right now."

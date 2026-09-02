@@ -11,8 +11,21 @@ import ProtectFinancially from "@/components/forFamilyFriendscomponents/ProtectF
 import GetSupport from "@/components/forFamilyFriendscomponents/GetSupport";
 import ChildrenInHouse from "@/components/forFamilyFriendscomponents/ChildrenInHouse";
 import GamblingBereavementSection from "@/components/forFamilyFriendscomponents/GamblingBereavementSection";
+import PageSectionNav from "@/components/common/PageSectionNav";
 
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "what-harm-looks-like", title: "1. What Harm Looks Like" },
+  { id: "victims-not-bystanders", title: "2. Victims Not Bystanders" },
+  { id: "scale-of-issue", title: "3. Scale of Harm" },
+  { id: "signs-to-look-for", title: "4. Signs to Look For" },
+  { id: "how-to-talk", title: "5. How to Talk" },
+  { id: "protect-financially", title: "6. Protect Financially" },
+  { id: "get-support", title: "7. Support for You" },
+  { id: "children-in-house", title: "8. Children in the House" },
+  { id: "bereavement", title: "9. Bereavement" },
+];
 
 const ForFamilyFriends = () => {
   const { data: responseData, isLoading } = useClient({
@@ -32,15 +45,36 @@ const ForFamilyFriends = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}/>
       </div>
-      <WhatHarmLooksLike />
-      <VictimsNotBystanders />
-      <GamblingScaleSection/>
-      <Signstolookfor/>
-      <HowToTalk />
-      <ProtectFinancially />
-      <GetSupport />
-      <ChildrenInHouse />
-      <GamblingBereavementSection/>
+
+      <PageSectionNav sections={sections} />
+
+      <div id="what-harm-looks-like" className="scroll-mt-24">
+        <WhatHarmLooksLike />
+      </div>
+      <div id="victims-not-bystanders" className="scroll-mt-24">
+        <VictimsNotBystanders />
+      </div>
+      <div id="scale-of-issue" className="scroll-mt-24">
+        <GamblingScaleSection/>
+      </div>
+      <div id="signs-to-look-for" className="scroll-mt-24">
+        <Signstolookfor/>
+      </div>
+      <div id="how-to-talk" className="scroll-mt-24">
+        <HowToTalk />
+      </div>
+      <div id="protect-financially" className="scroll-mt-24">
+        <ProtectFinancially />
+      </div>
+      <div id="get-support" className="scroll-mt-24">
+        <GetSupport />
+      </div>
+      <div id="children-in-house" className="scroll-mt-24">
+        <ChildrenInHouse />
+      </div>
+      <div id="bereavement" className="scroll-mt-24">
+        <GamblingBereavementSection/>
+      </div>
       <OurWorkCommonContact
        className={"bg-white"}
       titleClass={"!text-black"}

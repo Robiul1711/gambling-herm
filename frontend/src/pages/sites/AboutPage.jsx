@@ -6,7 +6,16 @@ import React from "react";
 import aboutBannerImg from "@/assets/images/about1.png";
 import ContactAndPress from "@/components/aboutComponents/ContactAndPress";
 import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
+import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "mission", title: "1. Our Mission" },
+  { id: "vision", title: "2. Vision, Values & Aims" },
+  { id: "funding", title: "3. Funding & Conflicts of Interest" },
+  { id: "team", title: "4. Trustees & Team" },
+  { id: "contact", title: "5. Contact & Press" },
+];
 
 const AboutPage = () => {
   const { data: responseData, isLoading } = useClient({
@@ -31,8 +40,17 @@ const AboutPage = () => {
           isLoading={isLoading}
         />
       </div>
-      <OurMission />
-      <VisionValuesAims />
+
+      <PageSectionNav sections={sections} />
+
+      <div id="mission" className="scroll-mt-24">
+        <OurMission />
+      </div>
+
+      <div id="vision" className="scroll-mt-24">
+        <VisionValuesAims />
+      </div>
+
       <div id="funding" className="scroll-mt-24">
         <FundingConflictOfInterest />
       </div>
@@ -40,11 +58,13 @@ const AboutPage = () => {
       <div id="team" className="scroll-mt-24">
         <TrusteesAndTeam />
       </div>
+
       <div id="contact" className="scroll-mt-24">
         <ContactAndPress />
       </div>
     </div>
   );
 };
+
 
 export default AboutPage;

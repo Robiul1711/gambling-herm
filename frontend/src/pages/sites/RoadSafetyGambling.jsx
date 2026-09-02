@@ -7,6 +7,16 @@ import RoadSafetyPracticalSteps from "../../components/roadSafetyGamblingCompone
 import RoadSafetyResources from "../../components/roadSafetyGamblingComponents/RoadSafetyResources";
 import RoadSafetyAboutGhuk from "../../components/roadSafetyGamblingComponents/RoadSafetyAboutGhuk";
 import RoadSafetyCta from "../../components/roadSafetyGamblingComponents/RoadSafetyCta";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "research-stats", title: "1. Research Stats" },
+  { id: "why-this-matters", title: "2. Why This Matters" },
+  { id: "research-themes", title: "3. What The Research Shows" },
+  { id: "practical-steps", title: "4. Practical Steps for Transport" },
+  { id: "resources", title: "5. Resources & Guides" },
+  { id: "about-ghuk", title: "6. About GHUK" },
+];
 
 export default function RoadSafetyGambling() {
   return (
@@ -14,23 +24,38 @@ export default function RoadSafetyGambling() {
       {/* 1. Hero Section */}
       <RoadSafetyHero />
 
+      {/* In-page Sticky Pill Navigation */}
+      <PageSectionNav sections={sections} />
+
       {/* 2. Research Stats Dark Section */}
-      <RoadSafetyResearchStats />
+      <div id="research-stats" className="scroll-mt-24">
+        <RoadSafetyResearchStats />
+      </div>
 
       {/* 3. Why this matters Section */}
-      <RoadSafetyWhyThisMatters />
+      <div id="why-this-matters" className="scroll-mt-24">
+        <RoadSafetyWhyThisMatters />
+      </div>
 
       {/* 4. What the research shows (4 Themes Grid) */}
-      <RoadSafetyResearchThemes />
+      <div id="research-themes" className="scroll-mt-24">
+        <RoadSafetyResearchThemes />
+      </div>
 
       {/* 5. What transport organisations can do (5 Steps Grid) */}
-      <RoadSafetyPracticalSteps />
+      <div id="practical-steps" className="scroll-mt-24">
+        <RoadSafetyPracticalSteps />
+      </div>
 
       {/* 6. Resources List Section */}
-      <RoadSafetyResources />
+      <div id="resources" className="scroll-mt-24">
+        <RoadSafetyResources />
+      </div>
 
       {/* 7. About Gambling Harm UK */}
-      <RoadSafetyAboutGhuk />
+      <div id="about-ghuk" className="scroll-mt-24">
+        <RoadSafetyAboutGhuk />
+      </div>
 
       {/* 8. Bottom Dark CTA Banner */}
       <RoadSafetyCta />

@@ -6,6 +6,15 @@ import NeurodivergenceHazardous from "../../components/neurodivergenceComponents
 import NeurodivergenceTreatmentService from "../../components/neurodivergenceComponents/NeurodivergenceTreatmentService";
 import NeurodivergencePosition from "../../components/neurodivergenceComponents/NeurodivergencePosition";
 import NeurodivergenceCta from "../../components/neurodivergenceComponents/NeurodivergenceCta";
+import PageSectionNav from "@/components/common/PageSectionNav";
+
+const sections = [
+  { id: "framing", title: "1. Framing" },
+  { id: "evidence", title: "2. Evidence Base" },
+  { id: "hazardous", title: "3. Hazardous Products" },
+  { id: "services", title: "4. Recognition & Services" },
+  { id: "position", title: "5. Our Position" },
+];
 
 export default function NeurodivergencePage() {
   return (
@@ -13,20 +22,33 @@ export default function NeurodivergencePage() {
       {/* 1. Hero Section */}
       <NeurodivergenceHero />
 
+      {/* In-page Sticky Pill Navigation */}
+      <PageSectionNav sections={sections} />
+
       {/* 2. Framing Callout Section */}
-      <NeurodivergenceFraming />
+      <div id="framing" className="scroll-mt-24">
+        <NeurodivergenceFraming />
+      </div>
 
       {/* 3. What the evidence supports */}
-      <NeurodivergenceEvidence />
+      <div id="evidence" className="scroll-mt-24">
+        <NeurodivergenceEvidence />
+      </div>
 
       {/* 4. Why gambling products are particularly hazardous here */}
-      <NeurodivergenceHazardous />
+      <div id="hazardous" className="scroll-mt-24">
+        <NeurodivergenceHazardous />
+      </div>
 
       {/* 5. Recognition and treatment & What a well-adapted service would look like */}
-      <NeurodivergenceTreatmentService />
+      <div id="services" className="scroll-mt-24">
+        <NeurodivergenceTreatmentService />
+      </div>
 
       {/* 6. Our Position (Three asks) */}
-      <NeurodivergencePosition />
+      <div id="position" className="scroll-mt-24">
+        <NeurodivergencePosition />
+      </div>
 
       {/* 7. Bottom CTA Banner */}
       <NeurodivergenceCta />

@@ -8,7 +8,17 @@ import ThreeFactorsDistribution from "@/components/inequalityAndGamblingHarmComp
 import WhereHarmConcentrates from "@/components/inequalityAndGamblingHarmComponents/WhereHarmConcentrates";
 import WhatDrivesHarmAndBlocksSupport from "@/components/inequalityAndGamblingHarmComponents/WhatDrivesHarmAndBlocksSupport";
 import PolicyPositionsInequality from "@/components/inequalityAndGamblingHarmComponents/PolicyPositionsInequality";
+import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "our-position", title: "1. Our Position" },
+  { id: "headline-ratio", title: "2. The Headline Ratio" },
+  { id: "distribution-factors", title: "3. Three Distribution Factors" },
+  { id: "where-harm-concentrates", title: "4. Where Harm Concentrates" },
+  { id: "what-drives-harm", title: "5. What Drives Harm & Blocks Support" },
+  { id: "policy-positions", title: "6. Policy Positions" },
+];
 
 const InequalityAndGamblingHarm = () => {
   const { data: responseData, isLoading } = useClient({
@@ -28,12 +38,27 @@ const InequalityAndGamblingHarm = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}/>
       </div>
-      <OurPositionCallout />
-      <HeadlineRatio />
-      <ThreeFactorsDistribution />
-      <WhereHarmConcentrates />
-      <WhatDrivesHarmAndBlocksSupport />
-      <PolicyPositionsInequality />
+
+      <PageSectionNav sections={sections} />
+
+      <div id="our-position" className="scroll-mt-24">
+        <OurPositionCallout />
+      </div>
+      <div id="headline-ratio" className="scroll-mt-24">
+        <HeadlineRatio />
+      </div>
+      <div id="distribution-factors" className="scroll-mt-24">
+        <ThreeFactorsDistribution />
+      </div>
+      <div id="where-harm-concentrates" className="scroll-mt-24">
+        <WhereHarmConcentrates />
+      </div>
+      <div id="what-drives-harm" className="scroll-mt-24">
+        <WhatDrivesHarmAndBlocksSupport />
+      </div>
+      <div id="policy-positions" className="scroll-mt-24">
+        <PolicyPositionsInequality />
+      </div>
       <OurWorkCommonContact
         primaryClass={"bg-Primary"}
         title="Inequality is not a side-topic."

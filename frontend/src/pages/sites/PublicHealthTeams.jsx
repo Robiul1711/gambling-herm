@@ -8,7 +8,17 @@ import ThreeStrandsSection from '@/components/publicHealthTeamsComponents/ThreeS
 import PublicHealthOffersSection from '@/components/publicHealthTeamsComponents/PublicHealthOffersSection';
 import PublicHealthRequestsSection from '@/components/publicHealthTeamsComponents/PublicHealthRequestsSection';
 import AudienceNavigationSection from '@/components/publicHealthTeamsComponents/AudienceNavigationSection';
+import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
+
+const sections = [
+  { id: "health-position", title: "1. Health Position" },
+  { id: "prevention-paradox", title: "2. Prevention Paradox" },
+  { id: "three-strands", title: "3. Three Strands of Action" },
+  { id: "public-health-offers", title: "4. What GHUK Offers" },
+  { id: "public-health-requests", title: "5. What GHUK Asks" },
+  { id: "audience-nav", title: "6. Across Sectors" },
+];
 
 const PublicHealthTeams = () => {
   const { data: responseData, isLoading } = useClient({
@@ -26,16 +36,29 @@ const PublicHealthTeams = () => {
         description={bannerData?.description || "For OHID, ICBs, local authority public health teams, and the equivalent bodies across Scotland, Wales and Northern Ireland. The evidence on burden, the population-level pattern of harm, and the cross-sector action GHUK believes the UK response now needs."}
         image={bannerData?.image || bannerImg}
         isLoading={isLoading}/>
-    <div className="px-4 md:px-0">
-      <HealthPositionSection/>
-      <PreventionParadoxSection/>
-      <ThreeStrandsSection/>
-      <PublicHealthOffersSection/>
-        <PublicHealthRequestsSection/>
-  
-        <AudienceNavigationSection/>
 
+      <PageSectionNav sections={sections} />
+
+      <div className="px-4 md:px-0">
+        <div id="health-position" className="scroll-mt-24">
+          <HealthPositionSection/>
         </div>
+        <div id="prevention-paradox" className="scroll-mt-24">
+          <PreventionParadoxSection/>
+        </div>
+        <div id="three-strands" className="scroll-mt-24">
+          <ThreeStrandsSection/>
+        </div>
+        <div id="public-health-offers" className="scroll-mt-24">
+          <PublicHealthOffersSection/>
+        </div>
+        <div id="public-health-requests" className="scroll-mt-24">
+          <PublicHealthRequestsSection/>
+        </div>
+        <div id="audience-nav" className="scroll-mt-24">
+          <AudienceNavigationSection/>
+        </div>
+      </div>
         
            <OurWorkCommonContact
            primaryClass="bg-[#0A6E9C]"
