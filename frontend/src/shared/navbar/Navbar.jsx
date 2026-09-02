@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, User, LogOut, CheckCircle2 } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,6 +12,7 @@ import {
 import CrisisHeader from "./CrisisHeader";
 import Logo from "@/assets/images/logo.png";
 import useClient from "@/hooks/useClient";
+import { useMemberAuth } from "@/context/MemberAuthContext";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = React.useState(true);
   const lastScrollY = React.useRef(0);
 
+  const { member, isAuthenticated, logout } = useMemberAuth();
   const { pathname, hash } = useLocation();
 
   // Fetch brand logo dynamically from footer settings
@@ -429,24 +431,55 @@ export default function Navbar() {
                               Members
                             </h4>
                             <ul className="space-y-1">
-                              <DropdownItem
-                                to="/sign-in"
-                                active={isLinkActive("/sign-in")}
-                              >
-                                Sign in
-                              </DropdownItem>
-                              <DropdownItem
-                                to="/register"
-                                active={isLinkActive("/register")}
-                              >
-                                Register
-                              </DropdownItem>
-                              <DropdownItem
-                                to="/members-library"
-                                active={isLinkActive("/members-library")}
-                              >
-                                Members library
-                              </DropdownItem>
+                              {isAuthenticated ? (
+                                <>
+                                  <li className="px-3 py-2 bg-sky-50 rounded-md mb-2 border border-sky-100">
+                                    <div className="flex items-center gap-1.5 text-xs font-bold text-sky-900">
+                                      <CheckCircle2 size={13} className="text-[#0093D0]" />
+                                      <span className="truncate">{member?.name}</span>
+                                    </div>
+                                    <p className="text-[11px] text-sky-700 mt-0.5 truncate">
+                                      {member?.organisation || member?.role || "Active Member"}
+                                    </p>
+                                  </li>
+                                  <DropdownItem
+                                    to="/members-library"
+                                    active={isLinkActive("/members-library")}
+                                  >
+                                    Members library (Unlocked)
+                                  </DropdownItem>
+                                  <li>
+                                    <button
+                                      onClick={logout}
+                                      className="w-full text-left text-[14px] px-3 py-2 text-rose-600 hover:bg-rose-50 rounded font-medium transition-colors flex items-center gap-1.5 cursor-pointer"
+                                    >
+                                      <LogOut size={14} />
+                                      Sign out
+                                    </button>
+                                  </li>
+                                </>
+                              ) : (
+                                <>
+                                  <DropdownItem
+                                    to="/sign-in"
+                                    active={isLinkActive("/sign-in")}
+                                  >
+                                    Sign in
+                                  </DropdownItem>
+                                  <DropdownItem
+                                    to="/register"
+                                    active={isLinkActive("/register")}
+                                  >
+                                    Register
+                                  </DropdownItem>
+                                  <DropdownItem
+                                    to="/members-library"
+                                    active={isLinkActive("/members-library")}
+                                  >
+                                    Members library
+                                  </DropdownItem>
+                                </>
+                              )}
                             </ul>
                           </div>
                         </div>
@@ -627,15 +660,36 @@ export default function Navbar() {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              {/* Desktop CTA Action Button */}
-              {/* <div className="hidden md:flex items-center">
-                <Link
-                  to="/urgent-help"
-                  className="bg-[#C92525] hover:bg-[#b01f1f] text-white font-bold px-5 py-2 transition-colors text-base shadow-sm inline-flex items-center"
-                >
-                  Urgent Help <span className="ml-2 font-normal">&rarr;</span>
-                </Link>
-              </div> */}
+              {/* Desktop Member Status / Actions */}
+              {isAuthenticated ? (
+                <div className="hidden lg:flex items-center gap-3 pl-3 border-l border-slate-200">
+                  <Link
+                    to="/members-library"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 border border-sky-200 text-[#0093D0] text-xs font-bold transition-colors"
+                    title="Access Members Library"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span className="truncate max-w-[110px]">{member?.name || "Member"}</span>
+                  </Link>
+                  <button
+                    onClick={logout}
+                    className="text-xs text-slate-500 hover:text-rose-600 font-medium transition-colors flex items-center gap-1 cursor-pointer"
+                    title="Sign out"
+                  >
+                    <LogOut size={13} />
+                    Sign out
+                  </button>
+                </div>
+              ) : (
+                <div className="hidden xl:flex items-center gap-2 pl-2">
+                  <Link
+                    to="/sign-in"
+                    className="text-xs font-bold text-[#0093D0] hover:text-[#0e5472] px-3 py-1.5 rounded-md border border-[#0093D0]/30 hover:border-[#0093D0] transition-colors"
+                  >
+                    Sign in
+                  </Link>
+                </div>
+              )}
             </div>
 
             {/* MOBILE MENU TOGGLE BUTTON */}
@@ -970,27 +1024,58 @@ export default function Navbar() {
                         Members
                       </div>
                       <div className="space-y-0.5">
-                        <Link
-                          to="/sign-in"
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={getMobileSubLinkClass("/sign-in")}
-                        >
-                          Sign in
-                        </Link>
-                        <Link
-                          to="/register"
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={getMobileSubLinkClass("/register")}
-                        >
-                          Register
-                        </Link>
-                        <Link
-                          to="/members-library"
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={getMobileSubLinkClass("/members-library")}
-                        >
-                          Members library
-                        </Link>
+                        {isAuthenticated ? (
+                          <>
+                            <div className="px-4 py-2 bg-sky-50 rounded-lg mx-2 mb-2 border border-sky-100">
+                              <p className="text-xs font-bold text-sky-900 flex items-center gap-1.5">
+                                <CheckCircle2 size={13} className="text-[#0093D0]" />
+                                {member?.name}
+                              </p>
+                              <p className="text-[11px] text-sky-700">{member?.email}</p>
+                            </div>
+                            <Link
+                              to="/members-library"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={getMobileSubLinkClass("/members-library")}
+                            >
+                              Members library (Unlocked)
+                            </Link>
+                            <button
+                              onClick={() => {
+                                logout();
+                                setMobileMenuOpen(false);
+                              }}
+                              className="w-full text-left px-4 py-2.5 text-sm text-rose-600 font-medium hover:bg-rose-50 flex items-center gap-2"
+                            >
+                              <LogOut size={14} />
+                              Sign out
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <Link
+                              to="/sign-in"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={getMobileSubLinkClass("/sign-in")}
+                            >
+                              Sign in
+                            </Link>
+                            <Link
+                              to="/register"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={getMobileSubLinkClass("/register")}
+                            >
+                              Register
+                            </Link>
+                            <Link
+                              to="/members-library"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={getMobileSubLinkClass("/members-library")}
+                            >
+                              Members library
+                            </Link>
+                          </>
+                        )}
                       </div>
                     </div>
                     <div>

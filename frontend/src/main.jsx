@@ -8,6 +8,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/store";
+import { MemberAuthProvider } from "./context/MemberAuthContext";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +17,9 @@ createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <RouterProvider router={router} />
+          <MemberAuthProvider>
+            <RouterProvider router={router} />
+          </MemberAuthProvider>
           {/* <ReactQueryDevtools initialIsOpen={false} /> */}
         </PersistGate>
       </Provider>

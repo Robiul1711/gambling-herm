@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, CheckCircle2, ArrowLeft, RefreshCw, AlertCircle } from "lucide-react";
 
+import axios from "axios";
+
 const ForgotPasswordFormSection = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e) => {
+  const getApiUrl = () => {
+    let base = import.meta.env.VITE_API_URL || "http://localhost:5001/api/";
+    if (!base.endsWith("/")) base += "/";
+    return base;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg("");
 
@@ -18,20 +26,27 @@ const ForgotPasswordFormSection = () => {
     }
 
     setIsLoading(true);
-
-    // Simulate API request
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      await axios.post(`${getApiUrl()}member-auth/forgot-password`, { email });
       setIsSubmitted(true);
-    }, 800);
+    } catch (err) {
+      console.error("Forgot password error:", err);
+      setErrorMsg(err?.response?.data?.message || "Failed to process request. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const handleResend = () => {
+  const handleResend = async () => {
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      await axios.post(`${getApiUrl()}member-auth/forgot-password`, { email });
       alert("A new password reset email has been sent to " + email);
-    }, 600);
+    } catch (err) {
+      alert(err?.response?.data?.message || "Failed to resend email.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
