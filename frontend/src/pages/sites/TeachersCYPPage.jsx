@@ -13,15 +13,15 @@ import TeachersCypCta from "@/components/teachersCypComponents/TeachersCypCta";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "cyp-stats", title: "1. Headline Numbers" },
-  { id: "cyp-position", title: "2. Our Position" },
-  { id: "cyp-films", title: "3. Safeguarding Films" },
-  { id: "cyp-misses-point", title: "4. Missing the Point" },
-  { id: "cyp-support-now", title: "5. Support a Young Person" },
-  { id: "cyp-parents", title: "6. Parents & Carers" },
-  { id: "cyp-classroom", title: "7. In the Classroom" },
-  { id: "cyp-policy", title: "8. Policy Asks" },
-  { id: "cyp-resources", title: "9. Resources & Guides" },
+  { id: "cyp-stats", title: "1. Headline numbers" },
+  { id: "cyp-position", title: "2. Our position" },
+  { id: "cyp-films", title: "3. Safeguarding films" },
+  { id: "cyp-misses-point", title: "4. Missing the point" },
+  { id: "cyp-support-now", title: "5. Support a young person" },
+  { id: "cyp-parents", title: "6. Parents & carers" },
+  { id: "cyp-classroom", title: "7. In the classroom" },
+  { id: "cyp-policy", title: "8. Policy asks" },
+  { id: "cyp-resources", title: "9. Resources & guides" },
 ];
 
 export default function TeachersCYPPage() {

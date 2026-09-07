@@ -12,12 +12,12 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "health-position", title: "1. Health Position" },
-  { id: "prevention-paradox", title: "2. Prevention Paradox" },
-  { id: "three-strands", title: "3. Three Strands of Action" },
-  { id: "public-health-offers", title: "4. What GHUK Offers" },
-  { id: "public-health-requests", title: "5. What GHUK Asks" },
-  { id: "audience-nav", title: "6. Across Sectors" },
+  { id: "health-position", title: "1. Health position" },
+  { id: "prevention-paradox", title: "2. Prevention paradox" },
+  { id: "three-strands", title: "3. Three strands of action" },
+  { id: "public-health-offers", title: "4. What GHUK offers" },
+  { id: "public-health-requests", title: "5. What GHUK asks" },
+  { id: "audience-nav", title: "6. Across sectors" },
 ];
 
 const PublicHealthTeams = () => {

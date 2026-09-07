@@ -6,9 +6,9 @@ import JoinResearchNetworkSection from "@/components/researchersComponents/JoinR
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "what-we-bring", title: "1. What We Bring" },
-  { id: "questions-wanted", title: "2. Questions Wanted" },
-  { id: "join-network", title: "3. Join Research Network" },
+  { id: "what-we-bring", title: "1. What we bring" },
+  { id: "questions-wanted", title: "2. Questions wanted" },
+  { id: "join-network", title: "3. Join research network" },
 ];
 
 export default function ResearchersPage() {

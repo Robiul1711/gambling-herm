@@ -10,13 +10,13 @@ import AffectedOthersSupportSection from "@/components/affectedOthersCheckInComp
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "central-idea", title: "1. Central Idea & Scale" },
-  { id: "noticing", title: "2. Things Worth Noticing" },
-  { id: "no-need-to-change", title: "3. You Don't Need Them to Change First" },
-  { id: "money-legal", title: "4. Money & Legal Exposure" },
-  { id: "children-household", title: "5. Children in the Household" },
-  { id: "unsafe", title: "6. If You Feel Unsafe" },
-  { id: "support", title: "7. Support for People Harmed by Someone Else’s Gambling" },
+  { id: "central-idea", title: "1. Central idea & scale" },
+  { id: "noticing", title: "2. Things worth noticing" },
+  { id: "no-need-to-change", title: "3. You don't need them to change first" },
+  { id: "money-legal", title: "4. Money & legal exposure" },
+  { id: "children-household", title: "5. Children in the household" },
+  { id: "unsafe", title: "6. If you feel unsafe" },
+  { id: "support", title: "7. Support for people harmed by someone else’s gambling" },
 ];
 
 export default function AffectedOthersCheckIn() {

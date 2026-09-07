@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "who-we-are", title: "1. Who We Are" },
-  { id: "information-we-collect", title: "2. The Information We Collect" },
-  { id: "why-and-lawful-basis", title: "3. Why We Use Your Data" },
-  { id: "who-we-share-with", title: "4. Who We Share It With" },
-  { id: "how-long-we-keep", title: "5. How Long We Keep It" },
-  { id: "your-rights", title: "6. Your Rights" },
+  { id: "who-we-are", title: "1. Who we are" },
+  { id: "information-we-collect", title: "2. The information we collect" },
+  { id: "why-and-lawful-basis", title: "3. Why we use your data" },
+  { id: "who-we-share-with", title: "4. Who we share it with" },
+  { id: "how-long-we-keep", title: "5. How long we keep it" },
+  { id: "your-rights", title: "6. Your rights" },
   { id: "complaints", title: "7. Complaints" },
-  { id: "changes-to-notice", title: "8. Changes to This Notice" },
+  { id: "changes-to-notice", title: "8. Changes to this notice" },
 ];
 
 export default function Privacy() {

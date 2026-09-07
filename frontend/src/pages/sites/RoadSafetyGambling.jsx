@@ -10,11 +10,11 @@ import RoadSafetyCta from "../../components/roadSafetyGamblingComponents/RoadSaf
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "research-stats", title: "1. Research Stats" },
-  { id: "why-this-matters", title: "2. Why This Matters" },
-  { id: "research-themes", title: "3. What The Research Shows" },
-  { id: "practical-steps", title: "4. Practical Steps for Transport" },
-  { id: "resources", title: "5. Resources & Guides" },
+  { id: "research-stats", title: "1. Research stats" },
+  { id: "why-this-matters", title: "2. Why this matters" },
+  { id: "research-themes", title: "3. What the research shows" },
+  { id: "practical-steps", title: "4. Practical steps for transport" },
+  { id: "resources", title: "5. Resources & guides" },
   { id: "about-ghuk", title: "6. About GHUK" },
 ];
 

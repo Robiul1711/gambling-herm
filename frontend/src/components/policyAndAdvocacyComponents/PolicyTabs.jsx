@@ -2,12 +2,12 @@ import React from"react";
 
 const PolicyTabs = ({ activeSection, onNavigate }) => {
   const tabs = [
-    { id: "what-we-want-changed", label: "1. What We Want Changed" },
-    { id: "what-we-reject", label: "2. What We Reject" },
-    { id: "tobacco-control-parallel", label: "3. Tobacco-Control Parallel" },
-    { id: "regulatory-capture-and-lobbying", label: "4. Regulatory Capture & Lobbying" },
-    { id: "our-funding-and-coi", label: "5. Our Funding & COI" },
-    { id: "current-asks-of-government", label: "6. Current Asks of Government" },
+    { id: "what-we-want-changed", label: "1. What we want changed" },
+    { id: "what-we-reject", label: "2. What we reject" },
+    { id: "tobacco-control-parallel", label: "3. Tobacco-control parallel" },
+    { id: "regulatory-capture-and-lobbying", label: "4. Regulatory capture & lobbying" },
+    { id: "our-funding-and-coi", label: "5. Our funding & COI" },
+    { id: "current-asks-of-government", label: "6. Current asks of government" },
   ];
 
   return (

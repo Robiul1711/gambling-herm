@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "our-approach", title: "1. Our Approach" },
-  { id: "strictly-necessary", title: "2. Strictly Necessary" },
+  { id: "our-approach", title: "1. Our approach" },
+  { id: "strictly-necessary", title: "2. Strictly necessary" },
   { id: "analytics", title: "3. Analytics" },
-  { id: "embedded-content", title: "4. Embedded Content" },
-  { id: "managing-cookies", title: "5. Managing Cookies" },
+  { id: "embedded-content", title: "4. Embedded content" },
+  { id: "managing-cookies", title: "5. Managing cookies" },
 ];
 
 export default function Cookies() {

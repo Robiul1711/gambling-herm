@@ -12,12 +12,12 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "our-position", title: "1. Our Position" },
-  { id: "headline-ratio", title: "2. The Headline Ratio" },
-  { id: "distribution-factors", title: "3. Three Distribution Factors" },
-  { id: "where-harm-concentrates", title: "4. Where Harm Concentrates" },
-  { id: "what-drives-harm", title: "5. What Drives Harm & Blocks Support" },
-  { id: "policy-positions", title: "6. Policy Positions" },
+  { id: "our-position", title: "1. Our position" },
+  { id: "headline-ratio", title: "2. The headline ratio" },
+  { id: "distribution-factors", title: "3. Three distribution factors" },
+  { id: "where-harm-concentrates", title: "4. Where harm concentrates" },
+  { id: "what-drives-harm", title: "5. What drives harm & blocks support" },
+  { id: "policy-positions", title: "6. Policy positions" },
 ];
 
 const InequalityAndGamblingHarm = () => {

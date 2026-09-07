@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const navSections = [
-  { id: "self-exclusion", title: "1. Self-exclusion Schemes" },
-  { id: "bank-blocks", title: "2. Bank Blocks" },
-  { id: "blocking-software", title: "3. Blocking Software" },
+  { id: "self-exclusion", title: "1. Self-exclusion schemes" },
+  { id: "bank-blocks", title: "2. Bank blocks" },
+  { id: "blocking-software", title: "3. Blocking software" },
   { id: "betblocker", title: "4. BetBlocker" },
-  { id: "beyond-software", title: "5. Beyond Software" },
-  { id: "what-blocks-dont-do", title: "6. What Blocks Don't Do" },
-  { id: "more-ways", title: "7. More Ways to Get Help" },
+  { id: "beyond-software", title: "5. Beyond software" },
+  { id: "what-blocks-dont-do", title: "6. What blocks don't do" },
+  { id: "more-ways", title: "7. More ways to get help" },
 ];
 
 export default function BlockingToolsPage() {

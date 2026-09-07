@@ -8,11 +8,11 @@ import ThreeThingsToRemember from "@/components/youngPeopleComponents/ThreeThing
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "someone-at-home", title: "1. If It's About Someone at Home" },
-  { id: "own-gambling", title: "2. If It's About Your Own Gambling" },
-  { id: "telling-adult", title: "3. Telling an Adult at School" },
-  { id: "crisis-help", title: "4. Immediate Support" },
-  { id: "three-things", title: "5. Three Things to Remember" },
+  { id: "someone-at-home", title: "1. If it's about someone at home" },
+  { id: "own-gambling", title: "2. If it's about your own gambling" },
+  { id: "telling-adult", title: "3. Telling an adult at school" },
+  { id: "crisis-help", title: "4. Immediate support" },
+  { id: "three-things", title: "5. Three things to remember" },
 ];
 
 export default function YoungPeoplePage() {

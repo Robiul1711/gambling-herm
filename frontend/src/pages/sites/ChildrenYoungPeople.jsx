@@ -10,11 +10,11 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "cyp-evidence", title: "1. Context & Evidence" },
-  { id: "cyp-films", title: "2. Safeguarding Films" },
-  { id: "cyp-school", title: "3. School Support" },
-  { id: "cyp-systems", title: "4. Systems-Level Response" },
-  { id: "cyp-work-with-us", title: "5. Work With Us" },
+  { id: "cyp-evidence", title: "1. Context & evidence" },
+  { id: "cyp-films", title: "2. Safeguarding films" },
+  { id: "cyp-school", title: "3. School support" },
+  { id: "cyp-systems", title: "4. Systems-level response" },
+  { id: "cyp-work-with-us", title: "5. Work with us" },
 ];
 
 const ChildrenYoungPeople = () => {

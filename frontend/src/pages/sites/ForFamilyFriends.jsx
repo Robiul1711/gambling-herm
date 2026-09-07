@@ -16,14 +16,14 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "what-harm-looks-like", title: "1. What Harm Looks Like" },
-  { id: "victims-not-bystanders", title: "2. Victims Not Bystanders" },
-  { id: "scale-of-issue", title: "3. Scale of Harm" },
-  { id: "signs-to-look-for", title: "4. Signs to Look For" },
-  { id: "how-to-talk", title: "5. How to Talk" },
-  { id: "protect-financially", title: "6. Protect Financially" },
-  { id: "get-support", title: "7. Support for You" },
-  { id: "children-in-house", title: "8. Children in the House" },
+  { id: "what-harm-looks-like", title: "1. What harm looks like" },
+  { id: "victims-not-bystanders", title: "2. Victims not bystanders" },
+  { id: "scale-of-issue", title: "3. Scale of harm" },
+  { id: "signs-to-look-for", title: "4. Signs to look for" },
+  { id: "how-to-talk", title: "5. How to talk" },
+  { id: "protect-financially", title: "6. Protect financially" },
+  { id: "get-support", title: "7. Support for you" },
+  { id: "children-in-house", title: "8. Children in the house" },
   { id: "bereavement", title: "9. Bereavement" },
 ];
 

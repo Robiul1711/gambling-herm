@@ -10,11 +10,11 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "mission", title: "1. Our Mission" },
-  { id: "vision", title: "2. Vision, Values & Aims" },
-  { id: "funding", title: "3. Funding & Conflicts of Interest" },
-  { id: "team", title: "4. Trustees & Team" },
-  { id: "contact", title: "5. Contact & Press" },
+  { id: "mission", title: "1. Our mission" },
+  { id: "vision", title: "2. Vision, values & aims" },
+  { id: "funding", title: "3. Funding & conflicts of interest" },
+  { id: "team", title: "4. Trustees & team" },
+  { id: "contact", title: "5. Contact & press" },
 ];
 
 const AboutPage = () => {

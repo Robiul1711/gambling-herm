@@ -7,10 +7,10 @@ import SelfAssessmentSupportSection from "@/components/selfAssessmentComponents/
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "screen-explanation", title: "1. What a Screen Is" },
-  { id: "score-diagnosis", title: "2. Score vs Diagnosis" },
-  { id: "validated-tools", title: "3. Validated Tools" },
-  { id: "support-routes", title: "4. Where to Take a Score" },
+  { id: "screen-explanation", title: "1. What a screen is" },
+  { id: "score-diagnosis", title: "2. Score vs diagnosis" },
+  { id: "validated-tools", title: "3. Validated tools" },
+  { id: "support-routes", title: "4. Where to take a score" },
 ];
 
 export default function SelfAssessmentPage() {

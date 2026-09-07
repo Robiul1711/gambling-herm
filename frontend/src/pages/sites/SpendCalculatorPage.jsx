@@ -9,10 +9,10 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
   { id: "calculator", title: "1. Calculator" },
-  { id: "comparison", title: "2. What Else It Could Be" },
-  { id: "worth-checking", title: "3. Worth Checking" },
-  { id: "uncaptured-factors", title: "4. What Isn't Captured" },
-  { id: "support-routes", title: "5. Routes to Support" },
+  { id: "comparison", title: "2. What else it could be" },
+  { id: "worth-checking", title: "3. Worth checking" },
+  { id: "uncaptured-factors", title: "4. What isn't captured" },
+  { id: "support-routes", title: "5. Routes to support" },
 ];
 
 export default function SpendCalculatorPage() {

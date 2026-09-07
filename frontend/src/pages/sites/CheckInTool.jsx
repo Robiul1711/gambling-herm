@@ -10,10 +10,10 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "before-you-start", title: "1. Before You Start" },
-  { id: "three-doors", title: "2. Three Doors" },
-  { id: "not-sure", title: "3. If You're Not Sure" },
-  { id: "framework", title: "4. The GHSI Framework" },
+  { id: "before-you-start", title: "1. Before you start" },
+  { id: "three-doors", title: "2. Three doors" },
+  { id: "not-sure", title: "3. If you're not sure" },
+  { id: "framework", title: "4. The GHSI framework" },
 ];
 
 const CheckInTool = () => {

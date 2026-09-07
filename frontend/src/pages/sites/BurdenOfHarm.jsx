@@ -38,7 +38,7 @@ const BurdenOfHarm = () => {
   const navItems = [
     {
       id: "modifiable",
-      label: "1. A Modifiable Risk Factor",
+      label: "1. A modifiable risk factor",
       ref: sectionRefs.modifiable,
     },
     {

@@ -14,14 +14,14 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "campaign-support", title: "1. Campaign Overview" },
-  { id: "the-problem", title: "2. The Problem" },
-  { id: "proposals", title: "3. Campaign Proposals" },
-  { id: "why-changes-matter", title: "4. Why Changes Matter" },
-  { id: "our-position", title: "5. Our Position" },
-  { id: "public-record", title: "6. Public Record Evidence" },
-  { id: "how-this-sits", title: "7. Lived Experience Context" },
-  { id: "support-campaign", title: "8. Support the Campaign" },
+  { id: "campaign-support", title: "1. Campaign overview" },
+  { id: "the-problem", title: "2. The problem" },
+  { id: "proposals", title: "3. Campaign proposals" },
+  { id: "why-changes-matter", title: "4. Why changes matter" },
+  { id: "our-position", title: "5. Our position" },
+  { id: "public-record", title: "6. Public record evidence" },
+  { id: "how-this-sits", title: "7. Lived experience context" },
+  { id: "support-campaign", title: "8. Support the campaign" },
 ];
 
 const MembersOnlyCampaign = () => {

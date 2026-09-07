@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "our-commitment", title: "1. Our Commitment" },
-  { id: "what-we-do", title: "2. What We Do" },
-  { id: "where-we-fall-short", title: "3. Where We Fall Short" },
-  { id: "report-problem", title: "4. Report a Problem" },
+  { id: "our-commitment", title: "1. Our commitment" },
+  { id: "what-we-do", title: "2. What we do" },
+  { id: "where-we-fall-short", title: "3. Where we fall short" },
+  { id: "report-problem", title: "4. Report a problem" },
 ];
 
 export default function Accessibility() {
