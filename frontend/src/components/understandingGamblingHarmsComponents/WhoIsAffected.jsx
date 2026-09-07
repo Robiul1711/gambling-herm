@@ -70,7 +70,7 @@ const WhoIsAffected = () => {
 
         {/* Informational Subtext Link */}
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
-          For the full picture, including affected others, children, and how UK
+          For the full picture, including people harmed by someone else’s gambling, children, and how UK
           gambling harm compares to other public-health risks, see{" "}
           <Link
             to="/burden-of-harm"

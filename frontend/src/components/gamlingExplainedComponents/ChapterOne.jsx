@@ -39,10 +39,10 @@ const ChapterOne = () => {
         </p>
       </div>
 
-      {/* Sub-block: Burden on affected others */}
+      {/* Sub-block: Burden on people harmed by someone else’s gambling */}
       <div className="space-y-4">
         <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-          Burden on affected others
+          Burden on people harmed by someone else’s gambling
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           Among family members of people with disordered gambling, the impact
@@ -118,11 +118,11 @@ const ChapterOne = () => {
             <strong className="font-bold text-gray-900">0.29 to 0.37</strong>
           </li>
           <li>
-            Affected others at gambling-disorder harms:{" "}
+            People harmed by someone else’s gambling at gambling-disorder harms:{" "}
             <strong className="font-bold text-gray-900">0.36</strong>
           </li>
           <li>
-            Affected others at moderate-risk harms:{" "}
+            People harmed by someone else’s gambling at moderate-risk harms:{" "}
             <strong className="font-bold text-gray-900">0.33</strong>
           </li>
           <li>
@@ -146,9 +146,9 @@ const ChapterOne = () => {
           (Moayeri, 2020) to GSGB 2024 prevalence, GHUK's current modelling puts
           the UK's annual non-fatal health loss from gambling at{" "}
           <strong className="font-bold text-gray-900">
-            approximately 625,000 QALYs including affected others
+            approximately 625,000 QALYs including people harmed by someone else’s gambling
           </strong>
-          , valuing affected others at parity with the person gambling, the
+          , valuing people harmed by someone else’s gambling at parity with the person gambling, the
           basis the direct measurements support (Browne et al., 2017). People
           who gamble account for about 297,000 QALYs alone, which by itself
           exceeds the years-lived-with-disability burdens from unhealthy diet
@@ -215,7 +215,7 @@ const ChapterOne = () => {
         </p>
         <p className="text-sm md:text-base text-gray-200 leading-relaxed">
           Dugher frames gambling harm by the most severe band (PGSI 8+) in a
-          single 12-month window. The framing omits affected others, people who
+          single 12-month window. The framing omits people harmed by someone else’s gambling, people who
           previously gambled, and people experiencing sub-clinical harm. The
           0.5% figure is also a known under-estimate against the same period's
           GSGB data.

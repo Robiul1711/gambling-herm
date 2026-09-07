@@ -16,7 +16,7 @@ const sections = [
   { id: "money-legal", title: "4. Money & Legal Exposure" },
   { id: "children-household", title: "5. Children in the Household" },
   { id: "unsafe", title: "6. If You Feel Unsafe" },
-  { id: "support", title: "7. Support for Affected Others" },
+  { id: "support", title: "7. Support for People Harmed by Someone Else’s Gambling" },
 ];
 
 export default function AffectedOthersCheckIn() {

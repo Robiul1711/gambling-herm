@@ -46,10 +46,10 @@ const ChildrenYoungPeople = () => {
           </div>
         </div>
 
-        {/* Sub-section 2: As affected others */}
+        {/* Sub-section 2: Harmed by someone else’s gambling */}
         <div className="my-10 space-y-4">
           <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-            As affected others
+            Harmed by someone else's gambling
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">

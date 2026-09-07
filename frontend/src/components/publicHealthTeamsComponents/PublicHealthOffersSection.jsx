@@ -9,7 +9,7 @@ const PublicHealthOffersSection = () => {
       content: (
         <>
           We can supply unpublished GHUK modelling of local-authority-level harm
-          prevalence (adults and CYP), affected-others estimation, and
+          prevalence (adults and CYP), estimation for people harmed by someone else’s gambling, and
           product-risk profile. Useful for JSNAs, gambling-harm-needs
           assessments, and ICB strategic planning.
         </>

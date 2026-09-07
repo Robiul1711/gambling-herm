@@ -23,7 +23,7 @@ const ThreeStrandsSection = () => {
       strandNumber: "Strand 3",
       title: "Maximising Capacity",
       description:
-        "Supporting the sustainability and independence of the gambling-harm response: campaigning for a proportionate statutory levy, ringfenced affected-others and CYP funding, NHS coding, and routes that do not depend on gambling-industry money.",
+        "Supporting the sustainability and independence of the gambling-harm response: campaigning for a proportionate statutory levy, ringfenced funding for people harmed by someone else’s gambling and CYP, NHS coding, and routes that do not depend on gambling-industry money.",
       isHighlighted: false,
     },
   ];

@@ -102,8 +102,7 @@ const NoteOnLanguage = () => {
           <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
             UK gambling-harm prevalence should be measured and reported across
             the full PGSI distribution (not summarised by an 8+ cut-off) and
-            should be supplemented by direct measurement of affected-others
-            harm, which the PGSI does not capture at all. The headline number
+            should be supplemented by direct measurement of harm among people harmed by someone else’s gambling, which the PGSI does not capture at all. The headline number
             used in policy debate should reflect the full distribution of harm.
           </p>
         </div>

@@ -108,7 +108,7 @@ export default function PeerSupportMeetings() {
         {/* Section 2: Gam-Anon */}
         <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 tracking-tight">
-            Gam-Anon: for affected others
+            Gam-Anon: for people harmed by someone else’s gambling
           </h3>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
             If you're affected by someone else's gambling, Gam-Anon is for you.

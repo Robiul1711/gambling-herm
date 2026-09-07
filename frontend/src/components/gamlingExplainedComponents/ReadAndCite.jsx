@@ -25,7 +25,7 @@ const ReadAndCite = () => {
               <em className="italic">
                 Gambling Explained 2021. Gambling Harm UK (then Gambling
                 Education Network). Independently written and funded by
-                'Affected Other' researchers.
+                researchers harmed by someone else’s gambling.
               </em>
             </p>
           </div>
@@ -48,7 +48,7 @@ const ReadAndCite = () => {
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
               The revised edition incorporates the NatCen Holistic Framework
               (2025), the GambleAware archive, the bank-transaction mortality
-              work, and the past five years of affected-others research.
+              work, and the past five years of research on people harmed by someone else’s gambling.
               Expected publication late 2026 with associated parliamentary
               submission.
             </p>

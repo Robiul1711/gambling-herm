@@ -62,7 +62,7 @@ const ChapterFive = () => {
           <strong className="font-bold text-gray-900">40 to 60 times smaller</strong> than even the
           conservative floor of the modelled UK health-economic burden, and 150 to 220 times
           smaller than the central estimate. We support distribution through an arms-length body,
-          ringfenced for prevention, treatment, aftercare, affected-others services and
+          ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and
           independent research (see our{" "}
           <Link
             to="/policy-and-advocacy"

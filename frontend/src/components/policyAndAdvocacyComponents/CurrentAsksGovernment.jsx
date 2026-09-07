@@ -5,7 +5,7 @@ const CurrentAsksGovernment = () => {
     {
       title: "Implement the statutory levy at the rate the evidence justifies.",
       description:
-        "Specifically: distribute through an arms-length body with explicit ringfencing for affected-others services, bereavement support, aftercare, and independent research.",
+        "Specifically: distribute through an arms-length body with explicit ringfencing for services for people harmed by someone else’s gambling, bereavement support, aftercare, and independent research.",
     },
     {
       title:

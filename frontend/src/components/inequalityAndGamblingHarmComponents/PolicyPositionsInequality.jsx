@@ -28,7 +28,7 @@ const PolicyPositionsInequality = () => {
                   (1) Statutory levy distribution should be needs-weighted,
                 </strong>{" "}
                 not flat, ringfenced funding for the most-affected and
-                most-underserved groups (CYP affected-others, ethnic minority
+                most-underserved groups (CYP harmed by someone else's gambling, ethnic minority
                 communities, neurodivergent populations, bereaved families).
               </p>
 

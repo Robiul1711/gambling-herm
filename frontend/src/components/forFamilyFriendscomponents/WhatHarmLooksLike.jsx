@@ -35,7 +35,7 @@ export default function WhatHarmLooksLike() {
     headerData?.title || "What gambling harm looks like inside a home.";
   const sectionDescription =
     headerData?.description ||
-    "Three short films, each made with affected others. Used in our medical-school teaching, safeguarding training and public-health work. Watch them in any order.";
+    "Three short films, each made with people harmed by someone else’s gambling. Used in our medical-school teaching, safeguarding training and public-health work. Watch them in any order.";
 
   const films = [
     {

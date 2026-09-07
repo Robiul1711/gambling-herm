@@ -29,12 +29,12 @@ const ClinicalSituationsSection = () => {
     },
     {
       id: 3,
-      title: "Affected-other presentation",
+      title: "Person harmed by someone else’s gambling presentation",
       content: (
         <>
           A patient presenting with new anxiety, sleep disturbance, depression
           or family-conflict stress related to a partner, parent, sibling or
-          child may be an affected other. They are entitled to specialist
+          child may be harmed by someone else's gambling. They are entitled to specialist
           support in their own right, today, without waiting for the person who
           gambles to seek help.
         </>

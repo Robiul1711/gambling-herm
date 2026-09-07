@@ -10,7 +10,7 @@ const statsData = [
     source: "Source: Gambling Commission, Young People & Gambling 2025.",
   },
   {
-    tag: "AS AFFECTED OTHERS",
+    tag: "HARMED BY SOMEONE ELSE'S GAMBLING",
     value: "912,805",
     description:
       "children in England, on the OHID central estimate, live with an adult whose gambling may need treatment or support (OHID, 2023). GambleAware household modelling suggests a wider affected group still; we cite that only as an upper bound.",

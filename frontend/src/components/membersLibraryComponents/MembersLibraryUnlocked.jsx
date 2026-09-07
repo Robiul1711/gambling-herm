@@ -137,16 +137,16 @@ export default function MembersLibraryUnlocked() {
             <div className="flex items-center gap-2 mb-2">
               <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5">
                 <FiCheckCircle size={12} className="text-emerald-400" />
-                Verified Professional Member
+                {member?.name ? "Verified Professional Member" : "Open Access Library"}
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Welcome back, {member?.name || "Professional Member"}
+              {member?.name ? `Welcome back, ${member.name}` : "Professional Resources & Toolkits"}
             </h2>
             <p className="text-sky-100/80 text-sm sm:text-base mt-1 max-w-2xl font-normal leading-relaxed">
               {member?.organisation
                 ? `${member.organisation} · ${member.role || member.sector}`
-                : "Your professional membership is active. You have full access to all GHUK materials, training modules, and evidence models below."}
+                : "Explore our evidence-backed toolkits, MECC training materials, clinical enquiry guides, and local authority burden data models."}
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function MembersLibraryUnlocked() {
                 {memberResources.length}
               </span>
               <span className="text-[11px] uppercase tracking-wider text-white/75 font-semibold">
-                Unlocked Items
+                Resources
               </span>
             </div>
           </div>

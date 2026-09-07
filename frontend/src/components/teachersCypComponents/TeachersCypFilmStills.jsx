@@ -33,14 +33,14 @@ const TeachersCypFilmStills = () => {
 
         {/* Narrative Paragraph with Link */}
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 font-normal">
-          Three short films, each made with affected others, illustrate what
+          Three short films, each made with people harmed by someone else’s gambling, illustrate what
           gambling harm looks like for the children in a household. Watch them
           all on the{" "}
           <Link
             to="/get-help/family-friends"
             className="underline text-gray-900 hover:text-[#0092D0] font-semibold transition-colors"
           >
-            Affected others page
+            Family &amp; friends page
           </Link>
           .
         </p>

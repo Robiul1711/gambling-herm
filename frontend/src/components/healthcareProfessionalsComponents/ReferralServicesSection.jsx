@@ -75,17 +75,17 @@ const ReferralServicesSection = () => {
           </div>
         </div>
 
-        {/* Column 2: For the affected other */}
+        {/* Column 2: For people harmed by someone else’s gambling */}
         <div className=" border border-gray-200/90 p-6 md:p-8 bg-white shadow-xs flex flex-col">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 pb-2 tracking-tight">
-            For the affected other
+            For people harmed by someone else’s gambling
           </h3>
 
           <div className="space-y-5">
             {/* Item 1 */}
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed pb-5 border-b border-dashed border-gray-200 font-normal">
               <strong className="text-gray-900 font-bold mr-1.5">
-                GamCare affected-others service,
+                GamCare service for people harmed by someone else’s gambling,
               </strong>{" "}
               one-to-one counselling, no waiting list.
             </p>
@@ -103,7 +103,7 @@ const ReferralServicesSection = () => {
               <strong className="text-gray-900 font-bold mr-1.5">
                 NHS Talking Therapies,
               </strong>{" "}
-              for the affected-other's own anxiety/depression (self-refer).
+              for the person's own anxiety/depression (self-refer).
             </p>
 
             {/* Item 4 */}

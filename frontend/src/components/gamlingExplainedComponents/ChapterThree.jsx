@@ -58,10 +58,10 @@ const ChapterThree = () => {
         </ul>
       </div>
 
-      {/* Sub-block: Children as affected others */}
+      {/* Sub-block: Children harmed by someone else’s gambling */}
       <div className="space-y-3">
         <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-          Children as affected others
+          Children harmed by someone else's gambling
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           OHID modelling estimates that{" "}

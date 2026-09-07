@@ -108,10 +108,10 @@ const GamblingLayout = () => {
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
               It was written by people with lived experience as{" "}
               <strong className="font-bold text-gray-900">
-                affected others
+                people harmed by someone else’s gambling
               </strong>
               , family members and partners of people who experienced severe
-              gambling harm. The affected-other authorship is intentional. The
+              gambling harm. The authorship from people harmed by someone else's gambling is intentional. The
               perspective most likely to see industry tactics clearly is the
               perspective that watched them play out from outside the moment of
               gambling.

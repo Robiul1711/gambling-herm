@@ -39,7 +39,7 @@ const ChapterTen = () => {
             been central in surfacing this.
           </li>
           <li className="leading-relaxed">
-            Banks et al. found <strong className="font-bold text-gray-900">7% of affected others</strong>{" "}
+            Banks et al. found <strong className="font-bold text-gray-900">7% of people harmed by someone else’s gambling</strong>{" "}
             engaged in petty theft or dishonesty as a consequence of their family member's gambling.
           </li>
         </ul>

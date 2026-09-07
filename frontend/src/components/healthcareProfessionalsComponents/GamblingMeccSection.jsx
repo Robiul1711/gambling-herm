@@ -7,7 +7,7 @@ const GamblingMeccSection = () => {
       label: "Scale",
       content: (
         <>
-          Approximately <span className="font-bold text-gray-800">1 in 5 UK</span> adults experienced gambling-related harm in the past year when both individuals who gamble and affected others are included. The prevalence-paradox means most of the population-level harm sits in the moderate-risk band where targeted treatment alone cannot address it.
+          Approximately <span className="font-bold text-gray-800">1 in 5 UK</span> adults experienced gambling-related harm in the past year when both individuals who gamble and people harmed by someone else’s gambling are included. The prevalence-paradox means most of the population-level harm sits in the moderate-risk band where targeted treatment alone cannot address it.
         </>
       ),
     },

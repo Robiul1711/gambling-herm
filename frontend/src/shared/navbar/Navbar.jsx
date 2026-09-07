@@ -114,7 +114,6 @@ export default function Navbar() {
     "/professionals/researchers",
     "/sign-in",
     "/register",
-    "/members-library",
   ].includes(pathname);
 
   const isHelpActive = [
@@ -443,10 +442,10 @@ export default function Navbar() {
                                     </p>
                                   </li>
                                   <DropdownItem
-                                    to="/members-library"
-                                    active={isLinkActive("/members-library")}
+                                    to="/sign-in"
+                                    active={isLinkActive("/sign-in")}
                                   >
-                                    Members library (Unlocked)
+                                    Member Profile
                                   </DropdownItem>
                                   <li>
                                     <button
@@ -471,12 +470,6 @@ export default function Navbar() {
                                     active={isLinkActive("/register")}
                                   >
                                     Register
-                                  </DropdownItem>
-                                  <DropdownItem
-                                    to="/members-library"
-                                    active={isLinkActive("/members-library")}
-                                  >
-                                    Members library
                                   </DropdownItem>
                                 </>
                               )}
@@ -618,7 +611,7 @@ export default function Navbar() {
                                   "/get-help/affected-others-check-in",
                                 )}
                               >
-                                Affected-others check-in
+                                People harmed by someone else’s gambling check-in
                               </DropdownItem>
                             </ul>
                           </div>
@@ -664,9 +657,9 @@ export default function Navbar() {
               {isAuthenticated ? (
                 <div className="hidden lg:flex items-center gap-3 pl-3 border-l border-slate-200">
                   <Link
-                    to="/members-library"
+                    to="/sign-in"
                     className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 border border-sky-200 text-[#0093D0] text-xs font-bold transition-colors"
-                    title="Access Members Library"
+                    title="View Account"
                   >
                     <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                     <span className="truncate max-w-[110px]">{member?.name || "Member"}</span>
@@ -1034,11 +1027,11 @@ export default function Navbar() {
                               <p className="text-[11px] text-sky-700">{member?.email}</p>
                             </div>
                             <Link
-                              to="/members-library"
+                              to="/sign-in"
                               onClick={() => setMobileMenuOpen(false)}
-                              className={getMobileSubLinkClass("/members-library")}
+                              className={getMobileSubLinkClass("/sign-in")}
                             >
-                              Members library (Unlocked)
+                              Member Profile
                             </Link>
                             <button
                               onClick={() => {
@@ -1066,13 +1059,6 @@ export default function Navbar() {
                               className={getMobileSubLinkClass("/register")}
                             >
                               Register
-                            </Link>
-                            <Link
-                              to="/members-library"
-                              onClick={() => setMobileMenuOpen(false)}
-                              className={getMobileSubLinkClass("/members-library")}
-                            >
-                              Members library
                             </Link>
                           </>
                         )}
@@ -1230,7 +1216,7 @@ export default function Navbar() {
                             "/get-help/affected-others-check-in",
                           )}
                         >
-                          Affected-others check-in
+                          People harmed by someone else’s gambling check-in
                         </Link>
                       </div>
                     </div>

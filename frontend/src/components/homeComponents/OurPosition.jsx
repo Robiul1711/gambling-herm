@@ -37,7 +37,7 @@ export default function WhoGamblingHarms() {
           comparable in scale to the number harmed by their own gambling
           (Gambling Commission,{" "}
           <em className="italic">
-            Insights into affected others from the GSGB
+            Insights into people harmed by someone else’s gambling from the GSGB
           </em>
           , 2026, n=19,714).
         </>

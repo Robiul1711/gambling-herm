@@ -19,7 +19,7 @@ const CostExceedsRevenue = () => {
           </p>
 
           <p>
-            The Office for Health Improvement and Disparities estimates the directly-attributable social cost for England at <strong className="font-bold text-gray-900">£1.05–1.77 billion a year</strong> (OHID, 2023, at 2021/22 prices), roughly £24 to £40 per adult. OHID itself describes the estimate as conservative, because it excludes affected others, children, relationship harms and most intangible quality-of-life losses. Our own health-loss valuation, which includes the burden on affected others and applies NICE thresholds, puts the health burden alone at <strong className="font-bold text-gray-900">£15.6–21.9 billion a year</strong>.
+            The Office for Health Improvement and Disparities estimates the directly-attributable social cost for England at <strong className="font-bold text-gray-900">£1.05–1.77 billion a year</strong> (OHID, 2023, at 2021/22 prices), roughly £24 to £40 per adult. OHID itself describes the estimate as conservative, because it excludes people harmed by someone else’s gambling, children, relationship harms and most intangible quality-of-life losses. Our own health-loss valuation, which includes the burden on people harmed by someone else’s gambling and applies NICE thresholds, puts the health burden alone at <strong className="font-bold text-gray-900">£15.6–21.9 billion a year</strong>.
           </p>
         </div>
 
@@ -30,11 +30,11 @@ const CostExceedsRevenue = () => {
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            The UK social-cost estimates are fiscal-cost estimates. They count tangible costs falling on government and public services. Gambling-related suicide is included, monetised as a mortality cost. What they explicitly exclude is the person's own financial losses, emotional and psychological harm, relationship and family breakdown, and harm to affected others.
+            The UK social-cost estimates are fiscal-cost estimates. They count tangible costs falling on government and public services. Gambling-related suicide is included, monetised as a mortality cost. What they explicitly exclude is the person's own financial losses, emotional and psychological harm, relationship and family breakdown, and harm to people harmed by someone else’s gambling.
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            The Victorian social-cost studies apply a full public-health costing method instead, covering tangible and intangible harm, with affected others treated as a co-equal population. Mapping the Victorian cost categories against what the three UK techniques actually count shows the UK method <strong className="font-bold text-gray-900">captures only around a tenth of the full social cost, partially captures a further tenth, and omits roughly 80%</strong>. The omissions are not marginal: they include the four largest items.
+            The Victorian social-cost studies apply a full public-health costing method instead, covering tangible and intangible harm, with people harmed by someone else’s gambling treated as a co-equal population. Mapping the Victorian cost categories against what the three UK techniques actually count shows the UK method <strong className="font-bold text-gray-900">captures only around a tenth of the full social cost, partially captures a further tenth, and omits roughly 80%</strong>. The omissions are not marginal: they include the four largest items.
           </p>
 
           {/* Item Breakdown Rows */}
@@ -65,7 +65,7 @@ const CostExceedsRevenue = () => {
                 OMITTED
               </div>
               <div className="md:col-span-9 text-sm md:text-base text-gray-700 leading-relaxed">
-                <strong className="font-bold text-gray-900">Quality-of-life loss to affected others, A$1.6bn.</strong> Third largest, also absent.
+                <strong className="font-bold text-gray-900">Quality-of-life loss to people harmed by someone else’s gambling, A$1.6bn.</strong> Third largest, also absent.
               </div>
             </div>
 

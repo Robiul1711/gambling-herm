@@ -78,7 +78,7 @@ const PopulationBurden = () => {
 
           <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
             On the non-fatal measure, the health loss from gambling including
-            affected others and children exceeds tobacco, unhealthy diet and
+            people harmed by someone else’s gambling and children exceeds tobacco, unhealthy diet and
             alcohol:
           </p>
 
@@ -141,14 +141,12 @@ const PopulationBurden = () => {
           <p className="text-xs md:text-base text-gray-300 leading-relaxed mt-6 mb-10">
             Annual non-fatal health loss, UK. Gambling figure is GHUK modelling
             (Moayeri 2020 utilities applied to GSGB 2024 prevalence,
-            de-duplicated), expressed in QALYs, valuing the burden on affected
-            others at parity with the person gambling: the direct
-            disability-weight measurements put per-person affected-other burden
+            de-duplicated), expressed in QALYs, valuing the burden on people harmed by someone else’s gambling at parity with the person gambling: the direct
+            disability-weight measurements put per-person burden for people harmed by someone else’s gambling
             at or above parity at moderate levels of harm (Browne et al., 2017).
             Comparators are Years Lived with Disability from the Global Burden
             of Disease 2023 (IHME, GBD Compare, United Kingdom, all ages, both
-            sexes, accessed 15 July 2026). Two caveats. First, counting affected
-            others is consistent with the tobacco comparator, whose burden
+            sexes, accessed 15 July 2026). Two caveats. First, counting people harmed by someone else’s gambling is consistent with the tobacco comparator, whose burden
             already includes harm to non-smokers through second-hand smoke; the
             alcohol and diet estimates do not capture harm to others, so the
             strict like-for-like comparator against those two is the
@@ -324,7 +322,7 @@ const PopulationBurden = () => {
 
           <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
             An interactive calculator covering every local authority in Great
-            Britain: adults and affected others in harm, years of health and
+            Britain: adults and people harmed by someone else’s gambling in harm, years of health and
             wellbeing lost, and cost estimates for your area, with every
             assumption adjustable, conservative and legacy-survey scenarios
             built in, and a fully published methodology.

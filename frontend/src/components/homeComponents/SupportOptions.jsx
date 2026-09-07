@@ -15,7 +15,7 @@ export default function SupportOptions() {
     {
       label: "WHAT SUCCESS LOOKS LIKE",
       description:
-        "Fewer people harmed in the first place, affected others recognised and supported, and gambling treated like the commercial determinant of health it is, alongside tobacco and alcohol.",
+        "Fewer people harmed in the first place, people harmed by someone else’s gambling recognised and supported, and gambling treated like the commercial determinant of health it is, alongside tobacco and alcohol.",
     },
   ];
 

@@ -6,7 +6,7 @@ const changesList = [
     number: 1,
     title: "A Statutory Levy Proportionate To The Burden Of Harm",
     description:
-      "The current £100m UK statutory levy is, on conservative GHUK QALY modelling, between 40 and 60 times smaller than the annual health-economic burden of gambling harm. The levy should be scaled to harm using QALY/DALY valuations, not set by political negotiation with the industry. Distribution should be governed independently of industry influence, with funding ringfenced for prevention, treatment, aftercare, affected-others services and independent research.",
+      "The current £100m UK statutory levy is, on conservative GHUK QALY modelling, between 40 and 60 times smaller than the annual health-economic burden of gambling harm. The levy should be scaled to harm using QALY/DALY valuations, not set by political negotiation with the industry. Distribution should be governed independently of industry influence, with funding ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and independent research.",
   },
   {
     number: 2,
@@ -58,19 +58,19 @@ const changesList = [
     number: 7,
     title: "NHS-led specialist treatment as the default",
     description:
-      "Specialist treatment delivered by the NHS, not by industry-funded charities. Expansion of the NHS gambling-clinic network, with explicit aftercare and affected-others funding. Treatment as a right, not a privilege of geography or referral.",
+      "Specialist treatment delivered by the NHS, not by industry-funded charities. Expansion of the NHS gambling-clinic network, with explicit aftercare and funding for people harmed by someone else’s gambling. Treatment as a right, not a privilege of geography or referral.",
   },
   {
     number: 8,
     title: "Funded aftercare and legacy-harms provision",
     description:
-      "Recovery from gambling harm is a phase, not a moment. UK provision is concentrated at acute treatment and almost absent at aftercare. The statutory levy should ringfence aftercare alongside treatment, with explicit provision for affected others and bereaved families.",
+      "Recovery from gambling harm is a phase, not a moment. UK provision is concentrated at acute treatment and almost absent at aftercare. The statutory levy should ringfence aftercare alongside treatment, with explicit provision for people harmed by someone else’s gambling and bereaved families.",
   },
   {
     number: 9,
-    title: "Statutory recognition of affected others, including children",
+    title: "Statutory recognition of people harmed by someone else’s gambling, including children",
     description:
-      "Affected others (partners, parents, children, siblings) as a distinct population with rights to support, not as adjuncts to the person who gambles. Specific statutory recognition and funded services for children of people experiencing gambling harm.",
+      "People harmed by someone else’s gambling (partners, parents, children, siblings) as a distinct population with rights to support, not as adjuncts to the person who gambles. Specific statutory recognition and funded services for children of people experiencing gambling harm.",
   },
   {
     number: 10,
@@ -86,7 +86,7 @@ const changesList = [
       <>
         Headline UK gambling-harm prevalence should be measured across the full
         PGSI distribution (not summarised by an 8+ cut-off) and should be
-        supplemented by direct measurement of affected-others harm. The headline
+        supplemented by direct measurement of harm among people harmed by someone else’s gambling. The headline
         figure used in policy debate should reflect the full distribution.
         <br />
         <br />
@@ -110,7 +110,7 @@ const changesList = [
     number: 13,
     title: "Lived-experience leadership in service design and policy",
     description:
-      "People with lived experience of gambling harm (including affected others and those bereaved) should sit at the centre of policy design and service design, not at its edges. We back the lived-experience networks doing this work and integrate it across our own practice.",
+      "People with lived experience of gambling harm (including people harmed by someone else’s gambling and those bereaved) should sit at the centre of policy design and service design, not at its edges. We back the lived-experience networks doing this work and integrate it across our own practice.",
   },
 ];
 

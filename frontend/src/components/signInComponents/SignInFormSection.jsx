@@ -30,11 +30,7 @@ const SignInFormSection = () => {
     try {
       const res = await login(email, password);
       if (res?.success) {
-        setSuccessMessage("Signed in successfully! Redirecting...");
-        const target = location.state?.from?.pathname || "/members-library";
-        setTimeout(() => {
-          navigate(target, { replace: true });
-        }, 800);
+        setSuccessMessage("Signed in successfully!");
       }
     } catch (err) {
       console.error("Sign in error:", err);
@@ -51,24 +47,44 @@ const SignInFormSection = () => {
     }
   };
 
+  const { member, logout } = useMemberAuth();
+
   return (
     <section className="py-12 md:py-20 bg-white px-4 md:px-8 text-gray-800">
       <div className="max-w-2xl mx-auto">
-        {/* Already Logged In Notice */}
+        {/* Already Logged In Notice & Profile Card */}
         {isAuthenticated && (
-          <div className="mb-8 p-5 bg-sky-50 border border-sky-200 text-sky-900 rounded-xl shadow-xs flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <CheckCircle2 className="w-5 h-5 text-[#0093D0] shrink-0" />
-              <span className="text-sm font-medium">
-                You are currently signed in as an approved member.
-              </span>
+          <div className="mb-8 p-6 bg-sky-50/80 border border-sky-200 text-sky-900 rounded-2xl shadow-xs space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Active Member Session</span>
+              </div>
+              <button
+                onClick={logout}
+                className="text-xs font-semibold text-rose-600 hover:text-rose-800 underline cursor-pointer"
+              >
+                Sign out
+              </button>
             </div>
-            <Link
-              to="/members-library"
-              className="bg-[#0093D0] text-white font-semibold text-xs px-4 py-2 rounded-md hover:bg-[#0e5472] transition-colors"
-            >
-              Go to Library →
-            </Link>
+
+            <div className="space-y-1">
+              <h3 className="text-lg font-bold text-slate-900">
+                {member?.name || "Professional Member"}
+              </h3>
+              <p className="text-xs text-slate-600">
+                {member?.email}
+              </p>
+              {member?.organisation && (
+                <p className="text-xs text-slate-500">
+                  {member.organisation} {member.role ? `· ${member.role}` : ""}
+                </p>
+              )}
+            </div>
+
+            <p className="text-xs text-slate-600 bg-white/70 p-3 rounded-xl border border-sky-100">
+              You are currently signed in with verified professional access.
+            </p>
           </div>
         )}
 

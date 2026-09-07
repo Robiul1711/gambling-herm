@@ -14,7 +14,7 @@ const reductionPoints = [
     number: 2,
     title: "Centre lived experience, not as testimony, as leadership",
     description:
-      "People with lived experience of gambling harm, including affected others and the bereaved, should sit at the centre of policy and service design. Not as case studies, as the people defining the response. This is one of the most reliably stigma-reducing things research finds.",
+      "People with lived experience of gambling harm, including people harmed by someone else’s gambling and the bereaved, should sit at the centre of policy and service design. Not as case studies, as the people defining the response. This is one of the most reliably stigma-reducing things research finds.",
   },
   {
     number: 3,

@@ -92,11 +92,11 @@ const tacticCards = [
     subQuote: "The consumer-sovereignty defence.",
     body: (
       <>
-        The "freedom to gamble" argument is confounded by affected-others harm.
+        The "freedom to gamble" argument is confounded by harm to people harmed by someone else’s gambling.
         Children, partners, parents, siblings and creditors do not consent to
         the gambling that harms them. Once that is recognised, the
         consumer-choice frame collapses. This is the central insight in{" "}
-        <em className="italic">Gambling Explained</em>: harms in affected others
+        <em className="italic">Gambling Explained</em>: harms in people harmed by someone else’s gambling
         challenge the industry in two ways. They reduce the appeal of gambling
         and contribute to its social unacceptability. And they confound the
         "freedom to gamble" argument.

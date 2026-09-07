@@ -6,7 +6,7 @@ const PublicHealthRequestsSection = () => {
       id: 1,
       title: "Add gambling to JSNA and IIA frameworks as standard",
       content:
-        "Local-authority JSNAs and ICB Integrated Impact Assessments should explicitly include gambling-related harm as a population-health risk factor, with local prevalence, affected-others estimation, and product-risk profiling.",
+        "Local-authority JSNAs and ICB Integrated Impact Assessments should explicitly include gambling-related harm as a population-health risk factor, with local prevalence, estimation for people harmed by someone else’s gambling, and product-risk profiling.",
     },
     {
       id: 2,

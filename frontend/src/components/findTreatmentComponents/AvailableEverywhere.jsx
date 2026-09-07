@@ -5,7 +5,7 @@ const hotlines = [
     title: "National Gambling Helpline",
     number: "0808 8020 133",
     description:
-      "Free, confidential, 24/7. Run by GamCare. Supports people who gamble and affected others. Web chat at gamcare.org.uk.",
+      "Free, confidential, 24/7. Run by GamCare. Supports people who gamble and people harmed by someone else’s gambling. Web chat at gamcare.org.uk.",
   },
   {
     title: "Samaritans",

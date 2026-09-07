@@ -12,9 +12,9 @@ const services = [
 "NHS clinics, GamCare, and dedicated CYP services. YGAM runs prevention-led programmes; Big Deal (GamCare) is specifically for young people. NHS Talking Therapies routes are also available for under-25s.",
  },
  {
- title:"Children of affected others",
+ title:"Children of people harmed by someone else’s gambling",
  description:
-"GamCare's affected-others service supports children, where appropriate, alongside their parents. Young Minds (parents helpline: 0808 802 5544) and NSPCC (0808 800 5000) can also help where the household situation is complex.",
+"GamCare's service for people harmed by someone else’s gambling supports children, where appropriate, alongside their parents. Young Minds (parents helpline: 0808 802 5544) and NSPCC (0808 800 5000) can also help where the household situation is complex.",
  },
  {
  title:"Veterans",

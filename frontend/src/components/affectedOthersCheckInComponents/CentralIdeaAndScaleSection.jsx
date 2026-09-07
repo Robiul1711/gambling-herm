@@ -46,7 +46,7 @@ const CentralIdeaAndScaleSection = () => {
             , reported experiencing harm from someone else's gambling in the
             past year (Gambling Commission,{" "}
             <em className="italic">
-              Insights into affected others from the Gambling Survey for Great
+              Insights into people harmed by someone else’s gambling from the Gambling Survey for Great
               Britain, 2026
             </em>
             ). Among them,{" "}

@@ -25,7 +25,7 @@ const WholeSystemResponse = () => {
     },
     {
       title: "Treatment",
-      text: "NHS-led specialist provision, with funded routes for affected others and bereaved families, not delivered through industry-funded charities. Proactive outreach between referral and first appointment.",
+      text: "NHS-led specialist provision, with funded routes for people harmed by someone else’s gambling and bereaved families, not delivered through industry-funded charities. Proactive outreach between referral and first appointment.",
     },
     {
       title: "Identification",

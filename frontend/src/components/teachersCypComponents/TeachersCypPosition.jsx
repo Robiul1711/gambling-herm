@@ -14,7 +14,7 @@ const TeachersCypPosition = () => {
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal mb-4">
             <strong className="font-bold text-gray-900 mr-1.5">
               Children of people who gamble excessively are a distinct,
-              statutorily-invisible affected-others population.
+              statutorily-invisible population of people harmed by someone else’s gambling.
             </strong>
             They are the larger CYP group affected, but receive a fraction of
             the attention given to children's own gambling in current policy

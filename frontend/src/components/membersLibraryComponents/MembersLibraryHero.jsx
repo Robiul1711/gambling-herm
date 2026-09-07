@@ -19,11 +19,7 @@ const MembersLibraryHero = () => {
 
         {/* Lead Narrative Text */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] font-normal">
-          This page describes the members' library and how it works. The
-          resources themselves are members-only. You're currently viewing this
-          page signed out, so no member resources are shown below, only an
-          explanation of what the library holds and an example of how it will
-          look once you're signed in.
+          Explore GHUK safeguarding films, clinical toolkits, disease burden models, and policy briefings created for healthcare professionals, researchers, and public health teams.
         </p>
       </div>
     </section>

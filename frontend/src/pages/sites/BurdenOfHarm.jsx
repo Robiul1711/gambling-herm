@@ -54,7 +54,7 @@ const BurdenOfHarm = () => {
     },
     {
       id: "affected",
-      label: "5. Affected others as direct victims",
+      label: "5. People harmed by someone else’s gambling as direct victims",
       ref: sectionRefs.affected,
     },
     {

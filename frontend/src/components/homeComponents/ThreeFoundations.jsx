@@ -15,7 +15,7 @@ export default function ThreeFoundations() {
     },
     {
       icon: <Users className="w-5 h-5 text-Primary" />,
-      title: "Affected others are direct victims.",
+      title: "People harmed by someone else’s gambling are direct victims.",
       description:
         "Partners. Parents. Children. They have no agency in the gambling that harmed them, and yet the financial, mental-health and developmental impact on them is real, large, and routinely understated.",
       linkText: "For Family & Friends",

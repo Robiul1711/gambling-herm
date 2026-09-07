@@ -51,7 +51,7 @@ export default function VisionValuesAims() {
               </h4>
               <p className="text-slate-600 text-[14px] leading-relaxed">
                 Our work is informed and led by people directly affected by
-                gambling harm, including affected others and bereaved families.
+                gambling harm, including people harmed by someone else’s gambling and bereaved families.
                 Lived experience sits at the centre of what we do, not at its
                 edges.
               </p>
@@ -104,7 +104,7 @@ export default function VisionValuesAims() {
             </div>
             <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
               <span className="font-bold text-gray-900">
-                Affected others, including children, recognised and supported
+                People harmed by someone else’s gambling, including children, recognised and supported
               </span>{" "}
               as harmed in their own right.
             </div>

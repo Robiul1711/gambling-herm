@@ -22,7 +22,7 @@ const prompts = [
     boldText:
       "Are you carrying a financial fear, a relational fear, both, or something else?",
     normalText:
-      " Affected others often carry the financial fear before the person who gambles realises there's a problem.",
+      " People harmed by someone else’s gambling often carry the financial fear before the person who gambles realises there's a problem.",
   },
   {
     boldText: "If a friend described your situation back to you,",

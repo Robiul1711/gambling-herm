@@ -13,9 +13,9 @@ const WhyChangesMatter = () => {
         "Today the burden of proving an enforcement failure sits with the harmed person. The Members Only model moves that burden to the operator and the system, where it belongs.",
     },
     {
-      title: "AFFECTED-OTHERS IMPACT",
+      title: "IMPACT ON PEOPLE HARMED BY SOMEONE ELSE'S GAMBLING",
       description:
-        "Land-based slot harm hits affected others hard, partners and families discover the harm after the financial damage has been done. Stronger enforcement at the point of play reduces the financial-harm pipeline that affected others end up carrying.",
+        "Land-based slot harm hits people harmed by someone else’s gambling hard, partners and families discover the harm after the financial damage has been done. Stronger enforcement at the point of play reduces the financial-harm pipeline that people harmed by someone else’s gambling end up carrying.",
     },
     {
       title: "HIGHER-RISK PRODUCTS",

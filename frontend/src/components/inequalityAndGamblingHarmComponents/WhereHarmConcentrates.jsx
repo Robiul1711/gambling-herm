@@ -38,11 +38,11 @@ const concentrationData = [
       "UK veterans and people in contact with the criminal-justice system show directional evidence of elevated risk, a hypothesis warranting proper investigation. Specialist provision exists in pockets and is unevenly distributed.",
   },
   {
-    label: "AFFECTED OTHERS",
+    label: "PEOPLE HARMED BY SOMEONE ELSE'S GAMBLING",
     description: (
       <>
         Children of people who gamble excessively; partners; siblings; bereaved
-        families. Inequality also shapes who carries affected-other harm and who
+        families. Inequality also shapes who carries harm from someone else's gambling and who
         gets recognised for it. See our{" "}
         <Link
           to="/get-help/family-friends"
