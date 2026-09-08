@@ -21,9 +21,10 @@ const RoadSafetyHero = () => {
         {/* Paragraph 1 */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-6 font-normal">
           An emerging public safety issue for transport organisations. New
-          research commissioned by Gambling Harm UK suggests gambling harm may
-          have implications beyond the individual, with potential impacts on
-          driver distraction, fatigue, emotional wellbeing and decision-making.
+          research commissioned by Gambling Harm UK suggests gambling harm can
+          impair the capacities safe driving depends on: attention, rest,
+          emotional wellbeing and decision-making. It can affect other road
+          users, not only the person gambling.
         </p>
 
         {/* Paragraph 2 */}

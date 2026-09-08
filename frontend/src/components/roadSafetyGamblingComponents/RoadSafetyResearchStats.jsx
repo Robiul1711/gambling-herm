@@ -8,27 +8,27 @@ const stats = [
   {
     value: "~2m",
     description:
-      "adults in the UK are estimated to be in need of support for their gambling.",
+      "adults in the UK who gamble and may benefit from treatment or support (OHID 2023 England estimate, scaled to the UK).",
   },
   {
     value: "Younger",
     description:
-      "drivers showed greater vulnerability to gambling-related harm.",
+      "drivers aged 18–34 reported the highest rates of impacts on their driving; no driver aged 55+ reported any.",
   },
   {
     value: "Distraction",
     description:
-      "gambling-related distraction was identified by some respondents experiencing gambling harm.",
+      "around 1 in 100 drivers reported feeling less focused, or taking risks they would not otherwise have taken.",
   },
   {
     value: "Fatigue",
     description:
-      "fatigue and disrupted sleep were highlighted as potential safety factors.",
+      "fatigue was the most commonly reported consequence, 2% of all drivers, and rose with gambling frequency.",
   },
   {
     value: "Others",
     description:
-      "harm may affect both those who gamble and people harmed by someone else's gambling.",
+      "3% of drivers said concern about another person's gambling had affected their own driving.",
   },
 ];
 
@@ -72,7 +72,7 @@ const RoadSafetyResearchStats = () => {
 
         {/* Consequences Note */}
         <p className="text-xs md:text-sm text-gray-400 leading-relaxed mb-10 pt-2">
-          Consequences reported included collisions, near misses and speeding.
+          Consequences reported included collisions, near misses, and driving too fast or too slowly.
         </p>
 
         {/* CTA Button */}

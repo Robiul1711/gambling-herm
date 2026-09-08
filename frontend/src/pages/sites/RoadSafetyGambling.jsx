@@ -4,7 +4,6 @@ import RoadSafetyResearchStats from "../../components/roadSafetyGamblingComponen
 import RoadSafetyWhyThisMatters from "../../components/roadSafetyGamblingComponents/RoadSafetyWhyThisMatters";
 import RoadSafetyResearchThemes from "../../components/roadSafetyGamblingComponents/RoadSafetyResearchThemes";
 import RoadSafetyPracticalSteps from "../../components/roadSafetyGamblingComponents/RoadSafetyPracticalSteps";
-import RoadSafetyResources from "../../components/roadSafetyGamblingComponents/RoadSafetyResources";
 import RoadSafetyAboutGhuk from "../../components/roadSafetyGamblingComponents/RoadSafetyAboutGhuk";
 import RoadSafetyCta from "../../components/roadSafetyGamblingComponents/RoadSafetyCta";
 import PageSectionNav from "@/components/common/PageSectionNav";
@@ -14,8 +13,7 @@ const sections = [
   { id: "why-this-matters", title: "2. Why this matters" },
   { id: "research-themes", title: "3. What the research shows" },
   { id: "practical-steps", title: "4. Practical steps for transport" },
-  { id: "resources", title: "5. Resources & guides" },
-  { id: "about-ghuk", title: "6. About GHUK" },
+  { id: "about-ghuk", title: "5. About GHUK" },
 ];
 
 export default function RoadSafetyGambling() {
@@ -42,22 +40,17 @@ export default function RoadSafetyGambling() {
         <RoadSafetyResearchThemes />
       </div>
 
-      {/* 5. What transport organisations can do (5 Steps Grid) */}
+      {/* 5. What transport organisations can do (5 Steps Grid & Action Buttons) */}
       <div id="practical-steps" className="scroll-mt-24">
         <RoadSafetyPracticalSteps />
       </div>
 
-      {/* 6. Resources List Section */}
-      <div id="resources" className="scroll-mt-24">
-        <RoadSafetyResources />
-      </div>
-
-      {/* 7. About Gambling Harm UK */}
+      {/* 6. About Gambling Harm UK */}
       <div id="about-ghuk" className="scroll-mt-24">
         <RoadSafetyAboutGhuk />
       </div>
 
-      {/* 8. Bottom Dark CTA Banner */}
+      {/* 7. Bottom Dark CTA Banner */}
       <RoadSafetyCta />
     </main>
   );
