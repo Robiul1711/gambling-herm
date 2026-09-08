@@ -181,7 +181,7 @@ const PopulationBurden = () => {
             . On the more conservative NICE technology-appraisal range of
             £25,000 to £35,000 per QALY, the same loss is £13.2 to 18.5
             billion. The statutory levy on gambling operators is projected to
-            raise about £100 million a year.
+            raise just under £120 million a year.
           </p>
 
           {/* Bar Chart 2 */}
@@ -192,10 +192,10 @@ const PopulationBurden = () => {
                 Statutory levy
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#73768B] h-full w-[0.27%]" />
+                <div className="bg-[#73768B] h-full w-[0.32%]" />
               </div>
               <div className="w-28 text-right text-sm font-bold text-white">
-                £100m
+                &lt;£120m
               </div>
             </div>
 
@@ -205,49 +205,42 @@ const PopulationBurden = () => {
                 NICE comparator
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#0093D0] h-full w-[43%]" />
+                <div className="bg-[#0093D0] h-full w-[42.7%]" />
               </div>
-              <div className="w-28 text-right text-sm font-bold text-[#00B5FF]">
-                £13.2–18.5bn
+              <div className="w-28 text-right text-sm font-bold text-white">
+                £15.8bn
               </div>
             </div>
 
-            {/* Conservative sensitivity */}
+            {/* Central health loss */}
             <div className="flex items-center gap-4">
               <div className="w-48 text-sm font-semibold text-white shrink-0">
-                Conservative sensitivity
+                Central health loss
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
-                <div className="bg-[#0093D0] h-full w-[76%]" />
+                <div className="bg-[#0093D0] h-full w-[59.2%]" />
               </div>
-              <div className="w-28 text-right text-sm font-bold text-[#00B5FF]">
-                £28bn
+              <div className="w-28 text-right text-sm font-bold text-white">
+                £21.9bn
               </div>
             </div>
 
-            {/* Headline estimate */}
+            {/* Treasury Green Book */}
             <div className="flex items-center gap-4">
-              <div className="w-48 text-sm font-semibold text-[#00B5FF] shrink-0">
-                Headline estimate
+              <div className="w-48 text-sm font-semibold text-white shrink-0">
+                Treasury Green Book
               </div>
               <div className="flex-1 bg-[#2b2b2b] h-7 rounded-none overflow-hidden flex items-center">
                 <div className="bg-[#0093D0] h-full w-[100%]" />
               </div>
-              <div className="w-28 text-right text-sm font-bold text-[#00B5FF]">
-                £37bn
+              <div className="w-28 text-right text-sm font-bold text-white">
+                £37.0bn
               </div>
             </div>
           </div>
 
-          {/* Footnote 2 */}
-          <p className="text-xs md:text-base text-gray-300 leading-relaxed mt-6 mb-10">
+          <p className="text-xs md:text-sm text-gray-400 leading-relaxed font-normal">
             Bars are drawn to scale against the headline. At this scale the levy
-            is 0.27% of the largest bar and is too small to render as a visible
-            block; that invisibility is the finding.{" "}
-            <strong className="text-white font-bold">Headline:</strong>{" "}
-            approximately 530,000 QALYs lost annually (about 597,000 before the
-            household-overlap adjustment), valued at the £70,000 Green Book
-            figure. Composition: about 297,000 QALYs among people who gamble,
             252,000 among adults harmed by someone else's gambling, 48,000 among
             children exposed to adult gambling, less about 68,000 for household
             overlap. People who gamble alone account for £20.8bn of the total.{" "}
@@ -281,7 +274,7 @@ const PopulationBurden = () => {
           <p className="text-sm md:text-base leading-relaxed text-gray-800">
             The central health-loss estimate is{" "}
             <strong className="font-bold text-gray-900">
-              roughly 150 to 220 times the statutory levy
+              roughly 200 times (about 70 times on the lowest basis) the statutory levy
             </strong>
             . Even on the government's own deliberately narrow social-cost
             estimate for England (£1.05–1.77 billion a year), the levy is an

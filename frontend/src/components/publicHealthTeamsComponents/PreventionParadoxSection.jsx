@@ -24,7 +24,7 @@ const PreventionParadoxSection = () => {
           Across multiple national studies,{" "}
           <strong className="font-bold text-gray-900">
             70–85% of gambling-related Years Lived with Disability arise from individuals classified 
-            as "low-risk" (PGSI 1–2) or "moderate-risk" (PGSI 3–7),
+            as having a "low level of gambling harm" (PGSI 1–2) or "moderate level of gambling harm" (PGSI 3–7),
           </strong>{" "}
           not from the severe-end group on which most clinical treatment investment has focused. The implication 
           is consistent with the prevention paradox: <span className="italic text-gray-800">population-level reductions in harm 

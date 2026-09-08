@@ -6,7 +6,7 @@ const changesList = [
     number: 1,
     title: "A Statutory Levy Proportionate To The Burden Of Harm",
     description:
-      "The current £100m UK statutory levy is, on conservative GHUK QALY modelling, between 40 and 60 times smaller than the annual health-economic burden of gambling harm. The levy should be scaled to harm using QALY/DALY valuations, not set by political negotiation with the industry. Distribution should be governed independently of industry influence, with funding ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and independent research.",
+      "The current UK statutory levy (just under £120 million) is, on conservative GHUK QALY modelling, between 40 and 60 times smaller than the annual health-economic burden of gambling harm. The levy should be scaled to harm using QALY/DALY valuations, not set by political negotiation with the industry. Distribution should be governed independently of industry influence, with funding ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and independent research.",
   },
   {
     number: 2,

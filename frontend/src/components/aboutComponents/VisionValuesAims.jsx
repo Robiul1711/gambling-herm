@@ -97,7 +97,7 @@ export default function VisionValuesAims() {
           <div className="border-t border-b border-gray-200/60 divide-y divide-gray-200/60 mb-8 sm:mb-10">
             <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
               <span className="font-bold text-gray-900">
-                People affected by gambling harm at the centre of change,
+                People harmed by gambling at the centre of change,
               </span>{" "}
               with lived experience shaping research, services, policy and
               public understanding.

@@ -13,7 +13,7 @@ export default function ThreeFramings() {
       label: "Industry Framing",
       title: "Problem Gambler.",
       description:
-        'Puts the problem inside the person and implies a defective individual interacting with a fine product. The narrow PGSI-8+ definition that produced "0.4% of UK adults" radically understates the scale of harm. We say "people affected by gambling".',
+        'Puts the problem inside the person and implies a defective individual interacting with a fine product. The narrow PGSI-8+ definition that produced "0.4% of UK adults" radically understates the scale of harm. We say "people harmed by gambling".',
       hasLink: false,
     },
     {

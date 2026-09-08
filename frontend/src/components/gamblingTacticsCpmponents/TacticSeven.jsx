@@ -156,7 +156,7 @@ const TacticSeven = () => {
           the voluntary levy was around £35 million per year at its peak.
           Against UK GGY of £15 billion, this is 0.23%. The framing was a
           conventional under-investment positioned as public benefaction. The
-          statutory levy at £100 million per year is an improvement but, as
+          statutory levy at just under £120 million per year is an improvement but, as
           GHUK's APPG modelling shows, still 40 to 60 times smaller than even
           the conservative floor of the population-level burden it is meant to
           address.

@@ -114,7 +114,7 @@ const ChapterOne = () => {
             <strong className="font-bold text-gray-900">0.37</strong>
           </li>
           <li>
-            Moderate-risk gambling harm (PGSI 3-7):{" "}
+            Moderate level of gambling harm (PGSI 3-7):{" "}
             <strong className="font-bold text-gray-900">0.29 to 0.37</strong>
           </li>
           <li>
@@ -122,11 +122,11 @@ const ChapterOne = () => {
             <strong className="font-bold text-gray-900">0.36</strong>
           </li>
           <li>
-            People harmed by someone else’s gambling at moderate-risk harms:{" "}
+            People harmed by someone else’s gambling at moderate level of harm:{" "}
             <strong className="font-bold text-gray-900">0.33</strong>
           </li>
           <li>
-            Low-risk gambling harm:{" "}
+            Low level of gambling harm:{" "}
             <strong className="font-bold text-gray-900">0.13 to 0.18</strong>
           </li>
         </ul>

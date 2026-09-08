@@ -9,7 +9,7 @@ const services = [
  {
  title:"Young people (under 25)",
  description:
-"NHS clinics, GamCare, and dedicated CYP services. YGAM runs prevention-led programmes; Big Deal (GamCare) is specifically for young people. NHS Talking Therapies routes are also available for under-25s.",
+"NHS clinics, GamCare, and dedicated CYP services. YGAM runs prevention-led programmes; the National Gambling Helpline (0808 8020 133) provides 24/7 support for young people. NHS Talking Therapies routes are also available for under-25s.",
  },
  {
  title:"Children of people harmed by someone else’s gambling",

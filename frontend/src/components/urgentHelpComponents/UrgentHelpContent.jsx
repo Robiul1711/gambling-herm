@@ -92,7 +92,7 @@ const UrgentHelpContent = () => {
                 National Gambling Helpline.
               </strong>{" "}
               Free, confidential, 24/7. Run by GamCare. You will speak to a
-              trained advisor whose job is to help you, not to judge you.
+              trained adviser whose job is to help you, not to judge you.
             </p>
             <p>
               <strong className="text-gray-900 font-bold">GAMSTOP</strong>, the

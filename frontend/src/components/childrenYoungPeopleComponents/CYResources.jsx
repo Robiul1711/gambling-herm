@@ -10,15 +10,15 @@ const CYResources = () => {
  </>
  ),
  },
- {
- id: 2,
- text: (
- <>
- Big Deal (GamCare),{" "}
- <span className="text-[#7a7a99]">bigdeal.org.uk</span>
- </>
- ),
- },
+    {
+      id: 2,
+      text: (
+        <>
+          National Gambling Helpline,{" "}
+          <span className="text-[#7a7a99]">0808 8020 133 (24/7)</span>
+        </>
+      ),
+    },
  {
  id: 3,
  text: (

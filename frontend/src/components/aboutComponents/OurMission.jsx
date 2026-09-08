@@ -72,7 +72,7 @@ export default function OurMission() {
                 Support people
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Connect anyone affected by gambling (themselves or someone they
+                Connect anyone harmed by gambling (themselves or someone they
                 love) with accurate information and routes to help, free of
                 industry framing.
               </p>

@@ -20,7 +20,7 @@ export default function LearnListenSupport() {
     {
       title: "The Invisible Addiction",
       description:
-        "Real stories and experiences from people affected by gambling harm.",
+        "Real stories and experiences from people harmed by gambling.",
       buttonText: "Listen on Spotify",
       link: "https://open.spotify.com/show/6X2p8D0c5G6u2vY21G0QeQ",
     },

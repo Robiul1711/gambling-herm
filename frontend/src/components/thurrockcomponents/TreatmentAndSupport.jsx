@@ -21,7 +21,7 @@ export default function TreatmentAndSupport() {
     {
       title: "GamFam",
       description:
-        "Support for people affected by gambling, including family members and others harmed by someone else's gambling.",
+        "Support for people harmed by gambling, including family members and others harmed by someone else's gambling.",
       buttonText: "Refer to GamFam",
       link: "https://gamfam.org.uk/",
       isExternal: true,

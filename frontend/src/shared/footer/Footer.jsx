@@ -295,6 +295,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    to="/thurrock"
+                    className="hover:text-white transition-colors"
+                  >
+                    Support in Thurrock
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/get-help/self-assessment"
                     className="hover:text-white transition-colors"
                   >

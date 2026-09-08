@@ -22,9 +22,9 @@ const TeachersCypSupportNow = () => {
           >
             our young people page
           </Link>
-          . It's written to be read by them: Childline (0800 1111), Big Deal,
-          YoungMinds, and an honest explanation of what happens when they tell an
-          adult.
+          . It's written to be read by them: Childline (0800 1111), the National
+          Gambling Helpline (0808 8020 133), YoungMinds, and an honest explanation
+          of what happens when they tell an adult.
         </p>
       </div>
     </section>

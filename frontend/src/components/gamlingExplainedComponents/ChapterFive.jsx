@@ -46,7 +46,7 @@ const ChapterFive = () => {
             <strong className="font-bold text-gray-900">Access effects in treatment.</strong>{" "}
             Industry-funded treatment infrastructure has been geographically uneven,
             capacity-constrained, and historically configured around the most severe cases,
-            missing the bulk of the population in moderate-risk harm.
+            missing the bulk of the population with moderate level of gambling harm.
           </li>
         </ul>
       </div>
@@ -57,10 +57,10 @@ const ChapterFive = () => {
           The statutory levy
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-          The UK government announced a statutory levy in 2024, set initially at around £100m
+          The UK government announced a statutory levy in 2024, set initially at just under £120 million
           per year. GHUK's APPG submission (July 2026) shows the levy is{" "}
           <strong className="font-bold text-gray-900">40 to 60 times smaller</strong> than even the
-          conservative floor of the modelled UK health-economic burden, and 150 to 220 times
+          conservative floor of the modelled UK health-economic burden, and roughly 200 times (about 70 times on the lowest basis)
           smaller than the central estimate. We support distribution through an arms-length body,
           ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and
           independent research (see our{" "}

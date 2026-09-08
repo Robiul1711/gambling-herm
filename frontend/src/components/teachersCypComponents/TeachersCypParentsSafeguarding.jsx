@@ -19,7 +19,7 @@ const points = [
   {
     boldText: "Connect them to age-appropriate support.",
     restText:
-      " Childline, Big Deal, YoungMinds. School counsellors. The NHS gambling clinics can accept under-18 referrals.",
+      " Childline, National Gambling Helpline (0808 8020 133), YoungMinds. School counsellors. The NHS gambling clinics can accept under-18 referrals.",
   },
 ];
 

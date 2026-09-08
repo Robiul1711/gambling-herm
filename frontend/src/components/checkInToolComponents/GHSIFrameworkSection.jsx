@@ -17,7 +17,7 @@ const frameworkPoints = [
       "Uses Multi-Criteria Decision Analysis (MCDA) to weight domains relative to one another, allowing like-for-like comparison with the burden of alcohol and other addictive harms.",
   },
   {
-    title: "Better at the moderate-risk band where most population harm sits.",
+    title: "Better at the moderate level of gambling harm band where most population harm sits.",
     description:
       "The GHSI structure handles the 70–85% of harm that lives below the conventional PGSI 8+ threshold, the band the public-health evidence has consistently said matters most.",
   },

@@ -72,7 +72,7 @@ const ScreeningGuideSection = () => {
           <strong className="font-bold text-gray-900 mr-1.5">
             Interpretation:
           </strong>{" "}
-          1–2 low-risk, 3–7 moderate-risk, 8+ severe. Meaningful harm exists
+          1–2 low level of gambling harm, 3–7 moderate level of gambling harm, 8+ severe. Meaningful harm exists
           from PGSI 1+. Do not wait for PGSI 8+ before referring.
         </p>
       </div>
@@ -88,7 +88,7 @@ const ScreeningGuideSection = () => {
             UK gambling-prevalence figures have long used a PGSI 8+ cut-off as
             the threshold for "problem gambling". This produces an
             underestimate. 70–85% of gambling-related YLDs in international
-            studies arise from PGSI 1–7 ("low-risk" and "moderate-risk") groups,
+            studies arise from PGSI 1–7 ("low level of gambling harm" and "moderate level of gambling harm") groups,
             the prevention paradox. In clinical practice, take PGSI 1+ as a
             signal worth acting on.
           </p>

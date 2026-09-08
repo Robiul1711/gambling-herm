@@ -24,7 +24,7 @@ const PublicHealthRequestsSection = () => {
       id: 4,
       title: "Use the prevention paradox in commissioning",
       content:
-        "Local commissioning should reflect the evidence that 70–85% of YLDs sit in the low- and moderate-risk bands (PGSI 1–7), not be skewed toward severe-end treatment alone.",
+        "Local commissioning should reflect the evidence that 70–85% of YLDs sit in the low- and moderate-level gambling harm bands (PGSI 1–7), not be skewed toward severe-end treatment alone.",
     },
     {
       id: 5,
@@ -36,7 +36,7 @@ const PublicHealthRequestsSection = () => {
       id: 6,
       title: "Push for a proportionate statutory levy",
       content:
-        "Even on OHID's own deliberately narrow estimate (£1.05–£1.77bn/year, England alone), the current £100m statutory levy is an order of magnitude too small; on GHUK's conservative QALY modelling the gap is 40–60×. No contested assumption is needed to make the case: under every published estimate, the levy is not proportionate to the harm. Local public-health bodies are well-placed to make this case to government.",
+        "Even on OHID's own deliberately narrow estimate (£1.05–£1.77bn/year, England alone), the current statutory levy (just under £120 million) is an order of magnitude too small; on GHUK's conservative QALY modelling the gap is 40–60×. No contested assumption is needed to make the case: under every published estimate, the levy is not proportionate to the harm. Local public-health bodies are well-placed to make this case to government.",
     },
   ];
 
