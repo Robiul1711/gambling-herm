@@ -54,7 +54,7 @@ const BurdenOfHarm = () => {
     },
     {
       id: "affected",
-      label: "5. People harmed by someone else’s gambling as direct victims",
+      label: "5. Harmed by someone else’s gambling",
       ref: sectionRefs.affected,
     },
     {
@@ -140,11 +140,6 @@ const BurdenOfHarm = () => {
       <div className="sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm py-3 md:py-4">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between gap-4">
-            {/* <div className="hidden lg:flex items-center gap-3 shrink-0">
- <span className="w-6 h-[2px] bg-Primary" />
- <span className="text-xs font-semibold text-Primary tracking-wide uppercase">On This Page</span>
- </div> */}
-
             {/* Swipeable on mobile screens, wraps clean grid items on desktop viewport */}
             <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-1 scrollbar-hide snap-x w-full">
               {navItems.map((item) => {
@@ -219,8 +214,8 @@ const BurdenOfHarm = () => {
         description="Our policy positions follow directly from the evidence above. They are the things we believe the UK needs to do. We publish our modelling, label our own combinations as our own, and invite scrutiny of both. That is what distinguishes evidence from messaging."
         primaryBtnText="Read our policy positions"
         primaryBtnLink="/policy-and-advocacy"
-        secondaryBtnText="Latest publications"
-        secondaryBtnLink="/news-and-research"
+        secondaryBtnText="Open the burden mapping tool"
+        secondaryBtnLink="/burden-mapping-tool"
       />
     </div>
   );

@@ -39,8 +39,8 @@ const ChapterTen = () => {
             been central in surfacing this.
           </li>
           <li className="leading-relaxed">
-            Banks et al. found <strong className="font-bold text-gray-900">7% of people harmed by someone else’s gambling</strong>{" "}
-            engaged in petty theft or dishonesty as a consequence of their family member's gambling.
+            In Banks et al.’s survey of family members, <strong className="font-bold text-gray-900">7% reported petty theft or dishonesty</strong> as
+            a consequence of a family member’s gambling (self-selected support-seeking sample).
           </li>
         </ul>
       </div>

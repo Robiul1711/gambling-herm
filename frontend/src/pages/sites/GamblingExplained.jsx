@@ -20,7 +20,7 @@ const GamblingExplained = () => {
           title={bannerData?.title || "Gambling Explained."}
           description={
             bannerData?.description ||
-            "Beyond individual blame. Toward systemic accountability. GHUK's flagship evidence summary, independently written and funded by researchers who are people harmed by someone else’s gambling, in the lineage of WHO's Tobacco Explained (Bates & Rowell, 2000). First published 2021 for the Gambling Act Review. 2025/26 edition in preparation. Ten chapters, each below."
+            "Beyond individual blame. Toward systemic accountability. GHUK's flagship evidence summary, independently written and funded by researchers who are people harmed by someone else’s gambling. First published 2021 for the Gambling Act Review. 2025/26 edition in preparation. Ten chapters, each below."
           }
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}

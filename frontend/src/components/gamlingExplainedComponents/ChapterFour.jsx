@@ -47,10 +47,10 @@ const ChapterFour = () => {
         </ul>
       </div>
 
-      {/* Sub-block: The "freedom to gamble" frame fails on people harmed by someone else’s gambling */}
+      {/* Sub-block: The “freedom to gamble” frame fails the people around the gambling */}
       <div className="space-y-3">
         <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-          The "freedom to gamble" frame fails on people harmed by someone else’s gambling
+          The “freedom to gamble” frame fails the people around the gambling
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           The standard industry defence rests on consumer choice. The argument is confounded

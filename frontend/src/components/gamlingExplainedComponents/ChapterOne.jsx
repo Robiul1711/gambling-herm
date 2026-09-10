@@ -39,10 +39,10 @@ const ChapterOne = () => {
         </p>
       </div>
 
-      {/* Sub-block: Burden on people harmed by someone else’s gambling */}
+      {/* Sub-block: The burden on families */}
       <div className="space-y-4">
         <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-          Burden on people harmed by someone else’s gambling
+          The burden on families
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           Among family members of people with disordered gambling, the impact
@@ -78,7 +78,7 @@ const ChapterOne = () => {
         </div>
         <p className="text-xs italic text-gray-500 mt-2">
           Banks et al., 2018,{" "}
-          <em className="italic">Families Living with Problem Gambling</em>.
+          <em className="italic">Families Living with Problem Gambling</em>. Self-selected sample of family members seeking support (~190): read as indicative of the harm pattern, not as population rates.
         </p>
       </div>
 
@@ -114,19 +114,19 @@ const ChapterOne = () => {
             <strong className="font-bold text-gray-900">0.37</strong>
           </li>
           <li>
-            Moderate level of gambling harm (PGSI 3-7):{" "}
+            Moderate level of gambling harm (PGSI 3–7):{" "}
             <strong className="font-bold text-gray-900">0.29 to 0.37</strong>
           </li>
           <li>
-            People harmed by someone else’s gambling at gambling-disorder harms:{" "}
+            Harmed by someone else’s gambling, severe level:{" "}
             <strong className="font-bold text-gray-900">0.36</strong>
           </li>
           <li>
-            People harmed by someone else’s gambling at moderate level of harm:{" "}
+            Harmed by someone else’s gambling, moderate level:{" "}
             <strong className="font-bold text-gray-900">0.33</strong>
           </li>
           <li>
-            Low level of gambling harm:{" "}
+            Low level of gambling harm (PGSI 1–2):{" "}
             <strong className="font-bold text-gray-900">0.13 to 0.18</strong>
           </li>
         </ul>
@@ -142,17 +142,17 @@ const ChapterOne = () => {
           Population burden: quality-adjusted life years (QALYs)
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-          Applying the more conservative population-survey utility decrements
-          (Moayeri, 2020) to GSGB 2024 prevalence, GHUK's current modelling puts
-          the UK's annual non-fatal health loss from gambling at{" "}
+          Applying conservative population-survey utility decrements (Moayeri,
+          2020) to GSGB Year 3 (2025) prevalence, GHUK’s current modelling puts
+          the UK’s annual non-fatal health loss from gambling at roughly{" "}
           <strong className="font-bold text-gray-900">
-            approximately 625,000 QALYs including people harmed by someone else’s gambling
+            320,000 to 450,000 adult QALYs a year (central scenario 386,000)
           </strong>
-          , valuing people harmed by someone else’s gambling at parity with the person gambling, the
-          basis the direct measurements support (Browne et al., 2017). People
-          who gamble account for about 297,000 QALYs alone, which by itself
-          exceeds the years-lived-with-disability burdens from unhealthy diet
-          and alcohol in the GBD 2023 UK data. Full method on{" "}
+          , counting people harmed by someone else’s gambling across published
+          attribution scenarios, with children reported separately. People who
+          gamble account for about 264,000 QALYs of that on their own, the same
+          broad order as the years-lived-with-disability burdens from unhealthy
+          diet and alcohol in GBD 2023 UK data. Full method on{" "}
           <Link
             to="/burden-of-harm"
             className="text-gray-900 font-medium underline hover:text-[#0093D0] transition-colors"
@@ -170,11 +170,8 @@ const ChapterOne = () => {
         </h3>
         <ul className="space-y-3 text-sm md:text-base text-gray-700 pl-5 list-disc marker:text-gray-400">
           <li className="leading-relaxed">
-            UK bank-data research linked high gambling levels to a{" "}
-            <strong className="font-bold text-gray-900">
-              37% increase in all-cause mortality
-            </strong>{" "}
-            (Muggleton et al., 2021,{" "}
+            UK bank-data research linked high levels of gambling to a likelihood
+            of death about a third higher (Muggleton et al., 2021,{" "}
             <em className="italic">Nature Human Behaviour</em>).
           </li>
           <li className="leading-relaxed">
@@ -183,10 +180,9 @@ const ChapterOne = () => {
             <strong className="font-bold text-gray-900">
               roughly 5 to 15 times the general population
             </strong>
-            , led by the Norwegian cohort (SMR 5.12; Kristensen et al., 2025)
-            and reaching{" "}
-            <strong className="font-bold text-gray-900">19.3 times</strong>{" "}
-            among Swedish 20–49-year-olds (Karlsson &amp; Håkansson, 2018).
+            , led by the Norwegian cohort (SMR 5.12; Kristensen et al., 2025), with
+            the earlier Swedish registry at 15.1 (Karlsson &amp; Håkansson,
+            2018).
           </li>
           <li className="leading-relaxed">
             In a UK study of 16-24 year-olds, men and women indicating

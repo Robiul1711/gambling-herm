@@ -49,9 +49,9 @@ const ChapterTwo = () => {
           People with gambling disorder show substantially elevated rates of
           co-occurring conditions. Reported lifetime comorbidity includes major
           depressive disorder (~50%), anxiety disorders (~60%), substance-use
-          disorders (~57%), and personality disorders (~29%). The direction of
-          causation is bidirectional. Gambling can worsen depression and
-          anxiety. Depression and anxiety can worsen gambling.
+          disorders (~57%), and personality disorders (~29%). The relationship
+          runs in both directions: gambling can worsen depression and anxiety,
+          and depression and anxiety can worsen gambling.
         </p>
       </div>
 
@@ -82,11 +82,12 @@ const ChapterTwo = () => {
           Stigma and treatment-seeking
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-          UK help-seeking rates remain low. Of an estimated population in
-          moderate-to-severe gambling harm, fewer than 10% access any formal
-          treatment in a typical year, with women, minority ethnic groups, and
-          people in deprived areas disproportionately under- represented in
-          treatment caseloads. See our{" "}
+          Around 4 in 5 people with severe harm from their gambling have never
+          sought any help, falling to around 1 in 27 at moderate levels (Bijker
+          et al., 2022). Only about 1% of adults at PGSI 3+ have used specialist
+          gambling treatment or peer support (APMS 2023/24), with women,
+          minority ethnic groups, and people in deprived areas
+          disproportionately under-represented in treatment caseloads. See our{" "}
           <Link
             to="/get-help"
             className="text-gray-900 font-medium underline hover:text-[#0093D0] transition-colors"

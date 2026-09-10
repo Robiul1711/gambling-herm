@@ -69,14 +69,13 @@ const AnyoneCanBeHarmed = () => {
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            The burden-of-disease evidence points the same way.{" "}
-            <strong className="text-gray-900 font-bold">
-              Up to 85% of gambling-related years lived with disability among
-              people who gamble arise at low and moderate levels of harm, not in
-              the most severe band
-            </strong>{" "}
-            (Browne et al., 2017). Commissioning aimed only at the severe end
-            reaches about 15% of that health loss.
+            In the Australian analysis that first established the pattern, up
+            to 85% of gambling-related health loss arises below the most severe
+            band (Browne et al., 2017). In our UK model the severe band carries
+            a larger share, but once people harmed by someone else’s gambling
+            are counted, more than half of the modelled health loss still sits
+            outside the severe end of those who gamble. Commissioning aimed only
+            at that severe end misses most of the harm.
           </p>
         </div>
 
@@ -184,11 +183,11 @@ const AnyoneCanBeHarmed = () => {
             conditions to give a sense of what living at each band is like for
             one person. Our national QALY figures are built on the more
             conservative population-survey decrements (Moayeri, 2020), which run
-            several times lower; the elicited values above sit in our published
-            upper-bound sensitivity. Utility decrements and Global Burden of
-            Disease disability weights are related but distinct scales. An
-            independent harm screen places the severe band at the same 0.45
-            value, corroborating the range.
+            several times lower; the elicited values above are used for
+            cross-condition comparison only and are never converted to money.
+            Utility decrements and Global Burden of Disease disability weights
+            are related but distinct scales. An independent harm screen places
+            the severe band at the same 0.45 value, corroborating the range.
           </p>
         </div>
 
@@ -201,11 +200,13 @@ const AnyoneCanBeHarmed = () => {
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
             Losses, spend and frequency follow a highly skewed distribution, and
             when average consumption in a population rises, heavy consumption
-            rises with it. The top 4% of people who gamble account for around
-            half of all losses; for online gambling the top 5% account for
-            around 80%. That is an argument for monitoring total population
-            consumption as the primary indicator of whether harm is rising, not
-            only the diagnosed minority.
+            rises with it. In GB online account data, the top 10% of accounts
+            generate 79% of operator revenue and the top 1% generate 37%; ranked
+            by losses, the 5% of accounts with the largest losses generate 70%
+            (Forrest &amp; McHale, Patterns of Play, NatCen, 2023). That is an
+            argument for monitoring total population consumption as the primary
+            indicator of whether harm is rising, not only the diagnosed
+            minority.
           </p>
         </div>
 

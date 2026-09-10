@@ -28,11 +28,22 @@ const ChildrenYoungPeople = () => {
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            For scale against other risks at the same ages: <strong className="font-bold text-gray-900">gambling in the past week among 11 to 16-year-olds (11%) exceeds tobacco cigarettes (6%), e-cigarettes (7%) and drug-taking (5%)</strong>.
+            For scale against other risks at the same ages: over the past 12
+            months, 11 to 17-year-olds were more likely to have gambled in some
+            form (49%) than to have drunk alcohol (34%), vaped (13%) or smoked
+            cigarettes (8%) (Gambling Commission, Young People &amp; Gambling
+            2025).
           </p>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">
-            There is currently no age restriction on private or non-commercial betting, equal-chance gaming, prize gaming at fairs, Category D gaming machines, or loot boxes and skins in video games. A survey of 16 to 18-year-olds found a moderate-to-large association between loot-box spending and gambling harm, stronger in adolescents than adults (Zendle, Meyer & Over, 2019), and a 2022 systematic review confirmed consistent associations and concluded that policy action on loot boxes could reduce harm (Spicer et al.).
+            There is currently no age restriction on private or non-commercial
+            betting, equal-chance gaming, prize gaming at fairs, Category D
+            gaming machines, or loot boxes and skins in video games. A survey of
+            16 to 18-year-olds found a moderate-to-large association between
+            loot-box spending and gambling harm, stronger in adolescents than
+            adults (Zendle, Meyer &amp; Over, 2019), and a 2022 systematic review
+            confirmed consistent associations and concluded that policy action on
+            loot boxes could reduce harm (Spicer et al.).
           </p>
 
           {/* Callout Quote Box: Convergence is not equivalence */}
@@ -41,15 +52,22 @@ const ChildrenYoungPeople = () => {
               Convergence is not equivalence
             </h4>
             <p className="text-sm text-gray-700 leading-relaxed">
-              The industry's habit of describing slot and casino products as "gaming", together with the blurred line loot boxes create, can imply that gambling harm and video-gaming harm are the same thing. They are not. Gambling stakes monetary value, and it is that financial dimension that drives debt, insolvency, relationship breakdown and suicide. Loot boxes matter precisely because they import monetary, chance-based staking into games, not because gaming and gambling are interchangeable.
+              The industry's habit of describing slot and casino products as
+              "gaming", together with the blurred line loot boxes create, can
+              imply that gambling harm and video-gaming harm are the same thing.
+              They are not. Gambling stakes monetary value, and it is that
+              financial dimension that drives debt, insolvency, relationship
+              breakdown and suicide. Loot boxes matter precisely because they
+              import monetary, chance-based staking into games, not because gaming
+              and gambling are interchangeable.
             </p>
           </div>
         </div>
 
-        {/* Sub-section 2: Harmed by someone else’s gambling */}
+        {/* Sub-section 2: Harmed by an adult's gambling */}
         <div className="my-10 space-y-4">
           <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-            Harmed by someone else's gambling
+            Harmed by an adult's gambling
           </h3>
 
           <p className="text-sm md:text-base leading-relaxed text-gray-700">

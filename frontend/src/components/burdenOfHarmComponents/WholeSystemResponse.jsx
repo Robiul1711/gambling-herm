@@ -21,11 +21,11 @@ const WholeSystemResponse = () => {
     },
     {
       title: "Funding",
-      text: "The statutory levy, in force since April 2025, is ring-fenced 50% to treatment, 30% to prevention and 20% to research. Ring-fencing is the right principle. The quantum, just under £120 million a year against a health burden of £15.6–21.9 billion, is not, and nor is the split. Treatment takes the largest share, while around 85% of the health loss sits below the severe band, where treatment does not reach it. If funding followed the burden, prevention would be weighted above treatment, not at little more than half of it. Research at a fifth has to pay for work the UK has never done properly: gambling-specific epidemiology, a burden-of-harm estimate maintained as a national statistic, mortality and suicide studies using linked health records, and independent economic-cost modelling. None of that is secure on present funding.",
+      text: "The statutory levy, in force since April 2025, is ring-fenced 50% to treatment, 30% to prevention and 20% to research. Ring-fencing is the right principle. The quantum, just under £120 million a year against a health burden of £22 to £32 billion, is not, and nor is the split. Treatment takes the largest share, while around 85% of the health loss sits below the severe band, where treatment does not reach it. If funding followed the burden, prevention would be weighted above treatment, not at little more than half of it. Research at a fifth has to pay for work the UK has never done properly: gambling-specific epidemiology, a burden-of-harm estimate maintained as a national statistic, mortality and suicide studies using linked health records, and independent economic-cost modelling. None of that is secure on present funding.",
     },
     {
       title: "Treatment",
-      text: "NHS-led specialist provision, with funded routes for people harmed by someone else’s gambling and bereaved families, not delivered through industry-funded charities. Proactive outreach between referral and first appointment.",
+      text: "Funding must reach treatment: that is where people in severe harm are helped, and the need is not in doubt, even though the evidence on what works best is younger than for other conditions. NHS-led specialist provision, with funded routes for people harmed by someone else’s gambling and for bereaved families. Treatment spending alone is not a strategy: without regulation and legislation acting on the product and its marketing, the system treats harm downstream while producing it upstream.",
     },
     {
       title: "Identification",
@@ -59,15 +59,21 @@ const WholeSystemResponse = () => {
         {/* Lead Copy */}
         <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-700 mb-10">
           <p className="font-semibold text-gray-900 text-base md:text-lg">
-            The single most successful UK public-health intervention of the last fifty years is tobacco control. It worked because it acted on every part of the system at once: product, marketing, point-of-sale, pricing, treatment, public information, professional norms, and the political legitimacy of the industry itself.
+            The single most successful UK public-health intervention of the last
+            fifty years is tobacco control. It worked because it acted on every
+            part of the system at once: product, marketing, point-of-sale,
+            pricing, treatment, public information, professional norms, and the
+            political legitimacy of the industry itself.
           </p>
 
           <p>
-            Gambling-harm policy is currently nothing like that. Treatment receives most of the resource and attention. Product regulation is patchy. Marketing remains substantially self-regulated. Affordability checks are contested. The political legitimacy of the industry is, in the UK, still largely intact. The result is a response that is the wrong shape for the burden, weighted at the very end of the harm pipeline, where it can change least.
-          </p>
-
-          <p>
-            Even within treatment, volume is not the same as met need. <strong className="font-bold text-gray-900">Around 40% of referrals to NHS gambling clinics do not attend a first assessment</strong>, far higher than alcohol (18%) or cocaine (10%), with waits beyond 30 days, distance, and still actively gambling among the predictors. Referral counts are not a measure of need being met.
+            Gambling-harm policy is currently nothing like that. Treatment
+            receives most of the resource and attention. Product regulation is
+            patchy. Marketing remains substantially self-regulated.
+            Affordability checks are contested. The political legitimacy of the
+            industry is, in the UK, still largely intact. The result is a
+            response that is the wrong shape for the burden, weighted at the
+            very end of the harm pipeline, where it can change least.
           </p>
         </div>
 
@@ -83,11 +89,24 @@ const WholeSystemResponse = () => {
                 key={index}
                 className="py-5 text-sm md:text-base leading-relaxed"
               >
-                <span className="font-bold text-gray-900 mr-1.5">{item.title}.</span>
+                <span className="font-bold text-gray-900 mr-1.5">
+                  {item.title}.
+                </span>
                 <span className="text-gray-700">{item.text}</span>
               </div>
             ))}
           </div>
+
+          {/* Added Paragraph: Levers of regulation & legislation (B34) */}
+          <p className="text-sm md:text-base text-gray-700 leading-relaxed my-6">
+            Funding and commissioning are one lever, and commissioning may
+            rightly concentrate on the severe end, where treatment is needed and
+            cost-effective. The population-wide gains come from regulation and
+            legislation, on product design, marketing and availability, as
+            tobacco, alcohol and food policy have shown in recent years and
+            gambling policy has not. Gambling has been comparatively
+            under-regulated; the response needs both levers.
+          </p>
         </div>
 
         {/* Position Dark Box */}
@@ -96,7 +115,12 @@ const WholeSystemResponse = () => {
             OUR POSITION
           </h4>
           <p className="text-sm md:text-base leading-relaxed text-gray-200 font-medium">
-            Treatment is necessary. It is also nowhere near sufficient. The biggest reductions in gambling harm will come from acting upstream: on product, on marketing, on availability, and on the political conditions that have allowed the harm to grow. The tobacco-control parallel is not a slogan. It is the strategic frame this work requires.
+            Treatment is necessary. It is also nowhere near sufficient. The
+            biggest reductions in gambling harm will come from acting upstream:
+            on product, on marketing, on availability, and on the political
+            conditions that have allowed the harm to grow. The tobacco-control
+            parallel is not a slogan. It is the strategic frame this work
+            requires.
           </p>
         </div>
       </div>

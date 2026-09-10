@@ -11,7 +11,6 @@ import ChapterEight from "./ChapterEight";
 import ChapterNine from "./ChapterNine";
 import ChapterTen from "./ChapterTen";
 import WhyItExists from "./WhyItExists";
-import HowItIsUsed from "./HowItIsUsed";
 import ReadAndCite from "./ReadAndCite";
 
 const ALL_SECTIONS = [
@@ -27,7 +26,6 @@ const ALL_SECTIONS = [
   "multinational",
   "crime",
   "why-it-exists",
-  "how-it-is-used",
   "read-and-cite",
 ];
 
@@ -99,22 +97,18 @@ const GamblingLayout = () => {
               <em className="italic">Gambling Explained</em> is a high-level
               synthesis of the scientific evidence and the industry lobbying
               around it, across the ten topic areas that shape UK gambling-harm
-              policy. It exists to do for gambling what{" "}
-              <em className="italic">Tobacco Explained</em> did for tobacco: put
-              the structural picture, the industry tactics and the public-health
-              response into one accessible reference that does not rely on the
-              framing of the industry being studied.
+              policy. It exists to put the structural picture, the industry
+              tactics and the public-health response into one accessible
+              reference that does not rely on the framing of the industry being
+              studied.
             </p>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              It was written by people with lived experience as{" "}
-              <strong className="font-bold text-gray-900">
-                people harmed by someone else’s gambling
-              </strong>
-              , family members and partners of people who experienced severe
-              gambling harm. The authorship from people harmed by someone else's gambling is intentional. The
-              perspective most likely to see industry tactics clearly is the
-              perspective that watched them play out from outside the moment of
-              gambling.
+              It was written by people with lived experience of being harmed by
+              someone else's gambling: family members and partners of people who
+              experienced severe gambling harm. The harm-to-others authorship
+              is intentional. The perspective most likely to see industry
+              tactics clearly is the perspective that watched them play out from
+              outside the moment of gambling.
             </p>
           </div>
 
@@ -134,7 +128,6 @@ const GamblingLayout = () => {
       {/* Trailing centered components */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-16 space-y-16">
         <WhyItExists />
-        <HowItIsUsed />
         <ReadAndCite />
       </div>
     </section>

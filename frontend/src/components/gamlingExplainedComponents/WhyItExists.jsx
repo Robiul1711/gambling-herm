@@ -21,13 +21,10 @@ const WhyItExists = () => {
         </p>
         <p>
           We wrote <em className="italic">Gambling Explained</em> for that moment.
-          The premise was simple. There should be at least one reference document,
-          written by independent researchers who are people harmed by someone else’s gambling, that put the same
-          evidence into a public-health frame and named the structural picture
-          explicitly. The choice of title was deliberate. WHO's{" "}
-          <em className="italic">Tobacco Explained</em> by Clive Bates and Andy
-          Rowell did, for tobacco in the early 2000s, what we believed someone
-          needed to do for gambling in the UK in 2021.
+          The premise was simple: there should be at least one reference document,
+          written independently by researchers harmed by someone else’s gambling,
+          that put the evidence into a public-health frame and named the structural
+          picture explicitly.
         </p>
       </div>
 
@@ -41,7 +38,7 @@ const WhyItExists = () => {
           preparation. The update reflects the past five years of evidence: the
           GambleAware archive, the Annual Treatment &amp; Support Survey series,
           the NatCen Holistic Framework of Harm (2025), the UK bank-transaction
-          mortality work, and the studies on people harmed by someone else’s gambling that have followed our
+          mortality work, and the harm-to-others research that has followed our
           2021 framing. The 2025 edition carries the tagline{" "}
           <strong className="font-semibold italic text-gray-900">
             "Beyond individual blame. Toward systemic accountability."

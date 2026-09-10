@@ -18,7 +18,7 @@ const ChapterThree = () => {
         <p className="text-gray-700 text-base md:text-lg leading-relaxed pt-2">
           Brain regions responsible for impulse control and reward valuation are not mature
           until around age 25. The earlier gambling exposure starts, the higher the lifetime
-          risk. UK 11-16 year-olds are showing population-level gambling harm before they can
+          risk. UK 11–17-year-olds are showing population-level gambling harm before most can
           legally gamble.
         </p>
       </div>
@@ -31,7 +31,7 @@ const ChapterThree = () => {
         <ul className="space-y-3 text-sm md:text-base text-gray-700 pl-5 list-disc marker:text-gray-400">
           <li className="leading-relaxed">
             The Gambling Commission's Young People &amp; Gambling 2025 survey found{" "}
-            <strong className="font-bold text-gray-900">3.4% of 11–17 year-olds</strong> in
+            <strong className="font-bold text-gray-900">3.4% of 11–17-year-olds</strong> in
             Great Britain (around 200,000 children on the UK child population) scored 2 or
             more on the DSM-IV-MR-J screen, indicating gambling-related harm or behavioural
             difficulty in the past year;{" "}
@@ -58,10 +58,10 @@ const ChapterThree = () => {
         </ul>
       </div>
 
-      {/* Sub-block: Children harmed by someone else’s gambling */}
+      {/* Sub-block: Children harmed by an adult’s gambling */}
       <div className="space-y-3">
         <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-          Children harmed by someone else's gambling
+          Children harmed by an adult’s gambling
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           OHID modelling estimates that{" "}

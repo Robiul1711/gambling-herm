@@ -38,7 +38,6 @@ const ChaptersSidebar = ({ activeSection, onNavigate }) => {
     },
     { id: "crime", label: "10. Gambling and crime", isHeader: true },
     { id: "why-it-exists", label: "Why it exists", isHeader: true },
-    { id: "how-it-is-used", label: "How it's used", isHeader: true },
     { id: "read-and-cite", label: "Read & cite", isHeader: true },
   ];
 

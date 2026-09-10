@@ -57,12 +57,14 @@ const ChapterFive = () => {
           The statutory levy
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-          The UK government announced a statutory levy in 2024, set initially at just under £120 million
-          per year. GHUK's APPG submission (July 2026) shows the levy is{" "}
-          <strong className="font-bold text-gray-900">40 to 60 times smaller</strong> than even the
-          conservative floor of the modelled UK health-economic burden, and roughly 200 times (about 70 times on the lowest basis)
-          smaller than the central estimate. We support distribution through an arms-length body,
-          ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and
+          The statutory levy came into force in April 2025 and raised just under
+          £120m in its first year. Estimates built on health-state utility
+          decrements, the method used in Australian and British burden studies,
+          put the levy at roughly 200 times smaller than the central estimate
+          of the UK’s annual health loss from gambling, and about 70 times
+          smaller than even its lowest published basis. We support distribution
+          through an arms-length body, ringfenced for prevention, treatment,
+          aftercare, services for people harmed by someone else’s gambling and
           independent research (see our{" "}
           <Link
             to="/policy-and-advocacy"
@@ -80,11 +82,14 @@ const ChapterFive = () => {
           GHUK's position
         </h3>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-          We accept no funding from the gambling industry or its trade bodies, and we asked to
-          be removed from the industry's RET list in 2023. This is the operating discipline that
-          makes everything else credible. The 2025/26 edition of{" "}
-          <em className="italic">Gambling Explained</em> updates this chapter with the recent
-          history of RET wind-down and the transition to statutory funding.
+          We accept no funding from the gambling industry or its trade bodies, and
+          we asked to be removed from the Gambling Commission’s list of
+          organisations approved to receive research, education and treatment
+          contributions from operators in 2023. This is the operating
+          discipline that makes everything else credible. The 2025/26 edition
+          of <em className="italic">Gambling Explained</em> updates this chapter
+          with the recent history of RET wind-down and the transition to
+          statutory funding.
         </p>
       </div>
     </div>
