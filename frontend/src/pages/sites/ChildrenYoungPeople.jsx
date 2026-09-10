@@ -35,7 +35,7 @@ const ChildrenYoungPeople = () => {
           }
           description={
             bannerData?.description ||
-            "Children are often affected by other people's gambling. These harms are frequently hidden and are not limited to extreme or crisis situations. Gambling-related harm can build cumulatively over time, creating a lasting footprint that can affect children's emotional wellbeing, relationships, and life chances."
+            "Children are harmed by someone else's gambling. These harms are frequently hidden and are not limited to extreme or crisis situations. Gambling-related harm can build cumulatively over time, leaving legacy harms that shape children's emotional wellbeing, relationships and life chances."
           }
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}

@@ -1,6 +1,5 @@
 import React from "react";
 import bannerImg from "@/assets/images/cy1.png";
-import illustrationImg from "@/assets/images/ourposition.png";
 import useClient from "@/hooks/useClient";
 
 export default function CYBanner() {
@@ -26,7 +25,7 @@ export default function CYBanner() {
 
       {/* Large Featured Image */}
       <div className="mb-8">
-        <div className="overflow-hidden  shadow-xs border border-gray-100 bg-gray-50">
+        <div className="overflow-hidden shadow-xs border border-gray-100 bg-gray-50">
           <img
             src={image}
             alt="Children grow up surrounded by gambling marketing"
@@ -35,14 +34,13 @@ export default function CYBanner() {
         </div>
         <p className="mt-3 text-xs sm:text-sm italic text-gray-500 font-normal leading-relaxed">
           Children grow up surrounded by gambling marketing: on the high street,
-          on shirts and on their screens. A still from GHUK's children's films.
+          on shirts and on their screens.
         </p>
       </div>
 
-      {/* Key Points Card & Illustration Section */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-6">
-        {/* Left Column: Key Points Container */}
-        <div className="md:col-span-7 bg-[#edf7fd] border-l-[4px] border-[#17a9df]  p-6 md:p-8 shadow-xs">
+      {/* Key Points Card Section */}
+      <div className="pt-4">
+        <div className="w-full bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 shadow-xs">
           <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#17a9df] mb-4">
             KEY POINTS
           </h3>
@@ -55,17 +53,6 @@ export default function CYBanner() {
                 {point}
               </p>
             ))}
-          </div>
-        </div>
-
-        {/* Right Column: Illustration Image */}
-        <div className="md:col-span-5 flex justify-center items-center">
-          <div className="w-full overflow-hidden p-2">
-            <img
-              src={illustrationImg}
-              alt="Half of all gambling harm affects others"
-              className="w-full h-auto object-contain max-h-[320px] "
-            />
           </div>
         </div>
       </div>

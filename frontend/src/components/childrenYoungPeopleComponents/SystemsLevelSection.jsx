@@ -57,7 +57,7 @@ const SystemsLevelSection = () => {
         </h4>
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-normal">
           To find out more about working with us at a systems level, or to
-          discuss a partnership, contact us via{" "}
+          discuss a partnership, contact us through our{" "}
           <Link
             to="/about#contact"
             className="underline font-semibold hover:text-[#17a9df] transition-colors"

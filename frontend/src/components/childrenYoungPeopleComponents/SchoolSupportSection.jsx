@@ -15,14 +15,10 @@ const SchoolSupportSection = () => {
       {/* Narrative Paragraphs */}
       <div className="space-y-5 text-gray-600 text-sm sm:text-base leading-relaxed font-normal mb-8">
         <p>
-          We deliver gambling harm awareness sessions directly to children and
-          young people in school settings, reaching over{" "}
-          <strong className="font-bold text-gray-900">
-            5,000 young people every year.
-          </strong>{" "}
-          These sessions are designed to build understanding, resilience, and
-          confidence to talk about gambling-related harm, including the impacts
-          of other people's gambling.
+          People with lived experience of gambling harm speak directly with
+          children and young people. Our approach is independent of the gambling
+          industry and built on safeguarding: children already living with
+          gambling harm are treated as a pressing need, not an afterthought.
         </p>
         <p>
           Our workshops are age-appropriate, evidence-informed, and shaped by

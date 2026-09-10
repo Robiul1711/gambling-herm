@@ -49,8 +49,15 @@ const RoadSafetyResearchStats = () => {
           A study of 5,639 UK driving licence holders
         </h2>
 
-        {/* Subtitle */}
-        <p className="text-gray-300 text-base sm:text-lg leading-relaxed md:leading-[1.8] mb-12 font-normal">
+        {/* Subtitle / Credit */}
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed md:leading-[1.8] mb-4 font-normal">
+          A YouGov survey of 6,570 UK adults, of whom 5,639 held a driving
+          licence, commissioned by Gambling Harm UK and undertaken by Dr Leanne
+          Savigar-Shaw (University of Staffordshire) and Professor Gemma Briggs
+          (The Open University).
+        </p>
+
+        <p className="text-gray-400 text-sm leading-relaxed mb-12 font-normal italic">
           Findings are early and indicative. They point to gambling harm as a
           factor worth considering alongside established road-safety risks, not
           a settled conclusion.
