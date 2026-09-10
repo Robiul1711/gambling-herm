@@ -7,7 +7,7 @@ const items = [
   },
   {
     title: "Trigger compulsive reward responses.",
-    text: "Variable-ratio reinforcement (unpredictable, intermittent rewards) is the single most psychologically addictive schedule of reinforcement known to behavioural science. Modern slots are built on it deliberately.",
+    text: "Variable-ratio reinforcement (unpredictable, intermittent rewards) is the most behaviourally sticky reinforcement schedule known. Modern slots are built on it deliberately.",
   },
   {
     title: "Stage near-misses.",

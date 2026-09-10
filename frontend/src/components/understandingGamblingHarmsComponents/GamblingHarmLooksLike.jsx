@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useClient from "@/hooks/useClient";
-import meccVideo from "@/assets/videos/mecc.mp4";
 
 const harms = [
   {
@@ -33,11 +32,11 @@ const harms = [
     title: "SUICIDE RISK",
     description: (
       <>
-        Gambling disorder carries a severe, independent suicide risk; in the
-        best-powered registry cohort, suicide was the leading cause of death.
-        Risk appears to peak not at the height of gambling but in the days and
-        weeks after a heavy loss, when shame and hopelessness compound. If this
-        is you, please call{" "}
+        Gambling disorder carries a serious suicide risk: in the best-powered
+        registry cohort, suicide was the leading cause of death, at five times
+        the general-population rate. Risk appears to peak not at the height of
+        gambling but in the days and weeks after a heavy loss, when shame and
+        hopelessness compound. If this is you, please call{" "}
         <Link
           to="/urgent-help"
           className="underline text-[#2d2d2d] hover:text-[#1d7092] transition-colors font-medium"
@@ -76,18 +75,6 @@ const GamblingHarmLooksLike = () => {
   const sectionDesc =
     data?.description ||
     "Harm is plural. It is rarely just about money, and the money harms are rarely just about debt.";
-  const videoUrl = data?.videoUrl || meccVideo;
-
-  const captionText =
-    data?.subtitle ||
-    "GHUK's MECC training film — a lived-experience interview on how gambling exposure often starts in childhood.";
-
-  // Parse caption split by em-dash or hyphen
-  const parts = captionText.split("—");
-  const captionBold = parts[0]?.trim() || "GHUK's MECC training film";
-  const captionItalic =
-    parts[1]?.trim() ||
-    "a lived-experience interview on how gambling exposure often starts in childhood.";
 
   return (
     <section
@@ -96,39 +83,16 @@ const GamblingHarmLooksLike = () => {
     >
       <div>
         {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-8 md:mb-16">
-          <div className="flex-1 max-w-xl text-left">
-            <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
+        <div className="mb-8 md:mb-16">
+          <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-5 tracking-tight leading-tight">
-              {sectionTitle}
-            </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 mb-5 tracking-tight leading-tight">
+            {sectionTitle}
+          </h2>
 
-            <p className="text-gray-600 leading-relaxed text-base sm:text-lg font-normal">
-              {sectionDesc}
-            </p>
-          </div>
-
-          {/* Right Video Player Column */}
-          <div className="w-full lg:w-96 shrink-0 flex items-center justify-center">
-            <div className="w-full bg-black overflow-hidden  shadow-md flex flex-col">
-              {/* Video */}
-              <video
-                key={videoUrl}
-                src={videoUrl}
-                controls
-                className="w-full h-auto object-cover max-h-[220px]"
-              />
-
-              {/* Video Meta Title Banner */}
-              <div className="bg-[#141414] p-3.5 text-xs text-gray-300 border-t border-gray-800 text-left">
-                <p className="leading-relaxed">
-                  <span className="font-bold text-white">{captionBold}</span> —{" "}
-                  <span className="italic text-gray-400">{captionItalic}</span>
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-gray-600 leading-relaxed text-base sm:text-lg font-normal">
+            {sectionDesc}
+          </p>
         </div>
 
         {/* Table Rows */}

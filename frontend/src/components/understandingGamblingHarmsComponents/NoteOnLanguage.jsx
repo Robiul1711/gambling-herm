@@ -47,8 +47,8 @@ const NoteOnLanguage = () => {
             puts the harm where the public-health evidence locates it: at the
             intersection of a product, a marketing environment, and a person. It
             makes treatment, regulation, and policy possible. It also makes
-            shame less likely, which is the single biggest barrier to people
-            seeking help.
+            shame less likely: the leading barrier to seeking help reported at
+            the severe level in the GB treatment and support survey.
           </p>
         </div>
 
@@ -74,11 +74,11 @@ const NoteOnLanguage = () => {
 
             <p>
               It produces a number that radically understates the share of the
-              population experiencing harm. The more recent Gambling Survey for
-              Great Britain, measuring across the full distribution, finds 14.6%
-              of adults score PGSI 1+, with 2.7% in the most severe band alone
-              (GSGB 2024). Compare either number with the 0.4% still quoted in
-              public debate.
+              population experiencing harm. The most recent Gambling Survey for
+              Great Britain, measuring across the full distribution, finds 13.6%
+              of adults score PGSI 1+, with 2.4% in the most severe band alone
+              (GSGB Year 3, 2025). Compare either number with the 0.4% still
+              quoted in public debate.
             </p>
           </div>
         </div>

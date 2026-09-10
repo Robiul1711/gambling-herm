@@ -12,8 +12,8 @@ const higherRisk = [
 ];
 
 const oftenOverlooked = [
-  "Women, particularly with online slots and bingo apps",
-  "Older adults (a fast-growing group)",
+  "Women, whose harm is rising and who face higher stigma barriers to seeking help",
+  "Older adults (rarely reached by prevention or services)",
   "People in recovery from alcohol or drug dependence",
   "Veterans",
   "People from minority ethnic communities, who face additional barriers to support",
