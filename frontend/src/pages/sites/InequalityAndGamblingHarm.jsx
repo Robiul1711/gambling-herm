@@ -13,7 +13,7 @@ import useClient from "@/hooks/useClient";
 
 const sections = [
   { id: "our-position", title: "1. Our position" },
-  { id: "headline-ratio", title: "2. The headline ratio" },
+  { id: "headline-ratio", title: "2. Headline ratios" },
   { id: "distribution-factors", title: "3. Three distribution factors" },
   { id: "where-harm-concentrates", title: "4. Where harm concentrates" },
   { id: "what-drives-harm", title: "5. What drives harm & blocks support" },

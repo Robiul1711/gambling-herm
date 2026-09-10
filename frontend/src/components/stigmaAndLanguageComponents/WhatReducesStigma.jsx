@@ -1,6 +1,4 @@
 import React from "react";
-import whatstigma from "@/assets/images/whatstigma.png";
-import useClient from "@/hooks/useClient";
 
 const reductionPoints = [
   {
@@ -14,7 +12,7 @@ const reductionPoints = [
     number: 2,
     title: "Centre lived experience, not as testimony, as leadership",
     description:
-      "People with lived experience of gambling harm, including people harmed by someone else’s gambling and the bereaved, should sit at the centre of policy and service design. Not as case studies, as the people defining the response. This is one of the most reliably stigma-reducing things research finds.",
+      "The experience of gambling harm, including harm from someone else's gambling, should sit at the centre of how policy and services are designed, alongside professional and research perspectives.",
   },
   {
     number: 3,
@@ -31,15 +29,6 @@ const reductionPoints = [
 ];
 
 const WhatReducesStigma = () => {
-  const { data: responseData } = useClient({
-    queryKey: ["about", "work-stigma"],
-    url: "/about/work-stigma",
-  });
-
-  const data = responseData?.data;
-
-  const bottomStillImage = data?.audioUrl || whatstigma;
-
   return (
     <section id="reduces-stigma" className="py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -55,31 +44,6 @@ const WhatReducesStigma = () => {
         <p className="text-gray-600 text-base sm:text-lg mb-8 leading-relaxed font-normal">
           The international evidence points to four changes.
         </p>
-
-        {/* Lived Experience Media Player Box */}
-        <div className="bg-[#f8fafc] border-l-[4px] border-[#1d7092] p-6 md:p-8  mb-8 shadow-xs">
-          <div className="text-xs font-bold uppercase tracking-wider text-[#1d7092] mb-2">
-            EXPERTS BY EXPERIENCE · PHOENIXFM, MAY 2026
-          </div>
-          <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-4 leading-snug">
-            John Gilham on shame, stigma and the language we use about gambling
-            harm
-          </h4>
-
-          {/* Audio Player Component */}
-          <div className="mb-4">
-            <audio controls className="w-full h-10 accent-[#1d7092]">
-              <source src="your-audio-file-path-here.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-
-          <p className="text-xs sm:text-sm text-gray-500 italic leading-relaxed">
-            Clip: John Gilham (Expert by Experience), interviewed on Phoenix
-            FM's <span className="not-italic font-semibold">123 Friday</span>{" "}
-            show, May 2026.
-          </p>
-        </div>
 
         {/* Point Cards Layout Grid Stack */}
         <div className="space-y-4 mb-8">
@@ -107,7 +71,7 @@ const WhatReducesStigma = () => {
         </div>
 
         {/* Dark Position/Note Panel */}
-        <div className="bg-[#181818] border-l-[4px] border-[#17a9df] p-6 md:p-8 text-white shadow-md mb-12">
+        <div className="bg-[#181818] border-l-[4px] border-[#17a9df] p-6 md:p-8 text-white shadow-md">
           <h4 className="text-[#17a9df] text-xs font-bold uppercase tracking-wider mb-4">
             A NOTE ON LANGUAGE
           </h4>
@@ -118,23 +82,6 @@ const WhatReducesStigma = () => {
             frame around it (that stigma can be solved with better individual
             word choice) understates the structural piece. Use the language
             guide; reject the implied theory of change.
-          </p>
-        </div>
-
-        {/* Video Still Image and Caption Container */}
-        <div className="max-w-md mx-auto flex flex-col items-center text-center mt-12">
-          <div className="w-full aspect-[16/10]  overflow-hidden mb-4 shadow-sm">
-            <img
-              src={bottomStillImage}
-              alt="Still from GHUK's Brothers Gambling Harm safeguarding film"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <p className="text-xs sm:text-sm italic text-gray-500 leading-relaxed">
-            Still from GHUK's{" "}
-            <span className="font-semibold">Brothers Gambling Harm</span>{" "}
-            safeguarding film. The people behind the statistics are not problems
-            to be solved.
           </p>
         </div>
       </div>

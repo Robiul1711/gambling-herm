@@ -12,7 +12,7 @@ const sections = [
   { id: "framing", title: "1. Framing" },
   { id: "evidence", title: "2. Evidence base" },
   { id: "hazardous", title: "3. Hazardous products" },
-  { id: "services", title: "4. Recognition & services" },
+  { id: "services", title: "4. Adapted services" },
   { id: "position", title: "5. Our position" },
 ];
 

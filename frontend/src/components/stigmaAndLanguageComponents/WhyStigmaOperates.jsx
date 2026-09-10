@@ -26,9 +26,10 @@ const stigmaFactors = [
     label: "INTERSECTING STIGMAS",
     description: (
       <>
-        People who face stigma in other parts of their lives, women, minority
-        ethnic groups, LGBTQ+ people, people with mental-health conditions,
-        experience compounded gambling-harm stigma. See our{" "}
+        People who already face stigma elsewhere in their lives (women, people
+        from minority ethnic communities, LGBTQ+ people, people with
+        mental-health conditions) experience compounded gambling-harm stigma.
+        See our{" "}
         <Link
           to="/inequality-and-gambling-harm"
           className="text-[#1d7092] underline hover:text-opacity-80 transition-all font-medium"
@@ -78,6 +79,26 @@ const WhyStigmaOperates = () => {
             </div>
           ))}
         </div>
+
+        {/* Closing Sentence with Links */}
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed pt-8 font-normal">
+          How the industry frames harm as personal responsibility, and what it
+          has done to keep that frame in place, is set out in{" "}
+          <Link
+            to="/gambling-explained"
+            className="text-gray-900 font-semibold underline hover:text-[#17a9df] transition-colors"
+          >
+            Gambling Explained
+          </Link>{" "}
+          and{" "}
+          <Link
+            to="/gambling-tactics"
+            className="text-gray-900 font-semibold underline hover:text-[#17a9df] transition-colors"
+          >
+            Gambling Tactics
+          </Link>
+          .
+        </p>
       </div>
     </section>
   );
