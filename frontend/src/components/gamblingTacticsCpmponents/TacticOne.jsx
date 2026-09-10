@@ -24,9 +24,11 @@ const tacticCards = [
     body: (
       <>
         The narrow PGSI 8+ headline radically understates the share of the UK
-        population in gambling harm. The public-health evidence is that 70–85%
-        of population-level harm sits in PGSI 1–7. The current GSGB 2024 survey
-        reports PGSI 1+ around 14.6% and PGSI 8+ around 2.7%. We say "people
+        population in gambling harm. Most of the population-level health loss
+        sits below the severe band: up to 85% in the Australian analysis (Browne
+        et al., 2017), and more than half on GHUK’s UK model once people harmed
+        by someone else’s gambling are counted. The current survey (GSGB Year 3,
+        2025) reports PGSI 1+ at 13.6% and PGSI 8+ at 2.4%. We say "people
         harmed by gambling" and report across the full distribution.
       </>
     ),
@@ -92,14 +94,14 @@ const tacticCards = [
     subQuote: "The consumer-sovereignty defence.",
     body: (
       <>
-        The "freedom to gamble" argument is confounded by harm to people harmed by someone else’s gambling.
-        Children, partners, parents, siblings and creditors do not consent to
-        the gambling that harms them. Once that is recognised, the
-        consumer-choice frame collapses. This is the central insight in{" "}
-        <em className="italic">Gambling Explained</em>: harms in people harmed by someone else’s gambling
-        challenge the industry in two ways. They reduce the appeal of gambling
-        and contribute to its social unacceptability. And they confound the
-        "freedom to gamble" argument.
+        The "freedom to gamble" argument is confounded by harm to the people
+        around the gambling. Children, partners, parents, siblings and
+        creditors do not consent to the gambling that harms them. Once that
+        is recognised, the consumer-choice frame collapses. This is the central
+        insight in <em className="italic">Gambling Explained</em>: harm to people
+        who never chose to gamble challenges the industry in two ways. They
+        reduce the appeal of gambling and contribute to its social
+        unacceptability. And they confound the "freedom to gamble" argument.
       </>
     ),
   },

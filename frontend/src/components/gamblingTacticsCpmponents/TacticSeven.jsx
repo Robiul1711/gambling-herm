@@ -32,10 +32,10 @@ const TacticSeven = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="border border-gray-200/90 bg-white p-6  space-y-1.5 shadow-xs">
             <span className="text-3xl sm:text-4xl font-extrabold text-gray-900 block tracking-tight">
-              £15bn
+              £16.8bn
             </span>
             <p className="text-xs sm:text-sm text-gray-500 font-normal leading-snug">
-              UK gross gambling yield per year (industry revenue)
+              GB gross gambling yield, 2024/25
             </p>
           </div>
 
@@ -50,20 +50,19 @@ const TacticSeven = () => {
 
           <div className="border border-gray-200/90 bg-white p-6  space-y-1.5 shadow-xs">
             <span className="text-3xl sm:text-4xl font-extrabold text-gray-900 block tracking-tight">
-              £100m
+              ~£120m
             </span>
             <p className="text-xs sm:text-sm text-gray-500 font-normal leading-snug">
-              2024 statutory levy
+              statutory levy, year one (in force April 2025)
             </p>
           </div>
 
           <div className="border border-gray-200/90 bg-white p-6  space-y-1.5 shadow-xs">
             <span className="text-3xl sm:text-4xl font-extrabold text-gray-900 block tracking-tight">
-              150-220×
+              ~200x
             </span>
             <p className="text-xs sm:text-sm text-gray-500 font-normal leading-snug">
-              how much larger the modelled annual health-economic burden is than
-              the levy
+              the modelled central health-economic burden vs the levy
             </p>
           </div>
         </div>
@@ -92,7 +91,7 @@ const TacticSeven = () => {
             <strong className="font-bold text-gray-900 mr-1">
               Czech Republic:
             </strong>{" "}
-            social cost approximately 4× tax revenue (Roubal et al., 2017).
+            social costs of gambling estimated at €540 to €620 million in 2012 (Winkler et al., 2017).
           </li>
           <li className="leading-relaxed font-normal">
             <strong className="font-bold text-gray-900 mr-1">
@@ -104,9 +103,9 @@ const TacticSeven = () => {
             <strong className="font-bold text-gray-900 mr-1">
               United Kingdom:
             </strong>{" "}
-            GHUK modelling values the annual health loss alone at £15.6-21.9bn,
-            against roughly £4bn in gambling taxes (OBR) and a £100m statutory
-            levy (
+            GHUK modelling values the annual health loss alone at roughly £22–32bn (scenario range),
+            against roughly £4bn in gambling taxes (OBR) and a statutory levy that raised just under
+            £120m in year one (
             <Link
               to="/evidence"
               className="text-gray-900 font-semibold underline hover:text-[#0093D0] transition-colors"
@@ -154,12 +153,12 @@ const TacticSeven = () => {
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
           The industry's contribution to research, education and treatment via
           the voluntary levy was around £35 million per year at its peak.
-          Against UK GGY of £15 billion, this is 0.23%. The framing was a
-          conventional under-investment positioned as public benefaction. The
-          statutory levy at just under £120 million per year is an improvement but, as
-          GHUK's APPG modelling shows, still 40 to 60 times smaller than even
-          the conservative floor of the population-level burden it is meant to
-          address.
+          Against Great Britain’s gross gambling yield of £16.8 billion, just
+          under £120 million is around 0.7%. The framing was a conventional
+          under-investment positioned as public benefaction. The statutory levy
+          is an improvement but still roughly 200 times smaller than the central
+          estimate of the population-level burden it is meant to address, and
+          about 70 times smaller than even its lowest published basis.
         </p>
       </div>
     </div>

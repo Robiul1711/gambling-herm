@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import phone from "@/assets/images/phone.png";
 
 const TacticTwo = () => {
   return (
@@ -76,14 +75,7 @@ const TacticTwo = () => {
         </ul>
       </div>
 
-      {/* Image Banner */}
-      <div className="w-full overflow-hidden  shadow-xs">
-        <img
-          src={phone}
-          alt="Golden Riches slot game interface on a smartphone"
-          className="w-full h-auto object-cover "
-        />
-      </div>
+
 
       {/* Sub-block: The "shirt sponsorship doesn't cause harm" framing */}
       <div className="space-y-3">
