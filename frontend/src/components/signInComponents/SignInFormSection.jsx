@@ -240,12 +240,12 @@ const SignInFormSection = () => {
 
           <div className="text-slate-700">
             Having trouble signing in?{" "}
-            <Link
-              to="/about#contact"
+            <a
+              href="mailto:hello@gamblingharm.com?subject=GHUK%20Member%20Sign%20In%20Support"
               className="underline font-semibold text-slate-900 hover:text-[#0093D0] transition-colors"
             >
               Contact support
-            </Link>
+            </a>
             .
           </div>
         </div>

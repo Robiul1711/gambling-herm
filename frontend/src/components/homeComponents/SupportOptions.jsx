@@ -5,7 +5,7 @@ export default function SupportOptions() {
     {
       label: "WHAT WE DO",
       description:
-        "Prevention at every level: education, research and advocacy, shaped and delivered by Experts by Experience. We connect people to trusted specialist support; we do not provide treatment ourselves.",
+        "Prevention at every level: research, awareness, legislation, regulation, and treatment, shaped and delivered by individuals with lived experience.",
     },
     {
       label: "HOW CHANGE HAPPENS",
@@ -15,7 +15,7 @@ export default function SupportOptions() {
     {
       label: "WHAT SUCCESS LOOKS LIKE",
       description:
-        "Fewer people harmed in the first place, people harmed by someone else’s gambling recognised and supported, and gambling treated like the commercial determinant of health it is, alongside tobacco and alcohol.",
+        "Fewer people harmed in the first place, people harmed by someone else's gambling recognised and supported in their own right, and gambling treated like the commercial determinant of health it is, alongside tobacco and alcohol.",
     },
   ];
 
@@ -37,11 +37,9 @@ export default function SupportOptions() {
 
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-4xl font-normal">
             Gambling harm is not inevitable. It can be prevented. We work across
-            the whole prevention spectrum: stopping harm before it starts,
-            catching it early, and reducing its damage for those already
-            affected. GHUK exists because gambling harm is industrially produced
-            and publicly neglected, and because the people who understand it
-            best, Experts by Experience, have been missing from the response.
+            the whole prevention spectrum: stopping harm before it starts and
+            reducing its damage for those already affected. GHUK exists because
+            gambling harm is industrially produced and publicly neglected.
           </p>
         </div>
 

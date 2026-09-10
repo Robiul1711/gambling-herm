@@ -231,8 +231,8 @@ export default function Navbar() {
                               Vision, values &amp; aims
                             </DropdownItem>
                             <DropdownItem
-                              to="/about#funding"
-                              active={isLinkActive("/about#funding")}
+                              to="/funding-and-conflicts-of-interest"
+                              active={isLinkActive("/funding-and-conflicts-of-interest")}
                             >
                               Funding &amp; conflict of interest
                             </DropdownItem>
@@ -780,9 +780,9 @@ export default function Navbar() {
                           Vision, values &amp; aims
                         </Link>
                         <Link
-                          to="/about#funding"
+                          to="/funding-and-conflicts-of-interest"
                           onClick={() => setMobileMenuOpen(false)}
-                          className={getMobileSubLinkClass("/about#funding")}
+                          className={getMobileSubLinkClass("/funding-and-conflicts-of-interest")}
                         >
                           Funding &amp; conflict of interest
                         </Link>

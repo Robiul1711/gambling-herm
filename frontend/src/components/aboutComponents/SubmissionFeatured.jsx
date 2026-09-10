@@ -30,7 +30,7 @@ export default function SubmissionFeatured() {
               against the scale of the current statutory levy, and a structured
               recommendations package covering levy, advertising, product
               safety, MECC, NHS coding and DHSC regulatory consolidation.
-              Authored by Dr Kishan Patel (CEO & Founder).
+              Authored by Dr Kishan Patel (CEO & Co-Founder).
             </p>
           </div>
 

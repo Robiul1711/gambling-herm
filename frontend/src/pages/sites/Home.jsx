@@ -19,12 +19,11 @@ const Home = () => {
       <OurWorkCommonContact
         primaryClass="text-white bg-Primary border-black hover:bg-Primary/20"
         secondaryClass=" hover:bg-Primary"
-        title="You don't have to do this alone."
-        description="If gambling is harming you or someone you love, there is a way through.
-We don't provide treatment ourselves, but we can connect you with trusted specialist services, free and confidential. We're also working to prevent gambling harm, so that fewer people have to make this journey at all."
-        primaryBtnText="Get Help Now"
+        title="Prevention is the strategy. Support is here today."
+        description="Most of this page is about stopping harm before it starts. But if gambling is harming you, or someone you love, right now: you don't have to wait for the system to change. Free, confidential support exists today, and we can point you to the right door."
+        primaryBtnText="Get help now"
         primaryBtnLink="/get-help"
-        secondaryBtnText="Read Our Policy Positions"
+        secondaryBtnText="Read our policy positions"
         secondaryBtnLink="/policy-and-advocacy"
       />
     </div>

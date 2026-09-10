@@ -31,7 +31,7 @@ export default function WhoGamblingHarms() {
       number: "~9%",
       text: (
         <>
-          of adults in Great Britain, about 4.9 million people, reported
+          of adults in Great Britain, around 4.8 million people, reported
           experiencing harm from someone else's gambling in the past year:
           partners, parents, children, siblings, close friends. That is
           comparable in scale to the number harmed by their own gambling

@@ -140,8 +140,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/about#funding"
-                    className="hover:text-white transition-colors"
+                    to="/funding-and-conflicts-of-interest"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Funding &amp; COI
                   </Link>

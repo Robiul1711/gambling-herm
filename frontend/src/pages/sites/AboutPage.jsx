@@ -31,10 +31,10 @@ const AboutPage = () => {
         {/* <AboutBanner /> */}
         <GamblingCommonBanner
           section={bannerData?.subtitle || "Who we are"}
-          title={bannerData?.title || "An independent voice on gambling harm."}
+          title={bannerData?.title || "A public-health charity tackling gambling harm at the level of systems."}
           description={
             bannerData?.description ||
-            "We exist because gambling causes preventable, industrial-scale harm in the UK, and the people most affected deserve accurate information, real support, population-level action and a regulatory response that takes them seriously."
+            "Gambling Harm UK is an independent charity, registered in England and Wales and governed by a board that combines lived experience with professional expertise. We do not accept funding from the gambling industry. We embed prevention, early identification and safeguarding in everyday professional practice, across health, education, local government and the voluntary sector."
           }
           image={bannerData?.image || aboutBannerImg}
           isLoading={isLoading}

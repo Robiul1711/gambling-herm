@@ -26,7 +26,7 @@ const ContactAndPress = () => {
               hello@gamblingharm.com
             </a>
             <p className="text-gray-300 text-sm leading-relaxed pt-2">
-              For support and routes to help, please use{" "}
+              For everything else: hello@gamblingharm.com. We read everything; replies can take a few days. For support and routes to help, please use{" "}
               <Link
                 to="/get-help"
                 className="text-[#38bdf8] hover:underline underline-offset-4"
@@ -47,9 +47,7 @@ const ContactAndPress = () => {
               press@gamblingharm.com
             </a>
             <p className="text-gray-300 text-sm leading-relaxed pt-2">
-              We aim to respond to UK national press within 4 working hours,
-              others within one working day. Out of hours, please use the same
-              address.
+              Press and media enquiries: press@gamblingharm.com. We are a small team; if you are on a deadline, say so in the subject line and we will do what we can.
             </p>
           </div>
 

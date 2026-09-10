@@ -1,86 +1,155 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
 import useClient from "@/hooks/useClient";
+import anjanetteImg from "@/assets/team/anjanette-stokes.jpg";
+import fayImg from "@/assets/team/fay-laidler.jpg";
+import lucyImg from "@/assets/team/lucy-hays.jpg";
+import ailbheImg from "@/assets/team/ailbhe-kazounis.jpg";
+
+const getBioParagraphs = (bio) => {
+  if (typeof bio === "string") {
+    return bio.split("\n").filter(Boolean);
+  }
+  if (Array.isArray(bio)) {
+    return bio;
+  }
+  return [];
+};
+
+const getInitials = (member) => {
+  if (member.initials) return member.initials;
+  if (!member.name) return "TM";
+  const parts = member.name.split(" ").filter(Boolean);
+  if (parts.length > 1) {
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  return member.name.substring(0, 2).toUpperCase();
+};
+
+const DEFAULT_OPERATIONAL_MEMBERS = [
+  {
+    id: "kishan-patel",
+    name: "Dr Kishan Patel",
+    role: "CEO & CO-FOUNDER",
+    type: "operational",
+    bio: "He co-founded GHUK in 2020, drawing on lived experience of being harmed by someone else's gambling and through gambling-related bereavement. He leads GHUK's strategic direction, policy development and public-health advocacy across the UK.",
+  },
+  {
+    id: "fay-laidler",
+    name: "Fay Laidler",
+    role: "ENGAGEMENT AND QUALITY LEAD",
+    type: "operational",
+    image: fayImg,
+    bio: "Fay is the Engagement and Quality Lead at GHUK, joining the organisation in May 2026. She completed her PhD at the University of Glasgow in 2025, focusing on the role of women experiencing harm in gambling policy, and brings a background in research and community engagement.",
+  },
+  {
+    id: "lucy-hays",
+    name: "Lucy Hays",
+    role: "SYSTEMS LEAD",
+    type: "operational",
+    image: lucyImg,
+    bio: "Lucy has spent her career working at the intersection of people and systems, understanding what gets in the way of people living well and focusing on how to change it. She began in social housing, working with individuals, families, and communities.",
+  },
+  {
+    id: "anjanette-stokes",
+    name: "Anjanette Stokes",
+    role: "SYSTEMS LEAD",
+    type: "operational",
+    image: anjanetteImg,
+    bio: "Anjanette is a Systems Lead at GHUK, bringing extensive experience across health, education, local government and safeguarding systems.",
+  },
+  {
+    id: "ailbhe-kazounis",
+    name: "Ailbhe Kazounis",
+    role: "PUBLIC HEALTH LEAD",
+    type: "operational",
+    image: ailbheImg,
+    bio: "Ailbhe leads GHUK's public-health translation work, supporting local authorities and NHS teams to embed gambling harm identification and prevention into everyday practice.",
+  },
+];
+
+const DEFAULT_TRUSTEES = [
+  {
+    id: "christopher-gilham",
+    name: "Christopher Gilham",
+    role: "CO-FOUNDER & TRUSTEE (appointed 4 November 2021)",
+    type: "trustee",
+    bio: "A co-founder of Gambling Harm UK and the All Bets Are Off podcast; a mental-health advocate and peer supporter, including work with Ripple Suicide Prevention. Brings lived experience of alcohol and gambling harm, and of neurodivergence.",
+  },
+  {
+    id: "lesley-buckland",
+    name: "Lesley Buckland",
+    role: "TRUSTEE (appointed 12 July 2022)",
+    type: "trustee",
+    bio: "Senior HR and governance leader across industry, higher education and the NHS; former senior leader at LSBU's Faculty of Health, with extensive audit and governance experience.",
+  },
+  {
+    id: "john-gilham",
+    name: "John Gilham",
+    role: "TRUSTEE & SYSTEM LEAD (appointed 18 June 2025)",
+    type: "trustee",
+    bio: "Senior healthcare leader with Chief Executive and Non-Executive experience, including chairing Audit, Finance, Quality and Risk committees; previously Chief Executive of GHUK. Brings lived experience of being harmed by someone else's gambling.",
+  },
+  {
+    id: "michael-tarrega",
+    name: "Michael Tarrega",
+    role: "TRUSTEE (appointed 27 October 2025)",
+    type: "trustee",
+    bio: "Head of Communications on major UK infrastructure programmes, with senior strategic-communications and stakeholder-engagement expertise. Brings lived experience of gambling harm.",
+  },
+  {
+    id: "paul-dent",
+    name: "Paul Dent",
+    role: "CHAIR & TRUSTEE (appointed 27 October 2025; Chair from March 2026)",
+    type: "trustee",
+    bio: "Trauma, addiction and relationship therapist; has led global gambling support services and delivered international presentations on gambling-related harm, recovery and therapeutic practice.",
+  },
+];
 
 export default function TrusteesAndTeam() {
   const [selectedMember, setSelectedMember] = useState(null);
 
-  // Fetch team members dynamically from CMS
+  // Fetch team members dynamically from CMS/API
   const { data: responseData, isLoading } = useClient({
     queryKey: ["teamMembers"],
     url: "/team",
   });
 
-  const teamMembers = responseData?.data || [];
+  const rawMembers = Array.isArray(responseData?.data)
+    ? responseData.data
+    : Array.isArray(responseData)
+    ? responseData
+    : [];
 
-  const getBioParagraphs = (bio) => {
-    if (typeof bio === "string") {
-      return bio.split("\n").filter(Boolean);
-    }
-    if (Array.isArray(bio)) {
-      return bio;
-    }
-    return [];
-  };
+  // Normalize API data fields
+  const normalizedMembers = rawMembers.map((m) => ({
+    ...m,
+    id: m._id || m.id,
+    name: m.name || "",
+    role: m.role || m.designation || m.position || "",
+    bio: m.bio || m.description || m.about || "",
+    image: m.image || m.photo || m.avatar || m.img || "",
+    type: (m.type || m.category || "operational").toLowerCase(),
+  }));
 
-  const getInitials = (member) => {
-    if (member.initials) return member.initials;
-    if (!member.name) return "TM";
-    const parts = member.name.split("").filter(Boolean);
-    if (parts.length > 1) {
-      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
-    }
-    return member.name.substring(0, 2).toUpperCase();
-  };
-
-  // Render Loader / Skeleton
-  if (isLoading) {
-    return (
-      <section className="bg-white py-16 md:py-24 border-b border-gray-100">
-        <div className="section-padding-x">
-          <div className="max-w-5xl mx-auto">
-            {/* Header Skeleton */}
-            <div className="text-left mb-12 animate-pulse">
-              <div className="w-12 h-[3px] bg-[#1B80C4]/40 mb-5" />
-              <div className="h-10 bg-slate-100 w-48 mb-4" />
-              <div className="h-4 bg-slate-100 w-96 max-w-full" />
-            </div>
-
-            {/* Grid Skeleton */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((n) => (
-                <div
-                  key={n}
-                  className="border border-gray-200 p-5 flex flex-col justify-between bg-white animate-pulse"
-                >
-                  <div>
-                    <div className="w-full aspect-[4/3] bg-slate-100 mb-4" />
-                    <div className="h-5 bg-slate-100 w-2/3 mb-2" />
-                    <div className="h-3 bg-slate-100 w-1/3 mb-4" />
-                    <div className="space-y-2">
-                      <div className="h-3 bg-slate-100 w-full" />
-                      <div className="h-3 bg-slate-100 w-full" />
-                      <div className="h-3 bg-slate-100 w-4/5" />
-                    </div>
-                  </div>
-                  <div className="pt-4 mt-6 border-t border-gray-100 flex justify-between items-center">
-                    <div className="h-3 bg-slate-100 w-1/4" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  const operationalMembers = teamMembers.filter(
-    (member) => member.type === "operational" || member.type === "team" || !member.type
+  const apiOperational = normalizedMembers.filter(
+    (m) => m.type === "operational" || m.type === "team" || m.type === "staff"
   );
-  const trusteeMembers = teamMembers.filter(
-    (member) => member.type === "trustee"
+
+  const apiTrustees = normalizedMembers.filter(
+    (m) => m.type === "trustee" || m.type === "trustees" || m.type === "board"
   );
+
+  // If admin has added data via API, show only API data. Otherwise show defaults.
+  const operationalMembers =
+    apiOperational.length > 0
+      ? apiOperational
+      : normalizedMembers.length > 0 && apiTrustees.length === 0
+      ? normalizedMembers
+      : DEFAULT_OPERATIONAL_MEMBERS;
+
+  const trusteeMembers =
+    apiTrustees.length > 0 ? apiTrustees : DEFAULT_TRUSTEES;
 
   return (
     <section className="bg-white py-16 md:py-24 border-b border-gray-100">

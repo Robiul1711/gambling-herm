@@ -1,7 +1,6 @@
 import React from "react";
 import { Layers, Users, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
-import scaleOfHarm from "@/assets/audio/scale-of-harm.mp3";
 
 export default function ThreeFoundations() {
   const foundations = [
@@ -9,15 +8,15 @@ export default function ThreeFoundations() {
       icon: <Layers className="w-5 h-5 text-Primary" />,
       title: "Harm is industrially produced.",
       description:
-        'Not "caused by a vulnerable few", produced, at scale, by products engineered to override the very cognitive capacities a person would need in order to make a "rational" decision about them.',
+        'Not "caused by a vulnerable few": produced, at scale, by products engineered to trick, manipulate and override the cognitive capacities a person would need to make a "rational" decision about them. Games built to look appealing to all ages and to make stopping hard, advertising that is everywhere, and marketing targeted using algorithms and data profiles.',
       linkText: "How The Products Work",
       to: "/understanding-gambling-harms",
     },
     {
       icon: <Users className="w-5 h-5 text-Primary" />,
-      title: "People harmed by someone else’s gambling are direct victims.",
+      title: "People harmed by someone else’s gambling are harmed in their own right.",
       description:
-        "Partners. Parents. Children. They have no agency in the gambling that harmed them, and yet the financial, mental-health and developmental impact on them is real, large, and routinely understated.",
+        "Partners. Parents. Children. They never chose the gambling that harmed them, and yet the financial, mental-health and developmental impact on them is real, large, and routinely understated.",
       linkText: "For Family & Friends",
       to: "/get-help/family-friends",
     },
@@ -52,24 +51,6 @@ export default function ThreeFoundations() {
             response, and every conversation we have with parliamentarians and
             the press.
           </p>
-
-          {/* Voice Player Callout Card */}
-          <div className="mt-6 border-l-4 border-Primary bg-[#F7F9FA] p-5 sm:p-6  rounded-l-xs max-w-2xl">
-            <span className="text-[11px] font-bold text-Primary uppercase tracking-wider block mb-2">
-              HEAR IT IN PLAIN TERMS · PHOENIXFM, MAY 2026
-            </span>
-            <h4 className="text-[14px] sm:text-base font-bold text-gray-900 leading-snug mb-4">
-              John Gilham on the scale of UK gambling harm: 1.6 million adults
-              in England who may benefit from treatment or support.
-            </h4>
-            <audio
-              src={scaleOfHarm}
-              controls
-              className="w-full h-8 accent-Primary"
-            >
-              Your browser does not support the audio element.
-            </audio>
-          </div>
         </div>
 
         {/* Foundations Three-Column Grid */}

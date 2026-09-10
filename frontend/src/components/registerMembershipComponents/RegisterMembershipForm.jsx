@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { useMemberAuth } from "@/context/MemberAuthContext";
 import { CheckCircle2, AlertCircle, Lock, Eye, EyeOff } from "lucide-react";
 
-const sectorOptions = [
-  "Please choose one",
+const SECTOR_OPTIONS = [
   "NHS",
   "Local authority or public health",
   "Education",
@@ -20,6 +19,9 @@ const RegisterMembershipForm = () => {
   const [serverSuccess, setServerSuccess] = useState(false);
   const [serverError, setServerError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [selectedSectors, setSelectedSectors] = useState([]);
+  const [otherSectorText, setOtherSectorText] = useState("");
+  const [sectorError, setSectorError] = useState("");
 
   const {
     register,
@@ -35,8 +37,8 @@ const RegisterMembershipForm = () => {
       confirmPassword: "",
       organisation: "",
       role: "",
-      sector: "Please choose one",
       membershipNeeds: "",
+      anythingElse: "",
       agreeTerms: false,
       newsletterUpdates: false,
     },
@@ -44,8 +46,34 @@ const RegisterMembershipForm = () => {
 
   const passwordValue = watch("password");
 
+  const handleToggleSector = (sector) => {
+    setSectorError("");
+    setSelectedSectors((prev) => {
+      if (prev.includes(sector)) {
+        return prev.filter((s) => s !== sector);
+      } else {
+        return [...prev, sector];
+      }
+    });
+  };
+
   const onSubmit = async (data) => {
     setServerError("");
+
+    if (selectedSectors.length === 0) {
+      setSectorError("Please select at least one sector.");
+      return;
+    }
+
+    const formattedSectors = selectedSectors.map((s) => {
+      if (s === "Other" && otherSectorText.trim()) {
+        return `Other (${otherSectorText.trim()})`;
+      }
+      return s;
+    });
+
+    const primarySector = formattedSectors.join(", ");
+
     try {
       await registerMember({
         name: data.name,
@@ -53,14 +81,18 @@ const RegisterMembershipForm = () => {
         password: data.password,
         organisation: data.organisation,
         role: data.role,
-        sector: data.sector === "Please choose one" ? "Other" : data.sector,
+        sector: primarySector,
+        sectors: formattedSectors,
         membershipNeeds: data.membershipNeeds,
+        anythingElse: data.anythingElse,
         agreeTerms: data.agreeTerms,
         newsletterUpdates: data.newsletterUpdates,
       });
 
       setServerSuccess(true);
       reset();
+      setSelectedSectors([]);
+      setOtherSectorText("");
       window.scrollTo({ top: 100, behavior: "smooth" });
     } catch (err) {
       console.error("Registration submit error:", err);
@@ -269,38 +301,60 @@ const RegisterMembershipForm = () => {
             />
           </div>
 
-          {/* Field 6: Sector */}
+          {/* Field 6: Sector (Multi-Select) */}
           <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Sector
+            <label className="block text-sm font-semibold text-slate-800 mb-1">
+              Sector * (Select all that apply)
             </label>
-            <div className="relative">
-              <select
-                {...register("sector")}
-                className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-800 bg-white focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors appearance-none cursor-pointer"
-              >
-                {sectorOptions.map((opt, i) => (
-                  <option key={i} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-slate-500">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
+            <p className="text-xs text-slate-500 mb-3">
+              You can select more than one sector that applies to your work.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 bg-slate-50/70 p-4 border border-slate-200 rounded-lg">
+              {SECTOR_OPTIONS.map((opt, i) => {
+                const isChecked = selectedSectors.includes(opt);
+                return (
+                  <label
+                    key={i}
+                    className={`flex items-center gap-3 p-2.5 rounded-md cursor-pointer transition-all select-none border text-sm font-medium ${
+                      isChecked
+                        ? "bg-white border-[#0093D0] text-[#0093D0] shadow-xs"
+                        : "bg-white/80 border-slate-200 text-slate-700 hover:border-slate-300"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => handleToggleSector(opt)}
+                      className="w-4 h-4 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
+                    />
+                    <span>{opt}</span>
+                  </label>
+                );
+              })}
             </div>
+
+            {/* If 'Other' is selected, show free-text input */}
+            {selectedSectors.includes("Other") && (
+              <div className="mt-3 animate-fadeIn">
+                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  Please specify your sector / organisation type:
+                </label>
+                <input
+                  type="text"
+                  value={otherSectorText}
+                  onChange={(e) => setOtherSectorText(e.target.value)}
+                  placeholder="e.g. Criminal justice, housing association, independent consultant"
+                  className="w-full px-3.5 py-2.5 text-sm border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
+                />
+              </div>
+            )}
+
+            {sectorError && (
+              <p className="mt-1.5 text-xs text-rose-600 font-medium">
+                {sectorError}
+              </p>
+            )}
           </div>
 
           {/* Field 7: What would you like from membership? */}
@@ -316,6 +370,22 @@ const RegisterMembershipForm = () => {
             ></textarea>
             <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
               Optional, but it helps our team understand what materials to prioritise for your sector.
+            </p>
+          </div>
+
+          {/* Field 8: Anything else you want to tell us */}
+          <div>
+            <label className="block text-sm font-semibold text-slate-800 mb-2">
+              Anything else you want to tell us
+            </label>
+            <textarea
+              rows={3}
+              placeholder="Optional: e.g. details about your local team, collaborative projects, or specific questions"
+              {...register("anythingElse")}
+              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors resize-y"
+            ></textarea>
+            <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
+              Optional: any additional notes, queries, or context you would like to share.
             </p>
           </div>
 

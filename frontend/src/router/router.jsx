@@ -2,6 +2,7 @@ import Dashboard from "@/components/admin/Dashboard";
 import AdminLayout from "@/layout/AdminLayout";
 import Layout from "@/layout/Layout";
 import AboutPage from "@/pages/sites/AboutPage";
+import FundingAndConflictsOfInterest from "@/pages/sites/FundingAndConflictsOfInterest";
 import Home from "@/pages/sites/Home";
 import NewsAndReserch from "@/pages/sites/NewsAndReserch";
 import NewsAndReserchDetails from "@/pages/sites/NewsAndReserchDetails";
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <AboutPage /> },
+      {
+        path: "/funding-and-conflicts-of-interest",
+        element: <FundingAndConflictsOfInterest />,
+      },
+      {
+        path: "/funding-and-coi",
+        element: <FundingAndConflictsOfInterest />,
+      },
       { path: "/news-and-research", element: <NewsAndReserch /> },
       { path: "/news-and-research/:id", element: <NewsAndReserchDetails /> },
       // Our Work — Evidence Base
