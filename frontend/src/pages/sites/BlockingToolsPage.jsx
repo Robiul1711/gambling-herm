@@ -384,7 +384,7 @@ export default function BlockingToolsPage() {
             Blocks also don't address the debt, or the reasons underneath the
             gambling. If money is the more pressing problem right now,{" "}
             <Link
-              to="/get-help/spend-calculator"
+              to="/get-help"
               className="text-[#166B94] underline hover:text-[#005580] font-medium"
             >
               get financial help &rarr;

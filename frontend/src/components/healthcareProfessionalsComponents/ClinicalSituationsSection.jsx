@@ -4,7 +4,7 @@ const ClinicalSituationsSection = () => {
   const situations = [
     {
       id: 1,
-      title: "Suididality presentation",
+      title: "Suicidality presentation",
       content: (
         <>
           Gambling carries one of the highest suicide rates of any addiction.

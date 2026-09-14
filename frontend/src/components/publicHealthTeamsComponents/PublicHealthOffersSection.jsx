@@ -8,10 +8,11 @@ const PublicHealthOffersSection = () => {
       title: "Local burden & needs-assessment support",
       content: (
         <>
-          We can supply unpublished GHUK modelling of local-authority-level harm
-          prevalence (adults and CYP), estimation for people harmed by someone else’s gambling, and
-          product-risk profile. Useful for JSNAs, gambling-harm-needs
-          assessments, and ICB strategic planning.
+          We can supply GHUK's local-authority modelling of gambling participation
+          and harm (adults and CYP), estimation for people harmed by someone else's
+          gambling, and product-risk profiles — published with full methods in our
+          evidence syntheses. Useful for JSNAs, gambling-harm-needs assessments,
+          and ICB strategic planning.
         </>
       ),
     },

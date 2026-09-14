@@ -45,7 +45,7 @@ const RegulatoryCaptureLobbying = () => {
           <div className="p-6 md:p-8">
             {/* Callout Header Label */}
             <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
-              OUR POSITION
+              Our position
             </h4>
 
             {/* Callout Text Copy */}
@@ -57,17 +57,16 @@ const RegulatoryCaptureLobbying = () => {
               regulators; independent data collection that does not rely on
               operator dashboards; and the complete removal of economic growth
               or industry health from the Gambling Commission's statutory
-              objectives. The regulator's sole client should be the public
-              health.
+              objectives.
             </p>
           </div>
         </div>
 
-        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df]  mt-8">
+        <div className="bg-[#181818] overflow-hidden shadow-md border-l-[4px] border-[#17a9df] mt-8">
           <div className="p-6 md:p-8">
             {/* Callout Header Label */}
             <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
-              BURDEN OF HARM → OPERATOR LIABILITY
+              Burden of harm → operator liability
             </h4>
 
             {/* Callout Text Copy */}
@@ -79,7 +78,7 @@ const RegulatoryCaptureLobbying = () => {
               is concerned with) into operator-level legal exposure that the
               operator cannot lobby away. It is the single mechanism that closes
               the loop between the public-health case and enforceable
-              consequences. Advocacy credit: Martin Jones.
+              consequences.
             </p>
           </div>
         </div>

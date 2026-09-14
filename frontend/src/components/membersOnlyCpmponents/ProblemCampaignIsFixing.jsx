@@ -4,8 +4,8 @@ const ProblemCampaignIsFixing = () => {
   const analyticalPoints = [
     {
       highlight:
-        "The current land-based self-exclusion scheme (MOSES / SENSE / BACTA)",
-      body: "relies on staff recognising self-excluded customers from photographs. In practice the recognition rate is low and inconsistent.",
+        "The current land-based self-exclusion schemes — MOSES for betting shops, SENSE for casinos, bacta's scheme for Adult Gaming Centres —",
+      body: "rely on staff recognising self-excluded customers from photographs. In practice the recognition rate is low and inconsistent.",
     },
     {
       highlight: "When a self-excluded person does gain access",

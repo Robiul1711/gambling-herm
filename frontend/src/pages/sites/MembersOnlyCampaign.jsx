@@ -1,6 +1,4 @@
 import React from "react";
-import CommonBanner from "@/components/common/CommonBanner";
-import bannerImg from "@/assets/images/scale.png";
 import SupportTheCampaign from "@/components/membersOnlyCpmponents/SupportTheCampaign";
 import CampaignSupport from "@/components/membersOnlyCpmponents/CampaignSupport";
 import ProblemCampaignIsFixing from "@/components/membersOnlyCpmponents/ProblemCampaignIsFixing";
@@ -9,18 +7,17 @@ import WhyChangesMatter from "@/components/membersOnlyCpmponents/WhyChangesMatte
 import CampaignOurPosition from "@/components/membersOnlyCpmponents/CampaignOurPosition";
 import PublicRecordEvidence from "@/components/membersOnlyCpmponents/PublicRecordEvidence";
 import HowThisSits from "@/components/membersOnlyCpmponents/HowThisSits";
-import GamblingCommonBanner from "@/components/common/GamblingCommonBanner";
 import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "campaign-support", title: "1. Campaign overview" },
+  { id: "campaign-support", title: "1. Why GHUK supports" },
   { id: "the-problem", title: "2. The problem" },
-  { id: "proposals", title: "3. Campaign proposals" },
-  { id: "why-changes-matter", title: "4. Why changes matter" },
+  { id: "proposals", title: "3. Three proposals" },
+  { id: "why-changes-matter", title: "4. Why they matter" },
   { id: "our-position", title: "5. Our position" },
-  { id: "public-record", title: "6. Public record evidence" },
-  { id: "how-this-sits", title: "7. Lived experience context" },
+  { id: "public-record", title: "6. Evidence" },
+  { id: "how-this-sits", title: "7. How this sits with our work" },
   { id: "support-campaign", title: "8. Support the campaign" },
 ];
 
@@ -34,18 +31,66 @@ const MembersOnlyCampaign = () => {
 
   return (
     <div className="">
-      <div className="">
-        <GamblingCommonBanner
-          section={data?.subtitle || "Our work · Partner campaign we support"}
-          title={data?.title || "Members Only."}
-          description={data?.description || "A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."}
-          image={data?.image || bannerImg}
-          buttonText={data?.audioTitle || "membersonlycampaign.org.uk →"}
-          to={"https://membersonlycampaign.org.uk/"}
-          target="_blank"
-          rel="noopener noreferrer"
-          isLoading={isLoading}/>
-      </div>
+      {/* Centered Hero Header without image */}
+      <section
+        className="w-full py-8 sm:py-12 md:py-20 section-padding-x"
+        style={{
+          background:
+            "linear-gradient(180deg, var(--teal-10) 0%, var(--paper) 100%)",
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          {isLoading ? (
+            <div className="space-y-5 animate-pulse w-full max-w-2xl mx-auto flex flex-col items-center">
+              <div className="flex items-center space-x-2">
+                <div className="w-6 h-[2px] bg-slate-200 rounded" />
+                <div className="h-3.5 w-32 bg-slate-200 rounded" />
+              </div>
+              <div className="space-y-3 w-full flex flex-col items-center">
+                <div className="h-10 sm:h-12 w-[85%] bg-slate-200 rounded" />
+                <div className="h-10 sm:h-12 w-[65%] bg-slate-200 rounded" />
+              </div>
+              <div className="space-y-2 pt-1 w-full flex flex-col items-center">
+                <div className="h-4 w-full bg-slate-200 rounded" />
+                <div className="h-4 w-[90%] bg-slate-200 rounded" />
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-4 md:space-y-6">
+              {/* Breadcrumb / Eyebrow */}
+              <div className="flex items-center justify-center space-x-2 text-sm md:text-base font-medium text-slate-600">
+                <span className="w-6 h-[2px] bg-Primary block"></span>
+                <p className="text-Primary2">
+                  {data?.subtitle || "Our work · Partner campaign we support"}
+                </p>
+              </div>
+
+              {/* Title */}
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-800 tracking-tight">
+                {data?.title || "Members Only."}
+              </h1>
+
+              {/* Description */}
+              <p className="text-sm md:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
+                {data?.description ||
+                  "A lived-experience-led campaign by Sam Badcock to fix UK land-based gambling self-exclusion. PIN-protected slot machines. A National App for identity-verification and self-exclusion. Proper enforcement of the rights people already have. GHUK supports it."}
+              </p>
+
+              {/* External Link CTA */}
+              <div className="pt-2">
+                <a
+                  href="https://membersonlycampaign.org.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm md:text-base text-Primary font-semibold px-4 py-2 border border-Primary hover:bg-Primary hover:text-white transition-colors inline-block"
+                >
+                  {data?.audioTitle || "membersonlycampaign.org.uk →"}
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
 
       <PageSectionNav sections={sections} />
 

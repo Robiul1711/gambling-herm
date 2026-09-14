@@ -7,7 +7,6 @@ const PolicyTabs = ({ activeSection, onNavigate }) => {
     { id: "tobacco-control-parallel", label: "3. Tobacco-control parallel" },
     { id: "regulatory-capture-and-lobbying", label: "4. Regulatory capture & lobbying" },
     { id: "our-funding-and-coi", label: "5. Our funding & COI" },
-    { id: "current-asks-of-government", label: "6. Current asks of government" },
   ];
 
   return (

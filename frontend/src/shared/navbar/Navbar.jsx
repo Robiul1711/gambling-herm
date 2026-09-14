@@ -378,12 +378,12 @@ export default function Navbar() {
                             >
                               Policy &amp; advocacy
                             </DropdownItem>
-                            <DropdownItem
+                            {/* <DropdownItem
                               to="/members-only-campaign"
                               active={isLinkActive("/members-only-campaign")}
                             >
                               Members Only Campaign
-                            </DropdownItem>
+                            </DropdownItem> */}
                             <DropdownItem
                               to="/news-and-research"
                               active={pathname.startsWith("/news-and-research")}
@@ -620,14 +620,14 @@ export default function Navbar() {
                               Tools to take action
                             </h4>
                             <ul className="space-y-1">
-                              <DropdownItem
+                              {/* <DropdownItem
                                 to="/get-help/spend-calculator"
                                 active={isLinkActive(
                                   "/get-help/spend-calculator",
                                 )}
                               >
                                 Spend calculator
-                              </DropdownItem>
+                              </DropdownItem> */}
                               <DropdownItem
                                 to="/get-help/blocking-tools"
                                 active={isLinkActive(
@@ -954,7 +954,7 @@ export default function Navbar() {
                         >
                           Policy &amp; advocacy
                         </Link>
-                        <Link
+                        {/* <Link
                           to="/members-only-campaign"
                           onClick={() => setMobileMenuOpen(false)}
                           className={getMobileSubLinkClass(
@@ -962,7 +962,7 @@ export default function Navbar() {
                           )}
                         >
                           Members Only Campaign
-                        </Link>
+                        </Link> */}
                         <Link
                           to="/news-and-research"
                           onClick={() => setMobileMenuOpen(false)}
@@ -1225,7 +1225,7 @@ export default function Navbar() {
                         Tools to take action
                       </div>
                       <div className="space-y-0.5">
-                        <Link
+                        {/* <Link
                           to="/get-help/spend-calculator"
                           onClick={() => setMobileMenuOpen(false)}
                           className={getMobileSubLinkClass(
@@ -1233,7 +1233,7 @@ export default function Navbar() {
                           )}
                         >
                           Spend calculator
-                        </Link>
+                        </Link> */}
                         <Link
                           to="/get-help/blocking-tools"
                           onClick={() => setMobileMenuOpen(false)}

@@ -99,7 +99,7 @@ const router = createBrowserRouter([
       { path: "/get-help/young-people", element: <YoungPeoplePage /> },
       { path: "/get-help/self-assessment", element: <SelfAssessmentPage /> },
       { path: "/get-help/affected-others-check-in", element: <AffectedOthersCheckIn /> },
-      { path: "/get-help/spend-calculator", element: <SpendCalculatorPage /> },
+      // { path: "/get-help/spend-calculator", element: <SpendCalculatorPage /> },
       { path: "/get-help/blocking-tools", element: <BlockingToolsPage /> },
       { path: "/get-help/limit-gambling-ads", element: <LimitGamblingAdsPage /> },
       { path: "/urgent-help", element: <UrgentHelp /> },

@@ -36,7 +36,7 @@ const PublicRecordEvidence = () => {
       date: "2025",
       title: "Our Rights To Gamble And Self-Exclude Are Being Eroded",
       description:
-        '"Enforcement failures were treated as my responsibility. Proof was my burden. Data was my burden. Justice was functionally unreachable."',
+        "A first-person account of the systemic breakdown of self-exclusion enforcement and the barriers to accountability.",
     },
     {
       source: "Essay · Sam Badcock on Medium",

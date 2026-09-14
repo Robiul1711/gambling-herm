@@ -1,18 +1,17 @@
 import React from "react";
-import phone from "@/assets/images/phone.png";
-import brothersImg from "@/assets/images/policy.png";
+
 const changesList = [
   {
     number: 1,
-    title: "A Statutory Levy Proportionate To The Burden Of Harm",
+    title: "A statutory levy proportionate to the burden of harm",
     description:
-      "The current UK statutory levy (just under £120 million) is, on conservative GHUK QALY modelling, between 40 and 60 times smaller than the annual health-economic burden of gambling harm. The levy should be scaled to harm using QALY/DALY valuations, not set by political negotiation with the industry. Distribution should be governed independently of industry influence, with funding ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and independent research.",
+      "The statutory levy, in force since April 2025, raised just under £120m in its first year: on GHUK's QALY modelling roughly 200 times smaller than the annual health loss from gambling harm (£22bn to £32bn). The levy should be scaled to harm using QALY/DALY valuations, not set by political negotiation with the industry. Distribution should be governed independently of industry influence, with funding ringfenced for prevention, treatment, aftercare, services for people harmed by someone else’s gambling and independent research.",
   },
   {
     number: 2,
-    title: "A Statutory Duty Of Care On Gambling Operators",
+    title: "A statutory duty of care on gambling operators",
     description:
-      'Translate operator obligations from"comply with the social-responsibility code", a self-policed compliance regime that the last fifteen years of UK regulation have shown to be largely ineffective, into a legal duty owed to customers, breach of which creates civil liability. The current Licence Conditions and Codes of Practice (LCCP) framework gives the Gambling Commission an enforcement role, but does not create a private right of action for customers harmed by operator failures. A statutory duty of care closes that gap: it makes the population-level burden of harm into operator-level legal exposure, aligns incentives with prevention, and gives affected customers and their families a route to redress through the civil courts.',
+      'Translate operator obligations from "comply with the social-responsibility code", a self-policed compliance regime that the last fifteen years of UK regulation have shown to be largely ineffective, into a legal duty owed to customers, breach of which creates civil liability. The current Licence Conditions and Codes of Practice (LCCP) framework gives the Gambling Commission an enforcement role, but does not create a private right of action for customers harmed by operator failures. A statutory duty of care closes that gap: it makes the population-level burden of harm into operator-level legal exposure, aligns incentives with prevention, and gives affected customers and their families a route to redress through the civil courts.',
   },
   {
     number: 3,
@@ -36,7 +35,7 @@ const changesList = [
         </strong>
         , which prohibits non-broadcast gambling advertising with strong appeal
         to children, including by prohibiting child-themed slot games such as
-        "Jack and the Beanstalk" and"Cinderella Ball". Personalised marketing to
+        "Jack and the Beanstalk" and "Cinderella Ball". Personalised marketing to
         customers showing distress signals should be classified as a serious
         regulatory breach.
       </>
@@ -70,7 +69,7 @@ const changesList = [
     number: 9,
     title: "Statutory recognition of people harmed by someone else’s gambling, including children",
     description:
-      "People harmed by someone else’s gambling (partners, parents, children, siblings) as a distinct population with rights to support, not as adjuncts to the person who gambles. Specific statutory recognition and funded services for children of people experiencing gambling harm.",
+      "Partners, parents, children and siblings harmed by someone else’s gambling, recognised as a distinct population with rights to support, not as adjuncts to the person who gambles. Specific statutory recognition and funded services for children of people experiencing gambling harm.",
   },
   {
     number: 10,
@@ -86,8 +85,8 @@ const changesList = [
       <>
         Headline UK gambling-harm prevalence should be measured across the full
         PGSI distribution (not summarised by an 8+ cut-off) and should be
-        supplemented by direct measurement of harm among people harmed by someone else’s gambling. The headline
-        figure used in policy debate should reflect the full distribution.
+        supplemented by direct measurement of harm from someone else’s gambling.
+        The headline figure used in policy debate should reflect the full distribution.
         <br />
         <br />
         Alongside survey measurement: routine ICD/SNOMED coding of gambling harm
@@ -95,7 +94,7 @@ const changesList = [
         established metrics (YLD, QALY, DALY). Gambling-related deaths and
         morbidity currently go systematically unrecorded, in health records and
         in coroners' accounts, and the UK cannot manage what it does not
-        measure. This is where GHUK's work began.
+        measure.
       </>
     ),
   },
@@ -104,13 +103,7 @@ const changesList = [
     title:
       "Regulatory consolidation under the Department of Health and Social Care",
     description:
-      'Gambling regulation currently sits within DCMS, structurally disconnected from health. We support the consolidation of regulatory leadership under DHSC, with population-health primacy, proper public-health analytical capacity, and policy alignment with tobacco, alcohol and other commercial determinants of health. A public-health framing across government communication follows from this;"responsible gambling" language should be retired from regulator, government and industry communications.',
-  },
-  {
-    number: 13,
-    title: "Lived-experience leadership in service design and policy",
-    description:
-      "People with lived experience of gambling harm (including people harmed by someone else’s gambling and those bereaved) should sit at the centre of policy design and service design, not at its edges. We back the lived-experience networks doing this work and integrate it across our own practice.",
+      'Gambling regulation currently sits within DCMS, structurally disconnected from health. We support the consolidation of regulatory leadership under DHSC, with population-health primacy, proper public-health analytical capacity, and policy alignment with tobacco, alcohol and other commercial determinants of health. A public-health framing across government communication follows from this; "responsible gambling" language should be retired from regulator, government and industry communications.',
   },
 ];
 
@@ -157,44 +150,22 @@ const WhatWeWantChanged = () => {
 
                 {/* Light Blue Callout Nesting Specific to Item 2 */}
                 {item.number === 2 && (
-                  <>
-                    <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df]  p-6 md:p-8 !mt-6 shadow-xs">
-                      <h5 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
-                        Why this position is foundational
-                      </h5>
-                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
-                        Every other ask on this page (advertising restrictions,
-                        product-safety standards, affordability checks,
-                        algorithmic risk-flagging) depends on a mechanism that
-                        turns operator failure into legal consequence. Without a
-                        statutory duty of care, regulatory rules are merely
-                        codes the operator can negotiate compliance with. With
-                        one, they become standards an operator can be sued for
-                        failing. This is the change that makes the rest of the
-                        public-health response enforceable. Advocacy credit:{" "}
-                        <span className="italic">
-                          Martin Jones has been one of the most consistent UK
-                          voices arguing for statutory duty of care as the
-                          load-bearing regulatory reform;
-                        </span>{" "}
-                        GHUK supports this framing.
-                      </p>
-                    </div>
-
-                    <div className="mt-8 flex flex-col items-center">
-                      <img
-                        src={brothersImg}
-                        alt="Still from GHUK's Brothers safeguarding film"
-                        className="w-full max-w-[650px] object-cover  shadow-xs h-[300px] sm:h-[400px]"
-                      />
-                      <p className="mt-3 text-xs sm:text-sm text-center text-gray-500 italic max-w-[650px] leading-relaxed">
-                        Still from GHUK's Brothers Gambling Harm safeguarding
-                        film. An older brother carries what the product
-                        produced. A statutory duty of care is what turns that
-                        into legal consequence for the operator.
-                      </p>
-                    </div>
-                  </>
+                  <div className="bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 !mt-6 shadow-xs">
+                    <h5 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
+                      Why this position is foundational
+                    </h5>
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
+                      Every other ask on this page (advertising restrictions,
+                      product-safety standards, affordability checks,
+                      algorithmic risk-flagging) depends on a mechanism that
+                      turns operator failure into legal consequence. Without a
+                      statutory duty of care, regulatory rules are merely
+                      codes the operator can negotiate compliance with. With
+                      one, they become standards an operator can be sued for
+                      failing. This is the change that makes the rest of the
+                      public-health response enforceable.
+                    </p>
+                  </div>
                 )}
               </div>
             </div>
@@ -204,5 +175,4 @@ const WhatWeWantChanged = () => {
     </section>
   );
 };
-
 export default WhatWeWantChanged;

@@ -7,7 +7,7 @@ const GamblingMeccSection = () => {
       label: "Scale",
       content: (
         <>
-          Approximately <span className="font-bold text-gray-800">1 in 5 UK</span> adults experienced gambling-related harm in the past year when both individuals who gamble and people harmed by someone else’s gambling are included. The prevalence-paradox means most of the population-level harm sits in the moderate level of gambling harm band where targeted treatment alone cannot address it.
+          Roughly <span className="font-bold text-gray-800">1 in 6 of the UK</span> population experience gambling-related harm in a single year once people harmed by someone else's gambling and children are included (GHUK modelled synthesis, 2026). Much of that harm sits below the severe band, where a brief conversation may be all that is needed; at the severe end, referral matters.
         </>
       ),
     },
@@ -38,6 +38,15 @@ const GamblingMeccSection = () => {
         </>
       ),
     },
+    {
+      id: "recognition-gap",
+      label: "Recognition",
+      content: (
+        <>
+          Among adults at PGSI 3+, only 6.3% have ever been told by a professional that they have a gambling problem, 1.0% have used specialist gambling treatment or peer support, and 30.1% were in treatment for a mental health or emotional problem where gambling may never come up (APMS 2023/24). The contact is happening; the question is not being asked.
+        </>
+      ),
+    },
   ];
 
   return (
@@ -48,7 +57,7 @@ const GamblingMeccSection = () => {
           Why gambling fits MECC
         </h2>
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
-          Three features of gambling harm make it especially well-suited to opportunistic, contact-based intervention:
+          Four features of gambling harm make it especially well-suited to opportunistic, contact-based intervention:
         </p>
       </div>
 

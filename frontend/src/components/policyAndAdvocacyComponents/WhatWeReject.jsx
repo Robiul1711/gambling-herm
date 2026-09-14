@@ -18,7 +18,7 @@ const rejectionsData = [
     analysis: (
       <>
         The narrow PGSI 8+ framing radically understates the share of the UK
-        population experiencing gambling harm. We say"people affected by
+        population experiencing gambling harm. We say "people harmed by
         gambling" and report harm across the full distribution.{" "}
         <a
           href="#language"
@@ -52,10 +52,10 @@ const rejectionsData = [
       "Most people with gambling problems recover on their own. There's isn't much need for treatment infrastructure or product regulation.",
     analysis: (
       <>
-        The"natural recovery" / treatment-fallacy argument. It cites unaided
+        The "natural recovery" / treatment-fallacy argument. It cites unaided
         remission to argue that gambling-harm treatment and product regulation
         are largely unnecessary. The argument relies on overlooking three
-        things: most"natural recovery" still involves significant unsupported
+        things: most "natural recovery" still involves significant unsupported
         harm during the unaided period; many of the most severe harms (suicide,
         family breakdown, intergenerational harm) occur before any spontaneous
         remission can; and the population with the most severe harm is the
@@ -70,7 +70,7 @@ const rejectionsData = [
       "Gambling harm only affects a small, vulnerable minority. Most people gamble safely.",
     analysis: (
       <>
-        The"targeted minority" framing serves a clear function: it lets the
+        The "targeted minority" framing serves a clear function: it lets the
         industry preserve broad customer access while disclaiming responsibility
         for harm at the margins. The public-health evidence does not support it.
         Harm is broadly distributed, although severity is concentrated. Both can
@@ -90,10 +90,12 @@ const rejectionsData = [
       <>
         This claim does not survive contact with the available cost evidence.
         The UK Treasury collects roughly £3.4bn/year from gambling; the
-        directly-attributable harm cost is £1.05–£1.77bn/year (PHE 2021), with
-        broader productivity and intergenerational costs putting the total above
-        the tax figure in several syntheses. The"net positive for the public
-        purse" claim is, on net, not consistent with the public-finance picture.{" "}
+        directly-attributable harm cost is £1.05 to £1.77 billion a year (OHID,
+        2023), a figure that comes to 0.4 to 0.7 times the tax the sector generates
+        and leaves out people harmed by someone else's gambling, children, legacy
+        harms and health-related quality-of-life losses. The "net positive for the
+        public purse" claim is, on net, not consistent with the public-finance
+        picture.{" "}
         <a
           href="#full-tax-response"
           className="text-[#17a9df] underline hover:text-[#1493c2] font-medium transition-colors"
@@ -134,11 +136,11 @@ const WhatWeReject = () => {
           {rejectionsData.map((item, index) => (
             <div
               key={index}
-              className="bg-[#262222] border-l-[4px] border-[#17a9df] p-6 md:p-8  shadow-md"
+              className="bg-[#262222] border-l-[4px] border-[#17a9df] p-6 md:p-8 shadow-md"
             >
               {/* Header Label */}
               <span className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider block mb-3">
-                INDUSTRY FRAMING
+                Industry framing
               </span>
 
               {/* Strikethrough Industry Slogan */}

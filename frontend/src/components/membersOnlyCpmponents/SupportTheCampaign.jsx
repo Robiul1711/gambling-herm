@@ -10,7 +10,7 @@ const SupportTheCampaign = () => {
         </h2>
         <p className="text-gray-400 text-sm sm:text-base font-medium leading-relaxed">
           Members Only is a lived-experience-led campaign. The way to support it
-          is to read what's there, share it, and lend voice where you can.
+          is to read it, share it, and add your voice where you can.
         </p>
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
           <Link

@@ -4,15 +4,15 @@ const ThreeStrandsSection = () => {
   const strandsData = [
     {
       id: 1,
-      strandNumber: "Strand 1",
+      strandNumber: "Pillar 1",
       title: "Creating Connectivity",
       description:
         "Bringing together the people, organisations and disciplines whose work touches gambling harm: NHS, public health, lived experience, academic research, criminal justice, debt advice, and the wider third sector. We act as a connecting body so the right conversations happen across silos.",
-      isHighlighted: true, // Strand 1 has a matching colored border accent in the design
+      isHighlighted: true,
     },
     {
       id: 2,
-      strandNumber: "Strand 2",
+      strandNumber: "Pillar 2",
       title: "Developing Capability",
       description:
         "Training, evidence translation, MECC content for clinicians, briefings for parliamentarians, materials for teachers, and curriculum content for medical schools. Building the capability of every professional group whose practice should now include gambling.",
@@ -20,10 +20,10 @@ const ThreeStrandsSection = () => {
     },
     {
       id: 3,
-      strandNumber: "Strand 3",
+      strandNumber: "Pillar 3",
       title: "Maximising Capacity",
       description:
-        "Supporting the sustainability and independence of the gambling-harm response: campaigning for a proportionate statutory levy, ringfenced funding for people harmed by someone else’s gambling and CYP, NHS coding, and routes that do not depend on gambling-industry money.",
+        "Leaving systems with tools they own and can sustain: reusable public-health and training assets, evaluation-ready interventions, and cross-sector infrastructure that operates independently of commercial gambling interests.",
       isHighlighted: false,
     },
   ];
@@ -36,12 +36,10 @@ const ThreeStrandsSection = () => {
       {/* Top Heading Group */}
       <div className="mb-10">
         <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
-          How we work: three strands
+          How we work: three pillars
         </h2>
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
-          Our operational model, set out in the GHUK Levy Audit 2024, is built
-          around three interconnected strands. These are the routes through
-          which we work with public-health organisations.
+          Our operational model is built around three pillars — the approach set out in our Annual Report. These are the routes through which we work with public-health organisations.
         </p>
       </div>
 

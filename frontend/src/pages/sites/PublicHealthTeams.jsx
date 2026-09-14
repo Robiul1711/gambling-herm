@@ -14,7 +14,7 @@ import useClient from "@/hooks/useClient";
 const sections = [
   { id: "health-position", title: "1. Health position" },
   { id: "prevention-paradox", title: "2. Prevention paradox" },
-  { id: "three-strands", title: "3. Three strands of action" },
+  { id: "three-strands", title: "3. Three pillars of action" },
   { id: "public-health-offers", title: "4. What GHUK offers" },
   { id: "public-health-requests", title: "5. What GHUK asks" },
   { id: "audience-nav", title: "6. Across sectors" },

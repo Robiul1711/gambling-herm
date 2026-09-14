@@ -103,8 +103,8 @@ const RegisterMembershipForm = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-white px-4 md:px-8 text-gray-800">
-      <div className="max-w-2xl mx-auto">
+    <section className="py-10 md:py-14 bg-white px-4 sm:px-6 md:px-8 text-gray-800">
+      <div className="max-w-5xl mx-auto">
         {/* Success Alert */}
         {serverSuccess && (
           <div className="mb-8 p-6 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl shadow-xs space-y-3">
@@ -157,64 +157,66 @@ const RegisterMembershipForm = () => {
         )}
 
         {/* Registration Form */}
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* Field 1: Your name */}
-          <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Your full name *
-            </label>
-            <input
-              type="text"
-              placeholder="e.g. Dr. Jane Smith"
-              {...register("name", { required: "Name is required." })}
-              className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
-                errors.name
-                  ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
-                  : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
-              }`}
-            />
-            {errors.name && (
-              <p className="mt-1.5 text-xs text-rose-600 font-medium">
-                {errors.name.message}
-              </p>
-            )}
-          </div>
-
-          {/* Field 2: Email address */}
-          <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Work / Professional email address *
-            </label>
-            <input
-              type="email"
-              placeholder="e.g. name@organisation.nhs.uk"
-              {...register("email", {
-                required: "Email address is required.",
-                pattern: {
-                  value: /^\S+@\S+\.\S+$/,
-                  message: "Please enter a valid email address.",
-                },
-              })}
-              className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
-                errors.email
-                  ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
-                  : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
-              }`}
-            />
-            <p className="text-xs text-slate-500 mt-1.5">
-              Please use your institutional or organisational email if applicable.
-            </p>
-            {errors.email && (
-              <p className="mt-1.5 text-xs text-rose-600 font-medium">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
-
-          {/* Field 3: Password */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+          {/* Row 1: Name + Email */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className="block text-sm font-semibold text-slate-800 mb-2">
+              <label className="block text-sm font-semibold text-slate-800 mb-1.5">
+                Your full name *
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Dr. Jane Smith"
+                {...register("name", { required: "Name is required." })}
+                className={`w-full px-3.5 py-2.5 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+                  errors.name
+                    ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
+                    : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
+                }`}
+              />
+              {errors.name && (
+                <p className="mt-1 text-xs text-rose-600 font-medium">
+                  {errors.name.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-1.5">
+                Work / Professional email address *
+              </label>
+              <input
+                type="email"
+                placeholder="e.g. name@organisation.nhs.uk"
+                {...register("email", {
+                  required: "Email address is required.",
+                  pattern: {
+                    value: /^\S+@\S+\.\S+$/,
+                    message: "Please enter a valid email address.",
+                  },
+                })}
+                className={`w-full px-3.5 py-2.5 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+                  errors.email
+                    ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
+                    : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
+                }`}
+              />
+              {errors.email ? (
+                <p className="mt-1 text-xs text-rose-600 font-medium">
+                  {errors.email.message}
+                </p>
+              ) : (
+                <p className="text-[11px] text-slate-500 mt-1">
+                  Please use your institutional or organisational email if applicable.
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Row 2: Password + Confirm Password */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-1.5">
                 Create password *
               </label>
               <div className="relative">
@@ -228,7 +230,7 @@ const RegisterMembershipForm = () => {
                       message: "Password must be at least 6 characters.",
                     },
                   })}
-                  className={`w-full pl-3.5 pr-10 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+                  className={`w-full pl-3.5 pr-10 py-2.5 border rounded-md text-slate-900 focus:outline-none transition-colors ${
                     errors.password
                       ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
                       : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
@@ -243,14 +245,14 @@ const RegisterMembershipForm = () => {
                 </button>
               </div>
               {errors.password && (
-                <p className="mt-1.5 text-xs text-rose-600 font-medium">
+                <p className="mt-1 text-xs text-rose-600 font-medium">
                   {errors.password.message}
                 </p>
               )}
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-800 mb-2">
+              <label className="block text-sm font-semibold text-slate-800 mb-1.5">
                 Confirm password *
               </label>
               <input
@@ -261,65 +263,68 @@ const RegisterMembershipForm = () => {
                   validate: (val) =>
                     val === passwordValue || "Passwords do not match.",
                 })}
-                className={`w-full px-3.5 py-2.5 sm:py-3 border rounded-md text-slate-900 focus:outline-none transition-colors ${
+                className={`w-full px-3.5 py-2.5 border rounded-md text-slate-900 focus:outline-none transition-colors ${
                   errors.confirmPassword
                     ? "border-rose-400 focus:border-rose-500 bg-rose-50/20"
                     : "border-slate-300 focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0]"
                 }`}
               />
               {errors.confirmPassword && (
-                <p className="mt-1.5 text-xs text-rose-600 font-medium">
+                <p className="mt-1 text-xs text-rose-600 font-medium">
                   {errors.confirmPassword.message}
                 </p>
               )}
             </div>
           </div>
 
-          {/* Field 4: Organisation */}
-          <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Organisation or Trust
-            </label>
-            <input
-              type="text"
-              placeholder="e.g. NHS Foundation Trust, University, Local Council"
-              {...register("organisation")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
-            />
+          {/* Row 3: Organisation + Role */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-1.5">
+                Organisation or Trust
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. NHS Foundation Trust, University, Local Council"
+                {...register("organisation")}
+                className="w-full px-3.5 py-2.5 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-1.5">
+                Role or job title
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Consultant Clinical Psychologist, Safeguarding Lead"
+                {...register("role")}
+                className="w-full px-3.5 py-2.5 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
+              />
+            </div>
           </div>
 
-          {/* Field 5: Role or job title */}
+          {/* Sector (Multi-Select) */}
           <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
-              Role or job title
-            </label>
-            <input
-              type="text"
-              placeholder="e.g. Consultant Clinical Psychologist, Safeguarding Lead"
-              {...register("role")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
-            />
-          </div>
-
-          {/* Field 6: Sector (Multi-Select) */}
-          <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-1">
-              Sector * (Select all that apply)
-            </label>
-            <p className="text-xs text-slate-500 mb-3">
-              You can select more than one sector that applies to your work.
+            <div className="flex items-center justify-between mb-1">
+              <label className="block text-sm font-semibold text-slate-800">
+                Sector * <span className="font-normal text-slate-500 text-xs">(Select all that apply)</span>
+              </label>
+            </div>
+            <p className="text-xs text-slate-500 mb-2.5">
+              Select one or more sectors that best represent your professional background.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 bg-slate-50/70 p-4 border border-slate-200 rounded-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 bg-slate-50/80 p-3.5 border border-slate-200 rounded-lg">
               {SECTOR_OPTIONS.map((opt, i) => {
                 const isChecked = selectedSectors.includes(opt);
                 return (
                   <label
                     key={i}
-                    className={`flex items-center gap-3 p-2.5 rounded-md cursor-pointer transition-all select-none border text-sm font-medium ${
+                    className={`flex items-center gap-2.5 p-2.5 rounded-md cursor-pointer transition-all select-none border text-xs sm:text-sm font-medium ${
                       isChecked
                         ? "bg-white border-[#0093D0] text-[#0093D0] shadow-xs"
-                        : "bg-white/80 border-slate-200 text-slate-700 hover:border-slate-300"
+                        : "bg-white/90 border-slate-200 text-slate-700 hover:border-slate-300"
                     }`}
                   >
                     <input
@@ -328,7 +333,7 @@ const RegisterMembershipForm = () => {
                       onChange={() => handleToggleSector(opt)}
                       className="w-4 h-4 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
                     />
-                    <span>{opt}</span>
+                    <span className="truncate">{opt}</span>
                   </label>
                 );
               })}
@@ -336,8 +341,8 @@ const RegisterMembershipForm = () => {
 
             {/* If 'Other' is selected, show free-text input */}
             {selectedSectors.includes("Other") && (
-              <div className="mt-3 animate-fadeIn">
-                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              <div className="mt-2.5 animate-fadeIn">
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
                   Please specify your sector / organisation type:
                 </label>
                 <input
@@ -345,7 +350,7 @@ const RegisterMembershipForm = () => {
                   value={otherSectorText}
                   onChange={(e) => setOtherSectorText(e.target.value)}
                   placeholder="e.g. Criminal justice, housing association, independent consultant"
-                  className="w-full px-3.5 py-2.5 text-sm border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
+                  className="w-full px-3.5 py-2 text-sm border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors"
                 />
               </div>
             )}
@@ -357,40 +362,42 @@ const RegisterMembershipForm = () => {
             )}
           </div>
 
-          {/* Field 7: What would you like from membership? */}
+          {/* Optional: 'What would you like from membership?' (Commented out per review/friction reduction) */}
+          {/*
           <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
+            <label className="block text-sm font-semibold text-slate-800 mb-1.5">
               What would you like from membership?
             </label>
             <textarea
               rows={3}
               placeholder="Optional: e.g. MECC training, burden-of-harm evidence tools, safeguarding films"
               {...register("membershipNeeds")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors resize-y"
+              className="w-full px-3.5 py-2.5 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors resize-y text-sm"
             ></textarea>
-            <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-              Optional, but it helps our team understand what materials to prioritise for your sector.
+            <p className="text-[11px] text-slate-500 mt-1 leading-normal">
+              Optional: helps our team understand what materials to prioritise for your sector.
             </p>
           </div>
+          */}
 
-          {/* Field 8: Anything else you want to tell us */}
+          {/* Optional comments / anything else */}
           <div>
-            <label className="block text-sm font-semibold text-slate-800 mb-2">
+            <label className="block text-sm font-semibold text-slate-800 mb-1.5">
               Anything else you want to tell us
             </label>
             <textarea
               rows={3}
               placeholder="Optional: e.g. details about your local team, collaborative projects, or specific questions"
               {...register("anythingElse")}
-              className="w-full px-3.5 py-2.5 sm:py-3 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors resize-y"
+              className="w-full px-3.5 py-2.5 border rounded-md border-slate-300 text-slate-900 focus:outline-none focus:border-[#0093D0] focus:ring-1 focus:ring-[#0093D0] transition-colors resize-y text-sm"
             ></textarea>
-            <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
+            <p className="text-[11px] text-slate-500 mt-1 leading-normal">
               Optional: any additional notes, queries, or context you would like to share.
             </p>
           </div>
 
           {/* Checkbox 1: Privacy notice and terms */}
-          <div className="pt-2">
+          <div className="pt-1">
             <div className="flex items-start gap-3">
               <input
                 type="checkbox"
@@ -398,7 +405,7 @@ const RegisterMembershipForm = () => {
                 {...register("agreeTerms", {
                   required: "You must agree to the privacy notice to register.",
                 })}
-                className="w-4 h-4 mt-1 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
+                className="w-4 h-4 mt-0.5 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
               />
               <label
                 htmlFor="agreeTerms"
@@ -428,7 +435,7 @@ const RegisterMembershipForm = () => {
                 type="checkbox"
                 id="newsletterUpdates"
                 {...register("newsletterUpdates")}
-                className="w-4 h-4 mt-1 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
+                className="w-4 h-4 mt-0.5 rounded border-slate-300 text-[#0093D0] focus:ring-[#0093D0] cursor-pointer"
               />
               <label
                 htmlFor="newsletterUpdates"
@@ -440,11 +447,11 @@ const RegisterMembershipForm = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="pt-3">
+          <div className="pt-2">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#0093D0] hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3.5 rounded-md transition-all shadow-sm flex items-center justify-center min-w-[170px] disabled:opacity-60 cursor-pointer"
+              className="bg-[#0093D0] hover:bg-[#0e5472] text-white font-semibold text-sm sm:text-base px-8 py-3 rounded-md transition-all shadow-sm flex items-center justify-center min-w-[180px] disabled:opacity-60 cursor-pointer"
             >
               {isSubmitting ? (
                 <div className="flex items-center gap-2">
@@ -458,7 +465,7 @@ const RegisterMembershipForm = () => {
           </div>
 
           {/* Postscript Notes */}
-          <div className="pt-6 space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+          <div className="pt-4 space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
             <p>
               <strong>What happens next?</strong> After you submit this, our admin team will review your application. Once approved, you will receive an email confirmation and can sign in immediately.
             </p>
