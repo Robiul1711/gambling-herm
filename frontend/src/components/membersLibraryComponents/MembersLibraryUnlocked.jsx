@@ -107,7 +107,7 @@ const memberResources = [
       "Lesson plans, discussion prompts, and safeguarding protocols for secondary schools, colleges, and youth-facing organisations.",
     format: "PDF Pack · 3.2 MB",
     type: "download",
-    link: "/professionals/teachers-cyp",
+    link: "/professionals/teachers-children-and-young-people",
     date: "Term 2026",
   },
 ];

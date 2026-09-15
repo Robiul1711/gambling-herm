@@ -60,12 +60,12 @@ const UrgentHelpContent = () => {
               </strong>{" "}
               (for under-35s) call{" "}
               <a
-                href="tel:08080684141"
+                href="tel:08000684141"
                 className="font-bold text-gray-900 hover:text-Primary underline"
               >
-                0808 068 4141
+                0800 068 4141
               </a>
-              , text <strong className="text-gray-900 font-bold">88247</strong>,
+              , text <strong className="text-gray-900 font-bold">07860 039967</strong>,
               or email{" "}
               <a
                 href="mailto:pat@papyrus-uk.org"
@@ -78,10 +78,10 @@ const UrgentHelpContent = () => {
           </div>
         </div>
 
-        {/* Card 3: Losing Control Tonight */}
+        {/* Card 3: If You Can't Stop Gambling Tonight (UR1) */}
         <div className="border border-gray-300  p-6 sm:p-8 bg-white shadow-xs hover:shadow-md transition-shadow">
           <span className="text-xs font-bold text-gray-600 uppercase tracking-widest block mb-2">
-            3 · If you're losing control tonight
+            3 · If you can't stop gambling tonight
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-4 select-all break-words leading-none">
             0808 8020 133
@@ -105,8 +105,14 @@ const UrgentHelpContent = () => {
               >
                 gamstop.co.uk
               </a>
-              . Once registered, every UK-licensed gambling site is blocked to
+              . Once registered, every gambling site licensed in Great Britain is blocked to
               you for the period you chose (6 months, 1 year, or 5 years).
+            </p>
+            <p>
+              <strong className="text-gray-900 font-bold">
+                Your bank's gambling block.
+              </strong>{" "}
+              Most UK bank apps let you turn off gambling transactions with a delay of 24–72 hours to turn it back on. Turn it on tonight.
             </p>
           </div>
         </div>

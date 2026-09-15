@@ -20,7 +20,7 @@ const routes = [
       {
         heading: "Your GP",
         separator: ", ",
-        text: "a quick conversation can open referrals to specialist services. You're allowed to say the word \"gambling\".",
+        text: 'a quick conversation can open referrals to specialist services. You\'re allowed to say the word "gambling".',
       },
     ],
   },

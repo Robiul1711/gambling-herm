@@ -37,8 +37,8 @@ const OperatorMarketingSection = () => {
         {/* Intro */}
         <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-8">
           Gambling operators hold your contact details, and under UK
-          direct-marketing rules they must stop contacting you once you tell
-          them to.
+          direct-marketing rules (the Privacy and Electronic Communications
+          Regulations) they must stop contacting you once you tell them to.
         </p>
 
         {/* Steps List */}
@@ -75,7 +75,7 @@ const OperatorMarketingSection = () => {
           </a>
         </div>
 
-        {/* Note */}
+        {/* Note (LA1) */}
         <p className="text-sm text-gray-600 leading-relaxed">
           Putting a{" "}
           <Link
@@ -84,9 +84,10 @@ const OperatorMarketingSection = () => {
           >
             block in place
           </Link>
-          , such as registering with GAMSTOP, also stops marketing from
-          participating operators, since they're required to suppress it once
-          you've self-excluded.
+          , such as registering with GAMSTOP, should also stop marketing from
+          participating operators: they are required to suppress it once you've
+          self-excluded. If it keeps coming, keep the evidence and complain to
+          the ICO; enforcement cases show it does still happen.
         </p>
       </div>
     </section>

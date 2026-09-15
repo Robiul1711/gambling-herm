@@ -40,10 +40,10 @@ export default function BlockingToolsPage() {
     },
     {
       id: "bacta",
-      title: "BACTA (adult gaming centres)",
+      title: "bacta scheme (adult gaming centres)",
       description:
-        "Bacta's Self-Exclusion Scheme covers adult gaming centres (AGCs), the licensed premises with slot machines found on high streets and seafronts. Ask a member of staff to exclude yourself for an agreed period.",
-      buttonText: "Exclude via BACTA →",
+        "bacta's Self-Exclusion Scheme covers adult gaming centres (AGCs), the licensed premises with slot machines found on high streets and seafronts. Ask a member of staff to exclude yourself for an agreed period.",
+      buttonText: "Exclude via bacta →",
       link: "https://bacta.org.uk/self-exclusion",
     },
     {

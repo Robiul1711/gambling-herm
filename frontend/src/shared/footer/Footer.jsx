@@ -238,10 +238,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/professionals/teachers-cyp"
+                    to="/professionals/teachers-children-and-young-people"
                     className="hover:text-white transition-colors"
                   >
-                    Teachers &amp; CYP
+                    Teachers &amp; children and young people
                   </Link>
                 </li>
                 <li>

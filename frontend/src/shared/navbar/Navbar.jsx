@@ -110,6 +110,7 @@ export default function Navbar() {
     "/professionals",
     "/professionals/healthcare",
     "/professionals/public-health",
+    "/professionals/teachers-children-and-young-people",
     "/professionals/teachers-cyp",
     "/professionals/researchers",
     "/sign-in",
@@ -496,12 +497,13 @@ export default function Navbar() {
                               Public health teams
                             </DropdownItem>
                             <DropdownItem
-                              to="/professionals/teachers-cyp"
-                              active={isLinkActive(
-                                "/professionals/teachers-cyp",
-                              )}
+                              to="/professionals/teachers-children-and-young-people"
+                              active={
+                                isLinkActive("/professionals/teachers-children-and-young-people") ||
+                                isLinkActive("/professionals/teachers-cyp")
+                              }
                             >
-                              Teachers &amp; CYP professionals
+                              Teachers &amp; children and young people
                             </DropdownItem>
                             <DropdownItem
                               to="/professionals/researchers"
@@ -1088,13 +1090,13 @@ export default function Navbar() {
                           Public health teams
                         </Link>
                         <Link
-                          to="/professionals/teachers-cyp"
+                          to="/professionals/teachers-children-and-young-people"
                           onClick={() => setMobileMenuOpen(false)}
                           className={getMobileSubLinkClass(
-                            "/professionals/teachers-cyp",
+                            "/professionals/teachers-children-and-young-people",
                           )}
                         >
-                          Teachers &amp; CYP professionals
+                          Teachers &amp; children and young people
                         </Link>
                         <Link
                           to="/professionals/researchers"

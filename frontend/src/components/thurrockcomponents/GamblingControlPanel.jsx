@@ -43,10 +43,10 @@ export default function GamblingControlPanel() {
       to: "https://www.senseselfexclusion.com/",
     },
     {
-      title: "BACTA (adult gaming centres)",
+      title: "bacta scheme (adult gaming centres)",
       description:
-        "Bacta's Self-Exclusion Scheme lets you exclude yourself from Adult Gaming Centres for an agreed period.",
-      buttonText: "Exclude via BACTA",
+        "bacta's Self-Exclusion Scheme lets you exclude yourself from Adult Gaming Centres for an agreed period.",
+      buttonText: "Exclude via bacta",
       to: "https://bacta.org.uk/safer-gambling/",
     },
   ];

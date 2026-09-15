@@ -89,6 +89,7 @@ const router = createBrowserRouter([
       { path: "/professionals", element: <ProfessionalsHub /> },
       { path: "/professionals/healthcare", element: <HealthcareProfessionals /> },
       { path: "/professionals/public-health", element: <PublicHealthTeams /> },
+      { path: "/professionals/teachers-children-and-young-people", element: <TeachersCYPPage /> },
       { path: "/professionals/teachers-cyp", element: <TeachersCYPPage /> },
       { path: "/professionals/researchers", element: <ResearchersPage /> },
       // Get Help

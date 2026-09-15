@@ -15,8 +15,7 @@ const TeachersCypMissesPoint = () => {
         {/* Narrative Paragraph 1 */}
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 font-normal">
           Brain imaging studies show that the brain's decision-making and
-          addictive-behaviour areas continue to develop until around the age of
-          25. The cognitive capacities that gambling-product design specifically
+          addictive-behaviour areas continue to develop into the mid-20s. The cognitive capacities that gambling-product design specifically
           targets (impulse control, reward processing, risk assessment) are among
           the last to mature.
         </p>

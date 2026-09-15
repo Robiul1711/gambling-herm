@@ -92,7 +92,7 @@ const TeachersCypClassroomSigns = () => {
                 GHUK provides independent, evidence-based training on gambling
                 harm
               </strong>
-              for teachers, safeguarding leads and the wider CYP workforce, built
+              for teachers, safeguarding leads and the wider children and young people's workforce, built
               on our safeguarding films and lived-experience testimony, and
               free of gambling-industry funding. Book via{" "}
               <a

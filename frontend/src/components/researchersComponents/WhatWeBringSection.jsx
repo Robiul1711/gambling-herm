@@ -23,11 +23,12 @@ const WhatWeBringSection = () => {
               </h3>
               <p className="text-[14.5px] leading-relaxed text-gray-600">
                 Our estimate of the UK's annual health loss from gambling
-                (around 530,000 QALYs, roughly £37 billion at the Green Book
-                value) is fully specified: every input, assumption and
-                sensitivity is published in our Health Needs Assessment, and the
-                national derivation reproduces in an accompanying calculator. It
-                is built to be criticised, replicated and improved.
+                (around 320,000 to 450,000 adult QALYs a year — central scenario
+                386,000 — roughly £22bn to £32bn at the Green Book value) is
+                fully specified: every input, assumption and sensitivity is
+                published in our Health Needs Assessment, and the national
+                derivation reproduces in an accompanying calculator. It is built
+                to be criticised, replicated and improved.
               </p>
             </div>
             <div className="mt-5">
@@ -74,11 +75,18 @@ const WhatWeBringSection = () => {
                 Language and framing standards
               </h3>
               <p className="text-[14.5px] leading-relaxed text-gray-600">
-                Our Communications & Voice Framework sets out stigma-safe,
+                Our Communications &amp; Voice Framework sets out stigma-safe,
                 evidence-based language for gambling-harm research outputs: why
                 we do not use "problem gambler", how we describe people harmed
                 by someone else's gambling, and how to handle PGSI category
-                labels. Available on request for research teams.
+                labels. See our{" "}
+                <Link
+                  to="/stigma-and-language"
+                  className="underline text-gray-900 hover:text-[#0082c3] font-medium"
+                >
+                  Stigma &amp; language
+                </Link>{" "}
+                page, or available on request for research teams.
               </p>
             </div>
           </div>

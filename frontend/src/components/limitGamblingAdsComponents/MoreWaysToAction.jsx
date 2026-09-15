@@ -23,10 +23,9 @@ const MoreWaysToAction = () => {
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <a
             href="tel:08088020133"
-            className="inline-flex items-center gap-1.5 bg-[#156E94] hover:bg-[#0f5370] text-white font-semibold text-sm py-3 px-6  transition-colors shadow-xs"
+            className="inline-flex items-center bg-[#156E94] hover:bg-[#0f5370] text-white font-semibold text-sm py-3 px-6 transition-colors shadow-xs"
           >
-            <span className="font-bold">0808 8020 133</span>
-            <span>, National Gambling Helpline</span>
+            0808 8020 133, National Gambling Helpline
           </a>
 
           <Link

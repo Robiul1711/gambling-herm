@@ -52,10 +52,10 @@ const GetHelpOverview = () => {
 
               {/* Description */}
               <p className="mt-5 md:mt-8 text-sm sm:text-base leading-7 text-[#4b4b4b]">
-                A welcoming entry-point that helps you find the right door whether
-                you're checking in for yourself, for someone else, or you're not
-                yet sure. A short, private read: nothing to enter, nothing stored or
-                sent.
+                A welcoming entry-point that helps you find the right door
+                whether you're checking in for yourself, for someone else, or
+                you're not yet sure. A short, private read: nothing to enter,
+                nothing stored or sent.
               </p>
 
               {/* Button */}

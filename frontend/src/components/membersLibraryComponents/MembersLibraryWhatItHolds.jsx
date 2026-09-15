@@ -27,12 +27,19 @@ const MembersLibraryWhatItHolds = () => {
             Safeguarding and awareness films, in the style of GHUK's Brothers
             Gambling Harm film, referenced on our{" "}
             <Link
-              to="/members-only-campaign"
+              to="/children-and-safeguarding"
               className="text-[#1e293b] underline hover:text-[#0093D0] font-medium transition-colors"
             >
-              Members Only Campaign
+              Children &amp; Safeguarding
             </Link>{" "}
-            page.
+            and{" "}
+            <Link
+              to="/get-help/family-friends"
+              className="text-[#1e293b] underline hover:text-[#0093D0] font-medium transition-colors"
+            >
+              Family &amp; Friends
+            </Link>{" "}
+            pages.
           </div>
 
           <div className="border-t border-dotted border-gray-300"></div>

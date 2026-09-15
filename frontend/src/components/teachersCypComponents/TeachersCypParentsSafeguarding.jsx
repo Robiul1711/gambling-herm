@@ -42,34 +42,6 @@ const TeachersCypParentsSafeguarding = () => {
           issues, vague unease) and frequently misattributed to other causes.
         </p>
 
-        {/* PhoenixFM Audio Callout Card */}
-        <div className="bg-[#f0f9ff] border-l-[4px] border-[#0093D0]  p-6 sm:p-8 mb-10 shadow-xs">
-          <span className="text-xs sm:text-sm font-bold text-[#0093D0] uppercase tracking-wider mb-2 block">
-            PHOENIXFM, MAY 2026
-          </span>
-          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-4 leading-snug tracking-tight">
-            Young people, and the hundreds of thousands of UK children living
-            with someone else's gambling
-          </h3>
-
-          {/* HTML5 Audio Player */}
-          <div className="mb-3">
-            <audio
-              controls
-              src={youngPeopleChildrenAudio}
-              className="w-full h-10 accent-[#0093D0] "
-            >
-              <source src={youngPeopleChildrenAudio} type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-
-          <p className="text-xs sm:text-sm text-gray-500 italic font-normal">
-            Clip: John Gilham, speaking from lived experience on Phoenix FM's{" "}
-            <span className="italic">123 Friday</span> show, May 2026.
-          </p>
-        </div>
-
         {/* Dotted Statements List */}
         <div className="divide-y divide-dashed divide-gray-200 space-y-4 pt-2">
           {points.map((item, idx) => (

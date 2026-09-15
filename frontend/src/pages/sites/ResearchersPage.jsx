@@ -8,7 +8,7 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 const sections = [
   { id: "what-we-bring", title: "1. What we bring" },
   { id: "questions-wanted", title: "2. Questions wanted" },
-  { id: "join-network", title: "3. Join research network" },
+  { id: "join-network", title: "3. Connect with us" },
 ];
 
 export default function ResearchersPage() {
