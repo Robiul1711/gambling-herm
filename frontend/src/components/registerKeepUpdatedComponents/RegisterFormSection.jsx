@@ -159,6 +159,15 @@ const RegisterFormSection = () => {
                 Researcher or academic
               </option>
               <option value="Educator or teacher">Educator or teacher</option>
+              <option value="Employer or workplace">
+                Employer or workplace
+              </option>
+              <option value="Charity or community organisation">
+                Charity or community organisation
+              </option>
+              <option value="Public sector or local authority">
+                Public sector or local authority
+              </option>
               <option value="Supporter">Supporter</option>
             </select>
           </div>

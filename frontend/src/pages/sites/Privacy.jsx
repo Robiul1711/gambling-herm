@@ -74,8 +74,8 @@ export default function Privacy() {
               <div className="space-y-5">
                 <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                   <strong className="text-slate-900 font-semibold">Information you give us.</strong> If you email us, contact
-                  us, or sign up to hear about our work, we hold the details you provide, typically your name
-                  and email address, and the content of your message.
+                  us, sign up to hear about our work, or register for membership, we hold the details you provide: typically your name,
+                  email address, organisation, role and sector, and the content of your message.
                 </p>
                 <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                   <strong className="text-slate-900 font-semibold">Information collected automatically.</strong> Like most

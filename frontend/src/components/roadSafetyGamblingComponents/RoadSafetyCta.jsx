@@ -19,25 +19,29 @@ const RoadSafetyCta = () => {
           safer employees, safer organisations and safer roads.
         </p>
 
-        {/* 3 Action Buttons */}
+        {/* Action Buttons */}
         <div className="flex flex-wrap justify-center items-center gap-4">
           <a
-            href="#research-report"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm"
+            href="https://gamblingharm.sharepoint.com/:b:/g/IQCl7512FvaYT6zW60m11T24AZXu835KtqOI2iIl4IlXn7Y?e=4LIPkW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5 transition-colors shadow-sm"
           >
-            Download Research Report
+            Read the full report (PDF)
           </a>
 
           <a
-            href="#ceo-pledge"
-            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm"
+            href="https://gamblingharm.sharepoint.com/:i:/g/IQBuU5l28H5PSb_gg-RGbV_RAet8BRzenNHmGOV4aucjR5s?e=gycrY5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 transition-colors shadow-sm"
           >
-            Sign CEO Pledge
+            Road Safety Poster
           </a>
 
           <Link
             to="/about#contact"
-            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5  transition-colors shadow-sm"
+            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 transition-colors shadow-sm"
           >
             Contact us
           </Link>

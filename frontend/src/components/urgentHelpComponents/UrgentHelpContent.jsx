@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UrgentHelpContent = () => {
   return (
@@ -16,7 +17,7 @@ const UrgentHelpContent = () => {
 
       {/* 2. Urgent Cards Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16 flex flex-col gap-6 md:gap-8">
-        {/* Card 1: Immediate Danger */}
+        {/* Card 1: Immediate Danger (UR3) */}
         <div className="border-2 border-red-500  p-6 sm:p-8 bg-white shadow-xs hover:shadow-md transition-shadow">
           <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-2">
             1 · If anyone is in immediate danger
@@ -28,7 +29,7 @@ const UrgentHelpContent = () => {
             Call <strong className="text-gray-900 font-bold">999</strong>. This
             includes if you're worried that someone (you or another person) is
             about to attempt suicide, has taken an overdose, or is at risk of
-            serious self-harm right now. Ambulance and police can be there fast.
+            serious self-harm right now.
           </p>
         </div>
 
@@ -78,7 +79,7 @@ const UrgentHelpContent = () => {
           </div>
         </div>
 
-        {/* Card 3: If You Can't Stop Gambling Tonight (UR1) */}
+        {/* Card 3: If You Can't Stop Gambling Tonight (UR1 & UR5) */}
         <div className="border border-gray-300  p-6 sm:p-8 bg-white shadow-xs hover:shadow-md transition-shadow">
           <span className="text-xs font-bold text-gray-600 uppercase tracking-widest block mb-2">
             3 · If you can't stop gambling tonight
@@ -110,9 +111,16 @@ const UrgentHelpContent = () => {
             </p>
             <p>
               <strong className="text-gray-900 font-bold">
-                Your bank's gambling block.
+                Your bank app:
               </strong>{" "}
-              Most UK bank apps let you turn off gambling transactions with a delay of 24–72 hours to turn it back on. Turn it on tonight.
+              most UK banks can switch on a gambling block tonight, usually under card controls, with a cooling-off period before it can be lifted. See our{" "}
+              <Link
+                to="/get-help/blocking-tools"
+                className="text-Primary hover:underline font-semibold"
+              >
+                blocking tools page
+              </Link>{" "}
+              for the full list.
             </p>
           </div>
         </div>
