@@ -10,11 +10,11 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "cyp-evidence", title: "1. Context & Evidence" },
-  { id: "cyp-films", title: "2. Safeguarding Films" },
-  { id: "cyp-school", title: "3. School Support" },
-  { id: "cyp-systems", title: "4. Systems-Level Response" },
-  { id: "cyp-work-with-us", title: "5. Work With Us" },
+  { id: "cyp-evidence", title: "1. Context & evidence" },
+  { id: "cyp-films", title: "2. Safeguarding films" },
+  { id: "cyp-school", title: "3. School support" },
+  { id: "cyp-systems", title: "4. Systems-level response" },
+  { id: "cyp-work-with-us", title: "5. Work with us" },
 ];
 
 const ChildrenYoungPeople = () => {
@@ -35,7 +35,7 @@ const ChildrenYoungPeople = () => {
           }
           description={
             bannerData?.description ||
-            "Children are often affected by other people's gambling. These harms are frequently hidden and are not limited to extreme or crisis situations. Gambling-related harm can build cumulatively over time, creating a lasting footprint that can affect children's emotional wellbeing, relationships, and life chances."
+            "Children are harmed by someone else's gambling. These harms are frequently hidden and are not limited to extreme or crisis situations. Gambling-related harm can build cumulatively over time, leaving legacy harms that shape children's emotional wellbeing, relationships and life chances."
           }
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}

@@ -14,7 +14,7 @@ export default function PositionStatement() {
           {/* Main Statement Paragraph */}
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
             <span className="font-bold text-gray-900">
-              Children of someone with gambling harm are a distinct, statutorily-invisible affected-others population.
+              Children of someone with gambling harm are a distinct, statutorily-invisible population of people harmed by someone else’s gambling.
             </span>{" "}
             <span className="text-gray-600">
               They are the larger CYP group affected, but receive a fraction of the attention given to children-as-gamblers in current policy debate. That is the wrong shape for the actual burden.

@@ -5,7 +5,7 @@ const CampaignOurPosition = () => {
     <div className="max-w-5xl mx-auto border-l-4 border-[#0092D0] bg-[#18181b]  text-white p-6 sm:p-8 md:p-10 shadow-xl">
       {/* Subtitle Tag */}
       <h4 className="text-[#38bdf8] font-bold tracking-wider text-xs md:text-sm uppercase mb-4">
-        OUR POSITION
+        Our position
       </h4>
 
       {/* Main Statement Paragraph */}

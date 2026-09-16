@@ -75,12 +75,22 @@ const RoadSafetyResearchThemes = () => {
         </div>
 
         {/* Bottom CTA Button */}
-        <div>
+        <div className="flex flex-wrap items-center gap-4">
           <a
-            href="#full-report"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-7 py-3.5  transition-colors shadow-sm inline-block"
+            href="https://gamblingharm.sharepoint.com/:b:/g/IQCl7512FvaYT6zW60m11T24AZXu835KtqOI2iIl4IlXn7Y?e=4LIPkW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-7 py-3.5 transition-colors shadow-sm inline-block"
           >
-            Download the Full Research Report
+            Read the full report
+          </a>
+          <a
+            href="https://gamblingharm.sharepoint.com/:i:/g/IQBuU5l28H5PSb_gg-RGbV_RAet8BRzenNHmGOV4aucjR5s?e=gycrY5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-sm md:text-base px-7 py-3.5 transition-colors shadow-sm inline-block"
+          >
+            View Poster &rarr;
           </a>
         </div>
       </div>

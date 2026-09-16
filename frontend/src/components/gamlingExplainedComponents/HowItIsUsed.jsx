@@ -69,7 +69,7 @@ const HowItIsUsed = () => {
               to="/get-help/family-friends"
               className="text-gray-900 underline font-medium hover:text-[#0093D0] transition-colors"
             >
-              affected others
+              family &amp; friends
             </Link>
             ,{" "}
             <Link

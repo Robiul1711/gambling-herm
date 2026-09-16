@@ -49,7 +49,7 @@ const TobaccoControlParallel = () => {
           <div className="p-6 md:p-8">
             {/* Callout Header Label */}
             <h4 className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
-              OUR POSITION
+              Our position
             </h4>
 
             {/* Callout Text Copy */}

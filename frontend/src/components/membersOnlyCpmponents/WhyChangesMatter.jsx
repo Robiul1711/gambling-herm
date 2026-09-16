@@ -3,27 +3,27 @@ import React from "react";
 const WhyChangesMatter = () => {
   const benefits = [
     {
-      title: "EFFECTIVE BY DESIGN",
+      title: "Effective by design",
       description:
         "Verification at the machine, not at the door, removes the human-recognition failure mode that has defined the last decade of land-based self-exclusion in the UK.",
     },
     {
-      title: "BURDEN OF PROOF",
+      title: "Burden of proof",
       description:
         "Today the burden of proving an enforcement failure sits with the harmed person. The Members Only model moves that burden to the operator and the system, where it belongs.",
     },
     {
-      title: "AFFECTED-OTHERS IMPACT",
+      title: "Harm to families & others",
       description:
-        "Land-based slot harm hits affected others hard, partners and families discover the harm after the financial damage has been done. Stronger enforcement at the point of play reduces the financial-harm pipeline that affected others end up carrying.",
+        "Land-based slot harm hits families and partners hard, they discover the harm after the financial damage has been done. Stronger enforcement at the point of play reduces the financial-harm pipeline that families end up carrying.",
     },
     {
-      title: "HIGHER-RISK PRODUCTS",
+      title: "Higher-risk products",
       description:
-        "Slot machines in Adult Gaming Centres are among the most harmful UK gambling products by harm-per-pound. Tighter access controls on slots specifically target where the harm density is highest.",
+        "Slot machines in Adult Gaming Centres are among the higher-harm UK gambling products. Tighter access controls on slots specifically target where the harm density is highest.",
     },
     {
-      title: "A REAL BRIDGE TO ONLINE",
+      title: "A real bridge to online",
       description:
         "The same identity-verification architecture, once national and trusted for land-based use, becomes the natural backbone for proper online affordability and identity controls too.",
     },

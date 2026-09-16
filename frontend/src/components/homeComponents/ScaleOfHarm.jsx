@@ -18,7 +18,7 @@ export default function ScaleOfHarm() {
     {
       metric: "£4.1–6.1bn",
       description:
-        "in annual UK health losses (QALYs monetised at NICE thresholds, conservative scenario). That is 40–60× the current £100m statutory levy. Total economic burden is likely several times higher.",
+        "in annual UK health losses (QALYs monetised at NICE thresholds, conservative scenario). That is 40–60× the current statutory levy of just under £120 million. Total economic burden is likely several times higher.",
       source: "GHUK APPG submission, 25 February 2026",
     },
   ];

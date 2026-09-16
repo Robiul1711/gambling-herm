@@ -21,9 +21,10 @@ const RoadSafetyHero = () => {
         {/* Paragraph 1 */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-6 font-normal">
           An emerging public safety issue for transport organisations. New
-          research commissioned by Gambling Harm UK suggests gambling harm may
-          have implications beyond the individual, with potential impacts on
-          driver distraction, fatigue, emotional wellbeing and decision-making.
+          research commissioned by Gambling Harm UK suggests gambling harm can
+          impair the capacities safe driving depends on: attention, rest,
+          emotional wellbeing and decision-making. It can affect other road
+          users, not only the person gambling.
         </p>
 
         {/* Paragraph 2 */}
@@ -36,17 +37,21 @@ const RoadSafetyHero = () => {
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-4">
           <a
-            href="#research-report"
-            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-6 py-3.5  transition-colors shadow-sm inline-block"
+            href="https://gamblingharm.sharepoint.com/:b:/g/IQCl7512FvaYT6zW60m11T24AZXu835KtqOI2iIl4IlXn7Y?e=4LIPkW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-sm md:text-base px-6 py-3.5 transition-colors shadow-sm inline-block"
           >
             Download the Road Safety Research Report
           </a>
 
           <a
-            href="#ceo-pledge"
-            className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-800 font-semibold text-sm md:text-base px-6 py-3.5  transition-colors shadow-sm inline-block"
+            href="https://gamblingharm.sharepoint.com/:i:/g/IQBuU5l28H5PSb_gg-RGbV_RAet8BRzenNHmGOV4aucjR5s?e=gycrY5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-800 font-semibold text-sm md:text-base px-6 py-3.5 transition-colors shadow-sm inline-block"
           >
-            Sign the Transport CEO Pledge &rarr;
+            View Road Safety Poster &rarr;
           </a>
         </div>
       </div>

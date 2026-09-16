@@ -11,12 +11,12 @@ import LearnListenSupport from "@/components/thurrockcomponents/LearnListenSuppo
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "check-gambling", title: "1. Check Your Gambling" },
-  { id: "treatment-support", title: "2. Treatment & Support" },
-  { id: "control-panel", title: "3. Tools & Controls" },
-  { id: "peer-support", title: "4. Peer Support" },
-  { id: "financial-advice", title: "5. Financial Advice" },
-  { id: "learn-listen", title: "6. Learn & Listen" },
+  { id: "check-gambling", title: "1. Check your gambling" },
+  { id: "treatment-support", title: "2. Treatment & support" },
+  { id: "control-panel", title: "3. Tools & controls" },
+  { id: "peer-support", title: "4. Peer support" },
+  { id: "financial-advice", title: "5. Financial advice" },
+  { id: "learn-listen", title: "6. Learn & listen" },
 ];
 
 const Thurrock = () => {

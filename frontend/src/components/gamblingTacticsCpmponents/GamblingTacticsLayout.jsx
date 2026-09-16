@@ -80,18 +80,17 @@ const GamblingTacticsLayout = () => {
             </h4>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
               We, the research team at Gambling Harm UK, built{" "}
-              <em className="italic">Gambling Tactics</em> following a review of
-              the vitally important <em className="italic">Tobacco Tactics</em>{" "}
-              repository. As with tobacco, there are well-grounded concerns that{" "}
+              <em className="italic">Gambling Tactics</em> after reviewing the{" "}
+              <em className="italic">Tobacco Tactics</em> repository (University
+              of Bath). As with tobacco, there are well-grounded concerns that{" "}
               <strong className="font-bold text-gray-900">
-                gambling industry interference is the greatest barrier to
+                gambling industry interference is among the greatest barriers to
                 progress
               </strong>{" "}
               in reducing gambling harm. Industry funding has dominated
-              research, education and treatment. Efforts to implement a
-              public-health approach are prevented in the first place by the
-              lack of effort to identify, estimate or consider the years of
-              healthy life lost due to gambling harm. Gambling harm continues to
+              research, education and treatment. A public-health approach has
+              been held back by the absence of official estimates of the years
+              of healthy life lost to gambling harm. Gambling harm continues to
               be a neglected public-health issue.
             </p>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">

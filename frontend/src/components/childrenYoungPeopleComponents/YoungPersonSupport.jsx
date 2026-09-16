@@ -29,11 +29,8 @@ const YoungPersonSupport = () => {
           </div>
 
           <div className="pt-4 text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-            <strong className="text-gray-900 font-bold mr-1.5">Big Deal (run by GamCare),</strong>
-            <span>specifically for young people affected by gambling.</span>{" "}
-            <a href="https://bigdeal.org.uk" target="_blank" rel="noopener noreferrer" className="underline text-gray-900 hover:text-[#0092D0] font-semibold transition-colors">
-              bigdeal.org.uk.
-            </a>
+            <strong className="text-gray-900 font-bold mr-1.5">National Gambling Helpline, 0808 8020 133.</strong>
+            <span>Free, 24/7, phone or live chat support for young people.</span>
           </div>
 
           <div className="pt-4 text-sm sm:text-base text-gray-600 leading-relaxed font-normal">

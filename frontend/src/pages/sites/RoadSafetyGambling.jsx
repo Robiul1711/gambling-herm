@@ -4,17 +4,17 @@ import RoadSafetyResearchStats from "../../components/roadSafetyGamblingComponen
 import RoadSafetyWhyThisMatters from "../../components/roadSafetyGamblingComponents/RoadSafetyWhyThisMatters";
 import RoadSafetyResearchThemes from "../../components/roadSafetyGamblingComponents/RoadSafetyResearchThemes";
 import RoadSafetyPracticalSteps from "../../components/roadSafetyGamblingComponents/RoadSafetyPracticalSteps";
-import RoadSafetyResources from "../../components/roadSafetyGamblingComponents/RoadSafetyResources";
+import RoadSafetyPoster from "../../components/roadSafetyGamblingComponents/RoadSafetyPoster";
 import RoadSafetyAboutGhuk from "../../components/roadSafetyGamblingComponents/RoadSafetyAboutGhuk";
 import RoadSafetyCta from "../../components/roadSafetyGamblingComponents/RoadSafetyCta";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "research-stats", title: "1. Research Stats" },
-  { id: "why-this-matters", title: "2. Why This Matters" },
-  { id: "research-themes", title: "3. What The Research Shows" },
-  { id: "practical-steps", title: "4. Practical Steps for Transport" },
-  { id: "resources", title: "5. Resources & Guides" },
+  { id: "research-stats", title: "1. Research stats" },
+  { id: "why-this-matters", title: "2. Why this matters" },
+  { id: "research-themes", title: "3. What the research shows" },
+  { id: "practical-steps", title: "4. Practical steps for transport" },
+  { id: "road-safety-poster", title: "5. Campaign Poster" },
   { id: "about-ghuk", title: "6. About GHUK" },
 ];
 
@@ -42,14 +42,14 @@ export default function RoadSafetyGambling() {
         <RoadSafetyResearchThemes />
       </div>
 
-      {/* 5. What transport organisations can do (5 Steps Grid) */}
+      {/* 5. What transport organisations can do (5 Steps Grid & Action Buttons) */}
       <div id="practical-steps" className="scroll-mt-24">
         <RoadSafetyPracticalSteps />
       </div>
 
-      {/* 6. Resources List Section */}
-      <div id="resources" className="scroll-mt-24">
-        <RoadSafetyResources />
+      {/* 6. Campaign Poster Section */}
+      <div id="road-safety-poster" className="scroll-mt-24">
+        <RoadSafetyPoster />
       </div>
 
       {/* 7. About Gambling Harm UK */}

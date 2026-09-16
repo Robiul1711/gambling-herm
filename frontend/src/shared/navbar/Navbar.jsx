@@ -110,11 +110,11 @@ export default function Navbar() {
     "/professionals",
     "/professionals/healthcare",
     "/professionals/public-health",
+    "/professionals/teachers-children-and-young-people",
     "/professionals/teachers-cyp",
     "/professionals/researchers",
     "/sign-in",
     "/register",
-    "/members-library",
   ].includes(pathname);
 
   const isHelpActive = [
@@ -232,8 +232,8 @@ export default function Navbar() {
                               Vision, values &amp; aims
                             </DropdownItem>
                             <DropdownItem
-                              to="/about#funding"
-                              active={isLinkActive("/about#funding")}
+                              to="/funding-and-conflicts-of-interest"
+                              active={isLinkActive("/funding-and-conflicts-of-interest")}
                             >
                               Funding &amp; conflict of interest
                             </DropdownItem>
@@ -379,12 +379,12 @@ export default function Navbar() {
                             >
                               Policy &amp; advocacy
                             </DropdownItem>
-                            <DropdownItem
+                            {/* <DropdownItem
                               to="/members-only-campaign"
                               active={isLinkActive("/members-only-campaign")}
                             >
                               Members Only Campaign
-                            </DropdownItem>
+                            </DropdownItem> */}
                             <DropdownItem
                               to="/news-and-research"
                               active={pathname.startsWith("/news-and-research")}
@@ -443,10 +443,10 @@ export default function Navbar() {
                                     </p>
                                   </li>
                                   <DropdownItem
-                                    to="/members-library"
-                                    active={isLinkActive("/members-library")}
+                                    to="/sign-in"
+                                    active={isLinkActive("/sign-in")}
                                   >
-                                    Members library (Unlocked)
+                                    Member Profile
                                   </DropdownItem>
                                   <li>
                                     <button
@@ -471,12 +471,6 @@ export default function Navbar() {
                                     active={isLinkActive("/register")}
                                   >
                                     Register
-                                  </DropdownItem>
-                                  <DropdownItem
-                                    to="/members-library"
-                                    active={isLinkActive("/members-library")}
-                                  >
-                                    Members library
                                   </DropdownItem>
                                 </>
                               )}
@@ -503,12 +497,13 @@ export default function Navbar() {
                               Public health teams
                             </DropdownItem>
                             <DropdownItem
-                              to="/professionals/teachers-cyp"
-                              active={isLinkActive(
-                                "/professionals/teachers-cyp",
-                              )}
+                              to="/professionals/teachers-children-and-young-people"
+                              active={
+                                isLinkActive("/professionals/teachers-children-and-young-people") ||
+                                isLinkActive("/professionals/teachers-cyp")
+                              }
                             >
-                              Teachers &amp; CYP professionals
+                              Teachers &amp; children and young people
                             </DropdownItem>
                             <DropdownItem
                               to="/professionals/researchers"
@@ -618,7 +613,7 @@ export default function Navbar() {
                                   "/get-help/affected-others-check-in",
                                 )}
                               >
-                                Affected-others check-in
+                                People harmed by someone else’s gambling check-in
                               </DropdownItem>
                             </ul>
                           </div>
@@ -627,14 +622,14 @@ export default function Navbar() {
                               Tools to take action
                             </h4>
                             <ul className="space-y-1">
-                              <DropdownItem
+                              {/* <DropdownItem
                                 to="/get-help/spend-calculator"
                                 active={isLinkActive(
                                   "/get-help/spend-calculator",
                                 )}
                               >
                                 Spend calculator
-                              </DropdownItem>
+                              </DropdownItem> */}
                               <DropdownItem
                                 to="/get-help/blocking-tools"
                                 active={isLinkActive(
@@ -664,9 +659,9 @@ export default function Navbar() {
               {isAuthenticated ? (
                 <div className="hidden lg:flex items-center gap-3 pl-3 border-l border-slate-200">
                   <Link
-                    to="/members-library"
+                    to="/sign-in"
                     className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 border border-sky-200 text-[#0093D0] text-xs font-bold transition-colors"
-                    title="Access Members Library"
+                    title="View Account"
                   >
                     <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                     <span className="truncate max-w-[110px]">{member?.name || "Member"}</span>
@@ -787,9 +782,9 @@ export default function Navbar() {
                           Vision, values &amp; aims
                         </Link>
                         <Link
-                          to="/about#funding"
+                          to="/funding-and-conflicts-of-interest"
                           onClick={() => setMobileMenuOpen(false)}
-                          className={getMobileSubLinkClass("/about#funding")}
+                          className={getMobileSubLinkClass("/funding-and-conflicts-of-interest")}
                         >
                           Funding &amp; conflict of interest
                         </Link>
@@ -961,7 +956,7 @@ export default function Navbar() {
                         >
                           Policy &amp; advocacy
                         </Link>
-                        <Link
+                        {/* <Link
                           to="/members-only-campaign"
                           onClick={() => setMobileMenuOpen(false)}
                           className={getMobileSubLinkClass(
@@ -969,7 +964,7 @@ export default function Navbar() {
                           )}
                         >
                           Members Only Campaign
-                        </Link>
+                        </Link> */}
                         <Link
                           to="/news-and-research"
                           onClick={() => setMobileMenuOpen(false)}
@@ -1034,11 +1029,11 @@ export default function Navbar() {
                               <p className="text-[11px] text-sky-700">{member?.email}</p>
                             </div>
                             <Link
-                              to="/members-library"
+                              to="/sign-in"
                               onClick={() => setMobileMenuOpen(false)}
-                              className={getMobileSubLinkClass("/members-library")}
+                              className={getMobileSubLinkClass("/sign-in")}
                             >
-                              Members library (Unlocked)
+                              Member Profile
                             </Link>
                             <button
                               onClick={() => {
@@ -1066,13 +1061,6 @@ export default function Navbar() {
                               className={getMobileSubLinkClass("/register")}
                             >
                               Register
-                            </Link>
-                            <Link
-                              to="/members-library"
-                              onClick={() => setMobileMenuOpen(false)}
-                              className={getMobileSubLinkClass("/members-library")}
-                            >
-                              Members library
                             </Link>
                           </>
                         )}
@@ -1102,13 +1090,13 @@ export default function Navbar() {
                           Public health teams
                         </Link>
                         <Link
-                          to="/professionals/teachers-cyp"
+                          to="/professionals/teachers-children-and-young-people"
                           onClick={() => setMobileMenuOpen(false)}
                           className={getMobileSubLinkClass(
-                            "/professionals/teachers-cyp",
+                            "/professionals/teachers-children-and-young-people",
                           )}
                         >
-                          Teachers &amp; CYP professionals
+                          Teachers &amp; children and young people
                         </Link>
                         <Link
                           to="/professionals/researchers"
@@ -1230,7 +1218,7 @@ export default function Navbar() {
                             "/get-help/affected-others-check-in",
                           )}
                         >
-                          Affected-others check-in
+                          People harmed by someone else’s gambling check-in
                         </Link>
                       </div>
                     </div>
@@ -1239,7 +1227,7 @@ export default function Navbar() {
                         Tools to take action
                       </div>
                       <div className="space-y-0.5">
-                        <Link
+                        {/* <Link
                           to="/get-help/spend-calculator"
                           onClick={() => setMobileMenuOpen(false)}
                           className={getMobileSubLinkClass(
@@ -1247,7 +1235,7 @@ export default function Navbar() {
                           )}
                         >
                           Spend calculator
-                        </Link>
+                        </Link> */}
                         <Link
                           to="/get-help/blocking-tools"
                           onClick={() => setMobileMenuOpen(false)}

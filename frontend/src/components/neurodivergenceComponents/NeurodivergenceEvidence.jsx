@@ -22,9 +22,14 @@ const NeurodivergenceEvidence = () => {
         {/* Evidence Blocks */}
         <div className="space-y-6">
           {/* Point 1 */}
-          <div className="text-sm sm:text-base leading-relaxed text-gray-900 font-bold">
-            ADHD is the form of neurodivergence with the clearest evidence of
-            elevated gambling-harm risk.
+          <div className="text-sm sm:text-base leading-relaxed text-gray-700 font-normal">
+            <strong className="font-bold text-gray-900 mr-1.5">
+              ADHD is the form of neurodivergence with the clearest evidence of
+              elevated gambling-harm risk.
+            </strong>
+            Across 14 studies, pooled ADHD prevalence among people experiencing
+            gambling harm is 24% (95% CI 18–29), against roughly 3–4% in the
+            general adult population.
           </div>
 
           <div className="border-t border-dashed border-gray-200"></div>

@@ -43,7 +43,7 @@ export default function ChildrenInHouse() {
           of a parent with severe gambling harm will experience harm themselves,
           financial, emotional, or developmental. Children almost always pick up
           on more than parents think. They are also among the most underserved
-          affected-others populations in the UK system.
+          populations of people harmed by someone else’s gambling in the UK system.
         </p>
 
         {/* Guidelines list with separators */}
@@ -71,7 +71,7 @@ export default function ChildrenInHouse() {
             statutorily-invisible population. They deserve recognition in the UK
             gambling-harm response, ringfenced funding through the statutory
             levy, and dedicated services. The current position (in which
-            CYP-as-affected-others receive a fraction of the attention given to
+            children harmed by someone else's gambling receive a fraction of the attention given to
             CYP-as-direct-customers, despite being the larger group) is not
             justifiable on the evidence.
           </p>

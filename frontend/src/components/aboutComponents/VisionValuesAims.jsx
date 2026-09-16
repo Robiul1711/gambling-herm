@@ -17,12 +17,12 @@ export default function VisionValuesAims() {
           {/* Description */}
           <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed mb-10">
             Gambling Harm UK exists to address a gap in how gambling harm is
-            understood and responded to in the UK, and to ensure public systems
-            can prevent harm, identify risk earlier, and respond safely. Our
-            vision is a country where gambling harm is treated as the
-            preventable public-health issue it is: recognised earlier, responded
-            to safely, and falling year on year, together with the inequality it
-            drives.
+            understood and responded to in the UK, and to ensure public health
+            systems can prevent harm, identify risk earlier, and respond safely.
+            Our vision is a country where gambling harm is treated as the
+            preventable public-health issue it is: prevented wherever possible,
+            recognised earlier, responded to safely, and falling year on year,
+            together with the inequalities it drives.
           </p>
 
           {/* Subheading: Our values */}
@@ -47,13 +47,13 @@ export default function VisionValuesAims() {
             {/* Card 2 */}
             <div className="border border-gray-200/80 p-6 bg-white shadow-sm hover:shadow-md transition-all duration-200 text-left flex flex-col justify-start">
               <h4 className="text-lg font-bold text-slate-800 mb-3">
-                Grounded in lived experience
+                Led by lived experience
               </h4>
               <p className="text-slate-600 text-[14px] leading-relaxed">
                 Our work is informed and led by people directly affected by
-                gambling harm, including affected others and bereaved families.
-                Lived experience sits at the centre of what we do, not at its
-                edges.
+                gambling harm, including those harmed by someone else's gambling
+                and bereaved families. Lived experience sits at the centre and
+                throughout everything we do.
               </p>
             </div>
 
@@ -97,14 +97,14 @@ export default function VisionValuesAims() {
           <div className="border-t border-b border-gray-200/60 divide-y divide-gray-200/60 mb-8 sm:mb-10">
             <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
               <span className="font-bold text-gray-900">
-                People affected by gambling harm at the centre of change,
+                People harmed by gambling at the centre of change,
               </span>{" "}
               with lived experience shaping research, services, policy and
               public understanding.
             </div>
             <div className="py-4 text-[15px] sm:text-base text-gray-700 leading-relaxed">
               <span className="font-bold text-gray-900">
-                Affected others, including children, recognised and supported
+                People harmed by someone else’s gambling, including children, recognised and supported
               </span>{" "}
               as harmed in their own right.
             </div>

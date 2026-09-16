@@ -41,7 +41,7 @@ const SafeguardingFilms = () => {
   const sectionTitle = headerData?.title || "Safeguarding films";
   const sectionDescription =
     headerData?.description ||
-    "These films were developed with lived experience input to ensure authenticity and reflect real safeguarding scenarios reported by children and families affected by gambling harm.";
+    "These films were developed with lived-experience input to show the quieter, cumulative harms professionals told us they struggle to recognise until too late — without blaming parents or relying on stereotypes.";
 
   const films = [
     {
@@ -56,13 +56,11 @@ const SafeguardingFilms = () => {
         "Children becoming unseen",
         "Gambling taking priority over caregiving",
       ],
-      videoUrls: [
-        film1Data?.videoUrl1 || film1Data?.videoUrl || "",
-        film1Data?.videoUrl2 || "",
-      ].filter(Boolean),
+      videoUrls: [film1Data?.videoUrl1 || film1Data?.videoUrl || ""].filter(
+        Boolean,
+      ),
       defaultEmbeds: [
         "https://www.youtube.com/embed/eUINa1CNsSY",
-        "https://www.youtube.com/embed/m0iK5vGk4Wo",
       ],
     },
     {
@@ -70,7 +68,7 @@ const SafeguardingFilms = () => {
       title: film2Data?.title || "Birthday Card",
       description:
         film2Data?.description ||
-        "This film highlights how children can be harmed through subtle pressure rather than overt force, and how such behaviour can become normalised. Often those who are harmed the most are the people we love the most.",
+        "This film highlights how children can be harmed through subtle pressure rather than overt force, and how such behaviour can become normalised.",
       themes: [
         "Manipulation and coercion",
         "Stealing from a child",
@@ -80,7 +78,9 @@ const SafeguardingFilms = () => {
       videoUrls: [film2Data?.videoUrl1 || film2Data?.videoUrl || ""].filter(
         Boolean,
       ),
-      defaultEmbeds: [],
+      defaultEmbeds: [
+        "https://www.youtube.com/embed/m0iK5vGk4Wo",
+      ],
     },
     {
       id: 3,
@@ -93,7 +93,7 @@ const SafeguardingFilms = () => {
         "Emotional distance",
         "Lost time and missed memories",
         "Gambling pulling caregivers away",
-        "Gateway behaviours",
+        "Gambling-like products normalised early",
       ],
       videoUrls: [film3Data?.videoUrl1 || film3Data?.videoUrl || ""].filter(
         Boolean,

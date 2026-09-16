@@ -27,20 +27,20 @@ const TeachersCypFilmStills = () => {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-8 h-[2px] bg-[#0092D0]"></span>
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0092D0]">
-            STILLS FROM GHUK'S SAFEGUARDING FILMS
+            Stills from GHUK's safeguarding films
           </span>
         </div>
 
         {/* Narrative Paragraph with Link */}
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 font-normal">
-          Three short films, each made with affected others, illustrate what
+          Three short films, each made with people with lived experience of someone else's gambling, illustrate what
           gambling harm looks like for the children in a household. Watch them
           all on the{" "}
           <Link
             to="/get-help/family-friends"
             className="underline text-gray-900 hover:text-[#0092D0] font-semibold transition-colors"
           >
-            Affected others page
+            Family &amp; friends page
           </Link>
           .
         </p>

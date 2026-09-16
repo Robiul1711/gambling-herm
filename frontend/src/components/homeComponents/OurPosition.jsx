@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 
 export default function WhoGamblingHarms() {
   const stats = [
-    {
-      number: "£37bn",
-      text: (
-        <>
-          a year: the health loss from gambling in the UK, valued at the £70,000
-          Green Book societal value of a QALY. That is roughly 370 times the
-          statutory levy on gambling operators. Around 530,000 quality-adjusted
-          life years, of which roughly two-fifths fall on people harmed by
-          someone else's gambling or on children, close to half before the
-          household-overlap adjustment.
-        </>
-      ),
-    },
+    // {
+    //   number: "£37bn",
+    //   text: (
+    //     <>
+    //       a year: the health loss from gambling in the UK, valued at the £70,000
+    //       Green Book societal value of a QALY. That is roughly 370 times the
+    //       statutory levy on gambling operators. Around 530,000 quality-adjusted
+    //       life years, of which roughly two-fifths fall on people harmed by
+    //       someone else's gambling or on children, close to half before the
+    //       household-overlap adjustment.
+    //     </>
+    //   ),
+    // },
     {
       number: "912,805",
       text: (
@@ -31,13 +31,13 @@ export default function WhoGamblingHarms() {
       number: "~9%",
       text: (
         <>
-          of adults in Great Britain, about 4.9 million people, reported
+          of adults in Great Britain, around 4.8 million people, reported
           experiencing harm from someone else's gambling in the past year:
           partners, parents, children, siblings, close friends. That is
           comparable in scale to the number harmed by their own gambling
           (Gambling Commission,{" "}
           <em className="italic">
-            Insights into affected others from the GSGB
+            Insights into people harmed by someone else’s gambling from the GSGB
           </em>
           , 2026, n=19,714).
         </>

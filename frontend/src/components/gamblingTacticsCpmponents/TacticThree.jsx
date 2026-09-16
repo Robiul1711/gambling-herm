@@ -51,7 +51,14 @@ const TacticThree = () => {
           decade or more. This is a critique of the funding architecture, not of the organisations
           working within it or their staff, many of whom deliver valuable services. GHUK accepts
           no funding from the gambling industry, its trade bodies, or its associated charitable
-          arms.
+          arms; our own funding, including the 2024–25 transition period, is disclosed in full in our{" "}
+          <Link
+            to="/funding-and-conflicts-of-interest"
+            className="text-gray-900 font-semibold underline hover:text-[#0093D0] transition-colors"
+          >
+            funding statement
+          </Link>
+          .
         </p>
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed font-normal">
           The wind-down of the voluntary RET system and the introduction of a statutory levy is

@@ -140,8 +140,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/about#funding"
-                    className="hover:text-white transition-colors"
+                    to="/funding-and-conflicts-of-interest"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Funding &amp; COI
                   </Link>
@@ -238,10 +238,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="/professionals/teachers-cyp"
+                    to="/professionals/teachers-children-and-young-people"
                     className="hover:text-white transition-colors"
                   >
-                    Teachers &amp; CYP
+                    Teachers &amp; children and young people
                   </Link>
                 </li>
                 <li>
@@ -291,6 +291,14 @@ export default function Footer() {
                     className="hover:text-white transition-colors"
                   >
                     Find treatment near you
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/thurrock"
+                    className="hover:text-white transition-colors"
+                  >
+                    Support in Thurrock
                   </Link>
                 </li>
                 <li>

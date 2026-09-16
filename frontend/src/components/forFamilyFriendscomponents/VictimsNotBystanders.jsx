@@ -13,7 +13,7 @@ export default function VictimsNotBystanders() {
   const tagline = data?.subtitle || "Our position";
   const boldPrefix =
     data?.title ||
-    "Affected Others Are Direct Victims, Not Concerned Bystanders.";
+    "People Harmed by Someone Else’s Gambling Are Direct Victims, Not Concerned Bystanders.";
   const mainDesc =
     data?.description ||
     "You did not consent to a product being marketed at someone you love. The financial, mental-health and developmental harm to you is not a side-effect of \"someone else's choice\", it is part of the harm the product produced. The UK gambling-harm response routinely understates this. We don't.";
@@ -21,7 +21,7 @@ export default function VictimsNotBystanders() {
 
   const renderParagraph2 = () => {
     const defaultText =
-      'You can access support for you, in your own right, today, without waiting for the person who gambles to be "ready". Call the National Gambling Helpline (0808 8020 133), they support affected others, not only people who gamble.';
+      'You can access support for you, in your own right, today, without waiting for the person who gambles to be "ready". Call the National Gambling Helpline (0808 8020 133), they support people harmed by someone else’s gambling, not only people who gamble.';
     const text = data?.audioTitle || defaultText;
     const targetPhrase = "National Gambling Helpline (0808 8020 133)";
 

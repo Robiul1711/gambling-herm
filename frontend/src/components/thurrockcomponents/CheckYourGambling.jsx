@@ -17,7 +17,7 @@ export default function CheckYourGambling() {
       to: "https://gamblingharm.com/ghsi-10-person-who-gambles/",
     },
     {
-      title: "GHSI for affected others",
+      title: "GHSI for people harmed by someone else’s gambling",
       description:
         "See how someone else's gambling might be impacting you, with support and guidance available right away.",
       buttonText: "Take the GHSI-AO",

@@ -5,25 +5,25 @@ const JoinResearchNetworkSection = () => {
   const fields = [
     {
       label: "Epidemiology",
-      subject: "Research Network Register - Epidemiology",
+      subject: "Connect with GHUK - Epidemiology",
     },
     {
       label: "Health economics",
-      subject: "Research Network Register - Health Economics",
+      subject: "Connect with GHUK - Health Economics",
     },
     {
       label: "Public health",
-      subject: "Research Network Register - Public Health",
+      subject: "Connect with GHUK - Public Health",
     },
     {
       label: "Another field",
-      subject: "Research Network Register - Other Field",
+      subject: "Connect with GHUK - Other Field",
       isOutline: true,
     },
   ];
 
   const getMailtoUrl = (subject, field) => {
-    const body = `Hello GHUK Team,%0D%0A%0D%0AI would like to join the research network.%0D%0A%0D%0AField: ${encodeURIComponent(
+    const body = `Hello GHUK Team,%0D%0A%0D%0AI would like to connect with you.%0D%0A%0D%0AField: ${encodeURIComponent(
       field
     )}%0D%0AInstitution: %0D%0AInterests: `;
     return `mailto:hello@gamblingharm.com?subject=${encodeURIComponent(
@@ -39,14 +39,12 @@ const JoinResearchNetworkSection = () => {
 
         {/* Section Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold text-gray-900 tracking-tight mb-6">
-          Join the research network
+          Connect with us
         </h2>
 
-        {/* Introductory Texts */}
+        {/* Introductory Texts (RE2) */}
         <p className="text-[15px] md:text-base text-gray-700 leading-relaxed mb-4">
-          We are assembling a register of researchers interested in gambling harm
-          by field, to share data opportunities, collaboration calls and
-          evidence briefings as they arise.
+          We want to connect with people working on these gaps, or who want to:
         </p>
         <p className="text-[15px] md:text-base text-gray-700 leading-relaxed mb-8">
           A structured sign-up is coming with our new membership system. For now,

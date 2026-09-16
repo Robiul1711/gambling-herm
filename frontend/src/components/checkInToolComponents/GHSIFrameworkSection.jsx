@@ -7,7 +7,7 @@ const frameworkPoints = [
       "Harm is measured across financial, relationship, mental-health, physical-health, work/study and criminal-legal domains, rather than reduced to a single severity number.",
   },
   {
-    title: "Affected others by design.",
+    title: "People harmed by someone else’s gambling by design.",
     description:
       "The framework explicitly captures harm to people other than the person who gambles, partners, parents, children, friends. The PGSI was designed only for the person gambling.",
   },
@@ -17,7 +17,7 @@ const frameworkPoints = [
       "Uses Multi-Criteria Decision Analysis (MCDA) to weight domains relative to one another, allowing like-for-like comparison with the burden of alcohol and other addictive harms.",
   },
   {
-    title: "Better at the moderate-risk band where most population harm sits.",
+    title: "Better at the moderate level of gambling harm band where most population harm sits.",
     description:
       "The GHSI structure handles the 70–85% of harm that lives below the conventional PGSI 8+ threshold, the band the public-health evidence has consistently said matters most.",
   },
@@ -72,7 +72,7 @@ const GHSIFrameworkSection = () => {
         <div className="mt-10">
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
             Our check-in tools draw on the GHSI's domain structure and its
-            inclusive-of-affected-others stance, while keeping the question count
+            inclusive stance for people harmed by someone else’s gambling, while keeping the question count
             low enough to be usable in three minutes. They are reflection prompts
             (not clinical diagnostics) and don't replace a conversation with the
             National Gambling Helpline{" "}

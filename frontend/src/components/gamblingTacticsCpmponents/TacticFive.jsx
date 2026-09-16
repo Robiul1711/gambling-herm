@@ -110,10 +110,10 @@ const TacticFive = () => {
 
         <div className="border border-gray-200/90 bg-white p-6  space-y-1.5 shadow-xs">
           <span className="text-3xl sm:text-4xl font-extrabold text-gray-900 block tracking-tight">
-            ~£15bn
+            £16.8bn
           </span>
           <p className="text-xs sm:text-sm text-gray-500 font-normal leading-snug">
-            UK gross gambling yield per year
+            GB gross gambling yield, 2024/25
           </p>
         </div>
       </div>

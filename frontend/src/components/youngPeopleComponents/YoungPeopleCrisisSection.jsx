@@ -23,12 +23,12 @@ export default function YoungPeopleCrisisSection() {
           </div>
 
           {/* Item 2 */}
-          <div className="pt-3 border-t border-dashed border-gray-700">
+          {/* <div className="pt-3 border-t border-dashed border-gray-700">
             <p>
               <strong className="font-bold text-white">Papyrus HopeLine 24/7, 0300 102 2470</strong>{" "}
               (call) or text <strong className="font-bold text-white">88247</strong>, if you're having thoughts of suicide. For anyone under 35.
             </p>
-          </div>
+          </div> */}
 
           {/* Item 3 */}
           <div className="pt-3 border-t border-dashed border-gray-700">

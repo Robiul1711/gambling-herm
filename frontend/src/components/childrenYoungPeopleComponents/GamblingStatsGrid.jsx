@@ -10,7 +10,7 @@ const cardData = [
     isActive: true, // The first card has a distinctive blue/teal border
   },
   {
-    title: "As affected others",
+    title: "Harmed by someone else's gambling",
     stat: "~42%",
     description:
       "of children in Great Britain may be affected by someone else's gambling (PGSI 1+): parents, siblings, and others close to them. Around 900,000 are modelled as experiencing measurable harm.",

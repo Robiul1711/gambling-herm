@@ -35,16 +35,8 @@ export default function SomeoneAtHomeSection() {
           {/* Item 2 */}
           <div className="pt-3 border-t border-dashed border-slate-300">
             <p>
-              <strong className="font-bold text-slate-900">Big Deal (run by GamCare)</strong>{" "}
-              is made for young people affected by gambling, including someone else's.{" "}
-              <a
-                href="https://bigdeal.org.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-slate-950 font-normal"
-              >
-                bigdeal.org.uk
-              </a>
+              <strong className="font-bold text-slate-900">National Gambling Helpline, 0808 8020 133.</strong>{" "}
+              Free, 24/7, phone or live chat. They support young people harmed by gambling, including when it's someone else's gambling.
             </p>
           </div>
 

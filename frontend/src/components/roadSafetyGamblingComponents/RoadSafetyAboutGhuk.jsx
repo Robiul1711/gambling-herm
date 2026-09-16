@@ -15,10 +15,11 @@ const RoadSafetyAboutGhuk = () => {
 
         {/* Narrative Paragraph */}
         <p className="text-slate-700 text-base sm:text-lg leading-relaxed md:leading-[1.8] mb-8 font-normal">
-          Gambling Harm UK is a national charity working to prevent avoidable
-          gambling harm through creating connectivity, developing capability and
-          maximising capacity across communities, organisations, and public
-          services.
+          Gambling Harm UK is an independent public-health charity preventing
+          gambling harm by creating connectivity, developing capability and
+          maximising capacity across health, education, local government and the
+          voluntary sector. We are independent of industry and led by lived
+          experience.
         </p>
 
         {/* Button */}

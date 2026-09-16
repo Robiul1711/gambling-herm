@@ -23,16 +23,32 @@ export default function ResidentialIntensive() {
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
  {/* Card 1: Gordon Moody */}
  <div className="border border-[#b2d8ec] bg-white p-6 sm:p-8 hover:shadow-md transition-shadow duration-300 flex flex-col justify-start">
- <h3 className="text-lg font-bold text-[#1a1a1a] mb-4 leading-snug">
- Gordon Moody
+ <h3 className="text-lg font-bold text-[#1a1a1a] mb-4 leading-snug flex items-center justify-between">
+ <span>Gordon Moody</span>
+ <a
+ href="https://www.gordonmoody.org.uk"
+ target="_blank"
+ rel="noopener noreferrer"
+ className="text-xs sm:text-sm font-semibold text-[#0092D0] hover:underline"
+ >
+ gordonmoody.org.uk →
+ </a>
  </h3>
  <div className="space-y-4 text-[14px] sm:text-[15px] leading-relaxed text-[#5f6472]">
  <p>
  <strong className="text-gray-900">Residential.</strong> Free,
  12-week residential treatment for men and women experiencing
  severe gambling harm, at sites in the West Midlands and Greater
- Manchester. Referrals via gordonmoody.org.uk or via the National
- Gambling Helpline.
+ Manchester. Referrals via{" "}
+ <a
+ href="https://www.gordonmoody.org.uk"
+ target="_blank"
+ rel="noopener noreferrer"
+ className="text-gray-900 underline hover:text-[#0092D0] font-medium"
+ >
+ gordonmoody.org.uk
+ </a>{" "}
+ or via the National Gambling Helpline.
  </p>
  <p>
  <strong className="text-gray-900">Online Retreat & Counselling.</strong>{" "}

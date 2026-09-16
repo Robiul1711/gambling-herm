@@ -78,7 +78,7 @@ const SafeguardingLeads = () => {
           <strong className="text-gray-900 font-bold mr-1.5">
             Connect them to age-appropriate support.
           </strong>
-          Childline, Big Deal, YoungMinds. School counsellors. The NHS gambling
+          Childline, National Gambling Helpline (0808 8020 133), YoungMinds. School counsellors. The NHS gambling
           clinics can accept under-18 referrals.
         </div>
       </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 const sections = [
   {
     id: "gambling-harm",
-    title: "1. What Gambling Harm Looks Like",
+    title: "1. What gambling harm looks like",
   },
   {
     id: "normal-product",

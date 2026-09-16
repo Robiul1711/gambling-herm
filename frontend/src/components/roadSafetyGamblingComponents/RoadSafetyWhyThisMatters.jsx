@@ -14,10 +14,10 @@ const RoadSafetyWhyThisMatters = () => {
 
         {/* Paragraph 1 */}
         <p className="text-base sm:text-lg text-slate-700 leading-relaxed md:leading-[1.8] mb-6 font-normal">
-          With around 2 million adults in the UK estimated to need support for
-          their gambling (OHID 2023 England estimate, scaled to the UK),
-          gambling harm should be viewed alongside other recognised workplace
-          risks.
+          With around 2 million adults in the UK who gamble estimated to
+          potentially benefit from treatment or support (OHID 2023 England
+          estimate, scaled to the UK), gambling harm belongs alongside other
+          recognised workplace risks.
         </p>
 
         {/* Paragraph 2 */}

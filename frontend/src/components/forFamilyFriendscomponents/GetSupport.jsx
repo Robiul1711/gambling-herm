@@ -2,9 +2,9 @@ import React from "react";
 
 const resources = [
   {
-    title: "GamCare's affected-others service",
+    title: "GamCare's service for people harmed by someone else’s gambling",
     description:
-      "The National Gambling Helpline (0808 8020 133) supports affected others as well as people who gamble. They offer one-to-one counselling sessions specifically for partners, family and friends, with no waiting list.",
+      "The National Gambling Helpline (0808 8020 133) supports people harmed by someone else’s gambling as well as people who gamble. They offer one-to-one counselling sessions specifically for partners, family and friends, with no waiting list.",
   },
   {
     title: "Gam-Anon",

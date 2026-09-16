@@ -14,8 +14,8 @@ export default function Banner() {
   // Format tags: uppercase and dot-separated
   const tagsText =
     bannerData?.tags && bannerData.tags.length > 0
-      ? bannerData.tags.map((tag) => tag.toUpperCase()).join(" ·")
-      : "INDEPENDENT · NO INDUSTRY FUNDING · LIVED EXPERIENCE INFORMED";
+      ? bannerData.tags.map((tag) => tag.toUpperCase()).join(" · ")
+      : "INDEPENDENT · ROOTED IN LIVED EXPERIENCE";
 
   if (isLoading) {
     return (
@@ -69,12 +69,12 @@ export default function Banner() {
   }
 
   return (
-    <section className="w-full bg-white py-12 md:py-20 lg:py-24">
+    <section className="w-full bg-white py-12 md:py-18 lg:py-20">
       <div className="section-padding-x">
         {/* Main Grid Layout */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* LEFT COLUMN: Text Content & Actions (Takes 7 spans on desktop) */}
-          <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
+          <div className="lg:col-span-7 flex flex-col space-y-5 text-left">
             {/* Tagline starting with horizontal line */}
             <div className="flex items-center space-x-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#156E94]">
               <span className="w-6 h-[2px] bg-[#156E94]" />
@@ -90,29 +90,23 @@ export default function Banner() {
             {/* Description */}
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl">
               {bannerData?.description ||
-                "On our burden-of-disease modelling, gambling ranks among the top five modifiable risks to the UK's health. Unlike tobacco or alcohol, around half of the harm is expected to fall on people who never placed a bet. We're an independent UK charity. We support the people gambling has harmed and the families around them, and we push for the policy change that prevents it."}
+                "You don't have to place a bet to be harmed. Gambling harm falls in comparable measure on people who gamble and on the people around them: partners, children, parents. We're an independent, evidence-led public health charity, led by individuals with lived experience. We prevent gambling harm through awareness, education and systems change, and connect people to trusted specialist support."}
             </p>
 
             {/* Action Buttons Row */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
               <Link
-                to={bannerData?.primaryBtnLink || "/get-help"}
-                className="bg-[#156e94] hover:bg-[#0d4a63] text-white font-bold
- px-5 sm:px-6 py-3 sm:py-3.5
- transition-all duration-200 shadow-sm
- text-sm sm:text-base text-center"
+                to={bannerData?.primaryBtnLink || "/understanding-gambling-harms"}
+                className="bg-[#156e94] hover:bg-[#0d4a63] text-white font-bold px-5 sm:px-6 py-3 sm:py-3.5 transition-all duration-200 shadow-sm text-sm sm:text-base text-center"
               >
-                {bannerData?.primaryBtnText || "Gambling is harming me"}
+                {bannerData?.primaryBtnText || "Understanding gambling harms"}
               </Link>
 
               <Link
-                to={bannerData?.secondaryBtnLink || "/get-help/family-friends"}
-                className="bg-white border border-gray-300 hover:border-gray-900 text-gray-800 font-bold
- px-5 sm:px-6 py-3 sm:py-3.5
- transition-all duration-200
- text-sm sm:text-base text-center shadow-sm"
+                to={bannerData?.secondaryBtnLink || "/policy-and-advocacy"}
+                className="bg-white border border-gray-300 hover:border-gray-900 text-gray-800 font-bold px-5 sm:px-6 py-3 sm:py-3.5 transition-all duration-200 text-sm sm:text-base text-center shadow-sm"
               >
-                {bannerData?.secondaryBtnText || "I'm worried about someone"}
+                {bannerData?.secondaryBtnText || "Our policy positions"}
               </Link>
             </div>
           </div>

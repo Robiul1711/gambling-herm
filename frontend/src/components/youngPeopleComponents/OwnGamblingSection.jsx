@@ -30,24 +30,8 @@ export default function OwnGamblingSection() {
           {/* Item 2 */}
           <div className="pt-3 border-t border-dashed border-slate-300">
             <p>
-              <strong className="font-bold text-slate-900">Big Deal</strong>{" "}
-              has advice and real stories from young people.{" "}
-              <a
-                href="https://bigdeal.org.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-slate-950 font-normal"
-              >
-                bigdeal.org.uk
-              </a>
-            </p>
-          </div>
-
-          {/* Item 3 */}
-          <div className="pt-3 border-t border-dashed border-slate-300">
-            <p>
               <strong className="font-bold text-slate-900">National Gambling Helpline, 0808 8020 133.</strong>{" "}
-              Free, confidential, 24/7. They support young people too, and web chat at{" "}
+              Free, confidential, 24/7, phone or live chat at{" "}
               <a
                 href="https://www.gamcare.org.uk"
                 target="_blank"
@@ -55,8 +39,8 @@ export default function OwnGamblingSection() {
                 className="underline hover:text-slate-950"
               >
                 gamcare.org.uk
-              </a>{" "}
-              means you don't have to speak aloud.
+              </a>
+              . They support young people too.
             </p>
           </div>
 

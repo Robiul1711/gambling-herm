@@ -6,13 +6,13 @@ const TalkToSomeone = () => {
       title: "National Gambling Helpline",
       number: "0808 8020 133",
       description:
-        "Supports family and friends as well as people who gamble. Web chat also available. Run by GamCare.",
+        "Free. Confidential. 24 hours a day, every day. Run by GamCare. Web chat also available. Supports family and friends as well as people who gamble.",
     },
     {
       title: "Samaritans",
       number: "116 123",
       description:
-        "For emotional crisis of any kind. You don't have to be suicidal to call.",
+        "For emotional crisis of any kind. Free, 24/7. You don't have to be suicidal to call.",
     },
   ];
 
@@ -21,12 +21,11 @@ const TalkToSomeone = () => {
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight">
-          Talk to someone today
+          Free, confidential, available 24 hours.
         </h2>
 
         <p className="mt-4 text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-          Free, confidential, available 24 hours a day, every day. You don't need to
-          be in crisis to call.
+          Two numbers. Both free, both confidential. Neither requires you to be in crisis.
         </p>
       </div>
 
@@ -35,7 +34,7 @@ const TalkToSomeone = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="border border-gray-200/90  bg-white p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
+            className="border border-gray-200/90 bg-white p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
           >
             <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0092D0]">
               {card.title}

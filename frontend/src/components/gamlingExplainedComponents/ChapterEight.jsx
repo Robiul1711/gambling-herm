@@ -39,7 +39,7 @@ const ChapterEight = () => {
             <strong className="font-bold text-gray-900">
               Land-based bookmaker self-exclusion
             </strong>{" "}
-            (paper-based, photograph and venue-by-venue) covers high-street betting shops.
+            (MOSES: paper-based, photograph and venue-by-venue) covers high-street betting shops.
           </li>
           <li className="leading-relaxed">
             <strong className="font-bold text-gray-900">

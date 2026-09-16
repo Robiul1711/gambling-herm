@@ -25,7 +25,7 @@ const AudienceNavigationSection = () => {
       id: 3,
       text: (
         <>
-          GHUK APPG submission (25 February 2026). UK{" "}
+          GHUK APPG submission (September 2025). UK{" "}
           <span className="italic">epidemiology</span>, health burden, economic
           costs
         </>
@@ -95,10 +95,10 @@ const AudienceNavigationSection = () => {
           </div>
         </div>
 
-        {/* Right Column Card: Public-Health Partners */}
+        {/* Right Column Card: Who We Work With (HC8 / Point 8) */}
         <div className="border border-gray-200/90  p-6 md:p-8 bg-white shadow-xs flex flex-col">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight">
-            Public-health partners
+            Who we work with
           </h3>
           <div className="flex flex-col flex-1">
             {partnersList.map((item, index) => (

@@ -3,9 +3,9 @@ import React from "react";
 const CurrentAsksGovernment = () => {
   const cards = [
     {
-      title: "Implement the statutory levy at the rate the evidence justifies.",
+      title: "Scale the statutory levy to the burden of harm.",
       description:
-        "Specifically: distribute through an arms-length body with explicit ringfencing for affected-others services, bereavement support, aftercare, and independent research.",
+        "Specifically: distribute through an arms-length body with explicit ringfencing for services for people harmed by someone else’s gambling, bereavement support, aftercare, and independent research.",
     },
     {
       title:
@@ -16,7 +16,7 @@ const CurrentAsksGovernment = () => {
     {
       title: "Stake limits on online slots aligned with the harm evidence.",
       description:
-        "The current proposed limit is, in our view, set higher than the evidence on harm justifies. We support a more conservative limit, with monitoring of substitution effects.",
+        "The limits now in force are, in our view, set higher than the harm evidence justifies. We support more conservative limits, with monitoring of substitution effects.",
     },
     {
       title:
@@ -37,7 +37,7 @@ const CurrentAsksGovernment = () => {
           <div className="flex items-center gap-2 mb-4">
             <div className="w-12 h-[3px] bg-[#0092D0]"></div>
             <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0092D0]">
-              What We Believe
+              What we believe
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
@@ -60,7 +60,7 @@ const CurrentAsksGovernment = () => {
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-8 h-[2px] bg-[#0092D0]"></div>
                   <span className="text-xs font-bold uppercase tracking-wider text-[#0092D0]">
-                    Live Ask
+                    Live ask
                   </span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug mb-4 tracking-tight">
@@ -79,7 +79,7 @@ const CurrentAsksGovernment = () => {
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-[2px] bg-[#0092D0]"></div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#0092D0]">
-              Live Ask
+              Live ask
             </span>
           </div>
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug mb-4 tracking-tight">

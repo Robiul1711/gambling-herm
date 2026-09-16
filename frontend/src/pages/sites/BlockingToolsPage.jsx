@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const navSections = [
-  { id: "self-exclusion", title: "1. Self-exclusion Schemes" },
-  { id: "bank-blocks", title: "2. Bank Blocks" },
-  { id: "blocking-software", title: "3. Blocking Software" },
+  { id: "self-exclusion", title: "1. Self-exclusion schemes" },
+  { id: "bank-blocks", title: "2. Bank blocks" },
+  { id: "blocking-software", title: "3. Blocking software" },
   { id: "betblocker", title: "4. BetBlocker" },
-  { id: "beyond-software", title: "5. Beyond Software" },
-  { id: "what-blocks-dont-do", title: "6. What Blocks Don't Do" },
-  { id: "more-ways", title: "7. More Ways to Get Help" },
+  { id: "beyond-software", title: "5. Beyond software" },
+  { id: "what-blocks-dont-do", title: "6. What blocks don't do" },
+  { id: "more-ways", title: "7. More ways to get help" },
 ];
 
 export default function BlockingToolsPage() {
@@ -40,10 +40,10 @@ export default function BlockingToolsPage() {
     },
     {
       id: "bacta",
-      title: "BACTA (adult gaming centres)",
+      title: "bacta scheme (adult gaming centres)",
       description:
-        "Bacta's Self-Exclusion Scheme covers adult gaming centres (AGCs), the licensed premises with slot machines found on high streets and seafronts. Ask a member of staff to exclude yourself for an agreed period.",
-      buttonText: "Exclude via BACTA →",
+        "bacta's Self-Exclusion Scheme covers adult gaming centres (AGCs), the licensed premises with slot machines found on high streets and seafronts. Ask a member of staff to exclude yourself for an agreed period.",
+      buttonText: "Exclude via bacta →",
       link: "https://bacta.org.uk/self-exclusion",
     },
     {
@@ -384,7 +384,7 @@ export default function BlockingToolsPage() {
             Blocks also don't address the debt, or the reasons underneath the
             gambling. If money is the more pressing problem right now,{" "}
             <Link
-              to="/get-help/spend-calculator"
+              to="/get-help"
               className="text-[#166B94] underline hover:text-[#005580] font-medium"
             >
               get financial help &rarr;

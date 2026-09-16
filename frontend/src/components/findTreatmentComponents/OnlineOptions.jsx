@@ -1,46 +1,46 @@
 import React from"react";
 
 const options = [
- {
- title:"National Gambling Helpline & live chat",
- description:
-"Phone (0808 8020 133) and web chat at gamcare.org.uk. Free, confidential, 24/7. Web chat is fully text-based if you don't want to speak aloud.",
- },
- {
- title:"GamCare structured treatment",
- description:
-"GamCare delivers online structured treatment (one-to-one and group) free of charge, with relatively short wait times. Available UK-wide.",
- },
- {
- title:"NHS Talking Therapies (England)",
- description:
-"Self-referral for CBT and other talking therapies for anxiety, depression and stress that sit alongside gambling harm. No GP needed. Online or in-person depending on local provision.",
- },
- {
- title:"NHS Northern Gambling Service, online",
- description:
-"The Northern Gambling Service accepts referrals UK-wide and offers a substantial proportion of its treatment online, including for people in regions without local NHS provision.",
- },
- {
- title:"National Gambling Helpline & live chat",
- description:
-"Phone (0808 8020 133) and web chat at gamcare.org.uk. Free, confidential, 24/7. Web chat is fully text-based if you don't want to speak aloud.",
- },
- {
- title:"National Gambling Helpline & live chat",
- description:
-"Phone (0808 8020 133) and web chat at gamcare.org.uk. Free, confidential, 24/7. Web chat is fully text-based if you don't want to speak aloud.",
- },
- {
- title:"Gamblers Anonymous & SMART Recovery online groups",
- description:
-"Multiple meetings per day, anonymous, free. Gamblers Anonymous runs 12-step meetings; SMART Recovery runs secular, evidence-based groups. Both run gambling-specific UK online groups.",
- },
- {
- title:"Blocking tools. GAMSTOP & Gamban",
- description:
-"GAMSTOP blocks all UK-licensed gambling sites for 6 months / 1 year / 5 years; about 5 minutes to register at gamstop.co.uk. Gamban blocks unlicensed sites at device level; often free via GamCare.",
- },
+  {
+    title: "National Gambling Helpline & live chat",
+    description:
+      "Phone (0808 8020 133) and web chat at gamcare.org.uk. Free, confidential, 24/7. Web chat is fully text-based if you don't want to speak aloud.",
+  },
+  {
+    title: "GamCare structured treatment",
+    description:
+      "GamCare delivers online structured treatment (one-to-one and group) free of charge, with relatively short wait times. Available UK-wide.",
+  },
+  {
+    title: "NHS Talking Therapies (England)",
+    description:
+      "Self-referral for CBT and other talking therapies for anxiety, depression and stress that sit alongside gambling harm. No GP needed. Online or in-person depending on local provision.",
+  },
+  {
+    title: "NHS Northern Gambling Service, online",
+    description:
+      "The Northern Gambling Service accepts referrals UK-wide and offers a substantial proportion of its treatment online, including for people in regions without local NHS provision.",
+  },
+  {
+    title: "GamCare forum & daily online groups",
+    description:
+      "Moderated peer support and daily online recovery groups, with the option to stay completely anonymous.",
+  },
+  {
+    title: "Gordon Moody online programme",
+    description:
+      "Intensive online treatment and counselling, free for individuals and families experiencing severe gambling harm (see Residential & intensive below).",
+  },
+  {
+    title: "Gamblers Anonymous & SMART Recovery online groups",
+    description:
+      "Multiple meetings per day, anonymous, free. Gamblers Anonymous runs 12-step meetings; SMART Recovery runs secular, evidence-based groups. Both run gambling-specific UK online groups.",
+  },
+  {
+    title: "Blocking tools: GAMSTOP & Gamban",
+    description:
+      "GAMSTOP blocks all gambling sites licensed in Great Britain for 6 months / 1 year / 5 years; about 5 minutes to register at gamstop.co.uk. Gamban blocks gambling sites and apps at device level, including sites GAMSTOP can't reach; often free via GamCare.",
+  },
 ];
 
 export default function OnlineOptions() {

@@ -26,7 +26,7 @@ const RegisterMembershipHero = () => {
           partners. Tell us a bit about yourself below and we'll be in touch
           about access. Already registered?{" "}
           <Link
-            to="/login"
+            to="/sign-in"
             className="underline text-slate-900 hover:text-[#0093D0] font-semibold transition-colors"
           >
             Sign in here

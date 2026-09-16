@@ -14,13 +14,13 @@ import { Link } from "react-router-dom";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "starting-point", title: "1. A Starting Point" },
-  { id: "talk-to-someone", title: "2. Talk to Someone" },
-  { id: "four-ways", title: "3. Four Ways Through" },
-  { id: "harmful-gambling", title: "4. What Harmful Gambling Looks Like" },
-  { id: "reach-out", title: "5. Reach Out" },
-  { id: "protecting-money", title: "6. Protecting Your Money" },
-  { id: "recovery", title: "7. Recovery & What Works" },
+  { id: "starting-point", title: "1. A starting point" },
+  { id: "talk-to-someone", title: "2. Talk to someone" },
+  { id: "four-ways", title: "3. Four ways through" },
+  { id: "harmful-gambling", title: "4. What harmful gambling looks like" },
+  { id: "reach-out", title: "5. Reach out" },
+  { id: "protecting-money", title: "6. Protecting your money" },
+  { id: "recovery", title: "7. Recovery & what works" },
 ];
 
 const GetHelpOverview = () => {
@@ -52,10 +52,10 @@ const GetHelpOverview = () => {
 
               {/* Description */}
               <p className="mt-5 md:mt-8 text-sm sm:text-base leading-7 text-[#4b4b4b]">
-                A welcoming entry-point that helps you find the right door whether
-                you're checking in for yourself, for someone else, or you're not
-                yet sure. A short, private read: nothing to enter, nothing stored or
-                sent.
+                A welcoming entry-point that helps you find the right door
+                whether you're checking in for yourself, for someone else, or
+                you're not yet sure. A short, private read: nothing to enter,
+                nothing stored or sent.
               </p>
 
               {/* Button */}

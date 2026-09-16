@@ -36,17 +36,19 @@ const TacticSix = () => {
             , a tenfold gradient in physical availability.
           </li>
           <li className="leading-relaxed font-normal">
-            The 100 most deprived English LSOAs hold roughly 4 times more high-street betting shops
-            per adult than the 100 least deprived.
+            Around 10% of English schools have a gambling premises within a five-minute walk
+            (roughly 742,000 pupils), and half of gambling treatment centres have a venue within 250
+            metres (Evans and Cross, 2021).
           </li>
           <li className="leading-relaxed font-normal">
-            AGC density correlates strongly (r &gt; 0.7 in published mapping studies) with IMD decile
-            1–3.
+            Betting shops, adult gaming centres and bingo premises are three to seven times more
+            concentrated in the most-deprived fifth of areas than the least (Macdonald, 2025).
           </li>
           <li className="leading-relaxed font-normal">
             The Gambling Act 2005 requires licensing authorities to "aim to permit" gambling
-            premises, leaving them little power to refuse licences on cumulative-impact grounds. Most
-            refusals are appealed and overturned.
+            premises, leaving them little power to refuse: the Gambling Act 2005 requires licensing
+            authorities to "aim to permit" and gives them no cumulative-impact power, so refusals are
+            rare and the few that are made are open to appeal.
           </li>
           <li className="leading-relaxed font-normal">
             Online gambling availability is by definition 24/7 and not geographically constrained. But

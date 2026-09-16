@@ -21,12 +21,10 @@ const PreventionParadoxSection = () => {
         
         {/* Paragraph 2 - Core Stat Callout */}
         <p>
-          Across multiple national studies,{" "}
           <strong className="font-bold text-gray-900">
-            70–85% of gambling-related Years Lived with Disability arise from individuals classified 
-            as "low-risk" (PGSI 1–2) or "moderate-risk" (PGSI 3–7),
+            Between half and 85% of gambling-related health loss arises below the severe threshold:
           </strong>{" "}
-          not from the severe-end group on which most clinical treatment investment has focused. The implication 
+          GHUK's UK modelling puts around half of the health loss among people who gamble below PGSI 8+, and the Australian burden analysis (Browne et al., 2017) puts it at up to 85%. The implication 
           is consistent with the prevention paradox: <span className="italic text-gray-800">population-level reductions in harm 
           require interventions that move the whole distribution, not just the tail.</span>
         </p>
@@ -42,7 +40,7 @@ const PreventionParadoxSection = () => {
       {/* Footer / Citation Source */}
       <div className="mt-8">
         <p className="text-xs sm:text-sm text-gray-500 italic">
-          Source: international YLD syntheses cited in GHUK's APPG submission, 25 February 2026.
+          Source: international YLD syntheses cited in GHUK's APPG submission, September 2025.
         </p>
       </div>
     </div>

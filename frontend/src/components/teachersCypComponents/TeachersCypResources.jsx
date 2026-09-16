@@ -45,17 +45,9 @@ const TeachersCypResources = () => {
 
                 <div className="pt-3.5">
                   <strong className="font-bold text-gray-900 mr-1.5">
-                    Big Deal
+                    National Gambling Helpline,
                   </strong>
-                  (GamCare),{" "}
-                  <a
-                    href="https://www.bigdeal.org.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline font-semibold text-gray-900 hover:text-[#0092D0] transition-colors"
-                  >
-                    bigdeal.org.uk
-                  </a>
+                  0808 8020 133 (free, 24/7, phone or live chat)
                 </div>
 
                 <div className="pt-3.5">

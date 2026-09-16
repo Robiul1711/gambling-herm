@@ -12,8 +12,8 @@ const higherRisk = [
 ];
 
 const oftenOverlooked = [
-  "Women, particularly with online slots and bingo apps",
-  "Older adults (a fast-growing group)",
+  "Women, whose harm is rising and who face higher stigma barriers to seeking help",
+  "Older adults (rarely reached by prevention or services)",
   "People in recovery from alcohol or drug dependence",
   "Veterans",
   "People from minority ethnic communities, who face additional barriers to support",
@@ -70,7 +70,7 @@ const WhoIsAffected = () => {
 
         {/* Informational Subtext Link */}
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
-          For the full picture, including affected others, children, and how UK
+          For the full picture, including people harmed by someone else’s gambling, children, and how UK
           gambling harm compares to other public-health risks, see{" "}
           <Link
             to="/burden-of-harm"

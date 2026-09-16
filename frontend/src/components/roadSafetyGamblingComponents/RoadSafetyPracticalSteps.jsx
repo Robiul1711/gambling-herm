@@ -101,6 +101,23 @@ const RoadSafetyPracticalSteps = () => {
             </div>
           ))}
         </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-wrap items-center gap-4 pt-10">
+          <Link
+            to="/register-keep-updated"
+            className="bg-Primary hover:bg-[#0076a8] text-white font-semibold text-xs sm:text-sm px-6 py-3.5 transition-colors shadow-sm inline-block"
+          >
+            Register &amp; access the resources
+          </Link>
+
+          <Link
+            to="/about#contact"
+            className="border border-slate-800 hover:bg-slate-50 text-slate-900 font-semibold text-xs sm:text-sm px-6 py-3.5 transition-colors shadow-sm inline-block"
+          >
+            Contact us &rarr;
+          </Link>
+        </div>
       </div>
     </section>
   );

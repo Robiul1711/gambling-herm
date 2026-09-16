@@ -13,15 +13,14 @@ import TeachersCypCta from "@/components/teachersCypComponents/TeachersCypCta";
 import PageSectionNav from "@/components/common/PageSectionNav";
 
 const sections = [
-  { id: "cyp-stats", title: "1. Headline Numbers" },
-  { id: "cyp-position", title: "2. Our Position" },
-  { id: "cyp-films", title: "3. Safeguarding Films" },
-  { id: "cyp-misses-point", title: "4. Missing the Point" },
-  { id: "cyp-support-now", title: "5. Support a Young Person" },
-  { id: "cyp-parents", title: "6. Parents & Carers" },
-  { id: "cyp-classroom", title: "7. In the Classroom" },
-  { id: "cyp-policy", title: "8. Policy Asks" },
-  { id: "cyp-resources", title: "9. Resources & Guides" },
+  { id: "cyp-stats", title: "1. Headline numbers" },
+  { id: "cyp-position", title: "2. Our position" },
+  { id: "cyp-films", title: "3. Safeguarding films" },
+  { id: "cyp-misses-point", title: "4. Missing the point" },
+  { id: "cyp-classroom", title: "5. Spotting the signs" },
+  { id: "cyp-support-now", title: "6. Responding: what to do" },
+  { id: "cyp-parents", title: "7. Parents & carers" },
+  { id: "cyp-resources", title: "8. Resources & guides" },
 ];
 
 export default function TeachersCYPPage() {
@@ -53,32 +52,27 @@ export default function TeachersCYPPage() {
         <TeachersCypMissesPoint />
       </div>
 
-      {/* 6. Working with a young person who needs support now */}
-      <div id="cyp-support-now" className="scroll-mt-24">
-        <TeachersCypSupportNow />
-      </div>
-
-      {/* 7. For parents, carers and safeguarding leads */}
-      <div id="cyp-parents" className="scroll-mt-24">
-        <TeachersCypParentsSafeguarding />
-      </div>
-
-      {/* 8. In the classroom: spotting it and responding */}
+      {/* 6. In the classroom: spotting it and responding */}
       <div id="cyp-classroom" className="scroll-mt-24">
         <TeachersCypClassroomSigns />
       </div>
 
-      {/* 9. What we ask for in CYP policy */}
-      <div id="cyp-policy" className="scroll-mt-24">
-        <TeachersCypPolicyAsks />
+      {/* 7. Working with a young person who needs support now */}
+      <div id="cyp-support-now" className="scroll-mt-24">
+        <TeachersCypSupportNow />
       </div>
 
-      {/* 10. Resources Section */}
+      {/* 8. For parents, carers and safeguarding leads */}
+      <div id="cyp-parents" className="scroll-mt-24">
+        <TeachersCypParentsSafeguarding />
+      </div>
+
+      {/* 9. Resources Section */}
       <div id="cyp-resources" className="scroll-mt-24">
         <TeachersCypResources />
       </div>
 
-      {/* 11. Final CTA: Want to help us put this on the policy agenda? */}
+      {/* 10. Final CTA */}
       <TeachersCypCta />
     </main>
   );

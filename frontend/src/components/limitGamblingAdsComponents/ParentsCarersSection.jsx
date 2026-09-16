@@ -52,7 +52,7 @@ const ParentsCarersSection = () => {
             children and safeguarding
           </Link>{" "}
           and for{" "}
-          <Link to="/professionals/teachers-cyp" className="underline hover:text-[#0082c3] text-gray-900 font-semibold">
+          <Link to="/professionals/teachers-children-and-young-people" className="underline hover:text-[#0082c3] text-gray-900 font-semibold">
             teachers and CYP professionals
           </Link>
           .

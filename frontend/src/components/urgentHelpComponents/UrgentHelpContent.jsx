@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UrgentHelpContent = () => {
   return (
@@ -16,7 +17,7 @@ const UrgentHelpContent = () => {
 
       {/* 2. Urgent Cards Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-16 flex flex-col gap-6 md:gap-8">
-        {/* Card 1: Immediate Danger */}
+        {/* Card 1: Immediate Danger (UR3) */}
         <div className="border-2 border-red-500  p-6 sm:p-8 bg-white shadow-xs hover:shadow-md transition-shadow">
           <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-2">
             1 · If anyone is in immediate danger
@@ -28,7 +29,7 @@ const UrgentHelpContent = () => {
             Call <strong className="text-gray-900 font-bold">999</strong>. This
             includes if you're worried that someone (you or another person) is
             about to attempt suicide, has taken an overdose, or is at risk of
-            serious self-harm right now. Ambulance and police can be there fast.
+            serious self-harm right now.
           </p>
         </div>
 
@@ -60,12 +61,12 @@ const UrgentHelpContent = () => {
               </strong>{" "}
               (for under-35s) call{" "}
               <a
-                href="tel:08080684141"
+                href="tel:08000684141"
                 className="font-bold text-gray-900 hover:text-Primary underline"
               >
-                0808 068 4141
+                0800 068 4141
               </a>
-              , text <strong className="text-gray-900 font-bold">88247</strong>,
+              , text <strong className="text-gray-900 font-bold">07860 039967</strong>,
               or email{" "}
               <a
                 href="mailto:pat@papyrus-uk.org"
@@ -78,10 +79,10 @@ const UrgentHelpContent = () => {
           </div>
         </div>
 
-        {/* Card 3: Losing Control Tonight */}
+        {/* Card 3: If You Can't Stop Gambling Tonight (UR1 & UR5) */}
         <div className="border border-gray-300  p-6 sm:p-8 bg-white shadow-xs hover:shadow-md transition-shadow">
           <span className="text-xs font-bold text-gray-600 uppercase tracking-widest block mb-2">
-            3 · If you're losing control tonight
+            3 · If you can't stop gambling tonight
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-4 select-all break-words leading-none">
             0808 8020 133
@@ -92,7 +93,7 @@ const UrgentHelpContent = () => {
                 National Gambling Helpline.
               </strong>{" "}
               Free, confidential, 24/7. Run by GamCare. You will speak to a
-              trained advisor whose job is to help you, not to judge you.
+              trained adviser whose job is to help you, not to judge you.
             </p>
             <p>
               <strong className="text-gray-900 font-bold">GAMSTOP</strong>, the
@@ -105,8 +106,21 @@ const UrgentHelpContent = () => {
               >
                 gamstop.co.uk
               </a>
-              . Once registered, every UK-licensed gambling site is blocked to
+              . Once registered, every gambling site licensed in Great Britain is blocked to
               you for the period you chose (6 months, 1 year, or 5 years).
+            </p>
+            <p>
+              <strong className="text-gray-900 font-bold">
+                Your bank app:
+              </strong>{" "}
+              most UK banks can switch on a gambling block tonight, usually under card controls, with a cooling-off period before it can be lifted. See our{" "}
+              <Link
+                to="/get-help/blocking-tools"
+                className="text-Primary hover:underline font-semibold"
+              >
+                blocking tools page
+              </Link>{" "}
+              for the full list.
             </p>
           </div>
         </div>

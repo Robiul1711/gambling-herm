@@ -12,12 +12,12 @@ import PageSectionNav from "@/components/common/PageSectionNav";
 import useClient from "@/hooks/useClient";
 
 const sections = [
-  { id: "position-video", title: "1. Lived Experience & MECC" },
-  { id: "gambling-mecc", title: "2. MECC on Gambling" },
-  { id: "screening-guide", title: "3. Screening Guide" },
-  { id: "referral-services", title: "4. Referral Services" },
-  { id: "clinical-situations", title: "5. Clinical Situations" },
-  { id: "medical-trainees", title: "6. Medical Trainees" },
+  { id: "position-video", title: "1. Lived experience & MECC" },
+  { id: "gambling-mecc", title: "2. MECC on gambling" },
+  { id: "screening-guide", title: "3. Screening guide" },
+  { id: "referral-services", title: "4. Referral services" },
+  { id: "clinical-situations", title: "5. Clinical situations" },
+  { id: "medical-trainees", title: "6. Medical trainees" },
 ];
 
 const HealthcareProfessionals = () => {

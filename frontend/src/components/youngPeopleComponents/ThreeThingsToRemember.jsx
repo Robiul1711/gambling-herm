@@ -46,7 +46,7 @@ export default function ThreeThingsToRemember() {
           </Link>{" "}
           or our{" "}
           <Link
-            to="/professionals/teachers-cyp"
+            to="/professionals/teachers-children-and-young-people"
             className="underline font-bold text-slate-900 hover:text-black"
           >
             teachers &amp; CYP professionals page

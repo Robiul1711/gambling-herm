@@ -10,8 +10,7 @@ const WorkWithUsSafeguarding = () => {
 
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6 text-white">
-          Work with us on children's <br className="hidden sm:inline" />
-          safeguarding.
+          Work with us to safeguard children from gambling harm
         </h2>
 
         {/* Description */}

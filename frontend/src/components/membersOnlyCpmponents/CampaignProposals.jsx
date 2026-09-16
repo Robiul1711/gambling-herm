@@ -38,8 +38,8 @@ const CampaignProposals = () => {
       description: (
         <>
           Restructure UK land-based gambling around active self-access for those
-          who choose to gamble, with self-exclusion as the easy, enforceable,
-          default-binding state for those who don't. The proof burden moves from
+          who choose to gamble, with self-exclusion easy, enforceable, and
+          binding by default for those who don't. The proof burden moves from
           the customer onto the operator and the system.
         </>
       ),

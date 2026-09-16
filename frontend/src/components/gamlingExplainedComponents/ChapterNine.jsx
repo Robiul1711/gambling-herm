@@ -30,9 +30,9 @@ const ChapterNine = () => {
         </h3>
         <ul className="space-y-3 text-sm md:text-base text-gray-700 pl-5 list-disc marker:text-gray-400">
           <li className="leading-relaxed">
-            UK gross gambling yield (GGY) was approximately{" "}
-            <strong className="font-bold text-gray-900">£15 billion per year</strong> in 2024,
-            roughly <strong className="font-bold text-gray-900">£280 per UK adult</strong>.
+            Gross gambling yield (GGY, the amount operators keep after paying out winnings) in Great Britain reached{" "}
+            <strong className="font-bold text-gray-900">£16.8 billion in 2024/25</strong>, up from £13.5 billion a decade earlier:
+            roughly <strong className="font-bold text-gray-900">£300 for every adult</strong> in Great Britain (Gambling Commission industry statistics).
             Online slots and remote sports betting are the largest categories.
           </li>
           <li className="leading-relaxed">

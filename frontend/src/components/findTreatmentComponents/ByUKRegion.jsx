@@ -4,110 +4,81 @@ const regions = [
   {
     region: "North East & Yorkshire",
     title: "Northern Gambling Service",
-    items: [
-      "Leeds, main hub, NHS specialist clinic",
-      "Sunderland, clinic",
-      "Manchester (administered jointly with NW)",
-      "Self-referral by phone, web form, or via GP",
-    ],
+    location: "Leeds, Sunderland & region-wide",
+    selfReferUrl: "https://www.leedsandyorkpft.nhs.uk/our-services/northern-gambling-service/",
+    patientReferUrl: "https://www.leedsandyorkpft.nhs.uk/our-services/northern-gambling-service/",
     note: "Operated by Leeds & York Partnership NHS Foundation Trust.",
   },
   {
     region: "North West",
-    title: "NHS gambling services",
-    items: [
-      "Manchester, NHS specialist clinic",
-      "Liverpool & Merseyside, services in development",
-      "Local IAPT / NHS Talking Therapies self-referral",
-      "Gamblers Anonymous meetings across the region",
-    ],
-    note: "Some services overlap with Northern Gambling Service hub.",
+    title: "North West Gambling Service",
+    location: "Manchester, Liverpool & Lancashire",
+    selfReferUrl: "https://www.gmmh.nhs.uk/gambling-service",
+    patientReferUrl: "https://www.gmmh.nhs.uk/gambling-service",
+    note: "Operated by Greater Manchester Mental Health NHS FT.",
   },
   {
     region: "Midlands",
-    title: "NHS gambling services",
-    items: [
-      "Stoke-on-Trent, specialist NHS clinic",
-      "Birmingham & West Midlands, specialist provision",
-      "Nottingham / East Midlands, specialist provision",
-      "NHS Talking Therapies self-referral region-wide",
-    ],
+    title: "Midlands Gambling Clinic",
+    location: "Birmingham, Stoke-on-Trent & East Midlands",
+    selfReferUrl: "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/",
+    patientReferUrl: "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/",
     note: null,
   },
   {
-    region: "East Of England",
-    title: "NHS gambling services",
-    items: [
-      "Service provision varies by ICB area",
-      "NHS Talking Therapies self-referral",
-      "National Gambling Helpline triage to nearest specialist service",
-      "Gamblers Anonymous meetings in Cambridge, Norwich, Ipswich, Peterborough",
-    ],
+    region: "East of England",
+    title: "East of England Specialist Clinic",
+    location: "Cambridge, Norwich, Ipswich & Peterborough",
+    selfReferUrl: "https://www.cpft.nhs.uk/service-detail/service/east-of-england-gambling-service-143/",
+    patientReferUrl: "https://www.cpft.nhs.uk/service-detail/service/east-of-england-gambling-service-143/",
     note: null,
   },
   {
     region: "London",
-    title: "National Gambling Clinic",
-    items: [
-      "NHS National Gambling Clinic (Soho), run by Central and North West London NHS Foundation Trust, the longest-established NHS specialist service in the UK",
-      "NHS Talking Therapies self-referral across all London boroughs",
-      "Multiple Gamblers Anonymous meetings, in person and online",
-    ],
+    title: "National Problem Gambling Clinic",
+    location: "Central & North West London (Soho)",
+    selfReferUrl: "https://www.cnwl.nhs.uk/services/mental-health-services/addictions-and-substance-misuse/national-problem-gambling-clinic",
+    patientReferUrl: "https://www.cnwl.nhs.uk/services/mental-health-services/addictions-and-substance-misuse/national-problem-gambling-clinic",
     note: "Operated by Central and North West London NHS Foundation Trust.",
   },
   {
     region: "South East",
-    title: "NHS gambling services",
-    items: [
-      "NHS specialist provision available; coverage varies by ICB",
-      "NHS Talking Therapies self-referral",
-      "National Gambling Helpline triage to nearest service",
-      "Gamblers Anonymous meetings in Brighton, Reading, Oxford, Southampton, Portsmouth and others",
-    ],
+    title: "Southern Gambling Service",
+    location: "Southampton, Portsmouth, Brighton & Oxford",
+    selfReferUrl: "https://www.southernhealth.nhs.uk/services/mental-health/southern-gambling-service",
+    patientReferUrl: "https://www.southernhealth.nhs.uk/services/mental-health/southern-gambling-service",
     note: null,
   },
   {
     region: "South West",
-    title: "NHS gambling services",
-    items: [
-      "Bristol, NHS specialist clinic",
-      "Devon & Cornwall, service provision varies by ICB",
-      "NHS Talking Therapies self-referral region-wide",
-      "Gamblers Anonymous meetings in Bristol, Exeter, Plymouth",
-    ],
-    note: null,
+    title: "South West Gambling Service",
+    location: "Bristol, Exeter, Plymouth & Devon",
+    selfReferUrl: "https://www.awp.nhs.uk/our-services/specialist-services/south-west-gambling-service",
+    patientReferUrl: "https://www.awp.nhs.uk/our-services/specialist-services/south-west-gambling-service",
+    note: "Operated by Avon and Wiltshire Mental Health Partnership NHS Trust.",
   },
   {
     region: "Scotland",
-    title: "NHS & third-sector services",
-    items: [
-      "NHS Lothian gambling pathway",
-      "NHS Greater Glasgow & Clyde, addiction services pathway",
-      "Scotland-wide referral via the National Gambling Helpline",
-      "Gamblers Anonymous meetings across Scotland",
-    ],
+    title: "NHS Scotland Addictions Pathway",
+    location: "Edinburgh (Lothian), Glasgow & Scotland-wide",
+    selfReferUrl: "https://www.nhsinform.scot/healthy-living/substance-use/gambling-addiction/",
+    patientReferUrl: "https://www.nhsinform.scot/healthy-living/substance-use/gambling-addiction/",
     note: null,
   },
   {
     region: "Wales",
-    title: "NHS & third-sector services",
-    items: [
-      "Living Room Cardiff, specialist gambling support",
-      "NHS Wales addictions pathway via GP referral",
-      "National Gambling Helpline supports Wales-wide",
-      "Gamblers Anonymous meetings in Cardiff, Swansea, Newport, Wrexham",
-    ],
+    title: "NHS Wales & Living Room Cardiff",
+    location: "Cardiff, Swansea, Newport & Wrexham",
+    selfReferUrl: "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/",
+    patientReferUrl: "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/",
     note: "Welsh-language helpline support available on request.",
   },
   {
     region: "Northern Ireland",
-    title: "NHS & third-sector services",
-    items: [
-      "HSC (Health & Social Care) addiction services via GP",
-      "Dunlewey Addiction Services, Belfast and outreach",
-      "Extern NI, community-based support",
-      "National Gambling Helpline supports NI",
-    ],
+    title: "HSC & Dunlewey Addiction Services",
+    location: "Belfast, Derry & regional outreach",
+    selfReferUrl: "https://dunlewey.org/",
+    patientReferUrl: "https://dunlewey.org/",
     note: null,
   },
 ];
@@ -129,51 +100,62 @@ export default function ByUKRegion() {
           </h2>
           <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-2xl">
             The NHS gambling-clinic network has grown rapidly. The map below
-            lists specialist NHS services by region, with local peer support and
-            signposts. The picture changes frequently, we update this page
-            quarterly; verify against the NHS service finder before travelling.
+            lists specialist NHS services by region, each with direct self-referral
+            and clinician referral routes. Verify against the NHS service finder before travelling.
           </p>
         </header>
 
         {/* Region Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-          {regions.map(({ region, title, items, note }) => (
+          {regions.map(({ region, title, location, selfReferUrl, patientReferUrl, note }) => (
             <div
               key={region}
-              className="bg-white border border-[#b2d8ec] p-5 sm:p-6 flex flex-col hover:shadow-md transition-shadow duration-300"
+              className="bg-white border border-[#b2d8ec] p-5 sm:p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300"
             >
-              {/* Region label */}
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-6 h-[2px] bg-[#156E94] shrink-0" />
-                <span className="text-[#156E94] text-xs font-semibold tracking-wide">
-                  {region}
-                </span>
+              <div>
+                {/* Region label */}
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-6 h-[2px] bg-[#156E94] shrink-0" />
+                  <span className="text-[#156E94] text-xs font-semibold tracking-wide">
+                    {region}
+                  </span>
+                </div>
+
+                {/* Service title */}
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">
+                  {title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-500 mb-5">
+                  {location}
+                </p>
               </div>
 
-              {/* Service title */}
-              <h3 className="text-[15px] sm:text-base font-bold text-gray-900 mb-3">
-                {title}
-              </h3>
+              {/* Action Links (FT5: two links only) */}
+              <div className="border-t border-gray-100 pt-4 space-y-2">
+                <a
+                  href={selfReferUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-xs sm:text-sm font-semibold text-[#0092D0] hover:underline"
+                >
+                  Refer yourself →
+                </a>
+                <br />
+                <a
+                  href={patientReferUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-xs sm:text-sm font-semibold text-gray-700 hover:text-[#0092D0] hover:underline"
+                >
+                  Refer a patient →
+                </a>
 
-              {/* Bullet list */}
-              <ul className="space-y-1.5 flex-1">
-                {items.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-2 text-[13px] sm:text-[14px] text-gray-600 leading-snug"
-                  >
-                    <span className="mt-1.5 w-1.5 h-1.5 bg-gray-400 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Optional footnote */}
-              {note && (
-                <p className="mt-4 text-[12px] text-gray-400 leading-relaxed border-t border-gray-100 pt-3">
-                  {note}
-                </p>
-              )}
+                {note && (
+                  <p className="mt-3 text-[11px] text-gray-400 leading-relaxed border-t border-gray-50 pt-2">
+                    {note}
+                  </p>
+                )}
+              </div>
             </div>
           ))}
         </div>
