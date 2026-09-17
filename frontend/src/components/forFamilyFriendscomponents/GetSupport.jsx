@@ -33,6 +33,25 @@ const resources = [
       </>
     ),
   },
+  {
+    title: "GamFam",
+    description: (
+      <>
+        A charity set up by people who've lived through a loved one's gambling
+        harm. Their peer-support programme (GRA5P) runs online via Zoom, with
+        separate groups for affected family and friends and for people in
+        recovery. Free, anonymous, and led by facilitators with lived experience.{" "}
+        <a
+          href="https://gamfam.org.uk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0092D0] hover:underline"
+        >
+          gamfam.org.uk
+        </a>
+      </>
+    ),
+  },
 ];
 
 const SupportResources = () => {

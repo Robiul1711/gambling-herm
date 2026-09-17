@@ -85,8 +85,10 @@ const RoadSafetyResearchStats = () => {
         {/* CTA Button */}
         <div>
           <a
-            href="#research-report"
-            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-sm md:text-base px-7 py-3.5  transition-colors inline-block shadow-sm"
+            href="https://gamblingharm.sharepoint.com/:b:/g/IQCl7512FvaYT6zW60m11T24AZXu835KtqOI2iIl4IlXn7Y?e=4LIPkW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-sm md:text-base px-7 py-3.5 transition-colors inline-block shadow-sm"
           >
             Read the Research Report
           </a>
