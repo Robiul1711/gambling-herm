@@ -78,7 +78,7 @@ const PageSectionNav = ({ sections = [], className = "", containerClassName = ""
   return (
     <div
       ref={navRef}
-      className={`sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm py-3 md:py-4 mb-8 md:mb-12 ${className}`}
+      className={`sticky top-0 z-30  py-3 md:py-4 mb-8 md:mb-12 ${className}`}
     >
       <div className={`max-w-5xl mx-auto px-4 sm:px-6 ${containerClassName}`}>
         <div className="flex items-center justify-between gap-4">
