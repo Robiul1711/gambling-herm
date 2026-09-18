@@ -38,6 +38,24 @@ export default function Navbar() {
     lastScrollY.current = typeof window !== "undefined" ? window.scrollY : 0;
   }, [pathname, hash]);
 
+  // Lock page scroll completely when mobile menu is open
+  React.useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [mobileMenuOpen]);
+
   React.useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -690,11 +708,15 @@ export default function Navbar() {
             {/* MOBILE MENU TOGGLE BUTTON */}
             <div className="md:hidden flex items-center">
               <button
-                onClick={() => setMobileMenuOpen(true)}
-                className="p-2 text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none"
-                aria-label="Open Navigation Menu"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none cursor-pointer"
+                aria-label={mobileMenuOpen ? "Close Navigation Menu" : "Open Navigation Menu"}
               >
-                <Menu className="w-7 h-7" />
+                {mobileMenuOpen ? (
+                  <X className="w-7 h-7 text-gray-800 transition-transform duration-200" />
+                ) : (
+                  <Menu className="w-7 h-7 text-gray-800 transition-transform duration-200" />
+                )}
               </button>
             </div>
           </div>
@@ -711,32 +733,38 @@ export default function Navbar() {
       >
         {/* Backdrop overlay */}
         <div
-          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 touch-none overscroll-none ${
             mobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setMobileMenuOpen(false)}
+          onTouchMove={(e) => e.preventDefault()}
+          onWheel={(e) => e.preventDefault()}
         />
 
         {/* Side Panel Canvas */}
         <div
-          className={`absolute top-0 right-0 bottom-0 w-full max-w-xs bg-white shadow-2xl p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
+          className={`absolute top-0 right-0 bottom-0 w-full max-w-xs sm:max-w-sm bg-white shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out z-10 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div>
-            {/* Drawer Header Close Row */}
-            <div className="flex items-center justify-between pb-6 border-b border-gray-100">
-              <span className="font-bold text-lg text-Primary">Gambling</span>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 text-gray-500 hover:bg-gray-100 transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
+          {/* Drawer Header Close Row */}
+          <div 
+            className="flex items-center justify-between px-6 py-4 border-b border-gray-100 shrink-0 bg-white touch-none"
+            onTouchMove={(e) => e.preventDefault()}
+          >
+            <span className="font-bold text-lg text-Primary">Gambling</span>
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="p-2 text-gray-500 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
+              aria-label="Close menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
 
-            {/* Menu Links List */}
-            <nav className="mt-6 space-y-2">
+          {/* Menu Links List */}
+          <div className="flex-1 overflow-y-auto px-6 py-4 overscroll-contain touch-pan-y">
+            <nav className="space-y-2 pb-8">
               <Link
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
