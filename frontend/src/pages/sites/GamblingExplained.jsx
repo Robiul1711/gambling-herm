@@ -25,7 +25,7 @@ const GamblingExplained = () => {
           image={bannerData?.image || bannerImg}
           isLoading={isLoading}
         />
-            <div className="mx-auto max-w-6xl px-4">
+            <div className="mx-auto max-w-5xl px-4 md:px-0">
         <GamblingLayout />
       </div>
       <OurWorkCommonContact

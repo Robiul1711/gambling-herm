@@ -47,7 +47,11 @@ export default function CrisisHeader() {
               {footerData.crisisHeaderPhone}
             </a>
           )}
-         Free, 24/7.
+          {footerData.crisisHeaderSubText !== undefined ? (
+            footerData.crisisHeaderSubText ? ` ${footerData.crisisHeaderSubText}` : ""
+          ) : (
+            " Free, 24/7."
+          )}
         </span>
 
         {footerData.crisisHeaderBtnText && (

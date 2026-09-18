@@ -36,15 +36,29 @@ const PageSectionNav = ({ sections = [], className = "", containerClassName = ""
     return () => observer.disconnect();
   }, [sections]);
 
-  // Keep active pill scrolled into view horizontally on mobile
+  const scrollContainerRef = useRef(null);
+
+  // Keep active pill scrolled into view horizontally on mobile without hijacking window scroll
   useEffect(() => {
-    if (activeSection && buttonsRef.current[activeSection]) {
+    if (
+      activeSection &&
+      buttonsRef.current[activeSection] &&
+      scrollContainerRef.current
+    ) {
+      const container = scrollContainerRef.current;
       const btn = buttonsRef.current[activeSection];
-      btn.scrollIntoView?.({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "nearest",
-      });
+
+      if (container.scrollWidth > container.clientWidth) {
+        const btnLeft = btn.offsetLeft;
+        const btnWidth = btn.offsetWidth;
+        const containerWidth = container.clientWidth;
+
+        const targetScrollLeft = btnLeft - containerWidth / 2 + btnWidth / 2;
+        container.scrollTo({
+          left: Math.max(0, targetScrollLeft),
+          behavior: "smooth",
+        });
+      }
     }
   }, [activeSection]);
 
@@ -64,12 +78,15 @@ const PageSectionNav = ({ sections = [], className = "", containerClassName = ""
   return (
     <div
       ref={navRef}
-      className={`sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm py-3 md:py-4 mb-8 md:mb-12 ${className}`}
+      className={`sticky top-0 z-30  py-3 md:py-4 mb-8 md:mb-12 ${className}`}
     >
       <div className={`max-w-5xl mx-auto px-4 sm:px-6 ${containerClassName}`}>
         <div className="flex items-center justify-between gap-4">
           {/* Swipeable on mobile screens, wraps clean grid items on desktop viewport */}
-          <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-1 scrollbar-hide snap-x w-full">
+          <div
+            ref={scrollContainerRef}
+            className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-1 scrollbar-hide snap-x w-full"
+          >
             {sections.map((item) => {
               const isActive = activeSection === item.id;
               return (
