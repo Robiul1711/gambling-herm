@@ -5,6 +5,7 @@ import anjanetteImg from "@/assets/team/anjanette-stokes.jpg";
 import fayImg from "@/assets/team/fay-laidler.jpg";
 import lucyImg from "@/assets/team/lucy-hays.jpg";
 import ailbheImg from "@/assets/team/ailbhe-kazounis.jpg";
+import johnImg from "@/assets/trustees/JohnGilham.png";
 
 const getBioParagraphs = (bio) => {
   if (typeof bio === "string") {
@@ -88,6 +89,7 @@ const DEFAULT_TRUSTEES = [
     name: "John Gilham",
     role: "TRUSTEE & SYSTEM LEAD (appointed 18 June 2025)",
     type: "trustee",
+    image: johnImg,
     bio: "Senior healthcare leader with Chief Executive and Non-Executive experience, including chairing Audit, Finance, Quality and Risk committees; previously Chief Executive of GHUK. Brings lived experience of being harmed by someone else's gambling.",
   },
   {

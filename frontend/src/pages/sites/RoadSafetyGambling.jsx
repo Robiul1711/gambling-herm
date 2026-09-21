@@ -5,6 +5,7 @@ import RoadSafetyWhyThisMatters from "../../components/roadSafetyGamblingCompone
 import RoadSafetyResearchThemes from "../../components/roadSafetyGamblingComponents/RoadSafetyResearchThemes";
 import RoadSafetyPracticalSteps from "../../components/roadSafetyGamblingComponents/RoadSafetyPracticalSteps";
 import RoadSafetyPoster from "../../components/roadSafetyGamblingComponents/RoadSafetyPoster";
+import RoadSafetyPodcast from "../../components/roadSafetyGamblingComponents/RoadSafetyPodcast";
 import RoadSafetyAboutGhuk from "../../components/roadSafetyGamblingComponents/RoadSafetyAboutGhuk";
 import RoadSafetyCta from "../../components/roadSafetyGamblingComponents/RoadSafetyCta";
 import PageSectionNav from "@/components/common/PageSectionNav";
@@ -15,7 +16,8 @@ const sections = [
   { id: "research-themes", title: "3. What the research shows" },
   { id: "practical-steps", title: "4. Practical steps for transport" },
   { id: "road-safety-poster", title: "5. Campaign Poster" },
-  { id: "about-ghuk", title: "6. About GHUK" },
+  { id: "road-safety-podcast", title: "6. Podcast Episode" },
+  { id: "about-ghuk", title: "7. About GHUK" },
 ];
 
 export default function RoadSafetyGambling() {
@@ -52,12 +54,17 @@ export default function RoadSafetyGambling() {
         <RoadSafetyPoster />
       </div>
 
-      {/* 7. About Gambling Harm UK */}
+      {/* 7. Featured Podcast Section */}
+      <div id="road-safety-podcast" className="scroll-mt-24">
+        <RoadSafetyPodcast />
+      </div>
+
+      {/* 8. About Gambling Harm UK */}
       <div id="about-ghuk" className="scroll-mt-24">
         <RoadSafetyAboutGhuk />
       </div>
 
-      {/* 8. Bottom Dark CTA Banner */}
+      {/* 9. Bottom Dark CTA Banner */}
       <RoadSafetyCta />
     </main>
   );
