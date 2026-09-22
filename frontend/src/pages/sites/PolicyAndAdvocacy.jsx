@@ -120,7 +120,7 @@ const PolicyAndAdvocacy = () => {
       </section>
 
       {/* Tab scroll navigation */}
-      <div className="sticky top-0 z-40 bg-white/90 backdrop-blur-sm py-4 border-b border-gray-200">
+      <div className="sticky top-0 z-40 bg-white py-4 border-b border-gray-200 shadow-sm">
         <PolicyTabs activeSection={activeSection} onNavigate={handleNavigate} />
       </div>
 

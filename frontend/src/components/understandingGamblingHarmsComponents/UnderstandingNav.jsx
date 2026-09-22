@@ -78,7 +78,7 @@ const UnderstandingNav = () => {
   return (
     <div
       ref={navRef}
-      className="sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm py-3 md:py-4 mb-8 md:mb-12"
+      className="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm py-3 md:py-4 mb-8 md:mb-12"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between gap-4">

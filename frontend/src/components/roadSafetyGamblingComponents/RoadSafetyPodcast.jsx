@@ -3,7 +3,6 @@ import { Headphones, ExternalLink, Radio, Clock, ShieldCheck, Zap, HeartPulse } 
 import johnGilhamImg from "@/assets/trustees/JohnGilham.png";
 
 const PODCAST_URL = "https://player.captivate.fm/episode/803b84eb-1877-4cb4-a576-7c33e78b2fa1/";
-const LINKEDIN_POST_URL = "https://lnkd.in/ePnFMNqy";
 
 const RoadSafetyPodcast = () => {
   return (
@@ -94,19 +93,6 @@ const RoadSafetyPodcast = () => {
                     <span>Broadcast: <strong className="text-white">September 2026</strong></span>
                   </div>
                 </div>
-              </div>
-
-              {/* LinkedIn Post Discussion Link */}
-              <div className="mt-8 pt-4 border-t border-slate-700/80">
-                <a
-                  href={LINKEDIN_POST_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200 transition-colors"
-                >
-                  <span>View discussion on LinkedIn</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
               </div>
             </div>
 
