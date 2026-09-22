@@ -7,7 +7,7 @@ export default function TreatmentAndSupport() {
       description:
         "Free, specialist NHS treatment for gambling harm. Self-referral available online, no GP needed.",
       buttonText: "Self-refer to NHS East of England",
-      link: "https://www.eastofenglandgamblingservice.nhs.uk/",
+      link: "https://gateway.mayden.co.uk/referral-v2/3a483efc-42a2-4bfd-8ce6-602b841e1bff",
       isExternal: true,
     },
     {

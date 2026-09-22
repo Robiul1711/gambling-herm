@@ -107,7 +107,7 @@ const TacticSeven = () => {
             against roughly £4bn in gambling taxes (OBR) and a statutory levy that raised just under
             £120m in year one (
             <Link
-              to="/evidence"
+              to="/burden-of-harm"
               className="text-gray-900 font-semibold underline hover:text-[#0093D0] transition-colors"
             >
               see the evidence

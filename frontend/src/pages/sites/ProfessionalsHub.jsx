@@ -30,7 +30,7 @@ const ProfessionalsHub = () => {
         title="Don't see your role here?"
         description="If you work in a sector touched by gambling harm and we haven't built a dedicated page yet, please get in touch, this list grows."
         primaryBtnText="Contact us"
-        primaryBtnLink="/get-help"
+        primaryBtnLink="/about#contact"
         secondaryBtnText="See our policy positions"
         secondaryBtnLink="/policy-and-advocacy"
       />

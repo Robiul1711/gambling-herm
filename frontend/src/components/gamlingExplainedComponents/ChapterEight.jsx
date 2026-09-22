@@ -94,14 +94,14 @@ const ChapterEight = () => {
           PIN-protected slot terminals, a statutory duty of care on operators for the conduct of
           self-exclusion, and meaningful enforcement against operators that breach. See{" "}
           <Link
-            to="/members-only"
+            to="/members-only-campaign"
             className="text-gray-900 font-medium underline hover:text-[#0093D0] transition-colors"
           >
             Members Only Campaign
           </Link>{" "}
           and our{" "}
           <Link
-            to="/duty-of-care"
+            to="/policy-and-advocacy#duty-of-care"
             className="text-gray-900 font-medium underline hover:text-[#0093D0] transition-colors"
           >
             duty-of-care position

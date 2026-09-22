@@ -53,13 +53,20 @@ const Layout = () => {
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace("#", ""));
-      if (element) {
-        const timer = setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-        return () => clearTimeout(timer);
-      }
+      const targetId = hash.replace("#", "");
+      const timer = setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          const navOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 200);
+      return () => clearTimeout(timer);
     } else {
       window.scrollTo(0, 0);
     }

@@ -37,7 +37,7 @@ const ScoreDiagnosisSection = () => {
           <p>
             See{" "}
             <Link
-              to="/stigma-and-language"
+              to="/understanding-gambling-harms#language"
               className="text-[#0082c3] underline font-semibold hover:text-[#006090] transition-colors"
             >
               our note on language and measurement

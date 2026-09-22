@@ -107,7 +107,7 @@ const ChapterThree = () => {
       {/* Action Link */}
       <div className="pt-2">
         <Link
-          to="/understanding-gambling-harms"
+          to="/professionals/teachers-children-and-young-people"
           className="text-[#0093D0] font-medium text-sm md:text-base underline hover:text-[#0076A8] transition-colors inline-flex items-center gap-1"
         >
           Full CYP page with safeguarding routes &rarr;

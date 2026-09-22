@@ -89,7 +89,7 @@ const ChapterTwo = () => {
           minority ethnic groups, and people in deprived areas
           disproportionately under-represented in treatment caseloads. See our{" "}
           <Link
-            to="/get-help"
+            to="/stigma-and-language"
             className="text-gray-900 font-medium underline hover:text-[#0093D0] transition-colors"
           >
             Stigma
@@ -108,7 +108,7 @@ const ChapterTwo = () => {
       {/* Action Link */}
       <div className="pt-2">
         <Link
-          to="/policy-and-advocacy"
+          to="/professionals/healthcare"
           className="text-[#0093D0] font-medium text-sm md:text-base underline hover:text-[#0076A8] transition-colors inline-flex items-center gap-1"
         >
           Clinical implications and MECC framing &rarr;

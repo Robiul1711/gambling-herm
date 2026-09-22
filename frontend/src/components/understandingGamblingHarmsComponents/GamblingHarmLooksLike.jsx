@@ -44,19 +44,12 @@ const harms = [
           Samaritans 116 123
         </Link>{" "}
         now. See{" "}
-        <a
-          href="#affected"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById("affected")?.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }}
+        <Link
+          to="/burden-of-harm"
           className="underline text-[#2d2d2d] hover:text-[#1d7092] transition-colors font-medium"
         >
           our burden page
-        </a>{" "}
+        </Link>{" "}
         for the quantified picture.
       </>
     ),

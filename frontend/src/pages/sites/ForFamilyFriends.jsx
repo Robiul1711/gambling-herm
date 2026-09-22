@@ -85,7 +85,7 @@ const ForFamilyFriends = () => {
         primaryBtnText="Find direct routes to support"
         primaryBtnLink="/get-help"
         secondaryBtnText="Understand the scale"
-        secondaryBtnLink="/understand-the-scale"
+        secondaryBtnLink="/burden-of-harm"
       />
     </>
   );

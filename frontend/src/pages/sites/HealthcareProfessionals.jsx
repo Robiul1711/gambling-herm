@@ -64,7 +64,7 @@ const HealthcareProfessionals = () => {
         title="Want training, slides or a referral pathway diagram?"
         description="We provide free MECC-on-gambling resources to NHS trusts, primary care networks, ICBs and medical schools. Contact us with your context and we'll send what fits."
         primaryBtnText="Contact us"
-        primaryBtnLink="/get-help"
+        primaryBtnLink="/about#contact"
         secondaryBtnText="For public health teams"
         secondaryBtnLink="/professionals/public-health"
       />

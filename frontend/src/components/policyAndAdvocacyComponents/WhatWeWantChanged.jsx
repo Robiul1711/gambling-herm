@@ -133,7 +133,11 @@ const WhatWeWantChanged = () => {
         {/* Interactive Ordered List Blocks */}
         <div className="space-y-8">
           {changesList.map((item) => (
-            <div key={item.number} className="flex gap-4 sm:gap-5 items-start">
+            <div
+              key={item.number}
+              id={item.number === 2 ? "duty-of-care" : `item-${item.number}`}
+              className="flex gap-4 sm:gap-5 items-start scroll-mt-28"
+            >
               {/* Number Badge Counter */}
               <div className="w-9 h-9 bg-[#0e7fad] text-white flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm rounded-full shadow-xs">
                 {item.number}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ThreeFramings() {
   const framings = [
@@ -22,7 +23,7 @@ export default function ThreeFramings() {
       description:
         "The most heavily-deployed industry argument against every meaningful regulatory proposal in the last decade. Empirically, jurisdictions with stricter gambling rules see only marginal black-market substitution, and the comparison is between regulated harm and unregulated harm not between regulation and no harm.",
       linkText: "See Our Full Response",
-      href: "#full-response",
+      href: "/policy-and-advocacy#black-market",
       hasLink: true,
     },
   ];
@@ -73,8 +74,8 @@ export default function ThreeFramings() {
               {/* Optional Footer Interactive Link Panel */}
               {item.hasLink && (
                 <div className="pt-2">
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="inline-flex items-center text-sm sm:text-base font-bold text-gray-900 underline decoration-gray-300 hover:decoration-gray-900 transition-all group"
                   >
                     {item.linkText}
@@ -84,7 +85,7 @@ export default function ThreeFramings() {
                     >
                       →
                     </span>
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 
 const rejectionsData = [
   {
+    id: "responsible-gambling",
     slogan: "Responsible gambling. Stay in control. When the fun stops, stop.",
     analysis: (
       <>
@@ -14,6 +15,7 @@ const rejectionsData = [
     ),
   },
   {
+    id: "problem-gambler",
     slogan: "Problem gambler. 0.4% of UK adults are problem gamblers.",
     analysis: (
       <>
@@ -21,7 +23,7 @@ const rejectionsData = [
         population experiencing gambling harm. We say "people harmed by
         gambling" and report harm across the full distribution.{" "}
         <a
-          href="#language"
+          href="/stigma-and-language"
           className="text-[#17a9df] underline hover:text-[#1493c2] font-medium transition-colors"
         >
           See our note on language and measurement &rarr;
@@ -30,6 +32,7 @@ const rejectionsData = [
     ),
   },
   {
+    id: "black-market",
     slogan: "Regulation will just push people to the black market.",
     analysis: (
       <>
@@ -48,6 +51,7 @@ const rejectionsData = [
     ),
   },
   {
+    id: "natural-recovery",
     slogan:
       "Most people with gambling problems recover on their own. There's isn't much need for treatment infrastructure or product regulation.",
     analysis: (
@@ -66,6 +70,7 @@ const rejectionsData = [
     ),
   },
   {
+    id: "targeted-minority",
     slogan:
       "Gambling harm only affects a small, vulnerable minority. Most people gamble safely.",
     analysis: (
@@ -85,6 +90,7 @@ const rejectionsData = [
     ),
   },
   {
+    id: "tax-revenue",
     slogan: "The tax revenue from gambling exceeds the cost of harm.",
     analysis: (
       <>
@@ -111,7 +117,7 @@ const WhatWeReject = () => {
   return (
     <section
       id="what-we-reject"
-      className="py-12 md:py-16 bg-[#1a1818] text-white"
+      className="py-12 md:py-16 bg-[#1a1818] text-white scroll-mt-20"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Top Accent Line */}
@@ -136,7 +142,8 @@ const WhatWeReject = () => {
           {rejectionsData.map((item, index) => (
             <div
               key={index}
-              className="bg-[#262222] border-l-[4px] border-[#17a9df] p-6 md:p-8 shadow-md"
+              id={item.id}
+              className="bg-[#262222] border-l-[4px] border-[#17a9df] p-6 md:p-8 shadow-md scroll-mt-28"
             >
               {/* Header Label */}
               <span className="text-[#17a9df] text-xs sm:text-sm font-bold uppercase tracking-wider block mb-3">

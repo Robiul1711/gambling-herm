@@ -26,6 +26,16 @@ const PolicyAndAdvocacy = () => {
 
   const [activeSection, setActiveSection] = useState(SECTION_IDS[0]);
 
+  // Set initial active section from hash if present
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "black-market" || hash === "what-we-reject") {
+      setActiveSection("what-we-reject");
+    } else if (SECTION_IDS.includes(hash)) {
+      setActiveSection(hash);
+    }
+  }, []);
+
   // Scroll to section on tab click
   const handleNavigate = (id) => {
     const el = document.getElementById(id);

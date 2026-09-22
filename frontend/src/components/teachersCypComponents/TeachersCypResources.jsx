@@ -59,19 +59,6 @@ const TeachersCypResources = () => {
 
                 <div className="pt-3.5">
                   <strong className="font-bold text-gray-900 mr-1.5">
-                    Papyrus HOPELINE247
-                  </strong>
-                  (under-35s){" "}
-                  <a
-                    href="tel:08000684141"
-                    className="hover:text-[#0092D0] font-semibold text-gray-900 transition-colors"
-                  >
-                    0800 068 4141
-                  </a>
-                </div>
-
-                <div className="pt-3.5">
-                  <strong className="font-bold text-gray-900 mr-1.5">
                     The Mix
                   </strong>
                   (under-25s){" "}

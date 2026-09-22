@@ -95,19 +95,53 @@ export default function Banner() {
 
             {/* Action Buttons Row */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
-              <Link
-                to={bannerData?.primaryBtnLink || "/understanding-gambling-harms"}
-                className="bg-[#156e94] hover:bg-[#0d4a63] text-white font-bold px-5 sm:px-6 py-3 sm:py-3.5 transition-all duration-200 shadow-sm text-sm sm:text-base text-center"
-              >
-                {bannerData?.primaryBtnText || "Understanding gambling harms"}
-              </Link>
+              {(() => {
+                const sanitizeLink = (link, fallback) => {
+                  if (!link) return fallback;
+                  if (link.startsWith("http://") || link.startsWith("https://")) {
+                    try {
+                      const parsed = new URL(link);
+                      if (
+                        parsed.hostname.includes("netlify.app") ||
+                        parsed.hostname.includes("gamblingharm.com") ||
+                        parsed.hostname.includes("localhost")
+                      ) {
+                        return parsed.pathname + parsed.search + parsed.hash;
+                      }
+                    } catch (e) {
+                      return fallback;
+                    }
+                  }
+                  return link;
+                };
 
-              <Link
-                to={bannerData?.secondaryBtnLink || "/policy-and-advocacy"}
-                className="bg-white border border-gray-300 hover:border-gray-900 text-gray-800 font-bold px-5 sm:px-6 py-3 sm:py-3.5 transition-all duration-200 text-sm sm:text-base text-center shadow-sm"
-              >
-                {bannerData?.secondaryBtnText || "Our policy positions"}
-              </Link>
+                const primaryLink = sanitizeLink(
+                  bannerData?.primaryBtnLink,
+                  "/understanding-gambling-harms"
+                );
+                const secondaryLink = sanitizeLink(
+                  bannerData?.secondaryBtnLink,
+                  "/policy-and-advocacy"
+                );
+
+                return (
+                  <>
+                    <Link
+                      to={primaryLink}
+                      className="bg-[#156e94] hover:bg-[#0d4a63] text-white font-bold px-5 sm:px-6 py-3 sm:py-3.5 transition-all duration-200 shadow-sm text-sm sm:text-base text-center"
+                    >
+                      {bannerData?.primaryBtnText || "Understanding gambling harms"}
+                    </Link>
+
+                    <Link
+                      to={secondaryLink}
+                      className="bg-white border border-gray-300 hover:border-gray-900 text-gray-800 font-bold px-5 sm:px-6 py-3 sm:py-3.5 transition-all duration-200 text-sm sm:text-base text-center shadow-sm"
+                    >
+                      {bannerData?.secondaryBtnText || "Our policy positions"}
+                    </Link>
+                  </>
+                );
+              })()}
             </div>
           </div>
 

@@ -63,7 +63,7 @@ const tacticCards = [
         black-market warnings as one input into a policy decision, not as a veto
         on it. See our{" "}
         <Link
-          to="/black-market"
+          to="/policy-and-advocacy#black-market"
           className="text-[#0093D0] underline hover:text-white transition-colors"
         >
           black-market position

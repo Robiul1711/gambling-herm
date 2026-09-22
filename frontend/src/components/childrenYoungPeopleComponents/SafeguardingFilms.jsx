@@ -3,11 +3,17 @@ import useClient from "@/hooks/useClient";
 
 const getYouTubeEmbedUrl = (url) => {
   if (!url) return null;
-  if (url.includes("youtube.com/embed/")) return url;
   const match = url.match(
-    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
+    /(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
   );
-  return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+  if (match && match[1]) {
+    return `https://www.youtube-nocookie.com/embed/${match[1]}`;
+  }
+  if (url.includes("embed/")) {
+    const parts = url.split("embed/")[1]?.split("?")[0];
+    if (parts) return `https://www.youtube-nocookie.com/embed/${parts}`;
+  }
+  return url;
 };
 
 const SafeguardingFilms = () => {
@@ -171,8 +177,9 @@ const SafeguardingFilms = () => {
                         <iframe
                           src={embedUrl}
                           title={`${film.title} - Video ${idx + 1}`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
+                          referrerPolicy="strict-origin-when-cross-origin"
                           className="w-full h-full border-0"
                         />
                       )}

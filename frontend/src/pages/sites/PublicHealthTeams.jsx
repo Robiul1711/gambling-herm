@@ -65,7 +65,7 @@ const PublicHealthTeams = () => {
         title="Want to partner on a local action plan?"
         description="If you're commissioning, planning or running a local public-health response to gambling harm, we'd like to hear from you, not as consultants for hire, but as collaborators in the work."
         primaryBtnText="Contact us"
-        primaryBtnLink="/get-help"
+        primaryBtnLink="/about#contact"
         secondaryBtnText="See our policy positions →"
         secondaryBtnLink="/policy-and-advocacy"
       />

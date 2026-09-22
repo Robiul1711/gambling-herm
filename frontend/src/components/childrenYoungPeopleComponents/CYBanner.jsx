@@ -19,27 +19,12 @@ export default function CYBanner() {
   ];
 
   return (
-    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12">
       {/* Top Accent Line */}
       <div className="w-12 h-[3px] bg-[#17a9df] mb-6"></div>
 
-      {/* Large Featured Image */}
-      <div className="mb-8">
-        <div className="overflow-hidden shadow-xs border border-gray-100 bg-gray-50">
-          <img
-            src={image}
-            alt="Children grow up surrounded by gambling marketing"
-            className="w-full h-auto object-cover max-h-[460px]"
-          />
-        </div>
-        <p className="mt-3 text-xs sm:text-sm italic text-gray-500 font-normal leading-relaxed">
-          Children grow up surrounded by gambling marketing: on the high street,
-          on shirts and on their screens.
-        </p>
-      </div>
-
       {/* Key Points Card Section */}
-      <div className="pt-4">
+      <div>
         <div className="w-full bg-[#edf7fd] border-l-[4px] border-[#17a9df] p-6 md:p-8 shadow-xs">
           <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#17a9df] mb-4">
             KEY POINTS

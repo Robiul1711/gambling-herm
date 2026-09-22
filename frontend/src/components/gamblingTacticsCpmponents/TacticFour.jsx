@@ -57,7 +57,7 @@ const TacticFour = () => {
           </Link>{" "}
           and the{" "}
           <Link
-            to="/members-only"
+            to="/members-only-campaign"
             className="text-gray-900 font-semibold underline hover:text-[#0093D0] transition-colors"
           >
             Members Only Campaign
@@ -107,7 +107,7 @@ const TacticFour = () => {
           advertising restrictions, affordability checks at the regulator level,
           a statutory duty of care on operators (see{" "}
           <Link
-            to="/duty-of-care"
+            to="/policy-and-advocacy#duty-of-care"
             className="text-gray-900 font-semibold underline hover:text-[#0093D0] transition-colors"
           >
             duty of care

@@ -20,7 +20,7 @@ const AudienceCards = () => {
         </>
       ),
       btnText: "For CYP",
-      to: "/children-and-safeguarding",
+      to: "/professionals/teachers-children-and-young-people",
     },
     {
       id: 2,
